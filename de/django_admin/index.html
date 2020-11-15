@@ -7,7 +7,7 @@
         <title>Django-Administration · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -622,38 +622,38 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="django-administration">Django-Administration</h1>
-<p>Wir benutzen den Django-Admin, um die soeben modellierten Posts hinzuzuf&#xFC;gen, zu &#xE4;ndern oder zu l&#xF6;schen.</p>
-<p>&#xD6;ffne die Datei <code>blog/admin.py</code> im Code-Editor und ersetze den Inhalt wie folgt:</p>
+<p>Wir benutzen den Django-Admin, um die soeben modellierten Posts hinzuzufügen, zu ändern oder zu löschen.</p>
+<p>Öffne die Datei <code>blog/admin.py</code> im Code-Editor und ersetze den Inhalt wie folgt:</p>
 <p></p><p class="code-label">blog/admin.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.contrib <span class="hljs-keyword">import</span> admin
 <span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Post
 
 admin.site.register(Post)
 </code></pre>
-<p>Wie du siehst, importieren wir hier das Model &quot;Post&quot;, das wir im vorherigen Kapitel erstellt haben. Damit unser Model auf der Admin-Seite sichtbar wird, m&#xFC;ssen wir es mit <code>admin.site.register(Post)</code> registrieren.</p>
-<p>Okay, wir sehen uns nun unser Post-Model an. Denk daran, <code>python manage.py runserver</code> in die Konsole einzugeben, um den Webserver zu starten. &#xD6;ffne deinen Browser und gib die Adresse <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a> ein. Du siehst eine Anmeldeseite:</p>
+<p>Wie du siehst, importieren wir hier das Model &quot;Post&quot;, das wir im vorherigen Kapitel erstellt haben. Damit unser Model auf der Admin-Seite sichtbar wird, müssen wir es mit <code>admin.site.register(Post)</code> registrieren.</p>
+<p>Okay, wir sehen uns nun unser Post-Model an. Denk daran, <code>python manage.py runserver</code> in die Konsole einzugeben, um den Webserver zu starten. Öffne deinen Browser und gib die Adresse <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a> ein. Du siehst eine Anmeldeseite:</p>
 <p><img src="images/login_page2.png" alt="Login Seite"></p>
-<p>Um dich einloggen zu k&#xF6;nnen, musst du zun&#xE4;chst einen <em>superuser</em> erstellen - einen User, der alles auf der Website steuern darf. Geh zur&#xFC;ck zur Kommandozeile, tippe <code>python manage.py createsuperuser</code> und dr&#xFC;cke Enter.</p>
+<p>Um dich einloggen zu können, musst du zunächst einen <em>superuser</em> erstellen - einen User, der alles auf der Website steuern darf. Geh zurück zur Kommandozeile, tippe <code>python manage.py createsuperuser</code> und drücke Enter.</p>
 <blockquote>
-<p>Denke daran, damit du neue Kommandos eingeben kannst w&#xE4;hrend der Webserver l&#xE4;uft, musst du ein neues Terminal &#xF6;ffnen und deine virtualenv aktivieren. Wie man neue Kommandos eingeben kann, haben wir im Kapitel <strong>Dein erstes Django-Projekt!</strong> unter <strong>Den Webserver starten</strong> behandelt.</p>
+<p>Denke daran, damit du neue Kommandos eingeben kannst während der Webserver läuft, musst du ein neues Terminal öffnen und deine virtualenv aktivieren. Wie man neue Kommandos eingeben kann, haben wir im Kapitel <strong>Dein erstes Django-Projekt!</strong> unter <strong>Den Webserver starten</strong> behandelt.</p>
 </blockquote>
 <p></p><p class="code-label">Mac OS X oder Linux:</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py createsuperuser
 </code></pre><p></p><p class="code-label">Windows:</p><p></p>
 <pre><code>(myvenv) C:\Users\Name\djangogirls&gt; python manage.py createsuperuser
-</code></pre><p>Wenn du dazu aufgefordert wirst, gib einen Benutzernamen (Kleinbuchstaben, keine Leerzeichen), eine Mailadresse und ein Passwort ein. <strong>Mach dir keine Gedanken, wenn du das Passwort bei der Eingabe nicht sehen kannst - so soll es sein.</strong> Tippe weiter und dr&#xFC;cke <code>Enter</code>, um weiterzumachen. Du solltest nun Folgendes sehen (wobei Benutzername und Email deine eigenen sein sollten):</p>
+</code></pre><p>Wenn du dazu aufgefordert wirst, gib einen Benutzernamen (Kleinbuchstaben, keine Leerzeichen), eine Mailadresse und ein Passwort ein. <strong>Mach dir keine Gedanken, wenn du das Passwort bei der Eingabe nicht sehen kannst - so soll es sein.</strong> Tippe weiter und drücke <code>Enter</code>, um weiterzumachen. Du solltest nun Folgendes sehen (wobei Benutzername und Email deine eigenen sein sollten):</p>
 <pre><code>Username: ola
 Email address: ola@example.com
 Password:
 Password (again):
 Superuser created successfully.
 </code></pre><p>Geh nochmal in deinen Browser und log dich mit den Daten des Superusers ein, den du gerade erstellt hast. Du solltest nun das Django-Admin-Dashboard sehen.</p>
-<p><img src="images/django_admin3.png" alt="&quot;Django Admin&quot;-Weboberfl&#xE4;che"></p>
-<p>Gehe auf Posts und experimentiere ein bisschen damit. F&#xFC;ge f&#xFC;nf oder sechs Blogeintr&#xE4;ge hinzu. Mach dir keine Sorgen wegen des Inhalts -- der ist nur auf deinem lokalen Computer sichtbar. Um Zeit zu sparen kannst du etwas Text aus diesem Tutorial kopieren und einf&#xFC;gen. :-)</p>
-<p>Achte darauf, dass bei wenigstens zwei oder drei Posts (aber nicht bei allen) das Ver&#xF6;ffentlichungsdatum (publish date) eingetragen ist. Das werden wir sp&#xE4;ter noch brauchen.</p>
-<p><img src="images/edit_post3.png" alt="&quot;Django Admin&quot;-Weboberfl&#xE4;che"></p>
+<p><img src="images/django_admin3.png" alt="&quot;Django Admin&quot;-Weboberfläche"></p>
+<p>Gehe auf Posts und experimentiere ein bisschen damit. Füge fünf oder sechs Blogeinträge hinzu. Mach dir keine Sorgen wegen des Inhalts -- der ist nur auf deinem lokalen Computer sichtbar. Um Zeit zu sparen kannst du etwas Text aus diesem Tutorial kopieren und einfügen. :-)</p>
+<p>Achte darauf, dass bei wenigstens zwei oder drei Posts (aber nicht bei allen) das Veröffentlichungsdatum (publish date) eingetragen ist. Das werden wir später noch brauchen.</p>
+<p><img src="images/edit_post3.png" alt="&quot;Django Admin&quot;-Weboberfläche"></p>
 <p>Mehr zum Django-Admin-Dashboard kannst du in der Django-Dokumentation erfahren: <a href="https://docs.djangoproject.com/en/2.2/ref/contrib/admin/" target="_blank">https://docs.djangoproject.com/en/2.2/ref/contrib/admin/</a></p>
-<p>Jetzt ist wahrscheinlich ein guter Moment, um dir einen Kaffee (oder Tee) zu g&#xF6;nnen und neue Kraft zu tanken. Du hast dein erstes Django-Model erstellt - du hast dir eine kleine Pause verdient!</p>
+<p>Jetzt ist wahrscheinlich ein guter Moment, um dir einen Kaffee (oder Tee) zu gönnen und neue Kraft zu tanken. Du hast dein erstes Django-Model erstellt - du hast dir eine kleine Pause verdient!</p>
 
                                 
                                 </section>
@@ -697,12 +697,56 @@ Superuser created successfully.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Django-Administration","level":"1.13","depth":1,"next":{"title":"Veröffentlichen!","level":"1.14","depth":1,"path":"deploy/README.md","ref":"deploy/README.md","articles":[]},"previous":{"title":"Django-Models","level":"1.12","depth":1,"path":"django_models/README.md","ref":"django_models/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_admin/README.md","mtime":"2020-09-22T11:43:42.658Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"de"}});
+            gitbook.page.hasChanged({"page":{"title":"Django-Administration","level":"1.13","depth":1,"next":{"title":"Veröffentlichen!","level":"1.14","depth":1,"path":"deploy/README.md","ref":"deploy/README.md","articles":[]},"previous":{"title":"Django-Models","level":"1.12","depth":1,"path":"django_models/README.md","ref":"django_models/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_admin/README.md","mtime":"2020-11-15T14:54:56.262Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"de"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

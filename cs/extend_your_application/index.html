@@ -7,7 +7,7 @@
         <title>Rozšíření vaší aplikace · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -498,13 +498,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="roz&#x161;&#xED;&#x159;en&#xED;-tv&#xE9;-aplikace">Roz&#x161;&#xED;&#x159;en&#xED; tv&#xE9; aplikace</h1>
-<p>Dokon&#x10D;ily jsme ji&#x17E; v&#x161;echny kroky pot&#x159;ebn&#xE9; k vytvo&#x159;en&#xED; na&#x161;eho webu: v&#xED;me, jak napsat model, url, view a &#x161;ablonu. V&#xED;me tak&#xE9;, jak ud&#x11B;lat na&#x161;e webov&#xE9; str&#xE1;nky p&#x11B;kn&#xE9;.</p>
-<p>&#x10C;as na procvi&#x10D;en&#xED;!</p>
-<p>Prvn&#xED; v&#x11B;c, kterou pot&#x159;ebujeme v na&#x161;em blogu, je pochopiteln&#x11B; str&#xE1;nka, kter&#xE1; zobraz&#xED; jeden p&#x159;&#xED;sp&#x11B;vek, &#x17E;e ano?</p>
-<p>Ji&#x17E; m&#xE1;me <code>Post</code> model, tak&#x17E;e nebudeme muset p&#x159;id&#xE1;vat nic k <code>models.py</code>.</p>
-<h2 id="vytvo&#x159;en&#xED;-&#x161;ablony-odkazu-na-post-detail">Vytvo&#x159;en&#xED; &#x161;ablony odkazu na post detail</h2>
-<p>Za&#x10D;neme s p&#x159;id&#xE1;n&#xED;m odkazu do <code>blog/templates/blog/post_list.html</code> souboru. Zat&#xED;m by m&#x11B;l vypadat takto:</p>
+                                <h1 id="rozšíření-tvé-aplikace">Rozšíření tvé aplikace</h1>
+<p>Dokončily jsme již všechny kroky potřebné k vytvoření našeho webu: víme, jak napsat model, url, view a šablonu. Víme také, jak udělat naše webové stránky pěkné.</p>
+<p>Čas na procvičení!</p>
+<p>První věc, kterou potřebujeme v našem blogu, je pochopitelně stránka, která zobrazí jeden příspěvek, že ano?</p>
+<p>Již máme <code>Post</code> model, takže nebudeme muset přidávat nic k <code>models.py</code>.</p>
+<h2 id="vytvoření-šablony-odkazu-na-post-detail">Vytvoření šablony odkazu na post detail</h2>
+<p>Začneme s přidáním odkazu do <code>blog/templates/blog/post_list.html</code> souboru. Zatím by měl vypadat takto:</p>
 <pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
 
 {% block content %}
@@ -519,17 +519,17 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>Chceme m&#xED;t odkaz ze seznamu p&#x159;&#xED;sp&#x11B;vk&#x16F; na str&#xE1;nku detail p&#x159;&#xED;sp&#x11B;vku. Zm&#x11B;&#x148;me <code>&lt; h1 &gt;&lt; href =&quot;&quot;&gt;{{ post.title }}&lt; /a&gt;&lt;/h1&gt;</code> tak, aby odkazoval na str&#xE1;nku detailu p&#x159;&#xED;sp&#x11B;vku:</p>
+<p>Chceme mít odkaz ze seznamu příspěvků na stránku detail příspěvku. Změňme <code>&lt; h1 &gt;&lt; href =&quot;&quot;&gt;{{ post.title }}&lt; /a&gt;&lt;/h1&gt;</code> tak, aby odkazoval na stránku detailu příspěvku:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;post_detail&apos; pk=post.pk %}&quot;</span>&gt;</span>{{ post.title }}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 </code></pre>
-<p>&#x10C;as k vysv&#x11B;tlen&#xED; tajemn&#xE9;ho <code>{% url &apos;post_detail&apos; pk=post.pk %}</code>. Jak asi tu&#x161;&#xED;&#x161;, <code>{% %}</code> tato notace znamen&#xE1;, &#x17E;e pou&#x17E;&#xED;v&#xE1;me Django &#x161;ablonovac&#xED; zna&#x10D;ky. Tentokr&#xE1;t pou&#x17E;ijeme jednu, kter&#xE1; pro n&#xE1;s vytvo&#x159;&#xED; adresu URL.</p>
-<p><code>blog.views.post_detail</code> je cesta k <code>post_detail</code> <em>view</em>, kter&#xFD; chceme vytvo&#x159;it. Pozn&#xE1;mka: <code>blog</code> je n&#xE1;zev na&#x161;&#xED; aplikace (adres&#xE1;&#x159; <code>blog</code>), <code>views</code> je jm&#xE9;no ze souboru, <code>views.py</code> a posledn&#xED; kousek - <code>post_detail</code> - je n&#xE1;zev <em>view</em>.</p>
-<p>Te&#x10F;, kdy&#x17E; p&#x16F;jdeme na: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>, dostaneme chybu (co&#x17E; o&#x10D;ek&#xE1;v&#xE1;me, proto&#x17E;e nem&#xE1;me adresu URL nebo <em>view</em> pro <code>post_detail</code>). View bude vypadat takto:</p>
+<p>Čas k vysvětlení tajemného <code>{% url &apos;post_detail&apos; pk=post.pk %}</code>. Jak asi tušíš, <code>{% %}</code> tato notace znamená, že používáme Django šablonovací značky. Tentokrát použijeme jednu, která pro nás vytvoří adresu URL.</p>
+<p><code>blog.views.post_detail</code> je cesta k <code>post_detail</code> <em>view</em>, který chceme vytvořit. Poznámka: <code>blog</code> je název naší aplikace (adresář <code>blog</code>), <code>views</code> je jméno ze souboru, <code>views.py</code> a poslední kousek - <code>post_detail</code> - je název <em>view</em>.</p>
+<p>Teď, když půjdeme na: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>, dostaneme chybu (což očekáváme, protože nemáme adresu URL nebo <em>view</em> pro <code>post_detail</code>). View bude vypadat takto:</p>
 <p><img src="images/no_reverse_match2.png" alt="NoReverseMatch error"></p>
-<h2 id="vytv&#xE1;&#x159;&#xED;me-adresu-url-na-detail-p&#x159;&#xED;sp&#x11B;vku">Vytv&#xE1;&#x159;&#xED;me adresu URL na detail p&#x159;&#xED;sp&#x11B;vku</h2>
-<p>Poj&#x10F;me vytvo&#x159;it adresu URL v <code>urls.py</code> pro n&#xE1;&#x161; <code>post_detail</code> <em>view</em>!</p>
-<p>Chceme, aby se detail na&#x161;eho prvn&#xED;ho p&#x159;&#xED;sp&#x11B;vku zobrazil na t&#xE9;to <strong>URL</strong>: <a href="http://127.0.0.1:8000/post/1/" target="_blank">http://127.0.0.1:8000/post/1/</a></p>
-<p>Poj&#x10F;me vytvo&#x159;it adresu URL v souboru <code>blog/urls.py</code> odkazuj&#xED;c&#xED; Django na <em>view</em> s n&#xE1;zvem <code>post_detail</code>, kter&#xFD; bude zobrazovat cel&#xFD; p&#x159;&#xED;sp&#x11B;vek blogu. P&#x159;idej &#x159;&#xE1;dek <code>url (r&apos;^post/(?)P&lt; pk&gt;[0-9]+)/$&apos;, views.post_detail, name=&apos;post_detail&apos;),</code> do souboru <code>blog/urls.py</code>. Tento soubor by m&#x11B;l vypadat takto:</p>
+<h2 id="vytváříme-adresu-url-na-detail-příspěvku">Vytváříme adresu URL na detail příspěvku</h2>
+<p>Pojďme vytvořit adresu URL v <code>urls.py</code> pro náš <code>post_detail</code> <em>view</em>!</p>
+<p>Chceme, aby se detail našeho prvního příspěvku zobrazil na této <strong>URL</strong>: <a href="http://127.0.0.1:8000/post/1/" target="_blank">http://127.0.0.1:8000/post/1/</a></p>
+<p>Pojďme vytvořit adresu URL v souboru <code>blog/urls.py</code> odkazující Django na <em>view</em> s názvem <code>post_detail</code>, který bude zobrazovat celý příspěvek blogu. Přidej řádek <code>url (r&apos;^post/(?)P&lt; pk&gt;[0-9]+)/$&apos;, views.post_detail, name=&apos;post_detail&apos;),</code> do souboru <code>blog/urls.py</code>. Tento soubor by měl vypadat takto:</p>
 <pre><code class="lang-python"> <span class="hljs-keyword">from</span> django.conf.urls <span class="hljs-keyword">import</span> url
  <span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> views
 
@@ -538,39 +538,39 @@ urlpatterns = [
     url(<span class="hljs-string">r&apos;^post/(?P&lt;pk&gt;[0-9]+)/$&apos;</span>, views.post_detail, name=<span class="hljs-string">&apos;post_detail&apos;</span>),
  ]
 </code></pre>
-<p>Tato &#x10D;&#xE1;st <code>^post/(?)P&lt;pk&gt;[0-9] +)/$</code> vypad&#xE1; d&#x11B;siv&#x11B;, ale bez obav - my ti to vysv&#x11B;tl&#xED;me: - za&#x10D;&#xED;n&#xE1; to <code>^</code> &#x2013; &quot;to znamen&#xE1; za&#x10D;&#xE1;tek &#x159;et&#x11B;zce&quot; - <code>post/</code> znamen&#xE1; pouze to, &#x17E;e po za&#x10D;&#xE1;tku by adresa URL m&#x11B;la obsahovat slovo <strong>post</strong> a <strong>/</strong>. Zat&#xED;m dobr&#xE9;. - <code>(?P&lt;pk&gt;[0-9]+)</code> - Tato &#x10D;&#xE1;st je slo&#x17E;it&#x11B;j&#x161;&#xED;. Znamen&#xE1; to, &#x17E;e Django vezme v&#x161;e, co zde bude um&#xED;st&#x11B;n&#xE9;, a p&#x159;esune to do view do prom&#x11B;nn&#xE9; s n&#xE1;zvem <code>pk</code>. <code>[0-9]</code> n&#xE1;m tak&#xE9; &#x159;&#xED;k&#xE1;, &#x17E;e to m&#x16F;&#x17E;e b&#xFD;t pouze &#x10D;&#xED;slo, ne p&#xED;smeno (tak&#x17E;e cokoliv mezi 0 a 9). <code>+</code> znamen&#xE1;, &#x17E;e je zde m&#xE1; b&#xFD;t jedna nebo v&#xED;ce &#x10D;&#xED;slic. Tak&#x17E;e n&#x11B;co jako <code>http://127.0.0.1:8000/post //</code> nen&#xED; platn&#xE9; URL, ale <code>http://127.0.0.1:8000/post/1234567890/</code> je naprosto v po&#x159;&#xE1;dku! -<code>/</code> - pak pot&#x159;ebujeme <strong>/</strong> znovu znak / - <code>$</code> - znamen&#xE1; &quot;konec&quot; &#x159;et&#x11B;zce!</p>
-<p>Znamen&#xE1; to, &#x17E;e pokud zad&#xE1;te <code>http://127.0.0.1:8000/post/5/</code> do prohl&#xED;&#x17E;e&#x10D;e, Django pochop&#xED;, &#x17E;e hled&#xE1;te <em>view</em> s n&#xE1;zvem <code>post_detail</code> a p&#x159;enese informaci, &#x17E;e <code>pk</code> se rovn&#xE1; <code>5</code> do <em>view</em>.</p>
-<p><code>pk</code> je zkratka pro <code>prim&#xE1;rn&#xED; kl&#xED;&#x10D;</code>. Tento n&#xE1;zev se &#x10D;asto pou&#x17E;&#xED;v&#xE1; v Django projektech. Ale m&#x16F;&#x17E;e&#x161; si sv&#xE9; prom&#x11B;nn&#xE9; pojmenovat jak chce&#x161; (nezapome&#x148;: mal&#xE1; p&#xED;smena a <code>_</code> nam&#xED;sto mezer!). Nap&#x159;&#xED;klad nam&#xED;sto <code>(?. P &lt;pk&gt;[0-9]+)</code> m&#xE1;me prom&#x11B;nnou <code>post_id</code>, tak&#x17E;e tento kousek pak vypad&#xE1; takto: <code>(?P&lt; post_id&gt; [0-9]+)</code>.</p>
-<p>OK, p&#x159;idaly jsme nov&#xFD; vzor adresy URL do <code>blog/urls.py</code>! Mus&#xED;me obnovit str&#xE1;nku: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>. Je&#x161;t&#x11B; dal&#x161;&#xED; chyba, jak jsme &#x10D;ekaly!</p>
+<p>Tato část <code>^post/(?)P&lt;pk&gt;[0-9] +)/$</code> vypadá děsivě, ale bez obav - my ti to vysvětlíme: - začíná to <code>^</code> – &quot;to znamená začátek řetězce&quot; - <code>post/</code> znamená pouze to, že po začátku by adresa URL měla obsahovat slovo <strong>post</strong> a <strong>/</strong>. Zatím dobré. - <code>(?P&lt;pk&gt;[0-9]+)</code> - Tato část je složitější. Znamená to, že Django vezme vše, co zde bude umístěné, a přesune to do view do proměnné s názvem <code>pk</code>. <code>[0-9]</code> nám také říká, že to může být pouze číslo, ne písmeno (takže cokoliv mezi 0 a 9). <code>+</code> znamená, že je zde má být jedna nebo více číslic. Takže něco jako <code>http://127.0.0.1:8000/post //</code> není platné URL, ale <code>http://127.0.0.1:8000/post/1234567890/</code> je naprosto v pořádku! -<code>/</code> - pak potřebujeme <strong>/</strong> znovu znak / - <code>$</code> - znamená &quot;konec&quot; řetězce!</p>
+<p>Znamená to, že pokud zadáte <code>http://127.0.0.1:8000/post/5/</code> do prohlížeče, Django pochopí, že hledáte <em>view</em> s názvem <code>post_detail</code> a přenese informaci, že <code>pk</code> se rovná <code>5</code> do <em>view</em>.</p>
+<p><code>pk</code> je zkratka pro <code>primární klíč</code>. Tento název se často používá v Django projektech. Ale můžeš si své proměnné pojmenovat jak chceš (nezapomeň: malá písmena a <code>_</code> namísto mezer!). Například namísto <code>(?. P &lt;pk&gt;[0-9]+)</code> máme proměnnou <code>post_id</code>, takže tento kousek pak vypadá takto: <code>(?P&lt; post_id&gt; [0-9]+)</code>.</p>
+<p>OK, přidaly jsme nový vzor adresy URL do <code>blog/urls.py</code>! Musíme obnovit stránku: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>. Ještě další chyba, jak jsme čekaly!</p>
 <p><img src="images/attribute_error2.png" alt="AttributeError"></p>
-<p>Pamatuje&#x161; si, jak&#xFD; je dal&#x161;&#xED; krok? Jist&#x11B;: P&#x159;idat view!</p>
-<h2 id="p&#x159;id&#xE1;n&#xED;-view-pro-detail-p&#x159;&#xED;sp&#x11B;vku">P&#x159;id&#xE1;n&#xED; view pro detail p&#x159;&#xED;sp&#x11B;vku</h2>
-<p>Tentokr&#xE1;t m&#xE1; n&#xE1;&#x161; <em>view</em> uveden dodate&#x10D;n&#xFD; parametr <code>pk</code>. N&#xE1;&#x161; <em>view</em> pot&#x159;ebuje tento parametr zachytit, &#x17E;e? Tak&#x17E;e definujeme na&#x161;i funkci jako <code>def post_detail (request, pk):</code>. V&#x161;imni si, &#x17E;e mus&#xED;me pou&#x17E;&#xED;t p&#x159;esn&#x11B; stejn&#xFD; n&#xE1;zev jako ten, kter&#xFD; jsme ur&#x10D;ili v URL (<code>pk</code>). Vynech&#xE1;n&#xED; t&#xE9;to prom&#x11B;nn&#xE9; je nespr&#xE1;vn&#xE9; a bude m&#xED;t za n&#xE1;sledek chybu!</p>
-<p>A te&#x10F; chceme dostat jeden a pouze jeden p&#x159;&#xED;sp&#x11B;vek z blogu. K tomu m&#x16F;&#x17E;eme pou&#x17E;&#xED;t querysets jako je tento:</p>
+<p>Pamatuješ si, jaký je další krok? Jistě: Přidat view!</p>
+<h2 id="přidání-view-pro-detail-příspěvku">Přidání view pro detail příspěvku</h2>
+<p>Tentokrát má náš <em>view</em> uveden dodatečný parametr <code>pk</code>. Náš <em>view</em> potřebuje tento parametr zachytit, že? Takže definujeme naši funkci jako <code>def post_detail (request, pk):</code>. Všimni si, že musíme použít přesně stejný název jako ten, který jsme určili v URL (<code>pk</code>). Vynechání této proměnné je nesprávné a bude mít za následek chybu!</p>
+<p>A teď chceme dostat jeden a pouze jeden příspěvek z blogu. K tomu můžeme použít querysets jako je tento:</p>
 <pre><code class="lang-python">Post.objects.get(pk=pk)
 </code></pre>
-<p>Ale tento k&#xF3;d m&#xE1; probl&#xE9;m. Pokud neexistuje &#x17E;&#xE1;dn&#xFD; <code>Post</code> s <code>prim&#xE1;rn&#xED;m kl&#xED;&#x10D;em</code> (<code>pk</code>), dostaneme velice nep&#x11B;knou chybu!</p>
+<p>Ale tento kód má problém. Pokud neexistuje žádný <code>Post</code> s <code>primárním klíčem</code> (<code>pk</code>), dostaneme velice nepěknou chybu!</p>
 <p><img src="images/does_not_exist2.png" alt="DoesNotExist error"></p>
-<p>A to my nechceme! Ale samoz&#x159;ejm&#x11B; Django p&#x159;ich&#xE1;z&#xED; s n&#x11B;&#x10D;&#xED;m, co n&#xE1;m to pom&#x16F;&#x17E;e o&#x161;et&#x159;it za n&#xE1;s: <code>get_object_or_404</code>. V p&#x159;&#xED;pad&#x11B;, &#x17E;e neexistuje &#x17E;&#xE1;dn&#xFD; <code>Post</code> s dan&#xFD;m <code>pk</code>, zobraz&#xED; se mnohem hez&#x10D;&#xED; str&#xE1;nka (naz&#xFD;van&#xE1; <code>Page Not Found 404</code>).</p>
+<p>A to my nechceme! Ale samozřejmě Django přichází s něčím, co nám to pomůže ošetřit za nás: <code>get_object_or_404</code>. V případě, že neexistuje žádný <code>Post</code> s daným <code>pk</code>, zobrazí se mnohem hezčí stránka (nazývaná <code>Page Not Found 404</code>).</p>
 <p><img src="images/404_2.png" alt="Page not found"></p>
-<p>Dobrou zpr&#xE1;vou je, &#x17E;e m&#x16F;&#x17E;e&#x161; skute&#x10D;n&#x11B; vytvo&#x159;it vlastn&#xED; str&#xE1;nku <code>Page Not Found 404</code> a ud&#x11B;lat ji tak p&#x11B;kn&#x11B;, jak jen chce&#x161;. Ale to te&#x10F; nen&#xED; tak d&#x16F;le&#x17E;it&#xE9;, tak&#x17E;e to p&#x159;esko&#x10D;&#xED;me.</p>
-<p>Ok, &#x10D;as k p&#x159;id&#xE1;n&#xED; <em>view</em> do na&#x161;eho souboru <code>views.py</code>!</p>
-<p>M&#x11B;la bys otev&#x159;&#xED;t <code>blog/views.py</code> a p&#x159;idat n&#xE1;sleduj&#xED;c&#xED; k&#xF3;d:</p>
+<p>Dobrou zprávou je, že můžeš skutečně vytvořit vlastní stránku <code>Page Not Found 404</code> a udělat ji tak pěkně, jak jen chceš. Ale to teď není tak důležité, takže to přeskočíme.</p>
+<p>Ok, čas k přidání <em>view</em> do našeho souboru <code>views.py</code>!</p>
+<p>Měla bys otevřít <code>blog/views.py</code> a přidat následující kód:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render, get_object_or_404
 </code></pre>
-<p>Pobl&#xED;&#x17E; jin&#xE9; &#x159;&#xE1;dky <code>from</code>. A na konec souboru p&#x159;id&#xE1;me n&#xE1;&#x161; <em>view</em>:</p>
+<p>Poblíž jiné řádky <code>from</code>. A na konec souboru přidáme náš <em>view</em>:</p>
 <pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_detail</span><span class="hljs-params">(request, pk)</span>:</span>
      post = get_object_or_404(Post, pk=pk)
      <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_detail.html&apos;</span>, {<span class="hljs-string">&apos;post&apos;</span>: post})
 </code></pre>
-<p>Ano. Je na &#x10D;ase aktualizovat str&#xE1;nku: <a href="http://127.0.0.1:8000" target="_blank">http://127.0.0.1:8000</a> /</p>
+<p>Ano. Je na čase aktualizovat stránku: <a href="http://127.0.0.1:8000" target="_blank">http://127.0.0.1:8000</a> /</p>
 <p><img src="images/post_list2.png" alt="Post list view"></p>
-<p>Fungovalo to! Ale co se stane, kdy&#x17E; klepne&#x161; na odkaz v n&#xE1;zvu p&#x159;&#xED;sp&#x11B;vku?</p>
+<p>Fungovalo to! Ale co se stane, když klepneš na odkaz v názvu příspěvku?</p>
 <p><img src="images/template_does_not_exist2.png" alt="TemplateDoesNotExist error"></p>
-<p>Ach ne! Dal&#x161;&#xED; chyba! Ale my u&#x17E; v&#xED;me, jak s t&#xED;m nalo&#x17E;it spr&#xE1;vn&#x11B;. Mus&#xED;me p&#x159;idat &#x161;ablonu.</p>
-<h2 id="vytvo&#x159;en&#xED;-&#x161;ablony-pro-detail-p&#x159;&#xED;sp&#x11B;vku">Vytvo&#x159;en&#xED; &#x161;ablony pro detail p&#x159;&#xED;sp&#x11B;vku</h2>
-<p>Vytvo&#x159;&#xED;me soubor <code>blog/templates/blog</code> s n&#xE1;zvem <code>post_detail.html</code>.</p>
-<p>Cel&#xFD; p&#x159;&#xED;kaz bude vypadat takto:</p>
+<p>Ach ne! Další chyba! Ale my už víme, jak s tím naložit správně. Musíme přidat šablonu.</p>
+<h2 id="vytvoření-šablony-pro-detail-příspěvku">Vytvoření šablony pro detail příspěvku</h2>
+<p>Vytvoříme soubor <code>blog/templates/blog</code> s názvem <code>post_detail.html</code>.</p>
+<p>Celý příkaz bude vypadat takto:</p>
 <pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
 
 {% block content %}
@@ -585,13 +585,13 @@ urlpatterns = [
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 {% endblock %}
 </code></pre>
-<p>Op&#x11B;t roz&#x161;i&#x159;ujeme <code>base.html</code>. V bloku <code>content</code> chceme zobrazit published_date p&#x159;&#xED;sp&#x11B;vku (pokud existuje), n&#xE1;zev a text. Ale m&#x11B;li bychom probrat n&#x11B;kter&#xE9; d&#x16F;le&#x17E;it&#xE9; v&#x11B;ci.</p>
-<p> <code>{% if ... %} ... {% endif %}</code> je zna&#x10D;ka &#x161;ablony, kterou m&#x16F;&#x17E;eme pou&#x17E;&#xED;t, kdy&#x17E; chceme n&#x11B;co zkontrolovat (nezapome&#x148; <code>, if... else...</code> v kapitole <strong>&#xDA;vod do Pythonu</strong>?). V tomto p&#x159;&#xED;pad&#x11B; chceme zjistit, jestli <code>published_date</code> p&#x159;&#xED;sp&#x11B;vku nen&#xED; pr&#xE1;zdn&#xFD;.</p>
-<p>OK, te&#x10F; m&#x16F;&#x17E;eme aktualizovat na&#x161;e str&#xE1;nky a uvid&#xED;&#x161;, jestli <code>Page Not Found</code> je pry&#x10D;.</p>
+<p>Opět rozšiřujeme <code>base.html</code>. V bloku <code>content</code> chceme zobrazit published_date příspěvku (pokud existuje), název a text. Ale měli bychom probrat některé důležité věci.</p>
+<p> <code>{% if ... %} ... {% endif %}</code> je značka šablony, kterou můžeme použít, když chceme něco zkontrolovat (nezapomeň <code>, if... else...</code> v kapitole <strong>Úvod do Pythonu</strong>?). V tomto případě chceme zjistit, jestli <code>published_date</code> příspěvku není prázdný.</p>
+<p>OK, teď můžeme aktualizovat naše stránky a uvidíš, jestli <code>Page Not Found</code> je pryč.</p>
 <p><img src="images/post_detail2.png" alt="Post detail page"></p>
-<p>Hur&#xE1;! Funguje to!</p>
-<h2 id="je&#x161;t&#x11B;-jedna-v&#x11B;c-&#x10D;as-nasadit-aplikaci">Je&#x161;t&#x11B; jedna v&#x11B;c: &#x10D;as nasadit aplikaci!</h2>
-<p>Bylo by dobr&#xE9; zjistit, jestli na&#x161;e webov&#xE9; str&#xE1;nky budou st&#xE1;le fungovat na PythonAnywhere. Zkusme je znovu nasadit.</p>
+<p>Hurá! Funguje to!</p>
+<h2 id="ještě-jedna-věc-čas-nasadit-aplikaci">Ještě jedna věc: čas nasadit aplikaci!</h2>
+<p>Bylo by dobré zjistit, jestli naše webové stránky budou stále fungovat na PythonAnywhere. Zkusme je znovu nasadit.</p>
 <pre><code>$ git status
 $ git add --all .
 $ git status
@@ -609,7 +609,7 @@ $ source myvenv/bin/activate
 </code></pre><ul>
 <li>Nakonec jdi na <a href="https://www.pythonanywhere.com/web_app_setup/" target="_blank">kartu Web</a> a klikni na <strong>Reload</strong>.</li>
 </ul>
-<p>A m&#x11B;lo by to b&#xFD;t! Gratulujeme :)</p>
+<p>A mělo by to být! Gratulujeme :)</p>
 
                                 
                                 </section>
@@ -653,12 +653,56 @@ $ source myvenv/bin/activate
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Rozšíření vaší aplikace","level":"1.22","depth":1,"next":{"title":"Django formuláře","level":"1.23","depth":1,"path":"django_forms/README.md","ref":"django_forms/README.md","articles":[]},"previous":{"title":"Rozšíření šablon","level":"1.21","depth":1,"path":"template_extending/README.md","ref":"template_extending/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"cs","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"extend_your_application/README.md","mtime":"2020-09-22T11:43:42.634Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"cs"}});
+            gitbook.page.hasChanged({"page":{"title":"Rozšíření vaší aplikace","level":"1.22","depth":1,"next":{"title":"Django formuláře","level":"1.23","depth":1,"path":"django_forms/README.md","ref":"django_forms/README.md","articles":[]},"previous":{"title":"Rozšíření šablon","level":"1.21","depth":1,"path":"template_extending/README.md","ref":"template_extending/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"cs","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"extend_your_application/README.md","mtime":"2020-11-15T14:54:56.238Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"cs"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

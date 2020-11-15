@@ -7,7 +7,7 @@
         <title>Inštalácia (chromebook) · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -513,44 +513,44 @@
                                 
                                 <h1 id="nastavenie-chromebooku">Nastavenie Chromebooku</h1>
 <blockquote>
-<p><strong>Pozn&#xE1;mka:</strong> Ak u&#x17E; m&#xE1;&#x161; po in&#x161;tal&#xE1;cii, m&#xF4;&#x17E;e&#x161; &#xED;s&#x165; rovno na <a href="../python_introduction/">&#xDA;vod do Python-u</a>.</p>
+<p><strong>Poznámka:</strong> Ak už máš po inštalácii, môžeš ísť rovno na <a href="../python_introduction/">Úvod do Python-u</a>.</p>
 </blockquote>
-<p>T&#xFA;to &#x10D;as&#x165; <a href="http://tutorial.djangogirls.org/en/installation/#install-python" target="_blank">m&#xF4;&#x17E;e&#x161; presko&#x10D;i&#x165;</a> ak nepou&#x17E;&#xED;va&#x161; Chromebook. Ak ho pou&#x17E;&#xED;va&#x161;, tak tvoja in&#x161;tal&#xE1;cia bude trochu in&#xE1;. M&#xF4;&#x17E;e&#x161; odignorova&#x165; zvy&#x161;ok in&#x161;tala&#x10D;n&#xE9;ho postupu.</p>
+<p>Túto časť <a href="http://tutorial.djangogirls.org/en/installation/#install-python" target="_blank">môžeš preskočiť</a> ak nepoužívaš Chromebook. Ak ho používaš, tak tvoja inštalácia bude trochu iná. Môžeš odignorovať zvyšok inštalačného postupu.</p>
 <h3 id="cloud-9">Cloud 9</h3>
-<p>Cloud 9 je n&#xE1;stroj ktor&#xFD; ti poskytne editor k&#xF3;du a pr&#xED;stup na po&#x10D;&#xED;ta&#x10D;, ktor&#xFD; be&#x17E;&#xED; v cloude na internete, kde mo&#x17E;e&#x161; in&#x161;talova&#x165;, p&#xED;sa&#x165; a sp&#xFA;&#x161;&#x165;a&#x165; softv&#xE9;r. Po&#x10D;as tohto tutori&#xE1;lu Cloud 9 sa bude tv&#xE1;ri&#x165; ako tvoj <em>lok&#xE1;lny stroj</em>. Pr&#xED;kazy bude&#x161; zad&#xE1;va&#x165; do termin&#xE1;lov&#xE9;ho rozhrania, tak ako tvoje spolu&#x17E;ia&#x10D;ky &#x10D;o pou&#x17E;&#xED;vaj&#xFA; OS X, Ubuntu, alebo Windows, ale tvoj temrin&#xE1;l bude pripojen&#xFD; na po&#x10D;&#xED;ta&#x10D;, ktor&#xFD; be&#x17E;&#xED; niekde inde a ktor&#xFD; Cloud 9 priprav&#xED; pre teba.</p>
+<p>Cloud 9 je nástroj ktorý ti poskytne editor kódu a prístup na počítač, ktorý beží v cloude na internete, kde možeš inštalovať, písať a spúšťať softvér. Počas tohto tutoriálu Cloud 9 sa bude tváriť ako tvoj <em>lokálny stroj</em>. Príkazy budeš zadávať do terminálového rozhrania, tak ako tvoje spolužiačky čo používajú OS X, Ubuntu, alebo Windows, ale tvoj temrinál bude pripojený na počítač, ktorý beží niekde inde a ktorý Cloud 9 pripraví pre teba.</p>
 <ol>
-<li>Nain&#x161;taluj si Cloud 9 z <a href="https://chrome.google.com/webstore/detail/cloud9/nbdmccoknlfggadpfkmcpnamfnbkmkcp" target="_blank">Chrome web store</a></li>
-<li>Cho&#x10F; na <a href="https://c9.io" target="_blank">c9.io</a></li>
-<li>Zalo&#x17E; si &#xFA;&#x10D;et</li>
+<li>Nainštaluj si Cloud 9 z <a href="https://chrome.google.com/webstore/detail/cloud9/nbdmccoknlfggadpfkmcpnamfnbkmkcp" target="_blank">Chrome web store</a></li>
+<li>Choď na <a href="https://c9.io" target="_blank">c9.io</a></li>
+<li>Založ si účet</li>
 <li>Klikni na <em>Create a New Workspace</em></li>
 <li>Pomenuj ho <em>django-girls</em></li>
-<li>Zvo&#x13E; <em>Blank</em> (druh&#xFD; sprava v dolnom riadku &#x10D;o m&#xE1; oran&#x17E;ov&#xE9; logo)</li>
+<li>Zvoľ <em>Blank</em> (druhý sprava v dolnom riadku čo má oranžové logo)</li>
 </ol>
-<p>Teraz by si mala vidie&#x165; rozhranie s bo&#x10D;nou li&#x161;tou, ve&#x13E;k&#xE9; hlavn&#xE9; okno s trochu textu a mal&#xE9; okno v dolnej &#x10D;asti, ktor&#xE9; vyzer&#xE1; takto nejak:</p>
+<p>Teraz by si mala vidieť rozhranie s bočnou lištou, veľké hlavné okno s trochu textu a malé okno v dolnej časti, ktoré vyzerá takto nejak:</p>
 <p></p><p class="code-label">Cloud 9</p><p></p>
 <pre><code>yourusername:~/workspace $
-</code></pre><p>T&#xE1;to doln&#xE1; &#x10D;as&#x165; je tvoj <em>termin&#xE1;l</em>, do ktor&#xE9;ho bude&#x161; zad&#xE1;va&#x165; pr&#xED;kazy pre po&#x10D;&#xED;ta&#x10D;, ktor&#xFD; pre teba pripravil Cloud 9. Ve&#x13E;kos&#x165; okna m&#xF4;&#x17E;e&#x161; meni&#x165; a ke&#x10F; potrebuje&#x161; tak si ho m&#xF4;&#x17E;e&#x161; zv&#xE4;&#x10D;&#x161;i&#x165;.</p>
-<h3 id="virtu&#xE1;lne-prostredie">Virtu&#xE1;lne prostredie</h3>
-<p>Virtu&#xE1;lne prostredie (tie&#x17E; naz&#xFD;van&#xE9; virtualenv) je ako s&#xFA;kromn&#xE1; krabica, do ktorej m&#xF4;&#x17E;eme ulo&#x17E;i&#x165; u&#x17E;ito&#x10D;n&#xFD; po&#x10D;&#xED;ta&#x10D;ov&#xFD; k&#xF3;d patriaci projektu na ktorom pracujeme. Pou&#x17E;&#xED;vame ho na oddelenie r&#xF4;znych &#x10D;ast&#xED; k&#xF3;du pre r&#xF4;zne projekty, aby sa n&#xE1;m medzi nimi nepomie&#x161;ali veci.</p>
-<p>V termin&#xE1;li, v spodnej &#x10D;asti Cloud 9 rozhrania, spusti nasledovn&#xE9;:</p>
+</code></pre><p>Táto dolná časť je tvoj <em>terminál</em>, do ktorého budeš zadávať príkazy pre počítač, ktorý pre teba pripravil Cloud 9. Veľkosť okna môžeš meniť a keď potrebuješ tak si ho môžeš zväčšiť.</p>
+<h3 id="virtuálne-prostredie">Virtuálne prostredie</h3>
+<p>Virtuálne prostredie (tiež nazývané virtualenv) je ako súkromná krabica, do ktorej môžeme uložiť užitočný počítačový kód patriaci projektu na ktorom pracujeme. Používame ho na oddelenie rôznych častí kódu pre rôzne projekty, aby sa nám medzi nimi nepomiešali veci.</p>
+<p>V termináli, v spodnej časti Cloud 9 rozhrania, spusti nasledovné:</p>
 <p></p><p class="code-label">Cloud 9</p><p></p>
 <pre><code>sudo apt update
 sudo apt install python3.6-venv
-</code></pre><p>Ak to e&#x161;te st&#xE1;le nefunguje, po&#x17E;iadaj svojho mentora/ku o pomoc.</p>
-<p>&#x10E;alej zadaj nasledovn&#xE9; pr&#xED;kazy:</p>
+</code></pre><p>Ak to ešte stále nefunguje, požiadaj svojho mentora/ku o pomoc.</p>
+<p>Ďalej zadaj nasledovné príkazy:</p>
 <p></p><p class="code-label">Cloud 9</p><p></p>
 <pre><code>mkdir djangogirls
 cd djangogirls
 python3.6 -mvenv myvenv
 source myvenv/bin/activate
 pip install django~=1.11.0
-</code></pre><p>(v&#x161;imni si, &#x17E;e v poslednom riadku sme pou&#x17E;ili vlnovku a za &#x148;ou znamienko rovnosti).</p>
+</code></pre><p>(všimni si, že v poslednom riadku sme použili vlnovku a za ňou znamienko rovnosti).</p>
 <h3 id="github">GitHub</h3>
-<p>Vytvor si <a href="https://github.com" target="_blank">GitHub</a> &#xFA;&#x10D;et.</p>
+<p>Vytvor si <a href="https://github.com" target="_blank">GitHub</a> účet.</p>
 <h3 id="pythonanywhere">PythonAnywhere</h3>
-<p>Django Girls tutori&#xE1;l obsahuje kapitolu o tom &#x10D;omu sa hovor&#xED; nasadenie (Deployment). Je to proces prenesenia k&#xF3;du, ktor&#xFD; pou&#x17E;&#xED;va tvoja nov&#xE1; webov&#xE1; aplik&#xE1;cia, na verejne dostupn&#xFD; po&#x10D;&#xED;ta&#x10D; (e&#x161;te naz&#xFD;van&#xFD; aj server), aby aj ostatn&#xED; &#x13E;udia videli tvoju pr&#xE1;cu.</p>
-<p>T&#xE1;to &#x10D;as&#x165; je trochu divn&#xE1;, ke&#x10F; pracuje&#x161; s t&#xFD;mto tutori&#xE1;lom na Chromebooku, lebo u&#x17E; pou&#x17E;&#xED;va&#x161; po&#x10D;&#xED;ta&#x10D;, ktor&#xFD; je na internete (na rozdiel od notebooku). Napriek tomu, je st&#xE1;le u&#x17E;ito&#x10D;n&#xE1;, lebo si m&#xF4;&#x17E;eme predstavi&#x165; Cloud 9 pracovn&#xE9; prostredie ako miesto kde sa nach&#xE1;dza nedokon&#x10D;en&#xE1; pr&#xE1;ca a Python Anywhere ako miesto, kde uk&#xE1;&#x17E;eme na&#x161;u pr&#xE1;cu, ktor&#xE1; bude hotov&#xE1;.</p>
-<p>Teda vytvor si nov&#xFD; Python Anywhere &#xFA;&#x10D;et na <a href="https://www.pythonanywhere.com" target="_blank">www.pythonanywhere.com</a>.</p>
+<p>Django Girls tutoriál obsahuje kapitolu o tom čomu sa hovorí nasadenie (Deployment). Je to proces prenesenia kódu, ktorý používa tvoja nová webová aplikácia, na verejne dostupný počítač (ešte nazývaný aj server), aby aj ostatní ľudia videli tvoju prácu.</p>
+<p>Táto časť je trochu divná, keď pracuješ s týmto tutoriálom na Chromebooku, lebo už používaš počítač, ktorý je na internete (na rozdiel od notebooku). Napriek tomu, je stále užitočná, lebo si môžeme predstaviť Cloud 9 pracovné prostredie ako miesto kde sa nachádza nedokončená práca a Python Anywhere ako miesto, kde ukážeme našu prácu, ktorá bude hotová.</p>
+<p>Teda vytvor si nový Python Anywhere účet na <a href="https://www.pythonanywhere.com" target="_blank">www.pythonanywhere.com</a>.</p>
 
                                 
                                 </section>
@@ -594,12 +594,56 @@ pip install django~=1.11.0
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Inštalácia (chromebook)","level":"1.3","depth":1,"next":{"title":"Ako funguje Internet","level":"1.4","depth":1,"path":"how_the_internet_works/README.md","ref":"how_the_internet_works/README.md","articles":[]},"previous":{"title":"Inštalácia","level":"1.2","depth":1,"path":"installation/README.md","ref":"installation/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"sk","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"chromebook_setup/README.md","mtime":"2020-09-22T11:43:43.094Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"sk"}});
+            gitbook.page.hasChanged({"page":{"title":"Inštalácia (chromebook)","level":"1.3","depth":1,"next":{"title":"Ako funguje Internet","level":"1.4","depth":1,"path":"how_the_internet_works/README.md","ref":"how_the_internet_works/README.md","articles":[]},"previous":{"title":"Inštalácia","level":"1.2","depth":1,"path":"installation/README.md","ref":"installation/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"sk","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"chromebook_setup/README.md","mtime":"2020-11-15T14:54:56.662Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"sk"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

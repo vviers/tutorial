@@ -7,7 +7,7 @@
         <title>Template-kiegészítés · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -498,18 +498,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="template-kieg&#xE9;sz&#xED;t&#xE9;s">Template-kieg&#xE9;sz&#xED;t&#xE9;s</h1>
-<p>Egy m&#xE1;sik szuper dolog, amit a Django tud, a <strong>template extending</strong>, vagyis template-kieg&#xE9;sz&#xED;t&#xE9;s. Mit jelent ez? Azt, hogy a HTML-ed egyes r&#xE9;szeit t&#xF6;bb oldalon is fel tudod haszn&#xE1;lni az alkalmaz&#xE1;sodban.</p>
-<p>&#xCD;gy nem kell megism&#xE9;telned magad minden f&#xE1;jlban, ha ugyanazt az inform&#xE1;ci&#xF3;t szeretn&#xE9;d felhaszn&#xE1;lni, vagy ugyanolyan layout-ot tervezel. &#xC9;s ha meg szeretn&#xE9;l v&#xE1;ltoztatni valamit, nem kell minden sablonban k&#xFC;l&#xF6;n megtenned, csak egyszer!</p>
-<h2 id="hozd-l&#xE9;tre-az-alap-template-et">Hozd l&#xE9;tre az alap template-et</h2>
-<p>A base (alap) template a legegyszer&#x171;bb sablon, amit az alkalmaz&#xE1;sod &#xF6;sszes oldal&#xE1;n kieg&#xE9;sz&#xED;tesz.</p>
-<p>Hozz l&#xE9;tre egy <code>base.html</code> f&#xE1;jlt a <code>blog/templates/blog/</code>-ban:</p>
+                                <h1 id="template-kiegészítés">Template-kiegészítés</h1>
+<p>Egy másik szuper dolog, amit a Django tud, a <strong>template extending</strong>, vagyis template-kiegészítés. Mit jelent ez? Azt, hogy a HTML-ed egyes részeit több oldalon is fel tudod használni az alkalmazásodban.</p>
+<p>Így nem kell megismételned magad minden fájlban, ha ugyanazt az információt szeretnéd felhasználni, vagy ugyanolyan layout-ot tervezel. És ha meg szeretnél változtatni valamit, nem kell minden sablonban külön megtenned, csak egyszer!</p>
+<h2 id="hozd-létre-az-alap-template-et">Hozd létre az alap template-et</h2>
+<p>A base (alap) template a legegyszerűbb sablon, amit az alkalmazásod összes oldalán kiegészítesz.</p>
+<p>Hozz létre egy <code>base.html</code> fájlt a <code>blog/templates/blog/</code>-ban:</p>
 <pre><code>blog
-&#x2514;&#x2500;&#x2500;&#x2500;templates
-    &#x2514;&#x2500;&#x2500;&#x2500;blog
+└───templates
+    └───blog
             base.html
             post_list.html
-</code></pre><p>Majd nyisd meg, &#xE9;s m&#xE1;solj &#xE1;t mindent a <code>post_list.html</code>-b&#x151;l a <code>base.html</code>-be, &#xED;gy:</p>
+</code></pre><p>Majd nyisd meg, és másolj át mindent a <code>post_list.html</code>-ből a <code>base.html</code>-be, így:</p>
 <pre><code class="lang-html">{% load static %}
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
@@ -542,7 +542,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>Azt&#xE1;n a <code>base.html</code>-ben cser&#xE9;ld ki az eg&#xE9;sz <code>&lt;body&gt;</code>-t (mindent a <code>&lt;body&gt;</code> &#xE9;s a <code>&lt;/body&gt;</code> k&#xF6;z&#xF6;tt) erre:</p>
+<p>Aztán a <code>base.html</code>-ben cseréld ki az egész <code>&lt;body&gt;</code>-t (mindent a <code>&lt;body&gt;</code> és a <code>&lt;/body&gt;</code> között) erre:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-header&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span>Django Girls Blog<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
@@ -557,12 +557,12 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
-<p>L&#xE9;nyeg&#xE9;ben a <code>{% for post in posts %}{% endfor %}</code> r&#xE9;szt kicser&#xE9;lt&#xFC;k erre:</p>
+<p>Lényegében a <code>{% for post in posts %}{% endfor %}</code> részt kicseréltük erre:</p>
 <pre><code class="lang-html">{% block content %}
 {% endblock %}
 </code></pre>
-<p>Ez mit is jelent? L&#xE9;trehozt&#xE1;l egy <code>block</code>-ot. Ez egy olyan template tag, amely seg&#xED;ts&#xE9;g&#xE9;vel HTML-t illeszthetsz be a blokkba m&#xE1;s template-ekben, ezzel kieg&#xE9;sz&#xED;tve a <code>base.html</code>-t. M&#xE1;ris megmutatjuk, hogy m&#x171;k&#xF6;dik.</p>
-<p>Most mentsd el, &#xE9;s nyisd meg &#xFA;jra a <code>blog/templates/blog/post_list.html</code>-t. T&#xF6;r&#xF6;lj ki mindent a body-n k&#xED;v&#xFC;l, &#xE9;s a <code>&lt;div class=&quot;page-header&quot;&gt;&lt;/div&gt;</code> r&#xE9;szt is, hogy &#xED;gy n&#xE9;zzen ki a f&#xE1;jl:</p>
+<p>Ez mit is jelent? Létrehoztál egy <code>block</code>-ot. Ez egy olyan template tag, amely segítségével HTML-t illeszthetsz be a blokkba más template-ekben, ezzel kiegészítve a <code>base.html</code>-t. Máris megmutatjuk, hogy működik.</p>
+<p>Most mentsd el, és nyisd meg újra a <code>blog/templates/blog/post_list.html</code>-t. Törölj ki mindent a body-n kívül, és a <code>&lt;div class=&quot;page-header&quot;&gt;&lt;/div&gt;</code> részt is, hogy így nézzen ki a fájl:</p>
 <pre><code class="lang-html">{% for post in posts %}
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;date&quot;</span>&gt;</span>
@@ -573,9 +573,9 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 {% endfor %}
 </code></pre>
-<p>&#xC9;s most add hozz&#xE1; ezt a sort a f&#xE1;jl elej&#xE9;hez:</p>
+<p>És most add hozzá ezt a sort a fájl elejéhez:</p>
 <pre><code>{% extends &apos;blog/base.html&apos; %}
-</code></pre><p>Ez azt jelenti, hogy most a <code>base.html</code> template-et eg&#xE9;sz&#xED;tj&#xFC;k ki a <code>post_list.html</code>-ben. M&#xE1;r csak egy dolog van h&#xE1;tra: az el&#x151;z&#x151; sor kiv&#xE9;tel&#xE9;vel rakj mindent <code>{% block content %}</code> &#xE9;s <code>{% endblock %}</code> k&#xF6;z&#xE9;. &#xCD;gy:</p>
+</code></pre><p>Ez azt jelenti, hogy most a <code>base.html</code> template-et egészítjük ki a <code>post_list.html</code>-ben. Már csak egy dolog van hátra: az előző sor kivételével rakj mindent <code>{% block content %}</code> és <code>{% endblock %}</code> közé. Így:</p>
 <pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
 
 {% block content %}
@@ -590,9 +590,9 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>Ez az! N&#xE9;zd meg, hogy m&#xE9;g mindig m&#x171;k&#xF6;dik-e a weboldalad :)</p>
+<p>Ez az! Nézd meg, hogy még mindig működik-e a weboldalad :)</p>
 <blockquote>
-<p>Ha <code>TemplateDoesNotExists</code> (a template nem l&#xE9;tezik) hib&#xE1;t kapsz, ami azt mondja, nincs <code>blog/base.html</code> f&#xE1;jlod, &#xE9;s fut a <code>runserver</code> a konzolban, pr&#xF3;b&#xE1;ld meg le&#xE1;ll&#xED;tani (Ctrl+C-vel, vagyis egyszerre nyomd meg a Control &#xE9;s a C billenty&#x171;t) &#xE9;s ind&#xED;tsd el &#xFA;jra a <code>python manage.py runserver</code> paranccsal.</p>
+<p>Ha <code>TemplateDoesNotExists</code> (a template nem létezik) hibát kapsz, ami azt mondja, nincs <code>blog/base.html</code> fájlod, és fut a <code>runserver</code> a konzolban, próbáld meg leállítani (Ctrl+C-vel, vagyis egyszerre nyomd meg a Control és a C billentyűt) és indítsd el újra a <code>python manage.py runserver</code> paranccsal.</p>
 </blockquote>
 
                                 
@@ -637,12 +637,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Template-kiegészítés","level":"1.21","depth":1,"next":{"title":"Egészítsd ki az applikációdat","level":"1.22","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - Tegyük széppé!","level":"1.20","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"hu","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-09-22T11:43:42.890Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"hu"}});
+            gitbook.page.hasChanged({"page":{"title":"Template-kiegészítés","level":"1.21","depth":1,"next":{"title":"Egészítsd ki az applikációdat","level":"1.22","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - Tegyük széppé!","level":"1.20","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"hu","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-11-15T14:54:56.470Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"hu"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

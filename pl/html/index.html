@@ -7,7 +7,7 @@
         <title>Wprowadzenie do HTML-a · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -512,27 +512,27 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="wprowadzenie-do-html-a">Wprowadzenie do HTML-a</h1>
-<p>Zastanawiasz si&#x119;, czym jest szablon?</p>
-<p>Szablon to plik, kt&#xF3;rego u&#x17C;ywamy do prezentacji informacji w zwi&#x119;z&#x142;ej formie. U&#x17C;ywaj&#x105;c analogii - do pisania list&#xF3;w r&#xF3;wnie&#x17C; mo&#x17C;esz u&#x17C;y&#x107; szablonu. Ka&#x17C;dy list ma inn&#x105; tre&#x15B;&#x107; i adres, ale ka&#x17C;dy z nich ma tak&#x105; sam&#x105; struktur&#x119;.</p>
-<p>Format szablon&#xF3;w Django wykorzystuje j&#x119;zyk HTML (ten sam, o kt&#xF3;rym wspominali&#x15B;my w rozdziale <strong>Jak dzia&#x142;a internet</strong>).</p>
+<p>Zastanawiasz się, czym jest szablon?</p>
+<p>Szablon to plik, którego używamy do prezentacji informacji w zwięzłej formie. Używając analogii - do pisania listów również możesz użyć szablonu. Każdy list ma inną treść i adres, ale każdy z nich ma taką samą strukturę.</p>
+<p>Format szablonów Django wykorzystuje język HTML (ten sam, o którym wspominaliśmy w rozdziale <strong>Jak działa internet</strong>).</p>
 <h2 id="co-to-jest-html">Co to jest HTML?</h2>
-<p>HTML to prosty kod interpretowany przez Twoj&#x105; przeglark&#x119; - tak&#x105; jak Chrome, Firefox czy Safari - w celu wy&#x15B;wietlenia strony dla u&#x17C;ytkownika.</p>
-<p>HTML to skr&#xF3;t od &quot;HyperText Markup Language&quot;. <strong>HyperText</strong> oznacza, &#x17C;e jest to tekst, kt&#xF3;ry wspiera hyperlinki - czyli po prostu linki mi&#x119;dzy stronami. <strong>Markup</strong> oznacza, &#x17C;e u&#x17C;ywamy tego kodu w dokumencie, &#x17C;eby przekaza&#x107; komu&#x15B; informacje (w naszym przypadku przegl&#x105;darce), jak zinterpretowa&#x107; dan&#x105; stron&#x119;. Kod HTML sk&#x142;ada si&#x119; ze <strong>znacznik&#xF3;w </strong> (tag&#xF3;w), a ka&#x17C;dy z nich zaczyna si&#x119; od <code>&lt;</code> i ko&#x144;czy na<code>&gt;</code>. Za pomoc&#x105; znacznik&#xF3;w oznaczamy <strong>elementy</strong>.</p>
-<h2 id="tw&#xF3;j-pierwszy-szablon">Tw&#xF3;j pierwszy szablon!</h2>
-<p>Stworzenie szablonu oznacza stworzenie pliku z szablonem. Bo przecie&#x17C; wszystko jest plikiem, zgadza si&#x119;? Zapewne zd&#x105;&#x17C;y&#x142;a&#x15B; to zauwa&#x17C;y&#x107;.</p>
-<p>Szablony s&#x105; zapisywane w katalogu <code>blog/templates/blog</code>. Zacznij wi&#x119;c od stworzenia katalogu <code>templates</code> wewn&#x105;trz Twojego katalogu bloga. Nast&#x119;pnie stw&#xF3;rz kolejny katalog o nazwie <code>blog</code> wewn&#x105;trz katalogu na szablony:</p>
+<p>HTML to prosty kod interpretowany przez Twoją przeglarkę - taką jak Chrome, Firefox czy Safari - w celu wyświetlenia strony dla użytkownika.</p>
+<p>HTML to skrót od &quot;HyperText Markup Language&quot;. <strong>HyperText</strong> oznacza, że jest to tekst, który wspiera hyperlinki - czyli po prostu linki między stronami. <strong>Markup</strong> oznacza, że używamy tego kodu w dokumencie, żeby przekazać komuś informacje (w naszym przypadku przeglądarce), jak zinterpretować daną stronę. Kod HTML składa się ze <strong>znaczników </strong> (tagów), a każdy z nich zaczyna się od <code>&lt;</code> i kończy na<code>&gt;</code>. Za pomocą znaczników oznaczamy <strong>elementy</strong>.</p>
+<h2 id="twój-pierwszy-szablon">Twój pierwszy szablon!</h2>
+<p>Stworzenie szablonu oznacza stworzenie pliku z szablonem. Bo przecież wszystko jest plikiem, zgadza się? Zapewne zdążyłaś to zauważyć.</p>
+<p>Szablony są zapisywane w katalogu <code>blog/templates/blog</code>. Zacznij więc od stworzenia katalogu <code>templates</code> wewnątrz Twojego katalogu bloga. Następnie stwórz kolejny katalog o nazwie <code>blog</code> wewnątrz katalogu na szablony:</p>
 <pre><code>blog
-&#x2514;&#x2500;&#x2500;&#x2500;templates
-    &#x2514;&#x2500;&#x2500;&#x2500;blog
-</code></pre><p>(By&#x107; mo&#x17C;e zastanawiasz si&#x119;, dlaczego tworzymy dwa katalogi o nazwie <code>blog</code> - jak si&#x119; niebawem dowiesz, to u&#x17C;yteczna konwencja nazewnictwa. U&#x142;atwia &#x17C;ycie, gdy sprawy staj&#x105; si&#x119; bardziej skomplikowane.)</p>
-<p>A teraz stw&#xF3;rz plik <code>post_list.html</code> (na razie niech b&#x119;dzie pusty) wewn&#x105;trz katalogu <code>blog/templates/blog</code>.</p>
-<p>Popatrz, jak Twoja strona wygl&#x105;da teraz: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a></p>
+└───templates
+    └───blog
+</code></pre><p>(Być może zastanawiasz się, dlaczego tworzymy dwa katalogi o nazwie <code>blog</code> - jak się niebawem dowiesz, to użyteczna konwencja nazewnictwa. Ułatwia życie, gdy sprawy stają się bardziej skomplikowane.)</p>
+<p>A teraz stwórz plik <code>post_list.html</code> (na razie niech będzie pusty) wewnątrz katalogu <code>blog/templates/blog</code>.</p>
+<p>Popatrz, jak Twoja strona wygląda teraz: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a></p>
 <blockquote>
-<p>Je&#x17C;eli nadal otrzymujesz b&#x142;&#x105;d <code>TemplateDoesNotExist</code>, spr&#xF3;buj uruchomi&#x107; serwer ponownie. Przejd&#x17A; do wiersza polecenia, zatrzymaj serwer wciskaj&#x105;c Ctrl+C (klawisze Control i C r&#xF3;wnocze&#x15B;nie), a nast&#x119;pnie uruchom go jeszcze raz poleceniem <code>python manage.py runserver</code>.</p>
+<p>Jeżeli nadal otrzymujesz błąd <code>TemplateDoesNotExist</code>, spróbuj uruchomić serwer ponownie. Przejdź do wiersza polecenia, zatrzymaj serwer wciskając Ctrl+C (klawisze Control i C równocześnie), a następnie uruchom go jeszcze raz poleceniem <code>python manage.py runserver</code>.</p>
 </blockquote>
 <p><img src="images/step1.png" alt="Rysunek 11.1"></p>
-<p>Nie ma b&#x142;&#x119;du! Gratulacje! :) Niestety, twoja aplikacja nie wy&#x15B;wietla niczego poza pust&#x105; stron&#x105;, poniewa&#x17C; Tw&#xF3;j szablon r&#xF3;wnie&#x17C; jest pusty. Naprawmy to.</p>
-<p>Otw&#xF3;rz Tw&#xF3;j nowy plik w edytorze kodu i dodaj poni&#x17C;sze:</p>
+<p>Nie ma błędu! Gratulacje! :) Niestety, twoja aplikacja nie wyświetla niczego poza pustą stroną, ponieważ Twój szablon również jest pusty. Naprawmy to.</p>
+<p>Otwórz Twój nowy plik w edytorze kodu i dodaj poniższe:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
@@ -541,23 +541,23 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>I jak twoja strona wygl&#x105;da teraz? Odwied&#x17A; stron&#x119; <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>, &#x17C;eby si&#x119; dowiedzie&#x107;.</p>
+<p>I jak twoja strona wygląda teraz? Odwiedź stronę <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>, żeby się dowiedzieć.</p>
 <p><img src="images/step3.png" alt="Rysunek 11.2"></p>
-<p>Zadzia&#x142;a&#x142;o! Dobra robota :)</p>
+<p>Zadziałało! Dobra robota :)</p>
 <ul>
-<li>Najbardziej podstawowy znacznik, <code>&lt;html&gt;</code>, jest zawsze na pocz&#x105;tku ka&#x17C;dej strony internetowej, za&#x15B; <code>&lt;/html&gt;</code> jest zawsze na ko&#x144;cu. Jak widzisz, ca&#x142;a zawarto&#x15B;&#x107; strony zawiera si&#x119; pomi&#x119;dzy znacznikiem otwieraj&#x105;cym <code>&lt;html&gt;</code> i zamykaj&#x105;cym <code>&lt;/html&gt;</code></li>
-<li><code>&lt;p&gt;</code> jest znacznikiem akapit&#xF3;w; <code>&lt;/p&gt;</code> zamyka ka&#x17C;dy akapit</li>
+<li>Najbardziej podstawowy znacznik, <code>&lt;html&gt;</code>, jest zawsze na początku każdej strony internetowej, zaś <code>&lt;/html&gt;</code> jest zawsze na końcu. Jak widzisz, cała zawartość strony zawiera się pomiędzy znacznikiem otwierającym <code>&lt;html&gt;</code> i zamykającym <code>&lt;/html&gt;</code></li>
+<li><code>&lt;p&gt;</code> jest znacznikiem akapitów; <code>&lt;/p&gt;</code> zamyka każdy akapit</li>
 </ul>
 <h2 id="head-i-body">Head i body</h2>
-<p>Ka&#x17C;da strona HTML jest podzielona na dwie cz&#x119;&#x15B;ci: <strong>head</strong> i <strong>body</strong>.</p>
+<p>Każda strona HTML jest podzielona na dwie części: <strong>head</strong> i <strong>body</strong>.</p>
 <ul>
-<li><p><strong>head</strong> jest elementem zawieraj&#x105;cym informacje o dokumencie, kt&#xF3;re nie s&#x105; wy&#x15B;wietlane na ekranie.</p>
+<li><p><strong>head</strong> jest elementem zawierającym informacje o dokumencie, które nie są wyświetlane na ekranie.</p>
 </li>
-<li><p><strong>body</strong> zawiera wszystkie pozosta&#x142;e elementy, kt&#xF3;re s&#x105; cz&#x119;&#x15B;ci&#x105; strony internetowej widoczn&#x105; na ekranie.</p>
+<li><p><strong>body</strong> zawiera wszystkie pozostałe elementy, które są częścią strony internetowej widoczną na ekranie.</p>
 </li>
 </ul>
-<p>U&#x17C;ywamy znacznika <code>&lt;head&gt;</code>, aby poinformowa&#x107; przegl&#x105;dark&#x119; o konfiguracji strony oraz <code>&lt;body&gt;</code> do przekazania informacji o tym, co w&#x142;a&#x15B;ciwie znajduje si&#x119; na stronie.</p>
-<p>Przyk&#x142;adowo, element tytu&#x142;u strony mo&#x17C;esz umie&#x15B;ci&#x107; wewn&#x105;trz <code>&lt;head&gt;</code>, o tak:</p>
+<p>Używamy znacznika <code>&lt;head&gt;</code>, aby poinformować przeglądarkę o konfiguracji strony oraz <code>&lt;body&gt;</code> do przekazania informacji o tym, co właściwie znajduje się na stronie.</p>
+<p>Przykładowo, element tytułu strony możesz umieścić wewnątrz <code>&lt;head&gt;</code>, o tak:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
@@ -569,27 +569,27 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>Zapisz plik i od&#x15B;wie&#x17C; swoj&#x105; stron&#x119;.</p>
+<p>Zapisz plik i odśwież swoją stronę.</p>
 <p><img src="images/step4.png" alt="Rysunek 11.3"></p>
-<p>Zauwa&#x17C;y&#x142;a&#x15B;, &#x17C;e przegl&#x105;darka zrozumia&#x142;a, &#x17C;e &quot;Ola&apos;s blog&quot; jest tytu&#x142;em Twojej strony? Zinterpretowa&#x142;a ona <code>&lt;title&gt;Ola&apos;s blog&lt;/title&gt;</code> i umie&#x15B;ci&#x142;a tekst w pasku tytu&#x142;u twojej przegl&#x105;darki (b&#x119;dzie on r&#xF3;wnie&#x17C; u&#x17C;ywany m.in. w zak&#x142;adkach).</p>
-<p>Zapewne zauwa&#x17C;y&#x142;a&#x15B; tak&#x17C;e, &#x17C;e ka&#x17C;dy znacznik otwieraj&#x105;cy posiada <em>znacznik zamykaj&#x105;cy</em>, z <code>/</code>, a tak&#x17C;e to, &#x17C;e elementy s&#x105; <em>zagnie&#x17C;d&#x17C;ane </em> (czyli nie mo&#x17C;esz zamkn&#x105;&#x107; danego znacznika zanim nie zostan&#x105; zamkni&#x119;te znaczniki znajduj&#x105;ce si&#x119; wewn&#x105;trz niego).</p>
-<p>To troch&#x119; jak wk&#x142;adanie rzeczy do pude&#x142;ek. Masz jedno wielkie pud&#x142;o, <code>&lt;html&gt;&lt;/html&gt;</code>; wewn&#x105;trz niego znajduje si&#x119; <code>&lt;body&gt;&lt;/body&gt;</code>, a w &#x15B;rodku tego&#x17C; s&#x105; kolejne mniejsze pude&#x142;ka: <code>&lt;p&gt;&lt;/p&gt;</code>.</p>
-<p>Musisz przestrzega&#x107; zasad <em>zamykania</em> znacznik&#xF3;w i <em>zagnie&#x17C;d&#x17C;ania</em> element&#xF3;w - przeciwnym razie przegl&#x105;darka mo&#x17C;e mie&#x107; problem z ich poprawnym zinterpretowaniem i Twoja strona b&#x119;dzie wy&#x15B;wietla&#x107; si&#x119; niepoprawnie.</p>
+<p>Zauważyłaś, że przeglądarka zrozumiała, że &quot;Ola&apos;s blog&quot; jest tytułem Twojej strony? Zinterpretowała ona <code>&lt;title&gt;Ola&apos;s blog&lt;/title&gt;</code> i umieściła tekst w pasku tytułu twojej przeglądarki (będzie on również używany m.in. w zakładkach).</p>
+<p>Zapewne zauważyłaś także, że każdy znacznik otwierający posiada <em>znacznik zamykający</em>, z <code>/</code>, a także to, że elementy są <em>zagnieżdżane </em> (czyli nie możesz zamknąć danego znacznika zanim nie zostaną zamknięte znaczniki znajdujące się wewnątrz niego).</p>
+<p>To trochę jak wkładanie rzeczy do pudełek. Masz jedno wielkie pudło, <code>&lt;html&gt;&lt;/html&gt;</code>; wewnątrz niego znajduje się <code>&lt;body&gt;&lt;/body&gt;</code>, a w środku tegoż są kolejne mniejsze pudełka: <code>&lt;p&gt;&lt;/p&gt;</code>.</p>
+<p>Musisz przestrzegać zasad <em>zamykania</em> znaczników i <em>zagnieżdżania</em> elementów - przeciwnym razie przeglądarka może mieć problem z ich poprawnym zinterpretowaniem i Twoja strona będzie wyświetlać się niepoprawnie.</p>
 <h2 id="dostosowywanie-szablonu">Dostosowywanie szablonu</h2>
-<p>Teraz nieco si&#x119; pobawmy i spr&#xF3;bujmy dostosowa&#x107; nasz szablon! Oto kilka znacznik&#xF3;w, kt&#xF3;re nam si&#x119; do tego przydadz&#x105;:</p>
+<p>Teraz nieco się pobawmy i spróbujmy dostosować nasz szablon! Oto kilka znaczników, które nam się do tego przydadzą:</p>
 <ul>
-<li><code>&lt;h1&gt;Tytu&#x142;&lt;/h1&gt;</code> dla twojego najbardziej znacz&#x105;cego nag&#x142;&#xF3;wka</li>
-<li><code>&lt;h2&gt;Podtytu&#x142;&lt;/h2&gt;</code> dla nag&#x142;&#xF3;wka ni&#x17C;szego poziomu</li>
-<li><code>&lt;h3&gt;pod-podtytu&#x142;&lt;/h3&gt;</code> &#x2026; i tak dalej a&#x17C; do <code>&lt;h6&gt;</code></li>
+<li><code>&lt;h1&gt;Tytuł&lt;/h1&gt;</code> dla twojego najbardziej znaczącego nagłówka</li>
+<li><code>&lt;h2&gt;Podtytuł&lt;/h2&gt;</code> dla nagłówka niższego poziomu</li>
+<li><code>&lt;h3&gt;pod-podtytuł&lt;/h3&gt;</code> … i tak dalej aż do <code>&lt;h6&gt;</code></li>
 <li><code>&lt;p&gt;akapit tekstu&lt;/p&gt;</code></li>
-<li><code>&lt;em&gt;tekst&lt;/em&gt;</code> dodaje wyr&#xF3;&#x17C;nienie twojego tekstu</li>
-<li><code>&lt;strong&gt;text&lt;/strong&gt;</code> jeszcze mocniej wyr&#xF3;&#x17C;nia tw&#xF3;j tekst</li>
-<li><code>&lt;br&gt;</code> to przej&#x15B;cie do nowej linii (wewn&#x105;trz br nie wstawiamy niczego i nie ma te&#x17C; znacznika zamykaj&#x105;cego)</li>
+<li><code>&lt;em&gt;tekst&lt;/em&gt;</code> dodaje wyróżnienie twojego tekstu</li>
+<li><code>&lt;strong&gt;text&lt;/strong&gt;</code> jeszcze mocniej wyróżnia twój tekst</li>
+<li><code>&lt;br&gt;</code> to przejście do nowej linii (wewnątrz br nie wstawiamy niczego i nie ma też znacznika zamykającego)</li>
 <li><code>&lt;a href=&quot;https://djangogirls.org&quot;&gt;link&lt;/a&gt;</code> tworzy link</li>
-<li><code>&lt;ul&gt;&lt;li&gt;pierwsza pozycja&lt;/li&gt;&lt;li&gt;druga pozycja&lt;/li&gt;&lt;/ul&gt;</code> tworzy list&#x119;, tak&#x105; sam&#x105; jak ta!</li>
-<li><code>&lt;div&gt;&lt;/div&gt;</code> tworzy sekcj&#x119; na stronie</li>
+<li><code>&lt;ul&gt;&lt;li&gt;pierwsza pozycja&lt;/li&gt;&lt;li&gt;druga pozycja&lt;/li&gt;&lt;/ul&gt;</code> tworzy listę, taką samą jak ta!</li>
+<li><code>&lt;div&gt;&lt;/div&gt;</code> tworzy sekcję na stronie</li>
 </ul>
-<p>Tutaj mo&#x17C;esz zobaczy&#x107; przyk&#x142;ad pe&#x142;nego szablonu, skopiuj i wklej go do <code>blog/templates/blog/post_list.html</code>:</p>
+<p>Tutaj możesz zobaczyć przykład pełnego szablonu, skopiuj i wklej go do <code>blog/templates/blog/post_list.html</code>:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
@@ -614,53 +614,53 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>Stworzyli&#x15B;my tutaj trzy sekcje <code>div</code>.</p>
+<p>Stworzyliśmy tutaj trzy sekcje <code>div</code>.</p>
 <ul>
-<li>Pierwszy <code>div</code> zawiera w sobie tytu&#x142; naszego bloga - jest to nag&#x142;&#xF3;wek i link</li>
-<li>Kolejne dwa elementy <code>div</code> zawieraj&#x105; nasze wpisy wraz z opublikowan&#x105; dat&#x105;, <code>h2</code> z klikalnym tytu&#x142;em wpisu oraz dwa elementy <code>p</code> (akapity) z tekstem, jeden z dat&#x105; i drugi z tre&#x15B;ci&#x105; naszego wpisu.</li>
+<li>Pierwszy <code>div</code> zawiera w sobie tytuł naszego bloga - jest to nagłówek i link</li>
+<li>Kolejne dwa elementy <code>div</code> zawierają nasze wpisy wraz z opublikowaną datą, <code>h2</code> z klikalnym tytułem wpisu oraz dwa elementy <code>p</code> (akapity) z tekstem, jeden z datą i drugi z treścią naszego wpisu.</li>
 </ul>
 <p>Daje nam to taki efekt:</p>
 <p><img src="images/step6.png" alt="Rysunek 11.4"></p>
-<p>Hura! Ale jak do tej pory, nasz szablon wy&#x15B;wietla dok&#x142;adnie <strong>t&#x119; sam&#x105; tre&#x15B;&#x107;</strong>. Tymczasem wspomina&#x142;y&#x15B;my wcze&#x15B;niej, &#x17C;e szablony umo&#x17C;liwiaj&#x105; nam wy&#x15B;wietlenie <strong>r&#xF3;&#x17C;nych</strong> tre&#x15B;ci w <strong>takim samym formacie</strong>.</p>
-<p>Chcemy wy&#x15B;wietli&#x107; prawdziwe wpisy dodane w naszym panelu admina Django - i tym si&#x119; teraz zajmiemy.</p>
-<h2 id="jeszcze-jedna-rzecz-wdro&#x17C;enie-na-serwer">Jeszcze jedna rzecz: wdro&#x17C;enie na serwer!</h2>
-<p>By&#x142;oby fajnie, gdyby&#x15B;my mogli to wszystko zobaczy&#x107; &quot;na &#x17C;ywo&quot; w Internecie, a nie tylko u siebie w komputerze. Czas na wdro&#x17C;enie na serwer PythonAnywhere:</p>
-<h3 id="zapisz-zmiany-w-historii-i-wrzu&#x107;-sw&#xF3;j-kod-na-githuba">Zapisz zmiany w historii i wrzu&#x107; sw&#xF3;j kod na GitHuba</h3>
-<p>Po pierwsze, zobaczmy, jakie pliki zosta&#x142;y zmienione od ostatniej aktualizacji (wpisz nast&#x119;puj&#x105;ce polecenie lokalnie w wierszu polecenia, nie na PythonAnywhere):</p>
+<p>Hura! Ale jak do tej pory, nasz szablon wyświetla dokładnie <strong>tę samą treść</strong>. Tymczasem wspominałyśmy wcześniej, że szablony umożliwiają nam wyświetlenie <strong>różnych</strong> treści w <strong>takim samym formacie</strong>.</p>
+<p>Chcemy wyświetlić prawdziwe wpisy dodane w naszym panelu admina Django - i tym się teraz zajmiemy.</p>
+<h2 id="jeszcze-jedna-rzecz-wdrożenie-na-serwer">Jeszcze jedna rzecz: wdrożenie na serwer!</h2>
+<p>Byłoby fajnie, gdybyśmy mogli to wszystko zobaczyć &quot;na żywo&quot; w Internecie, a nie tylko u siebie w komputerze. Czas na wdrożenie na serwer PythonAnywhere:</p>
+<h3 id="zapisz-zmiany-w-historii-i-wrzuć-swój-kod-na-githuba">Zapisz zmiany w historii i wrzuć swój kod na GitHuba</h3>
+<p>Po pierwsze, zobaczmy, jakie pliki zostały zmienione od ostatniej aktualizacji (wpisz następujące polecenie lokalnie w wierszu polecenia, nie na PythonAnywhere):</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ git status
-</code></pre><p>Upewnij si&#x119;, &#x17C;e jeste&#x15B; w folderze <code>djangogirls</code> i powiedz <code>git</code>owi aby doda&#x142; wszystkie zmiany z aktualnego folderu:</p>
+</code></pre><p>Upewnij się, że jesteś w folderze <code>djangogirls</code> i powiedz <code>git</code>owi aby dodał wszystkie zmiany z aktualnego folderu:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ git add --all .
 </code></pre><blockquote>
-<p><strong>Uwaga:</strong> <code>--all</code> (czyli &quot;wszystko&quot;) oznacza, &#x17C;e <code>git</code> we&#x17A;mie pod uwag&#x119; pliki, kt&#xF3;re usun&#x119;&#x142;a&#x15B; (domy&#x15B;lnie rozpoznaje zmiany tylko w nowych lub ju&#x17C; istniej&#x105;cych plikach). Pami&#x119;taj r&#xF3;wnie&#x17C; (vide rozdzia&#x142; 3), &#x17C;e <code>.</code> oznacza aktualny katalog.</p>
+<p><strong>Uwaga:</strong> <code>--all</code> (czyli &quot;wszystko&quot;) oznacza, że <code>git</code> weźmie pod uwagę pliki, które usunęłaś (domyślnie rozpoznaje zmiany tylko w nowych lub już istniejących plikach). Pamiętaj również (vide rozdział 3), że <code>.</code> oznacza aktualny katalog.</p>
 </blockquote>
-<p>Zanim prze&#x15B;lemy wszystkie pliki, sprawd&#x17A;my, co faktycznie <code>git</code> zamierza przes&#x142;a&#x107; (wszystkie pliki, kt&#xF3;re <code>git</code> prze&#x15B;le do repozytorium, powinny by&#x107; zaznaczone na zielono):</p>
+<p>Zanim prześlemy wszystkie pliki, sprawdźmy, co faktycznie <code>git</code> zamierza przesłać (wszystkie pliki, które <code>git</code> prześle do repozytorium, powinny być zaznaczone na zielono):</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ git status
-</code></pre><p>Ju&#x17C; blisko do ko&#x144;ca. Teraz czas poprosi&#x107; gita, aby zapisa&#x142; te zmiany w historii. Dodamy za moment informacj&#x119; o zmianach (ang. &quot;commit message&quot;), gdzie opiszemy, co zosta&#x142;o zmienione. Mo&#x17C;esz w tym miejscu wpisa&#x107; cokolwiek zechcesz, ale warto jednak wpisa&#x107; kilka s&#x142;&#xF3;w opisuj&#x105;cych, co robi&#x142;a&#x15B;. W ten spos&#xF3;b &#x142;atwiej Ci b&#x119;dzie w przysz&#x142;o&#x15B;ci przypomnie&#x107; sobie, czego dotyczy&#x142;y zapisane zmiany.</p>
+</code></pre><p>Już blisko do końca. Teraz czas poprosić gita, aby zapisał te zmiany w historii. Dodamy za moment informację o zmianach (ang. &quot;commit message&quot;), gdzie opiszemy, co zostało zmienione. Możesz w tym miejscu wpisać cokolwiek zechcesz, ale warto jednak wpisać kilka słów opisujących, co robiłaś. W ten sposób łatwiej Ci będzie w przyszłości przypomnieć sobie, czego dotyczyły zapisane zmiany.</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ git commit -m &quot;Zmieniony kod HTML na stronie.&quot;
 </code></pre><blockquote>
-<p><strong>Uwaga:</strong> Nie zapomnij umie&#x15B;ci&#x107; informacji o zmianach w cudzys&#x142;owie (&quot; &quot;).</p>
+<p><strong>Uwaga:</strong> Nie zapomnij umieścić informacji o zmianach w cudzysłowie (&quot; &quot;).</p>
 </blockquote>
-<p>Jak ju&#x17C; wszystko to zrobimy, mo&#x17C;emy wys&#x142;a&#x107; (push) nasze zmiany na Githuba:</p>
+<p>Jak już wszystko to zrobimy, możemy wysłać (push) nasze zmiany na Githuba:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ git push
-</code></pre><h3 id="prze&#x15B;lij-now&#x105;-wersj&#x119;-kodu-do-pythonanywhere-i-ponownie-za&#x142;aduj-swoj&#x105;-stron&#x119;">Prze&#x15B;lij now&#x105; wersj&#x119; kodu do PythonAnywhere i ponownie za&#x142;aduj swoj&#x105; stron&#x119;</h3>
+</code></pre><h3 id="prześlij-nową-wersję-kodu-do-pythonanywhere-i-ponownie-załaduj-swoją-stronę">Prześlij nową wersję kodu do PythonAnywhere i ponownie załaduj swoją stronę</h3>
 <ul>
-<li>Otw&#xF3;rz <a href="https://www.pythonanywhere.com/consoles/" target="_blank">stron&#x119; konsoli na PythonAnywhere</a> i przejd&#x17A; do swojej <strong>Bash console</strong> (czyli po polsku &quot;konsoli Bash&quot;) albo otw&#xF3;rz now&#x105;. Wpisz do niej:</li>
+<li>Otwórz <a href="https://www.pythonanywhere.com/consoles/" target="_blank">stronę konsoli na PythonAnywhere</a> i przejdź do swojej <strong>Bash console</strong> (czyli po polsku &quot;konsoli Bash&quot;) albo otwórz nową. Wpisz do niej:</li>
 </ul>
 <p></p><p class="code-label">PythonAnywhere command-line</p><p></p>
 <pre><code>$ cd ~/&lt;your-pythonanywhere-domain&gt;.pythonanywhere.com
 $ git pull
 [...]
-</code></pre><p>Pami&#x119;taj by podmieni&#x107; <code>&lt;your-pythonanywhere-domain&gt;</code> na Twoj&#x105; w&#x142;a&#x15B;ciw&#x105; nazw&#x119; u&#x17C;ytkownika PythonAnywhere, bez ostrych nawias&#xF3;w. Twoja nazwa poddomeny jest zwykle Twoj&#x105; nazw&#x105; u&#x17C;ytkownika PythonAnywhere, ale w niekt&#xF3;rych przypadkach mo&#x17C;e by&#x107; nieco inna (np. je&#x15B;li Twoja nazwa u&#x17C;ytkownika zawiera wielkie litery). Wi&#x119;c je&#x15B;li to polecenie nie dzia&#x142;a, nale&#x17C;y u&#x17C;y&#x107; polecenia <code>ls</code> (lista plik&#xF3;w), aby znale&#x17A;&#x107; rzeczywist&#x105; subdomen&#x119;/nazw&#x119; folderu, a nast&#x119;pnie <code>cd</code>, aby tam przej&#x15B;&#x107;.</p>
-<p>Widzisz, jak &#x15B;ci&#x105;ga si&#x119; Tw&#xF3;j kod. Je&#x15B;li chcesz sprawdzi&#x107;, czy zmiany zosta&#x142;y &#x15B;ci&#x105;gni&#x119;te, mo&#x17C;esz przej&#x15B;&#x107; do strony <strong>&quot;Files&quot;</strong> i sprawdzi&#x107; sw&#xF3;j kod na PythonAnywhere (mo&#x17C;esz przej&#x15B;&#x107; do innych stron na PythonAnywhere korzystaj&#x105;c z menu na stronie konsoli).</p>
+</code></pre><p>Pamiętaj by podmienić <code>&lt;your-pythonanywhere-domain&gt;</code> na Twoją właściwą nazwę użytkownika PythonAnywhere, bez ostrych nawiasów. Twoja nazwa poddomeny jest zwykle Twoją nazwą użytkownika PythonAnywhere, ale w niektórych przypadkach może być nieco inna (np. jeśli Twoja nazwa użytkownika zawiera wielkie litery). Więc jeśli to polecenie nie działa, należy użyć polecenia <code>ls</code> (lista plików), aby znaleźć rzeczywistą subdomenę/nazwę folderu, a następnie <code>cd</code>, aby tam przejść.</p>
+<p>Widzisz, jak ściąga się Twój kod. Jeśli chcesz sprawdzić, czy zmiany zostały ściągnięte, możesz przejść do strony <strong>&quot;Files&quot;</strong> i sprawdzić swój kod na PythonAnywhere (możesz przejść do innych stron na PythonAnywhere korzystając z menu na stronie konsoli).</p>
 <ul>
-<li>Na koniec przejd&#x17A; do strony <a href="https://www.pythonanywhere.com/web_app_setup/" target="_blank">&quot;Web&quot;</a> i naci&#x15B;nij <strong>Reload</strong>.</li>
+<li>Na koniec przejdź do strony <a href="https://www.pythonanywhere.com/web_app_setup/" target="_blank">&quot;Web&quot;</a> i naciśnij <strong>Reload</strong>.</li>
 </ul>
-<p>I to powinno wystarczy&#x107;! Mo&#x17C;esz &#x15B;mia&#x142;o od&#x15B;wie&#x17C;y&#x107; swoj&#x105; stron&#x119; w przegl&#x105;darce! Zmiany powinny by&#x107; widoczne. :)</p>
+<p>I to powinno wystarczyć! Możesz śmiało odświeżyć swoją stronę w przeglądarce! Zmiany powinny być widoczne. :)</p>
 
                                 
                                 </section>
@@ -704,12 +704,56 @@ $ git pull
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Wprowadzenie do HTML-a","level":"1.17","depth":1,"next":{"title":"Django ORM (QuerySet)","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"previous":{"title":"Widoki Django - czas zacząć tworzyć!","level":"1.16","depth":1,"path":"django_views/README.md","ref":"django_views/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"pl","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"html/README.md","mtime":"2020-09-22T11:43:43.022Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"pl"}});
+            gitbook.page.hasChanged({"page":{"title":"Wprowadzenie do HTML-a","level":"1.17","depth":1,"next":{"title":"Django ORM (QuerySet)","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"previous":{"title":"Widoki Django - czas zacząć tworzyć!","level":"1.16","depth":1,"path":"django_views/README.md","ref":"django_views/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"pl","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"html/README.md","mtime":"2020-11-15T14:54:56.594Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"pl"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

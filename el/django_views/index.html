@@ -7,7 +7,7 @@
         <title>Django views - ώρα να δημιουργήσετε! · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -511,31 +511,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="django-views-&#x2013;-&#x3CE;&#x3C1;&#x3B1;-&#x3BD;&#x3B1;-&#x3B4;&#x3B7;&#x3BC;&#x3B9;&#x3BF;&#x3C5;&#x3C1;&#x3B3;&#x3AE;&#x3C3;&#x3BF;&#x3C5;&#x3BC;&#x3B5;">Django views &#x2013; &#x3CE;&#x3C1;&#x3B1; &#x3BD;&#x3B1; &#x3B4;&#x3B7;&#x3BC;&#x3B9;&#x3BF;&#x3C5;&#x3C1;&#x3B3;&#x3AE;&#x3C3;&#x3BF;&#x3C5;&#x3BC;&#x3B5;!</h1>
-<p>&#x38F;&#x3C1;&#x3B1; &#x3BD;&#x3B1; &#x3BE;&#x3B5;&#x3C6;&#x3BF;&#x3C1;&#x3C4;&#x3C9;&#x3B8;&#x3BF;&#x3CD;&#x3BC;&#x3B5; &#x3C4;&#x3BF; &#x3C3;&#x3C6;&#x3AC;&#x3BB;&#x3BC;&#x3B1; &#x3C0;&#x3BF;&#x3C5; &#x3B4;&#x3B7;&#x3BC;&#x3B9;&#x3BF;&#x3C5;&#x3C1;&#x3B3;&#x3AE;&#x3C3;&#x3B1;&#x3BC;&#x3B5; &#x3C3;&#x3C4;&#x3BF; &#x3C0;&#x3C1;&#x3BF;&#x3B7;&#x3B3;&#x3BF;&#x3CD;&#x3BC;&#x3B5;&#x3BD;&#x3BF; &#x3BA;&#x3B5;&#x3C6;&#x3AC;&#x3BB;&#x3B1;&#x3B9;&#x3BF;! :)</p>
-<p>&#x388;&#x3BD;&#x3B1; <em>view</em> &#x3B5;&#x3AF;&#x3BD;&#x3B1;&#x3B9; &#x3C4;&#x3BF; &#x3BC;&#x3AD;&#x3C1;&#x3BF;&#x3C2; &#x3CC;&#x3C0;&#x3BF;&#x3C5; &#x3B2;&#x3AC;&#x3B6;&#x3BF;&#x3C5;&#x3BC;&#x3B5; &#x3C4;&#x3B7;&#x3BD; &quot;&#x3BB;&#x3BF;&#x3B3;&#x3B9;&#x3BA;&#x3AE;&quot; &#x3C4;&#x3B7;&#x3C2; &#x3B5;&#x3C6;&#x3B1;&#x3C1;&#x3BC;&#x3BF;&#x3B3;&#x3AE;&#x3C2; &#x3BC;&#x3B1;&#x3C2;. &#x398;&#x3B1; &#x3B6;&#x3B7;&#x3C4;&#x3AE;&#x3C3;&#x3B5;&#x3B9; &#x3C0;&#x3BB;&#x3B7;&#x3C1;&#x3BF;&#x3C6;&#x3BF;&#x3C1;&#x3AF;&#x3B5;&#x3C2; &#x3B1;&#x3C0;&#x3CC; &#x3C4;&#x3BF; &#x3BC;&#x3BF;&#x3BD;&#x3C4;&#x3AD;&#x3BB;&#x3BF; &#x3BC;&#x3B1;&#x3C2; (<code>model</code>) &#x3C0;&#x3BF;&#x3C5; &#x3B4;&#x3B7;&#x3BC;&#x3B9;&#x3BF;&#x3C5;&#x3C1;&#x3B3;&#x3AE;&#x3C3;&#x3B1;&#x3BC;&#x3B5; &#x3BD;&#x3C9;&#x3C1;&#x3AF;&#x3C4;&#x3B5;&#x3C1;&#x3B1; &#x3BA;&#x3B1;&#x3B9; &#x3B8;&#x3B1; &#x3C4;&#x3BF; &#x3C0;&#x3B5;&#x3C1;&#x3AC;&#x3C3;&#x3B5;&#x3B9; &#x3C3;&#x3C4;&#x3BF; <code>template</code>. &#x398;&#x3B1; &#x3B4;&#x3B7;&#x3BC;&#x3B9;&#x3BF;&#x3C5;&#x3C1;&#x3B3;&#x3AE;&#x3C3;&#x3BF;&#x3C5;&#x3BC;&#x3B5; &#x3AD;&#x3BD;&#x3B1; template &#x3C3;&#x3C4;&#x3BF; &#x3B5;&#x3C0;&#x3CC;&#x3BC;&#x3B5;&#x3BD;&#x3BF; &#x3BA;&#x3B5;&#x3C6;&#x3AC;&#x3BB;&#x3B1;&#x3B9;&#x3BF;. &#x3A4;&#x3B1; views &#x3B5;&#x3AF;&#x3BD;&#x3B1;&#x3B9; &#x3B1;&#x3C0;&#x3BB;&#x3CE;&#x3C2; Python &#x3C3;&#x3C5;&#x3BD;&#x3B1;&#x3C1;&#x3C4;&#x3AE;&#x3C3;&#x3B5;&#x3B9;&#x3C2; &#x3BF;&#x3B9; &#x3BF;&#x3C0;&#x3BF;&#x3AF;&#x3B5;&#x3C2; &#x3B5;&#x3AF;&#x3BD;&#x3B1;&#x3B9; &#x3B5;&#x3BB;&#x3B1;&#x3C6;&#x3C1;&#x3CE;&#x3C2; &#x3C0;&#x3B9;&#x3BF; &#x3C0;&#x3B5;&#x3C1;&#x3AF;&#x3C0;&#x3BB;&#x3BF;&#x3BA;&#x3B5;&#x3C2; &#x3B1;&#x3C0;&#x3CC; &#x3B1;&#x3C5;&#x3C4;&#x3AD;&#x3C2; &#x3C0;&#x3BF;&#x3C5; &#x3B3;&#x3C1;&#x3AC;&#x3C8;&#x3B1;&#x3BC;&#x3B5; &#x3C3;&#x3C4;&#x3BF; &#x3BA;&#x3B5;&#x3C6;&#x3AC;&#x3BB;&#x3B1;&#x3B9;&#x3BF; <strong>&#x395;&#x3B9;&#x3C3;&#x3B1;&#x3B3;&#x3C9;&#x3B3;&#x3AE; &#x3C3;&#x3C4;&#x3B7;&#x3BD; Python</strong>.</p>
-<p>&#x3A4;&#x3B1; views &#x3C4;&#x3BF;&#x3C0;&#x3BF;&#x3B8;&#x3B5;&#x3C4;&#x3BF;&#x3CD;&#x3BD;&#x3C4;&#x3B1;&#x3B9; &#x3C3;&#x3B5; &#x3AD;&#x3BD;&#x3B1; &#x3B1;&#x3C1;&#x3C7;&#x3B5;&#x3AF;&#x3BF; (&#x3B1;&#x3BD;&#x3B1; &#x3B5;&#x3C6;&#x3B1;&#x3C1;&#x3BC;&#x3BF;&#x3B3;&#x3AE;) &#x3BC;&#x3B5; &#x3C4;&#x3BF; &#x3CC;&#x3BD;&#x3BF;&#x3BC;&#x3B1; <code>views.py</code>. &#x398;&#x3B1; &#x3C0;&#x3C1;&#x3BF;&#x3C3;&#x3B8;&#x3AD;&#x3C3;&#x3BF;&#x3C5;&#x3BC;&#x3B5; &#x3C4;&#x3B1; &#x3B4;&#x3B9;&#x3BA;&#x3AC; &#x3BC;&#x3B1;&#x3C2; <em>views</em> &#x3C3;&#x3C4;&#x3BF; &#x3B1;&#x3C1;&#x3C7;&#x3B5;&#x3AF;&#x3BF; <code>blog/views.py</code>.</p>
+                                <h1 id="django-views-–-ώρα-να-δημιουργήσουμε">Django views – ώρα να δημιουργήσουμε!</h1>
+<p>Ώρα να ξεφορτωθούμε το σφάλμα που δημιουργήσαμε στο προηγούμενο κεφάλαιο! :)</p>
+<p>Ένα <em>view</em> είναι το μέρος όπου βάζουμε την &quot;λογική&quot; της εφαρμογής μας. Θα ζητήσει πληροφορίες από το μοντέλο μας (<code>model</code>) που δημιουργήσαμε νωρίτερα και θα το περάσει στο <code>template</code>. Θα δημιουργήσουμε ένα template στο επόμενο κεφάλαιο. Τα views είναι απλώς Python συναρτήσεις οι οποίες είναι ελαφρώς πιο περίπλοκες από αυτές που γράψαμε στο κεφάλαιο <strong>Εισαγωγή στην Python</strong>.</p>
+<p>Τα views τοποθετούνται σε ένα αρχείο (ανα εφαρμογή) με το όνομα <code>views.py</code>. Θα προσθέσουμε τα δικά μας <em>views</em> στο αρχείο <code>blog/views.py</code>.</p>
 <h2 id="blogviewspy">blog/views.py</h2>
-<p>&#x3A9;&#x3C1;&#x3B1;&#x3AF;&#x3B1;. &#x391;&#x3C2; &#x3B1;&#x3BD;&#x3BF;&#x3AF;&#x3BE;&#x3BF;&#x3C5;&#x3BC;&#x3B5; &#x3C4;&#x3BF; &#x3B1;&#x3C1;&#x3C7;&#x3B5;&#x3AF;&#x3BF; &#x3BD;&#x3B1; &#x3B4;&#x3BF;&#x3CD;&#x3BC;&#x3B5; &#x3C4;&#x3B9; &#x3AD;&#x3C7;&#x3B5;&#x3B9; &#x3BC;&#x3AD;&#x3C3;&#x3B1;:</p>
+<p>Ωραία. Ας ανοίξουμε το αρχείο να δούμε τι έχει μέσα:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 
 <span class="hljs-comment"># Create your views here.</span>
 </code></pre>
-<p>&#x38C;&#x3C7;&#x3B9; &#x3BA;&#x3B1;&#x3B9; &#x3C0;&#x3BF;&#x3BB;&#x3BB;&#x3AC; &#x3C0;&#x3C1;&#x3AC;&#x3B3;&#x3BC;&#x3B1;&#x3C4;&#x3B1;, &#x3B1;&#x3BA;&#x3CC;&#x3BC;&#x3B1;.</p>
-<p>&#x398;&#x3C5;&#x3BC;&#x3B7;&#x3B8;&#x3B5;&#x3AF;&#x3C4;&#x3B5; &#x3CC;&#x3C4;&#x3B9; &#x3BF;&#x3B9; &#x3B3;&#x3C1;&#x3B1;&#x3BC;&#x3BC;&#x3AD;&#x3C2; &#x3C0;&#x3BF;&#x3C5; &#x3BE;&#x3B5;&#x3BA;&#x3B9;&#x3BD;&#x3BF;&#x3CD;&#x3BD; &#x3BC;&#x3B5; &#x3B4;&#x3AF;&#x3B5;&#x3C3;&#x3B7; <code>#</code> &#x3B5;&#x3AF;&#x3BD;&#x3B1;&#x3B9; &#x3C3;&#x3C7;&#x3CC;&#x3BB;&#x3B9;&#x3B1;. &#x391;&#x3B3;&#x3BD;&#x3BF;&#x3BF;&#x3CD;&#x3BD;&#x3C4;&#x3B1;&#x3B9; &#x3C0;&#x3BB;&#x3AE;&#x3C1;&#x3C9;&#x3C2; &#x3B1;&#x3C0;&#x3CC; &#x3C4;&#x3B7;&#x3BD; Python.</p>
-<p>&#x391;&#x3C2; &#x3B4;&#x3B7;&#x3BC;&#x3B9;&#x3BF;&#x3C5;&#x3C1;&#x3B3;&#x3AE;&#x3C3;&#x3BF;&#x3C5;&#x3BC;&#x3B5; &#x3AD;&#x3BD;&#x3B1; <em>view</em> &#x3CC;&#x3C0;&#x3C9;&#x3C2; &#x3C0;&#x3C1;&#x3BF;&#x3C4;&#x3B5;&#x3AF;&#x3BD;&#x3B5;&#x3B9; &#x3BA;&#x3B1;&#x3B9; &#x3C4;&#x3BF; &#x3C3;&#x3C7;&#x3CC;&#x3BB;&#x3B9;&#x3BF;. &#x3A0;&#x3C1;&#x3BF;&#x3C3;&#x3B8;&#x3AD;&#x3C3;&#x3C4;&#x3B5; &#x3C4;&#x3B1; &#x3B5;&#x3C0;&#x3CC;&#x3BC;&#x3B5;&#x3BD;&#x3B1; &#x3B1;&#x3C0;&#x3CC; &#x3BA;&#x3AC;&#x3C4;&#x3C9;:</p>
+<p>Όχι και πολλά πράγματα, ακόμα.</p>
+<p>Θυμηθείτε ότι οι γραμμές που ξεκινούν με δίεση <code>#</code> είναι σχόλια. Αγνοούνται πλήρως από την Python.</p>
+<p>Ας δημιουργήσουμε ένα <em>view</em> όπως προτείνει και το σχόλιο. Προσθέστε τα επόμενα από κάτω:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_list</span><span class="hljs-params">(request)</span>:</span>
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_list.html&apos;</span>, {})
 </code></pre>
-<p>&#x38C;&#x3C0;&#x3C9;&#x3C2; &#x3B2;&#x3BB;&#x3AD;&#x3C0;&#x3B5;&#x3C4;&#x3B5;, &#x3B4;&#x3B7;&#x3BC;&#x3B9;&#x3BF;&#x3C5;&#x3C1;&#x3B3;&#x3AE;&#x3C3;&#x3B1;&#x3BC;&#x3B5; &#x3BC;&#x3B9;&#x3B1; &#x3C3;&#x3C5;&#x3BD;&#x3AC;&#x3C1;&#x3C4;&#x3B7;&#x3C3;&#x3B7; (<code>def</code>) &#x3BC;&#x3B5; &#x3C4;&#x3BF; &#x3CC;&#x3BD;&#x3BF;&#x3BC;&#x3B1; <code>post_list</code> &#x3B7; &#x3BF;&#x3C0;&#x3BF;&#x3AF;&#x3B1; &#x3C0;&#x3B1;&#x3AF;&#x3C1;&#x3BD;&#x3B5;&#x3B9; &#x3C4;&#x3B7;&#x3BD; &#x3C0;&#x3B1;&#x3C1;&#x3AC;&#x3BC;&#x3B5;&#x3C4;&#x3C1;&#x3BF; <code>request</code> &#x3BA;&#x3B1;&#x3B9; &#x3B5;&#x3C0;&#x3B9;&#x3C3;&#x3C4;&#x3C1;&#x3AD;&#x3C6;&#x3B5;&#x3B9; <code>return</code> &#x3C4;&#x3B7;&#x3BD; &#x3C4;&#x3B9;&#x3BC;&#x3AE; &#x3C0;&#x3BF;&#x3C5; &#x3C0;&#x3B1;&#x3AF;&#x3C1;&#x3BD;&#x3B5;&#x3B9; &#x3B1;&#x3C0;&#x3CC; &#x3AC;&#x3BB;&#x3BB;&#x3B7; &#x3C3;&#x3C5;&#x3BD;&#x3AC;&#x3C1;&#x3C4;&#x3B7;&#x3C3;&#x3B7;, &#x3C4;&#x3B7;&#x3BD; <code>render</code>, &#x3B7; &#x3BF;&#x3C0;&#x3BF;&#x3AF;&#x3B1; &#x3BA;&#x3AC;&#x3BD;&#x3B5;&#x3B9; render (&quot;&#x3C7;&#x3C4;&#x3AF;&#x3B6;&#x3B5;&#x3B9;&quot;) &#x3C4;&#x3BF; template <code>blog/post_list.html</code>.</p>
-<p>&#x391;&#x3C0;&#x3BF;&#x3B8;&#x3B7;&#x3BA;&#x3B5;&#x3CD;&#x3C3;&#x3C4;&#x3B5; &#x3C4;&#x3BF; &#x3B1;&#x3C1;&#x3C7;&#x3B5;&#x3AF;&#x3BF; &#x3BA;&#x3B1;&#x3B9; &#x3B5;&#x3C0;&#x3B9;&#x3C3;&#x3BA;&#x3B5;&#x3C6;&#x3C4;&#x3B5;&#x3AF;&#x3C4;&#x3B5; &#x3C4;&#x3B7; &#x3C3;&#x3B5;&#x3BB;&#x3AF;&#x3B4;&#x3B1; <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a> &#x3BD;&#x3B1; &#x3B4;&#x3BF;&#x3CD;&#x3BC;&#x3B5; &#x3C4;&#x3B9; &#x3B5;&#x3BC;&#x3C6;&#x3B1;&#x3BD;&#x3AF;&#x3B6;&#x3B5;&#x3C4;&#x3B1;&#x3B9;.</p>
-<p>&#x39A;&#x3B9; &#x3AC;&#x3BB;&#x3BB;&#x3BF; &#x3C3;&#x3C6;&#x3AC;&#x3BB;&#x3BC;&#x3B1;! &#x394;&#x3B9;&#x3B1;&#x3B2;&#x3AC;&#x3C3;&#x3C4;&#x3B5; &#x3C4;&#x3BF; &#x3B3;&#x3B9;&#x3B1;&#x3C4;&#x3AF;:</p>
-<p><img src="images/error.png" alt="&#x3A3;&#x3C6;&#x3AC;&#x3BB;&#x3BC;&#x3B1;"></p>
-<p>&#x391;&#x3C5;&#x3C4;&#x3AE; &#x3C4;&#x3B7; &#x3C6;&#x3BF;&#x3C1;&#x3AC; &#x3B4;&#x3B5;&#x3AF;&#x3C7;&#x3BD;&#x3B5;&#x3B9; &#x3CC;&#x3C4;&#x3B9; &#x3BF; server, &#x3C4;&#x3BF;&#x3C5;&#x3BB;&#x3AC;&#x3C7;&#x3B9;&#x3C3;&#x3C4;&#x3BF;&#x3BD;, &#x3C4;&#x3C1;&#x3AD;&#x3C7;&#x3B5;&#x3B9; &#x3B1;&#x3BB;&#x3BB;&#x3AC; &#x3BA;&#x3AC;&#x3C4;&#x3B9; &#x3B4;&#x3B5;&#x3BD; &#x3C0;&#x3AC;&#x3B5;&#x3B9; &#x3BA;&#x3B1;&#x3BB;&#x3AC;, &#x3C3;&#x3C9;&#x3C3;&#x3C4;&#x3AC;; &#x39C;&#x3B7;&#x3BD; &#x3B1;&#x3BD;&#x3B7;&#x3C3;&#x3C5;&#x3C7;&#x3B5;&#x3AF;&#x3C4;&#x3B5;. &#x395;&#x3AF;&#x3BD;&#x3B1;&#x3B9; &#x3B1;&#x3C0;&#x3BB;&#x3CE;&#x3C2; &#x3BC;&#x3B9;&#x3B1; &#x3C3;&#x3B5;&#x3BB;&#x3AF;&#x3B4;&#x3B1; &#x3C3;&#x3C6;&#x3AC;&#x3BB;&#x3BC;&#x3B1;&#x3C4;&#x3BF;&#x3C2;! &#x38C;&#x3C0;&#x3C9;&#x3C2; &#x3B1;&#x3BA;&#x3C1;&#x3B9;&#x3B2;&#x3CE;&#x3C2; &#x3C4;&#x3B1; &#x3BC;&#x3B7;&#x3BD;&#x3CD;&#x3BC;&#x3B1;&#x3C4;&#x3B1; &#x3C3;&#x3C6;&#x3AC;&#x3BB;&#x3BC;&#x3B1;&#x3C4;&#x3BF;&#x3C2; &#x3C3;&#x3C4;&#x3B7;&#x3BD; &#x3BA;&#x3BF;&#x3BD;&#x3C3;&#x3CC;&#x3BB;&#x3B1;, &#x3B1;&#x3C5;&#x3C4;&#x3AC; &#x3C4;&#x3B1; &#x3C3;&#x3C6;&#x3AC;&#x3BB;&#x3BC;&#x3B1;&#x3C4;&#x3B1; &#x3C3;&#x3C4;&#x3BF;&#x3BD; browser &#x3B5;&#x3AF;&#x3BD;&#x3B1;&#x3B9; &#x3C3;&#x3C4;&#x3B7;&#x3BD; &#x3C0;&#x3C1;&#x3B1;&#x3B3;&#x3BC;&#x3B1;&#x3C4;&#x3B9;&#x3BA;&#x3CC;&#x3C4;&#x3B7;&#x3C4;&#x3B1; &#x3C0;&#x3BF;&#x3BB;&#x3CD; &#x3C7;&#x3C1;&#x3AE;&#x3C3;&#x3B9;&#x3BC;&#x3B1;. &#x394;&#x3B9;&#x3B1;&#x3B2;&#x3AC;&#x3B6;&#x3B5;&#x3C4;&#x3B5; &#x3CC;&#x3C4;&#x3B9; <em>TemplateDoesNotExist</em>. &#x391;&#x3C2; &#x3C4;&#x3BF; &#x3C6;&#x3C4;&#x3B9;&#x3AC;&#x3BE;&#x3BF;&#x3C5;&#x3BC;&#x3B5; &#x3B4;&#x3B7;&#x3BC;&#x3B9;&#x3BF;&#x3C5;&#x3C1;&#x3B3;&#x3CE;&#x3BD;&#x3C4;&#x3B1;&#x3C2; &#x3AD;&#x3BD;&#x3B1; template &#x3C3;&#x3C4;&#x3BF; &#x3B5;&#x3C0;&#x3CC;&#x3BC;&#x3B5;&#x3BD;&#x3BF; &#x3BA;&#x3B5;&#x3C6;&#x3AC;&#x3BB;&#x3B1;&#x3B9;&#x3BF;!</p>
+<p>Όπως βλέπετε, δημιουργήσαμε μια συνάρτηση (<code>def</code>) με το όνομα <code>post_list</code> η οποία παίρνει την παράμετρο <code>request</code> και επιστρέφει <code>return</code> την τιμή που παίρνει από άλλη συνάρτηση, την <code>render</code>, η οποία κάνει render (&quot;χτίζει&quot;) το template <code>blog/post_list.html</code>.</p>
+<p>Αποθηκεύστε το αρχείο και επισκεφτείτε τη σελίδα <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a> να δούμε τι εμφανίζεται.</p>
+<p>Κι άλλο σφάλμα! Διαβάστε το γιατί:</p>
+<p><img src="images/error.png" alt="Σφάλμα"></p>
+<p>Αυτή τη φορά δείχνει ότι ο server, τουλάχιστον, τρέχει αλλά κάτι δεν πάει καλά, σωστά; Μην ανησυχείτε. Είναι απλώς μια σελίδα σφάλματος! Όπως ακριβώς τα μηνύματα σφάλματος στην κονσόλα, αυτά τα σφάλματα στον browser είναι στην πραγματικότητα πολύ χρήσιμα. Διαβάζετε ότι <em>TemplateDoesNotExist</em>. Ας το φτιάξουμε δημιουργώντας ένα template στο επόμενο κεφάλαιο!</p>
 <blockquote>
-<p>&#x394;&#x3B9;&#x3B1;&#x3B2;&#x3AC;&#x3C3;&#x3C4;&#x3B5; &#x3C0;&#x3B5;&#x3C1;&#x3B9;&#x3C3;&#x3C3;&#x3CC;&#x3C4;&#x3B5;&#x3C1;&#x3B1; &#x3B3;&#x3B9;&#x3B1; &#x3C4;&#x3B1; Django views &#x3C3;&#x3C4;&#x3BF; &#x3B5;&#x3C0;&#x3AF;&#x3C3;&#x3B7;&#x3BC;&#x3BF; documentation: <a href="https://docs.djangoproject.com/en/2.0/topics/http/views/" target="_blank">https://docs.djangoproject.com/en/2.0/topics/http/views/</a></p>
+<p>Διαβάστε περισσότερα για τα Django views στο επίσημο documentation: <a href="https://docs.djangoproject.com/en/2.0/topics/http/views/" target="_blank">https://docs.djangoproject.com/en/2.0/topics/http/views/</a></p>
 </blockquote>
 
                                 
@@ -580,12 +580,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Django views - ώρα να δημιουργήσετε!","level":"1.16","depth":1,"next":{"title":"Εισαγωγή στην HTML","level":"1.17","depth":1,"path":"html/README.md","ref":"html/README.md","articles":[]},"previous":{"title":"Django urls","level":"1.15","depth":1,"path":"django_urls/README.md","ref":"django_urls/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"el","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_views/README.md","mtime":"2020-09-22T11:43:42.698Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"el"}});
+            gitbook.page.hasChanged({"page":{"title":"Django views - ώρα να δημιουργήσετε!","level":"1.16","depth":1,"next":{"title":"Εισαγωγή στην HTML","level":"1.17","depth":1,"path":"html/README.md","ref":"html/README.md","articles":[]},"previous":{"title":"Django urls","level":"1.15","depth":1,"path":"django_urls/README.md","ref":"django_urls/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"el","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_views/README.md","mtime":"2020-11-15T14:54:56.298Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"el"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

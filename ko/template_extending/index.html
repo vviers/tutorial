@@ -7,7 +7,7 @@
         <title>템플릿 확장하기 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -511,18 +511,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#xD15C;&#xD50C;&#xB9BF;-&#xD655;&#xC7A5;&#xD558;&#xAE30;">&#xD15C;&#xD50C;&#xB9BF; &#xD655;&#xC7A5;&#xD558;&#xAE30;</h1>
-<p>&#xC7A5;&#xACE0;&#xC758; &#xB610; &#xB2E4;&#xB978; &#xBA4B;&#xC9C4; &#xAE30;&#xB2A5;&#xC740; <strong>&#xD15C;&#xD50C;&#xB9BF; &#xD655;&#xC7A5;(template extending)</strong> &#xC785;&#xB2C8;&#xB2E4;. &#xBB34;&#xC2A8; &#xB73B;&#xC77C;&#xAE4C;&#xC694;? &#xBC14;&#xB85C; &#xC5EC;&#xB7EC;&#xBD84;&#xC758; &#xC6F9;&#xC0AC;&#xC774;&#xD2B8; &#xC548;&#xC758; &#xC11C;&#xB85C; &#xB2E4;&#xB978; &#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xC11C; HTML&#xC758; &#xC77C;&#xBD80;&#xB97C; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xC7AC;&#xC0AC;&#xC6A9; &#xD560; &#xC218; &#xC788;&#xB2E4;&#xB294; &#xB73B;&#xC774;&#xC5D0;&#xC694;.</p>
-<p>&#xC774; &#xBC29;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB3D9;&#xC77C;&#xD55C; &#xC815;&#xBCF4;/&#xB808;&#xC774;&#xC544;&#xC6C3;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xACE0;&#xC790; &#xD560; &#xB54C;, &#xBAA8;&#xB4E0; &#xD30C;&#xC77C;&#xB9C8;&#xB2E4; &#xAC19;&#xC740; &#xB0B4;&#xC6A9;&#xC744; &#xBC18;&#xBCF5;&#xD574;&#xC11C; &#xC785;&#xB825; &#xD560; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;. &#xB610; &#xBB54;&#xAC00; &#xC218;&#xC815;&#xD560; &#xBD80;&#xBD84;&#xC774; &#xC0DD;&#xACBC;&#xC744; &#xB54C;, &#xAC01;&#xAC01; &#xBAA8;&#xB4E0; &#xD30C;&#xC77C;&#xC744; &#xC218;&#xC815;&#xD560; &#xD544;&#xC694; &#xC5C6;&#xC774; &#xB531; &#xD55C;&#xBC88;&#xB9CC; &#xC218;&#xC815;&#xD558;&#xBA74; &#xB41C;&#xB2F5;&#xB2C8;&#xB2E4;!</p>
-<h2 id="&#xAE30;&#xBCF8;-&#xD15C;&#xD50C;&#xB9BF;-&#xC0DD;&#xC131;&#xD558;&#xAE30;">&#xAE30;&#xBCF8; &#xD15C;&#xD50C;&#xB9BF; &#xC0DD;&#xC131;&#xD558;&#xAE30;</h2>
-<p>&#xAE30;&#xBCF8; &#xD15C;&#xD50C;&#xB9BF;&#xC740; &#xC6F9;&#xC0AC;&#xC774;&#xD2B8; &#xB0B4; &#xBAA8;&#xB4E0; &#xD398;&#xC774;&#xC9C0;&#xC5D0; &#xD655;&#xC7A5;&#xB418;&#xC5B4; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xAC00;&#xC7A5; &#xAE30;&#xBCF8;&#xC801;&#xC778; &#xD15C;&#xD50C;&#xB9BF;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p><code>blog/templates/blog/</code>&#xC5D0; <code>base.html</code> &#xD30C;&#xC77C;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4; &#xBD05;&#xC2DC;&#xB2E4;. :</p>
+                                <h1 id="템플릿-확장하기">템플릿 확장하기</h1>
+<p>장고의 또 다른 멋진 기능은 <strong>템플릿 확장(template extending)</strong> 입니다. 무슨 뜻일까요? 바로 여러분의 웹사이트 안의 서로 다른 페이지에서 HTML의 일부를 동일하게 재사용 할 수 있다는 뜻이에요.</p>
+<p>이 방법을 사용하면 동일한 정보/레이아웃을 사용하고자 할 때, 모든 파일마다 같은 내용을 반복해서 입력 할 필요가 없게 됩니다. 또 뭔가 수정할 부분이 생겼을 때, 각각 모든 파일을 수정할 필요 없이 딱 한번만 수정하면 된답니다!</p>
+<h2 id="기본-템플릿-생성하기">기본 템플릿 생성하기</h2>
+<p>기본 템플릿은 웹사이트 내 모든 페이지에 확장되어 사용되는 가장 기본적인 템플릿입니다.</p>
+<p><code>blog/templates/blog/</code>에 <code>base.html</code> 파일을 만들어 봅시다. :</p>
 <pre><code>blog
-&#x2514;&#x2500;&#x2500;&#x2500;templates
-    &#x2514;&#x2500;&#x2500;&#x2500;blog
+└───templates
+    └───blog
             base.html
             post_list.html
-</code></pre><p>&#xADF8; &#xB2E4;&#xC74C; &#xD30C;&#xC77C;&#xC744; &#xC5F4;&#xC5B4; <code>post_list.html</code>&#xC5D0; &#xC788;&#xB294; &#xBAA8;&#xB4E0; &#xB0B4;&#xC6A9;&#xC744; <code>base.html</code>&#xC5D0; &#xC544;&#xB798; &#xB0B4;&#xC6A9;&#xC744; &#xBCF5;&#xC0AC;&#xD574; &#xBD99;&#xC5EC;&#xB123;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+</code></pre><p>그 다음 파일을 열어 <code>post_list.html</code>에 있는 모든 내용을 <code>base.html</code>에 아래 내용을 복사해 붙여넣습니다.</p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html">{% load static %}
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
@@ -556,7 +556,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>&#xADF8; &#xB2E4;&#xC74C; <code>base.html</code>&#xC5D0;&#xC11C; <code>&lt;body&gt;</code> (<code>&lt;body&gt;</code>&#xC640; <code>&lt;/body&gt;</code> &#xC0AC;&#xC774;&#xC5D0; &#xC788;&#xB294; &#xBAA8;&#xB4E0; &#xB0B4;&#xC6A9;)&#xC758; &#xBAA8;&#xB4E0; &#xB0B4;&#xC6A9;&#xC744; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xBC14;&#xAFC9;&#xB2C8;&#xB2E4;. :</p>
+<p>그 다음 <code>base.html</code>에서 <code>&lt;body&gt;</code> (<code>&lt;body&gt;</code>와 <code>&lt;/body&gt;</code> 사이에 있는 모든 내용)의 모든 내용을 아래와 같이 바꿉니다. :</p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-header&quot;</span>&gt;</span>
@@ -572,14 +572,14 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
-<p><code>{% for post in posts %}{% endfor %}</code> &#xC0AC;&#xC774;&#xC5D0; &#xC788;&#xB294; &#xBAA8;&#xB4E0; &#xB0B4;&#xC6A9;&#xC744; &#xBC14;&#xAFE8;&#xC2B5;&#xB2C8;&#xB2E4;.: </p>
+<p><code>{% for post in posts %}{% endfor %}</code> 사이에 있는 모든 내용을 바꿨습니다.: </p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html">{% block content %}
 {% endblock %}
 </code></pre>
-<p>&#xC774; &#xCF54;&#xB4DC;&#xB294; &#xBB34;&#xC5C7;&#xC744; &#xC758;&#xBBF8;&#xC77C;&#xAE4C;&#xC694;? &#xC6B0;&#xB9AC;&#xB294; <code>block</code>&#xC744; &#xB9CC;&#xB4E0; &#xAC70;&#xC5D0;&#xC694;! &#xD15C;&#xD50C;&#xB9BF; &#xD0DC;&#xADF8; <code>{% block %}</code>&#xC73C;&#xB85C; HTML &#xB0B4;&#xC5D0; &#xB4E4;&#xC5B4;&#xAC08; &#xC218; &#xC788;&#xB294; &#xACF5;&#xAC04;&#xC744; &#xB9CC;&#xB4E4;&#xC5C8;&#xC5B4;&#xC694;. <code>base.html</code>&#xC744; &#xD655;&#xC7A5;&#xD574; &#xB2E4;&#xB978; &#xD15C;&#xD50C;&#xB9BF;&#xC5D0;&#xB3C4; &#xAC00;&#xC838;&#xB2E4; &#xC4F8; &#xC218; &#xC788;&#xAC8C; &#xD55C; &#xAC70;&#xC8E0;. &#xC5B4;&#xB5BB;&#xAC8C; &#xB3D9;&#xC791;&#xD558;&#xB294;&#xC9C0; &#xBCF4;&#xC5EC; &#xB4DC;&#xB9B4;&#xAC8C;&#xC694;.</p>
-<p>&#xC774;&#xC81C; <code>base.html</code>&#xC744; &#xD30C;&#xC77C;&#xC744; &#xC800;&#xC7A5;&#xC744; &#xD558;&#xACE0;, <code>blog/templates/blog/post_list.html</code> &#xD30C;&#xC77C;&#xC744; &#xB2E4;&#xC2DC; &#xC5FD;&#xB2C8;&#xB2E4;. 
-<code>{% for post in posts %}</code>&#xBD80;&#xD130; <code>{% endfor %}</code>&#xAE4C;&#xC9C0;&#xB9CC; &#xB0A8;&#xAE30;&#xACE0; &#xB098;&#xBA38;&#xC9C0;&#xB294; &#xC804;&#xBD80;  &#xC9C0;&#xC6B0;&#xC138;&#xC694;. &#xADF8;&#xB7FC; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xB420; &#xAC81;&#xB2C8;&#xB2E4;. :</p>
+<p>이 코드는 무엇을 의미일까요? 우리는 <code>block</code>을 만든 거에요! 템플릿 태그 <code>{% block %}</code>으로 HTML 내에 들어갈 수 있는 공간을 만들었어요. <code>base.html</code>을 확장해 다른 템플릿에도 가져다 쓸 수 있게 한 거죠. 어떻게 동작하는지 보여 드릴게요.</p>
+<p>이제 <code>base.html</code>을 파일을 저장을 하고, <code>blog/templates/blog/post_list.html</code> 파일을 다시 엽니다. 
+<code>{% for post in posts %}</code>부터 <code>{% endfor %}</code>까지만 남기고 나머지는 전부  지우세요. 그럼 아래와 같이 될 겁니다. :</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% for post in posts %}
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
@@ -591,9 +591,9 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 {% endfor %}
 </code></pre>
-<p>&#xC6B0;&#xB9AC;&#xB294; &#xC774; &#xCF54;&#xB4DC;&#xB97C; &#xBAA8;&#xB4E0; &#xCEE8;&#xD150;&#xCE20; &#xBE14;&#xB85D;&#xC5D0; &#xB300;&#xD55C; &#xD15C;&#xD50C;&#xB9BF;&#xC758; &#xC77C;&#xBD80;&#xB85C; &#xC4F8; &#xAC70;&#xC5D0;&#xC694;.
-&#xC774; &#xD30C;&#xC77C;&#xC5D0; &#xBE14;&#xB85D; &#xD0DC;&#xADF8;&#xB97C; &#xCD94;&#xAC00;&#xD574;&#xBD05;&#xC2DC;&#xB2E4;!</p>
-<p>&#xBE14;&#xB85D; &#xD0DC;&#xADF8;&#xAC00; <code>base.html</code>&#xD30C;&#xC77C;&#xC758; &#xD0DC;&#xADF8;&#xC640; &#xC77C;&#xCE58;&#xD574;&#xC57C;&#xACA0;&#xC8E0;. &#xB610; &#xCF58;&#xD150;&#xCE20; &#xBE14;&#xB85D;&#xC5D0; &#xC18D;&#xD55C; &#xBAA8;&#xB4E0; &#xCF54;&#xB4DC;&#xB97C; &#xD3EC;&#xD568;&#xD558;&#xAC8C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xD560; &#xAC70;&#xC5D0;&#xC694;. &#xC774;&#xB97C; &#xC704;&#xD574;&#xC11C; <code>{% block content %}</code>&#xC640; <code>{% endblock %}</code>&#xC0AC;&#xC774;&#xC5D0; &#xBAA8;&#xB4E0; &#xCF54;&#xB4DC;&#xB97C; &#xB123;&#xC73C;&#xC138;&#xC694;. &#xC774;&#xB807;&#xAC8C; &#xB9D0;&#xC774;&#xC8E0;. : </p>
+<p>우리는 이 코드를 모든 컨텐츠 블록에 대한 템플릿의 일부로 쓸 거에요.
+이 파일에 블록 태그를 추가해봅시다!</p>
+<p>블록 태그가 <code>base.html</code>파일의 태그와 일치해야겠죠. 또 콘텐츠 블록에 속한 모든 코드를 포함하게 만들어야 할 거에요. 이를 위해서 <code>{% block content %}</code>와 <code>{% endblock %}</code>사이에 모든 코드를 넣으세요. 이렇게 말이죠. : </p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% block content %}
     {% for post in posts %}
@@ -607,7 +607,7 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>&#xD55C; &#xAC00;&#xC9C0;&#xB9CC; &#xB0A8;&#xC558;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774; &#xB450; &#xD15C;&#xD50C;&#xB9BF;&#xC744; &#xC5F0;&#xACB0;&#xD574;&#xC57C;&#xD574;&#xC694;. &#xC9C0;&#xAE08;&#xAE4C;&#xC9C0; &#xC2E4;&#xC2B5;&#xD55C; &#xB0B4;&#xC6A9;&#xC774; &#xBC14;&#xB85C; &#xD655;&#xC7A5; &#xD15C;&#xD50C;&#xB9BF;&#xC758; &#xC804;&#xBD80;&#xC785;&#xB2C8;&#xB2E4;! &#xD655;&#xC7A5; &#xD0DC;&#xADF8;&#xB97C; &#xD30C;&#xC77C; &#xB9E8; &#xCC98;&#xC74C;&#xC5D0; &#xCD94;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;. &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774;&#xC694;. :</p>
+<p>한 가지만 남았습니다. 이 두 템플릿을 연결해야해요. 지금까지 실습한 내용이 바로 확장 템플릿의 전부입니다! 확장 태그를 파일 맨 처음에 추가합니다. 아래와 같이요. :</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
 
@@ -623,9 +623,9 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>&#xB2E4; &#xB418;&#xC5C8;&#xC5B4;&#xC694;! &#xC5EC;&#xB7EC;&#xBD84;&#xC758; &#xC6F9;&#xC0AC;&#xC774;&#xD2B8;&#xAC00; &#xC798; &#xC791;&#xB3D9;&#xD558;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD574;&#xBCF4;&#xC138;&#xC694;. :)</p>
+<p>다 되었어요! 여러분의 웹사이트가 잘 작동하는지 확인해보세요. :)</p>
 <blockquote>
-<p>&#xB9CC;&#xC57D; <code>TemplateDoesNotExists(&#xD15C;&#xD50C;&#xB9BF;&#xD30C;&#xC77C;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;)</code>&#xB77C;&#xB294; &#xC5D0;&#xB7EC; &#xBA54;&#xC138;&#xC9C0;&#xAC00; &#xB09C;&#xB2E4;&#xBA74; <code>blog/base.html</code>&#xD30C;&#xC77C;&#xC774; &#xC5C6;&#xC774; &#xCF58;&#xC194;&#xC5D0;&#xC11C; <code>runserver</code>&#xAC00; &#xC791;&#xB3D9;&#xB418;&#xACE0; &#xC788;&#xB294; &#xACBD;&#xC6B0;&#xC785;&#xB2C8;&#xB2E4;. &#xC774;&#xB7F0; &#xACBD;&#xC6B0;, (Ctrl+C)&#xB97C; &#xB20C;&#xB7EC;&#xC11C; &#xBA48;&#xCD98; &#xD6C4; <code>python manage.py runserver</code>&#xBA85;&#xB839;&#xC5B4;&#xB85C; &#xB2E4;&#xC2DC; &#xC11C;&#xBC84;&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xC138;&#xC694;.</p>
+<p>만약 <code>TemplateDoesNotExists(템플릿파일이 존재하지 않습니다)</code>라는 에러 메세지가 난다면 <code>blog/base.html</code>파일이 없이 콘솔에서 <code>runserver</code>가 작동되고 있는 경우입니다. 이런 경우, (Ctrl+C)를 눌러서 멈춘 후 <code>python manage.py runserver</code>명령어로 다시 서버를 실행하세요.</p>
 </blockquote>
 
                                 
@@ -670,12 +670,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"템플릿 확장하기","level":"1.22","depth":1,"next":{"title":"애플리케이션 확장하기","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - 예쁘게 만들기","level":"1.21","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"ko","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-09-22T11:43:42.994Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"ko"}});
+            gitbook.page.hasChanged({"page":{"title":"템플릿 확장하기","level":"1.22","depth":1,"next":{"title":"애플리케이션 확장하기","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - 예쁘게 만들기","level":"1.21","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"ko","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-11-15T14:54:56.566Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"ko"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

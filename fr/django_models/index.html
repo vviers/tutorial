@@ -7,7 +7,7 @@
         <title>Les modèles dans Django · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -621,13 +621,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="les-mod&#xE8;les-dans-django">Les mod&#xE8;les dans Django</h1>
-<p>Maintenant, nous aimerions cr&#xE9;er quelque chose qui permet stocker les articles de notre blog. Mais avant de pour pouvoir faire &#xE7;a, nous allons tout d&apos;abord devoir vous parler d&apos;un truc qui s&apos;appelle les <code>objets</code>.</p>
+                                <h1 id="les-modèles-dans-django">Les modèles dans Django</h1>
+<p>Maintenant, nous aimerions créer quelque chose qui permet stocker les articles de notre blog. Mais avant de pour pouvoir faire ça, nous allons tout d&apos;abord devoir vous parler d&apos;un truc qui s&apos;appelle les <code>objets</code>.</p>
 <h2 id="les-objets">Les objets</h2>
-<p>Il existe un concept en programmation qu&apos;on appelle la <code>programmation orient&#xE9;e objets</code>. L&apos;id&#xE9;e, c&apos;est de mod&#xE9;liser les choses et de d&#xE9;finir comment elles interagissent entre elles plut&#xF4;t que de tout voir comme une s&#xE9;quence d&apos;instructions.</p>
-<p>Du coup, c&apos;est quoi un objet ? C&apos;est une collection de propri&#xE9;t&#xE9;s et d&apos;actions. &#xC7;a a l&apos;air bizarre dit comme &#xE7;a. Un exemple devrait vous permettre d&apos;y voir un peu plus clair.</p>
-<p>Si on veut mod&#xE9;liser un chat, nous allons cr&#xE9;er un objet <code>Chat</code> qui a des propri&#xE9;t&#xE9;s comme <code>couleur</code>, <code>&#xE2;ge</code>, <code>humeur</code> (bonne humeur, mauvaise humeur, fatigu&#xE9; ;)) et <code>propri&#xE9;taire</code> (ce qui pourrait &#xEA;tre un objet <code>Personne</code>, ou, s&apos;il s&apos;agit d&apos;un chat sauvage, cette propri&#xE9;t&#xE9; pourrait &#xEA;tre simplement vide).</p>
-<p>Ensuite, nous pouvons donner des actions au <code>Chat</code> : <code>ronronner</code>, <code>gratter</code> ou <code>manger</code>. (Dans ce dernier cas, on donne au chat de la <code>NourriturePourChat</code>, ce qui peut &#xEA;tre un objet s&#xE9;par&#xE9; avec ses propres propri&#xE9;t&#xE9;s, comme le <code>go&#xFB;t</code>).</p>
+<p>Il existe un concept en programmation qu&apos;on appelle la <code>programmation orientée objets</code>. L&apos;idée, c&apos;est de modéliser les choses et de définir comment elles interagissent entre elles plutôt que de tout voir comme une séquence d&apos;instructions.</p>
+<p>Du coup, c&apos;est quoi un objet ? C&apos;est une collection de propriétés et d&apos;actions. Ça a l&apos;air bizarre dit comme ça. Un exemple devrait vous permettre d&apos;y voir un peu plus clair.</p>
+<p>Si on veut modéliser un chat, nous allons créer un objet <code>Chat</code> qui a des propriétés comme <code>couleur</code>, <code>âge</code>, <code>humeur</code> (bonne humeur, mauvaise humeur, fatigué ;)) et <code>propriétaire</code> (ce qui pourrait être un objet <code>Personne</code>, ou, s&apos;il s&apos;agit d&apos;un chat sauvage, cette propriété pourrait être simplement vide).</p>
+<p>Ensuite, nous pouvons donner des actions au <code>Chat</code> : <code>ronronner</code>, <code>gratter</code> ou <code>manger</code>. (Dans ce dernier cas, on donne au chat de la <code>NourriturePourChat</code>, ce qui peut être un objet séparé avec ses propres propriétés, comme le <code>goût</code>).</p>
 <pre><code>Cat
 --------
 color
@@ -642,10 +642,10 @@ feed(cat_food)
 CatFood
 --------
 taste
-</code></pre><p>L&apos;id&#xE9;e qu&apos;il faut retenir, c&apos;est que l&apos;on d&#xE9;crit les choses du monde r&#xE9;el avec des propri&#xE9;t&#xE9;s (appel&#xE9;es <code>propri&#xE9;t&#xE9;s des objets</code>) et des actions (appel&#xE9;es <code>m&#xE9;thodes</code>).</p>
-<p>Du coup, comment mod&#xE9;liser les articles de blog ? C&apos;est bien gentil les chats, mais ce qui nous int&#xE9;resse, &#xE7;a reste de faire un blog !</p>
-<p>Pour &#xE7;a, il faut r&#xE9;ponde &#xE0; la question : qu&apos;est-ce qu&apos;un article de blog ? Quelles propri&#xE9;t&#xE9;s devrait-il avoir ?</p>
-<p>Pour commencer, notre blog post doit avoir du texte : il a bien du contenu et un titre, n&apos;est-ce pas ? Et puis, ce serait bien de savoir aussi qui l&apos;a &#xE9;crit. On a donc besoin d&apos;un auteur. Enfin, on aimerait aussi savoir quand l&apos;article a &#xE9;t&#xE9; &#xE9;crit et publi&#xE9;.</p>
+</code></pre><p>L&apos;idée qu&apos;il faut retenir, c&apos;est que l&apos;on décrit les choses du monde réel avec des propriétés (appelées <code>propriétés des objets</code>) et des actions (appelées <code>méthodes</code>).</p>
+<p>Du coup, comment modéliser les articles de blog ? C&apos;est bien gentil les chats, mais ce qui nous intéresse, ça reste de faire un blog !</p>
+<p>Pour ça, il faut réponde à la question : qu&apos;est-ce qu&apos;un article de blog ? Quelles propriétés devrait-il avoir ?</p>
+<p>Pour commencer, notre blog post doit avoir du texte : il a bien du contenu et un titre, n&apos;est-ce pas ? Et puis, ce serait bien de savoir aussi qui l&apos;a écrit. On a donc besoin d&apos;un auteur. Enfin, on aimerait aussi savoir quand l&apos;article a été écrit et publié.</p>
 <pre><code>Post
 --------
 title
@@ -653,41 +653,41 @@ text
 author
 created_date
 published_date
-</code></pre><p>Quel genre d&apos;actions pourrions-nous faire sur un article de blog ? Un bon d&#xE9;but serait d&apos;avoir une <code>m&#xE9;thode</code> qui permet de publier le post.</p>
-<p>On va donc avoir besoin d&apos;une m&#xE9;thode <code>publish</code>.</p>
-<p>Voil&#xE0;, nous avons une id&#xE9;e de ce que nous avons besoin. Allons mod&#xE9;liser tout &#xE7;a dans Django!</p>
-<h2 id="les-mod&#xE8;les-dans-django">Les mod&#xE8;les dans Django</h2>
-<p>Maintenant que nous savons ce qu&apos;est un objet, nous allons pouvoir cr&#xE9;er un mod&#xE8;le Django pour notre post de blog.</p>
-<p>Un mod&#xE8;le Django est un type particulier d&apos;objet : il est sauvegard&#xE9; dans la <code>base de donn&#xE9;es</code>. Une base de donn&#xE9;es est une collection de donn&#xE9;es. C&apos;est &#xE0; cet endroit que l&apos;on stocke toutes les informations au sujet des utilisateurs, des blog posts, etc. Pour stocker nos donn&#xE9;es, nous allons utiliser une base de donn&#xE9;es SQLite. C&apos;est la base de donn&#xE9;es par d&#xE9;faut dans Django. Elle sera largement suffisante pour ce que nous voulons faire.</p>
-<p>Pour vous aider &#xE0; visualiser ce qu&apos;est une base de donn&#xE9;es, pensez &#xE0; un tableur avec des colonnes (champs) et des lignes (donn&#xE9;es).</p>
-<h3 id="cr&#xE9;er-une-application">Cr&#xE9;er une application</h3>
-<p>Pour &#xE9;viter le d&#xE9;sordre, nous allons cr&#xE9;er une application s&#xE9;par&#xE9;e &#xE0; l&apos;int&#xE9;rieur de notre projet. Prenez l&apos;habitude de bien tout organiser d&#xE8;s le d&#xE9;but. Afin de cr&#xE9;er une application, nous avons besoin d&apos;ex&#xE9;cuter la commande suivante dans notre console (prenez garde &#xE0; bien &#xEA;tre dans le dossier <code>djangogirls</code> o&#xF9; se trouve le fichier <code>manage.py</code>) :</p>
+</code></pre><p>Quel genre d&apos;actions pourrions-nous faire sur un article de blog ? Un bon début serait d&apos;avoir une <code>méthode</code> qui permet de publier le post.</p>
+<p>On va donc avoir besoin d&apos;une méthode <code>publish</code>.</p>
+<p>Voilà, nous avons une idée de ce que nous avons besoin. Allons modéliser tout ça dans Django!</p>
+<h2 id="les-modèles-dans-django">Les modèles dans Django</h2>
+<p>Maintenant que nous savons ce qu&apos;est un objet, nous allons pouvoir créer un modèle Django pour notre post de blog.</p>
+<p>Un modèle Django est un type particulier d&apos;objet : il est sauvegardé dans la <code>base de données</code>. Une base de données est une collection de données. C&apos;est à cet endroit que l&apos;on stocke toutes les informations au sujet des utilisateurs, des blog posts, etc. Pour stocker nos données, nous allons utiliser une base de données SQLite. C&apos;est la base de données par défaut dans Django. Elle sera largement suffisante pour ce que nous voulons faire.</p>
+<p>Pour vous aider à visualiser ce qu&apos;est une base de données, pensez à un tableur avec des colonnes (champs) et des lignes (données).</p>
+<h3 id="créer-une-application">Créer une application</h3>
+<p>Pour éviter le désordre, nous allons créer une application séparée à l&apos;intérieur de notre projet. Prenez l&apos;habitude de bien tout organiser dès le début. Afin de créer une application, nous avons besoin d&apos;exécuter la commande suivante dans notre console (prenez garde à bien être dans le dossier <code>djangogirls</code> où se trouve le fichier <code>manage.py</code>) :</p>
 <p></p><p class="code-label">Mac OS X and Linux:</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py startapp blog
 </code></pre><p></p><p class="code-label">Windows:</p><p></p>
 <pre><code>(myvenv) C:\Users\Name\djangogirls&gt; python manage.py startapp blog
-</code></pre><p>Vous pouvez voir qu&apos;un nouveau dossier <code>blog</code> a &#xE9;t&#xE9; cr&#xE9;&#xE9; et qu&apos;il contient diff&#xE9;rents fichiers. Les dossiers et fichiers li&#xE9;s &#xE0; votre projet doivent maintenant &#xEA;tre organis&#xE9;s selon cette structure :</p>
+</code></pre><p>Vous pouvez voir qu&apos;un nouveau dossier <code>blog</code> a été créé et qu&apos;il contient différents fichiers. Les dossiers et fichiers liés à votre projet doivent maintenant être organisés selon cette structure :</p>
 <pre><code>djangogirls
-&#x251C;&#x2500;&#x2500; blog
-&#x2502;   &#x251C;&#x2500;&#x2500; admin.py
-&#x2502;   &#x251C;&#x2500;&#x2500; apps.py
-&#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
-&#x2502;   &#x251C;&#x2500;&#x2500; migrations
-&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; __init__.py
-&#x2502;   &#x251C;&#x2500;&#x2500; models.py
-&#x2502;   &#x251C;&#x2500;&#x2500; tests.py
-&#x2502;   &#x2514;&#x2500;&#x2500; views.py
-&#x251C;&#x2500;&#x2500; db.sqlite3
-&#x251C;&#x2500;&#x2500; manage.py
-&#x251C;&#x2500;&#x2500; mysite
-&#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
-&#x2502;   &#x251C;&#x2500;&#x2500; settings.py
-&#x2502;   &#x251C;&#x2500;&#x2500; urls.py
-&#x2502;   &#x2514;&#x2500;&#x2500; wsgi.py
-&#x251C;&#x2500;&#x2500; myvenv
-&#x2502;   &#x2514;&#x2500;&#x2500; ...
-&#x2514;&#x2500;&#x2500; requirements.txt
-</code></pre><p>Apr&#xE8;s avoir cr&#xE9;&#xE9; une nouvelle application, vous devez dire &#xE0; Django de l&apos;utiliser. Nous faisons cela via le fichier <code>mysite/settings.py</code>. Ouvrez-le dans votre &#xE9;diteur de code. Trouvez la section <code>INSTALLED_APPS</code> et ajoutez une ligne <code>&apos;blog.apps.BlogConfig&apos;,</code> juste avant <code>]</code>. La section doit maintenant ressembler &#xE0; ceci :</p>
+├── blog
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── db.sqlite3
+├── manage.py
+├── mysite
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── myvenv
+│   └── ...
+└── requirements.txt
+</code></pre><p>Après avoir créé une nouvelle application, vous devez dire à Django de l&apos;utiliser. Nous faisons cela via le fichier <code>mysite/settings.py</code>. Ouvrez-le dans votre éditeur de code. Trouvez la section <code>INSTALLED_APPS</code> et ajoutez une ligne <code>&apos;blog.apps.BlogConfig&apos;,</code> juste avant <code>]</code>. La section doit maintenant ressembler à ceci :</p>
 <p></p><p class="code-label">mysite/settings.py</p><p></p>
 <pre><code class="lang-python">INSTALLED_APPS = [
     <span class="hljs-string">&apos;django.contrib.admin&apos;</span>,
@@ -699,9 +699,9 @@ published_date
     <span class="hljs-string">&apos;blog.apps.BlogConfig&apos;</span>,
 ]
 </code></pre>
-<h3 id="cr&#xE9;er-un-mod&#xE8;le-de-blog-post">Cr&#xE9;er un mod&#xE8;le de blog post</h3>
-<p>Le fichier <code>blog/models.py</code> permet de d&#xE9;finir les objets que nous appelons des <code>mod&#xE8;les</code>. C&apos;est &#xE0; cet endroit que nous allons d&#xE9;finir ce que c&apos;est qu&apos;un un blog post.</p>
-<p>Ouvrez le fichier <code>blog/models.py</code> dans l&apos;&#xE9;diteur de code, supprimez tout ce qui s&apos;y trouve et copiez-y le morceau de code suivant :</p>
+<h3 id="créer-un-modèle-de-blog-post">Créer un modèle de blog post</h3>
+<p>Le fichier <code>blog/models.py</code> permet de définir les objets que nous appelons des <code>modèles</code>. C&apos;est à cet endroit que nous allons définir ce que c&apos;est qu&apos;un un blog post.</p>
+<p>Ouvrez le fichier <code>blog/models.py</code> dans l&apos;éditeur de code, supprimez tout ce qui s&apos;y trouve et copiez-y le morceau de code suivant :</p>
 <p></p><p class="code-label">blog/models.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.conf <span class="hljs-keyword">import</span> settings
 <span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models
@@ -723,45 +723,45 @@ published_date
         <span class="hljs-keyword">return</span> self.title
 </code></pre>
 <blockquote>
-<p>V&#xE9;rifiez que vous avez bien utilis&#xE9; deux tirets bas (<code>_</code>) autour de <code>str</code>. C&apos;est une convention fr&#xE9;quemment utilis&#xE9;e en Python qui porte m&#xEA;me un petit nom en anglais : &quot;dunder&quot;, pour &quot;double-underscore&quot;.</p>
+<p>Vérifiez que vous avez bien utilisé deux tirets bas (<code>_</code>) autour de <code>str</code>. C&apos;est une convention fréquemment utilisée en Python qui porte même un petit nom en anglais : &quot;dunder&quot;, pour &quot;double-underscore&quot;.</p>
 </blockquote>
-<p>Ce gros morceau de code a l&apos;air effrayant mais, ne vous inqui&#xE9;tez pas : nous allons vous expliquer ce que signifie chacune de ces lignes!</p>
-<p>Toutes les lignes qui commencent par <code>from</code> ou <code>import</code> sont des lignes qui permettent d&apos;importer des morceaux d&apos;autres fichiers. Concr&#xE8;tement, au lieu de recopier ou de copier-coller la m&#xEA;me chose dans diff&#xE9;rents fichiers, nous pouvons tout simplement faire r&#xE9;f&#xE9;rence &#xE0; certains morceaux d&apos;autres fichiers &#xE0; l&apos;aide de <code>from ... import ...</code>.</p>
-<p><code>class Post(models.Model):</code> - C&apos;est cette ligne qui permet de d&#xE9;finir notre mod&#xE8;le (ce qui est un <code>object</code>).</p>
+<p>Ce gros morceau de code a l&apos;air effrayant mais, ne vous inquiétez pas : nous allons vous expliquer ce que signifie chacune de ces lignes!</p>
+<p>Toutes les lignes qui commencent par <code>from</code> ou <code>import</code> sont des lignes qui permettent d&apos;importer des morceaux d&apos;autres fichiers. Concrètement, au lieu de recopier ou de copier-coller la même chose dans différents fichiers, nous pouvons tout simplement faire référence à certains morceaux d&apos;autres fichiers à l&apos;aide de <code>from ... import ...</code>.</p>
+<p><code>class Post(models.Model):</code> - C&apos;est cette ligne qui permet de définir notre modèle (ce qui est un <code>object</code>).</p>
 <ul>
-<li>Le mot clef sp&#xE9;cial <code>class</code> permet d&apos;indiquer que nous sommes en train de d&#xE9;finir un objet.</li>
-<li><code>Post</code> est le nom de notre mod&#xE8;le. Vous pouvez lui donner un autre nom (mais vous ne pouvez pas utiliser des caract&#xE8;res sp&#xE9;ciaux ou accentu&#xE9;s et ins&#xE9;rer des espaces). Le nom d&apos;une classe commence toujours par une majuscule.</li>
-<li><code>models.Model</code> signifie que Post est un mod&#xE8;le Django. Comme &#xE7;a, Django sait qu&apos;il doit l&apos;enregistrer dans la base de donn&#xE9;es.</li>
+<li>Le mot clef spécial <code>class</code> permet d&apos;indiquer que nous sommes en train de définir un objet.</li>
+<li><code>Post</code> est le nom de notre modèle. Vous pouvez lui donner un autre nom (mais vous ne pouvez pas utiliser des caractères spéciaux ou accentués et insérer des espaces). Le nom d&apos;une classe commence toujours par une majuscule.</li>
+<li><code>models.Model</code> signifie que Post est un modèle Django. Comme ça, Django sait qu&apos;il doit l&apos;enregistrer dans la base de données.</li>
 </ul>
-<p>Maintenant, nous allons pouvoir d&#xE9;finir les propri&#xE9;t&#xE9;s dont nous parlions au d&#xE9;but de ce chapitre : <code>title (titre)</code>, <code>text (texte)</code>, <code>created_date (date de cr&#xE9;ation)</code>, <code>published_date (date de publication)</code> et <code>author (auteur)</code>. Pour cela, nous allons avoir besoin de d&#xE9;finir le type de chaque champ (Est-ce que c&apos;est du texte? Un nombre ? Une date ? Une relation &#xE0; un autre objet, comme un objet utilisateur par exemple ?)</p>
+<p>Maintenant, nous allons pouvoir définir les propriétés dont nous parlions au début de ce chapitre : <code>title (titre)</code>, <code>text (texte)</code>, <code>created_date (date de création)</code>, <code>published_date (date de publication)</code> et <code>author (auteur)</code>. Pour cela, nous allons avoir besoin de définir le type de chaque champ (Est-ce que c&apos;est du texte? Un nombre ? Une date ? Une relation à un autre objet, comme un objet utilisateur par exemple ?)</p>
 <ul>
-<li><code>models.CharField</code> - Cela nous permet de d&#xE9;finir un champ texte avec un nombre limit&#xE9; de caract&#xE8;res.</li>
-<li><code>models.TextField</code> - Cela nous permet de d&#xE9;finir un champ text sans limite de caract&#xE8;res. Parfait pour le contenu d&apos;un blog post, non ?</li>
-<li><code>models.DateTimeField</code> - D&#xE9;finit que le champ en question est une date ou une heure.</li>
-<li><code>models.ForeignKey</code> - C&apos;est un lien vers un autre mod&#xE8;le.</li>
+<li><code>models.CharField</code> - Cela nous permet de définir un champ texte avec un nombre limité de caractères.</li>
+<li><code>models.TextField</code> - Cela nous permet de définir un champ text sans limite de caractères. Parfait pour le contenu d&apos;un blog post, non ?</li>
+<li><code>models.DateTimeField</code> - Définit que le champ en question est une date ou une heure.</li>
+<li><code>models.ForeignKey</code> - C&apos;est un lien vers un autre modèle.</li>
 </ul>
-<p>Malheureusement, nous n&apos;avons pas le temps de vous expliquer tous les bouts de code que nous allons manipuler dans ce tutoriel. Si vous voulez en savoir plus sur les mod&#xE8;les Django, n&apos;h&#xE9;sitez pas &#xE0; consulter la documentation officielle de Django (<a href="https://docs.djangoproject.com/en/2.2/ref/models/fields/#field-types" target="_blank">https://docs.djangoproject.com/en/2.2/ref/models/fields/#field-types</a>).</p>
-<p>Et sinon, c&apos;est quoi <code>def publish(self):</code> ? Il s&apos;agit de notre m&#xE9;thode <code>publish</code> dont nous parlions tout &#xE0; l&apos;heure. <code>def</code> signifie que nous cr&#xE9;ons une fonction/m&#xE9;thode qui porte le nom <code>publish</code>. Vous pouvez changer le nom de la m&#xE9;thode si vous le souhaitez. La r&#xE8;gle de nommage est d&apos;utiliser des minuscules et des tirets bas &#xE0; la place des espaces. Par exemple, une m&#xE9;thode qui calcule le prix moyen d&apos;un produit pourrait s&apos;appeler <code>calcul_prix_moyen</code>.</p>
-<p>Les m&#xE9;thodes renvoient (<code>return</code>) souvent quelque chose. C&apos;est le cas de la m&#xE9;thode <code>__str__</code>. Dans notre tutoriel, lorsque nous appellerons la m&#xE9;thode <code>__str__()</code>, nous allons obtenir du texte (<strong>string</strong>) avec un titre de Post.</p>
-<p>Notez &#xE9;galement que les deux lignes <code>def publish(self) :</code> et <code>def __str__(self) :</code> sont mises en retrait &#xE0; l&#x2019;int&#xE9;rieur de notre classe. Parce que Python est sensible aux espaces, nous devons mettre en retrait (ou &quot;indenter&quot;) nos m&#xE9;thodes &#xE0; l&apos;int&#xE9;rieur de la classe. Sinon, les m&#xE9;thodes ne sont pas consid&#xE9;r&#xE9;es comme appartenantes &#xE0; la classe, et vous pouvez obtenir un comportement inattendu.</p>
-<p>Si quelque chose ne vous parait pas clair au sujet des mod&#xE8;les, n&apos;h&#xE9;sitez pas &#xE0; demander &#xE0; votre coach ! Cela peut &#xEA;tre compliqu&#xE9; &#xE0; comprendre la premi&#xE8;re fois, surtout lorsque l&apos;on apprend les objets et les fonctions en m&#xEA;me temps. Gardez espoir ! Avec le temps, tout cela vous paraitra de moins en moins magique et de plus en plus &#xE9;vident !</p>
-<h3 id="cr&#xE9;er-des-tables-pour-votre-mod&#xE8;le-dans-votre-base-de-donn&#xE9;es">Cr&#xE9;er des tables pour votre mod&#xE8;le dans votre base de donn&#xE9;es</h3>
-<p>La derni&#xE8;re &#xE9;tape pour cette section est d&apos;ajouter notre nouveau mod&#xE8;le &#xE0; notre base de donn&#xE9;es. Tout d&apos;abord, nous devons signaler &#xE0; Django que nous venons de cr&#xE9;er notre mod&#xE8;le. (Nous venons de le terminer !). Allez sur votre terminal et tapez <code>python manage.py makemigrations blog</code>. Le r&#xE9;sultat devrait ressembler &#xE0; &#xE7;a :</p>
+<p>Malheureusement, nous n&apos;avons pas le temps de vous expliquer tous les bouts de code que nous allons manipuler dans ce tutoriel. Si vous voulez en savoir plus sur les modèles Django, n&apos;hésitez pas à consulter la documentation officielle de Django (<a href="https://docs.djangoproject.com/en/2.2/ref/models/fields/#field-types" target="_blank">https://docs.djangoproject.com/en/2.2/ref/models/fields/#field-types</a>).</p>
+<p>Et sinon, c&apos;est quoi <code>def publish(self):</code> ? Il s&apos;agit de notre méthode <code>publish</code> dont nous parlions tout à l&apos;heure. <code>def</code> signifie que nous créons une fonction/méthode qui porte le nom <code>publish</code>. Vous pouvez changer le nom de la méthode si vous le souhaitez. La règle de nommage est d&apos;utiliser des minuscules et des tirets bas à la place des espaces. Par exemple, une méthode qui calcule le prix moyen d&apos;un produit pourrait s&apos;appeler <code>calcul_prix_moyen</code>.</p>
+<p>Les méthodes renvoient (<code>return</code>) souvent quelque chose. C&apos;est le cas de la méthode <code>__str__</code>. Dans notre tutoriel, lorsque nous appellerons la méthode <code>__str__()</code>, nous allons obtenir du texte (<strong>string</strong>) avec un titre de Post.</p>
+<p>Notez également que les deux lignes <code>def publish(self) :</code> et <code>def __str__(self) :</code> sont mises en retrait à l’intérieur de notre classe. Parce que Python est sensible aux espaces, nous devons mettre en retrait (ou &quot;indenter&quot;) nos méthodes à l&apos;intérieur de la classe. Sinon, les méthodes ne sont pas considérées comme appartenantes à la classe, et vous pouvez obtenir un comportement inattendu.</p>
+<p>Si quelque chose ne vous parait pas clair au sujet des modèles, n&apos;hésitez pas à demander à votre coach ! Cela peut être compliqué à comprendre la première fois, surtout lorsque l&apos;on apprend les objets et les fonctions en même temps. Gardez espoir ! Avec le temps, tout cela vous paraitra de moins en moins magique et de plus en plus évident !</p>
+<h3 id="créer-des-tables-pour-votre-modèle-dans-votre-base-de-données">Créer des tables pour votre modèle dans votre base de données</h3>
+<p>La dernière étape pour cette section est d&apos;ajouter notre nouveau modèle à notre base de données. Tout d&apos;abord, nous devons signaler à Django que nous venons de créer notre modèle. (Nous venons de le terminer !). Allez sur votre terminal et tapez <code>python manage.py makemigrations blog</code>. Le résultat devrait ressembler à ça :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py makemigrations blog
 Migrations for &apos;blog&apos;:
   blog/migrations/0001_initial.py:
 
   - Create model Post
-</code></pre><p><strong>Remarque :</strong> N&#x2019;oubliez pas de sauvegarder les fichiers que vous modifiez. Dans le cas contraire, votre ordinateur ex&#xE9;cute la version pr&#xE9;c&#xE9;dente, ce qui pourrait vous donner des messages d&#x2019;erreur inattendus.</p>
-<p>Django vient de nous pr&#xE9;parer un fichier de migration que nous allons pouvoir appliquer d&#xE8;s maintenant &#xE0; notre base de donn&#xE9;es. Pour cela, tapez <code>python manage.py migrate blog</code>. Normalement, vous devrez voir ceci s&apos;afficher dans votre console :</p>
+</code></pre><p><strong>Remarque :</strong> N’oubliez pas de sauvegarder les fichiers que vous modifiez. Dans le cas contraire, votre ordinateur exécute la version précédente, ce qui pourrait vous donner des messages d’erreur inattendus.</p>
+<p>Django vient de nous préparer un fichier de migration que nous allons pouvoir appliquer dès maintenant à notre base de données. Pour cela, tapez <code>python manage.py migrate blog</code>. Normalement, vous devrez voir ceci s&apos;afficher dans votre console :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py migrate blog
 Operations to perform:
   Apply all migrations: blog
 Running migrations:
   Applying blog.0001_initial... OK
-</code></pre><p>Youpi ! Notre mod&#xE8;le Post est maintenant int&#xE9;gr&#xE9; &#xE0; la base de donn&#xE9;es. Ce serait cool de voir &#xE0; quoi il ressemble r&#xE9;ellement ! Pour &#xE7;a, il va falloir attaquer la section suivante ! Au boulot ;)!</p>
+</code></pre><p>Youpi ! Notre modèle Post est maintenant intégré à la base de données. Ce serait cool de voir à quoi il ressemble réellement ! Pour ça, il va falloir attaquer la section suivante ! Au boulot ;)!</p>
 
                                 
                                 </section>
@@ -805,12 +805,56 @@ Running migrations:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Les modèles dans Django","level":"1.12","depth":1,"next":{"title":"Django admin","level":"1.13","depth":1,"path":"django_admin/README.md","ref":"django_admin/README.md","articles":[]},"previous":{"title":"Votre premier projet Django !","level":"1.11","depth":1,"path":"django_start_project/README.md","ref":"django_start_project/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_models/README.md","mtime":"2020-09-22T11:43:42.830Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Les modèles dans Django","level":"1.12","depth":1,"next":{"title":"Django admin","level":"1.13","depth":1,"path":"django_admin/README.md","ref":"django_admin/README.md","articles":[]},"previous":{"title":"Votre premier projet Django !","level":"1.11","depth":1,"path":"django_start_project/README.md","ref":"django_start_project/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_models/README.md","mtime":"2020-11-15T14:54:56.414Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

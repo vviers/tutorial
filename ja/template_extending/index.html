@@ -7,7 +7,7 @@
         <title>テンプレートを拡張しよう · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -621,18 +621,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x3092;&#x62E1;&#x5F35;&#x3057;&#x3088;&#x3046;">&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x3092;&#x62E1;&#x5F35;&#x3057;&#x3088;&#x3046;</h1>
-<p>Django&#x306E;&#x307E;&#x305F;&#x5225;&#x306E;&#x7D20;&#x6575;&#x306A;&#x3068;&#x3053;&#x308D;&#x306F;<strong>&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x62E1;&#x5F35;</strong>&#x3067;&#x3059;&#x3002;&#x3053;&#x308C;&#x306F;&#x4F55;&#x3092;&#x610F;&#x5473;&#x3059;&#x308B;&#x306E;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#xFF1F;&#x305D;&#x308C;&#x306F;HTML&#x306E;&#x5171;&#x901A;&#x90E8;&#x5206;&#x3092;&#x30A6;&#x30A7;&#x30D6;&#x30B5;&#x30A4;&#x30C8;&#x306E;&#x7570;&#x306A;&#x308B;&#x30DA;&#x30FC;&#x30B8;&#x3067;&#x4F7F;&#x3048;&#x308B;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;</p>
-<p>&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x306F;&#x540C;&#x3058;&#x60C5;&#x5831;&#x3084;&#x30EC;&#x30A4;&#x30A2;&#x30A6;&#x30C8;&#x3092;&#x8907;&#x6570;&#x306E;&#x5834;&#x6240;&#x3067;&#x5229;&#x7528;&#x3057;&#x305F;&#x3044;&#x3068;&#x304D;&#x306B;&#x5F79;&#x7ACB;&#x3061;&#x307E;&#x3059;&#x3002; &#x5404;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5185;&#x3067;&#x7E70;&#x308A;&#x8FD4;&#x3059;&#x5FC5;&#x8981;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002; &#x3055;&#x3089;&#x306B;&#x3082;&#x3057;&#x4F55;&#x304B;&#x5909;&#x66F4;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;&#x3001;&#x5404;&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x3092;&#x5909;&#x66F4;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x306F;&#x306A;&#x304F;&#x3001;1&#x56DE;&#x5909;&#x66F4;&#x3059;&#x308C;&#x3070;&#x3044;&#x3044;&#x3060;&#x3051;&#x3067;&#x3059;&#xFF01;</p>
-<h2 id="&#x57FA;&#x672C;&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x3092;&#x4F5C;&#x6210;&#x3059;&#x308B;">&#x57FA;&#x672C;&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x3092;&#x4F5C;&#x6210;&#x3059;&#x308B;</h2>
-<p>&#x57FA;&#x672C;&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x306F;&#x3042;&#x306A;&#x305F;&#x306E;&#x30A6;&#x30A7;&#x30D6;&#x30B5;&#x30A4;&#x30C8;&#x306E;&#x5404;&#x30DA;&#x30FC;&#x30B8;&#x3092;&#x62E1;&#x5F35;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x6700;&#x3082;&#x57FA;&#x672C;&#x7684;&#x306A;&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x3067;&#x3059;&#x3002;</p>
-<p><code>blog/templates/blog/</code>&#x4EE5;&#x4E0B;&#x306B;<code>base.html</code>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+                                <h1 id="テンプレートを拡張しよう">テンプレートを拡張しよう</h1>
+<p>Djangoのまた別の素敵なところは<strong>テンプレート拡張</strong>です。これは何を意味するのでしょうか？それはHTMLの共通部分をウェブサイトの異なるページで使えるということです。</p>
+<p>テンプレートは同じ情報やレイアウトを複数の場所で利用したいときに役立ちます。 各ファイル内で繰り返す必要はありません。 さらにもし何か変更したい場合、各テンプレートを変更する必要はなく、1回変更すればいいだけです！</p>
+<h2 id="基本テンプレートを作成する">基本テンプレートを作成する</h2>
+<p>基本テンプレートはあなたのウェブサイトの各ページを拡張するための最も基本的なテンプレートです。</p>
+<p><code>blog/templates/blog/</code>以下に<code>base.html</code>ファイルを作ってみましょう。</p>
 <pre><code>blog
-&#x2514;&#x2500;&#x2500;&#x2500;templates
-    &#x2514;&#x2500;&#x2500;&#x2500;blog
+└───templates
+    └───blog
             base.html
             post_list.html
-</code></pre><p>&#x305D;&#x308C;&#x304B;&#x3089;&#x30A8;&#x30C7;&#x30A3;&#x30BF;&#x3067;&#x958B;&#x3044;&#x3066;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;<code>post_list.html</code>&#x304B;&#x3089;<code>base.html</code>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x3059;&#x3079;&#x3066;&#x30B3;&#x30D4;&#x30FC;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+</code></pre><p>それからエディタで開いて、以下のように<code>post_list.html</code>から<code>base.html</code>ファイルにすべてコピーしましょう。</p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html">{% load static %}
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
@@ -666,7 +666,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>&#x305D;&#x308C;&#x304B;&#x3089;<code>base.html</code>&#x5185;&#x306E;<code>&lt;body&gt;</code>&#x5168;&#x4F53;(<code>&lt;body&gt;</code>&#x3068;<code>&lt;/body&gt;</code>&#x306E;&#x9593;&#x306E;&#x3059;&#x3079;&#x3066;)&#x3092;&#x6B21;&#x3067;&#x7F6E;&#x304D;&#x63DB;&#x3048;&#x307E;&#x3059;&#x3002;</p>
+<p>それから<code>base.html</code>内の<code>&lt;body&gt;</code>全体(<code>&lt;body&gt;</code>と<code>&lt;/body&gt;</code>の間のすべて)を次で置き換えます。</p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-header&quot;</span>&gt;</span>
@@ -682,13 +682,13 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
-<p><code>{% for post in posts %}</code> &#x304B;&#x3089; <code>{% endfor %}</code> &#x304C;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x7F6E;&#x304D;&#x63DB;&#x3048;&#x3089;&#x308C;&#x305F;&#x3053;&#x3068;&#x306B;&#x6C17;&#x3065;&#x3044;&#x305F;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002; </p>
+<p><code>{% for post in posts %}</code> から <code>{% endfor %}</code> が以下のように置き換えられたことに気づいたでしょうか。 </p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html">{% block content %}
 {% endblock %}
 </code></pre>
-<p>&#x3067;&#x3082;&#x4F55;&#x306E;&#x305F;&#x3081;&#x306B;&#xFF1F; &#x3042;&#x306A;&#x305F;&#x306F;&#x305F;&#x3060;<code>block</code>&#x3092;&#x4F5C;&#x3063;&#x305F;&#x3060;&#x3051;&#x3067;&#x3059;&#xFF01; <code>{% block %}</code> &#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x30BF;&#x30B0;&#x3092;&#x3001;&#x3053;&#x308C;&#x304B;&#x3089;HTML&#x3092;&#x633F;&#x5165;&#x3057;&#x3088;&#x3046;&#x3068;&#x3059;&#x308B;&#x5834;&#x6240;&#x306B;&#x4F7F;&#x3044;&#x307E;&#x3057;&#x305F;&#x3002; &#x305D;&#x306E;HTML&#x306F;&#x3053;&#x306E;&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8; (<code>base.html</code>) &#x3092;&#x62E1;&#x5F35;&#x3057;&#x305F;&#x5225;&#x306E;&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x304B;&#x3089;&#x3084;&#x3063;&#x3066;&#x304D;&#x307E;&#x3059;&#x3002; &#x3069;&#x3046;&#x3084;&#x3063;&#x3066;&#x884C;&#x3046;&#x304B;&#x306F;&#x3059;&#x3050;&#x306B;&#x793A;&#x3057;&#x307E;&#x3059;&#x3002;</p>
-<p><code>base.html</code>&#x3092;&#x4FDD;&#x5B58;&#x3057;&#x3001;&#x3082;&#x3046;&#x4E00;&#x5EA6;<code>blog/templates/blog/post_list.html</code>&#x3092;&#x30A8;&#x30C7;&#x30A3;&#x30BF;&#x3067;&#x958B;&#x304D;&#x307E;&#x3059;&#x3002;  <code>{% for post in posts %}</code> &#x306E;&#x4E0A;&#x3068; <code>{% endfor %}</code> &#x306E;&#x4E0B;&#x3059;&#x3079;&#x3066;&#x3092;&#x524A;&#x9664;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002; &#x305D;&#x308C;&#x304C;&#x7D42;&#x308F;&#x3063;&#x305F;&#x3089;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>でも何のために？ あなたはただ<code>block</code>を作っただけです！ <code>{% block %}</code> テンプレートタグを、これからHTMLを挿入しようとする場所に使いました。 そのHTMLはこのテンプレート (<code>base.html</code>) を拡張した別のテンプレートからやってきます。 どうやって行うかはすぐに示します。</p>
+<p><code>base.html</code>を保存し、もう一度<code>blog/templates/blog/post_list.html</code>をエディタで開きます。  <code>{% for post in posts %}</code> の上と <code>{% endfor %}</code> の下すべてを削除しましょう。 それが終わったら以下のようになっていると思います。</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% for post in posts %}
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
@@ -700,8 +700,8 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 {% endfor %}
 </code></pre>
-<p>&#x3053;&#x308C;&#x3092;content&#x30D6;&#x30ED;&#x30C3;&#x30AF;&#x306B;&#x5BFE;&#x5FDC;&#x3059;&#x308B;&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x306E;&#x30D1;&#x30FC;&#x30C4;&#x3068;&#x3057;&#x3066;&#x4F7F;&#x3044;&#x305F;&#x3044;&#x3067;&#x3059;&#x3002;&#x3053;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;block&#x30BF;&#x30B0;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x6642;&#x3067;&#x3059;&#xFF01;</p>
-<p>&#x8FFD;&#x52A0;&#x3059;&#x308B;block&#x30BF;&#x30B0;&#x306F; <code>base.html</code> &#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4E2D;&#x306E;&#x30BF;&#x30B0;&#x306B;&#x30DE;&#x30C3;&#x30C1;&#x3057;&#x3066;&#x307B;&#x3057;&#x3044;&#x3067;&#x3059;&#x3088;&#x306D;&#x3002; &#x307E;&#x305F;&#x3001;block&#x30BF;&#x30B0;&#x306B;&#x306F;content&#x30D6;&#x30ED;&#x30C3;&#x30AF;&#x306B;&#x5C5E;&#x3059;&#x308B;&#x3059;&#x3079;&#x3066;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x542B;&#x3081;&#x305F;&#x3044;&#x3067;&#x3059;&#x3088;&#x306D;&#x3002; &#x305D;&#x3046;&#x3059;&#x308B;&#x306B;&#x306F;&#x3001;&#x3059;&#x3079;&#x3066;&#x3092; <code>{% block content %}</code> &#x3068; <code>{% endblock %}</code> &#x306E;&#x9593;&#x306B;&#x5165;&#x308C;&#x3066;&#x3042;&#x3052;&#x308C;&#x3070;&#x3088;&#x3044;&#x3067;&#x3059;&#x3002; &#x3053;&#x306E;&#x3088;&#x3046;&#x306B;:</p>
+<p>これをcontentブロックに対応するテンプレートのパーツとして使いたいです。このファイルにblockタグを追加する時です！</p>
+<p>追加するblockタグは <code>base.html</code> ファイル中のタグにマッチしてほしいですよね。 また、blockタグにはcontentブロックに属するすべてのコードを含めたいですよね。 そうするには、すべてを <code>{% block content %}</code> と <code>{% endblock %}</code> の間に入れてあげればよいです。 このように:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% block content %}
     {% for post in posts %}
@@ -715,7 +715,7 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>&#x3042;&#x3068;&#x3084;&#x308B;&#x3053;&#x3068;&#x306F;&#x4E00;&#x3064;&#x3060;&#x3051;&#x3067;&#x3059;&#x3002;&#x3053;&#x308C;&#x3089;&#x4E8C;&#x3064;&#x306E;&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x3092;&#x304F;&#x3063;&#x3064;&#x3051;&#x3066;&#x3042;&#x3052;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x304C;&#x30C6;&#x30F3;&#x30D7;&#x30EC;&#x30FC;&#x30C8;&#x3092;&#x62E1;&#x5F35;&#x3059;&#x308B;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x306E;&#x3059;&#x3079;&#x3066;&#x3067;&#x3059;&#xFF01;&#x305D;&#x3046;&#x3059;&#x308B;&#x306B;&#x306F;&#x3053;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x5148;&#x982D;&#x306B;extends&#x30BF;&#x30B0;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x307E;&#x3059;&#x3002;&#x6B21;&#x306E;&#x3088;&#x3046;&#x306B;&#xFF1A;</p>
+<p>あとやることは一つだけです。これら二つのテンプレートをくっつけてあげる必要があります。これがテンプレートを拡張するということのすべてです！そうするにはこのファイルの先頭にextendsタグを追加します。次のように：</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
 
@@ -731,9 +731,9 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>&#x4EE5;&#x4E0A;&#x3067;&#x3059;&#xFF01;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x4FDD;&#x5B58;&#x3057;&#x3066;&#x3001;&#x30A6;&#x30A7;&#x30D6;&#x30B5;&#x30A4;&#x30C8;&#x304C;&#x307E;&#x3060;&#x3061;&#x3083;&#x3093;&#x3068;&#x52D5;&#x3044;&#x3066;&#x3044;&#x308B;&#x304B;&#x78BA;&#x8A8D;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;:)</p>
+<p>以上です！ファイルを保存して、ウェブサイトがまだちゃんと動いているか確認しましょう。:)</p>
 <blockquote>
-<p>&#x3082;&#x3057; <code>TemplateDoesNotExist</code> &#x3068;&#x3044;&#x3046;&#x30A8;&#x30E9;&#x30FC;&#x304C;&#x51FA;&#x3066;&#x3044;&#x305F;&#x3089;&#x3001; <code>blog/base.html</code> &#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;&#x306A;&#x3044;&#x3068;&#x3044;&#x3046;&#x610F;&#x5473;&#x3067;&#x3001;&#x30B3;&#x30F3;&#x30BD;&#x30FC;&#x30EB;&#x3067; <code>runserver</code> &#x304C;&#x5B9F;&#x884C;&#x3055;&#x308C;&#x305F;&#x307E;&#x307E;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002; &#x3053;&#x308C;&#x3092;&#x6B62;&#x3081;(Ctrl+C - Control&#x3068;C&#x306E;&#x30AD;&#x30FC;&#x3092;&#x540C;&#x6642;&#x62BC;&#x3057;)&#x3001;&#x305D;&#x308C;&#x304B;&#x3089; <code>python manage.py runserver</code>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x518D;&#x5EA6;&#x30B5;&#x30FC;&#x30D0;&#x30FC;&#x3092;&#x52D5;&#x304B;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+<p>もし <code>TemplateDoesNotExist</code> というエラーが出ていたら、 <code>blog/base.html</code> ファイルがないという意味で、コンソールで <code>runserver</code> が実行されたままになっていると思います。 これを止め(Ctrl+C - ControlとCのキーを同時押し)、それから <code>python manage.py runserver</code>コマンドを入力して再度サーバーを動かしてみてください。</p>
 </blockquote>
 
                                 
@@ -778,12 +778,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"テンプレートを拡張しよう","level":"1.22","depth":1,"next":{"title":"アプリケーションを拡張しよう","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSSでカワイくしよう","level":"1.21","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"ja","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-09-22T11:43:42.954Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"ja"}});
+            gitbook.page.hasChanged({"page":{"title":"テンプレートを拡張しよう","level":"1.22","depth":1,"next":{"title":"アプリケーションを拡張しよう","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSSでカワイくしよう","level":"1.21","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"ja","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-11-15T14:54:56.530Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"ja"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

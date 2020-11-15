@@ -7,7 +7,7 @@
         <title>Django-Models · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -622,12 +622,12 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="django-models">Django-Models</h1>
-<p>Wir erstellen jetzt etwas, damit wir alle Posts von unserem Blog speichern k&#xF6;nnen. Aber um das zu tun, m&#xFC;ssen wir zun&#xE4;chst &#xFC;ber <code>Objekte</code> sprechen.</p>
+<p>Wir erstellen jetzt etwas, damit wir alle Posts von unserem Blog speichern können. Aber um das zu tun, müssen wir zunächst über <code>Objekte</code> sprechen.</p>
 <h2 id="objekte">Objekte</h2>
-<p>Eine Herangehensweise an das Programmieren ist das so genannte <code>objektorientierte Programmieren</code>. Die Idee dahinter ist, dass wir Dinge und ihre Interaktionen untereinander modellieren k&#xF6;nnen und nicht alles als langweilige Kette von Programmbefehlen hintereinander aufschreiben m&#xFC;ssen.</p>
-<p>Was ist denn nun ein Objekt? Ein Objekt ist eine Sammlung von Eigenschaften und Aktionsm&#xF6;glichkeiten, das anhand einer Vorlage (Klasse) erstellt wird. Das klingt erst einmal komisch, aber hier haben wir gleich ein Beispiel.</p>
-<p>Wenn wir zum Beispiel eine Katze modellieren wollen, erschaffen wir eine Objektvorlage <code>Katze</code>, eine Art Blaupause oder Schema, nach welcher zuk&#xFC;nftig jedes spezifische Katzenobjekt erstellt werden kann. Die Vorlage beschreibt typische Eigenschaften von Katzen, z.B. <code>farbe</code>, <code>alter</code>, <code>stimmung</code> (also gut, schlecht oder m&#xFC;de ;)), <code>besitzerin</code> (die ein <code>Person</code>-Objekt ist oder &#x2013; im Falle einer Streunerkatze &#x2013; leer bleibt).</p>
-<p>Jedes Objekt einer <code>Katze</code> soll nat&#xFC;rlich auch einige Aktionsm&#xF6;glichkeiten besitzen: <code>schnurren</code>, <code>kratzen</code> oder <code>f&#xFC;ttern</code> (hier bek&#xE4;me die Katze ein bisschen <code>Katzenfutter</code>, welches wieder durch ein eigenes Objekt mit Eigenschaften wie <code>Geschmack</code> repr&#xE4;sentiert sein k&#xF6;nnte).</p>
+<p>Eine Herangehensweise an das Programmieren ist das so genannte <code>objektorientierte Programmieren</code>. Die Idee dahinter ist, dass wir Dinge und ihre Interaktionen untereinander modellieren können und nicht alles als langweilige Kette von Programmbefehlen hintereinander aufschreiben müssen.</p>
+<p>Was ist denn nun ein Objekt? Ein Objekt ist eine Sammlung von Eigenschaften und Aktionsmöglichkeiten, das anhand einer Vorlage (Klasse) erstellt wird. Das klingt erst einmal komisch, aber hier haben wir gleich ein Beispiel.</p>
+<p>Wenn wir zum Beispiel eine Katze modellieren wollen, erschaffen wir eine Objektvorlage <code>Katze</code>, eine Art Blaupause oder Schema, nach welcher zukünftig jedes spezifische Katzenobjekt erstellt werden kann. Die Vorlage beschreibt typische Eigenschaften von Katzen, z.B. <code>farbe</code>, <code>alter</code>, <code>stimmung</code> (also gut, schlecht oder müde ;)), <code>besitzerin</code> (die ein <code>Person</code>-Objekt ist oder – im Falle einer Streunerkatze – leer bleibt).</p>
+<p>Jedes Objekt einer <code>Katze</code> soll natürlich auch einige Aktionsmöglichkeiten besitzen: <code>schnurren</code>, <code>kratzen</code> oder <code>füttern</code> (hier bekäme die Katze ein bisschen <code>Katzenfutter</code>, welches wieder durch ein eigenes Objekt mit Eigenschaften wie <code>Geschmack</code> repräsentiert sein könnte).</p>
 <pre><code>Katze
 --------
 farbe
@@ -642,10 +642,10 @@ fuettern(katzen_futter)
 Katzenfutter
 --------
 geschmack
-</code></pre><p>Der Gedanke dahinter ist also, echte Dinge mit Hilfe von Eigenschaften (genannt <code>Objekteigenschaften</code>) und Aktionsm&#xF6;glichkeiten (genannt <code>Methoden</code>) im Programmcode zu beschreiben.</p>
-<p>Wie also modellieren wir Blogposts? Schlie&#xDF;lich wollen wir ja einen Blog bauen, nicht wahr?</p>
-<p>Wir m&#xFC;ssen folgende Fragen beantworten: Was ist ein Blogpost? Welche Eigenschaften sollte er haben?</p>
-<p>Nun, zum einen braucht unser Blogpost Text mit einem Inhalt und einen Titel, oder? Au&#xDF;erdem w&#xE4;re es sch&#xF6;n zu wissen, wer ihn geschrieben hat &#x2013; wir brauchen also noch einen Autor. Schlie&#xDF;lich wollen wir wissen, wann der Post geschrieben und ver&#xF6;ffentlicht wurde.</p>
+</code></pre><p>Der Gedanke dahinter ist also, echte Dinge mit Hilfe von Eigenschaften (genannt <code>Objekteigenschaften</code>) und Aktionsmöglichkeiten (genannt <code>Methoden</code>) im Programmcode zu beschreiben.</p>
+<p>Wie also modellieren wir Blogposts? Schließlich wollen wir ja einen Blog bauen, nicht wahr?</p>
+<p>Wir müssen folgende Fragen beantworten: Was ist ein Blogpost? Welche Eigenschaften sollte er haben?</p>
+<p>Nun, zum einen braucht unser Blogpost Text mit einem Inhalt und einen Titel, oder? Außerdem wäre es schön zu wissen, wer ihn geschrieben hat – wir brauchen also noch einen Autor. Schließlich wollen wir wissen, wann der Post geschrieben und veröffentlicht wurde.</p>
 <pre><code>Post 
 -------- 
 title 
@@ -653,41 +653,41 @@ text
 author
 created_date
 published_date
-</code></pre><p>Was f&#xFC;r Dinge k&#xF6;nnte man mit einem Blogpost machen? Es w&#xE4;re sch&#xF6;n, wenn wir eine <code>Methode</code> h&#xE4;tten, die den Post ver&#xF6;ffentlicht, nicht wahr?</p>
-<p>Wir brauchen also eine <code>ver&#xF6;ffentlichen</code>-Methode.</p>
-<p>Da wir jetzt wissen, was wir erreichen wollen, k&#xF6;nnen wir nun damit anfangen, es in Django zu formulieren!</p>
+</code></pre><p>Was für Dinge könnte man mit einem Blogpost machen? Es wäre schön, wenn wir eine <code>Methode</code> hätten, die den Post veröffentlicht, nicht wahr?</p>
+<p>Wir brauchen also eine <code>veröffentlichen</code>-Methode.</p>
+<p>Da wir jetzt wissen, was wir erreichen wollen, können wir nun damit anfangen, es in Django zu formulieren!</p>
 <h2 id="ein-django-model-erstellen">Ein Django-Model erstellen</h2>
-<p>Da wir jetzt in etwa wissen, was ein Objekt ist, wollen wir ein Django-Model, eine Vorlage, f&#xFC;r unsere Blogposts anlegen, nach welcher wir zuk&#xFC;nftig unsere Blogpostobjekte erstellen k&#xF6;nnen.</p>
-<p>Ein &quot;Modell&quot; ist in Django ein Objekt einer speziellen Sorte &#x2013; eines das in der <code>Datenbank</code> gespeichert wird. Eine Datenbank ist eine Sammlung von Daten. Dies ist ein Ort, an dem du Informationen zu Benutzern, deinen Blogposts usw. speichern wirst. Wir benutzen daf&#xFC;r eine SQLite-Datenbank. Das ist die Voreinstellung in Django &#x2013; f&#xFC;r uns wird das erst einmal ausreichen.</p>
-<p>Du kannst dir ein Model wie eine Tabelle mit Spalten (&quot;Feldern&quot;, englisch &quot;fields&quot;) und Zeilen (Datens&#xE4;tzen) vorstellen.</p>
-<h3 id="eine-applikation-f&#xFC;r-unseren-blog">Eine Applikation f&#xFC;r unseren Blog</h3>
-<p>Um unsere Webseite aufger&#xE4;umt zu halten, werden wir eine eigene Anwendung f&#xFC;r unser Projekt erstellen, wir nennen das eine Applikation. Wir wollen uns gleich daran gew&#xF6;hnen, alles ordentlich und sortiert zu halten. Um eine Applikation zu erstellen, m&#xFC;ssen wir das folgende Kommando in der Konsole ausf&#xFC;hren (wieder in dem <code>djangogirls</code>-Verzeichnis, in dem die <code>manage.py</code>-Datei liegt):</p>
+<p>Da wir jetzt in etwa wissen, was ein Objekt ist, wollen wir ein Django-Model, eine Vorlage, für unsere Blogposts anlegen, nach welcher wir zukünftig unsere Blogpostobjekte erstellen können.</p>
+<p>Ein &quot;Modell&quot; ist in Django ein Objekt einer speziellen Sorte – eines das in der <code>Datenbank</code> gespeichert wird. Eine Datenbank ist eine Sammlung von Daten. Dies ist ein Ort, an dem du Informationen zu Benutzern, deinen Blogposts usw. speichern wirst. Wir benutzen dafür eine SQLite-Datenbank. Das ist die Voreinstellung in Django – für uns wird das erst einmal ausreichen.</p>
+<p>Du kannst dir ein Model wie eine Tabelle mit Spalten (&quot;Feldern&quot;, englisch &quot;fields&quot;) und Zeilen (Datensätzen) vorstellen.</p>
+<h3 id="eine-applikation-für-unseren-blog">Eine Applikation für unseren Blog</h3>
+<p>Um unsere Webseite aufgeräumt zu halten, werden wir eine eigene Anwendung für unser Projekt erstellen, wir nennen das eine Applikation. Wir wollen uns gleich daran gewöhnen, alles ordentlich und sortiert zu halten. Um eine Applikation zu erstellen, müssen wir das folgende Kommando in der Konsole ausführen (wieder in dem <code>djangogirls</code>-Verzeichnis, in dem die <code>manage.py</code>-Datei liegt):</p>
 <p></p><p class="code-label">Mac OS X und Linux:</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py startapp blog
 </code></pre><p></p><p class="code-label">Windows:</p><p></p>
 <pre><code>(myvenv) C:\Users\Name\djangogirls&gt; python manage.py startapp blog
-</code></pre><p>Wie du sehen kannst, wurde ein neues <code>blog</code>-Verzeichnis erstellt, welches schon einige Dateien enth&#xE4;lt. Das Verzeichnis und die Dateien unseres Projektes sollten jetzt so aussehen:</p>
+</code></pre><p>Wie du sehen kannst, wurde ein neues <code>blog</code>-Verzeichnis erstellt, welches schon einige Dateien enthält. Das Verzeichnis und die Dateien unseres Projektes sollten jetzt so aussehen:</p>
 <pre><code>djangogirls
-&#x251C;&#x2500;&#x2500; blog
-&#x2502;   &#x251C;&#x2500;&#x2500; admin.py
-&#x2502;   &#x251C;&#x2500;&#x2500; apps.py
-&#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
-&#x2502;   &#x251C;&#x2500;&#x2500; migrations
-&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; __init__.py
-&#x2502;   &#x251C;&#x2500;&#x2500; models.py
-&#x2502;   &#x251C;&#x2500;&#x2500; tests.py
-&#x2502;   &#x2514;&#x2500;&#x2500; views.py
-&#x251C;&#x2500;&#x2500; db.sqlite3
-&#x251C;&#x2500;&#x2500; manage.py
-&#x251C;&#x2500;&#x2500; mysite
-&#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
-&#x2502;   &#x251C;&#x2500;&#x2500; settings.py
-&#x2502;   &#x251C;&#x2500;&#x2500; urls.py
-&#x2502;   &#x2514;&#x2500;&#x2500; wsgi.py
-&#x251C;&#x2500;&#x2500; myvenv
-&#x2502;   &#x2514;&#x2500;&#x2500; ...
-&#x2514;&#x2500;&#x2500; requirements.txt
-</code></pre><p>Nach dem Erstellen der Applikation m&#xFC;ssen wir Django noch sagen, dass diese auch genutzt werden soll. Das tun wir in der Datei <code>mysite/settings.py</code> -- &#xF6;ffne diese in deinem Code-Editor. Wir suchen den Eintrag <code>INSTALLED_APPS</code> und f&#xFC;gen darin die Zeile <code>&apos;blog.apps.BlogConfig&apos;,</code> direkt &#xFC;ber der schlie&#xDF;enden Klammer <code>]</code> ein. Danach sollte es also so aussehen:</p>
+├── blog
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── db.sqlite3
+├── manage.py
+├── mysite
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── myvenv
+│   └── ...
+└── requirements.txt
+</code></pre><p>Nach dem Erstellen der Applikation müssen wir Django noch sagen, dass diese auch genutzt werden soll. Das tun wir in der Datei <code>mysite/settings.py</code> -- öffne diese in deinem Code-Editor. Wir suchen den Eintrag <code>INSTALLED_APPS</code> und fügen darin die Zeile <code>&apos;blog.apps.BlogConfig&apos;,</code> direkt über der schließenden Klammer <code>]</code> ein. Danach sollte es also so aussehen:</p>
 <p></p><p class="code-label">mysite/settings.py</p><p></p>
 <pre><code class="lang-python">INSTALLED_APPS = [
     <span class="hljs-string">&apos;django.contrib.admin&apos;</span>,
@@ -700,8 +700,8 @@ published_date
 ]
 </code></pre>
 <h3 id="das-blogpost-model">Das Blogpost-Model</h3>
-<p>Alle <code>Models</code> unserer Applikation werden in der <code>blog/models.py</code>-Datei definiert. Dies ist also der richtige Platz f&#xFC;r unser Blogpost-Model.</p>
-<p>&#xD6;ffnen wir also <code>blog/models.py</code> im Code-Editor, l&#xF6;schen alles darin und schreiben Code wie diesen:</p>
+<p>Alle <code>Models</code> unserer Applikation werden in der <code>blog/models.py</code>-Datei definiert. Dies ist also der richtige Platz für unser Blogpost-Model.</p>
+<p>Öffnen wir also <code>blog/models.py</code> im Code-Editor, löschen alles darin und schreiben Code wie diesen:</p>
 <p></p><p class="code-label">blog/models.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.conf <span class="hljs-keyword">import</span> settings
 <span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models
@@ -723,45 +723,45 @@ published_date
         <span class="hljs-keyword">return</span> self.title
 </code></pre>
 <blockquote>
-<p>Kontrolliere nochmal, dass du zwei Unterstriche (<code>__</code>) vor und hinter dem <code>str</code> gesetzt hast. Diese Konvention wird h&#xE4;ufig in Python benutzt und manchmal nennen wir es &quot;dunder&quot; (kurz f&#xFC;r &quot;double-underscore&quot;).</p>
+<p>Kontrolliere nochmal, dass du zwei Unterstriche (<code>__</code>) vor und hinter dem <code>str</code> gesetzt hast. Diese Konvention wird häufig in Python benutzt und manchmal nennen wir es &quot;dunder&quot; (kurz für &quot;double-underscore&quot;).</p>
 </blockquote>
-<p>Es sieht kompliziert aus, oder? Aber keine Sorge, wir werden erkl&#xE4;ren, was diese Zeilen bedeuten!</p>
-<p>Die Zeilen, die mit <code>from</code> oder <code>import</code> beginnen, sind Anweisungen, um Sachen aus anderen Dateien mitzunutzen. Anstatt h&#xE4;ufig genutzten Code in jede Datei einzeln zu kopieren, binden wir ihn ein mit: <code>from... import ...</code>.</p>
-<p><code>class Post(models.Model):</code> &#x2013; Diese Zeile definiert unser Model (eine Objekt-Vorlage).</p>
+<p>Es sieht kompliziert aus, oder? Aber keine Sorge, wir werden erklären, was diese Zeilen bedeuten!</p>
+<p>Die Zeilen, die mit <code>from</code> oder <code>import</code> beginnen, sind Anweisungen, um Sachen aus anderen Dateien mitzunutzen. Anstatt häufig genutzten Code in jede Datei einzeln zu kopieren, binden wir ihn ein mit: <code>from... import ...</code>.</p>
+<p><code>class Post(models.Model):</code> – Diese Zeile definiert unser Model (eine Objekt-Vorlage).</p>
 <ul>
-<li><code>class</code> ist ein spezielles Schl&#xFC;sselwort, das angibt, dass wir hier eine Klasse, eine Vorlage f&#xFC;r zuk&#xFC;nftige Objekte, definieren wollen.</li>
-<li><code>Post</code> ist der Name unseres Models. Wir k&#xF6;nnen ihm auch einen anderen Namen geben (aber wir m&#xFC;ssen Sonderzeichen und Leerzeichen vermeiden). Beginne einen Klassennamen immer mit einem Gro&#xDF;buchstaben.</li>
-<li><code>models.Model</code> gibt an, dass das Post-Model ein Django-Model ist, so wei&#xDF; Django, dass es in der Datenbank gespeichert werden soll.</li>
+<li><code>class</code> ist ein spezielles Schlüsselwort, das angibt, dass wir hier eine Klasse, eine Vorlage für zukünftige Objekte, definieren wollen.</li>
+<li><code>Post</code> ist der Name unseres Models. Wir können ihm auch einen anderen Namen geben (aber wir müssen Sonderzeichen und Leerzeichen vermeiden). Beginne einen Klassennamen immer mit einem Großbuchstaben.</li>
+<li><code>models.Model</code> gibt an, dass das Post-Model ein Django-Model ist, so weiß Django, dass es in der Datenbank gespeichert werden soll.</li>
 </ul>
-<p>Jetzt definieren wir die Eigenschaften, &#xFC;ber welche wir gesprochen haben: <code>title</code>, <code>text</code>, <code>created_date</code>, <code>published_date</code> und <code>author</code>. Um dies zu tun, m&#xFC;ssen wir den Typ jedes Felds definieren. (Ist es Text? Eine Zahl? Ein Datum? Eine Beziehung zu einem anderen Objekt, z.B. einem Benutzer?)</p>
+<p>Jetzt definieren wir die Eigenschaften, über welche wir gesprochen haben: <code>title</code>, <code>text</code>, <code>created_date</code>, <code>published_date</code> und <code>author</code>. Um dies zu tun, müssen wir den Typ jedes Felds definieren. (Ist es Text? Eine Zahl? Ein Datum? Eine Beziehung zu einem anderen Objekt, z.B. einem Benutzer?)</p>
 <ul>
-<li><code>models.CharField</code> &#x2013; so definierst du ein Textfeld mit einer limitierten Anzahl von Zeichen.</li>
-<li><code>models.TextField</code> &#x2013; so definierst du ein langes Textfeld ohne Gr&#xF6;ssenbeschr&#xE4;nkung. Klingt doch perfekt f&#xFC;r unsere Blogpostinhalte, oder?</li>
-<li><code>models.DateTimeField</code> &#x2013; ein Feld f&#xFC;r einen Zeitpunkt (ein Datum und eine Uhrzeit).</li>
-<li><code>models.ForeignKey</code> &#x2013; definiert eine Verkn&#xFC;pfung/Beziehung zu einem anderen Model.</li>
+<li><code>models.CharField</code> – so definierst du ein Textfeld mit einer limitierten Anzahl von Zeichen.</li>
+<li><code>models.TextField</code> – so definierst du ein langes Textfeld ohne Grössenbeschränkung. Klingt doch perfekt für unsere Blogpostinhalte, oder?</li>
+<li><code>models.DateTimeField</code> – ein Feld für einen Zeitpunkt (ein Datum und eine Uhrzeit).</li>
+<li><code>models.ForeignKey</code> – definiert eine Verknüpfung/Beziehung zu einem anderen Model.</li>
 </ul>
-<p>Wir werden nicht den gesamten Code hier erkl&#xE4;ren, da das zu lange dauern w&#xFC;rde. Du solltest einen Blick in die offizielle Django-Dokumentation werfen, wenn du mehr &#xFC;ber Modelfelder und dar&#xFC;ber wissen m&#xF6;chtest, wie man auch andere Dinge als die oben beschriebenen definiert (<a href="https://docs.djangoproject.com/en/2.2/ref/models/fields/#field-types" target="_blank">https://docs.djangoproject.com/en/2.2/ref/models/fields/#field-types</a>).</p>
-<p>Was ist mit <code>def publish(self):</code>? Das ist genau die <code>publish</code>-Methode zum Ver&#xF6;ffentlichen unserer Blogposts, &#xFC;ber die wir vorher bereits sprachen. <code>def</code> zeigt an, dass es sich nachfolgend um eine Funktion/Methode handelt, und <code>publish</code> ist der Name der Methode. Du kannst den Namen der Methode auch &#xE4;ndern, wenn du m&#xF6;chtest. Die Benennungsregel ist, dass wir Kleinbuchstaben verwenden, und anstatt Leerzeichen (die in Funktionsnamen nicht vorkommend d&#xFC;rfen) Unterstriche. Eine Methode, die einen Durchschnittspreis berechnet, k&#xF6;nnte zum Beispiel <code>calculate_average_price</code> genannt werden.</p>
-<p>Oft geben Methoden einen Wert zur&#xFC;ck (englisch: <code>return</code>). Ein Beispiel daf&#xFC;r ist die Methode <code>__str__</code>. In diesem Szenario, wenn wir <code>__str__()</code> aufrufen, bekommen wir einen Text (<strong>string</strong>) mit einem Blogpost-Titel zur&#xFC;ck.</p>
-<p>Beachte, dass sowohl <code>def publish(self):</code> als auch <code>def __str__(self):</code> in unserer Klasse einger&#xFC;ckt sind. Mit der Einr&#xFC;ckung sagen wir Python, dass diese Methoden Teil der Klasse sind. Ohne die Einr&#xFC;ckung w&#xE4;ren es f&#xFC;r Python Funktionen ausserhalb der Klasse, was zu anderem Verhalten f&#xFC;hren w&#xFC;rde.</p>
-<p>Wenn dir &#xFC;ber Methoden noch etwas nicht klar ist, dann z&#xF6;gere nicht, deinen Coach zu fragen! Wir wissen, dass es kompliziert ist, vor allem, wenn du gleichzeitig lernst, was Objekte und Funktionen sind. Aber hoffentlich sieht es f&#xFC;r dich jetzt etwas weniger nach Magie aus!</p>
-<h3 id="tabellen-f&#xFC;r-models-in-deiner-datenbank-erstellen">Tabellen f&#xFC;r Models in deiner Datenbank erstellen</h3>
-<p>Als letzten Schritt wollen wir unser neues Model der Datenbank hinzuf&#xFC;gen. Dazu m&#xFC;ssen wir Django erst &apos;mal mitteilen, dass wir einige &#xC4;nderungen an unserem Model vorgenommen haben. (Wir haben es eben erst erstellt!) Scheibe <code>python manage.py makemigrations blog</code> in dein Kommandozeilen-Fenster. Das sieht dann so aus:</p>
+<p>Wir werden nicht den gesamten Code hier erklären, da das zu lange dauern würde. Du solltest einen Blick in die offizielle Django-Dokumentation werfen, wenn du mehr über Modelfelder und darüber wissen möchtest, wie man auch andere Dinge als die oben beschriebenen definiert (<a href="https://docs.djangoproject.com/en/2.2/ref/models/fields/#field-types" target="_blank">https://docs.djangoproject.com/en/2.2/ref/models/fields/#field-types</a>).</p>
+<p>Was ist mit <code>def publish(self):</code>? Das ist genau die <code>publish</code>-Methode zum Veröffentlichen unserer Blogposts, über die wir vorher bereits sprachen. <code>def</code> zeigt an, dass es sich nachfolgend um eine Funktion/Methode handelt, und <code>publish</code> ist der Name der Methode. Du kannst den Namen der Methode auch ändern, wenn du möchtest. Die Benennungsregel ist, dass wir Kleinbuchstaben verwenden, und anstatt Leerzeichen (die in Funktionsnamen nicht vorkommend dürfen) Unterstriche. Eine Methode, die einen Durchschnittspreis berechnet, könnte zum Beispiel <code>calculate_average_price</code> genannt werden.</p>
+<p>Oft geben Methoden einen Wert zurück (englisch: <code>return</code>). Ein Beispiel dafür ist die Methode <code>__str__</code>. In diesem Szenario, wenn wir <code>__str__()</code> aufrufen, bekommen wir einen Text (<strong>string</strong>) mit einem Blogpost-Titel zurück.</p>
+<p>Beachte, dass sowohl <code>def publish(self):</code> als auch <code>def __str__(self):</code> in unserer Klasse eingerückt sind. Mit der Einrückung sagen wir Python, dass diese Methoden Teil der Klasse sind. Ohne die Einrückung wären es für Python Funktionen ausserhalb der Klasse, was zu anderem Verhalten führen würde.</p>
+<p>Wenn dir über Methoden noch etwas nicht klar ist, dann zögere nicht, deinen Coach zu fragen! Wir wissen, dass es kompliziert ist, vor allem, wenn du gleichzeitig lernst, was Objekte und Funktionen sind. Aber hoffentlich sieht es für dich jetzt etwas weniger nach Magie aus!</p>
+<h3 id="tabellen-für-models-in-deiner-datenbank-erstellen">Tabellen für Models in deiner Datenbank erstellen</h3>
+<p>Als letzten Schritt wollen wir unser neues Model der Datenbank hinzufügen. Dazu müssen wir Django erst &apos;mal mitteilen, dass wir einige Änderungen an unserem Model vorgenommen haben. (Wir haben es eben erst erstellt!) Scheibe <code>python manage.py makemigrations blog</code> in dein Kommandozeilen-Fenster. Das sieht dann so aus:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py makemigrations blog
 Migrations for &apos;blog&apos;:
   blog/migrations/0001_initial.py:
 
   - Create model Post
-</code></pre><p><strong>Hinweis:</strong> Denke daran, die Dateien nach dem Editieren zu speichern. Ansonsten f&#xFC;hrt dein Computer die vorherige Version aus, was zu unerwarteten Fehlermeldungen f&#xFC;hren kann.</p>
-<p>Django hat eine Migrationsdatei f&#xFC;r uns vorbereitet, die wir nun auf unsere Datenbank anwenden m&#xFC;ssen. Schreibe <code>python manage.py migrate blog</code>. Die Ausgabe sollte so aussehen:</p>
+</code></pre><p><strong>Hinweis:</strong> Denke daran, die Dateien nach dem Editieren zu speichern. Ansonsten führt dein Computer die vorherige Version aus, was zu unerwarteten Fehlermeldungen führen kann.</p>
+<p>Django hat eine Migrationsdatei für uns vorbereitet, die wir nun auf unsere Datenbank anwenden müssen. Schreibe <code>python manage.py migrate blog</code>. Die Ausgabe sollte so aussehen:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py migrate blog
 Operations to perform:   
    Apply all migrations: blog
 Running migrations:
    Applying blog.0001_initial... OK
-</code></pre><p>Hurra! Unser Post-Model ist ab sofort in unserer Datenbank gespeichert! Es w&#xE4;re doch sch&#xF6;n, zu wissen, wie es aussieht, oder? Springe zum n&#xE4;chsten Kapitel, um es dir anzusehen!</p>
+</code></pre><p>Hurra! Unser Post-Model ist ab sofort in unserer Datenbank gespeichert! Es wäre doch schön, zu wissen, wie es aussieht, oder? Springe zum nächsten Kapitel, um es dir anzusehen!</p>
 
                                 
                                 </section>
@@ -805,12 +805,56 @@ Running migrations:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Django-Models","level":"1.12","depth":1,"next":{"title":"Django-Administration","level":"1.13","depth":1,"path":"django_admin/README.md","ref":"django_admin/README.md","articles":[]},"previous":{"title":"Dein erstes Django-Projekt!","level":"1.11","depth":1,"path":"django_start_project/README.md","ref":"django_start_project/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_models/README.md","mtime":"2020-09-22T11:43:42.662Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"de"}});
+            gitbook.page.hasChanged({"page":{"title":"Django-Models","level":"1.12","depth":1,"next":{"title":"Django-Administration","level":"1.13","depth":1,"path":"django_admin/README.md","ref":"django_admin/README.md","articles":[]},"previous":{"title":"Dein erstes Django-Projekt!","level":"1.11","depth":1,"path":"django_start_project/README.md","ref":"django_start_project/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_models/README.md","mtime":"2020-11-15T14:54:56.262Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"de"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

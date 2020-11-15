@@ -7,7 +7,7 @@
         <title>HTML'ye giriş · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -511,53 +511,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="htmlye-giri&#x15F;">HTML&apos;ye giri&#x15F;</h1>
+                                <h1 id="htmlye-giriş">HTML&apos;ye giriş</h1>
 <p>Template nedir diye sorabilirsiniz.</p>
-<p>Template (&#x15F;ablon), farkl&#x131; bilgileri hep ayn&#x131; bi&#xE7;imde sunmak i&#xE7;in tekrar tekrar kullanabilece&#x11F;imiz bir dosyad&#x131;r - &#xF6;rne&#x11F;in, mektup yazman&#x131;za yard&#x131;mc&#x131; olan bir template kullanabilirsiniz &#xE7;&#xFC;nk&#xFC; yazaca&#x11F;&#x131;n&#x131;z t&#xFC;m mektuplar farkl&#x131; mesajlar i&#xE7;erse ve farkl&#x131; ki&#x15F;ilere g&#xF6;nderilse de ayn&#x131; sayfa d&#xFC;zenine sahip olacakt&#x131;r.</p>
-<p>Bir Django template&apos;inin format&#x131; HTML ad&#x131;n&#x131; verdi&#x11F;imiz bir dilde tan&#x131;mlan&#x131;r (<strong>&#x130;nternet nas&#x131;l &#xE7;al&#x131;&#x15F;&#x131;r</strong> adl&#x131; ilk b&#xF6;l&#xFC;mde bahsetti&#x11F;imiz HTML).</p>
+<p>Template (şablon), farklı bilgileri hep aynı biçimde sunmak için tekrar tekrar kullanabileceğimiz bir dosyadır - örneğin, mektup yazmanıza yardımcı olan bir template kullanabilirsiniz çünkü yazacağınız tüm mektuplar farklı mesajlar içerse ve farklı kişilere gönderilse de aynı sayfa düzenine sahip olacaktır.</p>
+<p>Bir Django template&apos;inin formatı HTML adını verdiğimiz bir dilde tanımlanır (<strong>İnternet nasıl çalışır</strong> adlı ilk bölümde bahsettiğimiz HTML).</p>
 <h2 id="html-nedir">HTML nedir?</h2>
-<p>HTML kullan&#x131;c&#x131;ya basit bir web sayfas&#x131; g&#xF6;r&#xFC;nt&#xFC;lemek i&#xE7;in web taray&#x131;c&#x131;n&#x131;z taraf&#x131;ndan - Chrome, Firefox veya Safari gibi - yorumlanan basit bir koddur.</p>
-<p>HTML &quot;HyperText Markup Language&quot; (HiperMetin &#x130;&#x15F;aretleme Dili) anlam&#x131;na gelir. <strong>HyperText</strong> (HiperMetin) sayfalar aras&#x131; ba&#x11F;lant&#x131;lar&#x131; destekleyen t&#xFC;rden bir metin demektir. <strong>Markup</strong> (i&#x15F;aretleme), bir belgeyi al&#x131;p onu kodlarla i&#x15F;aretleyerek, nas&#x131;l yorumlanaca&#x11F;&#x131;n&#x131; (taray&#x131;c&#x131;ya) s&#xF6;ylemek demektir. HTML kodu <strong>etiketler</strong> ile olu&#x15F;turulur, etiketlerin her biri <code>&lt;</code> ile ba&#x15F;lar ve <code>&gt;</code> ile biter. Bu etiketler bi&#xE7;imlendirme <strong>&#xF6;&#x11F;elerini</strong> temsil eder.</p>
-<h2 id="i&#x307;lk-templateiniz">&#x130;lk template&apos;iniz!</h2>
-<p>Bir template olu&#x15F;turmak bir template dosyas&#x131; olu&#x15F;turmak demektir. Her &#x15F;ey bir dosyad&#x131;r, de&#x11F;il mi? Bunu muhtemelen zaten fark etmi&#x15F;sinizdir.</p>
-<p>Template&apos;lar <code>blog/templates/blog</code> dizininde saklan&#x131;r. &#xD6;yleyse blog klas&#xF6;r&#xFC; alt&#x131;nda <code>templates</code> adl&#x131; bir klas&#xF6;r olu&#x15F;tural&#x131;m. Sonra da templates klas&#xF6;r&#xFC; alt&#x131;nda yine <code>blog</code> adl&#x131; bir klas&#xF6;r olu&#x15F;tural&#x131;m:</p>
+<p>HTML kullanıcıya basit bir web sayfası görüntülemek için web tarayıcınız tarafından - Chrome, Firefox veya Safari gibi - yorumlanan basit bir koddur.</p>
+<p>HTML &quot;HyperText Markup Language&quot; (HiperMetin İşaretleme Dili) anlamına gelir. <strong>HyperText</strong> (HiperMetin) sayfalar arası bağlantıları destekleyen türden bir metin demektir. <strong>Markup</strong> (işaretleme), bir belgeyi alıp onu kodlarla işaretleyerek, nasıl yorumlanacağını (tarayıcıya) söylemek demektir. HTML kodu <strong>etiketler</strong> ile oluşturulur, etiketlerin her biri <code>&lt;</code> ile başlar ve <code>&gt;</code> ile biter. Bu etiketler biçimlendirme <strong>öğelerini</strong> temsil eder.</p>
+<h2 id="i̇lk-templateiniz">İlk template&apos;iniz!</h2>
+<p>Bir template oluşturmak bir template dosyası oluşturmak demektir. Her şey bir dosyadır, değil mi? Bunu muhtemelen zaten fark etmişsinizdir.</p>
+<p>Template&apos;lar <code>blog/templates/blog</code> dizininde saklanır. Öyleyse blog klasörü altında <code>templates</code> adlı bir klasör oluşturalım. Sonra da templates klasörü altında yine <code>blog</code> adlı bir klasör oluşturalım:</p>
 <pre><code>blog
-&#x2514;&#x2500;&#x2500;&#x2500;templates
-    &#x2514;&#x2500;&#x2500;&#x2500;blog
-</code></pre><p>(<code>blog</code> diye adland&#x131;r&#x131;lan iki dizine niye ihtiyac&#x131;m&#x131;z oldu&#x11F;unu merak edebilirsiniz - daha sonra anlayaca&#x11F;&#x131;n&#x131;z &#xFC;zere, sitemiz karma&#x15F;&#x131;kla&#x15F;t&#x131;k&#xE7;a bu &#x15F;ekilde isimlendirme tarz&#x131; i&#x15F;imizi olduk&#xE7;a kolayla&#x15F;t&#x131;r&#x131;r.)</p>
-<p>&#x15E;imdi de <code>blog/templates/blog</code> dizini i&#xE7;ine <code>post_list.html</code> adl&#x131; bir dosya olu&#x15F;tural&#x131;m (&#x15F;imdilik i&#xE7;ini bo&#x15F; b&#x131;rakal&#x131;m).</p>
-<p>Web sitemizin nas&#x131;l g&#xF6;r&#xFC;nd&#xFC;&#x11F;&#xFC;ne bir bakal&#x131;m: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a></p>
+└───templates
+    └───blog
+</code></pre><p>(<code>blog</code> diye adlandırılan iki dizine niye ihtiyacımız olduğunu merak edebilirsiniz - daha sonra anlayacağınız üzere, sitemiz karmaşıklaştıkça bu şekilde isimlendirme tarzı işimizi oldukça kolaylaştırır.)</p>
+<p>Şimdi de <code>blog/templates/blog</code> dizini içine <code>post_list.html</code> adlı bir dosya oluşturalım (şimdilik içini boş bırakalım).</p>
+<p>Web sitemizin nasıl göründüğüne bir bakalım: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a></p>
 <blockquote>
-<p>E&#x11F;er hala <code>TemplateDoesNotExist</code> hatas&#x131; al&#x131;yorsan&#x131;z, sunucunuzu yeniden ba&#x15F;latmay&#x131; deneyin. Komut sat&#x131;r&#x131;na girin, Ctrl+C (Kontrol ve C tu&#x15F;lar&#x131;na beraber) basarak sunucuyu durdurun ve <code>python manage.py runserver</code> komutunu &#xE7;al&#x131;&#x15F;t&#x131;rarak yeniden ba&#x15F;lat&#x131;n.</p>
+<p>Eğer hala <code>TemplateDoesNotExist</code> hatası alıyorsanız, sunucunuzu yeniden başlatmayı deneyin. Komut satırına girin, Ctrl+C (Kontrol ve C tuşlarına beraber) basarak sunucuyu durdurun ve <code>python manage.py runserver</code> komutunu çalıştırarak yeniden başlatın.</p>
 </blockquote>
-<p><img src="images/step1.png" alt="&#x15E;ekil 11.1"></p>
-<p>Art&#x131;k hata kalmad&#x131;! Tebrikler :) Ama, web sitemiz asl&#x131;nda bo&#x15F; bir sayfadan ba&#x15F;ka bir &#x15F;ey yay&#x131;nlam&#x131;yor, &#xE7;&#xFC;nk&#xFC; template bo&#x15F;. Bunu d&#xFC;zeltelim.</p>
-<p>Yeni dosyay&#x131; kod d&#xFC;zenleyicisinde a&#xE7;&#x131;p &#x15F;unlar&#x131; ekleyelim:</p>
+<p><img src="images/step1.png" alt="Şekil 11.1"></p>
+<p>Artık hata kalmadı! Tebrikler :) Ama, web sitemiz aslında boş bir sayfadan başka bir şey yayınlamıyor, çünkü template boş. Bunu düzeltelim.</p>
+<p>Yeni dosyayı kod düzenleyicisinde açıp şunları ekleyelim:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Merhaba!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#xC7;al&#x131;&#x15F;&#x131;yor!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Çalışıyor!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>Web siteniz &#x15F;u anda nas&#x131;l g&#xF6;r&#xFC;n&#xFC;yor? &#xD6;&#x11F;renmek i&#xE7;in bir bakal&#x131;m: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a></p>
-<p><img src="images/step3.png" alt="&#x15E;ekil 11.2"></p>
-<p>&#xC7;al&#x131;&#x15F;t&#x131;! Tebrikler :)</p>
+<p>Web siteniz şu anda nasıl görünüyor? Öğrenmek için bir bakalım: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a></p>
+<p><img src="images/step3.png" alt="Şekil 11.2"></p>
+<p>Çalıştı! Tebrikler :)</p>
 <ul>
-<li>En temel etiket, <code>&lt;html&gt;</code>, daima herhangi bir web sayfas&#x131;n&#x131;n ba&#x15F;lang&#x131;c&#x131;d&#x131;r ve <code>&lt;/html&gt;</code> daima biti&#x15F;idir. G&#xF6;rd&#xFC;&#x11F;&#xFC;n&#xFC;z gibi, web sitesinin t&#xFC;m i&#xE7;eri&#x11F;i <code>&lt;html&gt;</code> ba&#x15F;lang&#x131;&#xE7; etiketi ve <code>&lt;/html&gt;</code> biti&#x15F; etiketinin aras&#x131;nda yer al&#x131;r</li>
-<li><code>&lt;p&gt;</code> paragraf &#xF6;&#x11F;elerini belirten etikettir; her paragraf&#x131;n biti&#x15F;inde de <code>&lt;/p&gt;</code> olacakt&#x131;r</li>
+<li>En temel etiket, <code>&lt;html&gt;</code>, daima herhangi bir web sayfasının başlangıcıdır ve <code>&lt;/html&gt;</code> daima bitişidir. Gördüğünüz gibi, web sitesinin tüm içeriği <code>&lt;html&gt;</code> başlangıç etiketi ve <code>&lt;/html&gt;</code> bitiş etiketinin arasında yer alır</li>
+<li><code>&lt;p&gt;</code> paragraf öğelerini belirten etikettir; her paragrafın bitişinde de <code>&lt;/p&gt;</code> olacaktır</li>
 </ul>
-<h2 id="kafa-ve-v&#xFC;cut">Kafa ve v&#xFC;cut</h2>
-<p>Ayn&#x131; zamanda t&#xFC;m HTML sayfalar&#x131; <strong>head</strong> ve <strong>body</strong> olmak &#xFC;zere iki &#xF6;&#x11F;eye ayr&#x131;l&#x131;r.</p>
+<h2 id="kafa-ve-vücut">Kafa ve vücut</h2>
+<p>Aynı zamanda tüm HTML sayfaları <strong>head</strong> ve <strong>body</strong> olmak üzere iki öğeye ayrılır.</p>
 <ul>
-<li><p><strong>head</strong> belge hakk&#x131;nda ekranda g&#xF6;r&#xFC;nt&#xFC;lenmeyen bilgiler i&#xE7;eren &#xF6;&#x11F;edir.</p>
+<li><p><strong>head</strong> belge hakkında ekranda görüntülenmeyen bilgiler içeren öğedir.</p>
 </li>
-<li><p><strong>body</strong> ise ekranda g&#xF6;sterilen t&#xFC;m &#xF6;&#x11F;eleri i&#xE7;eren &#xF6;&#x11F;edir.</p>
+<li><p><strong>body</strong> ise ekranda gösterilen tüm öğeleri içeren öğedir.</p>
 </li>
 </ul>
-<p><code>&lt;head&gt;</code> &#xF6;&#x11F;esini taray&#x131;c&#x131;ya sayfan&#x131;n yap&#x131;land&#x131;rmas&#x131;n&#x131; anlatmak i&#xE7;in, <code>&lt;body&gt;</code> &#xF6;&#x11F;esini ise sayfada asl&#x131;nda ne oldu&#x11F;unu anlatmak i&#xE7;in kullan&#x131;r&#x131;z.</p>
-<p>&#xD6;rnek olarak, bir web sayfas&#x131; ba&#x15F;l&#x131;k &#xF6;gesini <code>&lt;head&gt;</code> i&#xE7;ine koyabilirsiniz, bunun gibi:</p>
+<p><code>&lt;head&gt;</code> öğesini tarayıcıya sayfanın yapılandırmasını anlatmak için, <code>&lt;body&gt;</code> öğesini ise sayfada aslında ne olduğunu anlatmak için kullanırız.</p>
+<p>Örnek olarak, bir web sayfası başlık ögesini <code>&lt;head&gt;</code> içine koyabilirsiniz, bunun gibi:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
@@ -565,31 +565,31 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Merhaba!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#xC7;al&#x131;&#x15F;&#x131;yor!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Çalışıyor!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>Dosyay&#x131; kaydedin ve sayfan&#x131;z&#x131; yenileyin.</p>
-<p><img src="images/step4.png" alt="&#x15E;ekil 11.3"></p>
-<p>Taray&#x131;c&#x131;n&#x131;z&#x131;n &quot;Zeynep&apos;in blogu&quot; ba&#x15F;l&#x131;&#x11F;&#x131;n&#x131; nas&#x131;l anlad&#x131;&#x11F;&#x131;n&#x131; fark ettiniz mi? <code>&lt;title&gt;Zeynep&apos;in blogu&lt;/title&gt;</code> k&#x131;sm&#x131;n&#x131; ba&#x15F;l&#x131;k olarak yorumlayarak yaz&#x131;y&#x131; taray&#x131;c&#x131;n&#x131;n ba&#x15F;l&#x131;k k&#x131;sm&#x131;na yerle&#x15F;tirdi. (Bu yaz&#x131; yer i&#x15F;aretleri gibi yerlerde de kullan&#x131;l&#x131;r).</p>
-<p>Her a&#xE7;&#x131;lan etiketin <code>/</code> ile ba&#x15F;layan bir <em>kapatan etiket</em>&apos;i ile kapat&#x131;lmas&#x131; gerekmektir. Ayr&#x131;ca bu etiketler <em>i&#xE7; i&#xE7;e</em> yerle&#x15F;tirilebilir (bu da bir etiketi kapatabilmek i&#xE7;in, i&#xE7;indeki t&#xFC;m etiketlerin kapanm&#x131;&#x15F; olmas&#x131;n&#x131; gerektirir).</p>
-<p>Bir &#x15F;eyleri kutulara yerle&#x15F;tirmek gibi. B&#xFC;y&#xFC;k bir kutuda <code>&lt;html&gt;&lt;/html&gt;</code> olsun; onun i&#xE7;inde <code>&lt;body&gt;&lt;/body&gt;</code> kutusu olsun, onun da i&#xE7;inde daha k&#xFC;&#xE7;&#xFC;k kutular olsun: <code>&lt;p&gt;&lt;/p&gt;</code>.</p>
-<p>Bu <em>kapatma</em> etiketleri ve <em>yuvalama</em> &#xF6;geleri kurallar&#x131;n&#x131; takip etmeye ihtiyac&#x131;n&#x131;z vard&#x131;r - e&#x11F;er yapmazsan&#x131;z taray&#x131;c&#x131; onlar&#x131; gerekti&#x11F;i gibi a&#xE7;&#x131;klayamayabilir ve sayfan&#x131;z hatal&#x131; olarak g&#xF6;r&#xFC;nt&#xFC;lenecektir.</p>
-<h2 id="template-&#xF6;zelle&#x15F;tirme">Template &#xF6;zelle&#x15F;tirme</h2>
-<p>&#x15E;imdi art&#x131;k biraz e&#x11F;lenip template&apos;inizi &#xF6;zelle&#x15F;tirmeyi deneyebilirsiniz! &#x130;&#x15F;te bunun i&#xE7;in faydal&#x131; birka&#xE7; etiket:</p>
+<p>Dosyayı kaydedin ve sayfanızı yenileyin.</p>
+<p><img src="images/step4.png" alt="Şekil 11.3"></p>
+<p>Tarayıcınızın &quot;Zeynep&apos;in blogu&quot; başlığını nasıl anladığını fark ettiniz mi? <code>&lt;title&gt;Zeynep&apos;in blogu&lt;/title&gt;</code> kısmını başlık olarak yorumlayarak yazıyı tarayıcının başlık kısmına yerleştirdi. (Bu yazı yer işaretleri gibi yerlerde de kullanılır).</p>
+<p>Her açılan etiketin <code>/</code> ile başlayan bir <em>kapatan etiket</em>&apos;i ile kapatılması gerekmektir. Ayrıca bu etiketler <em>iç içe</em> yerleştirilebilir (bu da bir etiketi kapatabilmek için, içindeki tüm etiketlerin kapanmış olmasını gerektirir).</p>
+<p>Bir şeyleri kutulara yerleştirmek gibi. Büyük bir kutuda <code>&lt;html&gt;&lt;/html&gt;</code> olsun; onun içinde <code>&lt;body&gt;&lt;/body&gt;</code> kutusu olsun, onun da içinde daha küçük kutular olsun: <code>&lt;p&gt;&lt;/p&gt;</code>.</p>
+<p>Bu <em>kapatma</em> etiketleri ve <em>yuvalama</em> ögeleri kurallarını takip etmeye ihtiyacınız vardır - eğer yapmazsanız tarayıcı onları gerektiği gibi açıklayamayabilir ve sayfanız hatalı olarak görüntülenecektir.</p>
+<h2 id="template-özelleştirme">Template özelleştirme</h2>
+<p>Şimdi artık biraz eğlenip template&apos;inizi özelleştirmeyi deneyebilirsiniz! İşte bunun için faydalı birkaç etiket:</p>
 <ul>
-<li><code>&lt;h1&gt;Bir ba&#x15F;l&#x131;k&lt;/h1&gt;</code> en &#xF6;nemli ba&#x15F;l&#x131;&#x11F;&#x131;n&#x131;z (ana ba&#x15F;l&#x131;k)</li>
-<li><code>&lt;h2&gt;Bir alt ba&#x15F;l&#x131;k&lt;/h2&gt;</code> - bir sonraki seviyedeki bir ba&#x15F;l&#x131;k i&#xE7;in</li>
-<li><code>&lt;h3&gt;Bir alt-alt ba&#x15F;l&#x131;k&lt;/h3&gt;</code>&#x2026;ve b&#xF6;yle <code>&lt;h6&gt;</code>&apos;ya kadar gider</li>
-<li><code>&lt;p&gt;Metin paragraf&#x131;&lt;/p&gt;</code></li>
+<li><code>&lt;h1&gt;Bir başlık&lt;/h1&gt;</code> en önemli başlığınız (ana başlık)</li>
+<li><code>&lt;h2&gt;Bir alt başlık&lt;/h2&gt;</code> - bir sonraki seviyedeki bir başlık için</li>
+<li><code>&lt;h3&gt;Bir alt-alt başlık&lt;/h3&gt;</code>…ve böyle <code>&lt;h6&gt;</code>&apos;ya kadar gider</li>
+<li><code>&lt;p&gt;Metin paragrafı&lt;/p&gt;</code></li>
 <li><code>&lt;em&gt;metin&lt;/em&gt;</code> metni vurgular</li>
 <li><code>&lt;strong&gt;metin&lt;/strong&gt;</code> metni iyice vurgular</li>
-<li><code>&lt;br&gt;</code>alt sat&#x131;ra gider (br etiketi ve &gt; i&#x15F;aretinin aras&#x131;na bir &#x15F;ey konulmaz)</li>
-<li><code>&lt;a href=&quot;https://djangogirls.org&quot;&gt;ba&#x11F;lant&#x131;&lt;/a&gt;</code> ba&#x11F;lant&#x131; olu&#x15F;turur</li>
-<li><code>&lt;ul&gt;&lt;li&gt;ilk madde&lt;/li&gt;&lt;li&gt;ikinci madde&lt;/li&gt;&lt;/ul&gt;</code> - t&#x131;pk&#x131; bunun gibi bir liste yapar!</li>
-<li><code>&lt;div&gt;&lt;/div&gt;</code> - sayfan&#x131;n bir b&#xF6;l&#xFC;m&#xFC;n&#xFC; tan&#x131;mlar</li>
+<li><code>&lt;br&gt;</code>alt satıra gider (br etiketi ve &gt; işaretinin arasına bir şey konulmaz)</li>
+<li><code>&lt;a href=&quot;https://djangogirls.org&quot;&gt;bağlantı&lt;/a&gt;</code> bağlantı oluşturur</li>
+<li><code>&lt;ul&gt;&lt;li&gt;ilk madde&lt;/li&gt;&lt;li&gt;ikinci madde&lt;/li&gt;&lt;/ul&gt;</code> - tıpkı bunun gibi bir liste yapar!</li>
+<li><code>&lt;div&gt;&lt;/div&gt;</code> - sayfanın bir bölümünü tanımlar</li>
 </ul>
-<p>&#x130;&#x15F;te komple bir template &#xF6;rne&#x11F;i, kopyalay&#x131;n ve <code>blog/templates/blog/post_list.html</code> i&#xE7;ine yap&#x131;&#x15F;t&#x131;r&#x131;n:</p>
+<p>İşte komple bir template örneği, kopyalayın ve <code>blog/templates/blog/post_list.html</code> içine yapıştırın:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">html
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
@@ -602,65 +602,65 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>published: 14.06.2014, 12:14<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>&#x130;lk Blogum<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#xC7;ok heyecanl&#x131;y&#x131;m! Bu benim ilk blogum. Ne kadar zevkli bir i&#x15F;mi&#x15F; bilgisayarlarla u&#x11F;ra&#x15F;mak. Art&#x131;k bilgisayar ba&#x15F;&#x131;ndan kalkmam. <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>İlk Blogum<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Çok heyecanlıyım! Bu benim ilk blogum. Ne kadar zevkli bir işmiş bilgisayarlarla uğraşmak. Artık bilgisayar başından kalkmam. <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>published: 14.06.2014, 12:20<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>&#x130;kinci g&#xF6;nderim<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Bir varm&#x131;&#x15F; bir yokmu&#x15F;, evvel zaman i&#xE7;inde Ne kadar zevkli bir i&#x15F;mi&#x15F; bilgisayarlarla u&#x11F;ra&#x15F;mak. Art&#x131;k bilgisayar ba&#x15F;&#x131;ndan kalkmam. kalbur saman i&#xE7;inde, develer tellal iken, pireler berber iken; ben annemin be&#x15F;i&#x11F;ini t&#x131;ng&#x131;r m&#x131;ng&#x131;r sallar iken.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>İkinci gönderim<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Bir varmış bir yokmuş, evvel zaman içinde Ne kadar zevkli bir işmiş bilgisayarlarla uğraşmak. Artık bilgisayar başından kalkmam. kalbur saman içinde, develer tellal iken, pireler berber iken; ben annemin beşiğini tıngır mıngır sallar iken.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>Burada &#xFC;&#xE7; tane <code>div</code> b&#xF6;l&#xFC;m&#xFC; olu&#x15F;turduk.</p>
+<p>Burada üç tane <code>div</code> bölümü oluşturduk.</p>
 <ul>
-<li>&#x130;lk <code>div</code> &#xF6;gesi blogumuzun ba&#x15F;l&#x131;&#x11F;&#x131;n&#x131; i&#xE7;erir - bu bir ba&#x15F; k&#x131;s&#x131;md&#x131;r ve bir ba&#x11F;lant&#x131;d&#x131;r</li>
-<li>Sonraki iki <code>div</code> &#xF6;&#x11F;esi blog g&#xF6;nderilerimizi i&#xE7;eriyor; bunlarda bir yay&#x131;n tarihi (published_date), t&#x131;klanabilir bir <code>h2</code> ba&#x15F;l&#x131;&#x11F;&#x131; ve biri tarih di&#x11F;eri g&#xF6;nderi metnimiz i&#xE7;in olmak &#xFC;zere, iki tane <code>p</code> (paragraf) var.</li>
+<li>İlk <code>div</code> ögesi blogumuzun başlığını içerir - bu bir baş kısımdır ve bir bağlantıdır</li>
+<li>Sonraki iki <code>div</code> öğesi blog gönderilerimizi içeriyor; bunlarda bir yayın tarihi (published_date), tıklanabilir bir <code>h2</code> başlığı ve biri tarih diğeri gönderi metnimiz için olmak üzere, iki tane <code>p</code> (paragraf) var.</li>
 </ul>
-<p>Bize ya&#x15F;att&#x131;&#x11F;&#x131; duygu:</p>
-<p><img src="images/step6.png" alt="&#x15E;ekil 11.4"></p>
-<p>Ya&#x15F;as&#x131;n! &#x15E;imdiye dek, &#x15F;ablonumuz tam olarak sadece <strong>ayn&#x131; bilgiyi</strong> g&#xF6;r&#xFC;nt&#xFC;ler - &#xF6;ncesinde ise &#x15F;ablonlardan <strong>ayn&#x131; formatta</strong> <strong>farkl&#x131;</strong> bilgileri g&#xF6;r&#xFC;nt&#xFC;lememizden bahsediyorduk.</p>
-<p>Asl&#x131;nda yapmak istedi&#x11F;imiz Django y&#xF6;neticimize eklenen ger&#xE7;ek postalar&#x131; a&#xE7;mak - bundan sonra oraya gidiyoruz.</p>
-<h2 id="bir-&#x15F;ey-daha-deployment-yay&#x131;na-alma-zaman&#x131;">Bir &#x15F;ey daha: deployment (yay&#x131;na alma) zaman&#x131;!</h2>
-<p>Bunlar&#x131; &#x130;nternet&apos;te canl&#x131; olarak g&#xF6;rmek &#xE7;ok g&#xFC;zel olur, de&#x11F;il mi:</p>
-<h3 id="kodumuzu-commit-ve-push-komutlar&#x131;-ile-githuba-y&#xFC;kleyelim">Kodumuzu commit ve push komutlar&#x131; ile Github&apos;a y&#xFC;kleyelim</h3>
-<p>&#x130;lk &#xF6;nce son deployment dan sonra hangi dosyalar&#x131;n de&#x11F;i&#x15F;ti&#x11F;ine bakal&#x131;m. Bu komutlar&#x131; lokal bilgisayar&#x131;m&#x131;zda &#xE7;al&#x131;&#x15F;t&#x131;ral&#x131;m, PythonAnywhere&apos;de de&#x11F;il:</p>
-<p></p><p class="code-label">komut-sat&#x131;r&#x131;</p><p></p>
+<p>Bize yaşattığı duygu:</p>
+<p><img src="images/step6.png" alt="Şekil 11.4"></p>
+<p>Yaşasın! Şimdiye dek, şablonumuz tam olarak sadece <strong>aynı bilgiyi</strong> görüntüler - öncesinde ise şablonlardan <strong>aynı formatta</strong> <strong>farklı</strong> bilgileri görüntülememizden bahsediyorduk.</p>
+<p>Aslında yapmak istediğimiz Django yöneticimize eklenen gerçek postaları açmak - bundan sonra oraya gidiyoruz.</p>
+<h2 id="bir-şey-daha-deployment-yayına-alma-zamanı">Bir şey daha: deployment (yayına alma) zamanı!</h2>
+<p>Bunları İnternet&apos;te canlı olarak görmek çok güzel olur, değil mi:</p>
+<h3 id="kodumuzu-commit-ve-push-komutları-ile-githuba-yükleyelim">Kodumuzu commit ve push komutları ile Github&apos;a yükleyelim</h3>
+<p>İlk önce son deployment dan sonra hangi dosyaların değiştiğine bakalım. Bu komutları lokal bilgisayarımızda çalıştıralım, PythonAnywhere&apos;de değil:</p>
+<p></p><p class="code-label">komut-satırı</p><p></p>
 <pre><code>$ git status
-</code></pre><p><code>djangogirls</code> dizininde oldu&#x11F;umuzdan emin olal&#x131;m ve <code>git</code> &apos;e bu dizinde yap&#x131;lan t&#xFC;m de&#x11F;i&#x15F;iklikleri dahil etmesini s&#xF6;yleyelim:</p>
-<p></p><p class="code-label">komut-sat&#x131;r&#x131;</p><p></p>
+</code></pre><p><code>djangogirls</code> dizininde olduğumuzdan emin olalım ve <code>git</code> &apos;e bu dizinde yapılan tüm değişiklikleri dahil etmesini söyleyelim:</p>
+<p></p><p class="code-label">komut-satırı</p><p></p>
 <pre><code>$ git add --all .
 </code></pre><blockquote>
-<p><strong>Not</strong> <code>--all</code> demek e&#x11F;er <code>git</code>&apos;in silinmi&#x15F; dosyalar&#x131; varsa onlar&#x131; tan&#x131;may&#x131; sa&#x11F;lar (varsay&#x131;lan olarak sadece yeni/de&#x11F;i&#x15F;tirilmi&#x15F; dosyalar&#x131; tan&#x131;r). Hat&#x131;rlatma: <code>.</code> i&#xE7;inde oldu&#x11F;umuz klas&#xF6;r anlam&#x131;na gelir (3. B&#xF6;l&#xFC;m).</p>
+<p><strong>Not</strong> <code>--all</code> demek eğer <code>git</code>&apos;in silinmiş dosyaları varsa onları tanımayı sağlar (varsayılan olarak sadece yeni/değiştirilmiş dosyaları tanır). Hatırlatma: <code>.</code> içinde olduğumuz klasör anlamına gelir (3. Bölüm).</p>
 </blockquote>
-<p>Dosyalar&#x131;m&#x131;z&#x131; y&#xFC;klemeden &#xF6;nce <code>git</code>&apos;in hangilerini y&#xFC;kleyece&#x11F;ine (<code>git</code>&apos;in y&#xFC;kleyece&#x11F;i dosyalar ye&#x15F;il g&#xF6;sterilir) bakal&#x131;m:</p>
-<p></p><p class="code-label">komut-sat&#x131;r&#x131;</p><p></p>
+<p>Dosyalarımızı yüklemeden önce <code>git</code>&apos;in hangilerini yükleyeceğine (<code>git</code>&apos;in yükleyeceği dosyalar yeşil gösterilir) bakalım:</p>
+<p></p><p class="code-label">komut-satırı</p><p></p>
 <pre><code>$ git status
-</code></pre><p>Neredeyse bitirdik, &#x15F;imdi bu de&#x11F;i&#x15F;ikli&#x11F;i tarih&#xE7;esine kaydetmesini s&#xF6;yleyelim. Commit i&#xE7;in de&#x11F;i&#x15F;iklikleri a&#xE7;&#x131;klayan bir mesaj yazal&#x131;m. Bu a&#x15F;amada istedi&#x11F;imizi yazabiliriz, fakat tan&#x131;mlay&#x131;c&#x131; yaz&#x131;lar gelecekte neler yapm&#x131;&#x15F; oldu&#x11F;umuzu hat&#x131;rlatmas&#x131; a&#xE7;&#x131;s&#x131;ndan faydal&#x131; olacakt&#x131;r.</p>
-<p></p><p class="code-label">komut-sat&#x131;r&#x131;</p><p></p>
-<pre><code>$ git commit -m &quot;Site i&#xE7;in HTML dosyas&#x131;n&#x131; de&#x11F;i&#x15F;tirdim.&quot;
+</code></pre><p>Neredeyse bitirdik, şimdi bu değişikliği tarihçesine kaydetmesini söyleyelim. Commit için değişiklikleri açıklayan bir mesaj yazalım. Bu aşamada istediğimizi yazabiliriz, fakat tanımlayıcı yazılar gelecekte neler yapmış olduğumuzu hatırlatması açısından faydalı olacaktır.</p>
+<p></p><p class="code-label">komut-satırı</p><p></p>
+<pre><code>$ git commit -m &quot;Site için HTML dosyasını değiştirdim.&quot;
 </code></pre><blockquote>
-<p><strong>Not</strong> Tamamlama mesaj&#x131;n&#x131; &#xE7;ift t&#x131;rnak i&#xE7;erisinde kulland&#x131;&#x11F;&#x131;m&#x131;zdan emin olal&#x131;m.</p>
+<p><strong>Not</strong> Tamamlama mesajını çift tırnak içerisinde kullandığımızdan emin olalım.</p>
 </blockquote>
-<p>Bunu bir kez yap&#x131;p, de&#x11F;i&#x15F;ikliklerimizi GitHub&apos;a y&#xFC;kledik (ittik):</p>
-<p></p><p class="code-label">komut-sat&#x131;r&#x131;</p><p></p>
+<p>Bunu bir kez yapıp, değişikliklerimizi GitHub&apos;a yükledik (ittik):</p>
+<p></p><p class="code-label">komut-satırı</p><p></p>
 <pre><code>$ git push
-</code></pre><h3 id="pull-ile-yeni-kodu-pythonanywhere-e-al&#x131;p-web-uygulamas&#x131;n&#x131;-tekrar-y&#xFC;kleyelim">Pull ile yeni kodu PythonAnywhere e al&#x131;p web uygulamas&#x131;n&#x131; tekrar y&#xFC;kleyelim</h3>
+</code></pre><h3 id="pull-ile-yeni-kodu-pythonanywhere-e-alıp-web-uygulamasını-tekrar-yükleyelim">Pull ile yeni kodu PythonAnywhere e alıp web uygulamasını tekrar yükleyelim</h3>
 <ul>
-<li><a href="https://www.pythonanywhere.com/consoles/" target="_blank">PythonAnywhere consoles page</a>sayfas&#x131;n&#x131; ve <strong>Bash console</strong> u a&#xE7;al&#x131;m (ya da yeni bir tane a&#xE7;al&#x131;m). Sonra da &#xE7;al&#x131;&#x15F;t&#x131;ral&#x131;m:</li>
+<li><a href="https://www.pythonanywhere.com/consoles/" target="_blank">PythonAnywhere consoles page</a>sayfasını ve <strong>Bash console</strong> u açalım (ya da yeni bir tane açalım). Sonra da çalıştıralım:</li>
 </ul>
-<p></p><p class="code-label">PythonAnywhere komut sat&#x131;r&#x131;</p><p></p>
+<p></p><p class="code-label">PythonAnywhere komut satırı</p><p></p>
 <pre><code>$ cd ~/&lt;your-pythonanywhere-username&gt;.pythonanywhere.com
 $ git pull
 [...]
-</code></pre><p>(A&#xE7;&#x131; parantezleri olmadan <code>&lt;your-pythonanywhere-username&gt;</code>&apos;i ger&#xE7;ek PythonAnywhere kullan&#x131;c&#x131; isminizle de&#x11F;i&#x15F;tirmeyi unutmay&#x131;n).</p>
-<p>Ve kodunuzun indirilmesini izleyin. Kontrol etmek istersen, <strong>Files</strong> sekmesine gidip kodunu PythonAnywhere &#xFC;zerinde g&#xF6;rebilirsin (Konsol sayfas&#x131;ndaki men&#xFC; butonundan di&#x11F;er PythonAnywhere sayfalar&#x131;na ula&#x15F;abilirsin).</p>
+</code></pre><p>(Açı parantezleri olmadan <code>&lt;your-pythonanywhere-username&gt;</code>&apos;i gerçek PythonAnywhere kullanıcı isminizle değiştirmeyi unutmayın).</p>
+<p>Ve kodunuzun indirilmesini izleyin. Kontrol etmek istersen, <strong>Files</strong> sekmesine gidip kodunu PythonAnywhere üzerinde görebilirsin (Konsol sayfasındaki menü butonundan diğer PythonAnywhere sayfalarına ulaşabilirsin).</p>
 <ul>
-<li>Son olarak, <a href="https://www.pythonanywhere.com/web_app_setup/" target="_blank">Web sekmesi</a>ne gidip uygulaman&#x131;z&#x131;n <strong>Yenile</strong> butonuna bas&#x131;n.</li>
+<li>Son olarak, <a href="https://www.pythonanywhere.com/web_app_setup/" target="_blank">Web sekmesi</a>ne gidip uygulamanızın <strong>Yenile</strong> butonuna basın.</li>
 </ul>
-<p>G&#xFC;ncelleme haz&#x131;r olmal&#x131;! Devam edelim ve taray&#x131;c&#x131;da web sitesini yenileyelim. De&#x11F;i&#x15F;iklikler g&#xF6;r&#xFC;n&#xFC;yor olmal&#x131;. :)</p>
+<p>Güncelleme hazır olmalı! Devam edelim ve tarayıcıda web sitesini yenileyelim. Değişiklikler görünüyor olmalı. :)</p>
 
                                 
                                 </section>
@@ -704,12 +704,56 @@ $ git pull
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HTML'ye giriş","level":"1.17","depth":1,"next":{"title":"Django ORM ve QuerySets (Sorgu Setleri)","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"previous":{"title":"Django views - yaratma zamanı geldi!","level":"1.16","depth":1,"path":"django_views/README.md","ref":"django_views/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"tr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"html/README.md","mtime":"2020-09-22T11:43:43.154Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"tr"}});
+            gitbook.page.hasChanged({"page":{"title":"HTML'ye giriş","level":"1.17","depth":1,"next":{"title":"Django ORM ve QuerySets (Sorgu Setleri)","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"previous":{"title":"Django views - yaratma zamanı geldi!","level":"1.16","depth":1,"path":"django_views/README.md","ref":"django_views/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"tr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"html/README.md","mtime":"2020-11-15T14:54:56.718Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"tr"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

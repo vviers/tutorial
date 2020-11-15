@@ -7,7 +7,7 @@
         <title>Django 관리자 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -511,24 +511,24 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#xC7A5;&#xACE0;-&#xAD00;&#xB9AC;&#xC790;">&#xC7A5;&#xACE0; &#xAD00;&#xB9AC;&#xC790;</h1>
-<p>&#xAD00;&#xB9AC;&#xC790; &#xD654;&#xBA74;&#xC744; &#xD55C;&#xAD6D;&#xC5B4;&#xB85C; &#xBCC0;&#xACBD;&#xD558;&#xAE38; &#xC6D0;&#xD560; &#xACBD;&#xC6B0; &apos;settings.py&apos;&#xC911; <code>LANGUAGE_CODE = &apos;en-us&apos;</code>&#xB97C; <code>LANGUAGE_CODE = &apos;ko&apos;</code>&#xB85C; &#xBC14;&#xAFB8;&#xC138;&#xC694;.</p>
-<p>&#xBC29;&#xAE08; &#xB9C9; &#xBAA8;&#xB378;&#xB9C1; &#xD55C; &#xAE00;&#xB4E4;&#xC744; &#xC7A5;&#xACE0; &#xAD00;&#xB9AC;&#xC790;&#xC5D0;&#xC11C; &#xCD94;&#xAC00;&#xD558;&#xAC70;&#xB098; &#xC218;&#xC815;, &#xC0AD;&#xC81C;&#xD560; &#xC218; &#xC788;&#xC5B4;&#xC694;.</p>
-<p>&#xC774;&#xC81C; <code>blog/admin.py</code> &#xD30C;&#xC77C;&#xC744; &#xC5F4;&#xC5B4;&#xC11C; &#xB0B4;&#xC6A9;&#xC744; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xBC14;&#xAFB8;&#xC138;&#xC694;.</p>
+                                <h1 id="장고-관리자">장고 관리자</h1>
+<p>관리자 화면을 한국어로 변경하길 원할 경우 &apos;settings.py&apos;중 <code>LANGUAGE_CODE = &apos;en-us&apos;</code>를 <code>LANGUAGE_CODE = &apos;ko&apos;</code>로 바꾸세요.</p>
+<p>방금 막 모델링 한 글들을 장고 관리자에서 추가하거나 수정, 삭제할 수 있어요.</p>
+<p>이제 <code>blog/admin.py</code> 파일을 열어서 내용을 다음과 같이 바꾸세요.</p>
 <p></p><p class="code-label">blog/admin.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.contrib <span class="hljs-keyword">import</span> admin
 <span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Post
 
 admin.site.register(Post)
 </code></pre>
-<p>&#xCF54;&#xB4DC;&#xC5D0;&#xC11C; &#xC54C; &#xC218; &#xC788;&#xB4EF;&#xC774; &#xC55E; &#xC7A5;&#xC5D0;&#xC11C; &#xC815;&#xC758;&#xD588;&#xB358; <code>Post</code>&#xBAA8;&#xB378;&#xC744; &#xAC00;&#xC838;&#xC624;&#xACE0;(import) &#xC788;&#xC5B4;&#xC694;. &#xAD00;&#xB9AC;&#xC790; &#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xC11C; &#xB9CC;&#xB4E0; &#xBAA8;&#xB378;&#xC744; &#xBCF4;&#xB824;&#xBA74; <code>admin.site.register(Post)</code>&#xB85C; &#xBAA8;&#xB378;&#xC744; &#xB4F1;&#xB85D;&#xD574;&#xC57C; &#xD574;&#xC694;.</p>
-<p>&#xC790;, &#xC774;&#xC81C; <code>Post</code>&#xBAA8;&#xB378;&#xC744; &#xBCFC;&#xAE4C;&#xC694;? &#xC6F9; &#xC11C;&#xBC84;&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xB824;&#xBA74; &#xCF58;&#xC194; &#xCC3D;&#xC5D0;&#xC11C; <code>python manage.py runserver</code>&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xB294;&#xAC78; &#xC78A;&#xC9C0; &#xB9C8;&#xC138;&#xC694;. &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xB97C; &#xC5F4;&#xACE0; &#xC8FC;&#xC18C;&#xCC3D;&#xC5D0; <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a> &#xC744; &#xC785;&#xB825;&#xD558;&#xBA74; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xB85C;&#xADF8;&#xC778; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xBCFC; &#xC218; &#xC788;&#xC5B4;&#xC694;.</p>
+<p>코드에서 알 수 있듯이 앞 장에서 정의했던 <code>Post</code>모델을 가져오고(import) 있어요. 관리자 페이지에서 만든 모델을 보려면 <code>admin.site.register(Post)</code>로 모델을 등록해야 해요.</p>
+<p>자, 이제 <code>Post</code>모델을 볼까요? 웹 서버를 실행하려면 콘솔 창에서 <code>python manage.py runserver</code>를 실행하는걸 잊지 마세요. 브라우저를 열고 주소창에 <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a> 을 입력하면 아래와 같은 로그인 페이지를 볼 수 있어요.</p>
 <p><img src="images/login_page2.png" alt="Login page"></p>
-<p>&#xB85C;&#xADF8;&#xC778;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294;, &#xBAA8;&#xB4E0; &#xAD8C;&#xD55C;&#xC744; &#xAC00;&#xC9C0;&#xB294; <em>&#xC288;&#xD37C; &#xC0AC;&#xC6A9;&#xC790;(superuser)</em>&#xB97C; &#xC0DD;&#xC131;&#xD574;&#xC57C; &#xD574;&#xC694;. &#xCEE4;&#xB9E8;&#xB4DC;&#xB77C;&#xC778;&#xC73C;&#xB85C; &#xB3CC;&#xC544;&#xAC00;&#xC11C; <code>python manage.py createsuperuser</code>&#xC744; &#xC785;&#xB825;&#xD558;&#xACE0; &#xC5D4;&#xD130;&#xB97C; &#xB204;&#xB974;&#xC138;&#xC694;. </p>
+<p>로그인하기 위해서는, 모든 권한을 가지는 <em>슈퍼 사용자(superuser)</em>를 생성해야 해요. 커맨드라인으로 돌아가서 <code>python manage.py createsuperuser</code>을 입력하고 엔터를 누르세요. </p>
 <blockquote>
-<p>&#xC0C8; &#xD130;&#xBBF8;&#xB110; &#xCC3D;&#xC744; &#xC5F4;&#xACE0; virtualenv&#xB97C; &#xD65C;&#xC131;&#xD654; &#xC2DC;&#xCF1C; &#xC6F9; &#xC11C;&#xBC84;&#xB97C; &#xC2E4;&#xD589;&#xC2DC;&#xD0A4;&#xACE0; &#xB09C; &#xD6C4; &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC785;&#xB825;&#xD574;&#xC57C;&#xD569;&#xB2C8;&#xB2E4;. <b>&#xB098;&#xC758; &#xCCAB; &#xBC88;&#xC9F8; Django &#xD504;&#xB85C;&#xC81D;&#xD2B8;!</b> &#xC7A5;&#xC758; <b>&#xC6F9; &#xC11C;&#xBC84; &#xC2DC;&#xC791;&#xD558;&#xAE30;</b>&#xC139;&#xC158;&#xC5D0;&#xC11C; &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC785;&#xB825;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC744; &#xBC30;&#xC6E0;&#xC5B4;&#xC694;,</p>
+<p>새 터미널 창을 열고 virtualenv를 활성화 시켜 웹 서버를 실행시키고 난 후 명령어를 입력해야합니다. <b>나의 첫 번째 Django 프로젝트!</b> 장의 <b>웹 서버 시작하기</b>섹션에서 명령어를 입력하는 방법을 배웠어요,</p>
 </blockquote>
-<p>&#xBA54;&#xC2DC;&#xC9C0;&#xAC00; &#xB098;&#xD0C0;&#xB098;&#xBA74; &#xC0AC;&#xC6A9;&#xC790; &#xC774;&#xB984; (&#xC18C;&#xBB38;&#xC790;, &#xACF5;&#xBC31; &#xC5C6;&#xC774;), &#xC774;&#xBA54;&#xC77C; &#xC8FC;&#xC18C; &#xBC0F; &#xC554;&#xD638;&#xB97C; &#xC785;&#xB825;&#xD569;&#xB2C8;&#xB2E4;. password&#xB97C; &#xC785;&#xB825;&#xD560; &#xB54C; &#xD654;&#xBA74;&#xC5D0; &#xAE00;&#xC790;&#xAC00; &#xBCF4;&#xC774;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;&#xACE0; &#xD574;&#xB3C4; &#xAC71;&#xC815;&#xD558;&#xC9C0; &#xB9C8;&#xC138;&#xC694;. &#xC6D0;&#xB798; password&#xB294; &#xD654;&#xBA74;&#xC5D0; &#xBCF4;&#xC774;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC791;&#xC131;&#xD55C; &#xD6C4;&#xC5D0; <code>enter</code>&#xB97C; &#xB204;&#xB974;&#xC138;&#xC694;. &#xC2E4;&#xD589;&#xD654;&#xBA74;&#xC740; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC744; &#xAC70;&#xC608;&#xC694;. (&#xC288;&#xD37C; &#xC0AC;&#xC6A9;&#xC790;&#xB85C; &#xC0AC;&#xC6A9;&#xD560; username &#xACFC; email &#xC8FC;&#xC18C;&#xB294; &#xBCF8;&#xC778; &#xACC4;&#xC815;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC138;&#xC694;) :</p>
+<p>메시지가 나타나면 사용자 이름 (소문자, 공백 없이), 이메일 주소 및 암호를 입력합니다. password를 입력할 때 화면에 글자가 보이지 않는다고 해도 걱정하지 마세요. 원래 password는 화면에 보이지 않습니다. 작성한 후에 <code>enter</code>를 누르세요. 실행화면은 아래와 같을 거예요. (슈퍼 사용자로 사용할 username 과 email 주소는 본인 계정을 사용하세요) :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py createsuperuser
 Username: admin
@@ -536,13 +536,13 @@ Email address: admin@admin.com
 Password:
 Password (again):
 Superuser created successfully.
-</code></pre><p>&#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xB85C; &#xB3CC;&#xC544;&#xC640;&#xC11C; &#xC7A5;&#xACE0; &#xAD00;&#xB9AC;&#xC790; &#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xC11C; &#xC288;&#xD37C; &#xC0AC;&#xC6A9;&#xC790;&#xB85C; &#xB85C;&#xADF8;&#xC778;&#xD55C; &#xD6C4; &#xB300;&#xC2DC;&#xBCF4;&#xB4DC;&#xB97C; &#xD655;&#xC778;&#xD558;&#xC138;&#xC694;.</p>
+</code></pre><p>브라우저로 돌아와서 장고 관리자 페이지에서 슈퍼 사용자로 로그인한 후 대시보드를 확인하세요.</p>
 <p><img src="images/django_admin3.png" alt="Django admin"></p>
-<p>&#xAC8C;&#xC2DC;&#xAE00;&#xB85C; &#xAC00;&#xC11C; &#xC774;&#xAC83;&#xC800;&#xAC83; &#xC2DC;&#xB3C4;&#xD574;&#xBCF4;&#xC138;&#xC694;. 5~6&#xAC1C; &#xBE14;&#xB85C;&#xADF8; &#xD3EC;&#xC2A4;&#xD2B8;&#xB97C; &#xC62C;&#xB824;&#xBCF4;&#xC138;&#xC694;. &#xC548;&#xC5D0; &#xB0B4;&#xC6A9;&#xC740; &#xAC71;&#xC815;&#xD558;&#xC9C0; &#xB9C8;&#xC138;&#xC694;. &#xD29C;&#xD1A0;&#xB9AC;&#xC5BC;&#xC5D0; &#xC788;&#xB294; &#xD14D;&#xC2A4;&#xD2B8;&#xB97C; &#xADF8;&#xB0E5; &#xBCF5;&#xC0AC;&#xBD99;&#xC5EC;&#xB123;&#xAE30;&#xB97C; &#xD560; &#xC218; &#xC788;&#xC73C;&#xB2C8;&#xAE4C;&#xC694;.</p>
-<p>&#xCD5C;&#xC18C;&#xD55C; 2, 3&#xAC1C;&#xC758; &#xAE00;&#xC5D0; &#xAC8C;&#xC2DC; &#xB0A0;&#xC9DC;&#xAC00; &#xC788;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD558;&#xC138;&#xC694;. (&#xBAA8;&#xB450; &#xBCFC; &#xD544;&#xC694;&#xB294; &#xC5C6;&#xC5B4;&#xC694;) &#xC774;&#xAC74; &#xB098;&#xC911;&#xC5D0; &#xB3C4;&#xC6C0;&#xC774; &#xB420; &#xAC70;&#xC5D0;&#xC694;.</p>
+<p>게시글로 가서 이것저것 시도해보세요. 5~6개 블로그 포스트를 올려보세요. 안에 내용은 걱정하지 마세요. 튜토리얼에 있는 텍스트를 그냥 복사붙여넣기를 할 수 있으니까요.</p>
+<p>최소한 2, 3개의 글에 게시 날짜가 있는지 확인하세요. (모두 볼 필요는 없어요) 이건 나중에 도움이 될 거에요.</p>
 <p><img src="images/edit_post3.png" alt="Django admin"></p>
-<p>&#xC7A5;&#xACE0; &#xAD00;&#xB9AC;&#xC790;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xC880; &#xB354; &#xC54C;&#xACE0; &#xC2F6;&#xB2E4;&#xBA74; &#xC7A5;&#xACE0; &#xACF5;&#xC2DD; &#xBB38;&#xC11C;&#xB97C; &#xC77D;&#xC5B4;&#xBCF4;&#xC138;&#xC694; : <a href="https://docs.djangoproject.com/en/2.0/ref/contrib/admin/" target="_blank">https://docs.djangoproject.com/en/2.0/ref/contrib/admin/</a></p>
-<p>&#xC790;, &#xC6B0;&#xB9AC;&#xB294; &#xB0B4; &#xCCAB; &#xBC88;&#xC9F8; &#xC7A5;&#xACE0; &#xBAA8;&#xB378;&#xC744; &#xB9CC;&#xB4E4;&#xC5C8;&#xC5B4;&#xC694;! &#xC7A0;&#xAE50; &#xC274; &#xC2DC;&#xAC04;&#xC774; &#xD544;&#xC694;&#xD574;&#xC694;. &#xC5F4;&#xC2EC;&#xD788; &#xD588;&#xC73C;&#xB2C8; &#xC7AC;&#xCDA9;&#xC804;&#xC744; &#xC704;&#xD574; &#xCEE4;&#xD53C; &#xD55C; &#xC794;(&#xB610;&#xB294; &#xCC28; &#xD55C; &#xC794;) &#xB610;&#xB294; &#xBB54;&#xAC00; &#xBA39;&#xACE0; &#xB3CC;&#xC544;&#xC624;&#xC138;&#xC694;.</p>
+<p>장고 관리자에 대해서 좀 더 알고 싶다면 장고 공식 문서를 읽어보세요 : <a href="https://docs.djangoproject.com/en/2.0/ref/contrib/admin/" target="_blank">https://docs.djangoproject.com/en/2.0/ref/contrib/admin/</a></p>
+<p>자, 우리는 내 첫 번째 장고 모델을 만들었어요! 잠깐 쉴 시간이 필요해요. 열심히 했으니 재충전을 위해 커피 한 잔(또는 차 한 잔) 또는 뭔가 먹고 돌아오세요.</p>
 
                                 
                                 </section>
@@ -586,12 +586,56 @@ Superuser created successfully.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Django 관리자","level":"1.13","depth":1,"next":{"title":"배포하기!","level":"1.14","depth":1,"path":"deploy/README.md","ref":"deploy/README.md","articles":[]},"previous":{"title":"Django 모델","level":"1.12","depth":1,"path":"django_models/README.md","ref":"django_models/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"ko","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_admin/README.md","mtime":"2020-09-22T11:43:42.958Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"ko"}});
+            gitbook.page.hasChanged({"page":{"title":"Django 관리자","level":"1.13","depth":1,"next":{"title":"배포하기!","level":"1.14","depth":1,"path":"deploy/README.md","ref":"deploy/README.md","articles":[]},"previous":{"title":"Django 모델","level":"1.12","depth":1,"path":"django_models/README.md","ref":"django_models/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"ko","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_admin/README.md","mtime":"2020-11-15T14:54:56.538Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"ko"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

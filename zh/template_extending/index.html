@@ -7,7 +7,7 @@
         <title>模板扩展 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -498,18 +498,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6A21;&#x677F;&#x6269;&#x5C55;">&#x6A21;&#x677F;&#x6269;&#x5C55;</h1>
-<p>&#x53E6;&#x4E00;&#x4E2A;&#x6709;&#x8DA3;&#x7684;&#x4E8B;&#x60C5;Django&#x5DF2;&#x7ECF;&#x4E3A;&#x4F60;&#x505A;&#x597D;&#x4E86;&#x5C31;&#x662F;<strong>&#x6A21;&#x677F;&#x6269;&#x5C55;</strong>&#x3002;&#x8FD9;&#x662F;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#x5462;&#xFF1F;&#x5B83;&#x610F;&#x5473;&#x7740;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4F60;&#x7684;HTML&#x76F8;&#x540C;&#x4EE3;&#x7801;&#x4E3A;&#x4F60;&#x7F51;&#x7AD9;&#x4E0D;&#x540C;&#x7684;&#x7F51;&#x9875;&#x5171;&#x4EAB;&#x3002;</p>
-<p>&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x4F60;&#x60F3;&#x4F7F;&#x7528;&#x540C;&#x6837;&#x7684;&#x4FE1;&#x606F;&#x6216;&#x5E03;&#x5C40;&#xFF0C;&#x6216;&#x8005;&#x4F60;&#x60F3;&#x6539;&#x53D8;&#x67D0;&#x4E9B;&#x6A21;&#x677F;&#x5185;&#x5BB9;&#x65F6;&#xFF0C;&#x4F60;&#x4E0D;&#x5FC5;&#x5728;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x90FD;&#x91CD;&#x590D;&#x7740;&#x76F8;&#x540C;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x4F60;&#x4EC5;&#x4EC5;&#x53EA;&#x9700;&#x8981;&#x6539;&#x53D8;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x7684;&#x3002;</p>
-<h2 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x57FA;&#x7840;&#x6A21;&#x677F;">&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x57FA;&#x7840;&#x6A21;&#x677F;</h2>
-<p>&#x4E00;&#x4E2A;&#x57FA;&#x7840;&#x6A21;&#x677F;&#x662F;&#x6700;&#x91CD;&#x8981;&#x7684;&#x6A21;&#x677F;&#xFF0C;&#x4F60;&#x6269;&#x5C55;&#x5230;&#x4F60;&#x7F51;&#x7AD9;&#x7684;&#x6BCF;&#x4E00;&#x9875;&#x3002;</p>
-<p>&#x8BA9;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>base.html</code>&#x6587;&#x4EF6;&#x5230;<code>blog/templates/blog/</code>:</p>
+                                <h1 id="模板扩展">模板扩展</h1>
+<p>另一个有趣的事情Django已经为你做好了就是<strong>模板扩展</strong>。这是什么意思呢？它意味着你可以使用你的HTML相同代码为你网站不同的网页共享。</p>
+<p>通过这种方法，当你想使用同样的信息或布局，或者你想改变某些模板内容时，你不必在每个文件中都重复着相同的代码。你仅仅只需要改变一个文件，而不是所有的。</p>
+<h2 id="创建一个基础模板">创建一个基础模板</h2>
+<p>一个基础模板是最重要的模板，你扩展到你网站的每一页。</p>
+<p>让我们创建一个<code>base.html</code>文件到<code>blog/templates/blog/</code>:</p>
 <pre><code>    blog
-    &#x2514;&#x2500;&#x2500;&#x2500;templates
-        &#x2514;&#x2500;&#x2500;&#x2500;blog
+    └───templates
+        └───blog
                 base.html
                 post_list.html
-</code></pre><p>&#x7136;&#x540E;&#x5C06;&#x5B83;&#x6253;&#x5F00;&#xFF0C;&#x4ECE;<code>post_list.html</code>&#x4E2D;&#x590D;&#x5236;&#x6240;&#x6709;&#x4E1C;&#x897F;&#x5230;<code>base.html</code>&#x6587;&#x4EF6;&#xFF0C;&#x5C31;&#x50CF;&#x8FD9;&#x6837;&#xFF1A;</p>
+</code></pre><p>然后将它打开，从<code>post_list.html</code>中复制所有东西到<code>base.html</code>文件，就像这样：</p>
 <pre><code class="lang-html">    {% load staticfiles %}
     <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
@@ -542,7 +542,7 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>&#x7136;&#x540E;&#x5728;<code>base.html</code>&#x4E2D;&#xFF0C;&#x66FF;&#x6362;&#x4F60;&#x6240;&#x6709;&#x7684; <code>&lt;body&gt;</code>(&#x6240;&#x6709;&#x7684;&#x5728;<code>&lt;body&gt;</code> &#x548C; <code>&lt;/body&gt;</code>&#x4E4B;&#x95F4;&#x7684;&#x5185;&#x5BB9;)&#x50CF;&#x8FD9;&#x6837;&#xFF1A;</p>
+<p>然后在<code>base.html</code>中，替换你所有的 <code>&lt;body&gt;</code>(所有的在<code>&lt;body&gt;</code> 和 <code>&lt;/body&gt;</code>之间的内容)像这样：</p>
 <pre><code class="lang-html">    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-header&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span>Django Girls Blog<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
@@ -557,12 +557,12 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
-<p>&#x7528;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x6240;&#x6709;&#x5728; <code>{% for post in posts %}{% endfor %}</code>&#x4E4B;&#x95F4;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p>用如下内容替换所有在 <code>{% for post in posts %}{% endfor %}</code>之间的代码：</p>
 <pre><code class="lang-html">    {% block content %}
     {% endblock %}
 </code></pre>
-<p>&#x8FD9;&#x662F;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#x5462;&#xFF1F; &#x4F60;&#x521A;&#x521A;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;<code>block&#xFF08;&#x5757;&#xFF09;</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x6A21;&#x677F;&#x6807;&#x7B7E;&#x5141;&#x8BB8;&#x4F60;&#x5728;&#x5176;&#x4E2D;&#x63D2;&#x5165;&#x6269;&#x5C55;&#x81EA;<code>base.html</code>&#x7684;&#x6A21;&#x677F;&#x7684;HTML&#x4EE3;&#x7801;&#x3002; &#x6211;&#x4EEC;&#x4E00;&#x4F1A;&#x513F;&#x5C06;&#x7ED9;&#x4F60;&#x5C55;&#x793A;&#x8FD9;&#x4E2A;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x3002;</p>
-<p>&#x73B0;&#x5728;&#x4FDD;&#x5B58;&#x5B83;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6B21;&#x6253;&#x5F00;&#x4F60;&#x7684;<code>blog/templates/blog/post_list.html</code>&#x3002; &#x5220;&#x9664;&#x4E00;&#x5207;body&#x5916;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x7136;&#x540E;&#x5220;&#x9664; <code>&lt;div class=&quot;page-header&quot;&gt;&lt;/div&gt;</code>&#xFF0C;&#x6B64;&#x65F6;&#x6587;&#x4EF6;&#x4F1A;&#x770B;&#x8D77;&#x6765;&#x50CF;&#x8FD9;&#x6837;&#xFF1A;</p>
+<p>这是什么意思呢？ 你刚刚创建了一个<code>block（块）</code>，这个模板标签允许你在其中插入扩展自<code>base.html</code>的模板的HTML代码。 我们一会儿将给你展示这个如何使用。</p>
+<p>现在保存它，然后再次打开你的<code>blog/templates/blog/post_list.html</code>。 删除一切body外的代码，然后删除 <code>&lt;div class=&quot;page-header&quot;&gt;&lt;/div&gt;</code>，此时文件会看起来像这样：</p>
 <pre><code class="lang-html">    {% for post in posts %}
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;date&quot;</span>&gt;</span>
@@ -573,10 +573,10 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     {% endfor %}
 </code></pre>
-<p>&#x7136;&#x540E;&#x73B0;&#x5728;&#x5C06;&#x8FD9;&#x884C;&#x52A0;&#x5230;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x59CB;&#xFF1A;</p>
+<p>然后现在将这行加到文件的开始：</p>
 <pre><code class="lang-html">    {% extends &apos;blog/base.html&apos; %}
 </code></pre>
-<p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#x6211;&#x4EEC;&#x5728; <code>post_list.html</code>&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x4E2D;&#x6269;&#x5C55;&#x4E86; <code>base.html</code> &#x6A21;&#x677F;&#x7684;&#x5185;&#x5BB9;&#x3002; &#x8FD8;&#x6709;&#x4E00;&#x4EF6;&#x4E8B;&#xFF1A;&#x5C06;&#x6240;&#x6709;(&#x9664;&#x4E86;&#x6211;&#x4EEC;&#x521A;&#x521A;&#x52A0;&#x5165;&#x7684;&#x90A3;&#x884C;) &#x5185;&#x5BB9;&#x7F6E;&#x4E8E;<code>{% block content %}</code>&#x548C; <code>{% endblock %}</code>&#x4E4B;&#x95F4;&#x3002;&#x3002; &#x50CF;&#x8FD9;&#x6837;:</p>
+<p>这意味着我们在 <code>post_list.html</code>模板文件中扩展了 <code>base.html</code> 模板的内容。 还有一件事：将所有(除了我们刚刚加入的那行) 内容置于<code>{% block content %}</code>和 <code>{% endblock %}</code>之间。。 像这样:</p>
 <pre><code class="lang-html">    {% extends &apos;blog/base.html&apos; %}
 
     {% block content %}
@@ -591,9 +591,9 @@
         {% endfor %}
     {% endblock %}
 </code></pre>
-<p>&#x597D;&#x4E86;&#xFF0C;&#x5C31;&#x662F;&#x5B83;&#x4E86;&#xFF01;&#x68C0;&#x67E5;&#x4F60;&#x7684;&#x7F51;&#x7AD9;&#x8FD8;&#x80FD;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#xFF1A;&#xFF09;</p>
+<p>好了，就是它了！检查你的网站还能正常工作：）</p>
 <blockquote>
-<p>&#x5982;&#x679C;&#x4F60;&#x6709;&#x4EFB;&#x4F55;&#x9519;&#x8BEF; <code>TemplateDoesNotExists</code> &#x8FD9;&#x610F;&#x5473;&#x7740;&#x6CA1;&#x6709; <code>blog/base.html</code> &#x6587;&#x4EF6;&#xFF0C;&#x4F60;&#x9700;&#x8981; <code>runserver</code> &#x8FD0;&#x884C;&#x5728;&#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x5C1D;&#x8BD5;&#x53BB;&#x5173;&#x6389;&#x5B83;&#xFF08;&#x901A;&#x8FC7;&#x6309;&#x4E0B;Ctrl+C -Control&#x548C;C&#x6309;&#x94AE;&#x4E00;&#x5207;&#xFF09;&#x7136;&#x540E;&#x91CD;&#x65B0;&#x8FD0;&#x884C;<code>python manage.py runserver</code> &#x547D;&#x4EE4;&#x884C;&#x3002;</p>
+<p>如果你有任何错误 <code>TemplateDoesNotExists</code> 这意味着没有 <code>blog/base.html</code> 文件，你需要 <code>runserver</code> 运行在控制台，尝试去关掉它（通过按下Ctrl+C -Control和C按钮一切）然后重新运行<code>python manage.py runserver</code> 命令行。</p>
 </blockquote>
 
                                 
@@ -638,12 +638,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"模板扩展","level":"1.21","depth":1,"next":{"title":"扩展您的应用","level":"1.22","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - 让其更漂亮","level":"1.20","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"zh","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-09-22T11:43:43.218Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"模板扩展","level":"1.21","depth":1,"next":{"title":"扩展您的应用","level":"1.22","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - 让其更漂亮","level":"1.20","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"zh","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-11-15T14:54:56.774Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

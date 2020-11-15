@@ -7,7 +7,7 @@
         <title>Template genişletmek · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -511,18 +511,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="template-geni&#x15F;letmek">Template geni&#x15F;letmek</h1>
-<p>Django&apos;nun size sundu&#x11F;u ba&#x15F;ka bir g&#xFC;zellik de <strong>template geni&#x15F;letmek</strong>tir. O da ne demek? &#x15E;u demek, HTML dosyan&#x131;z&#x131;n baz&#x131; b&#xF6;l&#xFC;mlerini birden fazla sayfan&#x131;zda kullanabilirsiniz.</p>
-<p>Templatelar ayn&#x131; bilgiyi ya da yerle&#x15F;tirmeyi (layout) birden fazla yerde kullanmak istedi&#x11F;inizde yard&#x131;m ederler. Yapt&#x131;&#x11F;&#x131;n&#x131;z&#x131; her dosya i&#xE7;in tekrar etmek zorunda kalmazs&#x131;n&#x131;z. Ve bir &#x15F;ey de&#x11F;i&#x15F;tirmek isterseniz, t&#xFC;m templatelarda de&#x11F;il sadece bir tanesinde de&#x11F;i&#x15F;tirirsiniz!</p>
-<h2 id="bir-temel-template-olu&#x15F;tur">Bir Temel Template Olu&#x15F;tur</h2>
-<p>Temel template web sitenizin b&#xFC;t&#xFC;n sayfalar&#x131;nda geni&#x15F;letebilece&#x11F;iniz en temel template&apos;inizdir.</p>
-<p>&#x15E;imdi <code>blog/templates/blog/</code> klas&#xF6;r&#xFC; i&#xE7;inde <code>base.html</code> adl&#x131; bir dosya olu&#x15F;tural&#x131;m:</p>
+                                <h1 id="template-genişletmek">Template genişletmek</h1>
+<p>Django&apos;nun size sunduğu başka bir güzellik de <strong>template genişletmek</strong>tir. O da ne demek? Şu demek, HTML dosyanızın bazı bölümlerini birden fazla sayfanızda kullanabilirsiniz.</p>
+<p>Templatelar aynı bilgiyi ya da yerleştirmeyi (layout) birden fazla yerde kullanmak istediğinizde yardım ederler. Yaptığınızı her dosya için tekrar etmek zorunda kalmazsınız. Ve bir şey değiştirmek isterseniz, tüm templatelarda değil sadece bir tanesinde değiştirirsiniz!</p>
+<h2 id="bir-temel-template-oluştur">Bir Temel Template Oluştur</h2>
+<p>Temel template web sitenizin bütün sayfalarında genişletebileceğiniz en temel template&apos;inizdir.</p>
+<p>Şimdi <code>blog/templates/blog/</code> klasörü içinde <code>base.html</code> adlı bir dosya oluşturalım:</p>
 <pre><code>blog
-&#x2514;&#x2500;&#x2500;&#x2500;templates
-    &#x2514;&#x2500;&#x2500;&#x2500;blog
+└───templates
+    └───blog
             base.html
             post_list.html
-</code></pre><p>Sonra bunu a&#xE7;al&#x131;m ve <code>post_list.html</code> dosyas&#x131;ndaki her &#x15F;eyi a&#x15F;a&#x11F;&#x131;daki gibi <code>base.html</code>&apos;ye kopyalayal&#x131;m:</p>
+</code></pre><p>Sonra bunu açalım ve <code>post_list.html</code> dosyasındaki her şeyi aşağıdaki gibi <code>base.html</code>&apos;ye kopyalayalım:</p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html">{% load static %}
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
@@ -556,7 +556,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>Sonra, <code>base.html</code> dosyas&#x131;ndaki <code>&lt;body&gt;</code>&apos;nizi (<code>&lt;body&gt;</code> ve <code>&lt;/body&gt;</code> aras&#x131;nda kalan her &#x15F;eyi) &#x15F;ununla de&#x11F;i&#x15F;tirin:</p>
+<p>Sonra, <code>base.html</code> dosyasındaki <code>&lt;body&gt;</code>&apos;nizi (<code>&lt;body&gt;</code> ve <code>&lt;/body&gt;</code> arasında kalan her şeyi) şununla değiştirin:</p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-header&quot;</span>&gt;</span>
@@ -572,13 +572,13 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
-<p>Her &#x15F;eyin bununla de&#x11F;i&#x15F;tirildi&#x11F;ini fark edebilirsiniz<code>{% for post in posts %}</code>dan<code>{% endfor %}</code>bununla:</p>
+<p>Her şeyin bununla değiştirildiğini fark edebilirsiniz<code>{% for post in posts %}</code>dan<code>{% endfor %}</code>bununla:</p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html">{% block content %}
 {% endblock %}
 </code></pre>
-<p>Ama neden? Bir <code>blok</code> olu&#x15F;turdunuz! <code>{% block %}</code> i&#xE7;inde HTML ekleyecek alan yapmak i&#xE7;in &#x15F;ablon etiketi kulland&#x131;n&#x131;z. HTML ba&#x15F;ka bir &#x15F;ablondan gelecek (<code>base.html</code>) bu &#x15F;ablonu geni&#x15F;letir. Bunun nas&#x131;l yap&#x131;ld&#x131;&#x11F;&#x131;n&#x131; da hemen g&#xF6;sterece&#x11F;iz.</p>
-<p>&#x15E;imdi <code>base.html</code>&apos;i kaydedelim ve <code>blog/templates/blog/post_list.html</code> dosyam&#x131;z&#x131; tekrar a&#xE7;al&#x131;m.  <code>{% for post in posts %}</code>&apos;&#x131;n &#xFC;zerindeki ve <code>{% endfor %}</code>&apos;&#x131;n alt&#x131;ndaki her &#x15F;eyi kald&#x131;racaks&#x131;n&#x131;z. &#x130;&#x15F;iniz bitti&#x11F;inde dosya &#x15F;u &#x15F;ekilde g&#xF6;r&#xFC;necektir:</p>
+<p>Ama neden? Bir <code>blok</code> oluşturdunuz! <code>{% block %}</code> içinde HTML ekleyecek alan yapmak için şablon etiketi kullandınız. HTML başka bir şablondan gelecek (<code>base.html</code>) bu şablonu genişletir. Bunun nasıl yapıldığını da hemen göstereceğiz.</p>
+<p>Şimdi <code>base.html</code>&apos;i kaydedelim ve <code>blog/templates/blog/post_list.html</code> dosyamızı tekrar açalım.  <code>{% for post in posts %}</code>&apos;ın üzerindeki ve <code>{% endfor %}</code>&apos;ın altındaki her şeyi kaldıracaksınız. İşiniz bittiğinde dosya şu şekilde görünecektir:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% for post in posts %}
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
@@ -590,8 +590,8 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 {% endfor %}
 </code></pre>
-<p>Bunu, b&#xFC;t&#xFC;n i&#xE7;erik bloklar&#x131; i&#xE7;in &#x15F;ablonumuzun bir par&#xE7;as&#x131; olarak kullanmak istiyoruz. &#x15E;imdi bu dosyaya blok etiketleri ekleme zaman&#x131;!</p>
-<p>Blok etiketinizin <code>base.html</code> dosyan&#x131;zdaki etikete uymas&#x131;n&#x131; istiyorsunuz. Ayr&#x131;ca i&#xE7;erik bloklar&#x131;n&#x131;na ait b&#xFC;t&#xFC;n kodu da dahil etmek istiyorsun. Bunu yapmak i&#xE7;in, her &#x15F;eyi <code>{% block content %}</code>ve<code>{% endblock %}</code>&apos;un aras&#x131;na yerle&#x15F;tir. &#x15E;unun gibi:</p>
+<p>Bunu, bütün içerik blokları için şablonumuzun bir parçası olarak kullanmak istiyoruz. Şimdi bu dosyaya blok etiketleri ekleme zamanı!</p>
+<p>Blok etiketinizin <code>base.html</code> dosyanızdaki etikete uymasını istiyorsunuz. Ayrıca içerik bloklarınına ait bütün kodu da dahil etmek istiyorsun. Bunu yapmak için, her şeyi <code>{% block content %}</code>ve<code>{% endblock %}</code>&apos;un arasına yerleştir. Şunun gibi:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% block content %}
     {% for post in posts %}
@@ -605,7 +605,7 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>Geriye tek bir &#x15F;ey kald&#x131;. Bu iki &#x15F;ablonu birbirine ba&#x11F;lamam&#x131;z gerekiyor. Geni&#x15F;leyen &#x15F;ablonlar tam da bununla ilgili! Bunu dosyan&#x131;n ba&#x15F;lang&#x131;c&#x131;na geni&#x15F;leyebilir etiketler ekleyerek yapaca&#x11F;&#x131;z. Bunun gibi:</p>
+<p>Geriye tek bir şey kaldı. Bu iki şablonu birbirine bağlamamız gerekiyor. Genişleyen şablonlar tam da bununla ilgili! Bunu dosyanın başlangıcına genişleyebilir etiketler ekleyerek yapacağız. Bunun gibi:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
 
@@ -621,9 +621,9 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>&#x130;&#x15F;te bu! Dosyay&#x131; kaydedip sitenizin hala d&#xFC;zg&#xFC;n &#xE7;al&#x131;&#x15F;&#x131;p &#xE7;al&#x131;&#x15F;mad&#x131;&#x11F;&#x131;n&#x131; kontrol edin. :)</p>
+<p>İşte bu! Dosyayı kaydedip sitenizin hala düzgün çalışıp çalışmadığını kontrol edin. :)</p>
 <blockquote>
-<p>E&#x11F;er <code>TemplateDoesNotExist</code> hatas&#x131;n&#x131; al&#x131;yorsan&#x131;z, bunun anlam&#x131; <code>blog/base.html</code> dosyas&#x131; yok ve konsolda <code>runserver</code>&apos;&#x131; &#xE7;al&#x131;&#x15F;t&#x131;r&#x131;yorsunuz demektir. Konsolda durdurmay&#x131; deneyin (Ctrl+C -Control ve C tu&#x15F;lar&#x131;na birlikte basarak) ve <code>python manage.py runserver</code> komutunu &#xE7;al&#x131;&#x15F;t&#x131;rarak yeniden ba&#x15F;lat&#x131;n.</p>
+<p>Eğer <code>TemplateDoesNotExist</code> hatasını alıyorsanız, bunun anlamı <code>blog/base.html</code> dosyası yok ve konsolda <code>runserver</code>&apos;ı çalıştırıyorsunuz demektir. Konsolda durdurmayı deneyin (Ctrl+C -Control ve C tuşlarına birlikte basarak) ve <code>python manage.py runserver</code> komutunu çalıştırarak yeniden başlatın.</p>
 </blockquote>
 
                                 
@@ -668,12 +668,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Template genişletmek","level":"1.22","depth":1,"next":{"title":"Uygulamanı genişlet","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - Güzelleştirin","level":"1.21","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"tr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-09-22T11:43:43.154Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"tr"}});
+            gitbook.page.hasChanged({"page":{"title":"Template genişletmek","level":"1.22","depth":1,"next":{"title":"Uygulamanı genişlet","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - Güzelleştirin","level":"1.21","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"tr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-11-15T14:54:56.718Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"tr"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

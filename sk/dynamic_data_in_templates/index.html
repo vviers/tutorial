@@ -7,7 +7,7 @@
         <title>Dynamické dáta v šablónach · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -511,31 +511,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="dynamick&#xE9;-d&#xE1;ta-v-&#x161;abl&#xF3;nach">Dynamick&#xE9; d&#xE1;ta v &#x161;abl&#xF3;nach</h1>
-<p>M&#xE1;me rozdielne k&#xFA;sky na svojom mieste: <code>Post</code> model je definovan&#xFD; v <code>models.py</code>, m&#xE1;me <code>post_list</code> v <code>views.py</code> a pridan&#xFA; &#x161;abl&#xF3;nu. Ale ako prin&#xFA;time HTML &#x161;abl&#xF3;nu, aby zobrazovala n&#xE1;&#x161; pr&#xED;spevok? Preto&#x17E;e to je to, &#x10D;o chceme urobi&#x165; - vzia&#x165; nejak&#xFD; obsah (modely ulo&#x17E;en&#xE9; v datab&#xE1;ze) a zobrazi&#x165; ich pekne v na&#x161;ej &#x161;abl&#xF3;ne, &#x17E;e?</p>
-<p>To je presne to, &#x10D;o maj&#xFA; <em>views</em> robi&#x165;: spoji&#x165; modely a &#x161;abl&#xF3;ny. V na&#x161;om <code>post_list</code> <em>view</em> potrebujeme vzia&#x165; modely ktor&#xE9; chceme zobrazi&#x165; a posun&#xFA;&#x165; ich do &#x161;abl&#xF3;ny. Tak&#x17E;e sa rozhodneme vo <em>view</em> &#x10D;o (model) bude zobrazen&#xE9; v &#x161;abl&#xF3;ne.</p>
-<p>Dobre, tak&#x17E;e ako toto dosiahneme?</p>
-<p>Mus&#xED;me otvori&#x165; n&#xE1;&#x161; <code>blog/views.py</code>. Zatia&#x13E; <code>post_list</code> <em>view</em> vyzer&#xE1; takto:</p>
+                                <h1 id="dynamické-dáta-v-šablónach">Dynamické dáta v šablónach</h1>
+<p>Máme rozdielne kúsky na svojom mieste: <code>Post</code> model je definovaný v <code>models.py</code>, máme <code>post_list</code> v <code>views.py</code> a pridanú šablónu. Ale ako prinútime HTML šablónu, aby zobrazovala náš príspevok? Pretože to je to, čo chceme urobiť - vziať nejaký obsah (modely uložené v databáze) a zobraziť ich pekne v našej šablóne, že?</p>
+<p>To je presne to, čo majú <em>views</em> robiť: spojiť modely a šablóny. V našom <code>post_list</code> <em>view</em> potrebujeme vziať modely ktoré chceme zobraziť a posunúť ich do šablóny. Takže sa rozhodneme vo <em>view</em> čo (model) bude zobrazené v šablóne.</p>
+<p>Dobre, takže ako toto dosiahneme?</p>
+<p>Musíme otvoriť náš <code>blog/views.py</code>. Zatiaľ <code>post_list</code> <em>view</em> vyzerá takto:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_list</span><span class="hljs-params">(request)</span>:</span>
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_list.html&apos;</span>, {})
 </code></pre>
-<p>Pam&#xE4;t&#xE1;&#x161; si, ke&#x10F; sme rozpr&#xE1;vali o zahrnut&#xED; k&#xF3;du nap&#xED;sanom v rozdielnych s&#xFA;boroch? Teraz nastal &#x10D;as kedy mus&#xED;me zahrn&#xFA;&#x165; model, ktor&#xFD; sme nap&#xED;sali v <code>models.py</code>. Prid&#xE1;me tento riadok <code>from .models import Post</code> takto:</p>
+<p>Pamätáš si, keď sme rozprávali o zahrnutí kódu napísanom v rozdielnych súboroch? Teraz nastal čas kedy musíme zahrnúť model, ktorý sme napísali v <code>models.py</code>. Pridáme tento riadok <code>from .models import Post</code> takto:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 <span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Post
 </code></pre>
-<p>Bodka za <code>from</code> znamen&#xE1; <em>aktu&#xE1;lna zlo&#x17E;ka</em> alebo <em>aktu&#xE1;lna aplik&#xE1;cia</em>. <code>views.py</code> aj <code>models.py</code> s&#xFA; v rovnakom adres&#xE1;ri. To znamen&#xE1;, &#x17E;e m&#xF4;&#x17E;eme pou&#x17E;i&#x165; <code>.</code> a n&#xE1;zov s&#xFA;boru (bez <code>.py</code>). Potom importujeme n&#xE1;zov modelu (<code>Post</code>).</p>
-<p>Ale &#x10D;o &#x10F;alej? Na to aby sme boli schopn&#xED; vzia&#x165; konkr&#xE9;tny pr&#xED;spevok blogu z <code>Post</code> modelu potrebujeme nie&#x10D;o, &#x10D;o sa vol&#xE1; <code>QuerySet</code>.</p>
+<p>Bodka za <code>from</code> znamená <em>aktuálna zložka</em> alebo <em>aktuálna aplikácia</em>. <code>views.py</code> aj <code>models.py</code> sú v rovnakom adresári. To znamená, že môžeme použiť <code>.</code> a názov súboru (bez <code>.py</code>). Potom importujeme názov modelu (<code>Post</code>).</p>
+<p>Ale čo ďalej? Na to aby sme boli schopní vziať konkrétny príspevok blogu z <code>Post</code> modelu potrebujeme niečo, čo sa volá <code>QuerySet</code>.</p>
 <h2 id="queryset">QuerySet</h2>
-<p>U&#x17E; by si mala vedie&#x165; ako funguje QuerySets. Hovorili sme o tom v kapitole <a href="../django_orm/">Django ORM (QuerySets)</a>.</p>
-<p>Tak&#x17E;e teraz chceme zoznam pr&#xED;spevkov, ktor&#xE9; s&#xFA; uverejnen&#xE9; a zoraden&#xE9; pod&#x13E;a <code>published_date</code>, v&#x161;ak? To sme u&#x17E; spravili v kapitole QuerySets!</p>
+<p>Už by si mala vedieť ako funguje QuerySets. Hovorili sme o tom v kapitole <a href="../django_orm/">Django ORM (QuerySets)</a>.</p>
+<p>Takže teraz chceme zoznam príspevkov, ktoré sú uverejnené a zoradené podľa <code>published_date</code>, však? To sme už spravili v kapitole QuerySets!</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python">Post.objects.filter(published_date__lte=timezone.now()).order_by(<span class="hljs-string">&apos;published_date&apos;</span>)
 </code></pre>
-<p>Teraz vlo&#x17E;&#xED;me tento kus k&#xF3;du do s&#xFA;boru <code>blog/views.py</code> pridan&#xED;m funkcie <code>def post_list(request)</code>, ale nezabudni najprv prida&#x165; <code>from django.utils import timezone</code>:</p>
+<p>Teraz vložíme tento kus kódu do súboru <code>blog/views.py</code> pridaním funkcie <code>def post_list(request)</code>, ale nezabudni najprv pridať <code>from django.utils import timezone</code>:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 <span class="hljs-keyword">from</span> django.utils <span class="hljs-keyword">import</span> timezone
@@ -545,10 +545,10 @@
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by(<span class="hljs-string">&apos;published_date&apos;</span>)
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_list.html&apos;</span>, {})
 </code></pre>
-<p>Posledn&#xE1; ch&#xFD;baj&#xFA;ca &#x10D;as&#x165; je predanie <code>posts</code> QuerySetu do &#x161;abl&#xF3;ny. Neboj sa, v nasleduj&#xFA;cej kapitole si uk&#xE1;&#x17E;eme ako ju zobrazi&#x165;.</p>
-<p>Vezmi pros&#xED;m na vedomie, &#x17E;e vytv&#xE1;rame <em>premenn&#xFA;</em> pre n&#xE1;&#x161; QuerySet: <code>posts</code>. Pova&#x17E;uj to za meno n&#xE1;&#x161;ho QuerySetu. Odteraz ho m&#xF4;&#x17E;eme referova&#x165; pod t&#xFD;mto menom.</p>
-<p>V <code>render</code> funkcii u&#x17E; m&#xE1;me jeden parameter <code>request</code> (v&#x161;etko &#x10D;o pr&#xED;jmeme od u&#x17E;&#xED;vate&#x13E;a cez Internet) a &#x10F;al&#x161;&#xED; ktor&#xFD; poskytuje s&#xFA;bor &#x161;abl&#xF3;ny <code>&apos;blog/post_list.html&apos;</code>). Posledn&#xFD; parameter, <code>{}</code> je miesto na ktor&#xE9; m&#xF4;&#x17E;eme da&#x165; nejak&#xE9; veci ktor&#xE9; m&#xF4;&#x17E;e pou&#x17E;i&#x165; &#x161;abl&#xF3;na. Potrebujeme im da&#x165; men&#xE1; (zatia&#x13E; sa budeme dr&#x17E;a&#x165; <code>&apos;posts&apos;</code>). :) Malo by to vyzera&#x165; takto: <code>{&apos;posts&apos;: posts}</code>. V&#x161;imni si, &#x17E;e &#x10D;as&#x165; pred <code>:</code> je re&#x165;azec: potrebuje&#x161; ju obali&#x165; do &#xFA;vodzoviek:<code>&quot;</code>.</p>
-<p>Nakoniec by n&#xE1;&#x161; s&#xFA;bor <code>blog/views.py</code> mal vyzera&#x165; takto:</p>
+<p>Posledná chýbajúca časť je predanie <code>posts</code> QuerySetu do šablóny. Neboj sa, v nasledujúcej kapitole si ukážeme ako ju zobraziť.</p>
+<p>Vezmi prosím na vedomie, že vytvárame <em>premennú</em> pre náš QuerySet: <code>posts</code>. Považuj to za meno nášho QuerySetu. Odteraz ho môžeme referovať pod týmto menom.</p>
+<p>V <code>render</code> funkcii už máme jeden parameter <code>request</code> (všetko čo príjmeme od užívateľa cez Internet) a ďalší ktorý poskytuje súbor šablóny <code>&apos;blog/post_list.html&apos;</code>). Posledný parameter, <code>{}</code> je miesto na ktoré môžeme dať nejaké veci ktoré môže použiť šablóna. Potrebujeme im dať mená (zatiaľ sa budeme držať <code>&apos;posts&apos;</code>). :) Malo by to vyzerať takto: <code>{&apos;posts&apos;: posts}</code>. Všimni si, že časť pred <code>:</code> je reťazec: potrebuješ ju obaliť do úvodzoviek:<code>&quot;</code>.</p>
+<p>Nakoniec by náš súbor <code>blog/views.py</code> mal vyzerať takto:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 <span class="hljs-keyword">from</span> django.utils <span class="hljs-keyword">import</span> timezone
@@ -558,8 +558,8 @@
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by(<span class="hljs-string">&apos;published_date&apos;</span>)
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_list.html&apos;</span>, {<span class="hljs-string">&apos;posts&apos;</span>: posts})
 </code></pre>
-<p>To je v&#x161;etko! &#x10C;as prejs&#x165; na na&#x161;u &#x161;abl&#xF3;nu a zobrazi&#x165; tento QuerySet!</p>
-<p>Pokia&#x13E; si chce&#x161; pre&#x10D;&#xED;ta&#x165; nie&#x10D;o viac o QuerySets v Djangu mala by si sa pozrie&#x165; sem: <a href="https://docs.djangoproject.com/en/1.11/ref/models/querysets/" target="_blank">https://docs.djangoproject.com/en/1.11/ref/models/querysets/</a></p>
+<p>To je všetko! Čas prejsť na našu šablónu a zobraziť tento QuerySet!</p>
+<p>Pokiaľ si chceš prečítať niečo viac o QuerySets v Djangu mala by si sa pozrieť sem: <a href="https://docs.djangoproject.com/en/1.11/ref/models/querysets/" target="_blank">https://docs.djangoproject.com/en/1.11/ref/models/querysets/</a></p>
 
                                 
                                 </section>
@@ -603,12 +603,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Dynamické dáta v šablónach","level":"1.19","depth":1,"next":{"title":"Šablóny Django","level":"1.20","depth":1,"path":"django_templates/README.md","ref":"django_templates/README.md","articles":[]},"previous":{"title":"Django ORM (tvorba dotazov)","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"sk","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"dynamic_data_in_templates/README.md","mtime":"2020-09-22T11:43:43.106Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"sk"}});
+            gitbook.page.hasChanged({"page":{"title":"Dynamické dáta v šablónach","level":"1.19","depth":1,"next":{"title":"Šablóny Django","level":"1.20","depth":1,"path":"django_templates/README.md","ref":"django_templates/README.md","articles":[]},"previous":{"title":"Django ORM (tvorba dotazov)","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"sk","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"dynamic_data_in_templates/README.md","mtime":"2020-11-15T14:54:56.670Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"sk"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

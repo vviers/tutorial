@@ -7,7 +7,7 @@
         <title>Django telepítés · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -498,62 +498,62 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="django-telep&#xED;t&#xE9;s">Django telep&#xED;t&#xE9;s</h1>
+                                <h1 id="django-telepítés">Django telepítés</h1>
 <blockquote>
-<p><strong>Megjegyz&#xE9;s</strong> Ha elv&#xE9;gezted a legels&#x151;, Install&#xE1;ci&#xF3; c&#xED;m&#x171; fejezetet, m&#xE1;r t&#xFA;lvagy ezen - ugorj a k&#xF6;vetkez&#x151; fejezetre!</p>
-<p>Ennek a fejezetnek egy r&#xE9;sze a Geek Girls Carrots (<a href="https://github.com/ggcarrots/django-carrots" target="_blank">https://github.com/ggcarrots/django-carrots</a>) tutorialjain alapul.</p>
-<p>A fejezet r&#xE9;szben a <a href="http://django-marcador.keimlink.de/" target="_blank">django-marcador tutorial</a>-on alapszik, ami a Creative Commons Attribution-ShareAlike 4.0 International License jogv&#xE9;delem alatt &#xE1;ll. A django-marcador tutorial jogv&#xE9;delem alatt &#xE1;ll, Markus Zapke-Gr&#xFC;ndemann et al &#xE1;ltal.</p>
+<p><strong>Megjegyzés</strong> Ha elvégezted a legelső, Installáció című fejezetet, már túlvagy ezen - ugorj a következő fejezetre!</p>
+<p>Ennek a fejezetnek egy része a Geek Girls Carrots (<a href="https://github.com/ggcarrots/django-carrots" target="_blank">https://github.com/ggcarrots/django-carrots</a>) tutorialjain alapul.</p>
+<p>A fejezet részben a <a href="http://django-marcador.keimlink.de/" target="_blank">django-marcador tutorial</a>-on alapszik, ami a Creative Commons Attribution-ShareAlike 4.0 International License jogvédelem alatt áll. A django-marcador tutorial jogvédelem alatt áll, Markus Zapke-Gründemann et al által.</p>
 </blockquote>
-<h2 id="virtu&#xE1;lis-k&#xF6;rnyezet">Virtu&#xE1;lis k&#xF6;rnyezet</h2>
-<p>Miel&#x151;tt feltelep&#xED;tj&#xFC;k a Django-t, egy rettent&#x151; hasznos eszk&#xF6;zt fogunk install&#xE1;lni, ami seg&#xED;t, hogy a k&#xF3;dol&#xF3;i k&#xF6;rnyezetedet rendben tartsa a sz&#xE1;m&#xED;t&#xF3;g&#xE9;peden. &#xC1;t lehet ugrani ezt a l&#xE9;p&#xE9;st, de nem aj&#xE1;nlott. Ha a lehet&#x151; legjobb kiindul&#xE1;si helyzetb&#x151;l kezded a k&#xF3;dol&#xE1;st, sok bossz&#xFA;s&#xE1;got megsp&#xF3;rolhatsz magadnak a j&#xF6;v&#x151;ben!</p>
-<p>Teh&#xE1;t el&#x151;sz&#xF6;r is hozzunk l&#xE9;tre egy <strong>virtu&#xE1;lis k&#xF6;rnyezetet</strong> (virtual environment), amit <em>virtualenv</em>-nek is h&#xED;vunk. A virtualenv projektenk&#xE9;nt k&#xFC;l&#xF6;n&#xED;ti el a Python/Django k&#xF6;rnyezetet. Ez azt jelenti, hogy ha megv&#xE1;ltoztatsz valamit egy weboldalon, az nem lesz hat&#xE1;ssal a t&#xF6;bbi weboldalra, amit p&#xE1;rhuzamosan fejlesztesz. J&#xF3;, igaz?</p>
-<p>Csak annyit kell tenned, hogy kiv&#xE1;lasztasz egy k&#xF6;nyvt&#xE1;rat, ahova a <code>virtualenv</code>et szeretn&#xE9;d telep&#xED;teni, p&#xE9;ld&#xE1;ul a home k&#xF6;nyvt&#xE1;rat. Windowson ez &#xED;gy n&#xE9;zhet ki: <code>C:\Users\Name</code> (ahol a <code>Name</code> a felhaszn&#xE1;l&#xF3;d neve).</p>
+<h2 id="virtuális-környezet">Virtuális környezet</h2>
+<p>Mielőtt feltelepítjük a Django-t, egy rettentő hasznos eszközt fogunk installálni, ami segít, hogy a kódolói környezetedet rendben tartsa a számítógépeden. Át lehet ugrani ezt a lépést, de nem ajánlott. Ha a lehető legjobb kiindulási helyzetből kezded a kódolást, sok bosszúságot megspórolhatsz magadnak a jövőben!</p>
+<p>Tehát először is hozzunk létre egy <strong>virtuális környezetet</strong> (virtual environment), amit <em>virtualenv</em>-nek is hívunk. A virtualenv projektenként különíti el a Python/Django környezetet. Ez azt jelenti, hogy ha megváltoztatsz valamit egy weboldalon, az nem lesz hatással a többi weboldalra, amit párhuzamosan fejlesztesz. Jó, igaz?</p>
+<p>Csak annyit kell tenned, hogy kiválasztasz egy könyvtárat, ahova a <code>virtualenv</code>et szeretnéd telepíteni, például a home könyvtárat. Windowson ez így nézhet ki: <code>C:\Users\Name</code> (ahol a <code>Name</code> a felhasználód neve).</p>
 <blockquote>
-<p><strong>Megjegyz&#xE9;s</strong> Windows-on gondoskodj arr&#xF3;l, hogy ez a k&#xF6;nyvt&#xE1;r nem tartalmaz &#xE9;kezetes vagy speci&#xE1;lis karaktereket; ha a van &#xE9;kezetes karakter a felhaszn&#xE1;l&#xF3;nevedben, haszn&#xE1;lj egy m&#xE1;sik k&#xF6;nyvt&#xE1;rt, p&#xE9;ld&#xE1;ul <code>C:\djangogirls</code>.</p>
+<p><strong>Megjegyzés</strong> Windows-on gondoskodj arról, hogy ez a könyvtár nem tartalmaz ékezetes vagy speciális karaktereket; ha a van ékezetes karakter a felhasználónevedben, használj egy másik könyvtárt, például <code>C:\djangogirls</code>.</p>
 </blockquote>
-<p>Ehhez a tutorialhoz egy &#xFA;j, <code>djangogirls</code> nev&#x171; mapp&#xE1;t fogunk haszn&#xE1;lni a home k&#xF6;nyvt&#xE1;radon bel&#xFC;l:</p>
+<p>Ehhez a tutorialhoz egy új, <code>djangogirls</code> nevű mappát fogunk használni a home könyvtáradon belül:</p>
 <pre><code>mkdir djangogirls
 cd djangogirls
-</code></pre><p>Most pedig l&#xE9;trehozunk egy <code>myvenv</code> nev&#x171; virtu&#xE1;lis k&#xF6;rnyezetet. A k&#xF3;d &#xE1;ltal&#xE1;nosan &#xED;gy n&#xE9;z ki:</p>
+</code></pre><p>Most pedig létrehozunk egy <code>myvenv</code> nevű virtuális környezetet. A kód általánosan így néz ki:</p>
 <pre><code>python3 -m venv myvenv
 </code></pre><sec data-title="Windows" data-id="virtualenv_installation_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Windows<a class="pull-right section atTitle btn btn-default" target="virtualenv_installation_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_installation_windows"><div class="panel-body">
-<p>Ahhoz, hogy l&#xE9;trehozz egy &#xFA;j <code>virtualenv</code>-et, meg kell nyitni a konzolt (p&#xE1;r fejezettel ezel&#x151;tt tanult&#xE1;l r&#xF3;la - eml&#xE9;kszel?) &#xE9;s a ezt a parancsot kell lefuttatnod: <code>C:\Python35\python -m venv myvenv</code>. Ez fog t&#xF6;rt&#xE9;nni:</p>
+<p>Ahhoz, hogy létrehozz egy új <code>virtualenv</code>-et, meg kell nyitni a konzolt (pár fejezettel ezelőtt tanultál róla - emlékszel?) és a ezt a parancsot kell lefuttatnod: <code>C:\Python35\python -m venv myvenv</code>. Ez fog történni:</p>
 <pre><code>C:\Users\Name\djangogirls&gt; C:\Python35\python -m venv myvenv
-</code></pre><p>itt a <code>C:\Python35\python</code> azt a k&#xF6;nyvt&#xE1;rat jelenti, ahova kor&#xE1;bban a Pythont telep&#xED;tetted, &#xE9;s a <code>myvenv</code> a <code>virtualenv</code>-ed neve. B&#xE1;rmi m&#xE1;s nevet is haszn&#xE1;lhatsz, de maradj a kisbet&#x171;s szavakn&#xE1;l, &#xE9;s ne haszn&#xE1;lj sz&#xF3;k&#xF6;zt, &#xE9;kezeteket, vagy m&#xE1;s speci&#xE1;lis karaktereket. J&#xF3; &#xF6;tlet r&#xF6;vid nevet adni - sokszor be kell majd g&#xE9;pelned!</p>
+</code></pre><p>itt a <code>C:\Python35\python</code> azt a könyvtárat jelenti, ahova korábban a Pythont telepítetted, és a <code>myvenv</code> a <code>virtualenv</code>-ed neve. Bármi más nevet is használhatsz, de maradj a kisbetűs szavaknál, és ne használj szóközt, ékezeteket, vagy más speciális karaktereket. Jó ötlet rövid nevet adni - sokszor be kell majd gépelned!</p>
 </div></div></div></sec>
-<sec data-title="Linux &#xE9;s OS X" data-id="virtualenv_installation_linuxosx" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Linux &#xE9;s OS X<a class="pull-right section atTitle btn btn-default" target="virtualenv_installation_linuxosx"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_installation_linuxosx"><div class="panel-body">
-<p>A <code>virtualenv</code> l&#xE9;trehoz&#xE1;sa Linux &#xE9;s OS X k&#xF6;rnyezetben is csak annyib&#xF3;l &#xE1;ll, hogy a <code>python3 -m venv myvenv</code> parancsot futtatod. &#xCD;gy fog kin&#xE9;zni:</p>
+<sec data-title="Linux és OS X" data-id="virtualenv_installation_linuxosx" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Linux és OS X<a class="pull-right section atTitle btn btn-default" target="virtualenv_installation_linuxosx"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_installation_linuxosx"><div class="panel-body">
+<p>A <code>virtualenv</code> létrehozása Linux és OS X környezetben is csak annyiból áll, hogy a <code>python3 -m venv myvenv</code> parancsot futtatod. Így fog kinézni:</p>
 <pre><code>~/djangogirls$ python3 -m venv myvenv
-</code></pre><p>A <code>myvenv</code> a<code>virtualenv</code>-ed neve. M&#xE1;s nevet is haszn&#xE1;lhatsz, de maradj a kisbet&#x171;s szavakn&#xE1;l, &#xE9;s ne haszn&#xE1;lj sz&#xF3;k&#xF6;zt, &#xE9;kezeteket, vagy m&#xE1;s speci&#xE1;lis karaktereket. J&#xF3; &#xF6;tlet r&#xF6;vid nevet adni - sokszor be kell majd g&#xE9;pelned!</p>
+</code></pre><p>A <code>myvenv</code> a<code>virtualenv</code>-ed neve. Más nevet is használhatsz, de maradj a kisbetűs szavaknál, és ne használj szóközt, ékezeteket, vagy más speciális karaktereket. Jó ötlet rövid nevet adni - sokszor be kell majd gépelned!</p>
 <blockquote>
-<p><strong>MEGJEGYZ&#xC9;S:</strong> Debian/Ubuntu n&#xE9;melyik verzi&#xF3;j&#xE1;n&#xE1;l az al&#xE1;bbi hiba&#xFC;zenetet kaphatod:</p>
+<p><strong>MEGJEGYZÉS:</strong> Debian/Ubuntu némelyik verziójánál az alábbi hibaüzenetet kaphatod:</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>The virtual environment was not created successfully because ensurepip is not available.  On Debian/Ubuntu systems, you need to install the python3-venv package using the following command.
    apt install python3-venv
 You may need to use sudo with that command.  After installing the python3-venv package, recreate your virtual environment.
-</code></pre><p>Ebben az esetben a fenti le&#xED;r&#xE1;st k&#xF6;vetve telep&#xED;tsd a <code>python3-venv</code> csomagot:
+</code></pre><p>Ebben az esetben a fenti leírást követve telepítsd a <code>python3-venv</code> csomagot:
 </p><p class="code-label">parancssor</p><p></p>
 <pre><code>$ sudo apt install python3-venv
-</code></pre><p><strong>MEGJEGYZ&#xC9;S:</strong> A virtu&#xE1;lis k&#xF6;rnyezetet l&#xE9;trehoz&#xF3; parancs Ubuntu 14.04 alatt ezt a hib&#xE1;t adja:</p>
+</code></pre><p><strong>MEGJEGYZÉS:</strong> A virtuális környezetet létrehozó parancs Ubuntu 14.04 alatt ezt a hibát adja:</p>
 <pre><code>Error: Command &apos;[&apos;/home/eddie/Slask/tmp/venv/bin/python3&apos;, &apos;-Im&apos;, &apos;ensurepip&apos;, &apos;--upgrade&apos;, &apos;--default-pip&apos;]&apos; returned non-zero exit status 1
-</code></pre><p>Hogy ezt elker&#xFC;ld, haszn&#xE1;ld a <code>virtualenv</code> parancsot.</p>
+</code></pre><p>Hogy ezt elkerüld, használd a <code>virtualenv</code> parancsot.</p>
 <pre><code>~/djangogirls$ sudo apt install python-virtualenv
 ~/djangogirls$ virtualenv --python=python3.6 myvenv
-</code></pre><p><strong>MEGJEGYZ&#xC9;S:</strong> Ha az al&#xE1;bbi hiba&#xFC;zenetet kapod:</p>
+</code></pre><p><strong>MEGJEGYZÉS:</strong> Ha az alábbi hibaüzenetet kapod:</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>E: Unable to locate package python3-venv
-</code></pre><p>Akkor az al&#xE1;bbit futtasd:</p>
+</code></pre><p>Akkor az alábbit futtasd:</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>sudo apt install python3.6-venv
 </code></pre></blockquote>
 </div></div></div></sec>
-<h2 id="hogyan-dolgozhatsz-virtu&#xE1;lis-k&#xF6;rnyezetben">Hogyan dolgozhatsz virtu&#xE1;lis k&#xF6;rnyezetben</h2>
-<p>A fenti parancs l&#xE9;trehozott egy <code>myvenv</code> nev&#x171; (vagy b&#xE1;rmi m&#xE1;s n&#xE9;v, amit v&#xE1;lasztott&#xE1;l) k&#xF6;nyvt&#xE1;rat, ami a virtu&#xE1;lis k&#xF6;rnyezet&#xFC;nket tartalmazza (ez tulajdonk&#xE9;ppen csak egy csom&#xF3; k&#xF6;nyvt&#xE1;r &#xE9;s f&#xE1;jl).</p>
+<h2 id="hogyan-dolgozhatsz-virtuális-környezetben">Hogyan dolgozhatsz virtuális környezetben</h2>
+<p>A fenti parancs létrehozott egy <code>myvenv</code> nevű (vagy bármi más név, amit választottál) könyvtárat, ami a virtuális környezetünket tartalmazza (ez tulajdonképpen csak egy csomó könyvtár és fájl).</p>
 <sec data-title="Windows" data-id="virtualenv_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Windows<a class="pull-right section atTitle btn btn-default" target="virtualenv_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_windows"><div class="panel-body">
-<p>&#xCD;gy ind&#xED;thatod el a virtu&#xE1;lis k&#xF6;rnyezetet:</p>
+<p>Így indíthatod el a virtuális környezetet:</p>
 <pre><code>C:\Users\Name\djangogirls&gt; myvenv\Scripts\activate
 </code></pre><blockquote>
-<p><strong>MEGJEGYZ&#xC9;S:</strong> Windows 10-en lehet hogy egy hiba&#xFC;zenetet kapsz Windows PowerShell-ben, amely szerint <code>execution of scripts is disabled on this system</code> (scriptek futtat&#xE1;sa le van tiltva ezen a rendszeren). Ebben az esetben nyiss egy m&#xE1;sik Windows PowerShell-t a &quot;Run as Administrator&quot; (adminisztr&#xE1;tork&#xE9;nt futtat&#xE1;s) opci&#xF3;val.  Majd pr&#xF3;b&#xE1;ld meg az al&#xE1;bbi parancsot be&#xED;rni miel&#x151;tt elind&#xED;tod a virtu&#xE1;lis k&#xF6;rnyezetedet:</p>
+<p><strong>MEGJEGYZÉS:</strong> Windows 10-en lehet hogy egy hibaüzenetet kapsz Windows PowerShell-ben, amely szerint <code>execution of scripts is disabled on this system</code> (scriptek futtatása le van tiltva ezen a rendszeren). Ebben az esetben nyiss egy másik Windows PowerShell-t a &quot;Run as Administrator&quot; (adminisztrátorként futtatás) opcióval.  Majd próbáld meg az alábbi parancsot beírni mielőtt elindítod a virtuális környezetedet:</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>C:\WINDOWS\system32&gt; Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
     Execution Policy Change
@@ -561,27 +561,27 @@ You may need to use sudo with that command.  After installing the python3-venv p
 </code></pre></blockquote>
 </div></div></div></sec>
 <sec data-title="Linux and OS X" data-id="virtualenv_linuxosx" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Linux and OS X<a class="pull-right section atTitle btn btn-default" target="virtualenv_linuxosx"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_linuxosx"><div class="panel-body">
-<p>&#xCD;gy ind&#xED;thatod el a virtu&#xE1;lis k&#xF6;rnyezetet:</p>
+<p>Így indíthatod el a virtuális környezetet:</p>
 <pre><code>~/djangogirls$ source myvenv/bin/activate
-</code></pre><p>Fontos, hogy <code>myvenv</code> helyett azt a neved &#xED;rd be, amit a <code>virtualenv</code>-ednek v&#xE1;lasztott&#xE1;l!</p>
+</code></pre><p>Fontos, hogy <code>myvenv</code> helyett azt a neved írd be, amit a <code>virtualenv</code>-ednek választottál!</p>
 <blockquote>
-<p><strong>MEGJEGYZ&#xC9;S:</strong> n&#xE9;ha a <code>source</code> nem el&#xE9;rhet&#x151;. Ebben az esetben pr&#xF3;b&#xE1;ld meg ezt:</p>
+<p><strong>MEGJEGYZÉS:</strong> néha a <code>source</code> nem elérhető. Ebben az esetben próbáld meg ezt:</p>
 <pre><code>~/djangogirls$ . myvenv/bin/activate
 </code></pre></blockquote>
-<p>Onnan tudod, hogy a <code>virtualenv</code> elindult, hogy a konzolodban a prompt &#xED;gy n&#xE9;z ki:</p>
+<p>Onnan tudod, hogy a <code>virtualenv</code> elindult, hogy a konzolodban a prompt így néz ki:</p>
 <pre><code>(myvenv) C:\Users\Name\djangogirls&gt;
 </code></pre><p>vagy:</p>
 <pre><code>(myvenv) ~/djangogirls$
 </code></pre></div></div></div></sec>
-<p>Figyeld meg, hogy megjelent a <code>(myvenv)</code> el&#x151;tag!</p>
-<p>Ha virtu&#xE1;lis k&#xF6;rnyezetben dolgozol, a <code>python</code> parancs mindig a megfelel&#x151; Python verzi&#xF3;ra fog mutatni, teh&#xE1;t nyugodtan haszn&#xE1;lhatod a <code>python</code>-t <code>python3</code> helyett.</p>
-<p>Ok&#xE9;, most m&#xE1;r minden felt&#xE9;tel teljes&#xFC;lt. V&#xE9;gre install&#xE1;lhatjuk a Django-t!</p>
-<h2 id="a-django-telep&#xED;t&#xE9;se">A Django telep&#xED;t&#xE9;se</h2>
-<p>Most, hogy elind&#xED;tottad a <code>virtualenv</code>-et, telepiteni tudod a Django-t.</p>
-<p>Miel&#x151;tt ezt megtenn&#xE9;nk, meg kell gy&#x151;z&#x151;dn&#xFC;nk arr&#xF3;l, hogy a <code>pip</code> legfrissebb verzi&#xF3;j&#xE1;t haszn&#xE1;ljuk, amelynek seg&#xED;ts&#xE9;g&#xE9;vel fogjuk tudni telep&#xED;teni a Django-t:</p>
+<p>Figyeld meg, hogy megjelent a <code>(myvenv)</code> előtag!</p>
+<p>Ha virtuális környezetben dolgozol, a <code>python</code> parancs mindig a megfelelő Python verzióra fog mutatni, tehát nyugodtan használhatod a <code>python</code>-t <code>python3</code> helyett.</p>
+<p>Oké, most már minden feltétel teljesült. Végre installálhatjuk a Django-t!</p>
+<h2 id="a-django-telepítése">A Django telepítése</h2>
+<p>Most, hogy elindítottad a <code>virtualenv</code>-et, telepiteni tudod a Django-t.</p>
+<p>Mielőtt ezt megtennénk, meg kell győződnünk arról, hogy a <code>pip</code> legfrissebb verzióját használjuk, amelynek segítségével fogjuk tudni telepíteni a Django-t:</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>(myvenv) ~$ python3 -m pip install --upgrade pip
-</code></pre><p>Ezut&#xE1;n futtasd ezt a parancsot a konzolban: <code>pip install django~=1.11</code> (figyelj oda, hogy egy tilde karaktert haszn&#xE1;lunk, amelyet egy egyenl&#x151;s&#xE9;gjel k&#xF6;vet: <code>~=</code>).</p>
+</code></pre><p>Ezután futtasd ezt a parancsot a konzolban: <code>pip install django~=1.11</code> (figyelj oda, hogy egy tilde karaktert használunk, amelyet egy egyenlőségjel követ: <code>~=</code>).</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>(myvenv) ~$ pip install django~=1.11.0
 Collecting django~=1.11.0
@@ -590,22 +590,22 @@ Installing collected packages: django
 Successfully installed django-1.11.3
 </code></pre><sec data-title="Windowson" data-id="django_err_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Windowson<a class="pull-right section atTitle btn btn-default" target="django_err_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_err_windows"><div class="panel-body">
 <blockquote>
-<p>Ha hib&#xE1;t kapsz, amikor a pip-et h&#xED;vod Windowson, n&#xE9;zd meg, hogy tartalmaz-e a projekted el&#xE9;r&#xE9;si &#xFA;tvonala sz&#xF3;k&#xF6;zt, &#xE9;kezetet, vagy speci&#xE1;lis karaktereket (pl. <code>C:\Users\User Name\djangogirls</code>). Ha igen, haszn&#xE1;lj helyette egy olyan k&#xF6;nyvt&#xE1;rat, ahol nincsenek sz&#xF3;k&#xF6;z&#xF6;k, &#xE9;kezetek vagy speci&#xE1;lis karakterek (javaslat: <code>C:\djangogirls</code>). Hozd l&#xE9;tre az &#xFA;j k&#xF6;nyvt&#xE1;rat, &#xE9;s abban egy &#xFA;j virtualenvet, majd t&#xF6;r&#xF6;ld ki a r&#xE9;git &#xE9;s az &#xFA;j helyen pr&#xF3;b&#xE1;ld futtatni az el&#x151;z&#x151; parancsot. (A virtualenv k&#xF6;nyvt&#xE1;r &#xE1;thelyez&#xE9;se nem fog m&#x171;k&#xF6;dni, mert a virtualenv abszol&#xFA;t el&#xE9;r&#xE9;si utakat haszn&#xE1;l.)</p>
+<p>Ha hibát kapsz, amikor a pip-et hívod Windowson, nézd meg, hogy tartalmaz-e a projekted elérési útvonala szóközt, ékezetet, vagy speciális karaktereket (pl. <code>C:\Users\User Name\djangogirls</code>). Ha igen, használj helyette egy olyan könyvtárat, ahol nincsenek szóközök, ékezetek vagy speciális karakterek (javaslat: <code>C:\djangogirls</code>). Hozd létre az új könyvtárat, és abban egy új virtualenvet, majd töröld ki a régit és az új helyen próbáld futtatni az előző parancsot. (A virtualenv könyvtár áthelyezése nem fog működni, mert a virtualenv abszolút elérési utakat használ.)</p>
 </blockquote>
 </div></div></div></sec>
-<sec data-title="Windows 8 &#xE9;s Windows 10" data-id="django_err_windows8and10" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Windows 8 &#xE9;s Windows 10<a class="pull-right section atTitle btn btn-default" target="django_err_windows8and10"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_err_windows8and10"><div class="panel-body">
+<sec data-title="Windows 8 és Windows 10" data-id="django_err_windows8and10" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Windows 8 és Windows 10<a class="pull-right section atTitle btn btn-default" target="django_err_windows8and10"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_err_windows8and10"><div class="panel-body">
 <blockquote>
-<p>A parancssorod &quot;megfagyhat&quot; miut&#xE1;n telep&#xED;teni pr&#xF3;b&#xE1;lod a Django-t. Ha ez t&#xF6;rt&#xE9;nik, az el&#x151;z&#x151; parancs helyett pr&#xF3;b&#xE1;ld meg ezt:</p>
+<p>A parancssorod &quot;megfagyhat&quot; miután telepíteni próbálod a Django-t. Ha ez történik, az előző parancs helyett próbáld meg ezt:</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>C:\Users\Name\djangogirls&gt; python -m pip install django~=1.11.0
 </code></pre></blockquote>
 </div></div></div></sec>
 <sec data-title="Linux" data-id="django_err_linux" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Linux<a class="pull-right section atTitle btn btn-default" target="django_err_linux"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_err_linux"><div class="panel-body">
 <blockquote>
-<p>Ha Ubuntu 12.04 alatt hib&#xE1;t kapsz, amikor a pip-et pr&#xF3;b&#xE1;lod h&#xED;vni, futtasd a <code>python -m pip install -U --force-reinstall pip</code> parancsot, hogy megjav&#xED;tsd a virtualenv-ben a pip feltelep&#xED;tett verzi&#xF3;j&#xE1;t.</p>
+<p>Ha Ubuntu 12.04 alatt hibát kapsz, amikor a pip-et próbálod hívni, futtasd a <code>python -m pip install -U --force-reinstall pip</code> parancsot, hogy megjavítsd a virtualenv-ben a pip feltelepített verzióját.</p>
 </blockquote>
 </div></div></div></sec>
-<p>Ennyi! Most pedig (v&#xE9;gre) l&#xE9;trehozhatod a Django alkalmaz&#xE1;sodat!</p>
+<p>Ennyi! Most pedig (végre) létrehozhatod a Django alkalmazásodat!</p>
 
                                 
                                 </section>
@@ -649,12 +649,56 @@ Successfully installed django-1.11.3
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Django telepítés","level":"1.9","depth":1,"next":{"title":"Az első Django projekted!","level":"1.10","depth":1,"path":"django_start_project/README.md","ref":"django_start_project/README.md","articles":[]},"previous":{"title":"Mi a Django?","level":"1.8","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"hu","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_installation/README.md","mtime":"2020-09-22T11:43:42.866Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"hu"}});
+            gitbook.page.hasChanged({"page":{"title":"Django telepítés","level":"1.9","depth":1,"next":{"title":"Az első Django projekted!","level":"1.10","depth":1,"path":"django_start_project/README.md","ref":"django_start_project/README.md","articles":[]},"previous":{"title":"Mi a Django?","level":"1.8","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"hu","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_installation/README.md","mtime":"2020-11-15T14:54:56.450Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"hu"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

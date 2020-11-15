@@ -7,7 +7,7 @@
         <title>나의 첫 번째 Django 프로젝트! · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -511,70 +511,70 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#xB098;&#xC758;-&#xCCAB;-&#xBC88;&#xC9F8;-&#xC7A5;&#xACE0;-&#xD504;&#xB85C;&#xC81D;&#xD2B8;">&#xB098;&#xC758; &#xCCAB; &#xBC88;&#xC9F8; &#xC7A5;&#xACE0; &#xD504;&#xB85C;&#xC81D;&#xD2B8;!</h1>
+                                <h1 id="나의-첫-번째-장고-프로젝트">나의 첫 번째 장고 프로젝트!</h1>
 <blockquote>
-<p><strong>Note</strong> &#xC774; &#xC7A5;&#xC758; &#xC77C;&#xBD80;&#xB294; Geek Girls Carrots (<a href="http://django.carrots.pl/)&#xC758;" target="_blank">http://django.carrots.pl/)&#xC758;</a> &#xD29C;&#xD1A0;&#xB9AC;&#xC5BC;&#xC744; &#xAE30;&#xCD08;&#xB85C; &#xC791;&#xC131;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p><strong>Note</strong> &#xC774; &#xC7A5;&#xC758; &#xC77C;&#xBD80;&#xB294; Creative Commons Attribution-ShareAlike 4.0 International License&#xC5D0; &#xC900;&#xC218;&#xD558;&#xC5EC; <a href="https://github.com/ggcarrots/django-carrots" target="_blank">django-marcador &#xD29C;&#xD1A0;&#xB9AC;&#xC5BC;</a>&#xB97C; &#xAE30;&#xCD08;&#xB85C; &#xC791;&#xC131;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;. django-marcador &#xD29C;&#xD1A0;&#xB9AC;&#xC5BC; &#xC800;&#xC791;&#xAD8C;&#xC740; Markus Zapke-Gr&#xFC;ndemann et al&#xC774; &#xC18C;&#xC720;&#xD558;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><strong>Note</strong> 이 장의 일부는 Geek Girls Carrots (<a href="http://django.carrots.pl/)의" target="_blank">http://django.carrots.pl/)의</a> 튜토리얼을 기초로 작성되었습니다.</p>
+<p><strong>Note</strong> 이 장의 일부는 Creative Commons Attribution-ShareAlike 4.0 International License에 준수하여 <a href="https://github.com/ggcarrots/django-carrots" target="_blank">django-marcador 튜토리얼</a>를 기초로 작성되었습니다. django-marcador 튜토리얼 저작권은 Markus Zapke-Gründemann et al이 소유하고 있습니다.</p>
 </blockquote>
-<p>&#xC544;&#xC8FC; &#xAC04;&#xB2E8;&#xD55C; &#xBE14;&#xB85C;&#xADF8; &#xC0AC;&#xC774;&#xD2B8;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4; &#xBCFC; &#xAC70;&#xC608;&#xC694;!</p>
-<p>&#xCCAB; &#xB2E8;&#xACC4;&#xB294; &#xC7A5;&#xACE0; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xB97C; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xAC70;&#xC608;&#xC694;. &#xB2E4;&#xC2DC; &#xB9D0;&#xD574; &#xC7A5;&#xACE0;&#xC758; &#xAE30;&#xBCF8; &#xACE8;&#xACA9;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4;&#xC8FC;&#xB294; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xC2E4;&#xD589;&#xD560; &#xAC70;&#xC608;&#xC694;. &#xC774; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC640; &#xD30C;&#xC77C; &#xBB36;&#xC74C;&#xC740; &#xB098;&#xC911;&#xC5D0; &#xC0AC;&#xC6A9;&#xD560; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>&#xC7A5;&#xACE0;&#xC5D0;&#xC11C;&#xB294; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC640; &#xD30C;&#xC77C;&#xBA85;&#xC774; &#xB9E4;&#xC6B0; &#xC911;&#xC694;&#xD558;&#xB2F5;&#xB2C8;&#xB2E4;. &#xD30C;&#xC77C;&#xBA85;&#xC744; &#xB9C8;&#xC74C;&#xB300;&#xB85C; &#xBCC0;&#xACBD;&#xD574;&#xC11C;&#xB3C4; &#xC548;&#xB418;&#xACE0; &#xB2E4;&#xB978; &#xACF3;&#xC73C;&#xB85C; &#xC62E;&#xACA8;&#xB3C4; &#xC548;&#xB429;&#xB2C8;&#xB2E4;. &#xC7A5;&#xACE0;&#xB294; &#xC911;&#xC694;&#xD55C; &#xAC83;&#xB4E4;&#xC744; &#xCC3E;&#xC744; &#xC218; &#xC788;&#xAC8C; &#xD2B9;&#xC815;&#xD55C; &#xAD6C;&#xC870;&#xB97C; &#xC720;&#xC9C0;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>아주 간단한 블로그 사이트를 만들어 볼 거예요!</p>
+<p>첫 단계는 장고 프로젝트를 시작하는 거예요. 다시 말해 장고의 기본 골격을 만들어주는 스크립트를 실행할 거예요. 이 디렉토리와 파일 묶음은 나중에 사용할 것입니다.</p>
+<p>장고에서는 디렉토리와 파일명이 매우 중요하답니다. 파일명을 마음대로 변경해서도 안되고 다른 곳으로 옮겨도 안됩니다. 장고는 중요한 것들을 찾을 수 있게 특정한 구조를 유지해야 합니다.</p>
 <blockquote>
-<p>&#xBAA8;&#xB4E0; &#xC791;&#xC5C5;&#xC740; &#xAC00;&#xC0C1;&#xD658;&#xACBD;(virtualenv) &#xC548;&#xC5D0;&#xC11C; &#xD574;&#xC57C; &#xD558;&#xB294; &#xAC83;&#xC744; &#xAF2D; &#xAE30;&#xC5B5;&#xD558;&#xC138;&#xC694;. &#xD604;&#xC7AC; &#xCF58;&#xC194; &#xCC3D;&#xC5D0;&#xC11C; &#xC811;&#xB450;&#xC5B4;&#xB85C; <code>(myvenv)</code>&#xAC00; &#xC548; &#xBCF4;&#xC778;&#xB2E4;&#xBA74; &#xBA3C;&#xC800; virtualenv&#xB97C; &#xD65C;&#xC131;&#xD654;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. <strong>Django &#xC124;&#xCE58;&#xD558;&#xAE30;</strong> &#xC7A5;&#xC5D0;&#xC11C; <strong>virtualenv &#xC791;&#xB3D9;&#xBC95;</strong>&#xC5D0; &#xB300;&#xD574; &#xBC30;&#xC6E0;&#xC5B4;&#xC694;. &#xC708;&#xB3C4;&#xC6B0;&#xC5D0;&#xC11C;&#xB294; <code>myvenv\Scripts\activate</code>&#xB97C; &#xD0C0;&#xC774;&#xD551;&#xD558;&#xACE0;, &#xB9E5; OS&#xACFC; &#xB9AC;&#xB205;&#xC2A4;&#xC5D0;&#xC11C;&#xB294; <code>source myvenv/bin/activate</code>&#xC744; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;.</p>
+<p>모든 작업은 가상환경(virtualenv) 안에서 해야 하는 것을 꼭 기억하세요. 현재 콘솔 창에서 접두어로 <code>(myvenv)</code>가 안 보인다면 먼저 virtualenv를 활성화해야 합니다. <strong>Django 설치하기</strong> 장에서 <strong>virtualenv 작동법</strong>에 대해 배웠어요. 윈도우에서는 <code>myvenv\Scripts\activate</code>를 타이핑하고, 맥 OS과 리눅스에서는 <code>source myvenv/bin/activate</code>을 입력하세요.</p>
 </blockquote>
 <sec data-title="OS X / Linux" data-id="django_start_project_OSX_Linux" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>OS X / Linux<a class="pull-right section atTitle btn btn-default" target="django_start_project_OSX_Linux"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_start_project_OSX_Linux"><div class="panel-body">
-<p>&#xB9E5; OS&#xACFC; &#xB9AC;&#xB205;&#xC2A4; &#xCF58;&#xC194;&#xC5D0;&#xC11C;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xBA85;&#xB839;&#xC744; &#xC2E4;&#xD589;&#xD574;&#xC57C;&#xD574;&#xC694;. <strong>&#xBA85;&#xB839;&#xC5B4; &#xB05D;&#xC5D0; <code>.</code>(&#xC810;, &#xB9C8;&#xCE68;&#xD45C;)&#xC744; &#xC785;&#xB825;&#xD558;&#xB294; &#xAC83;&#xC744; &#xC78A;&#xC9C0;&#xB9C8;&#xC138;&#xC694;.</strong> :</p>
+<p>맥 OS과 리눅스 콘솔에서는 다음과 같이 명령을 실행해야해요. <strong>명령어 끝에 <code>.</code>(점, 마침표)을 입력하는 것을 잊지마세요.</strong> :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ django-admin startproject mysite .
 </code></pre><blockquote>
-<p>&#xC810; <code>.</code>&#xC740; &#xD604;&#xC7AC; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; &#xC7A5;&#xACE0;&#xB97C; &#xC124;&#xCE58;&#xD558;&#xB77C;&#xACE0; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0; &#xC54C;&#xB824;&#xC8FC;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC911;&#xC694;&#xD574;&#xC694;. (&#xCD95;&#xC57D;&#xB41C; &#xD45C;&#xC2DC;&#xC785;&#xB2C8;&#xB2E4;)</p>
-<p><strong>Note</strong> &#xC704; &#xBA85;&#xB839;&#xC744; &#xC785;&#xB825;&#xD560; &#xB54C; <code>django-admin</code>&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xBD80;&#xBD84;&#xB9CC; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;. &#xC5EC;&#xAE30;&#xC5D0; &#xBCF4;&#xC774;&#xB294; <code>(myvenv) ~/djangogirls$</code>&#xBD80;&#xBD84;&#xC740; &#xCEE4;&#xB9E8;&#xB4DC; &#xB77C;&#xC778;&#xC5D0; &#xC785;&#xB825;&#xC744; &#xAC00;&#xC838;&#xC624;&#xAC8C; &#xD558;&#xB294; &#xBA54;&#xC138;&#xC9C0;(&#xD504;&#xB86C;&#xD2B8;&#xD504; prompt)&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>점 <code>.</code>은 현재 디렉토리에 장고를 설치하라고 스크립트에 알려주기 때문에 중요해요. (축약된 표시입니다)</p>
+<p><strong>Note</strong> 위 명령을 입력할 때 <code>django-admin</code>로 시작하는 부분만 입력하세요. 여기에 보이는 <code>(myvenv) ~/djangogirls$</code>부분은 커맨드 라인에 입력을 가져오게 하는 메세지(프롬트프 prompt)입니다.</p>
 </blockquote>
 </div></div></div></sec>
 <sec data-title="Windows" data-id="django_start_project_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Windows<a class="pull-right section atTitle btn btn-default" target="django_start_project_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_start_project_windows"><div class="panel-body">
-<p>&#xC708;&#xB3C4;&#xC6B0;&#xC5D0;&#xC11C;&#xB3C4; <strong>&#xBA85;&#xB839; &#xB05D;&#xC5D0; <code>.</code>(&#xC810;)&#xC744; &#xC785;&#xB825;&#xD558;&#xB294; &#xAC83;&#xC744; &#xC78A;&#xC9C0;&#xB9C8;&#xC138;&#xC694;</strong> :</p>
+<p>윈도우에서도 <strong>명령 끝에 <code>.</code>(점)을 입력하는 것을 잊지마세요</strong> :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) C:\Users\Name\djangogirls&gt; django-admin.py startproject mysite .
 </code></pre><blockquote>
-<p>&#xC810; <code>.</code>&#xC740; &#xD604;&#xC7AC; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC5D0; &#xC7A5;&#xACE0;&#xB97C; &#xC124;&#xCE58;&#xD558;&#xB77C;&#xACE0; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0; &#xC54C;&#xB824;&#xC8FC;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC911;&#xC694;&#xD574;&#xC694;. (&#xCD95;&#xC57D;&#xB41C; &#xD45C;&#xC2DC;&#xC785;&#xB2C8;&#xB2E4;)</p>
-<p><strong>Note</strong> &#xC704; &#xBA85;&#xB839;&#xC744; &#xC785;&#xB825;&#xD560; &#xB54C; <code>django-admin.py</code>&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xBD80;&#xBD84;&#xB9CC; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;. &#xC5EC;&#xAE30;&#xC5D0; &#xBCF4;&#xC774;&#xB294; <code>(myvenv) C:\Users\Name\djangogirls&gt;</code>&#xBD80;&#xBD84;&#xC740; &#xCEE4;&#xB9E8;&#xB4DC; &#xB77C;&#xC778;&#xC5D0; &#xC785;&#xB825;&#xC744; &#xAC00;&#xC838;&#xC624;&#xAC8C; &#xD558;&#xB294; &#xBA54;&#xC138;&#xC9C0;(&#xD504;&#xB86C;&#xD504;&#xD2B8; prompt)&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>점 <code>.</code>은 현재 디렉토리에 장고를 설치하라고 스크립트에 알려주기 때문에 중요해요. (축약된 표시입니다)</p>
+<p><strong>Note</strong> 위 명령을 입력할 때 <code>django-admin.py</code>로 시작하는 부분만 입력하세요. 여기에 보이는 <code>(myvenv) C:\Users\Name\djangogirls&gt;</code>부분은 커맨드 라인에 입력을 가져오게 하는 메세지(프롬프트 prompt)입니다.</p>
 </blockquote>
 </div></div></div></sec>
-<p><code>django-admin.py</code>&#xC740; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB85C; &#xB514;&#xB809;&#xD1A0;&#xB9AC;&#xC640; &#xD30C;&#xC77C;&#xB4E4;&#xC744; &#xC0DD;&#xC131;&#xD569;&#xB2C8;&#xB2E4;. &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC2E4;&#xD589; &#xD6C4;&#xC5D0;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xC0C8;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xAD6C;&#xC870;&#xB97C; &#xBCFC; &#xC218; &#xC788;&#xC744; &#xAC70;&#xC608;&#xC694;.</p>
+<p><code>django-admin.py</code>은 스크립트로 디렉토리와 파일들을 생성합니다. 스크립트 실행 후에는 아래와 같이 새로 만들어진 디렉토리 구조를 볼 수 있을 거예요.</p>
 <pre><code>djangogirls
-&#x251C;&#x2500;&#x2500;&#x2500;manage.py
-&#x2514;&#x2500;&#x2500;&#x2500;mysite
+├───manage.py
+└───mysite
         settings.py
         urls.py
         wsgi.py
         __init__.py
-</code></pre><p><code>manage.py</code>&#xB294; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC778;&#xB370;, &#xC0AC;&#xC774;&#xD2B8; &#xAD00;&#xB9AC;&#xB97C; &#xB3C4;&#xC640;&#xC8FC;&#xB294; &#xC5ED;&#xD560;&#xC744; &#xD569;&#xB2C8;&#xB2E4;. &#xC774; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB85C; &#xB2E4;&#xB978; &#xC124;&#xCE58; &#xC791;&#xC5C5; &#xC5C6;&#xC774;, &#xCEF4;&#xD4E8;&#xD130;&#xC5D0;&#xC11C; &#xC6F9; &#xC11C;&#xBC84;&#xB97C; &#xC2DC;&#xC791;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p><code>settings.py</code>&#xB294; &#xC6F9;&#xC0AC;&#xC774;&#xD2B8; &#xC124;&#xC815;&#xC774; &#xC788;&#xB294; &#xD30C;&#xC77C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p>&#xC55E;&#xC5D0; &#xC6B0;&#xD3B8;&#xBC30;&#xB2EC;&#xBD80;&#xB294; &#xC5B4;&#xB290; &#xACF3;&#xC73C;&#xB85C; &#xD3B8;&#xC9C0;&#xB97C; &#xBC30;&#xB2EC;&#xD574;&#xC57C; &#xD558;&#xB294;&#xC9C0; &#xD310;&#xB2E8;&#xD574;&#xC57C; &#xD55C;&#xB2E4;&#xACE0; &#xB9D0;&#xD588;&#xB358; &#xAC83;&#xC744; &#xAE30;&#xC5B5;&#xD558;&#xACE0; &#xC788;&#xB098;&#xC694;? <code>urls.py</code>&#xD30C;&#xC77C;&#xC740; <code>urlresolver</code>&#xAC00; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xD328;&#xD134; &#xBAA9;&#xB85D;&#xC744; &#xD3EC;&#xD568;&#xD558;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>&#xC9C0;&#xAE08; &#xADF8; &#xD30C;&#xC77C;&#xB4E4;&#xC744; &#xC218;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC744; &#xAC70;&#xB2C8; &#xBB34;&#xC2DC;&#xD558;&#xC138;&#xC694;. &#xC2E4;&#xC218;&#xB85C; &#xD30C;&#xC77C;&#xC744; &#xC9C0;&#xC6B0;&#xC9C0; &#xC54A;&#xAC8C; &#xC870;&#xC2EC;&#xD558;&#xC138;&#xC694;!</p>
-<h2 id="&#xC124;&#xC815;-&#xBCC0;&#xACBD;">&#xC124;&#xC815; &#xBCC0;&#xACBD;</h2>
-<p><code>mysite/settings.py</code>&#xC744; &#xC870;&#xAE08; &#xACE0;&#xCCD0; &#xBCFC;&#xAC8C;&#xC694;. &#xC124;&#xCE58;&#xD55C; &#xCF54;&#xB4DC; &#xC5D0;&#xB514;&#xD130;&#xB97C; &#xC5F4;&#xC5B4; &#xD30C;&#xC77C;&#xC744; &#xC5F4;&#xC5B4;&#xC8FC;&#xC138;&#xC694;.</p>
-<p>&#xC6F9;&#xC0AC;&#xC774;&#xD2B8;&#xC5D0; &#xC815;&#xD655;&#xD55C; &#xD604;&#xC7AC; &#xC2DC;&#xAC04;&#xC744; &#xB123;&#xC73C;&#xBA74; &#xC88B;&#xACA0;&#xC8E0;. <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank">&#xC704;&#xD0A4;&#xD53C;&#xB514;&#xC544; &#xD0C0;&#xC784;&#xC874; &#xB9AC;&#xC2A4;&#xD2B8;</a>&#xC5D0; &#xAC00;&#xC11C; &#xD574;&#xB2F9; &#xC2DC;&#xAC04;&#xB300;(&#xD0C0;&#xC784;&#xC874;)&#xB97C; &#xBCF5;&#xC0AC;&#xD558;&#xC138;&#xC694;. (&#xC608;: <code>Asia/Seoul</code>)</p>
-<p>Settings.py&#xC5D0;&#xC11C; <code>TIME_ZONE</code>&#xC788;&#xB294; &#xC904;&#xC744; &#xCC3E;&#xC73C;&#xC138;&#xC694;. &#xADF8;&#xB9AC;&#xACE0; &#xC774;&#xB97C; &#xD574;&#xB2F9; &#xC2DC;&#xAC04;&#xB300;&#xB85C; &#xBCC0;&#xACBD;&#xD558;&#xC138;&#xC694;.</p>
+</code></pre><p><code>manage.py</code>는 스크립트인데, 사이트 관리를 도와주는 역할을 합니다. 이 스크립트로 다른 설치 작업 없이, 컴퓨터에서 웹 서버를 시작할 수 있습니다.</p>
+<p><code>settings.py</code>는 웹사이트 설정이 있는 파일입니다.</p>
+<p>앞에 우편배달부는 어느 곳으로 편지를 배달해야 하는지 판단해야 한다고 말했던 것을 기억하고 있나요? <code>urls.py</code>파일은 <code>urlresolver</code>가 사용하는 패턴 목록을 포함하고 있습니다.</p>
+<p>지금 그 파일들을 수정하지 않을 거니 무시하세요. 실수로 파일을 지우지 않게 조심하세요!</p>
+<h2 id="설정-변경">설정 변경</h2>
+<p><code>mysite/settings.py</code>을 조금 고쳐 볼게요. 설치한 코드 에디터를 열어 파일을 열어주세요.</p>
+<p>웹사이트에 정확한 현재 시간을 넣으면 좋겠죠. <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank">위키피디아 타임존 리스트</a>에 가서 해당 시간대(타임존)를 복사하세요. (예: <code>Asia/Seoul</code>)</p>
+<p>Settings.py에서 <code>TIME_ZONE</code>있는 줄을 찾으세요. 그리고 이를 해당 시간대로 변경하세요.</p>
 <p></p><p class="code-label">mysite/settings.py</p><p></p>
 <pre><code class="lang-python">    TIME_ZONE = <span class="hljs-string">&apos;Asia/Seoul&apos;</span>
 </code></pre>
-<p>&#xB2E4;&#xC74C;&#xC73C;&#xB85C; &#xC815;&#xC801;&#xD30C;&#xC77C; &#xACBD;&#xB85C;&#xB97C; &#xCD94;&#xAC00;&#xD560; &#xAC70;&#xC5D0;&#xC694;. (&#xC815;&#xC801; &#xD30C;&#xC77C;&#xC740; &#xD29C;&#xD1A0;&#xB9AC;&#xC5BC; &#xD6C4;&#xBC18;&#xBD80;&#xC5D0;&#xC11C; CSS&#xC640; &#xD568;&#xAED8; &#xB2E4;&#xB8F0; &#xAC70;&#xC5D0;&#xC694;) &#xD30C;&#xC77C;&#xC758; <em>&#xB05D;(end)</em>&#xC73C;&#xB85C; &#xB0B4;&#xB824;&#xAC00;&#xC11C;, <code>STATIC_URL</code>&#xD56D;&#xBAA9; &#xBC14;&#xB85C; &#xC544;&#xB798;&#xC5D0; <code>STATIC_ROOT</code>&#xC744; &#xCD94;&#xAC00;&#xD558;&#xC138;&#xC694;.</p>
+<p>다음으로 정적파일 경로를 추가할 거에요. (정적 파일은 튜토리얼 후반부에서 CSS와 함께 다룰 거에요) 파일의 <em>끝(end)</em>으로 내려가서, <code>STATIC_URL</code>항목 바로 아래에 <code>STATIC_ROOT</code>을 추가하세요.</p>
 <p></p><p class="code-label">mysite/settings.py</p><p></p>
 <pre><code class="lang-python">STATIC_URL = <span class="hljs-string">&apos;/static/&apos;</span>
 STATIC_ROOT = os.path.join(BASE_DIR, <span class="hljs-string">&apos;static&apos;</span>)
 </code></pre>
-<p><code>DEBUG</code>&#xAC00;<code>True</code>&#xC774;&#xACE0; <code>ALLOWED_HOSTS</code>&#xAC00; &#xBE44;&#xC5B4; &#xC788;&#xC73C;&#xBA74;, &#xD638;&#xC2A4;&#xD2B8;&#xB294; <code>[&apos;localhost&apos;, &apos;127.0.0.1&apos;, &apos;[::1]&apos;]</code>&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xC720;&#xD6A8;&#xD569;&#xB2C8;&#xB2E4;. &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC744; &#xBC30;&#xD3EC;&#xD560; &#xB54C; PythonAnywhere&#xC758; &#xD638;&#xC2A4;&#xD2B8; &#xC774;&#xB984;&#xACFC; &#xC77C;&#xCE58;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBBC0;&#xB85C; &#xB2E4;&#xC74C; &#xC124;&#xC815;&#xC744; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xBCC0;&#xACBD;&#xD574;&#xC918;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. :</p>
+<p><code>DEBUG</code>가<code>True</code>이고 <code>ALLOWED_HOSTS</code>가 비어 있으면, 호스트는 <code>[&apos;localhost&apos;, &apos;127.0.0.1&apos;, &apos;[::1]&apos;]</code>에 대해서 유효합니다. 애플리케이션을 배포할 때 PythonAnywhere의 호스트 이름과 일치하지 않으므로 다음 설정을 아래와 같이 변경해줘야 합니다. :</p>
 <p></p><p class="code-label">mysite/settings.py</p><p></p>
 <pre><code class="lang-python">ALLOWED_HOSTS = [<span class="hljs-string">&apos;127.0.0.1&apos;</span>, <span class="hljs-string">&apos;.pythonanywhere.com&apos;</span>]
 </code></pre>
 <blockquote>
-<p><strong>Note</strong> &#xD06C;&#xB86C;&#xBD81; &#xC0AC;&#xC6A9;&#xC790;&#xB294;, <code>settings.py</code> &#xB9E8; &#xB9C8;&#xC9C0;&#xB9C9; &#xC904;&#xC5D0; &#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xC138;&#xC694;. :
+<p><strong>Note</strong> 크롬북 사용자는, <code>settings.py</code> 맨 마지막 줄에 아래 코드를 추가하세요. :
 <code>MESSAGE_STORAGE = &apos;django.contrib.messages.storage.session.SessionStorage&apos;</code></p>
 </blockquote>
-<h2 id="&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC124;&#xC815;&#xD558;&#xAE30;">&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC124;&#xC815;&#xD558;&#xAE30;</h2>
-<p>&#xC0AC;&#xC774;&#xD2B8; &#xB0B4; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC800;&#xC7A5;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xB9CE;&#xC740; &#xB2E4;&#xC591;&#xD55C; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xB4E4;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xC911;&#xC5D0;&#xC11C; &#xC6B0;&#xB9AC;&#xB294; <code>sqlite3</code>&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xAC70;&#xC608;&#xC694;.</p>
-<p>&#xC774;&#xBBF8; <code>mysite/settings.py</code>&#xD30C;&#xC77C; &#xC548;&#xC5D0; &#xC124;&#xCE58;&#xAC00; &#xB418;&#xC5B4;&#xC788;&#xC5B4;&#xC694;.</p>
+<h2 id="데이터베이스-설정하기">데이터베이스 설정하기</h2>
+<p>사이트 내 데이터를 저장하기 위한 많은 다양한 데이터베이스 소프트웨어들이 있습니다. 그중에서 우리는 <code>sqlite3</code>을 사용할 거예요.</p>
+<p>이미 <code>mysite/settings.py</code>파일 안에 설치가 되어있어요.</p>
 <p></p><p class="code-label">mysite/settings.py</p><p></p>
 <pre><code class="lang-python">DATABASES = {
     <span class="hljs-string">&apos;default&apos;</span>: {
@@ -583,8 +583,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, <span class="hljs-string">&apos;static&apos
     }
 }
 </code></pre>
-<p>&#xBE14;&#xB85C;&#xADF8;&#xC5D0; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C; &#xCF58;&#xC194; &#xCC3D;&#xC5D0;&#xC11C; &#xC544;&#xB798; &#xCF54;&#xB4DC;&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xC138;&#xC694;. : <code>python manage.py migrate</code> (&#xC774; &#xBA85;&#xB839;&#xC744; &#xC2E4;&#xD589;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294; <code>djangogirls</code>&#xB514;&#xB809;&#xD130;&#xB9AC; &#xC548;&#xC5D0; &#xC788;&#xB294; <code>manage.py</code>&#xAC00; &#xD544;&#xC694;&#xD569;&#xB2C8;&#xB2E4;)</p>
-<p>&#xC798; &#xC791;&#xB3D9;&#xB418;&#xBA74;, &#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xB0B4;&#xC6A9;&#xC774; &#xB098;&#xC635;&#xB2C8;&#xB2E4;.</p>
+<p>블로그에 데이터베이스를 생성하기 위해서 콘솔 창에서 아래 코드를 실행하세요. : <code>python manage.py migrate</code> (이 명령을 실행하기 위해서는 <code>djangogirls</code>디렉터리 안에 있는 <code>manage.py</code>가 필요합니다)</p>
+<p>잘 작동되면, 아래와 같은 내용이 나옵니다.</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py migrate
 Operations to perform:
@@ -603,30 +603,30 @@ Running migrations:
   Applying auth.0006_require_contenttypes_0002... OK
   Applying auth.0007_alter_validators_add_error_messages... OK
   Applying sessions.0001_initial... OK
-</code></pre><p>&#xC798;&#xD588;&#xC5B4;&#xC694;! &#xC774;&#xC81C; &#xC6F9; &#xC11C;&#xBC84;&#xB97C; &#xC2DC;&#xC791;&#xD574; &#xC6F9; &#xC0AC;&#xC774;&#xD2B8;&#xAC00; &#xC798; &#xC791;&#xB3D9;&#xD558;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD574;&#xBD10;&#xC694;!</p>
-<p>&#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xB514;&#xB809;&#xD1A0;&#xB9AC;(<code>djangogirls</code>)&#xC5D0; <code>manage.py</code>&#xD30C;&#xC77C;&#xC774; &#xC788;&#xC5B4;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xCF58;&#xC194;&#xC5D0;&#xC11C;&#xB294; <code>python manage.py runserver</code>&#xBA85;&#xB839;&#xC744; &#xC2E4;&#xD589;&#xD574;, &#xC6F9; &#xC11C;&#xBC84;&#xB97C; &#xBC14;&#xB85C; &#xC2DC;&#xC791;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+</code></pre><p>잘했어요! 이제 웹 서버를 시작해 웹 사이트가 잘 작동하는지 확인해봐요!</p>
+<p>프로젝트 디렉토리(<code>djangogirls</code>)에 <code>manage.py</code>파일이 있어야 합니다. 콘솔에서는 <code>python manage.py runserver</code>명령을 실행해, 웹 서버를 바로 시작할 수 있습니다.</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py runserver
-</code></pre><p>&#xD06C;&#xB86C;&#xBD81; &#xC0AC;&#xC6A9;&#xC790;&#xB294; &#xC544;&#xB798; &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;. :</p>
+</code></pre><p>크롬북 사용자는 아래 명령어를 입력하세요. :</p>
 <p></p><p class="code-label">Cloud 9</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py runserver 0.0.0.0:8000
-</code></pre><p>&#xC708;&#xB3C4;&#xC6B0;&#xC5D0;&#xC11C; <code>UnicodeDecodeError</code>&#xC624;&#xB958;&#xAC00; &#xB09C;&#xB2E4;&#xBA74; &#xC544;&#xB798; &#xBA85;&#xB839;&#xC744; &#xB300;&#xC2E0; &#xC368;&#xBCF4;&#xC138;&#xC694;. :</p>
+</code></pre><p>윈도우에서 <code>UnicodeDecodeError</code>오류가 난다면 아래 명령을 대신 써보세요. :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py runserver 0:8000
-</code></pre><p>&#xC6F9; &#xC0AC;&#xC774;&#xD2B8;&#xAC00; &#xBAA8;&#xB450; &#xC798; &#xC791;&#xB3D9;&#xD558;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD574;&#xBD10;&#xC694;. &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;(&#xD30C;&#xC774;&#xC5B4;&#xD3ED;&#xC2A4;, &#xD06C;&#xB86C;, &#xC0AC;&#xD30C;&#xB9AC;, &#xC778;&#xD130;&#xB137; &#xC775;&#xC2A4;&#xD50C;&#xB85C;&#xC5B4; &#xB4F1; &#xC5EC;&#xB7EC;&#xBD84;&#xC758; &#xC6D0;&#xD558;&#xB294; &#xB300;&#xB85C;)&#xB97C; &#xC5F4;&#xC5B4;&#xC11C; &#xC8FC;&#xC18C;&#xB97C; &#xC785;&#xB825;&#xD558;&#xC138;&#xC694;.</p>
+</code></pre><p>웹 사이트가 모두 잘 작동하는지 확인해봐요. 사용하는 브라우저(파이어폭스, 크롬, 사파리, 인터넷 익스플로어 등 여러분의 원하는 대로)를 열어서 주소를 입력하세요.</p>
 <p></p><p class="code-label">browser</p><p></p>
 <pre><code>http://127.0.0.1:8000/
-</code></pre><p>&#xD06C;&#xB86C;&#xBD81; &#xC0AC;&#xC6A9;&#xC790;&#xB294; &#xD56D;&#xC0C1; &#xD14C;&#xC2A4;&#xD2B8; &#xC11C;&#xBC84;&#xB97C; &#xD1B5;&#xD574; &#xC811;&#xADFC;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.:</p>
+</code></pre><p>크롬북 사용자는 항상 테스트 서버를 통해 접근해야 합니다.:</p>
 <p></p><p class="code-label">browser</p><p></p>
 <pre><code>https://django-girls-&lt;your cloud9 username&gt;.c9users.io
-</code></pre><p>&#xCD95;&#xD558;&#xD574;&#xC694;! &#xC5EC;&#xB7EC;&#xBD84;&#xC740; &#xBC29;&#xAE08; &#xC6F9; &#xC11C;&#xBC84;&#xB97C; &#xD65C;&#xC6A9;&#xD55C; &#xCCAB; &#xC6F9;&#xC0AC;&#xC774;&#xD2B8;&#xB97C; &#xB9CC;&#xB4E4;&#xC5C8;&#xC5B4;&#xC694;! &#xC815;&#xB9D0; &#xBA4B;&#xC9C0;&#xC8E0;?</p>
+</code></pre><p>축하해요! 여러분은 방금 웹 서버를 활용한 첫 웹사이트를 만들었어요! 정말 멋지죠?</p>
 <p><img src="images/it_worked2.png" alt="It worked!"></p>
-<p>&#xC6F9; &#xC11C;&#xBC84;&#xAC00; &#xC2E4;&#xD589;&#xB418;&#xB294; &#xB3D9;&#xC548; &#xCD94;&#xAC00; &#xBA85;&#xB839;&#xC744; &#xC785;&#xB825; &#xD560; &#xC218;&#xC788;&#xB294; &#xC0C8;&#xB85C;&#xC6B4; &#xBA85;&#xB839;&#xC5B4; &#xD504;&#xB86C;&#xD504;&#xD2B8;&#xAC00; &#xD45C;&#xC2DC;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC0C8; &#xD14D;&#xC2A4;&#xD2B8;&#xB97C; &#xD130;&#xBBF8;&#xB110;&#xC5D0;&#xC11C; &#xC785;&#xB825;&#xD560; &#xC218; &#xC788;&#xC9C0;&#xB9CC; &#xBA85;&#xB839;&#xC740; &#xC2E4;&#xD589;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC6F9; &#xC11C;&#xBC84;&#xAC00; &#xB4E4;&#xC5B4;&#xC624;&#xB294; &#xC694;&#xCCAD;&#xC744; &#xC218;&#xC2E0; &#xB300;&#xAE30;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC9C0;&#xC18D;&#xC801;&#xC73C;&#xB85C; &#xC2E4;&#xD589;&#xD558;&#xACE0; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xC5D0;&#xC694;.</p>
+<p>웹 서버가 실행되는 동안 추가 명령을 입력 할 수있는 새로운 명령어 프롬프트가 표시되지 않습니다. 새 텍스트를 터미널에서 입력할 수 있지만 명령은 실행되지 않습니다. 웹 서버가 들어오는 요청을 수신 대기하기 위해 지속적으로 실행하고 있기 때문이에요.</p>
 <blockquote>
-<p><b>&#xC778;&#xD130;&#xB137;&#xC740; &#xC5B4;&#xB5BB;&#xAC8C; &#xC791;&#xB3D9;&#xB420;&#xAE4C;&#xC694;</b> &#xC7A5;&#xC5D0;&#xC11C; &#xC6F9; &#xC11C;&#xBC84;&#xC5D0; &#xB300;&#xD574; &#xBC30;&#xC6E0;&#xC5C8;&#xC5B4;&#xC694;.</p>
+<p><b>인터넷은 어떻게 작동될까요</b> 장에서 웹 서버에 대해 배웠었어요.</p>
 </blockquote>
-<p>&#xC6F9; &#xC11C;&#xBC84;&#xAC00; &#xC2E4;&#xD589;&#xB418;&#xB294; &#xB3D9;&#xC548; &#xCD94;&#xAC00; &#xBA85;&#xB839;&#xC744; &#xC785;&#xB825;&#xD558;&#xB824;&#xBA74; &#xC0C8; &#xD130;&#xBBF8;&#xB110; &#xCC3D;&#xC744; &#xC5F4;&#xACE0; virtualenv&#xB97C; &#xD65C;&#xC131;&#xD654;&#xD558;&#xC138;&#xC694;. &#xC6F9; &#xC11C;&#xBC84;&#xB97C; &#xC911;&#xC9C0;&#xD558;&#xB824;&#xBA74; &#xC2E4;&#xD589;&#xC911;&#xC778; &#xCC3D;&#xC73C;&#xB85C; &#xB2E4;&#xC2DC; &#xC804;&#xD658;&#xD558;&#xACE0; CTRL + C - Control+C &#xD0A4;&#xB97C; &#xD568;&#xAED8; &#xB204;&#xB974;&#xC138;&#xC694;. (&#xC708;&#xB3C4;&#xC6B0;&#xC5D0;&#xC11C;&#xB294; Ctrl + Break&#xB97C; &#xB20C;&#xB7EC;&#xC57C; &#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;)</p>
-<p>&#xB2E4;&#xC74C; &#xB2E8;&#xACC4;&#xB85C; &#xB118;&#xC5B4;&#xAC08; &#xC900;&#xBE44;&#xAC00; &#xB418;&#xC168;&#xB098;&#xC694;? &#xC0C8;&#xB85C;&#xC6B4; &#xAC83;&#xC744; &#xB610; &#xBC30;&#xC6CC;&#xBCFC;&#xAE4C;&#xC694;!</p>
+<p>웹 서버가 실행되는 동안 추가 명령을 입력하려면 새 터미널 창을 열고 virtualenv를 활성화하세요. 웹 서버를 중지하려면 실행중인 창으로 다시 전환하고 CTRL + C - Control+C 키를 함께 누르세요. (윈도우에서는 Ctrl + Break를 눌러야 할 수도 있습니다)</p>
+<p>다음 단계로 넘어갈 준비가 되셨나요? 새로운 것을 또 배워볼까요!</p>
 
                                 
                                 </section>
@@ -670,12 +670,56 @@ Running migrations:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"나의 첫 번째 Django 프로젝트!","level":"1.11","depth":1,"next":{"title":"Django 모델","level":"1.12","depth":1,"path":"django_models/README.md","ref":"django_models/README.md","articles":[]},"previous":{"title":"Django 설치하기","level":"1.10","depth":1,"path":"django_installation/README.md","ref":"django_installation/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"ko","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_start_project/README.md","mtime":"2020-09-22T11:43:42.966Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"ko"}});
+            gitbook.page.hasChanged({"page":{"title":"나의 첫 번째 Django 프로젝트!","level":"1.11","depth":1,"next":{"title":"Django 모델","level":"1.12","depth":1,"path":"django_models/README.md","ref":"django_models/README.md","articles":[]},"previous":{"title":"Django 설치하기","level":"1.10","depth":1,"path":"django_installation/README.md","ref":"django_installation/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"ko","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_start_project/README.md","mtime":"2020-11-15T14:54:56.542Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"ko"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

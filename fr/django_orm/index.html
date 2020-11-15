@@ -7,7 +7,7 @@
         <title>Django ORM (Querysets) · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -622,10 +622,10 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="lorm-django-et-les-querysets">L&apos;ORM Django et les QuerySets</h1>
-<p>Dans ce chapitre, nous allons apprendre comment Django se connecte &#xE0; la base de donn&#xE9;es et comment il y enregistre des choses. On respire un grand coup et on y va !</p>
+<p>Dans ce chapitre, nous allons apprendre comment Django se connecte à la base de données et comment il y enregistre des choses. On respire un grand coup et on y va !</p>
 <h2 id="quest-ce-quun-queryset-">Qu&apos;est-ce qu&apos;un QuerySet ?</h2>
-<p>Un QuerySet est, par essence, une liste d&apos;objets d&apos;un mod&#xE8;le donn&#xE9;. C&apos;est ce qui vous permet de lire, trier et organiser, des donn&#xE9;es pr&#xE9;sentes dans une base de donn&#xE9;es.</p>
-<p>Il est plus simple d&apos;apprendre avec un exemple. Et si nous nous int&#xE9;ressions &#xE0; celui-ci ?</p>
+<p>Un QuerySet est, par essence, une liste d&apos;objets d&apos;un modèle donné. C&apos;est ce qui vous permet de lire, trier et organiser, des données présentes dans une base de données.</p>
+<p>Il est plus simple d&apos;apprendre avec un exemple. Et si nous nous intéressions à celui-ci ?</p>
 <h2 id="le-shell-django">Le shell Django</h2>
 <p>Ouvrez la console de votre ordinateur (et non celle de PythonAnywhere) et tapez la commande suivante :</p>
 <p></p><p class="code-label">command-line</p><p></p>
@@ -635,60 +635,60 @@
 <pre><code class="lang-python">(InteractiveConsole)
 &gt;&gt;&gt;
 </code></pre>
-<p>Vous &#xEA;tes maintenant dans la console interactive de Django. C&apos;est comme celle de Python, mais avec toute la magie qu&apos;apporte Django :). Les commandes Python sont aussi utilisables dans cette console.</p>
+<p>Vous êtes maintenant dans la console interactive de Django. C&apos;est comme celle de Python, mais avec toute la magie qu&apos;apporte Django :). Les commandes Python sont aussi utilisables dans cette console.</p>
 <h3 id="lister-tous-les-objets">Lister tous les objets</h3>
-<p>Essayons tout d&apos;abord d&apos;afficher tous nos posts. Vous pouvez le faire &#xE0; l&apos;aide de cette commande :</p>
+<p>Essayons tout d&apos;abord d&apos;afficher tous nos posts. Vous pouvez le faire à l&apos;aide de cette commande :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.all()
 Traceback (most recent call last):
       File <span class="hljs-string">&quot;&lt;console&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;
 NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> defined
 </code></pre>
-<p>Oups ! Voil&#xE0; que &#xE7;a nous renvoie une erreur qui nous dit qu&apos;il n&apos;existe pas de Post. En effet, nous avons oubli&#xE9; de commencer par un &quot;import&quot; !</p>
+<p>Oups ! Voilà que ça nous renvoie une erreur qui nous dit qu&apos;il n&apos;existe pas de Post. En effet, nous avons oublié de commencer par un &quot;import&quot; !</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> blog.models <span class="hljs-keyword">import</span> Post
 </code></pre>
-<p>Nous importons le mod&#xE8;le <code>Post</code> depuis notre <code>blog.models</code>. Essayons &#xE0; nouveau la commande pr&#xE9;c&#xE9;dente :</p>
+<p>Nous importons le modèle <code>Post</code> depuis notre <code>blog.models</code>. Essayons à nouveau la commande précédente :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.all()
 &lt;QuerySet [&lt;Post: my post title&gt;, &lt;Post: another post title&gt;]&gt;
 </code></pre>
-<p>Cela nous permet d&apos;obtenir une liste des posts que nous avons cr&#xE9;&#xE9; tout &#xE0; l&apos;heure ! Rappelez-vous : nous avions cr&#xE9;&#xE9; ces posts &#xE0; l&apos;aide de l&apos;interface d&apos;administration de Django. Cependant, nous aimerions maintenant cr&#xE9;er de nouveaux posts &#xE0; l&apos;aide de python : comment allons-nous nous y prendre ?</p>
-<h3 id="cr&#xE9;er-des-objets">Cr&#xE9;er des objets</h3>
-<p>Voici comment cr&#xE9;er un nouveau objet Post dans la base de donn&#xE9;es :</p>
+<p>Cela nous permet d&apos;obtenir une liste des posts que nous avons créé tout à l&apos;heure ! Rappelez-vous : nous avions créé ces posts à l&apos;aide de l&apos;interface d&apos;administration de Django. Cependant, nous aimerions maintenant créer de nouveaux posts à l&apos;aide de python : comment allons-nous nous y prendre ?</p>
+<h3 id="créer-des-objets">Créer des objets</h3>
+<p>Voici comment créer un nouveau objet Post dans la base de données :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.create(author=me, title=<span class="hljs-string">&apos;Sample title&apos;</span>, text=<span class="hljs-string">&apos;Test&apos;</span>)
 </code></pre>
-<p>Cependant, il nous manque un petit quelque chose : <code>moi</code>. Nous avons besoin de lui passer une instance du mod&#xE8;le <code>User</code> en guise d&apos;auteur (author). Comment faire ?</p>
-<p>Tout d&apos;abord, il nous faut importer le mod&#xE8;le User :</p>
+<p>Cependant, il nous manque un petit quelque chose : <code>moi</code>. Nous avons besoin de lui passer une instance du modèle <code>User</code> en guise d&apos;auteur (author). Comment faire ?</p>
+<p>Tout d&apos;abord, il nous faut importer le modèle User :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> django.contrib.auth.models <span class="hljs-keyword">import</span> User
 </code></pre>
-<p>Avons-nous des utilisateurs dans notre base de donn&#xE9;es ? Voyons voir :</p>
+<p>Avons-nous des utilisateurs dans notre base de données ? Voyons voir :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>User.objects.all()
 &lt;QuerySet [&lt;User: ola&gt;]&gt;
 </code></pre>
-<p>Il s&apos;agit du superutilisateur que nous avons cr&#xE9;e tout &#xE0; l&apos;heure ! Sauvegardons une instance de cet utilisateur (modifie la ligne suivante avec ton nom d&apos;utilisateur) :</p>
+<p>Il s&apos;agit du superutilisateur que nous avons crée tout à l&apos;heure ! Sauvegardons une instance de cet utilisateur (modifie la ligne suivante avec ton nom d&apos;utilisateur) :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>me = User.objects.get(username=<span class="hljs-string">&apos;ola&apos;</span>)
 </code></pre>
-<p>Comme vous pouvez le constater, nous avons maintenant obtenu (<code>get</code>) un utilisateur (<code>User</code>) avec un nom d&#x2019;utilisateur <code>username</code> qui est &#xE9;gale &#xE0; &#xAB; ola &#xBB;. Tr&#xE8;s bien !</p>
-<p>Nous allons enfin pouvoir cr&#xE9;er notre post :</p>
+<p>Comme vous pouvez le constater, nous avons maintenant obtenu (<code>get</code>) un utilisateur (<code>User</code>) avec un nom d’utilisateur <code>username</code> qui est égale à « ola ». Très bien !</p>
+<p>Nous allons enfin pouvoir créer notre post :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.create(author=me, title=<span class="hljs-string">&apos;Sample title&apos;</span>, text=<span class="hljs-string">&apos;Test&apos;</span>)
 &lt;Post: Sample title&gt;
 </code></pre>
-<p>Et voil&#xE0; ! Vous aimeriez voir ci &#xE7;a a vraiment march&#xE9; ?</p>
+<p>Et voilà ! Vous aimeriez voir ci ça a vraiment marché ?</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.all()
 &lt;QuerySet [&lt;Post: my post title&gt;, &lt;Post: another post title&gt;, &lt;Post: Sample title&gt;]&gt;
 </code></pre>
-<p>Et voil&#xE0; : un post de plus dans la liste !</p>
+<p>Et voilà : un post de plus dans la liste !</p>
 <h3 id="ajouter-plus-de-posts">Ajouter plus de posts</h3>
-<p>Amusez-vous &#xE0; ajouter d&apos;autres posts pour vous entrainer un peu. Essayez d&apos;ajouter deux ou trois posts en plus puis passez &#xE0; la partie suivante.</p>
+<p>Amusez-vous à ajouter d&apos;autres posts pour vous entrainer un peu. Essayez d&apos;ajouter deux ou trois posts en plus puis passez à la partie suivante.</p>
 <h3 id="filtrer-les-objets">Filtrer les objets</h3>
-<p>L&apos;int&#xE9;r&#xEA;t des QuerySets, c&apos;est que l&apos;on peut les filtrer. Disons que nous aimerions retrouver tous les posts &#xE9;crits par l&apos;utilisateur Ola. Pour cela, nous allons utiliser <code>filter</code> &#xE0; la place de <code>all</code> dans <code>Post.objects.all()</code>. Les parenth&#xE8;ses vont nous servir &#xE0; pr&#xE9;ciser quelles sont les conditions auxquelles un post de blog doit se conformer pour &#xEA;tre retenu par notre queryset. Dans notre exemple, la condition est que <code>author</code> soit &#xE9;gal &#xE0; <code>me</code>. La mani&#xE8;re de le dire en Django c&apos;est : <code>author=me</code>. Maintenant, votre bout de code doit ressembler &#xE0; ceci:</p>
+<p>L&apos;intérêt des QuerySets, c&apos;est que l&apos;on peut les filtrer. Disons que nous aimerions retrouver tous les posts écrits par l&apos;utilisateur Ola. Pour cela, nous allons utiliser <code>filter</code> à la place de <code>all</code> dans <code>Post.objects.all()</code>. Les parenthèses vont nous servir à préciser quelles sont les conditions auxquelles un post de blog doit se conformer pour être retenu par notre queryset. Dans notre exemple, la condition est que <code>author</code> soit égal à <code>me</code>. La manière de le dire en Django c&apos;est : <code>author=me</code>. Maintenant, votre bout de code doit ressembler à ceci:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.filter(author=me)
 &lt;QuerySet [&lt;Post: Sample title&gt;, &lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: My <span class="hljs-number">3</span>rd post!&gt;, &lt;Post: <span class="hljs-number">4</span>th title of post&gt;]&gt;
@@ -699,23 +699,23 @@ NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="h
 &lt;QuerySet [&lt;Post: Sample title&gt;, &lt;Post: <span class="hljs-number">4</span>th title of post&gt;]&gt;
 </code></pre>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> Il y a deux tirets bas (<code>_</code>) entre <code>title</code> et <code>contains</code>. L&apos;ORM de Django utilise cette r&#xE8;gle afin de s&#xE9;parer les noms de champ (&quot;title&quot;) et les op&#xE9;rations ou les filtres (&quot;contains&quot;). Si vous n&apos;utilisez qu&apos;un seul tiret bas, vous allez obtenir une erreur du type : &quot;FieldError: Cannot resolve keyword title_contains&quot;.</p>
+<p> Il y a deux tirets bas (<code>_</code>) entre <code>title</code> et <code>contains</code>. L&apos;ORM de Django utilise cette règle afin de séparer les noms de champ (&quot;title&quot;) et les opérations ou les filtres (&quot;contains&quot;). Si vous n&apos;utilisez qu&apos;un seul tiret bas, vous allez obtenir une erreur du type : &quot;FieldError: Cannot resolve keyword title_contains&quot;.</p>
 </blockquote>
-<p>Vous pouvez aussi obtenir une liste de tous les posts publi&#xE9;s. Pour cela, nous allons filtrer les posts qui poss&#xE8;dent une date de publication (<code>published_date</code>) dans le pass&#xE9; :</p>
+<p>Vous pouvez aussi obtenir une liste de tous les posts publiés. Pour cela, nous allons filtrer les posts qui possèdent une date de publication (<code>published_date</code>) dans le passé :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> django.utils <span class="hljs-keyword">import</span> timezone
 <span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.filter(published_date__lte=timezone.now())
 &lt;QuerySet []&gt;
 </code></pre>
-<p>Malheureusement, le post que nous avons cr&#xE9;&#xE9; dans la console Python n&apos;est pas encore publi&#xE9;. Allons corriger ce probl&#xE8;me ! Dans un premier temps, nous aimerions obtenir une instance du post que nous voulons publier :</p>
+<p>Malheureusement, le post que nous avons créé dans la console Python n&apos;est pas encore publié. Allons corriger ce problème ! Dans un premier temps, nous aimerions obtenir une instance du post que nous voulons publier :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>post = Post.objects.get(title=<span class="hljs-string">&quot;Sample title&quot;</span>)
 </code></pre>
-<p>Ensuite, publions-le gr&#xE2;ce &#xE0; notre m&#xE9;thode <code>publish</code>:</p>
+<p>Ensuite, publions-le grâce à notre méthode <code>publish</code>:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>post.publish()
 </code></pre>
-<p>Maintenant, essayez d&apos;obtenir &#xE0; nouveau la liste des posts publi&#xE9;s (appuyez trois fois sur la fl&#xE8;che du haut, puis <code>entr&#xE9;e</code>) :</p>
+<p>Maintenant, essayez d&apos;obtenir à nouveau la liste des posts publiés (appuyez trois fois sur la flèche du haut, puis <code>entrée</code>) :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.filter(published_date__lte=timezone.now())
 &lt;QuerySet [&lt;Post: Sample title&gt;]&gt;
@@ -726,18 +726,18 @@ NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="h
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.order_by(<span class="hljs-string">&apos;created_date&apos;</span>)
 &lt;QuerySet [&lt;Post: Sample title&gt;, &lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: My <span class="hljs-number">3</span>rd post!&gt;, &lt;Post: <span class="hljs-number">4</span>th title of post&gt;]&gt;
 </code></pre>
-<p>On peut aussi inverser l&apos;ordre de tri en ajouter <code>-</code> au d&#xE9;but:</p>
+<p>On peut aussi inverser l&apos;ordre de tri en ajouter <code>-</code> au début:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.order_by(<span class="hljs-string">&apos;-created_date&apos;</span>)
 &lt;QuerySet [&lt;Post: <span class="hljs-number">4</span>th title of post&gt;,  &lt;Post: My <span class="hljs-number">3</span>rd post!&gt;, &lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: Sample title&gt;]&gt;
 </code></pre>
-<h3 id="requ&#xEA;tes-complexes-gr&#xE2;ce-au-cha&#xEE;nage-des-m&#xE9;thodes">Requ&#xEA;tes complexes gr&#xE2;ce au cha&#xEE;nage des m&#xE9;thodes</h3>
-<p>Comme vous l&apos;avez vu, quand on applique certaines m&#xE9;thodes &#xE0; <code>Post.objects</code> on obtient un QuerySet en r&#xE9;sultat. Les m&#xEA;mes m&#xE9;thodes peuvent &#xE9;galement &#xEA;tre appliqu&#xE9;es sur un QuerySet, ce qui ensuite donnera lieu &#xE0; un nouveau QuerySet. Ainsi, vous pouvez combiner leur effet en les <strong>encha&#xEE;nant</strong> l&apos;une apr&#xE8;s l&apos;autre :</p>
+<h3 id="requêtes-complexes-grâce-au-chaînage-des-méthodes">Requêtes complexes grâce au chaînage des méthodes</h3>
+<p>Comme vous l&apos;avez vu, quand on applique certaines méthodes à <code>Post.objects</code> on obtient un QuerySet en résultat. Les mêmes méthodes peuvent également être appliquées sur un QuerySet, ce qui ensuite donnera lieu à un nouveau QuerySet. Ainsi, vous pouvez combiner leur effet en les <strong>enchaînant</strong> l&apos;une après l&apos;autre :</p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.filter(published_date__lte=timezone.now()).order_by(<span class="hljs-string">&apos;published_date&apos;</span>)
 &lt;QuerySet [&lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: My <span class="hljs-number">3</span>rd post!&gt;, &lt;Post: <span class="hljs-number">4</span>th title of post&gt;, &lt;Post: Sample title&gt;]&gt;
 </code></pre>
-<p>C&apos;est un outil tr&#xE8;s puissant qui va vous permettre d&apos;&#xE9;crire des requ&#xEA;tes complexes.</p>
-<p>G&#xE9;nial ! Vous &#xEA;tes maintenant pr&#xEA;te &#xE0; passer &#xE0; l&apos;&#xE9;tape suivante ! Pour fermer le shell, tapez ceci:</p>
+<p>C&apos;est un outil très puissant qui va vous permettre d&apos;écrire des requêtes complexes.</p>
+<p>Génial ! Vous êtes maintenant prête à passer à l&apos;étape suivante ! Pour fermer le shell, tapez ceci:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>exit()
 $
@@ -785,12 +785,56 @@ $
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Django ORM (Querysets)","level":"1.18","depth":1,"next":{"title":"Données dynamiques dans les templates","level":"1.19","depth":1,"path":"dynamic_data_in_templates/README.md","ref":"dynamic_data_in_templates/README.md","articles":[]},"previous":{"title":"Introduction au HTML","level":"1.17","depth":1,"path":"html/README.md","ref":"html/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_orm/README.md","mtime":"2020-09-22T11:43:42.830Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Django ORM (Querysets)","level":"1.18","depth":1,"next":{"title":"Données dynamiques dans les templates","level":"1.19","depth":1,"path":"dynamic_data_in_templates/README.md","ref":"dynamic_data_in_templates/README.md","articles":[]},"previous":{"title":"Introduction au HTML","level":"1.17","depth":1,"path":"html/README.md","ref":"html/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_orm/README.md","mtime":"2020-11-15T14:54:56.414Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

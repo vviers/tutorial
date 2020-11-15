@@ -7,7 +7,7 @@
         <title>Rozširovanie šablón · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -511,18 +511,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="roz&#x161;irovanie-&#x161;abl&#xF3;n">Roz&#x161;irovanie &#x161;abl&#xF3;n</h1>
-<p>&#x10E;al&#x161;ia super mo&#x17E;nos&#x165;, ktor&#xFA; ti Django pon&#xFA;ka je <strong>roz&#x161;irovanie &#x161;abl&#xF3;n</strong>. Znamen&#xE1; to, &#x17E;e m&#xF4;&#x17E;e&#x161; pou&#x17E;i&#x165; rovnak&#xE9; &#x10D;asti HTML k&#xF3;du na r&#xF4;znych str&#xE1;nkach svojho webu.</p>
-<p>&#x160;abl&#xF3;ny ti pom&#xF4;&#x17E;u, ke&#x10F; chce&#x161; pou&#x17E;i&#x165; rovnak&#xE9; inform&#xE1;cie alebo zobrazenie na viac ako jednom mieste. Nemus&#xED;&#x161; dokola opakova&#x165; to ist&#xE9;. A ak chce&#x161; nie&#x10D;o zmeni&#x165;, nemus&#xED;&#x161; to urobi&#x165; v ka&#x17E;dej &#x161;abl&#xF3;ne, len v jednej!</p>
-<h2 id="vytvorenie-z&#xE1;kladnej-&#x161;abl&#xF3;ny">Vytvorenie z&#xE1;kladnej &#x161;abl&#xF3;ny</h2>
-<p>Z&#xE1;kladn&#xE1; &#x161;abl&#xF3;na je najz&#xE1;kladnej&#x161;ia &#x161;abl&#xF3;na, ktor&#xFA; roz&#x161;iruje&#x161; na ka&#x17E;dej str&#xE1;nke svojej web str&#xE1;nky.</p>
-<p>Vytvorme s&#xFA;bor <code>base.html</code> v <code>blog/templates/blog/</code>:</p>
+                                <h1 id="rozširovanie-šablón">Rozširovanie šablón</h1>
+<p>Ďalšia super možnosť, ktorú ti Django ponúka je <strong>rozširovanie šablón</strong>. Znamená to, že môžeš použiť rovnaké časti HTML kódu na rôznych stránkach svojho webu.</p>
+<p>Šablóny ti pomôžu, keď chceš použiť rovnaké informácie alebo zobrazenie na viac ako jednom mieste. Nemusíš dokola opakovať to isté. A ak chceš niečo zmeniť, nemusíš to urobiť v každej šablóne, len v jednej!</p>
+<h2 id="vytvorenie-základnej-šablóny">Vytvorenie základnej šablóny</h2>
+<p>Základná šablóna je najzákladnejšia šablóna, ktorú rozširuješ na každej stránke svojej web stránky.</p>
+<p>Vytvorme súbor <code>base.html</code> v <code>blog/templates/blog/</code>:</p>
 <pre><code>blog
-&#x2514;&#x2500;&#x2500;&#x2500;templates
-    &#x2514;&#x2500;&#x2500;&#x2500;blog
+└───templates
+    └───blog
             base.html
             post_list.html
-</code></pre><p>Otvor ho a skop&#xED;ruj do&#x148; v&#x161;etko z <code>post_list.html</code> do s&#xFA;boru <code>base.html</code>:</p>
+</code></pre><p>Otvor ho a skopíruj doň všetko z <code>post_list.html</code> do súboru <code>base.html</code>:</p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html">{% load static %}
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
@@ -556,7 +556,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>Potom v <code>base.html</code> nahra&#x10F; cel&#xE9; <code>&lt;body&gt;</code> (v&#x161;etko medzi <code>&lt;body&gt;</code> a <code>&lt;/body&gt;</code>) t&#xFD;mto:</p>
+<p>Potom v <code>base.html</code> nahraď celé <code>&lt;body&gt;</code> (všetko medzi <code>&lt;body&gt;</code> a <code>&lt;/body&gt;</code>) týmto:</p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-header&quot;</span>&gt;</span>
@@ -572,13 +572,13 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
-<p>Mo&#x17E;no si si v&#x161;imla, &#x17E;e toto nahradilo v&#x161;etko od <code>{% for post in posts %}</code> po <code>{% endfor %}</code> s: </p>
+<p>Možno si si všimla, že toto nahradilo všetko od <code>{% for post in posts %}</code> po <code>{% endfor %}</code> s: </p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html">{% block content %}
 {% endblock %}
 </code></pre>
-<p>Ale pre&#x10D;o? Pr&#xE1;ve si vytvorila <code>block</code>! Pou&#x17E;ila si &#x161;abl&#xF3;nov&#xFD; tag <code>{% block %}</code> aby si vytvoila &#x10D;as&#x165;, do ktorej bude vlo&#x17E;en&#xE9; HTML. To HTML bude poch&#xE1;dza&#x165; z inej &#x161;abl&#xF3;ny, ktor&#xE1; roz&#x161;&#xED;ri t&#xFA;to &#x161;abl&#xF3;nu (<code>base.html</code>). Hne&#x10F; ti uk&#xE1;&#x17E;eme, ako sa to rob&#xED;.</p>
-<p>Teraz ulo&#x17E; <code>base.html</code> a znova otvor <code>blog/templates/blog/post_list.html</code>. Odstr&#xE1;ni&#x161; v&#x161;etko nad <code>{% for post in posts %}</code> a pod <code>{% endfor %}</code>. Ke&#x10F; skon&#x10D;&#xED;&#x161;, s&#xFA;bor bude vyzera&#x165; nasledovne:</p>
+<p>Ale prečo? Práve si vytvorila <code>block</code>! Použila si šablónový tag <code>{% block %}</code> aby si vytvoila časť, do ktorej bude vložené HTML. To HTML bude pochádzať z inej šablóny, ktorá rozšíri túto šablónu (<code>base.html</code>). Hneď ti ukážeme, ako sa to robí.</p>
+<p>Teraz ulož <code>base.html</code> a znova otvor <code>blog/templates/blog/post_list.html</code>. Odstrániš všetko nad <code>{% for post in posts %}</code> a pod <code>{% endfor %}</code>. Keď skončíš, súbor bude vyzerať nasledovne:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% for post in posts %}
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
@@ -590,8 +590,8 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 {% endfor %}
 </code></pre>
-<p>Chceme toto pou&#x17E;i&#x165; ako s&#xFA;&#x10D;as&#x165; na&#x161;ej &#x161;abl&#xF3;ny pre v&#x161;etky bloky. Je &#x10D;as prida&#x165; blokov&#xE9; tagy do tohto s&#xFA;boru!</p>
-<p>Blokov&#xFD; tag by sa mal zhodova&#x165; s tagom v <code>base.html</code> s&#xFA;bore. Taktie&#x17E; by mal obsahova&#x165; cel&#xFD; k&#xF3;d, &#x10D;o patr&#xED; do tvoj&#xED;ch obsahov&#xFD;ch blokov. Aby si to urobila, vlo&#x17E; v&#x161;etko medzi <code>{% block content %}</code> a <code>{% endblock %}</code>. Takto:</p>
+<p>Chceme toto použiť ako súčasť našej šablóny pre všetky bloky. Je čas pridať blokové tagy do tohto súboru!</p>
+<p>Blokový tag by sa mal zhodovať s tagom v <code>base.html</code> súbore. Taktiež by mal obsahovať celý kód, čo patrí do tvojích obsahových blokov. Aby si to urobila, vlož všetko medzi <code>{% block content %}</code> a <code>{% endblock %}</code>. Takto:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% block content %}
     {% for post in posts %}
@@ -605,7 +605,7 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>E&#x161;te zost&#xE1;la len jedin&#xE1; vec. Potrebujeme prepoji&#x165; tieto dve &#x161;abl&#xF3;ny. O tomto je roz&#x161;irovanie &#x161;abl&#xF3;n! Urob&#xED;me to pridan&#xED;m extends tagu na za&#x10D;iatku s&#xFA;boru. Nasledovne:</p>
+<p>Ešte zostála len jediná vec. Potrebujeme prepojiť tieto dve šablóny. O tomto je rozširovanie šablón! Urobíme to pridaním extends tagu na začiatku súboru. Nasledovne:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
 
@@ -621,9 +621,9 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>A je to! Skontroluj &#x10D;i tvoja web str&#xE1;nka funguje tak, ako m&#xE1;. :)</p>
+<p>A je to! Skontroluj či tvoja web stránka funguje tak, ako má. :)</p>
 <blockquote>
-<p>Ak sa ti zobraz&#xED; chyba <code>TemplateDoesNotExist</code>, to znamen&#xE1;, &#x17E;e neexistuje <code>blog/base.html</code> s&#xFA;bor a <code>runserver</code> be&#x17E;&#xED; v konzole. Sk&#xFA;s ho zastavi&#x165; (stla&#x10D;en&#xED;m Ctrl+C &#x2013; Control a C tla&#x10D;idiel spolu) a spusti ho znova pomocou pr&#xED;kazu <code>python manage.py runserver</code>.</p>
+<p>Ak sa ti zobrazí chyba <code>TemplateDoesNotExist</code>, to znamená, že neexistuje <code>blog/base.html</code> súbor a <code>runserver</code> beží v konzole. Skús ho zastaviť (stlačením Ctrl+C – Control a C tlačidiel spolu) a spusti ho znova pomocou príkazu <code>python manage.py runserver</code>.</p>
 </blockquote>
 
                                 
@@ -668,12 +668,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Rozširovanie šablón","level":"1.22","depth":1,"next":{"title":"Ako rozšíriť aplikáciu","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - skrášli to","level":"1.21","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"sk","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-09-22T11:43:43.126Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"sk"}});
+            gitbook.page.hasChanged({"page":{"title":"Rozširovanie šablón","level":"1.22","depth":1,"next":{"title":"Ako rozšíriť aplikáciu","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - skrášli to","level":"1.21","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"sk","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-11-15T14:54:56.690Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"sk"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

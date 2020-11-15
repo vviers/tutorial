@@ -7,7 +7,7 @@
         <title>Les URL de Django · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -622,13 +622,13 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="les-url-de-django">Les URL de Django</h1>
-<p>Nous sommes sur le point de cr&#xE9;er notre premi&#xE8;re page web : une page d&apos;accueil pour votre blog ! Mais d&apos;abord, commen&#xE7;ons par en apprendre un peu plus sur les URL de Django.</p>
+<p>Nous sommes sur le point de créer notre première page web : une page d&apos;accueil pour votre blog ! Mais d&apos;abord, commençons par en apprendre un peu plus sur les URL de Django.</p>
 <h2 id="quest-ce-quune-url-">Qu&apos;est-ce qu&apos;une URL ?</h2>
 <p>Une URL est une adresse web. Vous pouvez voir une URL chaque fois que vous visitez un site web. Elle est visible dans la barre d&apos;adresse de votre navigateur. (Oui ! <code>127.0.0.1:8000</code> est aussi une URL ! Et <code>https://djangogirls.org</code> est aussi une URL.)</p>
 <p><img src="images/url.png" alt="URL"></p>
-<p>Chaque page internet a besoin de sa propre URL. C&apos;est gr&#xE2;ce &#xE0; cela que votre application sait ce qu&apos;elle doit afficher &#xE0; un utilisateur qui ouvre cette URL. Dans Django, nous utilisons un outil appel&#xE9; <code>URLconf</code> (Configuration d&apos;URL). URLconf est un ensemble de mod&#xE8;les que Django va essay&#xE9; de faire correspondre &#xE0; l&apos;URL demand&#xE9;e afin de trouver la vue adapt&#xE9;e.</p>
+<p>Chaque page internet a besoin de sa propre URL. C&apos;est grâce à cela que votre application sait ce qu&apos;elle doit afficher à un utilisateur qui ouvre cette URL. Dans Django, nous utilisons un outil appelé <code>URLconf</code> (Configuration d&apos;URL). URLconf est un ensemble de modèles que Django va essayé de faire correspondre à l&apos;URL demandée afin de trouver la vue adaptée.</p>
 <h2 id="comment-les-urls-fonctionnent-elles-dans-django-">Comment les URLs fonctionnent-elles dans Django ?</h2>
-<p>Ouvrons le fichier <code>mysite/urls.py</code> dans notre &#xE9;diteur de code et regardons &#xE0; quoi il ressemble :</p>
+<p>Ouvrons le fichier <code>mysite/urls.py</code> dans notre éditeur de code et regardons à quoi il ressemble :</p>
 <p></p><p class="code-label">mysite/urls.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;mysite URL Configuration
 
@@ -641,18 +641,18 @@ urlpatterns = [
     path(<span class="hljs-string">&apos;admin/&apos;</span>, admin.site.urls),
 ]
 </code></pre>
-<p>Comme vous pouvez le voir ici, Django a d&#xE9;j&#xE0; pr&#xE9;par&#xE9; quelque chose pour nous.</p>
-<p>Les lignes entre triples guillemets (<code>&apos;&apos;&apos;</code> or <code>&quot;&quot;&quot;</code>) sont appel&#xE9;es docstrings. Vous pouvez les &#xE9;crire en haut d&apos;un fichier, d&apos;une classe ou d&apos;une m&#xE9;thode pour d&#xE9;crire son fonctionnement. Elle ne seront pas ex&#xE9;cut&#xE9;es par Python.</p>
-<p>L&apos;URL admin, que vous avez abord&#xE9; dans le chapitre pr&#xE9;c&#xE9;dent est d&#xE9;j&#xE0; l&#xE0; :</p>
+<p>Comme vous pouvez le voir ici, Django a déjà préparé quelque chose pour nous.</p>
+<p>Les lignes entre triples guillemets (<code>&apos;&apos;&apos;</code> or <code>&quot;&quot;&quot;</code>) sont appelées docstrings. Vous pouvez les écrire en haut d&apos;un fichier, d&apos;une classe ou d&apos;une méthode pour décrire son fonctionnement. Elle ne seront pas exécutées par Python.</p>
+<p>L&apos;URL admin, que vous avez abordé dans le chapitre précédent est déjà là :</p>
 <p></p><p class="code-label">mysite/urls.py</p><p></p>
 <pre><code class="lang-python">    path(<span class="hljs-string">&apos;admin/&apos;</span>, admin.site.urls),
 </code></pre>
-<p>Cette ligne signifie que pour toutes les URL commen&#xE7;ant par <code>admin/</code>, Django trouvera une <em>vue</em> correspondante. Dans cet exemple, nous incluons de nombreuses URL admin. Elles ne sont donc pas toutes contenues dans ce petit fichier. C&apos;est plus lisible et plus propre.</p>
-<h2 id="votre-premi&#xE8;re-url-django-">Votre premi&#xE8;re URL Django !</h2>
-<p>Il est temps de cr&#xE9;er notre premi&#xE8;re URL ! Nous voulons que &apos;<a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>&apos; soit la page d&apos;accueil de notre blog et qu&apos;elle affiche la liste des articles.</p>
+<p>Cette ligne signifie que pour toutes les URL commençant par <code>admin/</code>, Django trouvera une <em>vue</em> correspondante. Dans cet exemple, nous incluons de nombreuses URL admin. Elles ne sont donc pas toutes contenues dans ce petit fichier. C&apos;est plus lisible et plus propre.</p>
+<h2 id="votre-première-url-django-">Votre première URL Django !</h2>
+<p>Il est temps de créer notre première URL ! Nous voulons que &apos;<a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>&apos; soit la page d&apos;accueil de notre blog et qu&apos;elle affiche la liste des articles.</p>
 <p>Nous aimerions aussi garder notre fichier <code>mysite/urls.py</code> propre. Pour cela, nous allons importer les URLs de notre application <code>blog</code> dans notre fichier principal <code>mysite/urls.py</code>.</p>
-<p>Allez-y ! Ajoutez une ligne qui importera <code>blog.urls</code>. Vous devrez &#xE9;galement modifier la ligne <code>from django.urls...</code> car nous utiliseront la fonction <code>include</code>. Il vous faudra ajouter cet import &#xE0; la ligne.</p>
-<p>Votre fichier <code>mysite/urls.py</code> devrait maintenant ressembler &#xE0; ceci :</p>
+<p>Allez-y ! Ajoutez une ligne qui importera <code>blog.urls</code>. Vous devrez également modifier la ligne <code>from django.urls...</code> car nous utiliseront la fonction <code>include</code>. Il vous faudra ajouter cet import à la ligne.</p>
+<p>Votre fichier <code>mysite/urls.py</code> devrait maintenant ressembler à ceci :</p>
 <p></p><p class="code-label">mysite/urls.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.contrib <span class="hljs-keyword">import</span> admin
 <span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path, include
@@ -662,25 +662,25 @@ urlpatterns = [
     path(<span class="hljs-string">&apos;&apos;</span>, include(<span class="hljs-string">&apos;blog.urls&apos;</span>)),
 ]
 </code></pre>
-<p>Django va maintenant rediriger tout ce qui arrive sur &quot;<a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>&quot; vers <code>blog.urls</code> puis regardera dans ce fichier pour y trouver la suite des instructions &#xE0; suivre.</p>
+<p>Django va maintenant rediriger tout ce qui arrive sur &quot;<a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>&quot; vers <code>blog.urls</code> puis regardera dans ce fichier pour y trouver la suite des instructions à suivre.</p>
 <h2 id="blogurls">blog.urls</h2>
-<p>Cr&#xE9;ez un nouveau fichier vide nomm&#xE9; <code>urls.py</code> dans le r&#xE9;pertoire <code>blog</code>, et ouvrez-le dans l&apos;&#xE9;diteur de code. Tr&#xE8;s bien ! Ajoutez ces deux premi&#xE8;res lignes :</p>
+<p>Créez un nouveau fichier vide nommé <code>urls.py</code> dans le répertoire <code>blog</code>, et ouvrez-le dans l&apos;éditeur de code. Très bien ! Ajoutez ces deux premières lignes :</p>
 <p></p><p class="code-label">blog/urls.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path
 <span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> views
 </code></pre>
-<p>Nous venons d&apos;importer la fonction <code>path</code> de Django ainsi que toutes les <code>vues</code> li&#xE9;es &#xE0; notre application <code>blog</code>. (Cependant, nous n&apos;avons pas encore cr&#xE9;&#xE9; de vues ! Pas de probl&#xE8;me : nous y viendrons dans une minute !)</p>
-<p>Apr&#xE8;s &#xE7;a, nous pouvons ajouter notre premier mod&#xE8;le (pattern) d&apos;URL:</p>
+<p>Nous venons d&apos;importer la fonction <code>path</code> de Django ainsi que toutes les <code>vues</code> liées à notre application <code>blog</code>. (Cependant, nous n&apos;avons pas encore créé de vues ! Pas de problème : nous y viendrons dans une minute !)</p>
+<p>Après ça, nous pouvons ajouter notre premier modèle (pattern) d&apos;URL:</p>
 <p></p><p class="code-label">blog/urls.py</p><p></p>
 <pre><code class="lang-python">urlpatterns = [
     path(<span class="hljs-string">&apos;&apos;</span>, views.post_list, name=<span class="hljs-string">&apos;post_list&apos;</span>),
 ]
 </code></pre>
-<p>Comme vous pouvez le voir, nous assignons une <code>vue</code> appel&#xE9;e <code>post_list</code> &#xE0; l&apos;URL racine. Ce mod&#xE8;le d&#x2019;URL correspond &#xE0; une cha&#xEE;ne vide et le r&#xE9;solveur d&apos;URL de Django ignore le nom de domaine (par exemple, <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>), soit la premi&#xE8;re partie de l&apos;URL. Ce pattern va donc indiquer &#xE0; Django d&apos;afficher la vue <code>views.post_list</code> &#xE0; un utilisateur de votre site web qui se rendrait &#xE0; l&apos;adresse &quot;<a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>&quot;.</p>
-<p>La derni&#xE8;re partie, <code>name=&apos;post_list&apos;</code>, est le nom de l&apos;URL qui sera utilis&#xE9;e afin d&apos;identifier la vue. Ce nom peut &#xEA;tre le m&#xEA;me que celui de la vue ou quelque chose de compl&#xE8;tement diff&#xE9;rent. Plus tard dans ce tutoriel, nous allons utiliser les noms que nous avons donn&#xE9; &#xE0; nos URLs. Il est donc important de donner un nom unique &#xE0; chaque URL que nous cr&#xE9;ons. Pour vous faciliter la t&#xE2;che, essayez de trouver des nom d&apos;URLs simple &#xE0; retenir.</p>
-<p>Si vous essayez d&apos;aller sur <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a> maintenant, vous trouverez un message du style &#xAB; page web non disponible &#xBB;. C&#x2019;est parce que le serveur (vous vous souvenez d&apos;avoir tap&#xE9; <code>runserver</code> ?) n&apos;est plus en ex&#xE9;cution. Jetez un oeil &#xE0; la console pour savoir pourquoi.</p>
+<p>Comme vous pouvez le voir, nous assignons une <code>vue</code> appelée <code>post_list</code> à l&apos;URL racine. Ce modèle d’URL correspond à une chaîne vide et le résolveur d&apos;URL de Django ignore le nom de domaine (par exemple, <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>), soit la première partie de l&apos;URL. Ce pattern va donc indiquer à Django d&apos;afficher la vue <code>views.post_list</code> à un utilisateur de votre site web qui se rendrait à l&apos;adresse &quot;<a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a>&quot;.</p>
+<p>La dernière partie, <code>name=&apos;post_list&apos;</code>, est le nom de l&apos;URL qui sera utilisée afin d&apos;identifier la vue. Ce nom peut être le même que celui de la vue ou quelque chose de complètement différent. Plus tard dans ce tutoriel, nous allons utiliser les noms que nous avons donné à nos URLs. Il est donc important de donner un nom unique à chaque URL que nous créons. Pour vous faciliter la tâche, essayez de trouver des nom d&apos;URLs simple à retenir.</p>
+<p>Si vous essayez d&apos;aller sur <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a> maintenant, vous trouverez un message du style « page web non disponible ». C’est parce que le serveur (vous vous souvenez d&apos;avoir tapé <code>runserver</code> ?) n&apos;est plus en exécution. Jetez un oeil à la console pour savoir pourquoi.</p>
 <p><img src="images/error1.png" alt="Erreur"></p>
-<p>Votre console affiche une erreur, mais ne vous inqui&#xE9;tez pas &#x2013; c&#x2019;est en fait tr&#xE8;s utile : elle vous dit qu&#x2019;il n&#x2019;existe aucun attribut &#xAB; post_list &#xBB; (<strong>no attribute &apos;post_list&apos;</strong>). C&#x2019;est le nom de la <em>vue</em> que Django essaie de trouver et d&#x2019;utiliser, or nous ne l&apos;avons pas encore cr&#xE9;&#xE9;e. &#xC0; ce stade, votre <code>/admin/</code> ne fonctionnera pas non plus. Pas de probl&#xE8;me, on y vient. Si vous voyez un message d&#x2019;erreur diff&#xE9;rent, essayez de red&#xE9;marrer votre serveur web. Pour faire cela, dans la console qui ex&#xE9;cute le serveur web, arr&#xEA;tez-le en appuyant sur CTRL+C (les touches Control et C simultan&#xE9;ment). Sous Windows, vous devrez peut-&#xEA;tre appuyer sur Ctrl+Break. Vous devrez alors red&#xE9;marrer le serveur web en ex&#xE9;cutant la commande <code>python manage.py runserver</code>.</p>
+<p>Votre console affiche une erreur, mais ne vous inquiétez pas – c’est en fait très utile : elle vous dit qu’il n’existe aucun attribut « post_list » (<strong>no attribute &apos;post_list&apos;</strong>). C’est le nom de la <em>vue</em> que Django essaie de trouver et d’utiliser, or nous ne l&apos;avons pas encore créée. À ce stade, votre <code>/admin/</code> ne fonctionnera pas non plus. Pas de problème, on y vient. Si vous voyez un message d’erreur différent, essayez de redémarrer votre serveur web. Pour faire cela, dans la console qui exécute le serveur web, arrêtez-le en appuyant sur CTRL+C (les touches Control et C simultanément). Sous Windows, vous devrez peut-être appuyer sur Ctrl+Break. Vous devrez alors redémarrer le serveur web en exécutant la commande <code>python manage.py runserver</code>.</p>
 <blockquote>
 <p>Si vous voulez en savoir plus au sujet de la configuration des URLs dans Django, vous pouvez aller consulter la documentation officielle du framework : <a href="https://docs.djangoproject.com/en/2.2/topics/http/urls/" target="_blank">https://docs.djangoproject.com/en/2.2/topics/http/urls/</a></p>
 </blockquote>
@@ -727,12 +727,56 @@ urlpatterns = [
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Les URL de Django","level":"1.15","depth":1,"next":{"title":"Vues Django - C'est l'heure de créer !","level":"1.16","depth":1,"path":"django_views/README.md","ref":"django_views/README.md","articles":[]},"previous":{"title":"Déployer!","level":"1.14","depth":1,"path":"deploy/README.md","ref":"deploy/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_urls/README.md","mtime":"2020-09-22T11:43:42.834Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Les URL de Django","level":"1.15","depth":1,"next":{"title":"Vues Django - C'est l'heure de créer !","level":"1.16","depth":1,"path":"django_views/README.md","ref":"django_views/README.md","articles":[]},"previous":{"title":"Déployer!","level":"1.14","depth":1,"path":"deploy/README.md","ref":"deploy/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_urls/README.md","mtime":"2020-11-15T14:54:56.418Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

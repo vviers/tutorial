@@ -7,7 +7,7 @@
         <title>Django 뷰 만들기 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -511,29 +511,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#xC7A5;&#xACE0;-&#xBDF0;-&#xB9CC;&#xB4E4;&#xAE30;">&#xC7A5;&#xACE0; &#xBDF0; &#xB9CC;&#xB4E4;&#xAE30;</h1>
-<p>&#xC9C0;&#xB09C; &#xC7A5;&#xC5D0;&#xC11C; &#xB9CC;&#xB4E4;&#xC5C8;&#xB358; &#xBC84;&#xADF8;&#xB97C; &#xC7A1;&#xC744; &#xC2DC;&#xAC04;&#xC774; &#xC654;&#xC5B4;&#xC694;! :)</p>
-<p>&#xBDF0;(<em>view</em>) &#xB294; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC758; &quot;&#xB85C;&#xC9C1;&quot;&#xC744; &#xB123;&#xB294; &#xACF3;&#xC774;&#xC5D0;&#xC694;. &#xBDF0;&#xB294; &#xC774;&#xC804; &#xC7A5;&#xC5D0;&#xC11C; &#xB9CC;&#xB4E4;&#xC5C8;&#xB358; <code>&#xBAA8;&#xB378;</code>&#xC5D0;&#xC11C; &#xD544;&#xC694;&#xD55C; &#xC815;&#xBCF4;&#xB97C; &#xBC1B;&#xC544;&#xC640;&#xC11C; <code>&#xD15C;&#xD50C;&#xB9BF;</code>&#xC5D0; &#xC804;&#xB2EC;&#xD558;&#xB294; &#xC5ED;&#xD560;&#xC744; &#xD569;&#xB2C8;&#xB2E4;. &#xB2E4;&#xC74C; &#xC7A5;&#xC5D0;&#xC11C; &#xD15C;&#xD50C;&#xB9BF;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4; &#xBCFC; &#xAC70;&#xC5D0;&#xC694;. &#xBDF0;&#xB294; <strong>Python &#xC2DC;&#xC791;&#xD558;&#xAE30;</strong> &#xC7A5;&#xC5D0;&#xC11C; &#xD588;&#xB358; &#xAC83;&#xBCF4;&#xB2E4; &#xC5B4;&#xB824;&#xC6CC;&#xBCF4;&#xC774;&#xC9C0;&#xB9CC;, &#xD30C;&#xC774;&#xC36C; &#xD568;&#xC218;&#xC77C; &#xBFD0;&#xC774;&#xC5D0;&#xC694;.</p>
-<p>&#xBDF0;&#xB294; <code>views.py</code> &#xD30C;&#xC77C; &#xC548;&#xC5D0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC6B0;&#xB9AC;&#xB294; <em>views</em>&#xB97C; <code>blog/views.py</code>&#xD30C;&#xC77C; &#xC548;&#xC5D0; &#xCD94;&#xAC00;&#xD560; &#xAC70;&#xC5D0;&#xC694;.</p>
+                                <h1 id="장고-뷰-만들기">장고 뷰 만들기</h1>
+<p>지난 장에서 만들었던 버그를 잡을 시간이 왔어요! :)</p>
+<p>뷰(<em>view</em>) 는 애플리케이션의 &quot;로직&quot;을 넣는 곳이에요. 뷰는 이전 장에서 만들었던 <code>모델</code>에서 필요한 정보를 받아와서 <code>템플릿</code>에 전달하는 역할을 합니다. 다음 장에서 템플릿을 만들어 볼 거에요. 뷰는 <strong>Python 시작하기</strong> 장에서 했던 것보다 어려워보이지만, 파이썬 함수일 뿐이에요.</p>
+<p>뷰는 <code>views.py</code> 파일 안에 있습니다. 우리는 <em>views</em>를 <code>blog/views.py</code>파일 안에 추가할 거에요.</p>
 <h2 id="blogviewspy">blog/views.py</h2>
-<p>&#xC88B;&#xC544;&#xC694;. &#xC774;&#xC81C; &#xC774; &#xD30C;&#xC77C;&#xC744; &#xC5F4;&#xACE0; &#xC548;&#xC5D0; &#xC788;&#xB294; &#xB0B4;&#xC6A9;&#xC744; &#xC0B4;&#xD3B4;&#xBD05;&#xC2DC;&#xB2E4;:</p>
+<p>좋아요. 이제 이 파일을 열고 안에 있는 내용을 살펴봅시다:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 
 <span class="hljs-comment"># Create your views here.</span>
 </code></pre>
-<p>&#xBCC4; &#xB0B4;&#xC6A9;&#xC774; &#xC5C6;&#xB124;&#xC694;. &#xAC04;&#xB2E8;&#xD55C; <em>view</em>&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xBD05;&#xC2DC;&#xB2E4;.</p>
+<p>별 내용이 없네요. 간단한 <em>view</em>를 만들어봅시다.</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_list</span><span class="hljs-params">(request)</span>:</span>
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_list.html&apos;</span>, {})
 </code></pre>
-<p>&#xBC29;&#xAE08; <code>post_list</code>&#xB77C;&#xB294; &#xD568;&#xC218;(<code>def</code>)&#xB97C; &#xB9CC;&#xB4E4;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774; &#xD568;&#xC218;&#xB294; <code>&#xC694;&#xCCAD;(request)</code>&#xC744; &#xB118;&#xACA8;&#xBC1B;&#xC544; <code>render</code>&#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD569;&#xB2C8;&#xB2E4;. &#xC774; &#xD568;&#xC218;&#xB294; <code>render</code> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xC5EC; &#xBC1B;&#xC740;(return) <code>blog/post_list.html</code>&#xD15C;&#xD50C;&#xB9BF;&#xC744; &#xBCF4;&#xC5EC;&#xC90D;&#xB2C8;&#xB2E4;.</p>
-<p>&#xD30C;&#xC77C;&#xC744; &#xC800;&#xC7A5;&#xD558;&#xACE0;, <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a> &#xB85C; &#xC811;&#xC18D;&#xD574; &#xD655;&#xC778;&#xD574;&#xBCF4;&#xC138;&#xC694;.</p>
-<p>&#xC5D0;&#xB7EC;&#xAC00; &#xBC1C;&#xC0DD;&#xD588;&#xB124;&#xC694;! &#xC544;&#xB798; &#xB0B4;&#xC6A9;&#xC744; &#xC77D;&#xC5B4;&#xBCF4;&#xC138;&#xC694;.</p>
+<p>방금 <code>post_list</code>라는 함수(<code>def</code>)를 만들었습니다. 이 함수는 <code>요청(request)</code>을 넘겨받아 <code>render</code>메서드를 호출합니다. 이 함수는 <code>render</code> 메서드를 호출하여 받은(return) <code>blog/post_list.html</code>템플릿을 보여줍니다.</p>
+<p>파일을 저장하고, <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a> 로 접속해 확인해보세요.</p>
+<p>에러가 발생했네요! 아래 내용을 읽어보세요.</p>
 <p><img src="images/error.png" alt="Error"></p>
-<p><em>TemplateDoesNotExist</em>&#xB294; &#xC27D;&#xAC8C; &#xD574;&#xACB0;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC798; &#xB530;&#xB77C;&#xC654;&#xB2E4;&#xBA74; &#xBC29;&#xAE08; &#xC5D0;&#xB7EC;&#xAC00; &#xBCF4;&#xC774;&#xB294;&#xAC8C; &#xB9DE;&#xC544;&#xC694;. &#xB2E4;&#xC74C; &#xC7A5;&#xC5D0;&#xC11C; &#xBC84;&#xADF8;&#xB97C; &#xD574;&#xACB0;&#xD558;&#xAE30; &#xC704;&#xD574; &#xD15C;&#xD50C;&#xB9BF; &#xD30C;&#xC77C;&#xC744; &#xB9CC;&#xB4E4; &#xAC70;&#xC5D0;&#xC694;!</p>
+<p><em>TemplateDoesNotExist</em>는 쉽게 해결할 수 있습니다. 잘 따라왔다면 방금 에러가 보이는게 맞아요. 다음 장에서 버그를 해결하기 위해 템플릿 파일을 만들 거에요!</p>
 <blockquote>
-<p>&#xC7A5;&#xACE0; &#xBDF0;&#xC5D0; &#xB300;&#xD574; &#xB354; &#xC54C;&#xACE0; &#xC2F6;&#xB2E4;&#xBA74; &#xC7A5;&#xACE0; &#xACF5;&#xC2DD; &#xBB38;&#xC11C;&#xB97C; &#xC77D;&#xC5B4;&#xBCF4;&#xC138;&#xC694;. : <a href="https://docs.djangoproject.com/en/2.0/topics/http/views/" target="_blank">https://docs.djangoproject.com/en/2.0/topics/http/views/</a></p>
+<p>장고 뷰에 대해 더 알고 싶다면 장고 공식 문서를 읽어보세요. : <a href="https://docs.djangoproject.com/en/2.0/topics/http/views/" target="_blank">https://docs.djangoproject.com/en/2.0/topics/http/views/</a></p>
 </blockquote>
 
                                 
@@ -578,12 +578,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Django 뷰 만들기","level":"1.16","depth":1,"next":{"title":"HTML 시작하기","level":"1.17","depth":1,"path":"html/README.md","ref":"html/README.md","articles":[]},"previous":{"title":"Django urls","level":"1.15","depth":1,"path":"django_urls/README.md","ref":"django_urls/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"ko","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_views/README.md","mtime":"2020-09-22T11:43:42.970Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"ko"}});
+            gitbook.page.hasChanged({"page":{"title":"Django 뷰 만들기","level":"1.16","depth":1,"next":{"title":"HTML 시작하기","level":"1.17","depth":1,"path":"html/README.md","ref":"html/README.md","articles":[]},"previous":{"title":"Django urls","level":"1.15","depth":1,"path":"django_urls/README.md","ref":"django_urls/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"ko","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_views/README.md","mtime":"2020-11-15T14:54:56.546Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"ko"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

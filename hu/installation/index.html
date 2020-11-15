@@ -7,7 +7,7 @@
         <title>Installáció · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -498,112 +498,112 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="ha-otthon-csin&#xE1;lod-a-tutorialt">Ha otthon csin&#xE1;lod a tutorialt</h1>
-<p>Ha otthon csin&#xE1;lod a tutorialt, nem valamelyik <a href="https://djangogirls.org/events/" target="_blank">Django Girls esem&#xE9;nyen</a>, &#xE1;t is ugorhatod ezt a fejezetet, &#xE9;s folytathatod a <a href="../how_the_internet_works/">Hogy m&#x171;k&#xF6;dik az Internet?</a> fejezettel.</p>
-<p>Ez az oldal csak egy helyre gy&#x171;jti az install&#xE1;ci&#xF3;k le&#xED;r&#xE1;s&#xE1;t, amikkel k&#xE9;s&#x151;bb &#xFA;gyis tal&#xE1;lkozni fogsz a tutorial sor&#xE1;n. A Django Girls workshopok el&#x151;tt mindig van egy install&#xE1;ci&#xF3;s esem&#xE9;ny, amikor mindent telep&#xED;t&#xFC;nk, hogy a workshopon m&#xE1;r ne kelljen ezzel bajl&#xF3;dni, ez&#xE9;rt hasznos nek&#xFC;nk, hogy mindent megtal&#xE1;lunk egy helyen.</p>
-<p>Ha te is hasznosnak tal&#xE1;lod, nyugodtan elv&#xE9;gezheted ezt a fejezetet. De ha ink&#xE1;bb fejest szeretn&#xE9;l ugrani a tanul&#xE1;sba, miel&#x151;tt egy csom&#xF3; mindent telep&#xED;ten&#xE9;l a g&#xE9;pedre, nyugodtan ugord &#xE1;t a fejezetet! K&#xE9;s&#x151;bb &#xFA;gyis elmagyar&#xE1;zzuk az &#xF6;sszes telep&#xED;t&#xE9;st.</p>
-<p>Sok szerencs&#xE9;t!</p>
-<h1 id="install&#xE1;ci&#xF3;">Install&#xE1;ci&#xF3;</h1>
-<p>A workshopon egy blogot fogsz elk&#xE9;sz&#xED;teni. Ehhez el kell v&#xE9;gezned n&#xE9;h&#xE1;ny telep&#xED;t&#xE9;si feladatot, hogy a workshop napj&#xE1;n m&#xE1;r egyb&#x151;l elkezdhess k&#xF3;dolni.</p>
-<h1 id="a-python-telep&#xED;t&#xE9;se">A Python telep&#xED;t&#xE9;se</h1>
+                                <h1 id="ha-otthon-csinálod-a-tutorialt">Ha otthon csinálod a tutorialt</h1>
+<p>Ha otthon csinálod a tutorialt, nem valamelyik <a href="https://djangogirls.org/events/" target="_blank">Django Girls eseményen</a>, át is ugorhatod ezt a fejezetet, és folytathatod a <a href="../how_the_internet_works/">Hogy működik az Internet?</a> fejezettel.</p>
+<p>Ez az oldal csak egy helyre gyűjti az installációk leírását, amikkel később úgyis találkozni fogsz a tutorial során. A Django Girls workshopok előtt mindig van egy installációs esemény, amikor mindent telepítünk, hogy a workshopon már ne kelljen ezzel bajlódni, ezért hasznos nekünk, hogy mindent megtalálunk egy helyen.</p>
+<p>Ha te is hasznosnak találod, nyugodtan elvégezheted ezt a fejezetet. De ha inkább fejest szeretnél ugrani a tanulásba, mielőtt egy csomó mindent telepítenél a gépedre, nyugodtan ugord át a fejezetet! Később úgyis elmagyarázzuk az összes telepítést.</p>
+<p>Sok szerencsét!</p>
+<h1 id="installáció">Installáció</h1>
+<p>A workshopon egy blogot fogsz elkészíteni. Ehhez el kell végezned néhány telepítési feladatot, hogy a workshop napján már egyből elkezdhess kódolni.</p>
+<h1 id="a-python-telepítése">A Python telepítése</h1>
 <blockquote>
-<p>Ez a fejezet a Geek Girls Carrots (<a href="https://github.com/ggcarrots/django-carrots" target="_blank">https://github.com/ggcarrots/django-carrots</a>) tutorialj&#xE1;n alapszik</p>
+<p>Ez a fejezet a Geek Girls Carrots (<a href="https://github.com/ggcarrots/django-carrots" target="_blank">https://github.com/ggcarrots/django-carrots</a>) tutorialján alapszik</p>
 </blockquote>
-<p>A Django Python nyelven &#xED;r&#xF3;dott. Ahhoz, hogy b&#xE1;rmit l&#xE9;trehozhassunk a Django-ban, sz&#xFC;ks&#xE9;g&#xFC;nk van a Pythonra is. Kezdj&#xFC;k a telep&#xED;t&#xE9;s&#xE9;vel! Azt szeretn&#xE9;nk, hogy a Python 3.6-es verzi&#xF3;ja legyen telep&#xED;tve -- ha enn&#xE9;l kor&#xE1;bbi verzi&#xF3;val rendelkezel, akkor friss&#xED;tened kell.</p>
+<p>A Django Python nyelven íródott. Ahhoz, hogy bármit létrehozhassunk a Django-ban, szükségünk van a Pythonra is. Kezdjük a telepítésével! Azt szeretnénk, hogy a Python 3.6-es verziója legyen telepítve -- ha ennél korábbi verzióval rendelkezel, akkor frissítened kell.</p>
 <sec data-title="Windows" data-id="python_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Windows<a class="pull-right section atTitle btn btn-default" target="python_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_windows"><div class="panel-body">
-<p>A Python-t az al&#xE1;bbi weboldalr&#xF3;l tudod let&#xF6;lteni: <a href="https://www.python.org/downloads/release/python-343/" target="_blank">https://www.python.org/downloads/release/python-343/</a>. Az <strong>*.msi</strong> f&#xE1;jlt a let&#xF6;lt&#xE9;s ut&#xE1;n futtasd (dupla kattint&#xE1;s), &#xE9;s k&#xF6;vesd az utas&#xED;t&#xE1;sokat. Fontos, hogy eml&#xE9;kezz a path-ra (k&#xF6;nyvt&#xE1;rra), ahova let&#xF6;lt&#xF6;tted. K&#xE9;s&#x151;bb sz&#xFC;ks&#xE9;ged lesz r&#xE1;!</p>
-<p>Egy fontos dolog, amire figyelj oda: a telep&#xED;t&#x151;var&#xE1;zsl&#xF3; m&#xE1;sodik k&#xE9;perny&#x151;j&#xE9;n (&quot;Customize&quot;) g&#xF6;rgess lejjebb, &#xE9;s v&#xE1;laszd ki az &quot;Add python.exe to the Path&quot; opci&#xF3;t, ahogy itt l&#xE1;thatod:</p>
-<p><img src="../python_installation/images/add_python_to_windows_path.png" alt="Ne felejtsd el hozz&#xE1;adni a Pythont a Path-hoz"></p>
+<p>A Python-t az alábbi weboldalról tudod letölteni: <a href="https://www.python.org/downloads/release/python-343/" target="_blank">https://www.python.org/downloads/release/python-343/</a>. Az <strong>*.msi</strong> fájlt a letöltés után futtasd (dupla kattintás), és kövesd az utasításokat. Fontos, hogy emlékezz a path-ra (könyvtárra), ahova letöltötted. Később szükséged lesz rá!</p>
+<p>Egy fontos dolog, amire figyelj oda: a telepítővarázsló második képernyőjén (&quot;Customize&quot;) görgess lejjebb, és válaszd ki az &quot;Add python.exe to the Path&quot; opciót, ahogy itt láthatod:</p>
+<p><img src="../python_installation/images/add_python_to_windows_path.png" alt="Ne felejtsd el hozzáadni a Pythont a Path-hoz"></p>
 </div></div></div></sec>
 <sec data-title="OS X" data-id="python_OSX" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>OS X<a class="pull-right section atTitle btn btn-default" target="python_OSX"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_OSX"><div class="panel-body">
 <blockquote>
-<p><strong>Megjegyz&#xE9;s</strong> Miel&#x151;tt telep&#xED;ten&#xE9;d a Pythont OS X-en, bizonyosodj meg arr&#xF3;l hogy a Mac be&#xE1;ll&#xED;t&#xE1;said megengedik olyan csomagok telep&#xED;t&#xE9;s&#xE9;t, amelyek nem az App Store-b&#xF3;l sz&#xE1;rmaznak. Nyisd meg a System Preferences ablakot (az Applications mapp&#xE1;ban), kattints a &quot;Security &amp; Privacy&quot; gombra majd a &quot;General&quot; f&#xFC;lre. Ha az &quot;Allow apps downloaded from:&quot; be&#xE1;ll&#xED;t&#xE1;s &quot;Mac App Store&quot;-ra van &#xE1;ll&#xED;tva, &#xE1;ll&#xED;tsd &#xE1;t &quot;Mac App Store and identified developers&quot;-ra.</p>
+<p><strong>Megjegyzés</strong> Mielőtt telepítenéd a Pythont OS X-en, bizonyosodj meg arról hogy a Mac beállításaid megengedik olyan csomagok telepítését, amelyek nem az App Store-ból származnak. Nyisd meg a System Preferences ablakot (az Applications mappában), kattints a &quot;Security &amp; Privacy&quot; gombra majd a &quot;General&quot; fülre. Ha az &quot;Allow apps downloaded from:&quot; beállítás &quot;Mac App Store&quot;-ra van állítva, állítsd át &quot;Mac App Store and identified developers&quot;-ra.</p>
 </blockquote>
-<p>Menj a <a href="https://www.python.org/downloads/release/python-343/" target="_blank">https://www.python.org/downloads/release/python-343/</a> oldalra, &#xE9;s t&#xF6;ltsd le a Python installert:</p>
+<p>Menj a <a href="https://www.python.org/downloads/release/python-343/" target="_blank">https://www.python.org/downloads/release/python-343/</a> oldalra, és töltsd le a Python installert:</p>
 <ul>
-<li>T&#xF6;ltsd le a <em>Mac OS X 64-bit/32-bit installer</em> f&#xE1;jlt,</li>
-<li>Kattints dupl&#xE1;n a <em>python-3.4.3-macosx10.6.pkg</em>-re, hogy futtasd a telep&#xED;t&#x151;t.</li>
+<li>Töltsd le a <em>Mac OS X 64-bit/32-bit installer</em> fájlt,</li>
+<li>Kattints duplán a <em>python-3.4.3-macosx10.6.pkg</em>-re, hogy futtasd a telepítőt.</li>
 </ul>
 </div></div></div></sec>
 <sec data-title="Linux" data-id="python_linux" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Linux<a class="pull-right section atTitle btn btn-default" target="python_linux"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_linux"><div class="panel-body">
-<p>Nagyon val&#xF3;sz&#xED;n&#x171;, hogy a Python m&#xE1;r telep&#xED;tve van a g&#xE9;pedre. Ahhoz, hogy ezt leellen&#x151;rizd (illetve hogy megn&#xE9;zd, melyik verzi&#xF3; van a g&#xE9;peden), nyisd meg a konzolt &#xE9;s &#xED;rd be az al&#xE1;bbi parancsot:</p>
+<p>Nagyon valószínű, hogy a Python már telepítve van a gépedre. Ahhoz, hogy ezt leellenőrizd (illetve hogy megnézd, melyik verzió van a gépeden), nyisd meg a konzolt és írd be az alábbi parancsot:</p>
 <pre><code>$ python3 --version
 Python 3.4.3
-</code></pre><p>Ha m&#xE9;g nincs Pythonod, vagy m&#xE1;sik verzi&#xF3;t szeretn&#xE9;l telep&#xED;teni, &#xED;gy teheted meg:</p>
+</code></pre><p>Ha még nincs Pythonod, vagy másik verziót szeretnél telepíteni, így teheted meg:</p>
 </div></div></div></sec>
 <sec data-title="Debian vagy Ubuntu" data-id="python_debian" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Debian vagy Ubuntu<a class="pull-right section atTitle btn btn-default" target="python_debian"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_debian"><div class="panel-body">
-<p>&#xCD;rd be az al&#xE1;bbi parancsot a konzolba:</p>
+<p>Írd be az alábbi parancsot a konzolba:</p>
 <pre><code>$ sudo apt install python3.4
 </code></pre></div></div></div></sec>
 <sec data-title="Fedora (22+)" data-id="python_fedora22" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Fedora (22+)<a class="pull-right section atTitle btn btn-default" target="python_fedora22"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_fedora22"><div class="panel-body">
-<p>&#xCD;rd be az al&#xE1;bbi programot a konzolba:</p>
+<p>Írd be az alábbi programot a konzolba:</p>
 <pre><code>$ sudo dnf install python3.4
 </code></pre></div></div></div></sec>
 <sec data-title="openSUSE" data-id="python_openSUSE" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>openSUSE<a class="pull-right section atTitle btn btn-default" target="python_openSUSE"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_openSUSE"><div class="panel-body">
-<p>&#xCD;rd be az al&#xE1;bbi programot a konzolba:</p>
+<p>Írd be az alábbi programot a konzolba:</p>
 <pre><code>$ sudo zypper install python3
 </code></pre></div></div></div></sec>
-<p>Bizonyosodj meg arr&#xF3;l, hogy sikeres volt a telep&#xED;t&#xE9;s! Nyisd meg a <em>Termin&#xE1;lt</em> &#xE9;s futtasd le a <code>python3</code> parancsot:</p>
+<p>Bizonyosodj meg arról, hogy sikeres volt a telepítés! Nyisd meg a <em>Terminált</em> és futtasd le a <code>python3</code> parancsot:</p>
 <pre><code>$ python3 --version
 Python 3.4.3
-</code></pre><p><strong>Megjegyz&#xE9;s</strong> Ha windows-t haszn&#xE1;lsz &#xE9;s egy hiba&#xFC;zenetet kapsz, mely szerint <code>python3</code> nem tal&#xE1;lhat&#xF3;, pr&#xF3;b&#xE1;ld meg <code>python</code> n&#xE9;ven (a <code>3</code> n&#xE9;lk&#xFC;l) &#xE9;s ellen&#x151;rizd hogy Python 3.6-e.</p>
+</code></pre><p><strong>Megjegyzés</strong> Ha windows-t használsz és egy hibaüzenetet kapsz, mely szerint <code>python3</code> nem található, próbáld meg <code>python</code> néven (a <code>3</code> nélkül) és ellenőrizd hogy Python 3.6-e.</p>
 <hr>
-<p>Ha k&#xE9;ts&#xE9;geid vannak, vagy valami elromlott, &#xE9;s nem tudod, mit csin&#xE1;lj - csak k&#xE9;rdezd meg a coachodat! N&#xE9;ha a dolgok nem mennek teljesen sim&#xE1;n, &#xE9;s jobb megk&#xE9;rdezni valakit, akinek t&#xF6;bb tapasztalata van a t&#xE9;m&#xE1;ban.</p>
-<h1 id="virtu&#xE1;lis-k&#xF6;rnyezet-l&#xE9;trehoz&#xE1;sa-&#xE9;s-a-django-telep&#xED;t&#xE9;se">Virtu&#xE1;lis k&#xF6;rnyezet l&#xE9;trehoz&#xE1;sa &#xE9;s a Django telep&#xED;t&#xE9;se</h1>
+<p>Ha kétségeid vannak, vagy valami elromlott, és nem tudod, mit csinálj - csak kérdezd meg a coachodat! Néha a dolgok nem mennek teljesen simán, és jobb megkérdezni valakit, akinek több tapasztalata van a témában.</p>
+<h1 id="virtuális-környezet-létrehozása-és-a-django-telepítése">Virtuális környezet létrehozása és a Django telepítése</h1>
 <blockquote>
-<p>Ennek a fejezetnek egy r&#xE9;sze a Geek Girls Carrots (<a href="https://github.com/ggcarrots/django-carrots" target="_blank">https://github.com/ggcarrots/django-carrots</a>) tutorialjain alapul.</p>
-<p>A fejezet r&#xE9;szben a <a href="http://django-marcador.keimlink.de/" target="_blank">django-marcador tutorial</a>-on alapszik, ami a Creative Commons Attribution-ShareAlike 4.0 International License jogv&#xE9;delem alatt &#xE1;ll. A django-marcador tutorial jogv&#xE9;delem alatt &#xE1;ll, Markus Zapke-Gr&#xFC;ndemann et al &#xE1;ltal.</p>
+<p>Ennek a fejezetnek egy része a Geek Girls Carrots (<a href="https://github.com/ggcarrots/django-carrots" target="_blank">https://github.com/ggcarrots/django-carrots</a>) tutorialjain alapul.</p>
+<p>A fejezet részben a <a href="http://django-marcador.keimlink.de/" target="_blank">django-marcador tutorial</a>-on alapszik, ami a Creative Commons Attribution-ShareAlike 4.0 International License jogvédelem alatt áll. A django-marcador tutorial jogvédelem alatt áll, Markus Zapke-Gründemann et al által.</p>
 </blockquote>
-<h2 id="virtu&#xE1;lis-k&#xF6;rnyezet">Virtu&#xE1;lis k&#xF6;rnyezet</h2>
-<p>Miel&#x151;tt feltelep&#xED;tj&#xFC;k a Django-t, egy rettent&#x151; hasznos eszk&#xF6;zt fogunk install&#xE1;lni, ami seg&#xED;t, hogy a k&#xF3;dol&#xF3;i k&#xF6;rnyezetedet rendben tartsa a sz&#xE1;m&#xED;t&#xF3;g&#xE9;peden. &#xC1;t lehet ugrani ezt a l&#xE9;p&#xE9;st, de nem aj&#xE1;nlott. Ha a lehet&#x151; legjobb kiindul&#xE1;si helyzetb&#x151;l kezded a k&#xF3;dol&#xE1;st, sok bossz&#xFA;s&#xE1;got megsp&#xF3;rolhatsz magadnak a j&#xF6;v&#x151;ben!</p>
-<p>Teh&#xE1;t el&#x151;sz&#xF6;r is hozzunk l&#xE9;tre egy <strong>virtu&#xE1;lis k&#xF6;rnyezetet</strong> (virtual environment), amit <em>virtualenv</em>-nek is h&#xED;vunk. A virtualenv projektenk&#xE9;nt k&#xFC;l&#xF6;n&#xED;ti el a Python/Django k&#xF6;rnyezetet. Ez azt jelenti, hogy ha megv&#xE1;ltoztatsz valamit egy weboldalon, az nem lesz hat&#xE1;ssal a t&#xF6;bbi weboldalra, amit p&#xE1;rhuzamosan fejlesztesz. J&#xF3;, igaz?</p>
-<p>Csak annyit kell tenned, hogy kiv&#xE1;lasztasz egy k&#xF6;nyvt&#xE1;rat, ahova a <code>virtualenv</code>et szeretn&#xE9;d telep&#xED;teni, p&#xE9;ld&#xE1;ul a home k&#xF6;nyvt&#xE1;rat. Windowson ez &#xED;gy n&#xE9;zhet ki: <code>C:\Users\Name</code> (ahol a <code>Name</code> a felhaszn&#xE1;l&#xF3;d neve).</p>
+<h2 id="virtuális-környezet">Virtuális környezet</h2>
+<p>Mielőtt feltelepítjük a Django-t, egy rettentő hasznos eszközt fogunk installálni, ami segít, hogy a kódolói környezetedet rendben tartsa a számítógépeden. Át lehet ugrani ezt a lépést, de nem ajánlott. Ha a lehető legjobb kiindulási helyzetből kezded a kódolást, sok bosszúságot megspórolhatsz magadnak a jövőben!</p>
+<p>Tehát először is hozzunk létre egy <strong>virtuális környezetet</strong> (virtual environment), amit <em>virtualenv</em>-nek is hívunk. A virtualenv projektenként különíti el a Python/Django környezetet. Ez azt jelenti, hogy ha megváltoztatsz valamit egy weboldalon, az nem lesz hatással a többi weboldalra, amit párhuzamosan fejlesztesz. Jó, igaz?</p>
+<p>Csak annyit kell tenned, hogy kiválasztasz egy könyvtárat, ahova a <code>virtualenv</code>et szeretnéd telepíteni, például a home könyvtárat. Windowson ez így nézhet ki: <code>C:\Users\Name</code> (ahol a <code>Name</code> a felhasználód neve).</p>
 <blockquote>
-<p><strong>Megjegyz&#xE9;s</strong> Windows-on gondoskodj arr&#xF3;l, hogy ez a k&#xF6;nyvt&#xE1;r nem tartalmaz &#xE9;kezetes vagy speci&#xE1;lis karaktereket; ha a van &#xE9;kezetes karakter a felhaszn&#xE1;l&#xF3;nevedben, haszn&#xE1;lj egy m&#xE1;sik k&#xF6;nyvt&#xE1;rt, p&#xE9;ld&#xE1;ul <code>C:\djangogirls</code>.</p>
+<p><strong>Megjegyzés</strong> Windows-on gondoskodj arról, hogy ez a könyvtár nem tartalmaz ékezetes vagy speciális karaktereket; ha a van ékezetes karakter a felhasználónevedben, használj egy másik könyvtárt, például <code>C:\djangogirls</code>.</p>
 </blockquote>
-<p>Ehhez a tutorialhoz egy &#xFA;j, <code>djangogirls</code> nev&#x171; mapp&#xE1;t fogunk haszn&#xE1;lni a home k&#xF6;nyvt&#xE1;radon bel&#xFC;l:</p>
+<p>Ehhez a tutorialhoz egy új, <code>djangogirls</code> nevű mappát fogunk használni a home könyvtáradon belül:</p>
 <pre><code>mkdir djangogirls
 cd djangogirls
-</code></pre><p>Most pedig l&#xE9;trehozunk egy <code>myvenv</code> nev&#x171; virtu&#xE1;lis k&#xF6;rnyezetet. A k&#xF3;d &#xE1;ltal&#xE1;nosan &#xED;gy n&#xE9;z ki:</p>
+</code></pre><p>Most pedig létrehozunk egy <code>myvenv</code> nevű virtuális környezetet. A kód általánosan így néz ki:</p>
 <pre><code>python3 -m venv myvenv
 </code></pre><sec data-title="Windows" data-id="virtualenv_installation_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Windows<a class="pull-right section atTitle btn btn-default" target="virtualenv_installation_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_installation_windows"><div class="panel-body">
-<p>Ahhoz, hogy l&#xE9;trehozz egy &#xFA;j <code>virtualenv</code>-et, meg kell nyitni a konzolt (p&#xE1;r fejezettel ezel&#x151;tt tanult&#xE1;l r&#xF3;la - eml&#xE9;kszel?) &#xE9;s a ezt a parancsot kell lefuttatnod: <code>C:\Python35\python -m venv myvenv</code>. Ez fog t&#xF6;rt&#xE9;nni:</p>
+<p>Ahhoz, hogy létrehozz egy új <code>virtualenv</code>-et, meg kell nyitni a konzolt (pár fejezettel ezelőtt tanultál róla - emlékszel?) és a ezt a parancsot kell lefuttatnod: <code>C:\Python35\python -m venv myvenv</code>. Ez fog történni:</p>
 <pre><code>C:\Users\Name\djangogirls&gt; C:\Python35\python -m venv myvenv
-</code></pre><p>itt a <code>C:\Python35\python</code> azt a k&#xF6;nyvt&#xE1;rat jelenti, ahova kor&#xE1;bban a Pythont telep&#xED;tetted, &#xE9;s a <code>myvenv</code> a <code>virtualenv</code>-ed neve. B&#xE1;rmi m&#xE1;s nevet is haszn&#xE1;lhatsz, de maradj a kisbet&#x171;s szavakn&#xE1;l, &#xE9;s ne haszn&#xE1;lj sz&#xF3;k&#xF6;zt, &#xE9;kezeteket, vagy m&#xE1;s speci&#xE1;lis karaktereket. J&#xF3; &#xF6;tlet r&#xF6;vid nevet adni - sokszor be kell majd g&#xE9;pelned!</p>
+</code></pre><p>itt a <code>C:\Python35\python</code> azt a könyvtárat jelenti, ahova korábban a Pythont telepítetted, és a <code>myvenv</code> a <code>virtualenv</code>-ed neve. Bármi más nevet is használhatsz, de maradj a kisbetűs szavaknál, és ne használj szóközt, ékezeteket, vagy más speciális karaktereket. Jó ötlet rövid nevet adni - sokszor be kell majd gépelned!</p>
 </div></div></div></sec>
-<sec data-title="Linux &#xE9;s OS X" data-id="virtualenv_installation_linuxosx" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Linux &#xE9;s OS X<a class="pull-right section atTitle btn btn-default" target="virtualenv_installation_linuxosx"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_installation_linuxosx"><div class="panel-body">
-<p>A <code>virtualenv</code> l&#xE9;trehoz&#xE1;sa Linux &#xE9;s OS X k&#xF6;rnyezetben is csak annyib&#xF3;l &#xE1;ll, hogy a <code>python3 -m venv myvenv</code> parancsot futtatod. &#xCD;gy fog kin&#xE9;zni:</p>
+<sec data-title="Linux és OS X" data-id="virtualenv_installation_linuxosx" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Linux és OS X<a class="pull-right section atTitle btn btn-default" target="virtualenv_installation_linuxosx"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_installation_linuxosx"><div class="panel-body">
+<p>A <code>virtualenv</code> létrehozása Linux és OS X környezetben is csak annyiból áll, hogy a <code>python3 -m venv myvenv</code> parancsot futtatod. Így fog kinézni:</p>
 <pre><code>~/djangogirls$ python3 -m venv myvenv
-</code></pre><p>A <code>myvenv</code> a<code>virtualenv</code>-ed neve. M&#xE1;s nevet is haszn&#xE1;lhatsz, de maradj a kisbet&#x171;s szavakn&#xE1;l, &#xE9;s ne haszn&#xE1;lj sz&#xF3;k&#xF6;zt, &#xE9;kezeteket, vagy m&#xE1;s speci&#xE1;lis karaktereket. J&#xF3; &#xF6;tlet r&#xF6;vid nevet adni - sokszor be kell majd g&#xE9;pelned!</p>
+</code></pre><p>A <code>myvenv</code> a<code>virtualenv</code>-ed neve. Más nevet is használhatsz, de maradj a kisbetűs szavaknál, és ne használj szóközt, ékezeteket, vagy más speciális karaktereket. Jó ötlet rövid nevet adni - sokszor be kell majd gépelned!</p>
 <blockquote>
-<p><strong>MEGJEGYZ&#xC9;S:</strong> Debian/Ubuntu n&#xE9;melyik verzi&#xF3;j&#xE1;n&#xE1;l az al&#xE1;bbi hiba&#xFC;zenetet kaphatod:</p>
+<p><strong>MEGJEGYZÉS:</strong> Debian/Ubuntu némelyik verziójánál az alábbi hibaüzenetet kaphatod:</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>The virtual environment was not created successfully because ensurepip is not available.  On Debian/Ubuntu systems, you need to install the python3-venv package using the following command.
    apt install python3-venv
 You may need to use sudo with that command.  After installing the python3-venv package, recreate your virtual environment.
-</code></pre><p>Ebben az esetben a fenti le&#xED;r&#xE1;st k&#xF6;vetve telep&#xED;tsd a <code>python3-venv</code> csomagot:
+</code></pre><p>Ebben az esetben a fenti leírást követve telepítsd a <code>python3-venv</code> csomagot:
 </p><p class="code-label">parancssor</p><p></p>
 <pre><code>$ sudo apt install python3-venv
-</code></pre><p><strong>MEGJEGYZ&#xC9;S:</strong> A virtu&#xE1;lis k&#xF6;rnyezetet l&#xE9;trehoz&#xF3; parancs Ubuntu 14.04 alatt ezt a hib&#xE1;t adja:</p>
+</code></pre><p><strong>MEGJEGYZÉS:</strong> A virtuális környezetet létrehozó parancs Ubuntu 14.04 alatt ezt a hibát adja:</p>
 <pre><code>Error: Command &apos;[&apos;/home/eddie/Slask/tmp/venv/bin/python3&apos;, &apos;-Im&apos;, &apos;ensurepip&apos;, &apos;--upgrade&apos;, &apos;--default-pip&apos;]&apos; returned non-zero exit status 1
-</code></pre><p>Hogy ezt elker&#xFC;ld, haszn&#xE1;ld a <code>virtualenv</code> parancsot.</p>
+</code></pre><p>Hogy ezt elkerüld, használd a <code>virtualenv</code> parancsot.</p>
 <pre><code>~/djangogirls$ sudo apt install python-virtualenv
 ~/djangogirls$ virtualenv --python=python3.6 myvenv
-</code></pre><p><strong>MEGJEGYZ&#xC9;S:</strong> Ha az al&#xE1;bbi hiba&#xFC;zenetet kapod:</p>
+</code></pre><p><strong>MEGJEGYZÉS:</strong> Ha az alábbi hibaüzenetet kapod:</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>E: Unable to locate package python3-venv
-</code></pre><p>Akkor az al&#xE1;bbit futtasd:</p>
+</code></pre><p>Akkor az alábbit futtasd:</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>sudo apt install python3.6-venv
 </code></pre></blockquote>
 </div></div></div></sec>
-<h2 id="hogyan-dolgozhatsz-virtu&#xE1;lis-k&#xF6;rnyezetben">Hogyan dolgozhatsz virtu&#xE1;lis k&#xF6;rnyezetben</h2>
-<p>A fenti parancs l&#xE9;trehozott egy <code>myvenv</code> nev&#x171; (vagy b&#xE1;rmi m&#xE1;s n&#xE9;v, amit v&#xE1;lasztott&#xE1;l) k&#xF6;nyvt&#xE1;rat, ami a virtu&#xE1;lis k&#xF6;rnyezet&#xFC;nket tartalmazza (ez tulajdonk&#xE9;ppen csak egy csom&#xF3; k&#xF6;nyvt&#xE1;r &#xE9;s f&#xE1;jl).</p>
+<h2 id="hogyan-dolgozhatsz-virtuális-környezetben">Hogyan dolgozhatsz virtuális környezetben</h2>
+<p>A fenti parancs létrehozott egy <code>myvenv</code> nevű (vagy bármi más név, amit választottál) könyvtárat, ami a virtuális környezetünket tartalmazza (ez tulajdonképpen csak egy csomó könyvtár és fájl).</p>
 <sec data-title="Windows" data-id="virtualenv_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Windows<a class="pull-right section atTitle btn btn-default" target="virtualenv_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_windows"><div class="panel-body">
-<p>&#xCD;gy ind&#xED;thatod el a virtu&#xE1;lis k&#xF6;rnyezetet:</p>
+<p>Így indíthatod el a virtuális környezetet:</p>
 <pre><code>C:\Users\Name\djangogirls&gt; myvenv\Scripts\activate
 </code></pre><blockquote>
-<p><strong>MEGJEGYZ&#xC9;S:</strong> Windows 10-en lehet hogy egy hiba&#xFC;zenetet kapsz Windows PowerShell-ben, amely szerint <code>execution of scripts is disabled on this system</code> (scriptek futtat&#xE1;sa le van tiltva ezen a rendszeren). Ebben az esetben nyiss egy m&#xE1;sik Windows PowerShell-t a &quot;Run as Administrator&quot; (adminisztr&#xE1;tork&#xE9;nt futtat&#xE1;s) opci&#xF3;val.  Majd pr&#xF3;b&#xE1;ld meg az al&#xE1;bbi parancsot be&#xED;rni miel&#x151;tt elind&#xED;tod a virtu&#xE1;lis k&#xF6;rnyezetedet:</p>
+<p><strong>MEGJEGYZÉS:</strong> Windows 10-en lehet hogy egy hibaüzenetet kapsz Windows PowerShell-ben, amely szerint <code>execution of scripts is disabled on this system</code> (scriptek futtatása le van tiltva ezen a rendszeren). Ebben az esetben nyiss egy másik Windows PowerShell-t a &quot;Run as Administrator&quot; (adminisztrátorként futtatás) opcióval.  Majd próbáld meg az alábbi parancsot beírni mielőtt elindítod a virtuális környezetedet:</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>C:\WINDOWS\system32&gt; Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
     Execution Policy Change
@@ -611,27 +611,27 @@ You may need to use sudo with that command.  After installing the python3-venv p
 </code></pre></blockquote>
 </div></div></div></sec>
 <sec data-title="Linux and OS X" data-id="virtualenv_linuxosx" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Linux and OS X<a class="pull-right section atTitle btn btn-default" target="virtualenv_linuxosx"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_linuxosx"><div class="panel-body">
-<p>&#xCD;gy ind&#xED;thatod el a virtu&#xE1;lis k&#xF6;rnyezetet:</p>
+<p>Így indíthatod el a virtuális környezetet:</p>
 <pre><code>~/djangogirls$ source myvenv/bin/activate
-</code></pre><p>Fontos, hogy <code>myvenv</code> helyett azt a neved &#xED;rd be, amit a <code>virtualenv</code>-ednek v&#xE1;lasztott&#xE1;l!</p>
+</code></pre><p>Fontos, hogy <code>myvenv</code> helyett azt a neved írd be, amit a <code>virtualenv</code>-ednek választottál!</p>
 <blockquote>
-<p><strong>MEGJEGYZ&#xC9;S:</strong> n&#xE9;ha a <code>source</code> nem el&#xE9;rhet&#x151;. Ebben az esetben pr&#xF3;b&#xE1;ld meg ezt:</p>
+<p><strong>MEGJEGYZÉS:</strong> néha a <code>source</code> nem elérhető. Ebben az esetben próbáld meg ezt:</p>
 <pre><code>~/djangogirls$ . myvenv/bin/activate
 </code></pre></blockquote>
-<p>Onnan tudod, hogy a <code>virtualenv</code> elindult, hogy a konzolodban a prompt &#xED;gy n&#xE9;z ki:</p>
+<p>Onnan tudod, hogy a <code>virtualenv</code> elindult, hogy a konzolodban a prompt így néz ki:</p>
 <pre><code>(myvenv) C:\Users\Name\djangogirls&gt;
 </code></pre><p>vagy:</p>
 <pre><code>(myvenv) ~/djangogirls$
 </code></pre></div></div></div></sec>
-<p>Figyeld meg, hogy megjelent a <code>(myvenv)</code> el&#x151;tag!</p>
-<p>Ha virtu&#xE1;lis k&#xF6;rnyezetben dolgozol, a <code>python</code> parancs mindig a megfelel&#x151; Python verzi&#xF3;ra fog mutatni, teh&#xE1;t nyugodtan haszn&#xE1;lhatod a <code>python</code>-t <code>python3</code> helyett.</p>
-<p>Ok&#xE9;, most m&#xE1;r minden felt&#xE9;tel teljes&#xFC;lt. V&#xE9;gre install&#xE1;lhatjuk a Django-t!</p>
-<h2 id="a-django-telep&#xED;t&#xE9;se">A Django telep&#xED;t&#xE9;se</h2>
-<p>Most, hogy elind&#xED;tottad a <code>virtualenv</code>-et, telepiteni tudod a Django-t.</p>
-<p>Miel&#x151;tt ezt megtenn&#xE9;nk, meg kell gy&#x151;z&#x151;dn&#xFC;nk arr&#xF3;l, hogy a <code>pip</code> legfrissebb verzi&#xF3;j&#xE1;t haszn&#xE1;ljuk, amelynek seg&#xED;ts&#xE9;g&#xE9;vel fogjuk tudni telep&#xED;teni a Django-t:</p>
+<p>Figyeld meg, hogy megjelent a <code>(myvenv)</code> előtag!</p>
+<p>Ha virtuális környezetben dolgozol, a <code>python</code> parancs mindig a megfelelő Python verzióra fog mutatni, tehát nyugodtan használhatod a <code>python</code>-t <code>python3</code> helyett.</p>
+<p>Oké, most már minden feltétel teljesült. Végre installálhatjuk a Django-t!</p>
+<h2 id="a-django-telepítése">A Django telepítése</h2>
+<p>Most, hogy elindítottad a <code>virtualenv</code>-et, telepiteni tudod a Django-t.</p>
+<p>Mielőtt ezt megtennénk, meg kell győződnünk arról, hogy a <code>pip</code> legfrissebb verzióját használjuk, amelynek segítségével fogjuk tudni telepíteni a Django-t:</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>(myvenv) ~$ python3 -m pip install --upgrade pip
-</code></pre><p>Ezut&#xE1;n futtasd ezt a parancsot a konzolban: <code>pip install django~=1.11</code> (figyelj oda, hogy egy tilde karaktert haszn&#xE1;lunk, amelyet egy egyenl&#x151;s&#xE9;gjel k&#xF6;vet: <code>~=</code>).</p>
+</code></pre><p>Ezután futtasd ezt a parancsot a konzolban: <code>pip install django~=1.11</code> (figyelj oda, hogy egy tilde karaktert használunk, amelyet egy egyenlőségjel követ: <code>~=</code>).</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>(myvenv) ~$ pip install django~=1.11.0
 Collecting django~=1.11.0
@@ -640,49 +640,49 @@ Installing collected packages: django
 Successfully installed django-1.11.3
 </code></pre><sec data-title="Windowson" data-id="django_err_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Windowson<a class="pull-right section atTitle btn btn-default" target="django_err_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_err_windows"><div class="panel-body">
 <blockquote>
-<p>Ha hib&#xE1;t kapsz, amikor a pip-et h&#xED;vod Windowson, n&#xE9;zd meg, hogy tartalmaz-e a projekted el&#xE9;r&#xE9;si &#xFA;tvonala sz&#xF3;k&#xF6;zt, &#xE9;kezetet, vagy speci&#xE1;lis karaktereket (pl. <code>C:\Users\User Name\djangogirls</code>). Ha igen, haszn&#xE1;lj helyette egy olyan k&#xF6;nyvt&#xE1;rat, ahol nincsenek sz&#xF3;k&#xF6;z&#xF6;k, &#xE9;kezetek vagy speci&#xE1;lis karakterek (javaslat: <code>C:\djangogirls</code>). Hozd l&#xE9;tre az &#xFA;j k&#xF6;nyvt&#xE1;rat, &#xE9;s abban egy &#xFA;j virtualenvet, majd t&#xF6;r&#xF6;ld ki a r&#xE9;git &#xE9;s az &#xFA;j helyen pr&#xF3;b&#xE1;ld futtatni az el&#x151;z&#x151; parancsot. (A virtualenv k&#xF6;nyvt&#xE1;r &#xE1;thelyez&#xE9;se nem fog m&#x171;k&#xF6;dni, mert a virtualenv abszol&#xFA;t el&#xE9;r&#xE9;si utakat haszn&#xE1;l.)</p>
+<p>Ha hibát kapsz, amikor a pip-et hívod Windowson, nézd meg, hogy tartalmaz-e a projekted elérési útvonala szóközt, ékezetet, vagy speciális karaktereket (pl. <code>C:\Users\User Name\djangogirls</code>). Ha igen, használj helyette egy olyan könyvtárat, ahol nincsenek szóközök, ékezetek vagy speciális karakterek (javaslat: <code>C:\djangogirls</code>). Hozd létre az új könyvtárat, és abban egy új virtualenvet, majd töröld ki a régit és az új helyen próbáld futtatni az előző parancsot. (A virtualenv könyvtár áthelyezése nem fog működni, mert a virtualenv abszolút elérési utakat használ.)</p>
 </blockquote>
 </div></div></div></sec>
-<sec data-title="Windows 8 &#xE9;s Windows 10" data-id="django_err_windows8and10" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Windows 8 &#xE9;s Windows 10<a class="pull-right section atTitle btn btn-default" target="django_err_windows8and10"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_err_windows8and10"><div class="panel-body">
+<sec data-title="Windows 8 és Windows 10" data-id="django_err_windows8and10" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Windows 8 és Windows 10<a class="pull-right section atTitle btn btn-default" target="django_err_windows8and10"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_err_windows8and10"><div class="panel-body">
 <blockquote>
-<p>A parancssorod &quot;megfagyhat&quot; miut&#xE1;n telep&#xED;teni pr&#xF3;b&#xE1;lod a Django-t. Ha ez t&#xF6;rt&#xE9;nik, az el&#x151;z&#x151; parancs helyett pr&#xF3;b&#xE1;ld meg ezt:</p>
+<p>A parancssorod &quot;megfagyhat&quot; miután telepíteni próbálod a Django-t. Ha ez történik, az előző parancs helyett próbáld meg ezt:</p>
 <p></p><p class="code-label">parancssor</p><p></p>
 <pre><code>C:\Users\Name\djangogirls&gt; python -m pip install django~=1.11.0
 </code></pre></blockquote>
 </div></div></div></sec>
 <sec data-title="Linux" data-id="django_err_linux" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Linux<a class="pull-right section atTitle btn btn-default" target="django_err_linux"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_err_linux"><div class="panel-body">
 <blockquote>
-<p>Ha Ubuntu 12.04 alatt hib&#xE1;t kapsz, amikor a pip-et pr&#xF3;b&#xE1;lod h&#xED;vni, futtasd a <code>python -m pip install -U --force-reinstall pip</code> parancsot, hogy megjav&#xED;tsd a virtualenv-ben a pip feltelep&#xED;tett verzi&#xF3;j&#xE1;t.</p>
+<p>Ha Ubuntu 12.04 alatt hibát kapsz, amikor a pip-et próbálod hívni, futtasd a <code>python -m pip install -U --force-reinstall pip</code> parancsot, hogy megjavítsd a virtualenv-ben a pip feltelepített verzióját.</p>
 </blockquote>
 </div></div></div></sec>
-<p>Ennyi! Most pedig (v&#xE9;gre) l&#xE9;trehozhatod a Django alkalmaz&#xE1;sodat!</p>
-<h1 id="k&#xF3;dszerkeszt&#x151;-telep&#xED;t&#xE9;se">K&#xF3;dszerkeszt&#x151; telep&#xED;t&#xE9;se</h1>
-<p>Sokf&#xE9;le k&#xF3;dszerkeszt&#x151; program l&#xE9;tezik, &#xE9;s val&#xF3;j&#xE1;ban &#xED;zl&#xE9;s k&#xE9;rd&#xE9;se, hogy ki melyiket v&#xE1;lasztja. A legt&#xF6;bb Python programoz&#xF3; bonyolult fejleszt&#x151;i k&#xF6;rnyezetet (IDE - Integrated Development Environment) haszn&#xE1;l, mint p&#xE9;ld&#xE1;ul a PyCharm. Egy kezd&#x151;nek viszont nem ezek a legmegfelel&#x151;bbek. A programok, amiket mi aj&#xE1;nlunk, hasonl&#xF3;an hat&#xE9;konyak, de haszn&#xE1;latuk sokkal egyszer&#x171;bb.</p>
-<p>Mi az al&#xE1;bbiakat javasoljuk, de nyugodtan k&#xE9;rj seg&#xED;ts&#xE9;get a coach-odt&#xF3;l, &#x151; is k&#xF6;nnyen tud tan&#xE1;csot adni ez &#xFC;gyben.</p>
+<p>Ennyi! Most pedig (végre) létrehozhatod a Django alkalmazásodat!</p>
+<h1 id="kódszerkesztő-telepítése">Kódszerkesztő telepítése</h1>
+<p>Sokféle kódszerkesztő program létezik, és valójában ízlés kérdése, hogy ki melyiket választja. A legtöbb Python programozó bonyolult fejlesztői környezetet (IDE - Integrated Development Environment) használ, mint például a PyCharm. Egy kezdőnek viszont nem ezek a legmegfelelőbbek. A programok, amiket mi ajánlunk, hasonlóan hatékonyak, de használatuk sokkal egyszerűbb.</p>
+<p>Mi az alábbiakat javasoljuk, de nyugodtan kérj segítséget a coach-odtól, ő is könnyen tud tanácsot adni ez ügyben.</p>
 <h2 id="gedit">Gedit</h2>
-<p>A Gedit egy open-source (ny&#xED;lt forr&#xE1;sk&#xF3;d&#xFA;), ingyenes k&#xF3;dszerkeszt&#x151;, az &#xF6;sszes jelenlegi oper&#xE1;ci&#xF3;s rendszeren el&#xE9;rhet&#x151;.</p>
-<p><a href="https://wiki.gnome.org/Apps/Gedit#Download" target="_blank">Let&#xF6;lt&#xE9;s</a></p>
+<p>A Gedit egy open-source (nyílt forráskódú), ingyenes kódszerkesztő, az összes jelenlegi operációs rendszeren elérhető.</p>
+<p><a href="https://wiki.gnome.org/Apps/Gedit#Download" target="_blank">Letöltés</a></p>
 <h2 id="sublime-text-3">Sublime Text 3</h2>
-<p>A Sublime Text egy nagyon n&#xE9;pszer&#x171; editor, ingyenes pr&#xF3;baid&#x151;vel. K&#xF6;nny&#x171; telep&#xED;teni &#xE9;s haszn&#xE1;lni, &#xE9;s minden oper&#xE1;ci&#xF3;s rendszeren el&#xE9;rhet&#x151;.</p>
-<p><a href="https://www.sublimetext.com/3" target="_blank">Let&#xF6;lt&#xE9;s</a></p>
+<p>A Sublime Text egy nagyon népszerű editor, ingyenes próbaidővel. Könnyű telepíteni és használni, és minden operációs rendszeren elérhető.</p>
+<p><a href="https://www.sublimetext.com/3" target="_blank">Letöltés</a></p>
 <h2 id="atom">Atom</h2>
-<p>Az Atom egy teljesen &#xFA;j k&#xF3;dszerkeszt&#x151;, amelyet a <a href="https://github.com/" target="_blank">GitHub</a> hozott l&#xE9;tre. Ingyenes, ny&#xED;lt forr&#xE1;sk&#xF3;d&#xFA;, k&#xF6;nnyen telep&#xED;thet&#x151; &#xE9;s k&#xF6;nnyen haszn&#xE1;lhat&#xF3;. El&#xE9;rhet&#x151; Windows-on, OSX-en &#xE9;s Linuxon.</p>
-<p><a href="https://atom.io/" target="_blank">Let&#xF6;lt&#xE9;s</a></p>
-<h2 id="mi&#xE9;rt-telep&#xED;t&#xFC;nk-k&#xF3;dszerkeszt&#x151;t">Mi&#xE9;rt telep&#xED;t&#xFC;nk k&#xF3;dszerkeszt&#x151;t?</h2>
-<p>Most tal&#xE1;n azon gondolkozol, mi&#xE9;rt telep&#xED;t&#xFC;nk speci&#xE1;lis k&#xF3;dszerkeszt&#x151;t, ahelyett, hogy a Word vagy a Notepad alkalmaz&#xE1;st haszn&#xE1;ln&#xE1;nk.</p>
-<p>Az els&#x151; ok az, hogy a k&#xF3;dot <strong>egyszer&#x171; sz&#xF6;vegk&#xE9;nt</strong> kell szerkeszteni. Az &#xE1;ltal&#xE1;nos (nem programoz&#xF3;knak sz&#xE1;nt) sz&#xF6;vegszerkeszt&#x151;kkel, mint a Word &#xE9;s a Textedit, az a probl&#xE9;ma, hogy nem egyszer&#x171; sz&#xF6;veges f&#xE1;jlt &#xE1;ll&#xED;tanak el&#x151;, hanem form&#xE1;zott dokumentumot (p&#xE9;ld&#xE1;ul <a href="https://en.wikipedia.org/wiki/Rich_Text_Format" target="_blank">RTF (Rich Text Format)</a> form&#xE1;tumban), amelyben sz&#xE1;m&#xED;t p&#xE9;ld&#xE1;ul a bet&#x171;t&#xED;pus, form&#xE1;z&#xE1;s, stb.</p>
-<p>A m&#xE1;sodsorban ezek a programoz&#xE1;shoz tervezett sz&#xF6;vegszerkeszt&#x151;k kifejezetten k&#xF3;dszerkeszt&#xE9;sre szakosodtak, ami azt jelenti hogy k&#xFC;l&#xF6;nb&#xF6;z&#x151; funkci&#xF3;kkal seg&#xED;tik a munk&#xE1;t, mint p&#xE9;ld&#xE1;ul a programk&#xF3;d r&#xE9;szeinek, szavainak kiemel&#xE9;se annak jelent&#xE9;se alapj&#xE1;n, vagy az automatikus kieg&#xE9;sz&#xED;t&#xE9;s.</p>
-<p>Ezt mind l&#xE1;tni fogjuk a k&#xE9;s&#x151;bbiekben. Hamarosan &#xFA;gy fogsz gondolni a j&#xF3; &#xF6;reg megb&#xED;zhat&#xF3; k&#xF3;dszerkeszt&#x151;dre, mint az egyik kedvenc eszk&#xF6;z&#xF6;dre :)</p>
-<h1 id="a-git-telep&#xED;t&#xE9;se">A Git telep&#xED;t&#xE9;se</h1>
-<p>A Git egy &quot;version control system&quot; (VCS, magyarul verzi&#xF3;kezel&#x151; rendszer), amit sok programoz&#xF3; haszn&#xE1;l. Ez a szoftver nyomon k&#xF6;vet minden v&#xE1;ltoz&#xE1;st a f&#xE1;jlokban, &#xED;gy a k&#xE9;s&#x151;bbiekben is visszat&#xE9;rhet&#xFC;nk egy bizonyos r&#xE9;gebbi verzi&#xF3;hoz. Valamelyest hasonl&#xED;t a &quot;v&#xE1;ltoz&#xE1;sok nyomon k&#xF6;vet&#xE9;se&quot; funkci&#xF3;hoz a Microsoft Wordben, de ez j&#xF3;val hat&#xE9;konyabb.</p>
-<h2 id="git-telep&#xED;t&#xE9;se">Git telep&#xED;t&#xE9;se</h2>
+<p>Az Atom egy teljesen új kódszerkesztő, amelyet a <a href="https://github.com/" target="_blank">GitHub</a> hozott létre. Ingyenes, nyílt forráskódú, könnyen telepíthető és könnyen használható. Elérhető Windows-on, OSX-en és Linuxon.</p>
+<p><a href="https://atom.io/" target="_blank">Letöltés</a></p>
+<h2 id="miért-telepítünk-kódszerkesztőt">Miért telepítünk kódszerkesztőt?</h2>
+<p>Most talán azon gondolkozol, miért telepítünk speciális kódszerkesztőt, ahelyett, hogy a Word vagy a Notepad alkalmazást használnánk.</p>
+<p>Az első ok az, hogy a kódot <strong>egyszerű szövegként</strong> kell szerkeszteni. Az általános (nem programozóknak szánt) szövegszerkesztőkkel, mint a Word és a Textedit, az a probléma, hogy nem egyszerű szöveges fájlt állítanak elő, hanem formázott dokumentumot (például <a href="https://en.wikipedia.org/wiki/Rich_Text_Format" target="_blank">RTF (Rich Text Format)</a> formátumban), amelyben számít például a betűtípus, formázás, stb.</p>
+<p>A másodsorban ezek a programozáshoz tervezett szövegszerkesztők kifejezetten kódszerkesztésre szakosodtak, ami azt jelenti hogy különböző funkciókkal segítik a munkát, mint például a programkód részeinek, szavainak kiemelése annak jelentése alapján, vagy az automatikus kiegészítés.</p>
+<p>Ezt mind látni fogjuk a későbbiekben. Hamarosan úgy fogsz gondolni a jó öreg megbízható kódszerkesztődre, mint az egyik kedvenc eszközödre :)</p>
+<h1 id="a-git-telepítése">A Git telepítése</h1>
+<p>A Git egy &quot;version control system&quot; (VCS, magyarul verziókezelő rendszer), amit sok programozó használ. Ez a szoftver nyomon követ minden változást a fájlokban, így a későbbiekben is visszatérhetünk egy bizonyos régebbi verzióhoz. Valamelyest hasonlít a &quot;változások nyomon követése&quot; funkcióhoz a Microsoft Wordben, de ez jóval hatékonyabb.</p>
+<h2 id="git-telepítése">Git telepítése</h2>
 <sec data-title="Windows" data-id="git_install_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Windows<a class="pull-right section atTitle btn btn-default" target="git_install_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="git_install_windows"><div class="panel-body">
-<p>A Gitet innen t&#xF6;ltheted le: <a href="https://git-scm.com/" target="_blank">git-scm.com</a>. Telep&#xED;t&#xE9;se: csak kattints a &quot;next&quot; gombra eg&#xE9;szen addig, am&#xED;g el nem &#xE9;rsz az &#xF6;t&#xF6;dik l&#xE9;p&#xE9;sig - &quot;Adjusting your PATH environment&quot; c&#xED;mmel - itt v&#xE1;laszd ki a &quot;Run Git and associated Unix tools from the Windows command-line&quot; lehet&#x151;s&#xE9;get (keresd alul). Ezen k&#xED;v&#xFC;l a t&#xF6;bbi maradhat az alapbe&#xE1;ll&#xED;t&#xE1;son. Checkout Windows-style, commit Unix-style line endings - ezek is maradhatnak &#xED;gy.</p>
+<p>A Gitet innen töltheted le: <a href="https://git-scm.com/" target="_blank">git-scm.com</a>. Telepítése: csak kattints a &quot;next&quot; gombra egészen addig, amíg el nem érsz az ötödik lépésig - &quot;Adjusting your PATH environment&quot; címmel - itt válaszd ki a &quot;Run Git and associated Unix tools from the Windows command-line&quot; lehetőséget (keresd alul). Ezen kívül a többi maradhat az alapbeállításon. Checkout Windows-style, commit Unix-style line endings - ezek is maradhatnak így.</p>
 </div></div></div></sec>
 <sec data-title="OS X" data-id="git_install_OSX" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>OS X<a class="pull-right section atTitle btn btn-default" target="git_install_OSX"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="git_install_OSX"><div class="panel-body">
-<p>T&#xF6;ltsd le a Git-tet az al&#xE1;bbi linken: <a href="https://git-scm.com/" target="_blank">git-scm.com</a>, majd k&#xF6;vesd az utas&#xED;t&#xE1;sokat.</p>
+<p>Töltsd le a Git-tet az alábbi linken: <a href="https://git-scm.com/" target="_blank">git-scm.com</a>, majd kövesd az utasításokat.</p>
 <blockquote>
-<p><strong>Megjegyz&#xE9;s</strong> Ha OS X 10.6, 10.7, vagy 10.8-et haszn&#xE1;lsz, Az ezen a linken el&#xE9;rhet&#x151; verzi&#xF3;t kell telep&#xED;tened: <a href="https://sourceforge.net/projects/git-osx-installer/files/git-2.3.5-intel-universal-snow-leopard.dmg/download" target="_blank">Git telept&#x151; OS X Snow Leopard-ra</a></p>
+<p><strong>Megjegyzés</strong> Ha OS X 10.6, 10.7, vagy 10.8-et használsz, Az ezen a linken elérhető verziót kell telepítened: <a href="https://sourceforge.net/projects/git-osx-installer/files/git-2.3.5-intel-universal-snow-leopard.dmg/download" target="_blank">Git teleptő OS X Snow Leopard-ra</a></p>
 </blockquote>
 </div></div></div></sec>
 <sec data-title="Debian or Ubuntu" data-id="git_install_debian_ubuntu" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Debian or Ubuntu<a class="pull-right section atTitle btn btn-default" target="git_install_debian_ubuntu"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="git_install_debian_ubuntu"><div class="panel-body">
@@ -705,24 +705,24 @@ Successfully installed django-1.11.3
 <pre><code class="lang-bash">$ sudo zypper install git
 </code></pre>
 </div></div></div></sec>
-<h1 id="github-fi&#xF3;k-l&#xE9;trehoz&#xE1;sa">GitHub fi&#xF3;k l&#xE9;trehoz&#xE1;sa</h1>
-<p>Menj a <a href="https://www.github.com" target="_blank">GitHub.com</a> oldalra, &#xE9;s hozz l&#xE9;tre egy &#xFA;j, ingyenes felhaszn&#xE1;l&#xF3;i fi&#xF3;kot.</p>
-<h1 id="pythonanywhere-felhaszn&#xE1;l&#xF3;-l&#xE9;trehoz&#xE1;sa">PythonAnywhere felhaszn&#xE1;l&#xF3; l&#xE9;trehoz&#xE1;sa</h1>
-<p>Most itt az ideje, hogy l&#xE9;trehozz magadnak egy ingyenes, &quot;Kezd&#x151;&quot; (&quot;Beginner&quot;) fi&#xF3;kot a PythonAnywhere oldalon.</p>
+<h1 id="github-fiók-létrehozása">GitHub fiók létrehozása</h1>
+<p>Menj a <a href="https://www.github.com" target="_blank">GitHub.com</a> oldalra, és hozz létre egy új, ingyenes felhasználói fiókot.</p>
+<h1 id="pythonanywhere-felhasználó-létrehozása">PythonAnywhere felhasználó létrehozása</h1>
+<p>Most itt az ideje, hogy létrehozz magadnak egy ingyenes, &quot;Kezdő&quot; (&quot;Beginner&quot;) fiókot a PythonAnywhere oldalon.</p>
 <ul>
 <li><a href="https://www.pythonanywhere.com/" target="_blank">www.pythonanywhere.com</a></li>
 </ul>
 <blockquote>
-<p><strong>Megjegyz&#xE9;s:</strong> A blogod c&#xED;me, vagyis URL-je <code>felhaszn&#xE1;l&#xF3;n&#xE9;v.pythonanywhere.com</code> lesz, vagyis &#xE9;rdemes a regisztr&#xE1;ci&#xF3;kor felhaszn&#xE1;l&#xF3;n&#xE9;vnek vagy a saj&#xE1;t becenevedet v&#xE1;lasztani, vagy a blogod t&#xE9;m&#xE1;j&#xE1;hoz kapcsol&#xF3;d&#xF3; nevet.</p>
+<p><strong>Megjegyzés:</strong> A blogod címe, vagyis URL-je <code>felhasználónév.pythonanywhere.com</code> lesz, vagyis érdemes a regisztrációkor felhasználónévnek vagy a saját becenevedet választani, vagy a blogod témájához kapcsolódó nevet.</p>
 </blockquote>
-<h1 id="kezdheted-az-olvas&#xE1;st">Kezdheted az olvas&#xE1;st</h1>
-<p>Gratul&#xE1;lunk, k&#xE9;szen &#xE1;llsz a tutorialra! Ha van egy kis id&#x151;d a workshop el&#x151;tt, hasznos lehet, ha elolvasod az els&#x151; n&#xE9;h&#xE1;ny fejezetet:</p>
+<h1 id="kezdheted-az-olvasást">Kezdheted az olvasást</h1>
+<p>Gratulálunk, készen állsz a tutorialra! Ha van egy kis időd a workshop előtt, hasznos lehet, ha elolvasod az első néhány fejezetet:</p>
 <ul>
-<li><p><a href="../how_the_internet_works/">Hogy m&#x171;k&#xF6;dik az Internet</a></p>
+<li><p><a href="../how_the_internet_works/">Hogy működik az Internet</a></p>
 </li>
-<li><p><a href="../intro_to_command_line/">Bevezet&#xE9;s a parancsssor haszn&#xE1;lat&#xE1;ba</a></p>
+<li><p><a href="../intro_to_command_line/">Bevezetés a parancsssor használatába</a></p>
 </li>
-<li><p><a href="../python_introduction/">Bevezet&#xE9;s a Pythonba</a></p>
+<li><p><a href="../python_introduction/">Bevezetés a Pythonba</a></p>
 </li>
 <li><p><a href="../django/">Mi a Django?</a></p>
 </li>
@@ -770,12 +770,56 @@ Successfully installed django-1.11.3
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Installáció","level":"1.2","depth":1,"next":{"title":"Hogy működik az Internet?","level":"1.3","depth":1,"path":"how_the_internet_works/README.md","ref":"how_the_internet_works/README.md","articles":[]},"previous":{"title":"Bevezetés","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"hu","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"installation/README.md","mtime":"2020-09-22T11:43:42.886Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"hu"}});
+            gitbook.page.hasChanged({"page":{"title":"Installáció","level":"1.2","depth":1,"next":{"title":"Hogy működik az Internet?","level":"1.3","depth":1,"path":"how_the_internet_works/README.md","ref":"how_the_internet_works/README.md","articles":[]},"previous":{"title":"Bevezetés","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"hu","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"installation/README.md","mtime":"2020-11-15T14:54:56.470Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"hu"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

@@ -7,7 +7,7 @@
         <title>Erweitere deine Anwendung · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -622,12 +622,12 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="erweitere-deine-anwendung">Erweitere deine Anwendung</h1>
-<p>Wir haben bereits die verschiedenen Schritte f&#xFC;r die Erstellung unserer Website abgeschlossen: Wir wissen, wie man Models, URLs, Views und Templates schreibt. Wir wissen auch, wie wir unsere Website versch&#xF6;nern.</p>
-<p>Zeit zu &#xFC;ben!</p>
+<p>Wir haben bereits die verschiedenen Schritte für die Erstellung unserer Website abgeschlossen: Wir wissen, wie man Models, URLs, Views und Templates schreibt. Wir wissen auch, wie wir unsere Website verschönern.</p>
+<p>Zeit zu üben!</p>
 <p>Das erste, was unser Blog braucht, ist eine Seite, auf der ein einzelner Blogpost dargestellt wird, oder?</p>
-<p>Wir haben bereits ein <code>Post</code>-Model, deshalb brauchen wir nichts zur <code>models.py</code> hinzuf&#xFC;gen.</p>
-<h2 id="erstelle-eine-template-verkn&#xFC;pfung">Erstelle eine Template-Verkn&#xFC;pfung</h2>
-<p>Wir beginnen damit, einen Link in der <code>blog/templates/blog/post_list.html</code>-Datei zu erstellen. &#xD6;ffne sie im Code-Editor, und bisher sollte sie etwa so aussehen: </p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
+<p>Wir haben bereits ein <code>Post</code>-Model, deshalb brauchen wir nichts zur <code>models.py</code> hinzufügen.</p>
+<h2 id="erstelle-eine-template-verknüpfung">Erstelle eine Template-Verknüpfung</h2>
+<p>Wir beginnen damit, einen Link in der <code>blog/templates/blog/post_list.html</code>-Datei zu erstellen. Öffne sie im Code-Editor, und bisher sollte sie etwa so aussehen: </p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
 
 {% block content %}
@@ -642,19 +642,19 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>Wir wollen einen Link vom Titel eines Posts in der Post-Liste zur Detailseite des jeweiligen Posts haben. &#xC4;ndern wir <code>&lt;h2&gt;&lt;a href=&quot;&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/h2&gt;</code>, so dass es zu der Detailseite verlinkt:</p>
+<p>Wir wollen einen Link vom Titel eines Posts in der Post-Liste zur Detailseite des jeweiligen Posts haben. Ändern wir <code>&lt;h2&gt;&lt;a href=&quot;&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/h2&gt;</code>, so dass es zu der Detailseite verlinkt:</p>
 <p></p><p class="code-label"><span class="glyphicon glyphicon-exclamation-sign" style="color: red;" aria-hidden="true" data-toggle="tooltip" title="An error is expected when you run this code!"></span> blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;post_detail&apos; pk=post.pk %}&quot;</span>&gt;</span>{{ post.title }}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 </code></pre>
-<p>Es ist an der Zeit, das mysteri&#xF6;se <code>{% url &apos;post_detail&apos; pk=post.pk %}</code> zu erkl&#xE4;ren. Wie du dir wahrscheinlich schon denkst, bedeutet <code>{% %}</code>, dass wir Django-Template-Tags verwenden. Dieses Mal verwenden wir eines, das eine URL f&#xFC;r uns erzeugen wird! </p>
+<p>Es ist an der Zeit, das mysteriöse <code>{% url &apos;post_detail&apos; pk=post.pk %}</code> zu erklären. Wie du dir wahrscheinlich schon denkst, bedeutet <code>{% %}</code>, dass wir Django-Template-Tags verwenden. Dieses Mal verwenden wir eines, das eine URL für uns erzeugen wird! </p>
 <p>Der <code>post_detail</code>-Teil bedeutet, dass Django eine URL in <code>blog/urls.py</code> mit dem Namen name=post_detail erwartet.</p>
-<p>Und was ist mit <code>pk=post.pk</code>? <code>pk</code> ist die Abk&#xFC;rzung f&#xFC;r primary key (zu Deutsch: Prim&#xE4;r-Schl&#xFC;ssel), ein eineindeutiges Identifikationsmerkmal zu jedem Eintrag in einer Datenbank. Jedes Django-Modell hat ein Feld, das als Prim&#xE4;r-Schl&#xFC;ssel dient. Welchen Namen dieses Feld auch haben mag, es kann ebenfalls als &quot;pk&quot; referenziert werden. Da wir keinen Prim&#xE4;r-Schl&#xFC;ssel in unserem <code>Post</code>-Modell angelegt haben, erstellt Django einen f&#xFC;r uns (standardm&#xE4;&#xDF;ig ist dies ein Feld namens &quot;id&quot;, welches eine Zahl enth&#xE4;lt, die mit jedem weiteren Eintrag nach oben gez&#xE4;hlt wird, z.B. 1, 2, 3) und f&#xFC;gt ihn als Feld zu jedem unserer Posts hinzu. Wir greifen auf den Prim&#xE4;r-Schl&#xFC;ssel zu, indem wir <code>post.pk</code> schreiben, genauso wie wir auf andere Felder (<code>title</code>, <code>author</code>, usw.) in unserem <code>Post</code>-Objekt zugreifen!</p>
-<p>Wenn wir jetzt <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a> aufrufen, erhalten wir einen Fehler (wie erwartet, da wir ja noch keine URL oder <em>View</em> f&#xFC;r <code>post_detail</code> erstellt haben). Er wird so aussehen:</p>
+<p>Und was ist mit <code>pk=post.pk</code>? <code>pk</code> ist die Abkürzung für primary key (zu Deutsch: Primär-Schlüssel), ein eineindeutiges Identifikationsmerkmal zu jedem Eintrag in einer Datenbank. Jedes Django-Modell hat ein Feld, das als Primär-Schlüssel dient. Welchen Namen dieses Feld auch haben mag, es kann ebenfalls als &quot;pk&quot; referenziert werden. Da wir keinen Primär-Schlüssel in unserem <code>Post</code>-Modell angelegt haben, erstellt Django einen für uns (standardmäßig ist dies ein Feld namens &quot;id&quot;, welches eine Zahl enthält, die mit jedem weiteren Eintrag nach oben gezählt wird, z.B. 1, 2, 3) und fügt ihn als Feld zu jedem unserer Posts hinzu. Wir greifen auf den Primär-Schlüssel zu, indem wir <code>post.pk</code> schreiben, genauso wie wir auf andere Felder (<code>title</code>, <code>author</code>, usw.) in unserem <code>Post</code>-Objekt zugreifen!</p>
+<p>Wenn wir jetzt <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a> aufrufen, erhalten wir einen Fehler (wie erwartet, da wir ja noch keine URL oder <em>View</em> für <code>post_detail</code> erstellt haben). Er wird so aussehen:</p>
 <p><img src="images/no_reverse_match2.png" alt="NoReverseMatch Error"></p>
-<h2 id="erstelle-eine-url-f&#xFC;r-die-post-detailseite">Erstelle eine URL f&#xFC;r die Post-Detailseite</h2>
-<p>Lass uns eine URL in <code>urls.py</code> f&#xFC;r unsere <code>post_detail</code>-<em>View</em> erstellen!</p>
+<h2 id="erstelle-eine-url-für-die-post-detailseite">Erstelle eine URL für die Post-Detailseite</h2>
+<p>Lass uns eine URL in <code>urls.py</code> für unsere <code>post_detail</code>-<em>View</em> erstellen!</p>
 <p>Wir wollen, dass unsere erste Blogpost-Detailseite unter dieser <strong>URL</strong> angezeigt wird: <a href="http://127.0.0.1:8000/post/1/" target="_blank">http://127.0.0.1:8000/post/1/</a></p>
-<p>Lass uns eine URL in der Datei <code>blog/urls.py</code> anlegen, um Django auf die <em>View</em> <code>post_detail</code> zu verweisen, welche dann den ganzen Blogpost anzeigen wird. &#xD6;ffne die Datei <code>blog/urls.py</code> im Code-Editor und f&#xFC;ge die Zeile <code>path(&apos;post/&lt;int:pk&gt;/&apos;, views.post_detail, name=&apos;post_detail&apos;),</code> hinzu, so dass die Datei wie folgt aussieht:</p>
+<p>Lass uns eine URL in der Datei <code>blog/urls.py</code> anlegen, um Django auf die <em>View</em> <code>post_detail</code> zu verweisen, welche dann den ganzen Blogpost anzeigen wird. Öffne die Datei <code>blog/urls.py</code> im Code-Editor und füge die Zeile <code>path(&apos;post/&lt;int:pk&gt;/&apos;, views.post_detail, name=&apos;post_detail&apos;),</code> hinzu, so dass die Datei wie folgt aussieht:</p>
 <p></p><p class="code-label"><span class="glyphicon glyphicon-exclamation-sign" style="color: red;" aria-hidden="true" data-toggle="tooltip" title="An error is expected when you run this code!"></span> blog/urls.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path
 <span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> views
@@ -664,34 +664,34 @@ urlpatterns = [
     path(<span class="hljs-string">&apos;post/&lt;int:pk&gt;/&apos;</span>, views.post_detail, name=<span class="hljs-string">&apos;post_detail&apos;</span>),
 ]
 </code></pre>
-<p>Der Teil <code>post/&lt;int:pk&gt;/</code> definiert ein URL-Muster &#x2013; wir erkl&#xE4;ren es dir:</p>
+<p>Der Teil <code>post/&lt;int:pk&gt;/</code> definiert ein URL-Muster – wir erklären es dir:</p>
 <ul>
-<li><code>post/</code> hei&#xDF;t, dass die URL mit dem Wort <strong>post</strong> beginnen sollte, gefolgt von einem <strong>/</strong>. So weit, so gut.</li>
-<li><code>&lt;int:pk&gt;</code> &#x2013; Dieser Teil ist schwieriger. Er bedeutet, dass Django eine Ganzzahl (einen Integer-Wert) erwartet und diese in Form einer Variablen namens <code>pk</code> einer View weitergibt.</li>
-<li><code>/</code> &#x2013; dann brauchen wir vor dem Abschluss der URL wieder einen <strong>/</strong>.</li>
+<li><code>post/</code> heißt, dass die URL mit dem Wort <strong>post</strong> beginnen sollte, gefolgt von einem <strong>/</strong>. So weit, so gut.</li>
+<li><code>&lt;int:pk&gt;</code> – Dieser Teil ist schwieriger. Er bedeutet, dass Django eine Ganzzahl (einen Integer-Wert) erwartet und diese in Form einer Variablen namens <code>pk</code> einer View weitergibt.</li>
+<li><code>/</code> – dann brauchen wir vor dem Abschluss der URL wieder einen <strong>/</strong>.</li>
 </ul>
-<p>Wenn du also <code>http://127.0.0.1:8000/post/5/</code> in deinen Browser eingibst, wird Django verstehen, dass du nach einer <em>View</em> suchst, die <code>post_detail</code> hei&#xDF;t, und wird der <em>View</em> die Information weitergeben, dass <code>pk</code> dabei <code>5</code> sein soll.</p>
-<p>So, jetzt haben wir der <code>blog/urls.py</code> ein neues URL-Muster hinzugef&#xFC;gt! Lass uns die Seite <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a> neu laden - Bumm! Der Server l&#xE4;uft wieder nicht mehr. Schau in die Konsole - wie erwartet gibt es noch einen anderen Fehler!</p>
+<p>Wenn du also <code>http://127.0.0.1:8000/post/5/</code> in deinen Browser eingibst, wird Django verstehen, dass du nach einer <em>View</em> suchst, die <code>post_detail</code> heißt, und wird der <em>View</em> die Information weitergeben, dass <code>pk</code> dabei <code>5</code> sein soll.</p>
+<p>So, jetzt haben wir der <code>blog/urls.py</code> ein neues URL-Muster hinzugefügt! Lass uns die Seite <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a> neu laden - Bumm! Der Server läuft wieder nicht mehr. Schau in die Konsole - wie erwartet gibt es noch einen anderen Fehler!</p>
 <p><img src="images/attribute_error2.png" alt="AttributeError"></p>
-<p>Erinnerst du dich, was der n&#xE4;chste Schritt ist? Eine View hinzuf&#xFC;gen!</p>
-<h2 id="f&#xFC;ge-eine-view-hinzu">F&#xFC;ge eine View hinzu</h2>
-<p>Dieses Mal bekommt unsere <em>View</em> den extra Parameter <code>pk</code>. Unsere <em>View</em> muss diesen entgegennehmen, richtig? Also definieren wir unsere Funktion als <code>def post_detail(request, pk)</code>. Beachte, dass der Parameter genau den gleichen Variablennamen haben muss, wie wir in <code>urls</code> festgelegt haben (<code>pk</code>). Beachte zudem, dass das Weglassen dieser Variable unzul&#xE4;ssig ist und zu einem Fehler f&#xFC;hrt!</p>
-<p>Jetzt ben&#xF6;tigen wir also genau einen bestimmten Blogpost. Diesen finden wir, indem wir ein QuerySet folgenderma&#xDF;en schreiben:</p>
+<p>Erinnerst du dich, was der nächste Schritt ist? Eine View hinzufügen!</p>
+<h2 id="füge-eine-view-hinzu">Füge eine View hinzu</h2>
+<p>Dieses Mal bekommt unsere <em>View</em> den extra Parameter <code>pk</code>. Unsere <em>View</em> muss diesen entgegennehmen, richtig? Also definieren wir unsere Funktion als <code>def post_detail(request, pk)</code>. Beachte, dass der Parameter genau den gleichen Variablennamen haben muss, wie wir in <code>urls</code> festgelegt haben (<code>pk</code>). Beachte zudem, dass das Weglassen dieser Variable unzulässig ist und zu einem Fehler führt!</p>
+<p>Jetzt benötigen wir also genau einen bestimmten Blogpost. Diesen finden wir, indem wir ein QuerySet folgendermaßen schreiben:</p>
 <p></p><p class="code-label"><span class="glyphicon glyphicon-exclamation-sign" style="color: red;" aria-hidden="true" data-toggle="tooltip" title="An error is expected when you run this code!"></span> blog/views.py</p><p></p>
 <pre><code class="lang-python">Post.objects.get(pk=pk)
 </code></pre>
-<p>Aber bei diesem Code gibt es ein Problem. Wenn es kein <code>Post</code>-Objekt mit diesem <code>primary key</code> (<code>pk</code>) gibt, bekommen wir einen super-h&#xE4;sslichen Fehler!</p>
+<p>Aber bei diesem Code gibt es ein Problem. Wenn es kein <code>Post</code>-Objekt mit diesem <code>primary key</code> (<code>pk</code>) gibt, bekommen wir einen super-hässlichen Fehler!</p>
 <p><img src="images/does_not_exist2.png" alt="DoesNotExist Error"></p>
-<p>Das wollen wir nicht! Zum Gl&#xFC;ck stellt uns Django etwas zur Verf&#xFC;gung, das uns dieses Problem abnimmt: <code>get_object_or_404</code>. Wenn es kein <code>Post</code>-Objekt mit einem gegebenen <code>pk</code> gibt, wird eine sch&#xF6;ne Seite angezeigt, die sogenannte <code>Page Not Found 404</code>-Seite (&quot;Seite nicht gefunden&quot;-Seite).</p>
+<p>Das wollen wir nicht! Zum Glück stellt uns Django etwas zur Verfügung, das uns dieses Problem abnimmt: <code>get_object_or_404</code>. Wenn es kein <code>Post</code>-Objekt mit einem gegebenen <code>pk</code> gibt, wird eine schöne Seite angezeigt, die sogenannte <code>Page Not Found 404</code>-Seite (&quot;Seite nicht gefunden&quot;-Seite).</p>
 <p><img src="images/404_2.png" alt="Page not found"></p>
-<p>Die gute Neuigkeit ist, dass du auch deine eigene <code>Page not found</code>-Seite erstellen und diese so h&#xFC;bsch gestalten kannst, wie du willst. Aber das ist jetzt gerade nicht so wichtig, deshalb &#xFC;berspringen wir das.</p>
-<p>Okay, es wird Zeit, die <em>View</em> zu unserer <code>views.py</code>-Datei hinzuzuf&#xFC;gen!</p>
-<p>In <code>blog/urls.py</code> haben wir eine URL-Regel namens <code>post_detail</code> erstellt, die auf eine View namens <code>views.post_detail</code> verweist. Das hei&#xDF;t, dass Django eine View-Funktion erwartet, die <code>post_detail</code> hei&#xDF;t und in <code>blog/views.py</code> angelegt wurde.</p>
-<p>Wir sollten also <code>blog/views.py</code> im Code-Editor &#xF6;ffnen und den folgenden Code zu den anderen <code>from</code> Zeilen hinzuf&#xFC;gen:</p>
+<p>Die gute Neuigkeit ist, dass du auch deine eigene <code>Page not found</code>-Seite erstellen und diese so hübsch gestalten kannst, wie du willst. Aber das ist jetzt gerade nicht so wichtig, deshalb überspringen wir das.</p>
+<p>Okay, es wird Zeit, die <em>View</em> zu unserer <code>views.py</code>-Datei hinzuzufügen!</p>
+<p>In <code>blog/urls.py</code> haben wir eine URL-Regel namens <code>post_detail</code> erstellt, die auf eine View namens <code>views.post_detail</code> verweist. Das heißt, dass Django eine View-Funktion erwartet, die <code>post_detail</code> heißt und in <code>blog/views.py</code> angelegt wurde.</p>
+<p>Wir sollten also <code>blog/views.py</code> im Code-Editor öffnen und den folgenden Code zu den anderen <code>from</code> Zeilen hinzufügen:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render, get_object_or_404
 </code></pre>
-<p>Und am Ende der Datei werden wir unsere <em>View</em>-Funktion erg&#xE4;nzen:</p>
+<p>Und am Ende der Datei werden wir unsere <em>View</em>-Funktion ergänzen:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_detail</span><span class="hljs-params">(request, pk)</span>:</span>
     post = get_object_or_404(Post, pk=pk)
@@ -701,9 +701,9 @@ urlpatterns = [
 <p><img src="images/post_list2.png" alt="Die post_list-View"></p>
 <p>Es hat funktioniert! Aber was passiert, wenn du auf den Link im Blog-Titel klickst?</p>
 <p><img src="images/template_does_not_exist2.png" alt="TemplateDoesNotExist Error"></p>
-<p>Oh nein! Ein anderer Fehler! Aber wir wissen ja schon, wie wir mit diesem umgehen, oder? Wir m&#xFC;ssen ein Template hinzuf&#xFC;gen!</p>
-<h2 id="erstelle-ein-template-f&#xFC;r-die-post-detailseite">Erstelle ein Template f&#xFC;r die Post-Detailseite</h2>
-<p>Wir erstellen eine Datei in <code>blog/templates/blog</code> mit dem Namen <code>post_detail.html</code> und &#xF6;ffnen sie im Code-Editor.</p>
+<p>Oh nein! Ein anderer Fehler! Aber wir wissen ja schon, wie wir mit diesem umgehen, oder? Wir müssen ein Template hinzufügen!</p>
+<h2 id="erstelle-ein-template-für-die-post-detailseite">Erstelle ein Template für die Post-Detailseite</h2>
+<p>Wir erstellen eine Datei in <code>blog/templates/blog</code> mit dem Namen <code>post_detail.html</code> und öffnen sie im Code-Editor.</p>
 <p>Gib den folgenden Code ein:</p>
 <p></p><p class="code-label">blog/templates/blog/post_detail.html</p><p></p>
 <pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
@@ -720,35 +720,35 @@ urlpatterns = [
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 {% endblock %}
 </code></pre>
-<p>Wir erweitern wieder <code>base.html</code>. Im <code>content</code>-Block wollen wir das Publikationsdatum eines Posts (published_date), falls es existiert, anzeigen und auch den Titel und den Text. Aber wir m&#xFC;ssen noch ein paar wichtige Dinge kl&#xE4;ren, oder?</p>
-<p><code>{% if ... %} ... {% endif %}</code> ist ein Template-Tag, das wir benutzen k&#xF6;nnen, wenn wir etwas &#xFC;berpr&#xFC;fen m&#xF6;chten. (Erinnerst du dich an <code>if ... else ...</code> vom Kapitel <strong>Einf&#xFC;hrung in Python</strong>?) In diesem Fall hier wollen wir pr&#xFC;fen, ob das <code>published_date</code>-Feld eines Post-Objektes nicht leer ist. </p>
+<p>Wir erweitern wieder <code>base.html</code>. Im <code>content</code>-Block wollen wir das Publikationsdatum eines Posts (published_date), falls es existiert, anzeigen und auch den Titel und den Text. Aber wir müssen noch ein paar wichtige Dinge klären, oder?</p>
+<p><code>{% if ... %} ... {% endif %}</code> ist ein Template-Tag, das wir benutzen können, wenn wir etwas überprüfen möchten. (Erinnerst du dich an <code>if ... else ...</code> vom Kapitel <strong>Einführung in Python</strong>?) In diesem Fall hier wollen wir prüfen, ob das <code>published_date</code>-Feld eines Post-Objektes nicht leer ist. </p>
 <p>OK, aktualisieren wir unsere Seite und sehen, ob <code>TemplateDoesNotExist</code> jetzt weg ist.</p>
 <p><img src="images/post_detail2.png" alt="Blogpost-Detailseite"></p>
 <p>Yay! Es funktioniert!</p>
-<h1 id="ver&#xF6;ffentlichen">Ver&#xF6;ffentlichen!</h1>
-<p>Es w&#xE4;re sch&#xF6;n zu sehen, ob deine Website noch auf PythonAnywhere funktioniert, richtig? Lass sie uns erneut ver&#xF6;ffentlichen.</p>
+<h1 id="veröffentlichen">Veröffentlichen!</h1>
+<p>Es wäre schön zu sehen, ob deine Website noch auf PythonAnywhere funktioniert, richtig? Lass sie uns erneut veröffentlichen.</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ git status
 $ git add --all .
 $ git status
-$ git commit -m &quot;View und Template f&#xFC;r Blogpost-Details sowie CSS f&#xFC;r die Website hinzugef&#xFC;gt&quot;
+$ git commit -m &quot;View und Template für Blogpost-Details sowie CSS für die Website hinzugefügt&quot;
 $ git push
-</code></pre><p>Dann f&#xFC;hre Folgendes in der <a href="https://www.pythonanywhere.com/consoles/" target="_blank">PythonAnywhere-Bash-Konsole</a> aus:</p>
+</code></pre><p>Dann führe Folgendes in der <a href="https://www.pythonanywhere.com/consoles/" target="_blank">PythonAnywhere-Bash-Konsole</a> aus:</p>
 <p></p><p class="code-label">PythonAnywhere command-line</p><p></p>
 <pre><code>$ cd ~/&lt;deine-pythonanywhere-domain&gt;.pythonanywhere.com
 $ git pull
 [...]
-</code></pre><p>(Denk daran, <code>&lt;deine-pythonanywhere-domain&gt;</code> durch deine tats&#xE4;chliche PythonAnywhere-Subdomain zu ersetzen - ohne die spitzen Klammern.)</p>
+</code></pre><p>(Denk daran, <code>&lt;deine-pythonanywhere-domain&gt;</code> durch deine tatsächliche PythonAnywhere-Subdomain zu ersetzen - ohne die spitzen Klammern.)</p>
 <h2 id="die-statischen-dateien-auf-dem-server-aktualisieren">Die statischen Dateien auf dem Server aktualisieren</h2>
-<p>Server wie PythonAnywhere behandeln statische Dateien (&quot;static files&quot;, z.B. CSS-Dateien) anders als Python-Dateien, weil statische Dateien noch optimiert und dadurch dann schneller geladen werden k&#xF6;nnen. Deswegen m&#xFC;ssen wir, nachdem wir &#xC4;nderungen an den CSS Dateien vorgenommen haben, einen zus&#xE4;tzlichen Befehl auf dem Server ausf&#xFC;hren, um diese Dateien zu aktualisieren. Der Befehl hei&#xDF;t <code>collectstatic</code>.</p>
-<p>Aktiviere also deine virtuelle Umgebung, wenn sie nicht vom letzten Mal noch aktiv ist (PythonAnywhere benutzt dazu das Kommando <code>workon</code>, das ist &#xE4;hnlich wie <code>source myenv/bin/activate</code>, das du auf deinem Computer verwendest):</p>
+<p>Server wie PythonAnywhere behandeln statische Dateien (&quot;static files&quot;, z.B. CSS-Dateien) anders als Python-Dateien, weil statische Dateien noch optimiert und dadurch dann schneller geladen werden können. Deswegen müssen wir, nachdem wir Änderungen an den CSS Dateien vorgenommen haben, einen zusätzlichen Befehl auf dem Server ausführen, um diese Dateien zu aktualisieren. Der Befehl heißt <code>collectstatic</code>.</p>
+<p>Aktiviere also deine virtuelle Umgebung, wenn sie nicht vom letzten Mal noch aktiv ist (PythonAnywhere benutzt dazu das Kommando <code>workon</code>, das ist ähnlich wie <code>source myenv/bin/activate</code>, das du auf deinem Computer verwendest):</p>
 <p></p><p class="code-label">PythonAnywhere command-line</p><p></p>
 <pre><code>$ workon &lt;deine-pythonanywhere-domain&gt;.pythonanywhere.com
 (ola.pythonanywhere.com)$ python manage.py collectstatic
 [...]
-</code></pre><p>Der <code>manage.py collectstatic</code> Befehl ist ein bisschen wie <code>manage.py migrate</code>. Wir machen ein paar &#xC4;nderungen in unserem Code und dann sagen wir Django, dass es diese &#xFC;bernehmen (<em>apply</em>) soll, entweder zu der servereigenen Sammlung von statischen Dateien oder in die Datenbank.</p>
-<p>Auf jeden Fall sind wir nun soweit, dass wir <a href="https://www.pythonanywhere.com/web_app_setup/" target="_blank">auf die Seite &quot;Web&quot;</a> wechseln k&#xF6;nnen (mittels dem Men&#xFC;-Knopf in der Ecke oben rechts) und <strong>Reload</strong> klicken k&#xF6;nnen. Schau dir dann die Seite <a href="https://subdomain.pythonanywhere.com" target="_blank">https://subdomain.pythonanywhere.com</a> an, um das Ergebnis zu sehen.</p>
-<p>Und das sollte es sein! Herzlichen Gl&#xFC;ckwunsch :)</p>
+</code></pre><p>Der <code>manage.py collectstatic</code> Befehl ist ein bisschen wie <code>manage.py migrate</code>. Wir machen ein paar Änderungen in unserem Code und dann sagen wir Django, dass es diese übernehmen (<em>apply</em>) soll, entweder zu der servereigenen Sammlung von statischen Dateien oder in die Datenbank.</p>
+<p>Auf jeden Fall sind wir nun soweit, dass wir <a href="https://www.pythonanywhere.com/web_app_setup/" target="_blank">auf die Seite &quot;Web&quot;</a> wechseln können (mittels dem Menü-Knopf in der Ecke oben rechts) und <strong>Reload</strong> klicken können. Schau dir dann die Seite <a href="https://subdomain.pythonanywhere.com" target="_blank">https://subdomain.pythonanywhere.com</a> an, um das Ergebnis zu sehen.</p>
+<p>Und das sollte es sein! Herzlichen Glückwunsch :)</p>
 
                                 
                                 </section>
@@ -792,12 +792,56 @@ $ git pull
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Erweitere deine Anwendung","level":"1.23","depth":1,"next":{"title":"Django-Formulare","level":"1.24","depth":1,"path":"django_forms/README.md","ref":"django_forms/README.md","articles":[]},"previous":{"title":"Erweiterung der Templates","level":"1.22","depth":1,"path":"template_extending/README.md","ref":"template_extending/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"extend_your_application/README.md","mtime":"2020-09-22T11:43:42.666Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"de"}});
+            gitbook.page.hasChanged({"page":{"title":"Erweitere deine Anwendung","level":"1.23","depth":1,"next":{"title":"Django-Formulare","level":"1.24","depth":1,"path":"django_forms/README.md","ref":"django_forms/README.md","articles":[]},"previous":{"title":"Erweiterung der Templates","level":"1.22","depth":1,"path":"template_extending/README.md","ref":"template_extending/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"extend_your_application/README.md","mtime":"2020-11-15T14:54:56.270Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"de"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

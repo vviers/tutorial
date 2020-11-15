@@ -7,7 +7,7 @@
         <title>پنل مدیریت در جنگو · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -621,39 +621,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x67E;&#x646;&#x644;-&#x645;&#x62F;&#x6CC;&#x631;&#x6CC;&#x62A;-&#x62F;&#x631;-&#x62C;&#x646;&#x6AF;&#x648;">&#x67E;&#x646;&#x644; &#x645;&#x62F;&#x6CC;&#x631;&#x6CC;&#x62A; &#x62F;&#x631; &#x62C;&#x646;&#x6AF;&#x648;</h1>
-<p>&#x628;&#x631;&#x627;&#x6CC; &#x627;&#x636;&#x627;&#x641;&#x647; &#x6A9;&#x631;&#x62F;&#x646;&#x60C; &#x648;&#x6CC;&#x631;&#x627;&#x6CC;&#x634; &#x648; &#x62D;&#x630;&#x641; &#x67E;&#x633;&#x62A;&#x200C;&#x647;&#x627;&#x6CC;&#x6CC; &#x6A9;&#x647; &#x628;&#x647; &#x62A;&#x627;&#x632;&#x6AF;&#x6CC; &#x645;&#x62F;&#x644;&#x634;&#x627;&#x646; &#x631;&#x627; &#x62F;&#x631;&#x633;&#x62A; &#x6A9;&#x631;&#x62F;&#x647;&#x200C;&#x627;&#x6CC;&#x645;&#x60C; &#x627;&#x632; &#x62C;&#x646;&#x6AF;&#x648; &#x627;&#x62F;&#x645;&#x6CC;&#x646; &#x6CC;&#x627; &#x67E;&#x646;&#x644; &#x645;&#x62F;&#x6CC;&#x631;&#x6CC;&#x62A; &#x62C;&#x646;&#x6AF;&#x648; &#x627;&#x633;&#x62A;&#x641;&#x627;&#x62F;&#x647; &#x62E;&#x648;&#x627;&#x647;&#x6CC;&#x645; &#x6A9;&#x631;&#x62F;.</p>
-<p>&#x641;&#x627;&#x6CC;&#x644; <code>blog/admin.py</code> &#x631;&#x627; &#x62F;&#x631; &#x648;&#x6CC;&#x631;&#x627;&#x6CC;&#x634;&#x6AF;&#x631; &#x6A9;&#x62F; &#x628;&#x627;&#x632; &#x6A9;&#x646;&#x6CC;&#x62F; &#x648; &#x645;&#x62D;&#x62A;&#x648;&#x627;&#x6CC; &#x622;&#x646; &#x631;&#x627; &#x628;&#x627; &#x62E;&#x637;&#x648;&#x637; &#x632;&#x6CC;&#x631; &#x639;&#x648;&#x636; &#x6A9;&#x646;&#x6CC;&#x62F;:</p>
+                                <h1 id="پنل-مدیریت-در-جنگو">پنل مدیریت در جنگو</h1>
+<p>برای اضافه کردن، ویرایش و حذف پست‌هایی که به تازگی مدلشان را درست کرده‌ایم، از جنگو ادمین یا پنل مدیریت جنگو استفاده خواهیم کرد.</p>
+<p>فایل <code>blog/admin.py</code> را در ویرایشگر کد باز کنید و محتوای آن را با خطوط زیر عوض کنید:</p>
 <p></p><p class="code-label">blog/admin.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.contrib <span class="hljs-keyword">import</span> admin
 <span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Post
 
 admin.site.register(Post)
 </code></pre>
-<p>&#x647;&#x645;&#x627;&#x646;&#x637;&#x648;&#x631; &#x6A9;&#x647; &#x645;&#x6CC;&#x200C;&#x628;&#x6CC;&#x646;&#x6CC;&#x62F;&#x60C; &#x645;&#x62F;&#x644; Post &#x631;&#x627; &#x6A9;&#x647; &#x62F;&#x631; &#x628;&#x62E;&#x634; &#x642;&#x628;&#x644; &#x62A;&#x639;&#x631;&#x6CC;&#x641; &#x6A9;&#x631;&#x62F;&#x647; &#x628;&#x648;&#x62F;&#x6CC;&#x645; &#x641;&#x631;&#x627;&#x62E;&#x648;&#x627;&#x646;&#x6CC; &#x6A9;&#x631;&#x62F;&#x647;&#x200C;&#x627;&#x6CC;&#x645;. &#x628;&#x631;&#x627;&#x6CC; &#x627;&#x6CC;&#x646;&#x6A9;&#x647; &#x645;&#x62F;&#x644; &#x645;&#x627; &#x62F;&#x631; &#x635;&#x641;&#x62D;&#x647; &#x645;&#x62F;&#x6CC;&#x631;&#x6CC;&#x62A; &#x646;&#x645;&#x627;&#x6CC;&#x634; &#x62F;&#x627;&#x62F;&#x647; &#x634;&#x648;&#x62F;&#x60C; &#x645;&#x627; &#x628;&#x627;&#x6CC;&#x62F; &#x645;&#x62F;&#x644; &#x631;&#x627; &#x628;&#x627; &#x62F;&#x633;&#x62A;&#x648;&#x631; <code>admin.site.register(Post)</code> &#x62B;&#x628;&#x62A; &#x6A9;&#x646;&#x6CC;&#x645;.</p>
-<p>&#x62E;&#x648;&#x628;&#x60C; &#x648;&#x642;&#x62A; &#x622;&#x646; &#x627;&#x633;&#x62A; &#x6A9;&#x647; &#x628;&#x647; &#x645;&#x62F;&#x644; Post &#x646;&#x6AF;&#x627;&#x647;&#x6CC; &#x628;&#x6CC;&#x646;&#x62F;&#x627;&#x632;&#x6CC;&#x645;. &#x628;&#x647; &#x62E;&#x627;&#x637;&#x631; &#x62F;&#x627;&#x634;&#x62A;&#x647; &#x628;&#x627;&#x634;&#x6CC;&#x62F; &#x6A9;&#x647; &#x62F;&#x633;&#x62A;&#x648;&#x631; <code>python manage.py runserver</code> &#x631;&#x627; &#x62F;&#x631; &#x6A9;&#x646;&#x633;&#x648;&#x644; &#x627;&#x62C;&#x631;&#x627; &#x6A9;&#x646;&#x6CC;&#x62F; &#x62A;&#x627; &#x648;&#x628; &#x633;&#x631;&#x648;&#x631; &#x627;&#x62C;&#x631;&#x627; &#x634;&#x648;&#x62F;. &#x628;&#x647; &#x645;&#x631;&#x648;&#x631;&#x6AF;&#x631; &#x62E;&#x648;&#x62F; &#x628;&#x631;&#x648;&#x6CC;&#x62F; &#x648; &#x622;&#x62F;&#x631;&#x633; <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a> &#x631;&#x627; &#x62A;&#x627;&#x6CC;&#x67E; &#x6A9;&#x646;&#x6CC;&#x62F;. &#x634;&#x645;&#x627; &#x6CC;&#x6A9; &#x635;&#x641;&#x62D;&#x647; &#x644;&#x627;&#x6AF;&#x6CC;&#x646; &#x631;&#x627; &#x628;&#x647; &#x634;&#x6A9;&#x644; &#x632;&#x6CC;&#x631; &#x645;&#x6CC;&#x200C;&#x628;&#x6CC;&#x646;&#x6CC;&#x62F;:</p>
-<p><img src="images/login_page2.png" alt="&#x635;&#x641;&#x62D;&#x647; &#x644;&#x627;&#x6AF;&#x6CC;&#x646;"></p>
-<p>&#x628;&#x631;&#x627;&#x6CC; &#x648;&#x631;&#x648;&#x62F; &#x628;&#x647; &#x633;&#x6CC;&#x633;&#x62A;&#x645;&#x60C; &#x628;&#x627;&#x6CC;&#x62F; &#x6CC;&#x6A9; &#x6A9;&#x627;&#x631;&#x628;&#x631; <em>superuser</em> &#x627;&#x6CC;&#x62C;&#x627;&#x62F; &#x6A9;&#x646;&#x6CC;&#x62F; - &#x6CC;&#x6A9; &#x62D;&#x633;&#x627;&#x628; &#x6A9;&#x627;&#x631;&#x628;&#x631;&#x6CC; &#x6A9;&#x647; &#x628;&#x631; &#x631;&#x648;&#x6CC; &#x647;&#x645;&#x647; &#x686;&#x6CC;&#x632; &#x62F;&#x631; &#x633;&#x627;&#x6CC;&#x62A; &#x6A9;&#x646;&#x62A;&#x631;&#x644; &#x62F;&#x627;&#x634;&#x62A;&#x647; &#x628;&#x627;&#x634;&#x62F;. &#x628;&#x647; &#x645;&#x62D;&#x6CC;&#x637; &#x62E;&#x637; &#x641;&#x631;&#x645;&#x627;&#x646; &#x628;&#x627;&#x632;&#x6AF;&#x631;&#x62F;&#x6CC;&#x62F; &#x648; &#x62F;&#x633;&#x62A;&#x648;&#x631; <code>python manage.py createsuperuser</code> &#x631;&#x627; &#x62A;&#x627;&#x6CC;&#x67E; &#x6A9;&#x646;&#x6CC;&#x62F; &#x648; Enter &#x631;&#x627; &#x641;&#x634;&#x627;&#x631; &#x62F;&#x647;&#x6CC;&#x62F;.</p>
+<p>همانطور که می‌بینید، مدل Post را که در بخش قبل تعریف کرده بودیم فراخوانی کرده‌ایم. برای اینکه مدل ما در صفحه مدیریت نمایش داده شود، ما باید مدل را با دستور <code>admin.site.register(Post)</code> ثبت کنیم.</p>
+<p>خوب، وقت آن است که به مدل Post نگاهی بیندازیم. به خاطر داشته باشید که دستور <code>python manage.py runserver</code> را در کنسول اجرا کنید تا وب سرور اجرا شود. به مرورگر خود بروید و آدرس <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a> را تایپ کنید. شما یک صفحه لاگین را به شکل زیر می‌بینید:</p>
+<p><img src="images/login_page2.png" alt="صفحه لاگین"></p>
+<p>برای ورود به سیستم، باید یک کاربر <em>superuser</em> ایجاد کنید - یک حساب کاربری که بر روی همه چیز در سایت کنترل داشته باشد. به محیط خط فرمان بازگردید و دستور <code>python manage.py createsuperuser</code> را تایپ کنید و Enter را فشار دهید.</p>
 <blockquote>
-<p>&#x628;&#x647; &#x6CC;&#x627;&#x62F; &#x62F;&#x627;&#x634;&#x62A;&#x647; &#x628;&#x627;&#x634;&#x6CC;&#x62F;&#x60C; &#x628;&#x631;&#x627;&#x6CC; &#x646;&#x648;&#x634;&#x62A;&#x646; &#x62F;&#x633;&#x62A;&#x648;&#x631;&#x627;&#x62A; &#x62C;&#x62F;&#x6CC;&#x62F; &#x62F;&#x631; &#x62D;&#x627;&#x644;&#x6CC; &#x6A9;&#x647; &#x648;&#x628; &#x633;&#x631;&#x648;&#x631; &#x62F;&#x631; &#x62D;&#x627;&#x644; &#x627;&#x62C;&#x631;&#x627; &#x627;&#x633;&#x62A;&#x60C; &#x6CC;&#x6A9; &#x67E;&#x646;&#x62C;&#x631;&#x647; &#x62A;&#x631;&#x645;&#x6CC;&#x646;&#x627;&#x644; &#x62C;&#x62F;&#x6CC;&#x62F; &#x631;&#x627; &#x628;&#x627;&#x632; &#x6A9;&#x631;&#x62F;&#x647; &#x648; &#x645;&#x62D;&#x6CC;&#x637; &#x645;&#x62C;&#x627;&#x632;&#x6CC; &#x62E;&#x648;&#x62F; &#x631;&#x627; &#x641;&#x639;&#x627;&#x644; &#x6A9;&#x646;&#x6CC;&#x62F;. &#x645;&#x627; &#x62F;&#x631; &#x645;&#x648;&#x631;&#x62F; &#x646;&#x62D;&#x648;&#x647; &#x646;&#x648;&#x634;&#x62A;&#x646; &#x62F;&#x633;&#x62A;&#x648;&#x631;&#x627;&#x62A; &#x62C;&#x62F;&#x6CC;&#x62F; &#x62F;&#x631; &#x628;&#x62E;&#x634; <strong>&#x631;&#x627;&#x647; &#x627;&#x646;&#x62F;&#x627;&#x632;&#x6CC; &#x648;&#x628; &#x633;&#x631;&#x648;&#x631;</strong> &#x627;&#x632; &#x641;&#x635;&#x644; <strong>&#x627;&#x648;&#x644;&#x6CC;&#x646; &#x67E;&#x631;&#x648;&#x698;&#x647; &#x62C;&#x646;&#x6AF;&#x648; &#x634;&#x645;&#x627;!</strong> &#x635;&#x62D;&#x628;&#x62A; &#x6A9;&#x631;&#x62F;&#x6CC;&#x645;.</p>
+<p>به یاد داشته باشید، برای نوشتن دستورات جدید در حالی که وب سرور در حال اجرا است، یک پنجره ترمینال جدید را باز کرده و محیط مجازی خود را فعال کنید. ما در مورد نحوه نوشتن دستورات جدید در بخش <strong>راه اندازی وب سرور</strong> از فصل <strong>اولین پروژه جنگو شما!</strong> صحبت کردیم.</p>
 </blockquote>
 <p></p><p class="code-label">Mac OS X or Linux:</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py createsuperuser
 </code></pre><p></p><p class="code-label">Windows:</p><p></p>
 <pre><code>(myvenv) C:\Users\Name\djangogirls&gt; python manage.py createsuperuser
-</code></pre><p>&#x647;&#x646;&#x6AF;&#x627;&#x645; &#x62F;&#x631;&#x62E;&#x648;&#x627;&#x633;&#x62A;&#x60C; &#x646;&#x627;&#x645; &#x6A9;&#x627;&#x631;&#x628;&#x631;&#x6CC; (&#x628;&#x627; &#x62D;&#x631;&#x648;&#x641; &#x6A9;&#x648;&#x686;&#x6A9; &#x648; &#x628;&#x62F;&#x648;&#x646; &#x641;&#x627;&#x635;&#x644;&#x647;)&#x60C; &#x622;&#x62F;&#x631;&#x633; &#x627;&#x6CC;&#x645;&#x6CC;&#x644; &#x648; &#x631;&#x645;&#x632; &#x639;&#x628;&#x648;&#x631; &#x631;&#x627; &#x62A;&#x627;&#x6CC;&#x67E; &#x6A9;&#x646;&#x6CC;&#x62F;. <strong>&#x646;&#x6AF;&#x631;&#x627;&#x646; &#x646;&#x628;&#x627;&#x634;&#x6CC;&#x62F; &#x6A9;&#x647; &#x62A;&#x627;&#x6CC;&#x67E; &#x634;&#x62F;&#x646; &#x6AF;&#x630;&#x631; &#x648;&#x627;&#x698;&#x647; &#x631;&#x627; &#x646;&#x645;&#x6CC;&#x200C;&#x628;&#x6CC;&#x646;&#x6CC;&#x62F;&#x60C; &#x647;&#x645;&#x627;&#x646;&#x637;&#x648;&#x631; &#x627;&#x633;&#x62A; &#x6A9;&#x647; &#x628;&#x627;&#x6CC;&#x62F; &#x628;&#x627;&#x634;&#x62F;.</strong> &#x6AF;&#x630;&#x631;&#x648;&#x627;&#x698;&#x647; &#x631;&#x627; &#x648;&#x627;&#x631;&#x62F; &#x6A9;&#x646;&#x6CC;&#x62F; &#x648; <code>Enter</code> &#x631;&#x627; &#x628;&#x632;&#x646;&#x6CC;&#x62F;. &#x62E;&#x631;&#x648;&#x62C;&#x6CC; &#x628;&#x627;&#x6CC;&#x62F; &#x645;&#x627;&#x646;&#x646;&#x62F; &#x627;&#x6CC;&#x646; &#x628;&#x627;&#x634;&#x62F; (&#x6A9;&#x647; &#x62F;&#x631; &#x622;&#x646; &#x646;&#x627;&#x645; &#x6A9;&#x627;&#x631;&#x628;&#x631;&#x6CC; &#x648; &#x627;&#x6CC;&#x645;&#x6CC;&#x644; &#x62E;&#x648;&#x62F; &#x631;&#x627; &#x628;&#x627;&#x6CC;&#x62F; &#x628;&#x628;&#x6CC;&#x646;&#x6CC;&#x62F;):</p>
+</code></pre><p>هنگام درخواست، نام کاربری (با حروف کوچک و بدون فاصله)، آدرس ایمیل و رمز عبور را تایپ کنید. <strong>نگران نباشید که تایپ شدن گذر واژه را نمی‌بینید، همانطور است که باید باشد.</strong> گذرواژه را وارد کنید و <code>Enter</code> را بزنید. خروجی باید مانند این باشد (که در آن نام کاربری و ایمیل خود را باید ببینید):</p>
 <pre><code>Username: ola
 Email address: ola@example.com
 Password:
 Password (again):
 Superuser created successfully.
-</code></pre><p>&#x628;&#x647; &#x645;&#x631;&#x648;&#x631;&#x6AF;&#x631; &#x62E;&#x648;&#x62F; &#x628;&#x631;&#x6AF;&#x631;&#x62F;&#x6CC;&#x62F; &#x648; &#x628;&#x627; &#x646;&#x627;&#x645; &#x6A9;&#x627;&#x631;&#x628;&#x631;&#x6CC; &#x6A9;&#x647; &#x627;&#x646;&#x62A;&#x62E;&#x627;&#x628; &#x6A9;&#x631;&#x62F;&#x647; &#x627;&#x6CC;&#x62F; &#x648;&#x627;&#x631;&#x62F; &#x634;&#x648;&#x6CC;&#x62F;. &#x634;&#x645;&#x627; &#x628;&#x627;&#x6CC;&#x62F; &#x62F;&#x627;&#x634;&#x628;&#x648;&#x631;&#x62F; &#x645;&#x62F;&#x6CC;&#x631;&#x6CC;&#x62A; &#x62C;&#x646;&#x6AF;&#x648; &#x631;&#x627; &#x628;&#x628;&#x6CC;&#x646;&#x6CC;&#x62F;.</p>
-<p><img src="images/django_admin3.png" alt="&#x62C;&#x646;&#x6AF;&#x648; &#x627;&#x62F;&#x645;&#x6CC;&#x646;"></p>
-<p>&#x628;&#x647; &#x628;&#x62E;&#x634; Post &#x628;&#x631;&#x648;&#x6CC;&#x62F; &#x648; &#x6A9;&#x645;&#x6CC; &#x628;&#x627; &#x622;&#x646; &#x6A9;&#x627;&#x631; &#x6A9;&#x646;&#x6CC;&#x62F;. &#x67E;&#x646;&#x62C; &#x6CC;&#x627; &#x634;&#x634; &#x67E;&#x633;&#x62A; &#x648;&#x628;&#x644;&#x627;&#x6AF;&#x6CC; &#x628;&#x633;&#x627;&#x632;&#x6CC;&#x62F;. &#x646;&#x6AF;&#x631;&#x627;&#x646; &#x645;&#x62D;&#x62A;&#x648;&#x627;&#x6CC; &#x67E;&#x633;&#x62A;&#x200C;&#x647;&#x627; &#x646;&#x628;&#x627;&#x634;&#x6CC;&#x62F;&#x60C; &#x627;&#x6CC;&#x646; &#x67E;&#x633;&#x62A;&#x200C;&#x647;&#x627; &#x641;&#x642;&#x637; &#x628;&#x647; &#x635;&#x648;&#x631;&#x62A; &#x645;&#x62D;&#x644;&#x6CC; &#x648; &#x628;&#x631;&#x627;&#x6CC; &#x634;&#x645;&#x627; &#x646;&#x645;&#x627;&#x6CC;&#x634; &#x62F;&#x627;&#x62F;&#x647; &#x62E;&#x648;&#x627;&#x647;&#x62F; &#x634;&#x62F;. &#x645;&#x6CC;&#x200C;&#x62A;&#x648;&#x627;&#x646;&#x6CC;&#x62F; &#x628;&#x631;&#x627;&#x6CC; &#x635;&#x631;&#x641;&#x647; &#x62C;&#x648;&#x6CC;&#x6CC; &#x62F;&#x631; &#x648;&#x642;&#x62A; &#x627;&#x632; &#x62C;&#x627;&#x6CC;&#x6CC; &#x645;&#x637;&#x627;&#x644;&#x628;&#x6CC; &#x62F;&#x631; &#x622;&#x646; &#x6A9;&#x67E;&#x6CC; &#x6A9;&#x646;&#x6CC;&#x62F;. :)</p>
-<p>&#x627;&#x637;&#x645;&#x6CC;&#x646;&#x627;&#x646; &#x62D;&#x627;&#x635;&#x644; &#x6A9;&#x646;&#x6CC;&#x62F; &#x6A9;&#x647; &#x62D;&#x62F;&#x627;&#x642;&#x644; &#x628;&#x631;&#x627;&#x6CC; &#x62F;&#x648; &#x6CC;&#x627; &#x633;&#x647; &#x67E;&#x633;&#x62A; (&#x627;&#x645;&#x627; &#x646;&#x647; &#x647;&#x645;&#x647; &#x67E;&#x633;&#x62A;&#x200C;&#x647;&#x627;) &#x62A;&#x627;&#x631;&#x6CC;&#x62E; &#x627;&#x646;&#x62A;&#x634;&#x627;&#x631; &#x631;&#x627; &#x62A;&#x639;&#x6CC;&#x6CC;&#x646; &#x6A9;&#x646;&#x6CC;&#x62F;. &#x628;&#x639;&#x62F;&#x627;&#x64B; &#x645;&#x641;&#x6CC;&#x62F; &#x62E;&#x648;&#x627;&#x647;&#x62F; &#x628;&#x648;&#x62F;.</p>
-<p><img src="images/edit_post3.png" alt="&#x67E;&#x646;&#x644; &#x645;&#x62F;&#x6CC;&#x631;&#x6CC;&#x62A; &#x62F;&#x631; &#x62C;&#x646;&#x6AF;&#x648;"></p>
-<p>&#x627;&#x6AF;&#x631; &#x645;&#x6CC;&#x200C;&#x62E;&#x648;&#x627;&#x647;&#x6CC;&#x62F; &#x62F;&#x631; &#x645;&#x648;&#x631;&#x62F; &#x67E;&#x646;&#x644; &#x645;&#x62F;&#x6CC;&#x631;&#x6CC;&#x62A; &#x62C;&#x646;&#x6AF;&#x648; &#x628;&#x6CC;&#x634;&#x62A;&#x631; &#x628;&#x62F;&#x627;&#x646;&#x6CC;&#x62F; &#x628;&#x627;&#x6CC;&#x62F; &#x645;&#x633;&#x62A;&#x646;&#x62F;&#x627;&#x62A; &#x62C;&#x646;&#x6AF;&#x648; &#x631;&#x627; &#x646;&#x6AF;&#x627;&#x647; &#x6A9;&#x646;&#x6CC;&#x62F;: <a href="https://docs.djangoproject.com/en/2.2/ref/contrib/admin/" target="_blank">https://docs.djangoproject.com/en/2.2/ref/contrib/admin/</a></p>
-<p>&#x627;&#x62D;&#x62A;&#x645;&#x627;&#x644;&#x627;&#x64B; &#x627;&#x644;&#x627;&#x646; &#x648;&#x642;&#x62A; &#x645;&#x646;&#x627;&#x633;&#x628;&#x6CC; &#x627;&#x633;&#x62A; &#x62A;&#x627; &#x642;&#x647;&#x648;&#x647; &#x6CC;&#x627; &#x686;&#x627;&#x6CC; &#x628;&#x646;&#x648;&#x634;&#x6CC;&#x62F; &#x6CC;&#x627; &#x686;&#x6CC;&#x632;&#x6CC; &#x628;&#x631;&#x627;&#x6CC; &#x62E;&#x648;&#x631;&#x62F;&#x646; &#x67E;&#x6CC;&#x62F;&#x627; &#x6A9;&#x646;&#x6CC;&#x62F; &#x62A;&#x627; &#x62F;&#x648;&#x628;&#x627;&#x631;&#x647; &#x633;&#x631;&#x62D;&#x627;&#x644; &#x634;&#x648;&#x6CC;&#x62F;. &#x634;&#x645;&#x627; &#x627;&#x648;&#x644;&#x6CC;&#x646; &#x645;&#x62F;&#x644; &#x62C;&#x646;&#x6AF;&#x648; &#x631;&#x627; &#x627;&#x6CC;&#x62C;&#x627;&#x62F; &#x6A9;&#x631;&#x62F;&#x6CC;&#x62F; &#x648; &#x634;&#x627;&#x6CC;&#x633;&#x62A;&#x647; &#x6CC;&#x6A9; &#x627;&#x633;&#x62A;&#x631;&#x627;&#x62D;&#x62A; &#x6A9;&#x648;&#x62A;&#x627;&#x647; &#x647;&#x633;&#x62A;&#x6CC;&#x62F;!</p>
+</code></pre><p>به مرورگر خود برگردید و با نام کاربری که انتخاب کرده اید وارد شوید. شما باید داشبورد مدیریت جنگو را ببینید.</p>
+<p><img src="images/django_admin3.png" alt="جنگو ادمین"></p>
+<p>به بخش Post بروید و کمی با آن کار کنید. پنج یا شش پست وبلاگی بسازید. نگران محتوای پست‌ها نباشید، این پست‌ها فقط به صورت محلی و برای شما نمایش داده خواهد شد. می‌توانید برای صرفه جویی در وقت از جایی مطالبی در آن کپی کنید. :)</p>
+<p>اطمینان حاصل کنید که حداقل برای دو یا سه پست (اما نه همه پست‌ها) تاریخ انتشار را تعیین کنید. بعداً مفید خواهد بود.</p>
+<p><img src="images/edit_post3.png" alt="پنل مدیریت در جنگو"></p>
+<p>اگر می‌خواهید در مورد پنل مدیریت جنگو بیشتر بدانید باید مستندات جنگو را نگاه کنید: <a href="https://docs.djangoproject.com/en/2.2/ref/contrib/admin/" target="_blank">https://docs.djangoproject.com/en/2.2/ref/contrib/admin/</a></p>
+<p>احتمالاً الان وقت مناسبی است تا قهوه یا چای بنوشید یا چیزی برای خوردن پیدا کنید تا دوباره سرحال شوید. شما اولین مدل جنگو را ایجاد کردید و شایسته یک استراحت کوتاه هستید!</p>
 
                                 
                                 </section>
@@ -697,12 +697,56 @@ Superuser created successfully.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"پنل مدیریت در جنگو","level":"1.13","depth":1,"next":{"title":"فاز دیپلوی!","level":"1.14","depth":1,"path":"deploy/README.md","ref":"deploy/README.md","articles":[]},"previous":{"title":"مدل در جنگو","level":"1.12","depth":1,"path":"django_models/README.md","ref":"django_models/README.md","articles":[]},"dir":"rtl"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"fa","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_admin/README.md","mtime":"2020-09-22T11:43:42.794Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"fa"}});
+            gitbook.page.hasChanged({"page":{"title":"پنل مدیریت در جنگو","level":"1.13","depth":1,"next":{"title":"فاز دیپلوی!","level":"1.14","depth":1,"path":"deploy/README.md","ref":"deploy/README.md","articles":[]},"previous":{"title":"مدل در جنگو","level":"1.12","depth":1,"path":"django_models/README.md","ref":"django_models/README.md","articles":[]},"dir":"rtl"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"fa","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_admin/README.md","mtime":"2020-11-15T14:54:56.382Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"fa"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

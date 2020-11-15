@@ -7,7 +7,7 @@
         <title>Django modellek · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -499,12 +499,12 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="django-modellek">Django modellek</h1>
-<p>Most valami olyasmire van sz&#xFC;ks&#xE9;g&#xFC;nk, ami elt&#xE1;rolja az &#xF6;sszes blogbejegyz&#xE9;st. De ahhoz, hogy l&#xE9;tre tudjunk hozni ilyesmit, el&#x151;bb egy kicsit besz&#xE9;ln&#xFC;nk kell az <code>objektumokr&#xF3;l</code>.</p>
+<p>Most valami olyasmire van szükségünk, ami eltárolja az összes blogbejegyzést. De ahhoz, hogy létre tudjunk hozni ilyesmit, előbb egy kicsit beszélnünk kell az <code>objektumokról</code>.</p>
 <h2 id="objektumok">Objektumok</h2>
-<p>L&#xE9;tezik egy <code>objektumorient&#xE1;lt programoz&#xE1;s</code> nev&#x171; fogalom a programoz&#xE1;son bel&#xFC;l. Ennek az az alap&#xF6;tlete, hogy ahelyett, hogy mindent utas&#xED;t&#xE1;sok unalmas sorozatak&#xE9;nt &#xED;rn&#xE1;nk le, modellezhetj&#xFC;k is a dolgokat, &#xE9;s defini&#xE1;lhatjuk, hogyan l&#xE9;pnek kapcsolatba egym&#xE1;ssal.</p>
-<p>Teh&#xE1;t mi az az objektum? Tulajdons&#xE1;gok &#xE9;s tev&#xE9;kenys&#xE9;gek gy&#x171;jtem&#xE9;nye. Fur&#xE1;n hangozhat, de mindj&#xE1;rt mutatunk egy p&#xE9;ld&#xE1;t.</p>
-<p>Ha egy macsk&#xE1;t szeretn&#xE9;k modellezni, l&#xE9;trehozunk egy <code>Cat</code> (macska) objektumot, aminek van n&#xE9;h&#xE1;ny tulajdons&#xE1;ga: <code>color</code> (sz&#xED;n), <code>age</code> (&#xE9;letkor), <code>mood</code> (kedv -p&#xE9;ld&#xE1;ul j&#xF3;, rossz, &#xE1;lmos ;)), &#xE9;s <code>owner</code> (tulajdonos - aki egy <code>Person</code> (szem&#xE9;ly) objektum, &#xE9;s tal&#xE1;n, ha k&#xF3;bor macsk&#xE1;r&#xF3;l van sz&#xF3;, ez a tulajdons&#xE1;g &#xFC;res).</p>
-<p>Azt&#xE1;n a <code>Cat</code>-hez tartozik n&#xE9;h&#xE1;ny tev&#xE9;kenys&#xE9;g: <code>purr</code> (dorombol&#xE1;s), <code>scratch</code> (karmol&#xE1;s), vagy <code>feed</code> (ev&#xE9;s - ahol a macsk&#xE1;nak adunk egy kis macskaeledelt, vagyis <code>CatFood</code>-ot, ami egy k&#xFC;l&#xF6;n objektum, saj&#xE1;t tulajdons&#xE1;gokkal, mint p&#xE9;ld&#xE1;ul <code>taste</code> (&#xED;z)).</p>
+<p>Létezik egy <code>objektumorientált programozás</code> nevű fogalom a programozáson belül. Ennek az az alapötlete, hogy ahelyett, hogy mindent utasítások unalmas sorozataként írnánk le, modellezhetjük is a dolgokat, és definiálhatjuk, hogyan lépnek kapcsolatba egymással.</p>
+<p>Tehát mi az az objektum? Tulajdonságok és tevékenységek gyűjteménye. Furán hangozhat, de mindjárt mutatunk egy példát.</p>
+<p>Ha egy macskát szeretnék modellezni, létrehozunk egy <code>Cat</code> (macska) objektumot, aminek van néhány tulajdonsága: <code>color</code> (szín), <code>age</code> (életkor), <code>mood</code> (kedv -például jó, rossz, álmos ;)), és <code>owner</code> (tulajdonos - aki egy <code>Person</code> (személy) objektum, és talán, ha kóbor macskáról van szó, ez a tulajdonság üres).</p>
+<p>Aztán a <code>Cat</code>-hez tartozik néhány tevékenység: <code>purr</code> (dorombolás), <code>scratch</code> (karmolás), vagy <code>feed</code> (evés - ahol a macskának adunk egy kis macskaeledelt, vagyis <code>CatFood</code>-ot, ami egy külön objektum, saját tulajdonságokkal, mint például <code>taste</code> (íz)).</p>
 <pre><code>Cat
 --------
 color
@@ -514,10 +514,10 @@ owner
 purr()
 scratch()
 feed(cat_food)
-</code></pre><p>Teh&#xE1;t az eg&#xE9;sznek az az alap&#xF6;tlete, hogy a val&#xF3;s dolgokat k&#xF3;dban tulajdons&#xE1;gokkal (vagyis <code>object property</code>-kkel) &#xE9;s tev&#xE9;kenys&#xE9;gekkel (vagyis <code>method</code>-okkal) &#xED;rjuk le.</p>
-<p>Hogyan modellezz&#xFC;k a blogposztokat? Egy blogot szeretn&#xE9;nk fejleszteni, ugye?</p>
-<p>Erre a k&#xE9;rd&#xE9;sre keress&#xFC;k a v&#xE1;laszt: Mi egy blogposzt? Milyen tulajdons&#xE1;gai vannak?</p>
-<p>Nos, a bejegyz&#xE9;s&#xFC;nknek biztos van sz&#xF6;vege, &#xE9;s c&#xED;me, igaz? Azt is j&#xF3; lenne tudni, hogy ki &#xED;rta - vagyis sz&#xFC;ks&#xE9;g&#xFC;nk van egy szerz&#x151;re is. V&#xE9;g&#xFC;l tudni szeretn&#xE9;nk, mikor lett meg&#xED;rva &#xE9;s k&#xF6;zz&#xE9;t&#xE9;ve a poszt.</p>
+</code></pre><p>Tehát az egésznek az az alapötlete, hogy a valós dolgokat kódban tulajdonságokkal (vagyis <code>object property</code>-kkel) és tevékenységekkel (vagyis <code>method</code>-okkal) írjuk le.</p>
+<p>Hogyan modellezzük a blogposztokat? Egy blogot szeretnénk fejleszteni, ugye?</p>
+<p>Erre a kérdésre keressük a választ: Mi egy blogposzt? Milyen tulajdonságai vannak?</p>
+<p>Nos, a bejegyzésünknek biztos van szövege, és címe, igaz? Azt is jó lenne tudni, hogy ki írta - vagyis szükségünk van egy szerzőre is. Végül tudni szeretnénk, mikor lett megírva és közzétéve a poszt.</p>
 <pre><code>Post
 --------
 title
@@ -525,33 +525,33 @@ text
 author
 created_date
 published_date
-</code></pre><p>Milyen dolgokat lehet csin&#xE1;lni egy blogbejegyz&#xE9;ssel? J&#xF3; lenne, ha lenne valamif&#xE9;le <code>method</code>, ami k&#xF6;zz&#xE9;teszi a posztot, nem?</p>
-<p>Teh&#xE1;t sz&#xFC;ks&#xE9;g&#xFC;nk van egy <code>publish</code> methodra.</p>
-<p>Most, hogy tudjuk, mit szeretn&#xE9;nk el&#xE9;rni, kezdj&#xFC;k el modellezni Django-ban!</p>
+</code></pre><p>Milyen dolgokat lehet csinálni egy blogbejegyzéssel? Jó lenne, ha lenne valamiféle <code>method</code>, ami közzéteszi a posztot, nem?</p>
+<p>Tehát szükségünk van egy <code>publish</code> methodra.</p>
+<p>Most, hogy tudjuk, mit szeretnénk elérni, kezdjük el modellezni Django-ban!</p>
 <h2 id="django-modell">Django modell</h2>
-<p>Most, hogy tudjuk, mik az objektumok, m&#xE1;r el tudjuk k&#xE9;sz&#xED;teni a blogposzt Django modellj&#xE9;t.</p>
-<p>A Django-ban a modellek speci&#xE1;lis objektumok - az <code>adatb&#xE1;zisban</code> vannak elmentve. Az adatb&#xE1;zis tulajdonk&#xE9;ppen adatok gy&#x171;jtem&#xE9;nye. Ez az a hely, ahol adatokat t&#xE1;rolhatsz a felhaszn&#xE1;l&#xF3;kr&#xF3;l, a blogposztokr&#xF3;l, stb. Mi egy SQLite adatb&#xE1;zist fogunk haszn&#xE1;lni az adataink t&#xE1;rol&#xE1;s&#xE1;hoz. Ez az alap&#xE9;rtelmezett Django adatb&#xE1;zis adapter -- ez egyel&#x151;re el&#xE9;g is lesz nek&#xFC;nk.</p>
-<p>Az adatb&#xE1;zisban l&#xE9;v&#x151; modellt &#xFA;gy k&#xE9;pzeld el, mint egy t&#xE1;bl&#xE1;zatot (pl. az Excelben), ahol oszlopok (mez&#x151;k) &#xE9;s sorok (adatok) vannak.</p>
-<h3 id="k&#xE9;sz&#xED;ts&#xFC;nk-egy-alkalmaz&#xE1;st">K&#xE9;sz&#xED;ts&#xFC;nk egy alkalmaz&#xE1;st!</h3>
-<p>Hogy minden sz&#xE9;p rendben maradjon, most a projekten bel&#xFC;l egy k&#xFC;l&#xF6;n alkalmaz&#xE1;st hozunk l&#xE9;tre. J&#xF3;, ha m&#xE1;r az elej&#xE9;t&#x151;l fogva rendezetten tartjuk a dolgokat. Ahhoz, hogy l&#xE9;trehozzuk az alkalmaz&#xE1;st, ezt a parancsot kell futtatnunk a parancssorban (a <code>djangogirls</code> k&#xF6;nyvt&#xE1;rban, ahol a <code>manage.py</code> f&#xE1;jl van):</p>
+<p>Most, hogy tudjuk, mik az objektumok, már el tudjuk készíteni a blogposzt Django modelljét.</p>
+<p>A Django-ban a modellek speciális objektumok - az <code>adatbázisban</code> vannak elmentve. Az adatbázis tulajdonképpen adatok gyűjteménye. Ez az a hely, ahol adatokat tárolhatsz a felhasználókról, a blogposztokról, stb. Mi egy SQLite adatbázist fogunk használni az adataink tárolásához. Ez az alapértelmezett Django adatbázis adapter -- ez egyelőre elég is lesz nekünk.</p>
+<p>Az adatbázisban lévő modellt úgy képzeld el, mint egy táblázatot (pl. az Excelben), ahol oszlopok (mezők) és sorok (adatok) vannak.</p>
+<h3 id="készítsünk-egy-alkalmazást">Készítsünk egy alkalmazást!</h3>
+<p>Hogy minden szép rendben maradjon, most a projekten belül egy külön alkalmazást hozunk létre. Jó, ha már az elejétől fogva rendezetten tartjuk a dolgokat. Ahhoz, hogy létrehozzuk az alkalmazást, ezt a parancsot kell futtatnunk a parancssorban (a <code>djangogirls</code> könyvtárban, ahol a <code>manage.py</code> fájl van):</p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py startapp blog
-</code></pre><p>Azt fogod l&#xE1;tni, hogy egy &#xFA;j <code>blog</code> k&#xF6;nyvt&#xE1;r keletkezett, &#xE9;s m&#xE1;r most van benne n&#xE9;h&#xE1;ny f&#xE1;jl. &#xCD;gy kell kin&#xE9;zni&#xFC;k a k&#xF6;nyvt&#xE1;raknak &#xE9;s f&#xE1;jloknak a projekten bel&#xFC;l:</p>
+</code></pre><p>Azt fogod látni, hogy egy új <code>blog</code> könyvtár keletkezett, és már most van benne néhány fájl. Így kell kinézniük a könyvtáraknak és fájloknak a projekten belül:</p>
 <pre><code>djangogirls
-&#x251C;&#x2500;&#x2500; mysite
+├── mysite
 |       __init__.py
 |       settings.py
 |       urls.py
 |       wsgi.py
-&#x251C;&#x2500;&#x2500; manage.py
-&#x2514;&#x2500;&#x2500; blog
-    &#x251C;&#x2500;&#x2500; migrations
+├── manage.py
+└── blog
+    ├── migrations
     |       __init__.py
-    &#x251C;&#x2500;&#x2500; __init__.py
-    &#x251C;&#x2500;&#x2500; admin.py
-    &#x251C;&#x2500;&#x2500; models.py
-    &#x251C;&#x2500;&#x2500; tests.py
-    &#x2514;&#x2500;&#x2500; views.py
-</code></pre><p>Miut&#xE1;n l&#xE9;trej&#xF6;tt az alkalmaz&#xE1;s, meg kell mondanunk a Django-nak, hogy haszn&#xE1;lja is azt. A <code>mysite/settings.py</code> tehetj&#xFC;k meg. Keresd meg az <code>INSTALLED_APPS</code> r&#xE9;szt, &#xE9;s adj hozz&#xE1; egy sort a <code>]</code> f&#xF6;l&#xF6;tt, amiben ez &#xE1;ll: <code>&apos;blog&apos;</code>. &#xCD;gy kell kin&#xE9;znie ennek a r&#xE9;sznek:</p>
+    ├── __init__.py
+    ├── admin.py
+    ├── models.py
+    ├── tests.py
+    └── views.py
+</code></pre><p>Miután létrejött az alkalmazás, meg kell mondanunk a Django-nak, hogy használja is azt. A <code>mysite/settings.py</code> tehetjük meg. Keresd meg az <code>INSTALLED_APPS</code> részt, és adj hozzá egy sort a <code>]</code> fölött, amiben ez áll: <code>&apos;blog&apos;</code>. Így kell kinéznie ennek a résznek:</p>
 <pre><code class="lang-python">INSTALLED_APPS = [
     <span class="hljs-string">&apos;django.contrib.admin&apos;</span>,
     <span class="hljs-string">&apos;django.contrib.auth&apos;</span>,
@@ -562,9 +562,9 @@ published_date
     <span class="hljs-string">&apos;blog&apos;</span>,
 ]
 </code></pre>
-<h3 id="hozzuk-l&#xE9;tre-a-blogposzt-modellj&#xE9;t">Hozzuk l&#xE9;tre a blogposzt modellj&#xE9;t</h3>
-<p>A <code>Model</code> nev&#x171; objektumokat a <code>blog/models.py</code> f&#xE1;jlban defini&#xE1;ljuk - teh&#xE1;t itt fogjuk defini&#xE1;lni a blogposztunkat is.</p>
-<p>Nyisd meg a <code>blog/models.py</code>-t, t&#xF6;r&#xF6;lj ki mindent, &#xE9;s ezt a k&#xF3;dot &#xED;rd bele:</p>
+<h3 id="hozzuk-létre-a-blogposzt-modelljét">Hozzuk létre a blogposzt modelljét</h3>
+<p>A <code>Model</code> nevű objektumokat a <code>blog/models.py</code> fájlban definiáljuk - tehát itt fogjuk definiálni a blogposztunkat is.</p>
+<p>Nyisd meg a <code>blog/models.py</code>-t, törölj ki mindent, és ezt a kódot írd bele:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models
 <span class="hljs-keyword">from</span> django.utils <span class="hljs-keyword">import</span> timezone
 
@@ -586,43 +586,43 @@ published_date
         <span class="hljs-keyword">return</span> self.title
 </code></pre>
 <blockquote>
-<p>J&#xF3;l figyelj, hogy mindenk&#xE9;pp k&#xE9;t underscore (alulvon&#xE1;s) karaktert (<code>_</code>) haszn&#xE1;lj a <code>str</code> mindk&#xE9;t oldal&#xE1;n. Ez a jel&#xF6;l&#xE9;s gyakran el&#x151;fordul a Pythonban, &#xE9;s n&#xE9;ha &quot;dunder&quot;-nek h&#xED;vjuk (a &quot;double underscore&quot; - dupla alulvon&#xE1;s r&#xF6;vid&#xED;t&#xE9;se).</p>
+<p>Jól figyelj, hogy mindenképp két underscore (alulvonás) karaktert (<code>_</code>) használj a <code>str</code> mindkét oldalán. Ez a jelölés gyakran előfordul a Pythonban, és néha &quot;dunder&quot;-nek hívjuk (a &quot;double underscore&quot; - dupla alulvonás rövidítése).</p>
 </blockquote>
-<p>Ijeszt&#x151;nek t&#x171;nik? Ne agg&#xF3;dj, mindj&#xE1;rt elmagyar&#xE1;zzuk, hogy mit jelentenek ezek a sorok.</p>
-<p>Azok a sorok, amik &#xFA;gy kezd&#x151;dnek, hogy <code>from</code> vagy <code>import</code>, m&#xE1;s f&#xE1;jlokban l&#xE9;v&#x151; dolgokat adnak hozz&#xE1; a f&#xE1;jlunkhoz. Ahelyett, hogy minden f&#xE1;jlba &#xE1;tm&#xE1;soln&#xE1;nk ugyanazokat a dolgokat, beemelhet&#xFC;nk n&#xE9;h&#xE1;ny dolgot a <code>from ... import ...</code> seg&#xED;ts&#xE9;g&#xE9;vel..</p>
-<p><code>class Post(models.Model):</code> - ez a sor defini&#xE1;lja a modell&#xFC;nket (ami egy <code>objektum</code>).</p>
+<p>Ijesztőnek tűnik? Ne aggódj, mindjárt elmagyarázzuk, hogy mit jelentenek ezek a sorok.</p>
+<p>Azok a sorok, amik úgy kezdődnek, hogy <code>from</code> vagy <code>import</code>, más fájlokban lévő dolgokat adnak hozzá a fájlunkhoz. Ahelyett, hogy minden fájlba átmásolnánk ugyanazokat a dolgokat, beemelhetünk néhány dolgot a <code>from ... import ...</code> segítségével..</p>
+<p><code>class Post(models.Model):</code> - ez a sor definiálja a modellünket (ami egy <code>objektum</code>).</p>
 <ul>
-<li>a <code>class</code> egy speci&#xE1;lis kulcssz&#xF3;, ami azt mutatja meg, hogy &#xE9;ppen egy objektumot defini&#xE1;lunk.</li>
-<li>a <code>Post</code> a modell&#xFC;nk neve. M&#xE1;s nevet is adhatn&#xE1;l neki (de ker&#xFC;ld el a speci&#xE1;lis karaktereket - pl &#xE9;kezetes karakterek - &#xE9;s a sz&#xF3;k&#xF6;zt). Az oszt&#xE1;lyok (classok) nev&#xE9;t mindig nagybet&#x171;vel kezdj&#xFC;k.</li>
-<li>a <code>models.Model</code> azt jelenti, hogy a Post egy Django Model, &#xED;gy a Django tudni fogja, hogy el kell menteni az adatb&#xE1;zisba.</li>
+<li>a <code>class</code> egy speciális kulcsszó, ami azt mutatja meg, hogy éppen egy objektumot definiálunk.</li>
+<li>a <code>Post</code> a modellünk neve. Más nevet is adhatnál neki (de kerüld el a speciális karaktereket - pl ékezetes karakterek - és a szóközt). Az osztályok (classok) nevét mindig nagybetűvel kezdjük.</li>
+<li>a <code>models.Model</code> azt jelenti, hogy a Post egy Django Model, így a Django tudni fogja, hogy el kell menteni az adatbázisba.</li>
 </ul>
-<p>Most pedig azokat a tulajdons&#xE1;gokat defini&#xE1;ljuk, amikr&#x151;l kor&#xE1;bban besz&#xE9;lt&#xFC;nk:<code>title</code> (c&#xED;m), <code>text</code> (sz&#xF6;veg), <code>created_date</code> (l&#xE9;trehoz&#xE1;s d&#xE1;tuma), <code>published_date</code> (k&#xF6;zz&#xE9;t&#xE9;tel d&#xE1;tuma) &#xE9;s <code>author</code> (szerz&#x151;). Ahhoz, hogy ezt megtehess&#xFC;k, mindegyik mez&#x151;nek meg kell hat&#xE1;roznunk a t&#xED;pus&#xE1;t (Sz&#xF6;veg lesz benne? Egy sz&#xE1;m? D&#xE1;tum? Egy m&#xE1;sik objektumhoz fog kapcsolni, p&#xE9;ld&#xE1;ul egy User-hez (felhaszn&#xE1;l&#xF3;)?).</p>
+<p>Most pedig azokat a tulajdonságokat definiáljuk, amikről korábban beszéltünk:<code>title</code> (cím), <code>text</code> (szöveg), <code>created_date</code> (létrehozás dátuma), <code>published_date</code> (közzététel dátuma) és <code>author</code> (szerző). Ahhoz, hogy ezt megtehessük, mindegyik mezőnek meg kell határoznunk a típusát (Szöveg lesz benne? Egy szám? Dátum? Egy másik objektumhoz fog kapcsolni, például egy User-hez (felhasználó)?).</p>
 <ul>
-<li><code>models.CharField</code> - &#xED;gy defini&#xE1;lsz olyan sz&#xF6;vegmez&#x151;t, ami meghat&#xE1;rozott sz&#xE1;m&#xFA; karaktert tartalmazhat.</li>
-<li><code>models.TextField</code> - ez hossz&#xFA; sz&#xF6;vegekhez van, korl&#xE1;toz&#xE1;s n&#xE9;lk&#xFC;l. Pont j&#xF3; egy blogbejegyz&#xE9;shez, igaz?</li>
-<li><code>models.DateTimeField</code> - ez d&#xE1;tumot &#xE9;s id&#x151;t tartalmaz.</li>
-<li><code>models.ForeignKey</code> - ez egy m&#xE1;sik modellel val&#xF3; kapcsolatot jelent.</li>
+<li><code>models.CharField</code> - így definiálsz olyan szövegmezőt, ami meghatározott számú karaktert tartalmazhat.</li>
+<li><code>models.TextField</code> - ez hosszú szövegekhez van, korlátozás nélkül. Pont jó egy blogbejegyzéshez, igaz?</li>
+<li><code>models.DateTimeField</code> - ez dátumot és időt tartalmaz.</li>
+<li><code>models.ForeignKey</code> - ez egy másik modellel való kapcsolatot jelent.</li>
 </ul>
-<p>Most nem magyar&#xE1;zzuk el nagyon r&#xE9;szletesen a k&#xF3;dot, mert t&#xFA;l sok id&#x151; lenne. Ha szeretn&#xE9;l t&#xF6;bbet tudni a Model mez&#x151;kr&#x151;l, &#xE9;s hogy milyen m&#xE1;s dolgokat lehet defini&#xE1;lni benn&#xFC;nk, olvashatsz r&#xF3;la a Django dokument&#xE1;ci&#xF3;ban (<a href="https://docs.djangoproject.com/en/1.11/ref/models/fields/#field-types" target="_blank">https://docs.djangoproject.com/en/1.11/ref/models/fields/#field-types</a>).</p>
-<p>&#xC9;s mi a helyzet a <code>def publish(self):</code> r&#xE9;sszel? Ez pontosan az a <code>publish</code> (k&#xF6;zz&#xE9;t&#xE9;tel) method, amir&#x151;l kor&#xE1;bban besz&#xE9;lt&#xFC;nk. A <code>def</code> azt jelenti, hogy ez egy f&#xFC;ggv&#xE9;ny (function) / method, &#xE9;s a <code>publish</code> ennek a methodnak a neve. Ha szeretn&#xE9;d, megv&#xE1;ltoztathatod a met&#xF3;dus nev&#xE9;t. Az a szab&#xE1;ly, hogy csak kisbet&#x171;ket haszn&#xE1;lunk, &#xE9;s sz&#xF3;k&#xF6;z helyett underscore-t (alulvon&#xE1;s). P&#xE9;ld&#xE1;ul egy olyan method neve, ami az &#xE1;tlag&#xE1;rat sz&#xE1;molja ki, ez lehetne: <code>calculate_average_price</code>.</p>
-<p>A methodok gyakran <code>return</code>-&#xF6;lnek (visszaadnak) valamit. Erre van is egy p&#xE9;lda a <code>__str__</code> methodban. Ebben az esetben amikor megh&#xED;vjuk a <code>__str__()</code>-t, egy sz&#xF6;veget kapunk vissza (<strong>string</strong>), ami a Post c&#xED;me.</p>
-<p>Vedd &#xE9;szre azt is, hogy mind <code>def publish(self):</code> mind <code>def __str__(self):</code> indent&#xE1;lva van a class-on bell&#xFC;l. Python sz&#xE1;m&#xE1;ra fontosak a sz&#xF3;k&#xF6;z&#xF6;k, ez&#xE9;rt a method-okat indent&#xE1;lni kell az oszt&#xE1;lyokon bell&#xFC;l. Ha ez elmarad, akkor a method nem az adott oszt&#xE1;lyhoz fog tartozni, &#xE9;s furcs&#xE1;n fog viselkedni a program.</p>
-<p>Ha valami m&#xE9;g nem teljesen vil&#xE1;gos a modellekkel kapcsolatban, nyugodtan k&#xE9;rdezd meg a coachodat! Tudjuk, hogy bonyolult, f&#x151;leg, ha egyszerre tanulsz az objektumokr&#xF3;l &#xE9;s a f&#xFC;ggv&#xE9;nyekr&#x151;l. De rem&#xE9;lj&#xFC;k, m&#xE1;r sokkal kev&#xE9;sb&#xE9; t&#x171;nik var&#xE1;zslatnak az eg&#xE9;sz!</p>
-<h3 id="k&#xE9;sz&#xED;ts-t&#xE1;bl&#xE1;kat-a-modelleknek-az-adatb&#xE1;zisodban">K&#xE9;sz&#xED;ts t&#xE1;bl&#xE1;kat a modelleknek az adatb&#xE1;zisodban</h3>
-<p>Az utols&#xF3; l&#xE9;p&#xE9;s, hogy hozz&#xE1;adjuk az &#xFA;j modell&#xFC;nket az adatb&#xE1;zishoz. El&#x151;sz&#xF6;r valahogy tudatnunk kell a Django-val, hogy v&#xE1;ltoztattunk a modell&#xFC;nk&#xF6;n (vagyis most alkottuk meg!). G&#xE9;peld be, hogy <code>python manage.py makemigrations blog</code>. Ez fog t&#xF6;rt&#xE9;nni:</p>
+<p>Most nem magyarázzuk el nagyon részletesen a kódot, mert túl sok idő lenne. Ha szeretnél többet tudni a Model mezőkről, és hogy milyen más dolgokat lehet definiálni bennünk, olvashatsz róla a Django dokumentációban (<a href="https://docs.djangoproject.com/en/1.11/ref/models/fields/#field-types" target="_blank">https://docs.djangoproject.com/en/1.11/ref/models/fields/#field-types</a>).</p>
+<p>És mi a helyzet a <code>def publish(self):</code> résszel? Ez pontosan az a <code>publish</code> (közzététel) method, amiről korábban beszéltünk. A <code>def</code> azt jelenti, hogy ez egy függvény (function) / method, és a <code>publish</code> ennek a methodnak a neve. Ha szeretnéd, megváltoztathatod a metódus nevét. Az a szabály, hogy csak kisbetűket használunk, és szóköz helyett underscore-t (alulvonás). Például egy olyan method neve, ami az átlagárat számolja ki, ez lehetne: <code>calculate_average_price</code>.</p>
+<p>A methodok gyakran <code>return</code>-ölnek (visszaadnak) valamit. Erre van is egy példa a <code>__str__</code> methodban. Ebben az esetben amikor meghívjuk a <code>__str__()</code>-t, egy szöveget kapunk vissza (<strong>string</strong>), ami a Post címe.</p>
+<p>Vedd észre azt is, hogy mind <code>def publish(self):</code> mind <code>def __str__(self):</code> indentálva van a class-on bellül. Python számára fontosak a szóközök, ezért a method-okat indentálni kell az osztályokon bellül. Ha ez elmarad, akkor a method nem az adott osztályhoz fog tartozni, és furcsán fog viselkedni a program.</p>
+<p>Ha valami még nem teljesen világos a modellekkel kapcsolatban, nyugodtan kérdezd meg a coachodat! Tudjuk, hogy bonyolult, főleg, ha egyszerre tanulsz az objektumokról és a függvényekről. De reméljük, már sokkal kevésbé tűnik varázslatnak az egész!</p>
+<h3 id="készíts-táblákat-a-modelleknek-az-adatbázisodban">Készíts táblákat a modelleknek az adatbázisodban</h3>
+<p>Az utolsó lépés, hogy hozzáadjuk az új modellünket az adatbázishoz. Először valahogy tudatnunk kell a Django-val, hogy változtattunk a modellünkön (vagyis most alkottuk meg!). Gépeld be, hogy <code>python manage.py makemigrations blog</code>. Ez fog történni:</p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py makemigrations blog
 Migrations for &apos;blog&apos;:
   0001_initial.py:
   - Create model Post
-</code></pre><p><strong>Megjegyz&#xE9;s</strong> Ne felejtsd el elmenteni a m&#xF3;dos&#xED;tott file-okat. K&#xFC;l&#xF6;nben a sz&#xE1;m&#xED;t&#xF3;g&#xE9;ped az el&#x151;z&#x151; v&#xE1;ltozatot futtatja le, amely v&#xE1;ratlan hiba&#xFC;zeneteket eredm&#xE9;nyezhet.</p>
-<p>A Django l&#xE9;trehozott nek&#xFC;nk egy migr&#xE1;ci&#xF3;s f&#xE1;jlt, amit most futtatni fogunk az adatb&#xE1;zison. &#xCD;rd be, hogy <code>python manage.py migrate blog</code>, &#xE9;s ezt az outputot kell kapnod:</p>
+</code></pre><p><strong>Megjegyzés</strong> Ne felejtsd el elmenteni a módosított file-okat. Különben a számítógéped az előző változatot futtatja le, amely váratlan hibaüzeneteket eredményezhet.</p>
+<p>A Django létrehozott nekünk egy migrációs fájlt, amit most futtatni fogunk az adatbázison. Írd be, hogy <code>python manage.py migrate blog</code>, és ezt az outputot kell kapnod:</p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py migrate blog
 Operations to perform:
   Apply all migrations: blog
 Running migrations:
   Rendering model states... DONE
   Applying blog.0001_initial... OK
-</code></pre><p>Hurr&#xE1;! Beker&#xFC;lt az adatb&#xE1;zisba a Post modell&#xFC;nk! J&#xF3; lenne l&#xE1;tni is, nem igaz? A k&#xF6;vetkez&#x151; fejezetben kider&#xFC;l, hogy n&#xE9;z ki!</p>
+</code></pre><p>Hurrá! Bekerült az adatbázisba a Post modellünk! Jó lenne látni is, nem igaz? A következő fejezetben kiderül, hogy néz ki!</p>
 
                                 
                                 </section>
@@ -666,12 +666,56 @@ Running migrations:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Django modellek","level":"1.11","depth":1,"next":{"title":"Django admin","level":"1.12","depth":1,"path":"django_admin/README.md","ref":"django_admin/README.md","articles":[]},"previous":{"title":"Az első Django projekted!","level":"1.10","depth":1,"path":"django_start_project/README.md","ref":"django_start_project/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"hu","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_models/README.md","mtime":"2020-09-22T11:43:42.866Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"hu"}});
+            gitbook.page.hasChanged({"page":{"title":"Django modellek","level":"1.11","depth":1,"next":{"title":"Django admin","level":"1.12","depth":1,"path":"django_admin/README.md","ref":"django_admin/README.md","articles":[]},"previous":{"title":"Az első Django projekted!","level":"1.10","depth":1,"path":"django_start_project/README.md","ref":"django_start_project/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"hu","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_models/README.md","mtime":"2020-11-15T14:54:56.450Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"hu"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

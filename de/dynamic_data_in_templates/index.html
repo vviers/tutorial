@@ -7,7 +7,7 @@
         <title>Dynamische Daten in Templates · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -622,30 +622,30 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="dynamische-daten-in-templates">Dynamische Daten in Templates</h1>
-<p>Wir haben nun schon einige Dinge an verschiedenen Orten fertiggestellt: das <code>Post</code>-Model ist in der <code>models.py</code> definiert, wir haben die <code>post_list</code> in der <code>views.py</code> und das Template hinzugef&#xFC;gt. Aber wie schaffen wir es nun, dass unsere Posts wirklich im HTML-Template erscheinen? Denn wir wollen ja erreichen, dass bestimmte Inhalte (die in der Datenbank gespeicherten Models) auf sch&#xF6;ne Weise in unserem Template anzeigt werden, richtig?</p>
-<p>Genau daf&#xFC;r sind die <em>Views</em> zust&#xE4;ndig: die Verbindung zwischen den Models und den Templates. In unserer <code>post_list</code>-View m&#xFC;ssen wir die Models, die wir anzeigen wollen, hernehmen und diese dem Template &#xFC;bergeben. In einer <em>View</em> entscheiden wir, was (welches Model) wir in einem Template anzeigen werden.</p>
+<p>Wir haben nun schon einige Dinge an verschiedenen Orten fertiggestellt: das <code>Post</code>-Model ist in der <code>models.py</code> definiert, wir haben die <code>post_list</code> in der <code>views.py</code> und das Template hinzugefügt. Aber wie schaffen wir es nun, dass unsere Posts wirklich im HTML-Template erscheinen? Denn wir wollen ja erreichen, dass bestimmte Inhalte (die in der Datenbank gespeicherten Models) auf schöne Weise in unserem Template anzeigt werden, richtig?</p>
+<p>Genau dafür sind die <em>Views</em> zuständig: die Verbindung zwischen den Models und den Templates. In unserer <code>post_list</code>-View müssen wir die Models, die wir anzeigen wollen, hernehmen und diese dem Template übergeben. In einer <em>View</em> entscheiden wir, was (welches Model) wir in einem Template anzeigen werden.</p>
 <p>Okay, und wie machen wir das jetzt?</p>
-<p>Wir &#xF6;ffnen unsere Datei <code>blog/views.py</code> in unserem Code-Editor. Bisher sieht unsere <code>post_list</code>-<em>View</em> folgenderma&#xDF;en aus:</p>
+<p>Wir öffnen unsere Datei <code>blog/views.py</code> in unserem Code-Editor. Bisher sieht unsere <code>post_list</code>-<em>View</em> folgendermaßen aus:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_list</span><span class="hljs-params">(request)</span>:</span>
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_list.html&apos;</span>, {})
 </code></pre>
-<p>Erinnerst du dich, als wir davon gesprochen haben, dass wir den Code in verschiedene Dateien einf&#xFC;gen m&#xFC;ssen? Jetzt ist es an der Zeit, das Model, dass wir in <code>models.py</code> beschrieben haben, einzuf&#xFC;gen. Wir f&#xFC;gen den Befehl <code>from .models import Post</code> folgenderma&#xDF;en ein:</p>
+<p>Erinnerst du dich, als wir davon gesprochen haben, dass wir den Code in verschiedene Dateien einfügen müssen? Jetzt ist es an der Zeit, das Model, dass wir in <code>models.py</code> beschrieben haben, einzufügen. Wir fügen den Befehl <code>from .models import Post</code> folgendermaßen ein:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 <span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Post
 </code></pre>
-<p>Der Punkt vor <code>models</code> bedeutet <em>aktuelles Verzeichnis</em> oder <em>aktuelle Anwendung</em>. Die Dateien <code>views.py</code> und <code>models.py</code> liegen im selben Verzeichnis. Deswegen k&#xF6;nnen wir <code>.</code> und den Namen der Datei (ohne <code>.py</code>) benutzen. Dann erg&#xE4;nzen wir f&#xFC;r den Import den Namen des Models (<code>Post</code>).</p>
-<p>Und nun? Um vom <code>Post</code>-Model die tats&#xE4;chlichen Blogposts zu erhalten, brauchen wir etwas, das <code>QuerySet</code> hei&#xDF;t.</p>
+<p>Der Punkt vor <code>models</code> bedeutet <em>aktuelles Verzeichnis</em> oder <em>aktuelle Anwendung</em>. Die Dateien <code>views.py</code> und <code>models.py</code> liegen im selben Verzeichnis. Deswegen können wir <code>.</code> und den Namen der Datei (ohne <code>.py</code>) benutzen. Dann ergänzen wir für den Import den Namen des Models (<code>Post</code>).</p>
+<p>Und nun? Um vom <code>Post</code>-Model die tatsächlichen Blogposts zu erhalten, brauchen wir etwas, das <code>QuerySet</code> heißt.</p>
 <h2 id="queryset">QuerySet</h2>
-<p>Dir sollte schon ungef&#xE4;hr klar sein, wie QuerySets funktionieren. Wir haben dar&#xFC;ber im Kapitel <a href="../django_orm/">Django-ORM und QuerySets</a> gesprochen.</p>
+<p>Dir sollte schon ungefähr klar sein, wie QuerySets funktionieren. Wir haben darüber im Kapitel <a href="../django_orm/">Django-ORM und QuerySets</a> gesprochen.</p>
 <p>Wir wollen nun also eine Liste von publizierten Blogposts ausgeben, sortiert nach dem <code>published_date</code>, oder? Das haben wir bereits im Kapitel QuerySets gemacht!</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python">Post.objects.filter(published_date__lte=timezone.now()).order_by(<span class="hljs-string">&apos;published_date&apos;</span>)
 </code></pre>
-<p>&#xD6;ffnen wir also die Datei <code>blog/views.py</code> im Code-Editor und setzen wir dieses St&#xFC;ck Code in die Funktion <code>def post_list(request)</code> ein. Aber vergiss nicht, zuerst <code>from django.utils import timezone</code> hinzuf&#xFC;gen:</p>
+<p>Öffnen wir also die Datei <code>blog/views.py</code> im Code-Editor und setzen wir dieses Stück Code in die Funktion <code>def post_list(request)</code> ein. Aber vergiss nicht, zuerst <code>from django.utils import timezone</code> hinzufügen:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 <span class="hljs-keyword">from</span> django.utils <span class="hljs-keyword">import</span> timezone
@@ -655,10 +655,10 @@
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by(<span class="hljs-string">&apos;published_date&apos;</span>)
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_list.html&apos;</span>, {})
 </code></pre>
-<p>Als Letztes fehlt noch, dass wir das <code>posts</code>-QuerySet dem Template &#xFC;bergeben. Wie wir es dann anzeigen, erf&#xE4;hrst du im n&#xE4;chsten Kapitel.</p>
-<p>Beachte, dass wir eine <em>Variable</em> f&#xFC;r unser QuerySet erstellt haben: <code>posts</code>. Das ist sozusagen der Name unseres QuerySets. Ab jetzt bezeichnen wir das QuerySet mit diesem Namen.</p>
-<p>In der <code>render</code>-Funktion haben wir einen Parameter <code>request</code> (also alles, was wir vom User &#xFC;ber das Internet bekommen) und einen weiteren Parameter, der den Template-Namen (<code>&apos;blog/post_list.html&apos;</code>) angibt. Der letzte Parameter, <code>{}</code>, ist eine Stelle, in der wir weitere Dinge hinzuf&#xFC;gen k&#xF6;nnen, die das Template dann benutzen kann. Wir m&#xFC;ssen diesen einen Namen geben (wir verwenden einfach wieder <code>&apos;posts&apos;</code>). :) Es sollte nun so aussehen: <code>{&apos;posts&apos;: posts}</code>. Bitte achte darauf, dass der Teil vor <code>:</code> ein String ist; das hei&#xDF;t, du musst ihn mit Anf&#xFC;hrungszeichen <code>&apos;&apos;</code> umschliessen.</p>
-<p>Schlie&#xDF;lich sollte deine <code>blog/views.py</code> Datei folgenderma&#xDF;en aussehen:</p>
+<p>Als Letztes fehlt noch, dass wir das <code>posts</code>-QuerySet dem Template übergeben. Wie wir es dann anzeigen, erfährst du im nächsten Kapitel.</p>
+<p>Beachte, dass wir eine <em>Variable</em> für unser QuerySet erstellt haben: <code>posts</code>. Das ist sozusagen der Name unseres QuerySets. Ab jetzt bezeichnen wir das QuerySet mit diesem Namen.</p>
+<p>In der <code>render</code>-Funktion haben wir einen Parameter <code>request</code> (also alles, was wir vom User über das Internet bekommen) und einen weiteren Parameter, der den Template-Namen (<code>&apos;blog/post_list.html&apos;</code>) angibt. Der letzte Parameter, <code>{}</code>, ist eine Stelle, in der wir weitere Dinge hinzufügen können, die das Template dann benutzen kann. Wir müssen diesen einen Namen geben (wir verwenden einfach wieder <code>&apos;posts&apos;</code>). :) Es sollte nun so aussehen: <code>{&apos;posts&apos;: posts}</code>. Bitte achte darauf, dass der Teil vor <code>:</code> ein String ist; das heißt, du musst ihn mit Anführungszeichen <code>&apos;&apos;</code> umschliessen.</p>
+<p>Schließlich sollte deine <code>blog/views.py</code> Datei folgendermaßen aussehen:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 <span class="hljs-keyword">from</span> django.utils <span class="hljs-keyword">import</span> timezone
@@ -668,8 +668,8 @@
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by(<span class="hljs-string">&apos;published_date&apos;</span>)
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_list.html&apos;</span>, {<span class="hljs-string">&apos;posts&apos;</span>: posts})
 </code></pre>
-<p>Das war&apos;s! Zeit, zur&#xFC;ck zum Template zu gehen und das QuerySet anzuzeigen!</p>
-<p>Wenn du mehr &#xFC;ber QuerySets in Django erfahren willst, dann sieh unter diesem Link nach: <a href="https://docs.djangoproject.com/en/2.2/ref/models/querysets/" target="_blank">https://docs.djangoproject.com/en/2.2/ref/models/querysets/</a></p>
+<p>Das war&apos;s! Zeit, zurück zum Template zu gehen und das QuerySet anzuzeigen!</p>
+<p>Wenn du mehr über QuerySets in Django erfahren willst, dann sieh unter diesem Link nach: <a href="https://docs.djangoproject.com/en/2.2/ref/models/querysets/" target="_blank">https://docs.djangoproject.com/en/2.2/ref/models/querysets/</a></p>
 
                                 
                                 </section>
@@ -713,12 +713,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Dynamische Daten in Templates","level":"1.19","depth":1,"next":{"title":"Django-Templates","level":"1.20","depth":1,"path":"django_templates/README.md","ref":"django_templates/README.md","articles":[]},"previous":{"title":"Django-ORM und QuerySets","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"dynamic_data_in_templates/README.md","mtime":"2020-09-22T11:43:42.666Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"de"}});
+            gitbook.page.hasChanged({"page":{"title":"Dynamische Daten in Templates","level":"1.19","depth":1,"next":{"title":"Django-Templates","level":"1.20","depth":1,"path":"django_templates/README.md","ref":"django_templates/README.md","articles":[]},"previous":{"title":"Django-ORM und QuerySets","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"dynamic_data_in_templates/README.md","mtime":"2020-11-15T14:54:56.270Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"de"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

@@ -7,7 +7,7 @@
         <title>Estendendo os templates · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -512,17 +512,17 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="estendendo-os-templates">Estendendo os templates</h1>
-<p>Outra coisa boa que o Django tem para voc&#xEA; &#xE9; o <strong>template extending</strong> - extens&#xE3;o de templates. O que isso significa? Significa que voc&#xEA; pode usar as mesmas partes do seu HTML em diferentes p&#xE1;ginas do seu site.</p>
-<p>Templates ajudam quando voc&#xEA; quer usar a mesma informa&#xE7;&#xE3;o ou layout em mais de um lugar. Voc&#xEA; n&#xE3;o precisa se repetir em todos os arquivos. E, caso queira mudar algo, voc&#xEA; n&#xE3;o precisa faz&#xEA;-lo em todos os templates, apenas em um!</p>
+<p>Outra coisa boa que o Django tem para você é o <strong>template extending</strong> - extensão de templates. O que isso significa? Significa que você pode usar as mesmas partes do seu HTML em diferentes páginas do seu site.</p>
+<p>Templates ajudam quando você quer usar a mesma informação ou layout em mais de um lugar. Você não precisa se repetir em todos os arquivos. E, caso queira mudar algo, você não precisa fazê-lo em todos os templates, apenas em um!</p>
 <h2 id="criando-um-template-base">Criando um template base</h2>
-<p>Um template base &#xE9; o template mais b&#xE1;sico sobre o qual voc&#xEA; construir&#xE1; em cada p&#xE1;gina do seu site.</p>
+<p>Um template base é o template mais básico sobre o qual você construirá em cada página do seu site.</p>
 <p>Vamos criar um arquivo <code>base.html</code> na pasta <code>blog/templates/blog/</code>:</p>
 <pre><code>blog
-&#x2514;&#x2500;&#x2500;&#x2500;templates
-    &#x2514;&#x2500;&#x2500;&#x2500;blog
+└───templates
+    └───blog
             base.html
             post_list.html
-</code></pre><p>Em seguida, abra o arquivo no editor de c&#xF3;digo e copie tudo de <code>post_list.html</code> para <code>base.html</code>, desse jeito:</p>
+</code></pre><p>Em seguida, abra o arquivo no editor de código e copie tudo de <code>post_list.html</code> para <code>base.html</code>, desse jeito:</p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html">{% load static %}
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
@@ -556,7 +556,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>Ent&#xE3;o, em <code>base.html</code>, substitua todo o seu <code>&lt;body&gt;</code> (tudo entre <code>&lt;body&gt;</code> e <code>&lt;/body&gt;</code>) por isso:</p>
+<p>Então, em <code>base.html</code>, substitua todo o seu <code>&lt;body&gt;</code> (tudo entre <code>&lt;body&gt;</code> e <code>&lt;/body&gt;</code>) por isso:</p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-header&quot;</span>&gt;</span>
@@ -572,13 +572,13 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
-<p>Voc&#xEA; pode ver que essa a&#xE7;&#xE3;o substituiu tudo a partir de <code>{% for post in posts %}</code> at&#xE9; <code>{% endfor %}</code> por: </p>
+<p>Você pode ver que essa ação substituiu tudo a partir de <code>{% for post in posts %}</code> até <code>{% endfor %}</code> por: </p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html">{% block content %}
 {% endblock %}
 </code></pre>
-<p>Mas por qu&#xEA;? Voc&#xEA; acabou de criar um <code>bloco</code>! Voc&#xEA; usou o a etiqueta de template (template tag) <code>{% block %}</code> para criar uma &#xE1;rea que ter&#xE1; HTML inserido nela. Esse HTML vir&#xE1; de outro template que vai estender este template (<code>base.html</code>). N&#xF3;s vamos te mostrar como fazer isso j&#xE1; j&#xE1;.</p>
-<p>Agora, salve <code>base.html</code> e abra novamente o seu <code>blog/templates/blog/post_list.html</code> no editor de c&#xF3;digo.  Remova tudo acima de <code>{% for post in posts %}</code> e abaixo de <code>{% endfor %}</code>. Quando terminar, o arquivo deve estar parecido com isso: </p>
+<p>Mas por quê? Você acabou de criar um <code>bloco</code>! Você usou o a etiqueta de template (template tag) <code>{% block %}</code> para criar uma área que terá HTML inserido nela. Esse HTML virá de outro template que vai estender este template (<code>base.html</code>). Nós vamos te mostrar como fazer isso já já.</p>
+<p>Agora, salve <code>base.html</code> e abra novamente o seu <code>blog/templates/blog/post_list.html</code> no editor de código.  Remova tudo acima de <code>{% for post in posts %}</code> e abaixo de <code>{% endfor %}</code>. Quando terminar, o arquivo deve estar parecido com isso: </p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% for post in posts %}
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
@@ -590,8 +590,8 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 {% endfor %}
 </code></pre>
-<p>Queremos usar isso como parte do nosso template para todos os blocos de conte&#xFA;do. &#xC9; hora de adicionar as tags (etiquetas) de blocos neste arquivo!</p>
-<p>Voc&#xEA; quer que sua etiqueta de bloco coincida com a etiqueta no seu arquivo <code>base.html</code>. Voc&#xEA; tamb&#xE9;m quer que inclua todo o c&#xF3;digo que pertence aos seus blocos de conte&#xFA;do. Para isso, coloque tudo entre <code>{% block content %}</code> e <code>{% endblock %}</code>. Assim:</p>
+<p>Queremos usar isso como parte do nosso template para todos os blocos de conteúdo. É hora de adicionar as tags (etiquetas) de blocos neste arquivo!</p>
+<p>Você quer que sua etiqueta de bloco coincida com a etiqueta no seu arquivo <code>base.html</code>. Você também quer que inclua todo o código que pertence aos seus blocos de conteúdo. Para isso, coloque tudo entre <code>{% block content %}</code> e <code>{% endblock %}</code>. Assim:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% block content %}
     {% for post in posts %}
@@ -605,7 +605,7 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>S&#xF3; falta uma coisa. Precisamos juntar estes dois templates. Isto &#xE9; o que significa &apos;estender templates&apos;! Vamos fazer isso adicionando uma etiqueta de extens&#xE3;o ao in&#xED;cio do arquivo. Assim:</p>
+<p>Só falta uma coisa. Precisamos juntar estes dois templates. Isto é o que significa &apos;estender templates&apos;! Vamos fazer isso adicionando uma etiqueta de extensão ao início do arquivo. Assim:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
 
@@ -621,9 +621,9 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>&#xC9; isso! Salve o arquivo e veja se o seu site ainda est&#xE1; funcionando corretamente. :)</p>
+<p>É isso! Salve o arquivo e veja se o seu site ainda está funcionando corretamente. :)</p>
 <blockquote>
-<p>Se voc&#xEA; receber o erro <code>TemplateDoesNotExist</code>, significa que n&#xE3;o h&#xE1; um arquivo em <code>blog/base.html</code> e voc&#xEA; est&#xE1; rodando o <code>runserver</code> na janela do terminal. Tente encerr&#xE1;-lo (apertando Ctrl+C -- as teclas Control e C juntas) e reinici&#xE1;-lo rodando o comando <code>python manage.py runserver</code>.</p>
+<p>Se você receber o erro <code>TemplateDoesNotExist</code>, significa que não há um arquivo em <code>blog/base.html</code> e você está rodando o <code>runserver</code> na janela do terminal. Tente encerrá-lo (apertando Ctrl+C -- as teclas Control e C juntas) e reiniciá-lo rodando o comando <code>python manage.py runserver</code>.</p>
 </blockquote>
 
                                 
@@ -668,12 +668,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Estendendo os templates","level":"1.22","depth":1,"next":{"title":"Amplie sua aplicação","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - Deixe tudo mais bonito!","level":"1.21","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"pt","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-09-22T11:43:43.058Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"pt"}});
+            gitbook.page.hasChanged({"page":{"title":"Estendendo os templates","level":"1.22","depth":1,"next":{"title":"Amplie sua aplicação","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - Deixe tudo mais bonito!","level":"1.21","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"pt","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-11-15T14:54:56.626Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"pt"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

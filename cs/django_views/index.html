@@ -7,7 +7,7 @@
         <title>Django views -- je čas začít tvořit! · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -498,27 +498,27 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="django-views-&#x2013;-je-&#x10D;as-za&#x10D;&#xED;t-tvo&#x159;it">Django views &#x2013; je &#x10D;as za&#x10D;&#xED;t tvo&#x159;it!</h1>
-<p>Nejd&#x159;&#xED;ve se mus&#xED;me zbavit chyb, kter&#xE9; jsme vytvo&#x159;ily v p&#x159;edchoz&#xED; kapitole :)</p>
-<p><em>View</em> je m&#xED;sto, kam p&#xED;&#x161;eme &quot;logiku&quot; na&#x161;&#xED; aplikace. Bude po&#x17E;adovat informace z <code>modelu</code>, kter&#xFD; jsi vytvo&#x159;ila d&#x159;&#xED;ve, a p&#x159;ed&#xE1; je <code>&#x161;ablon&#x11B;</code>. &#x160;ablonu vytvo&#x159;&#xED;me v p&#x159;&#xED;&#x161;t&#xED; kapitole. View jsou vlastn&#x11B; jen Python funkce, kter&#xE9; jsou o trochu slo&#x17E;it&#x11B;j&#x161;&#xED; ne&#x17E; funkce z kapitoly <strong>&#xDA;vod do Pythonu</strong>.</p>
-<p>View se d&#xE1;vaj&#xED; do souboru <code>views.py</code>. My si te&#x10F; p&#x159;id&#xE1;me na&#x161;e vlastn&#xED; <em>view</em> do souboru <code>blog/views.py</code>.</p>
+                                <h1 id="django-views-–-je-čas-začít-tvořit">Django views – je čas začít tvořit!</h1>
+<p>Nejdříve se musíme zbavit chyb, které jsme vytvořily v předchozí kapitole :)</p>
+<p><em>View</em> je místo, kam píšeme &quot;logiku&quot; naší aplikace. Bude požadovat informace z <code>modelu</code>, který jsi vytvořila dříve, a předá je <code>šabloně</code>. Šablonu vytvoříme v příští kapitole. View jsou vlastně jen Python funkce, které jsou o trochu složitější než funkce z kapitoly <strong>Úvod do Pythonu</strong>.</p>
+<p>View se dávají do souboru <code>views.py</code>. My si teď přidáme naše vlastní <em>view</em> do souboru <code>blog/views.py</code>.</p>
 <h2 id="blogviewspy">blog/views.py</h2>
-<p>OK, poj&#x10F;me otev&#x159;&#xED;t tento soubor a pod&#xED;vat se, co tam je:</p>
+<p>OK, pojďme otevřít tento soubor a podívat se, co tam je:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 
 <span class="hljs-comment"># Create your views here.</span>
 </code></pre>
-<p>Zat&#xED;m zde nen&#xED; p&#x159;&#xED;li&#x161; informac&#xED;. Nejjednodu&#x161;&#x161;&#xED; <em>view</em> m&#x16F;&#x17E;e vypadat n&#xE1;sledovn&#x11B;.</p>
+<p>Zatím zde není příliš informací. Nejjednodušší <em>view</em> může vypadat následovně.</p>
 <pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_list</span><span class="hljs-params">(request)</span>:</span>
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_list.html&apos;</span>, {})
 </code></pre>
-<p>Jak vid&#xED;&#x161; vytvo&#x159;ily, jsme metodu (<code>def</code>) nazvanou <code>post_list</code>, kter&#xE1; p&#x159;eb&#xED;r&#xE1; <code>request</code>(&#x17E;&#xE1;dost) a <code>return</code> (vrac&#xED;) metodu <code>render</code>, kter&#xE1; bude vykreslovat na&#x161;i &#x161;ablonu <code>blog/post_list.html</code>.</p>
-<p>Ulo&#x17E; soubor, p&#x159;ejdi na <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a> a pod&#xED;vej se, co se n&#xE1;m nyn&#xED; zobraz&#xED;.</p>
-<p>Dal&#x161;&#xED; chyba! P&#x159;e&#x10D;ti si, co je &#x161;patn&#x11B; nyn&#xED;:</p>
+<p>Jak vidíš vytvořily, jsme metodu (<code>def</code>) nazvanou <code>post_list</code>, která přebírá <code>request</code>(žádost) a <code>return</code> (vrací) metodu <code>render</code>, která bude vykreslovat naši šablonu <code>blog/post_list.html</code>.</p>
+<p>Ulož soubor, přejdi na <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a> a podívej se, co se nám nyní zobrazí.</p>
+<p>Další chyba! Přečti si, co je špatně nyní:</p>
 <p><img src="images/error.png" alt="Error"></p>
-<p>Je to jednoduch&#xE9;: <em>TemplateDoesNotExist</em>. Mus&#xED;me opravit tuto chybu a v n&#xE1;sleduj&#xED;c&#xED; kapitole vytvo&#x159;it &#x161;ablonu!</p>
+<p>Je to jednoduché: <em>TemplateDoesNotExist</em>. Musíme opravit tuto chybu a v následující kapitole vytvořit šablonu!</p>
 <blockquote>
-<p>Dal&#x161;&#xED; informace ohledn&#x11B; Django views z&#xED;sk&#xE1;&#x161; v ofici&#xE1;ln&#xED; dokumentaci na: <a href="https://docs.djangoproject.com/en/1.8/topics/http/views/" target="_blank">https://docs.djangoproject.com/en/1.8/topics/http/views/</a></p>
+<p>Další informace ohledně Django views získáš v oficiální dokumentaci na: <a href="https://docs.djangoproject.com/en/1.8/topics/http/views/" target="_blank">https://docs.djangoproject.com/en/1.8/topics/http/views/</a></p>
 </blockquote>
 
                                 
@@ -563,12 +563,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Django views -- je čas začít tvořit!","level":"1.15","depth":1,"next":{"title":"Úvod do HTML","level":"1.16","depth":1,"path":"html/README.md","ref":"html/README.md","articles":[]},"previous":{"title":"Django URL","level":"1.14","depth":1,"path":"django_urls/README.md","ref":"django_urls/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"cs","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_views/README.md","mtime":"2020-09-22T11:43:42.634Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"cs"}});
+            gitbook.page.hasChanged({"page":{"title":"Django views -- je čas začít tvořit!","level":"1.15","depth":1,"next":{"title":"Úvod do HTML","level":"1.16","depth":1,"path":"html/README.md","ref":"html/README.md","articles":[]},"previous":{"title":"Django URL","level":"1.14","depth":1,"path":"django_urls/README.md","ref":"django_urls/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"cs","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_views/README.md","mtime":"2020-11-15T14:54:56.238Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"cs"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

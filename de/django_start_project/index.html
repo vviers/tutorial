@@ -7,7 +7,7 @@
         <title>Dein erstes Django-Projekt! · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -624,78 +624,78 @@
                                 <h1 id="dein-erstes-django-projekt">Dein erstes Django-Projekt!</h1>
 <blockquote>
 <p>Ein Teil dieses Kapitels basiert auf Tutorials der Geek Girls Carrots (<a href="https://github.com/ggcarrots/django-carrots" target="_blank">https://github.com/ggcarrots/django-carrots</a>).</p>
-<p>Teile dieses Kapitels basieren auf dem <a href="http://django-marcador.keimlink.de/" target="_blank">django-marcador Tutorial</a> lizenziert unter Creative Commons Attribution-ShareAlike 4.0 International License. F&#xFC;r das &quot;django-marcador Tutorial&quot; liegt das Urheberrecht bei Markus Zapke-Gr&#xFC;ndemann et al.</p>
+<p>Teile dieses Kapitels basieren auf dem <a href="http://django-marcador.keimlink.de/" target="_blank">django-marcador Tutorial</a> lizenziert unter Creative Commons Attribution-ShareAlike 4.0 International License. Für das &quot;django-marcador Tutorial&quot; liegt das Urheberrecht bei Markus Zapke-Gründemann et al.</p>
 </blockquote>
 <p>Wir werden einen kleinen Blog erstellen!</p>
-<p>Der erste Schritt ist, ein neues Django-Projekt zu starten. Im Grunde bedeutet das, dass wir einige Skripte ausf&#xFC;hren werden, die Django zur Verf&#xFC;gung stellt, um ein Skelett eines Django-Projekts f&#xFC;r uns zu erzeugen. Das Projekt beinhaltet einen Haufen von Verzeichnissen und Dateien, die wir sp&#xE4;ter verwenden werden.</p>
-<p>Die Namen einiger Dateien und Verzeichnisse sind sehr wichtig f&#xFC;r Django. Die Dateien, die erstellt werden, solltest du nicht umbenennen. Sie an eine andere Stelle zu verschieben, ist auch keine gute Idee. Django muss zwingend eine gewisse Struktur erhalten, um wichtige Dinge wiederzufinden.</p>
+<p>Der erste Schritt ist, ein neues Django-Projekt zu starten. Im Grunde bedeutet das, dass wir einige Skripte ausführen werden, die Django zur Verfügung stellt, um ein Skelett eines Django-Projekts für uns zu erzeugen. Das Projekt beinhaltet einen Haufen von Verzeichnissen und Dateien, die wir später verwenden werden.</p>
+<p>Die Namen einiger Dateien und Verzeichnisse sind sehr wichtig für Django. Die Dateien, die erstellt werden, solltest du nicht umbenennen. Sie an eine andere Stelle zu verschieben, ist auch keine gute Idee. Django muss zwingend eine gewisse Struktur erhalten, um wichtige Dinge wiederzufinden.</p>
 <blockquote>
-<p>Denk daran, alles in der &quot;Virtualenv&quot;-Umgebung auszuf&#xFC;hren. Wenn du kein Pr&#xE4;fix <code>(myvenv)</code> in deiner Konsole siehst, musst du deine Virtualenv-Umgebung aktivieren. Wie das gemacht wird, erkl&#xE4;ren wir im Kapitel <strong>Django-Installation</strong>, im Abschnitt <strong>Arbeiten mit Virtualenv</strong>. Zur Erinnerung: Gib dazu auf Windows <code>myvenv\Scripts\activate</code> ein, bzw. auf OS X oder Linux <code>source myvenv/bin/activate</code>.</p>
+<p>Denk daran, alles in der &quot;Virtualenv&quot;-Umgebung auszuführen. Wenn du kein Präfix <code>(myvenv)</code> in deiner Konsole siehst, musst du deine Virtualenv-Umgebung aktivieren. Wie das gemacht wird, erklären wir im Kapitel <strong>Django-Installation</strong>, im Abschnitt <strong>Arbeiten mit Virtualenv</strong>. Zur Erinnerung: Gib dazu auf Windows <code>myvenv\Scripts\activate</code> ein, bzw. auf OS X oder Linux <code>source myvenv/bin/activate</code>.</p>
 </blockquote>
 <sec data-title="Create project: OS X or Linux" data-id="django_start_project_OSX_Linux" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Create project: OS X or Linux<a class="pull-right section atTitle btn btn-default" target="django_start_project_OSX_Linux"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_start_project_OSX_Linux"><div class="panel-body">
-<p>In deiner OS X- oder Linux-Konsole solltest du den folgenden Befehl ausf&#xFC;hren; <strong>vergiss den Punkt (<code>.</code>) am Ende nicht!</strong></p>
+<p>In deiner OS X- oder Linux-Konsole solltest du den folgenden Befehl ausführen; <strong>vergiss den Punkt (<code>.</code>) am Ende nicht!</strong></p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ django-admin startproject mysite .
 </code></pre><blockquote>
-<p>Der Punkt <code>.</code> ist sehr wichtig, weil er dem Skript mitteilt, dass Django in deinem aktuellen Verzeichnis installiert werden soll. (Der Punkt <code>.</code> ist eine Schnellreferenz daf&#xFC;r.)</p>
-<p><strong>Hinweis:</strong> Wenn du das oben angegebene Kommando eingibst, denk daran, nur das einzutippen, was mit <code>django-admin</code> anf&#xE4;ngt. Der <code>(myvenv) ~/djangogirls$</code>-Teil hier ist nur ein Beispiel f&#xFC;r die Eingabeaufforderung (den &quot;Prompt&quot;) auf der Kommandozeile.</p>
+<p>Der Punkt <code>.</code> ist sehr wichtig, weil er dem Skript mitteilt, dass Django in deinem aktuellen Verzeichnis installiert werden soll. (Der Punkt <code>.</code> ist eine Schnellreferenz dafür.)</p>
+<p><strong>Hinweis:</strong> Wenn du das oben angegebene Kommando eingibst, denk daran, nur das einzutippen, was mit <code>django-admin</code> anfängt. Der <code>(myvenv) ~/djangogirls$</code>-Teil hier ist nur ein Beispiel für die Eingabeaufforderung (den &quot;Prompt&quot;) auf der Kommandozeile.</p>
 </blockquote>
 </div></div></div></sec>
 <sec data-title="Create project: Windows" data-id="django_start_project_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Create project: Windows<a class="pull-right section atTitle btn btn-default" target="django_start_project_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_start_project_windows"><div class="panel-body">
-<p>Auf Windows solltest du den folgenden Befehl ausf&#xFC;hren. <strong>(Vergiss den Punkt (<code>.</code>) am Ende nicht!)</strong>:</p>
+<p>Auf Windows solltest du den folgenden Befehl ausführen. <strong>(Vergiss den Punkt (<code>.</code>) am Ende nicht!)</strong>:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) C:\Users\Name\djangogirls&gt; django-admin.exe startproject mysite .
 </code></pre><blockquote>
-<p>Der Punkt <code>.</code> ist sehr wichtig, weil er dem Skript mitteilt, dass Django in deinem aktuellen Verzeichnis installiert werden soll. (Der Punkt <code>.</code> ist eine Schnellreferenz daf&#xFC;r.)</p>
-<p><strong>Hinweis:</strong> Wenn du das oben angegebene Kommando eingibst, denk daran, nur das einzutippen, was mit <code>django-admin.exe</code> anf&#xE4;ngt. Der <code>(myvenv) C:\Users\Name\djangogirls&gt;</code>-Teil hier ist nur ein Beispiel f&#xFC;r die Eingabeaufforderung (den &quot;Prompt&quot;) auf der Kommandozeile.</p>
+<p>Der Punkt <code>.</code> ist sehr wichtig, weil er dem Skript mitteilt, dass Django in deinem aktuellen Verzeichnis installiert werden soll. (Der Punkt <code>.</code> ist eine Schnellreferenz dafür.)</p>
+<p><strong>Hinweis:</strong> Wenn du das oben angegebene Kommando eingibst, denk daran, nur das einzutippen, was mit <code>django-admin.exe</code> anfängt. Der <code>(myvenv) C:\Users\Name\djangogirls&gt;</code>-Teil hier ist nur ein Beispiel für die Eingabeaufforderung (den &quot;Prompt&quot;) auf der Kommandozeile.</p>
 </blockquote>
 </div></div></div></sec>
-<p><code>django-admin.py</code> ist ein Skript, welches Verzeichnisse und Dateien f&#xFC;r dich erstellt. Du solltest jetzt eine Verzeichnisstruktur haben, die folgenderma&#xDF;en aussieht:</p>
+<p><code>django-admin.py</code> ist ein Skript, welches Verzeichnisse und Dateien für dich erstellt. Du solltest jetzt eine Verzeichnisstruktur haben, die folgendermaßen aussieht:</p>
 <pre><code>djangogirls
-&#x251C;&#x2500;&#x2500; manage.py
-&#x251C;&#x2500;&#x2500; mysite
-&#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
-&#x2502;   &#x251C;&#x2500;&#x2500; settings.py
-&#x2502;   &#x251C;&#x2500;&#x2500; urls.py
-&#x2502;   &#x2514;&#x2500;&#x2500; wsgi.py
-&#x251C;&#x2500;&#x2500; myvenv
-&#x2502;   &#x2514;&#x2500;&#x2500; ...
-&#x2514;&#x2500;&#x2500; requirements.txt
+├── manage.py
+├── mysite
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── myvenv
+│   └── ...
+└── requirements.txt
 </code></pre><blockquote>
 <p><strong>Hinweis:</strong> In deiner Verzeichnisstruktur wirst du auch den <code>venv</code>-Ordner sehen, den wir vorhin erzeugt haben.</p>
 </blockquote>
-<p><code>manage.py</code> ist ein Script, das das Management deines Projektes unterst&#xFC;tzt. Mit dem Script bist du unter anderem in der Lage, den Webserver auf deinem Rechner zu starten, ohne etwas Weiteres installieren zu m&#xFC;ssen.</p>
+<p><code>manage.py</code> ist ein Script, das das Management deines Projektes unterstützt. Mit dem Script bist du unter anderem in der Lage, den Webserver auf deinem Rechner zu starten, ohne etwas Weiteres installieren zu müssen.</p>
 <p>Die Datei <code>settings.py</code> beinhaltet die Konfiguration deiner Website.</p>
-<p>Erinnerst du dich, als wir &#xFC;ber den Postboten gesprochen haben, der &#xFC;berlegt, wohin er den Brief liefern soll? Die <code>urls.py</code> Datei beinhaltet eine Liste von Patterns (Mustern), die vom <code>urlresolver</code> benutzt werden.</p>
-<p>Lass uns kurz die anderen Dateien vergessen - wir werden sie nicht ver&#xE4;ndern. Denk aber dran, sie nicht versehentlich zu l&#xF6;schen!</p>
+<p>Erinnerst du dich, als wir über den Postboten gesprochen haben, der überlegt, wohin er den Brief liefern soll? Die <code>urls.py</code> Datei beinhaltet eine Liste von Patterns (Mustern), die vom <code>urlresolver</code> benutzt werden.</p>
+<p>Lass uns kurz die anderen Dateien vergessen - wir werden sie nicht verändern. Denk aber dran, sie nicht versehentlich zu löschen!</p>
 <h2 id="einstellungen-anpassen">Einstellungen anpassen</h2>
-<p>Wir machen nun ein paar &#xC4;nderungen in <code>mysite/settings.py</code>. &#xD6;ffne die Datei mit dem Code-Editor, den du schon installiert hast.</p>
-<p><strong>Hinweis</strong>: <code>settings.py</code> ist eine Datei wie jede andere. Du kannst sie aus deinem Code-Editor heraus &#xF6;ffnen, in dem du im &quot;Datei&quot;-Men&#xFC; die &quot;&#xD6;ffnen&quot;-Aktion w&#xE4;hlst. So solltest du das normale Fenster zur Dateiauswahl bekommen, in dem du zur <code>settings.py</code>-Datei navigieren und sie ausw&#xE4;hlen kannst. Stattdessen kannst du die Datei aber auch &#xF6;ffnen, in dem du im Dateimanager zum &quot;djangogirls&quot;-Ordner navigierst und auf die Datei rechtsklickst. W&#xE4;hle dann deinen Code-Editor aus der Liste der &quot;&#xD6;ffnen mit&quot;-Programme. Das ist wichtig, da du andere Programme installiert haben k&#xF6;nntest, die diese Datei zwar &#xF6;ffnen k&#xF6;nnen, aber die dich die Datei nicht editieren lassen w&#xFC;rden.</p>
-<p>Es w&#xE4;re sch&#xF6;n, wenn die richtige Zeit auf deiner Webseite eingestellt ist. Gehe zur <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank">Zeitzonen-Liste auf Wikipedia</a> und kopiere die f&#xFC;r dich geltende Zeitzone (Spalte &quot;TZ&quot;), z.B. <code>Europe/Berlin</code>.</p>
-<p>Suche in <code>settings.py</code> die Zeile, die <code>TIME_ZONE</code> enth&#xE4;lt und &#xE4;ndere sie ab, um deine eigene Zeitzone auszuw&#xE4;hlen. Zum Beispiel:</p>
+<p>Wir machen nun ein paar Änderungen in <code>mysite/settings.py</code>. Öffne die Datei mit dem Code-Editor, den du schon installiert hast.</p>
+<p><strong>Hinweis</strong>: <code>settings.py</code> ist eine Datei wie jede andere. Du kannst sie aus deinem Code-Editor heraus öffnen, in dem du im &quot;Datei&quot;-Menü die &quot;Öffnen&quot;-Aktion wählst. So solltest du das normale Fenster zur Dateiauswahl bekommen, in dem du zur <code>settings.py</code>-Datei navigieren und sie auswählen kannst. Stattdessen kannst du die Datei aber auch öffnen, in dem du im Dateimanager zum &quot;djangogirls&quot;-Ordner navigierst und auf die Datei rechtsklickst. Wähle dann deinen Code-Editor aus der Liste der &quot;Öffnen mit&quot;-Programme. Das ist wichtig, da du andere Programme installiert haben könntest, die diese Datei zwar öffnen können, aber die dich die Datei nicht editieren lassen würden.</p>
+<p>Es wäre schön, wenn die richtige Zeit auf deiner Webseite eingestellt ist. Gehe zur <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank">Zeitzonen-Liste auf Wikipedia</a> und kopiere die für dich geltende Zeitzone (Spalte &quot;TZ&quot;), z.B. <code>Europe/Berlin</code>.</p>
+<p>Suche in <code>settings.py</code> die Zeile, die <code>TIME_ZONE</code> enthält und ändere sie ab, um deine eigene Zeitzone auszuwählen. Zum Beispiel:</p>
 <p></p><p class="code-label">mysite/settings.py</p><p></p>
 <pre><code class="lang-python">TIME_ZONE = <span class="hljs-string">&apos;Europe/Berlin&apos;</span>
 </code></pre>
-<p>Ein Sprachkennung besteht aus einem K&#xFC;rzel f&#xFC;r die Sprache, z.B. <code>en</code> f&#xFC;r Englisch oder <code>de</code> f&#xFC;r Deutsch, und einem L&#xE4;nder-K&#xFC;rzel z.B. <code>de</code> f&#xFC;r Deutschland oder <code>ch</code> f&#xFC;r die Schweiz. Falls Englisch nicht deine Muttersprache ist, kannst du damit die Standard-Kn&#xF6;pfe und -Meldungen von Django auf deine Sprache wechseln. Der &quot;Cancel&quot;-Knopf w&#xFC;rde dann in diese Sprache &#xFC;bersetzt (und z.B. bei Deutsch mit &quot;Abbrechen&quot; beschriftet). <a href="https://docs.djangoproject.com/en/2.2/ref/settings/#language-code" target="_blank">Django enth&#xE4;lt viele fix-fertige &#xDC;bsersetzungen</a>.</p>
-<p>Wenn du eine andere Sprache als Englisch willst, &#xE4;ndere die Sprachkennung, indem du die folgende Zeile &#xE4;nderst:</p>
+<p>Ein Sprachkennung besteht aus einem Kürzel für die Sprache, z.B. <code>en</code> für Englisch oder <code>de</code> für Deutsch, und einem Länder-Kürzel z.B. <code>de</code> für Deutschland oder <code>ch</code> für die Schweiz. Falls Englisch nicht deine Muttersprache ist, kannst du damit die Standard-Knöpfe und -Meldungen von Django auf deine Sprache wechseln. Der &quot;Cancel&quot;-Knopf würde dann in diese Sprache übersetzt (und z.B. bei Deutsch mit &quot;Abbrechen&quot; beschriftet). <a href="https://docs.djangoproject.com/en/2.2/ref/settings/#language-code" target="_blank">Django enthält viele fix-fertige Übsersetzungen</a>.</p>
+<p>Wenn du eine andere Sprache als Englisch willst, ändere die Sprachkennung, indem du die folgende Zeile änderst:</p>
 <p></p><p class="code-label">mysite/settings.py</p><p></p>
 <pre><code class="lang-python">LANGUAGE_CODE = <span class="hljs-string">&apos;de-ch&apos;</span>
 </code></pre>
-<p>Ausserdem m&#xFC;ssen wir einen Pfad f&#xFC;r statische Dateien festlegen. (&#xDC;ber statische Dateien und CSS lernst du sp&#xE4;ter in diesem Tutorial etwas.) Geh hinunter zum <em>Ende</em> der Datei und f&#xFC;ge direkt unter dem <code>STATIC_URL</code>-Eintrag einen neuen Eintrag namens <code>STATIC_ROOT</code> ein:</p>
+<p>Ausserdem müssen wir einen Pfad für statische Dateien festlegen. (Über statische Dateien und CSS lernst du später in diesem Tutorial etwas.) Geh hinunter zum <em>Ende</em> der Datei und füge direkt unter dem <code>STATIC_URL</code>-Eintrag einen neuen Eintrag namens <code>STATIC_ROOT</code> ein:</p>
 <p></p><p class="code-label">mysite/settings.py</p><p></p>
 <pre><code class="lang-python">STATIC_URL = <span class="hljs-string">&apos;/static/&apos;</span>
 STATIC_ROOT = os.path.join(BASE_DIR, <span class="hljs-string">&apos;static&apos;</span>)
 </code></pre>
-<p>Wenn <code>DEBUG</code> auf <code>True</code> gesetzt ist und <code>ALLOWED_HOSTS</code> leer, dann wird der &quot;Host&quot; gegen <code>[&apos;localhost&apos;, &apos;127.0.0.1&apos;, &apos;[::1]&apos;]</code> validiert. Unser Hostname auf PythonAnywhere, wo wir unsere Anwendung deployen werden, w&#xFC;rde da nicht passen. Deswegen &#xE4;ndern wir folgende Einstellung:</p>
+<p>Wenn <code>DEBUG</code> auf <code>True</code> gesetzt ist und <code>ALLOWED_HOSTS</code> leer, dann wird der &quot;Host&quot; gegen <code>[&apos;localhost&apos;, &apos;127.0.0.1&apos;, &apos;[::1]&apos;]</code> validiert. Unser Hostname auf PythonAnywhere, wo wir unsere Anwendung deployen werden, würde da nicht passen. Deswegen ändern wir folgende Einstellung:</p>
 <p></p><p class="code-label">mysite/settings.py</p><p></p>
 <pre><code class="lang-python">ALLOWED_HOSTS = [<span class="hljs-string">&apos;127.0.0.1&apos;</span>, <span class="hljs-string">&apos;.pythonanywhere.com&apos;</span>]
 </code></pre>
 <blockquote>
-<p><strong>Hinweis</strong>: Wenn du ein Chromebook verwendest, f&#xFC;ge noch diese Zeile am Ende deiner settings.py-Datei hinzu: <code>MESSAGE_STORAGE = &apos;django.contrib.messages.storage.session.SessionStorage&apos;</code></p>
-<p>Falls du Cloud9 benutzt, f&#xFC;ge auch <code>.amazonaws.com</code> zu den <code>ALLOWED_HOSTS</code> hinzu</p>
+<p><strong>Hinweis</strong>: Wenn du ein Chromebook verwendest, füge noch diese Zeile am Ende deiner settings.py-Datei hinzu: <code>MESSAGE_STORAGE = &apos;django.contrib.messages.storage.session.SessionStorage&apos;</code></p>
+<p>Falls du Cloud9 benutzt, füge auch <code>.amazonaws.com</code> zu den <code>ALLOWED_HOSTS</code> hinzu</p>
 </blockquote>
 <h2 id="eine-datenbank-erstellen">Eine Datenbank erstellen</h2>
-<p>Es gibt viele verschiedene Datenbank Programme, welche die Daten unserer Website verwalten k&#xF6;nnen. Wir werden die Standard-Datenbanksoftware nehmen, <code>sqlite3</code>.</p>
+<p>Es gibt viele verschiedene Datenbank Programme, welche die Daten unserer Website verwalten können. Wir werden die Standard-Datenbanksoftware nehmen, <code>sqlite3</code>.</p>
 <p>Das sollte schon in der <code>mysite/settings.py</code>-Datei eingestellt sein:</p>
 <p></p><p class="code-label">mysite/settings.py</p><p></p>
 <pre><code class="lang-python">DATABASES = {
@@ -705,7 +705,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, <span class="hljs-string">&apos;static&apos
     }
 }
 </code></pre>
-<p>Um eine Datenbank f&#xFC;r unseren Blog zu erstellen, m&#xFC;ssen wir folgenden Befehl in der Konsole ausf&#xFC;hren (Dazu m&#xFC;ssen wir in dem <code>djangogirls</code>-Verzeichnis sein, in dem sich auch die <code>manage.py</code>-Datei befindet). Wenn alles glatt l&#xE4;uft, sollte das so aussehen:</p>
+<p>Um eine Datenbank für unseren Blog zu erstellen, müssen wir folgenden Befehl in der Konsole ausführen (Dazu müssen wir in dem <code>djangogirls</code>-Verzeichnis sein, in dem sich auch die <code>manage.py</code>-Datei befindet). Wenn alles glatt läuft, sollte das so aussehen:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py migrate
 Operations to perform:
@@ -728,29 +728,29 @@ Running migrations:
   Applying sessions.0001_initial... OK
 </code></pre><p>Und wir sind fertig! Zeit, unseren Webserver zu starten, um zu sehen, ob unsere Website funktioniert!</p>
 <h2 id="den-webserver-starten">Den Webserver starten</h2>
-<p>Kontrolliere, dass du in dem Verzeichnis bist, in dem die <code>manage.py</code>-Datei liegt (das <code>djangogirls</code>-Verzeichnis). Wir starten den Webserver, indem wir in der Konsole <code>python manage.py runserver</code> ausf&#xFC;hren:</p>
+<p>Kontrolliere, dass du in dem Verzeichnis bist, in dem die <code>manage.py</code>-Datei liegt (das <code>djangogirls</code>-Verzeichnis). Wir starten den Webserver, indem wir in der Konsole <code>python manage.py runserver</code> ausführen:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py runserver
 </code></pre><p>Wenn du ein Chromebook verwendest, benutze stattdessen diesen Befehl:</p>
 <p></p><p class="code-label">Cloud 9</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py runserver 0.0.0.0:8080
-</code></pre><p>Wenn du Windows benutzt und dies mit dem <code>UnicodeDecodeError</code> fehlschl&#xE4;ft, verwende diesen Befehl:</p>
+</code></pre><p>Wenn du Windows benutzt und dies mit dem <code>UnicodeDecodeError</code> fehlschläft, verwende diesen Befehl:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py runserver 0:8000
-</code></pre><p>Jetzt wollen wir schauen, ob unsere Website funktioniert: &#xD6;ffne deinen Browser (Firefox, Chrome, Safari, Edge oder was du sonst nutzt) und gib diese Adresse ein:</p>
+</code></pre><p>Jetzt wollen wir schauen, ob unsere Website funktioniert: Öffne deinen Browser (Firefox, Chrome, Safari, Edge oder was du sonst nutzt) und gib diese Adresse ein:</p>
 <p></p><p class="code-label">browser</p><p></p>
 <pre><code>http://127.0.0.1:8000/
-</code></pre><p>Wenn du ein Chromebook und Cloud9 verwendest, dann klicke stattdessen die URL im erschienenen Fenster in der oberen rechten Ecke des Kommandozeilenfensters, in dem der Webserver l&#xE4;uft. Die URL sollte etwa so aussehen:</p>
+</code></pre><p>Wenn du ein Chromebook und Cloud9 verwendest, dann klicke stattdessen die URL im erschienenen Fenster in der oberen rechten Ecke des Kommandozeilenfensters, in dem der Webserver läuft. Die URL sollte etwa so aussehen:</p>
 <p></p><p class="code-label">browser</p><p></p>
 <pre><code>https://&lt;a bunch of letters and numbers&gt;.vfs.cloud9.us-west-2.amazonaws.com
-</code></pre><p>Gl&#xFC;ckwunsch! Du hast gerade deine erste Website erstellt und sie auf deinem Webserver laufen! Ist das nicht toll?</p>
+</code></pre><p>Glückwunsch! Du hast gerade deine erste Website erstellt und sie auf deinem Webserver laufen! Ist das nicht toll?</p>
 <p><img src="images/install_worked.png" alt="Installation hat funktioniert!"></p>
-<p>Beachte, dass ein Terminalfenster immer nur eine Sache zur selben Zeit erledigen kann, und in dem Terminalfenster, was du vorhin ge&#xF6;ffnet hast, l&#xE4;uft gerade der Webserver. Und solange der Webserver l&#xE4;uft und auf einkommende Anfragen wartet, akzeptiert das Terminal zwar Texteingaben, aber es wird keine neuen Befehle ausf&#xFC;hren.</p>
+<p>Beachte, dass ein Terminalfenster immer nur eine Sache zur selben Zeit erledigen kann, und in dem Terminalfenster, was du vorhin geöffnet hast, läuft gerade der Webserver. Und solange der Webserver läuft und auf einkommende Anfragen wartet, akzeptiert das Terminal zwar Texteingaben, aber es wird keine neuen Befehle ausführen.</p>
 <blockquote>
 <p>Wie Webserver funktionieren, haben wir im Kapitel <strong>&quot;Wie das Internet funktioniert&quot;</strong> angesehen.</p>
 </blockquote>
-<p>Um weitere Kommandos einzugeben, w&#xE4;hrend der Webserver l&#xE4;uft, &#xF6;ffne ein neues Kommandozeilen-Fenster und aktiviere dort deine Virtualenv-Umgebung. Siehe <a href="../intro_to_command_line/">Einf&#xFC;hrung in die Kommandozeile</a>, um nachzulesen, wie du ein zweites Kommandozeilen-Fenster &#xF6;ffnen kannst. Um den Webserver zu stoppen, wechsel zur&#xFC;ck in das Fenster, in dem er l&#xE4;uft, und dr&#xFC;cke STRG+C - Steuerung und C gleichzeitig. (In Windows kann es sein, dass du STRG und &quot;Pause&quot;-Taste dr&#xFC;cken musst).</p>
-<p>Bereit f&#xFC;r den n&#xE4;chsten Schritt? Es wird Zeit, ein paar Inhalte hinzuzuf&#xFC;gen!</p>
+<p>Um weitere Kommandos einzugeben, während der Webserver läuft, öffne ein neues Kommandozeilen-Fenster und aktiviere dort deine Virtualenv-Umgebung. Siehe <a href="../intro_to_command_line/">Einführung in die Kommandozeile</a>, um nachzulesen, wie du ein zweites Kommandozeilen-Fenster öffnen kannst. Um den Webserver zu stoppen, wechsel zurück in das Fenster, in dem er läuft, und drücke STRG+C - Steuerung und C gleichzeitig. (In Windows kann es sein, dass du STRG und &quot;Pause&quot;-Taste drücken musst).</p>
+<p>Bereit für den nächsten Schritt? Es wird Zeit, ein paar Inhalte hinzuzufügen!</p>
 
                                 
                                 </section>
@@ -794,12 +794,56 @@ Running migrations:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Dein erstes Django-Projekt!","level":"1.11","depth":1,"next":{"title":"Django-Models","level":"1.12","depth":1,"path":"django_models/README.md","ref":"django_models/README.md","articles":[]},"previous":{"title":"Django-Installation","level":"1.10","depth":1,"path":"django_installation/README.md","ref":"django_installation/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_start_project/README.md","mtime":"2020-09-22T11:43:42.662Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"de"}});
+            gitbook.page.hasChanged({"page":{"title":"Dein erstes Django-Projekt!","level":"1.11","depth":1,"next":{"title":"Django-Models","level":"1.12","depth":1,"path":"django_models/README.md","ref":"django_models/README.md","articles":[]},"previous":{"title":"Django-Installation","level":"1.10","depth":1,"path":"django_installation/README.md","ref":"django_installation/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_start_project/README.md","mtime":"2020-11-15T14:54:56.262Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"de"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

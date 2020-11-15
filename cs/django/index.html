@@ -7,7 +7,7 @@
         <title>Co je Django? · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -499,19 +499,19 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="co-je-django">Co je Django?</h1>
-<p>Django (<em>jang-goh/&#x2C8;d&#x292;&#xE6;&#x14B;&#x261;o&#x28A; /</em>) je svobodn&#xFD; a open source webov&#xFD; aplika&#x10D;n&#xED; framework napsan&#xFD; v Pythonu. Webov&#xFD; framework je sada komponent, kter&#xE1; pom&#xE1;h&#xE1; vyv&#xED;jet webov&#xE9; str&#xE1;nky rychleji a snadn&#x11B;ji.</p>
-<p>Kdy&#x17E; vytv&#xE1;&#x159;&#xED;&#x161; webov&#xE9; str&#xE1;nky, v&#x17E;dy pot&#x159;ebuje&#x161; podobnou sadu komponent: zp&#x16F;sob, jak zpracovat ov&#x11B;&#x159;en&#xED; u&#x17E;ivatele (registraci, p&#x159;ihl&#xE1;&#x161;en&#xED;, odhl&#xE1;&#x161;en&#xED;), administra&#x10D;n&#xED; panel pro tv&#xE9; webov&#xE9; str&#xE1;nky, formul&#xE1;&#x159;e, zp&#x16F;sob, jak nahr&#xE1;vat soubory, atd.</p>
-<p>Na&#x161;t&#x11B;st&#xED; si ostatn&#xED; lid&#xE9; ji&#x17E; d&#xE1;vno v&#x161;imli, &#x17E;e v&#xFD;voj&#xE1;&#x159;i &#x10D;el&#xED; stejn&#xFD;m probl&#xE9;m&#x16F;m p&#x159;i vytv&#xE1;&#x159;en&#xED; nov&#xFD;ch str&#xE1;nek. Tak&#x17E;e se spojili a vytvo&#x159;ili frameworky (Django je jedn&#xED;m z nich), kter&#xE9; obsahuj&#xED; sadu hotov&#xFD;ch, snadno pou&#x17E;iteln&#xFD;ch komponent.</p>
-<p>Frameworky existuj&#xED;, aby ti u&#x161;et&#x159;ily &#x10D;as a ty jsi nemusela znovu vynal&#xE9;zat, co u&#x17E; n&#x11B;kdo zdlouhav&#x11B; vym&#xFD;&#x161;lel. Stejn&#x11B; tak by ti m&#x11B;ly u&#x161;et&#x159;it &#x10D;as p&#x159;i vytv&#xE1;&#x159;en&#xED; nov&#xFD;ch webov&#xFD;ch str&#xE1;nek.</p>
-<h2 id="pro&#x10D;-pot&#x159;ebuje&#x161;-framework">Pro&#x10D; pot&#x159;ebuje&#x161; framework?</h2>
-<p>Abychom pochopili, co ve skute&#x10D;nosti Django je, mus&#xED;me se bl&#xED;&#x17E;e pod&#xED;vat na to, co d&#x11B;l&#xE1; server. Prvn&#xED; v&#x11B;c&#xED; je, &#x17E;e server mus&#xED; v&#x11B;d&#x11B;t, &#x17E;e chce&#x161; obslou&#x17E;it tebou zvolenou webovou str&#xE1;nkou.</p>
-<p>P&#x159;edstav si po&#x161;tovn&#xED; schr&#xE1;nku (port), kter&#xE1; na zvolen&#xE9;m portu sleduje p&#x159;&#xED;choz&#xED; zpr&#xE1;vy (po&#x17E;adavky). Podobn&#x11B; se chov&#xE1; webov&#xFD; server. Webov&#xFD; server &#x10D;te po&#x17E;adavky od u&#x17E;ivatele a ode&#x161;le odpov&#x11B;&#x10F; v podob&#x11B; webov&#xE9; str&#xE1;nky. Ale kdy&#x17E; chce&#x161; n&#x11B;co poslat, mus&#xED;&#x161; m&#xED;t n&#x11B;jak&#xFD; obsah. A Django je to, co ti pom&#x16F;&#x17E;e vytvo&#x159;it tento obsah.</p>
-<h2 id="co-se-stane-kdy&#x17E;-n&#x11B;kdo-po&#x17E;aduje-webov&#xE9;-str&#xE1;nky-ze-serveru">Co se stane, kdy&#x17E; n&#x11B;kdo po&#x17E;aduje webov&#xE9; str&#xE1;nky ze serveru?</h2>
-<p>Pokud p&#x159;ijde &#x17E;&#xE1;dost na webov&#xFD; server, je p&#x159;ed&#xE1;na Django frameworku, kter&#xFD; se sna&#x17E;&#xED; p&#x159;ij&#xED;t na to, co vlastn&#x11B; u&#x17E;ivatel po&#x17E;aduje. Nejprve vezme adresu webov&#xE9; str&#xE1;nky a sna&#x17E;&#xED; se p&#x159;ij&#xED;t na to, co ud&#x11B;lat. Tuto &#x10D;&#xE1;st prov&#xE1;d&#xED; Django <strong>urlresolver</strong> (v&#x161;imni si, &#x17E;e adresa webov&#xE9; str&#xE1;nky se naz&#xFD;v&#xE1; URL - Uniform Resource Locator - proto jm&#xE9;no <em>urlresolver</em> d&#xE1;v&#xE1; smysl). Tato &#x10D;innost nen&#xED; slo&#x17E;it&#xE1; - bere si seznam vzor&#x16F; a v n&#x11B;m se pokou&#x161;&#xED; vyhledat shodu s URL. Django kontroluje seznam vzor&#x16F; od shora dol&#x16F; a pokud n&#x11B;kter&#xFD; odpov&#xED;d&#xE1;, pak Django p&#x159;ed&#xE1; &#x17E;&#xE1;dost souvisej&#xED;c&#xED; funkci, kter&#xE1; se naz&#xFD;v&#xE1; <em>view</em>.</p>
-<p>P&#x159;edstav si po&#x161;&#x165;&#xE1;ka s dopisem. Kr&#xE1;&#x10D;&#xED; po ulici a kontroluje ka&#x17E;d&#xE9; &#x10D;&#xED;slo domu, jestli odpov&#xED;d&#xE1; adrese na dopisu. Pokud adresa odpov&#xED;d&#xE1;, dopis vlo&#x17E;&#xED; do schr&#xE1;nky. Stejn&#xFD;m zp&#x16F;sobem funguje urlresolver!</p>
-<p>Ve funkci <em>view</em> se prov&#xE1;d&#xED; v&#x161;echny zaj&#xED;mav&#xE9; v&#x11B;ci: m&#x16F;&#x17E;eme se pod&#xED;vat do datab&#xE1;ze a vyhledat n&#x11B;jak&#xE9; informace. Co kdy&#x17E; chce u&#x17E;ivatel zm&#x11B;nit n&#x11B;co v datech? Dopis m&#x16F;&#x17E;e &#x159;&#xED;kat &quot;pros&#xED;m zm&#x11B;&#x148;te popis m&#xE9; pr&#xE1;ce.&quot; <em>View</em> m&#x16F;&#x17E;e zkontrolovat, zda m&#xE1;&#x161; povolen&#xED; tuto zm&#x11B;nu prov&#xE9;st, pak aktualizuje popis pr&#xE1;ce a ode&#x161;le ti zpr&#xE1;vu: &quot;Hotovo!&quot;. V tuto chv&#xED;li <em>view</em> vygeneruje odpov&#x11B;&#x10F; a Django ji m&#x16F;&#x17E;e odeslat tv&#xE9;mu webov&#xE9;mu prohl&#xED;&#x17E;eci.</p>
-<p>Samoz&#x159;ejm&#x11B;, &#x17E;e v&#xFD;&#x161;e uveden&#xFD; popis je trochu zjednodu&#x161;en&#xFD;, ale prozat&#xED;m nen&#xED; nutn&#xE9; zn&#xE1;t v&#x161;echny technick&#xE9; detaily. Pro obecnou p&#x159;edstavu to posta&#x10D;&#xED;.</p>
-<p>Tak&#x17E;e m&#xED;sto studov&#xE1;n&#xED; p&#x159;&#xED;li&#x161;n&#xFD;ch podrobnost&#xED; jednodu&#x161;e za&#x10D;neme n&#x11B;co vytv&#xE1;&#x159;et pomoc&#xED; Djanga, &#x10D;&#xED;m&#x17E; se nau&#x10D;&#xED;me v&#x161;echny d&#x16F;le&#x17E;it&#xE9; &#x10D;&#xE1;sti!</p>
+<p>Django (<em>jang-goh/ˈdʒæŋɡoʊ /</em>) je svobodný a open source webový aplikační framework napsaný v Pythonu. Webový framework je sada komponent, která pomáhá vyvíjet webové stránky rychleji a snadněji.</p>
+<p>Když vytváříš webové stránky, vždy potřebuješ podobnou sadu komponent: způsob, jak zpracovat ověření uživatele (registraci, přihlášení, odhlášení), administrační panel pro tvé webové stránky, formuláře, způsob, jak nahrávat soubory, atd.</p>
+<p>Naštěstí si ostatní lidé již dávno všimli, že vývojáři čelí stejným problémům při vytváření nových stránek. Takže se spojili a vytvořili frameworky (Django je jedním z nich), které obsahují sadu hotových, snadno použitelných komponent.</p>
+<p>Frameworky existují, aby ti ušetřily čas a ty jsi nemusela znovu vynalézat, co už někdo zdlouhavě vymýšlel. Stejně tak by ti měly ušetřit čas při vytváření nových webových stránek.</p>
+<h2 id="proč-potřebuješ-framework">Proč potřebuješ framework?</h2>
+<p>Abychom pochopili, co ve skutečnosti Django je, musíme se blíže podívat na to, co dělá server. První věcí je, že server musí vědět, že chceš obsloužit tebou zvolenou webovou stránkou.</p>
+<p>Představ si poštovní schránku (port), která na zvoleném portu sleduje příchozí zprávy (požadavky). Podobně se chová webový server. Webový server čte požadavky od uživatele a odešle odpověď v podobě webové stránky. Ale když chceš něco poslat, musíš mít nějaký obsah. A Django je to, co ti pomůže vytvořit tento obsah.</p>
+<h2 id="co-se-stane-když-někdo-požaduje-webové-stránky-ze-serveru">Co se stane, když někdo požaduje webové stránky ze serveru?</h2>
+<p>Pokud přijde žádost na webový server, je předána Django frameworku, který se snaží přijít na to, co vlastně uživatel požaduje. Nejprve vezme adresu webové stránky a snaží se přijít na to, co udělat. Tuto část provádí Django <strong>urlresolver</strong> (všimni si, že adresa webové stránky se nazývá URL - Uniform Resource Locator - proto jméno <em>urlresolver</em> dává smysl). Tato činnost není složitá - bere si seznam vzorů a v něm se pokouší vyhledat shodu s URL. Django kontroluje seznam vzorů od shora dolů a pokud některý odpovídá, pak Django předá žádost související funkci, která se nazývá <em>view</em>.</p>
+<p>Představ si pošťáka s dopisem. Kráčí po ulici a kontroluje každé číslo domu, jestli odpovídá adrese na dopisu. Pokud adresa odpovídá, dopis vloží do schránky. Stejným způsobem funguje urlresolver!</p>
+<p>Ve funkci <em>view</em> se provádí všechny zajímavé věci: můžeme se podívat do databáze a vyhledat nějaké informace. Co když chce uživatel změnit něco v datech? Dopis může říkat &quot;prosím změňte popis mé práce.&quot; <em>View</em> může zkontrolovat, zda máš povolení tuto změnu provést, pak aktualizuje popis práce a odešle ti zprávu: &quot;Hotovo!&quot;. V tuto chvíli <em>view</em> vygeneruje odpověď a Django ji může odeslat tvému webovému prohlížeci.</p>
+<p>Samozřejmě, že výše uvedený popis je trochu zjednodušený, ale prozatím není nutné znát všechny technické detaily. Pro obecnou představu to postačí.</p>
+<p>Takže místo studování přílišných podrobností jednoduše začneme něco vytvářet pomocí Djanga, čímž se naučíme všechny důležité části!</p>
 
                                 
                                 </section>
@@ -555,12 +555,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Co je Django?","level":"1.8","depth":1,"next":{"title":"Instalace Django","level":"1.9","depth":1,"path":"django_installation/README.md","ref":"django_installation/README.md","articles":[]},"previous":{"title":"Úvod do Pythonu","level":"1.7","depth":1,"path":"python_introduction/README.md","ref":"python_introduction/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"cs","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django/README.md","mtime":"2020-09-22T11:43:42.626Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"cs"}});
+            gitbook.page.hasChanged({"page":{"title":"Co je Django?","level":"1.8","depth":1,"next":{"title":"Instalace Django","level":"1.9","depth":1,"path":"django_installation/README.md","ref":"django_installation/README.md","articles":[]},"previous":{"title":"Úvod do Pythonu","level":"1.7","depth":1,"path":"python_introduction/README.md","ref":"python_introduction/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"cs","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django/README.md","mtime":"2020-11-15T14:54:56.230Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"cs"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

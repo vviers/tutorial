@@ -7,7 +7,7 @@
         <title>I dati dinamici nei template · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -622,17 +622,17 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="i-dati-dinamici-nei-templates">I dati dinamici nei templates</h1>
-<p>Abbiamo diversi pezzi: il modello <code>Post</code> &#xE8; definito in <code>models.py</code>, abbiamo <code>post_list</code> nel file <code>views.py</code> ed abbiamo aggiunto il template. Ma come faremo a far comparire i nostri post nel nostro template HTML? Perch&#xE9; &#xE8; quello che vogliamo: prendere qualche contenuto (modelli salvati nel database) e farlo vedere in modo carino nel nostro template, giusto?</p>
-<p>Questo &#xE8; esattamente quello che le <em>views</em> dovrebbero fare: collegare i modelli ed i template. Nella nostra <code>post_list</code> <em>view</em> avremo bisogno di prendere i modelli che vogliamo far vedere e passarli nel template. Nella <em>view</em> decidiamo cosa (modello) renderemo visibile nel template.</p>
+<p>Abbiamo diversi pezzi: il modello <code>Post</code> è definito in <code>models.py</code>, abbiamo <code>post_list</code> nel file <code>views.py</code> ed abbiamo aggiunto il template. Ma come faremo a far comparire i nostri post nel nostro template HTML? Perché è quello che vogliamo: prendere qualche contenuto (modelli salvati nel database) e farlo vedere in modo carino nel nostro template, giusto?</p>
+<p>Questo è esattamente quello che le <em>views</em> dovrebbero fare: collegare i modelli ed i template. Nella nostra <code>post_list</code> <em>view</em> avremo bisogno di prendere i modelli che vogliamo far vedere e passarli nel template. Nella <em>view</em> decidiamo cosa (modello) renderemo visibile nel template.</p>
 <p>OK, quindi come facciamo a farlo?</p>
-<p>Dobbiamo aprire il nostro <code>blog/views.py</code>. Per ora <code>post_list</code> <em>view</em> si vede cos&#xEC;:</p>
+<p>Dobbiamo aprire il nostro <code>blog/views.py</code>. Per ora <code>post_list</code> <em>view</em> si vede così:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_list</span><span class="hljs-params">(request)</span>:</span>
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_list.html&apos;</span>, {})
 </code></pre>
-<p>Ricordi quando abbiamo parlato di includere codice scritto in diversi file? Ora &#xE8; il momento di includere il model che abbiamo scritto in <code>models.py</code>. Aggiungeremo questa riga <code>from .models import Post</code> cos&#xEC;:</p>
+<p>Ricordi quando abbiamo parlato di includere codice scritto in diversi file? Ora è il momento di includere il model che abbiamo scritto in <code>models.py</code>. Aggiungeremo questa riga <code>from .models import Post</code> così:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 <span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Post
@@ -640,8 +640,8 @@
 <p>Il punto prima di <code>models</code> significa <em>directory attuale</em> oppure <em>applicazione attuale</em>. Sia <code>views.py</code> che <code>models.py</code> sono nella stessa cartella. Questo significa che possiamo usare <code>.</code> seguito dal nome del file (senza <code>.py</code>). Allora importiamo il nome del modello (<code>Post</code>).</p>
 <p>Cos&apos;altro bisogna fare? Per poter prendere i post del blog dal modello<code>Post</code> ci serve una cosa chiamata <code>QuerySet</code>.</p>
 <h2 id="queryset">QuerySet</h2>
-<p>Dovresti gi&#xE0; sapere come funziona QuerySet. Ne abbiamo parlato nel capitolo <a href="../django_orm/">Django ORM (QuerySets) </a>.</p>
-<p>Quindi ora vogliamo i post del blog che sono pubblicati ordinati per <code>published_date</code>, giusto? Lo abbiamo gi&#xE0; fatto nel capitolo sulle QuerySet!</p>
+<p>Dovresti già sapere come funziona QuerySet. Ne abbiamo parlato nel capitolo <a href="../django_orm/">Django ORM (QuerySets) </a>.</p>
+<p>Quindi ora vogliamo i post del blog che sono pubblicati ordinati per <code>published_date</code>, giusto? Lo abbiamo già fatto nel capitolo sulle QuerySet!</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python">Post.objects.filter(published_date__lte=timezone.now()).order_by(<span class="hljs-string">&apos;published_date&apos;</span>)
 </code></pre>
@@ -655,10 +655,10 @@
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by(<span class="hljs-string">&apos;published_date&apos;</span>)
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_list.html&apos;</span>, {})
 </code></pre>
-<p>L&apos;ultima cosa che manca &#xE8; passare la QuerySet <code>posts</code> nel template. Non preoccuparti, ci occuperemo di come renderlo visibile nel prossimo capitolo.</p>
+<p>L&apos;ultima cosa che manca è passare la QuerySet <code>posts</code> nel template. Non preoccuparti, ci occuperemo di come renderlo visibile nel prossimo capitolo.</p>
 <p>Nota che abbiamo creato una <em>variabile</em> per il nostro QuerySet: <code>posts</code>. Vedila come il nome del nostro QuerySet. Da qui in avanti possiamo riferirci ad esso con questo nome.</p>
-<p>Nella funzione <code>render</code> abbiamo gi&#xE0; un parametro con <code>request</code> (quindi tutto quello che riceviamo dal nostro utente via internet) e un file template <code>&apos;blog/post_list.html&apos;</code>). Nell&apos;ultimo parametro, che &#xE8; simile a questo: <code>{}</code> possiamo aggiungere cose che il template possa utilizzare. Dobbiamo dargli un nome (ci atterremo a <code>&apos;posts&apos;</code> per il momento). :) Si vede cos&#xEC;: <code>{&apos;posts&apos;: posts}</code>. Ti preghiamo di notare che la parte prima di <code>:</code> &#xE8; una stringa; devi metterla tra virgolette.</p>
-<p>Finalmente il nostro file <code>blog/views.py</code> dovrebbe essere cos&#xEC;:</p>
+<p>Nella funzione <code>render</code> abbiamo già un parametro con <code>request</code> (quindi tutto quello che riceviamo dal nostro utente via internet) e un file template <code>&apos;blog/post_list.html&apos;</code>). Nell&apos;ultimo parametro, che è simile a questo: <code>{}</code> possiamo aggiungere cose che il template possa utilizzare. Dobbiamo dargli un nome (ci atterremo a <code>&apos;posts&apos;</code> per il momento). :) Si vede così: <code>{&apos;posts&apos;: posts}</code>. Ti preghiamo di notare che la parte prima di <code>:</code> è una stringa; devi metterla tra virgolette.</p>
+<p>Finalmente il nostro file <code>blog/views.py</code> dovrebbe essere così:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
 <span class="hljs-keyword">from</span> django.utils <span class="hljs-keyword">import</span> timezone
@@ -669,7 +669,7 @@
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_list.html&apos;</span>, {<span class="hljs-string">&apos;posts&apos;</span>: posts})
 </code></pre>
 <p>E&apos; tutto! Ora di tornare al nostro template e rendere visibile questo QuerySet!</p>
-<p>Vuoi leggere un poco di pi&#xF9; su QuerySets in Django? Dovresti guardare qui: <a href="https://docs.djangoproject.com/en/2.2/ref/models/querysets/" target="_blank">https://docs.djangoproject.com/en/2.2/ref/models/querysets/</a></p>
+<p>Vuoi leggere un poco di più su QuerySets in Django? Dovresti guardare qui: <a href="https://docs.djangoproject.com/en/2.2/ref/models/querysets/" target="_blank">https://docs.djangoproject.com/en/2.2/ref/models/querysets/</a></p>
 
                                 
                                 </section>
@@ -713,12 +713,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"I dati dinamici nei template","level":"1.19","depth":1,"next":{"title":"I template di Django","level":"1.20","depth":1,"path":"django_templates/README.md","ref":"django_templates/README.md","articles":[]},"previous":{"title":"ORM di Django (Querysets)","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"it","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"dynamic_data_in_templates/README.md","mtime":"2020-09-22T11:43:42.902Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"it"}});
+            gitbook.page.hasChanged({"page":{"title":"I dati dinamici nei template","level":"1.19","depth":1,"next":{"title":"I template di Django","level":"1.20","depth":1,"path":"django_templates/README.md","ref":"django_templates/README.md","articles":[]},"previous":{"title":"ORM di Django (Querysets)","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"it","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"dynamic_data_in_templates/README.md","mtime":"2020-11-15T14:54:56.482Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"it"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

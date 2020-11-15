@@ -7,7 +7,7 @@
         <title>Héritage de template · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -621,18 +621,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="h&#xE9;ritage-de-template">H&#xE9;ritage de template</h1>
-<p>Django vous r&#xE9;serve encore bien des surprises : une assez g&#xE9;niale est <strong>l&apos;h&#xE9;ritage de template</strong>. Qu&apos;est ce que &#xE7;a signifie ? C&apos;est une fonctionnalit&#xE9; qui vous permet de r&#xE9;utiliser certains morceaux de HTML dans diff&#xE9;rentes pages de votre site web.</p>
-<p>Les mod&#xE8;les permettent d&apos;utiliser les m&#xEA;mes informations ou mises en page en plusieurs endroits. Vous n&apos;avez pas &#xE0; vous r&#xE9;p&#xE9;ter dans chaque fichier. Et si vous voulez changer quelque chose, vous n&apos;avez pas &#xE0; le faire dans chaque mod&#xE8;le, mais juste un!</p>
-<h2 id="cr&#xE9;er-un-template-de-base">Cr&#xE9;er un template de base</h2>
-<p>Un template de base est le template le plus simple que vous pouvez faire h&#xE9;riter &#xE0; chaque page de votre site web.</p>
-<p>Cr&#xE9;ons le fichier <code>base.html</code> dans le dossier <code>blog/templates/blog/</code> :</p>
+                                <h1 id="héritage-de-template">Héritage de template</h1>
+<p>Django vous réserve encore bien des surprises : une assez géniale est <strong>l&apos;héritage de template</strong>. Qu&apos;est ce que ça signifie ? C&apos;est une fonctionnalité qui vous permet de réutiliser certains morceaux de HTML dans différentes pages de votre site web.</p>
+<p>Les modèles permettent d&apos;utiliser les mêmes informations ou mises en page en plusieurs endroits. Vous n&apos;avez pas à vous répéter dans chaque fichier. Et si vous voulez changer quelque chose, vous n&apos;avez pas à le faire dans chaque modèle, mais juste un!</p>
+<h2 id="créer-un-template-de-base">Créer un template de base</h2>
+<p>Un template de base est le template le plus simple que vous pouvez faire hériter à chaque page de votre site web.</p>
+<p>Créons le fichier <code>base.html</code> dans le dossier <code>blog/templates/blog/</code> :</p>
 <pre><code>blog
-&#x2514;&#x2500;&#x2500;&#x2500;templates
-    &#x2514;&#x2500;&#x2500;&#x2500;blog
+└───templates
+    └───blog
             base.html
             post_list.html
-</code></pre><p>Ensuite, ouvrez ce fichier dans l&apos;&#xE9;diteur de code et collez-y tout ce qui se trouve dans le fichier <code>post_list.html</code>. &#xC7;a devrait ressembler &#xE0; &#xE7;a :</p>
+</code></pre><p>Ensuite, ouvrez ce fichier dans l&apos;éditeur de code et collez-y tout ce qui se trouve dans le fichier <code>post_list.html</code>. Ça devrait ressembler à ça :</p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html">{% load static %}
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
@@ -666,7 +666,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>Puis, dans le fichier <code>base.html</code>, remplacez tout ce qui se trouve dans <code>&lt;body&gt;</code> (de <code>&lt;body&gt;</code> &#xE0; <code>&lt;/body&gt;</code>) par ceci :</p>
+<p>Puis, dans le fichier <code>base.html</code>, remplacez tout ce qui se trouve dans <code>&lt;body&gt;</code> (de <code>&lt;body&gt;</code> à <code>&lt;/body&gt;</code>) par ceci :</p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-header&quot;</span>&gt;</span>
@@ -682,13 +682,13 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
-<p>Vous pouvez remarquer qu&apos;on vient de remplacer tout ce qui &#xE9;tait entre <code>{% for post in posts %}</code> et <code>{% endfor %}</code> avec : </p>
+<p>Vous pouvez remarquer qu&apos;on vient de remplacer tout ce qui était entre <code>{% for post in posts %}</code> et <code>{% endfor %}</code> avec : </p>
 <p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
 <pre><code class="lang-html">{% block content %}
 {% endblock %}
 </code></pre>
-<p>Mais pourquoi? Vous venez de cr&#xE9;er un <code>block</code> ! Vous avez utilis&#xE9; la balise de mod&#xE8;le <code>{% block %}</code> pour cr&#xE9;er une partie qui va contenir du HTML. Ce HTML viendra d&apos;un autre mod&#xE8;le qui &#xE9;tendra ce mod&#xE8;le-ci (<code>base.html</code>). Nous vous expliquerons comment faire cela dans un instant.</p>
-<p>Enregistrez <code>base.html</code> et ouvrez votre <code>blog/templates/blog/post_list.html</code> &#xE0; nouveau dans l&apos;&#xE9;diteur de code. Vous allez tout supprimer au-dessus de <code>{% for post in posts %}</code> et en dessous de <code>{% endfor %}</code>. Lorsque vous avez termin&#xE9;, le fichier ressemblera &#xE0; ceci :</p>
+<p>Mais pourquoi? Vous venez de créer un <code>block</code> ! Vous avez utilisé la balise de modèle <code>{% block %}</code> pour créer une partie qui va contenir du HTML. Ce HTML viendra d&apos;un autre modèle qui étendra ce modèle-ci (<code>base.html</code>). Nous vous expliquerons comment faire cela dans un instant.</p>
+<p>Enregistrez <code>base.html</code> et ouvrez votre <code>blog/templates/blog/post_list.html</code> à nouveau dans l&apos;éditeur de code. Vous allez tout supprimer au-dessus de <code>{% for post in posts %}</code> et en dessous de <code>{% endfor %}</code>. Lorsque vous avez terminé, le fichier ressemblera à ceci :</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% for post in posts %}
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
@@ -700,8 +700,8 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 {% endfor %}
 </code></pre>
-<p>Nous voulons utiliser ceci dans le cadre de notre mod&#xE8;le pour tous les blocs &apos;content&apos;. Il est temps d&apos;ajouter ajouter des balises block &#xE0; ce fichier !</p>
-<p>Vous voulez que votre balise block corresponde &#xE0; la balise dans votre fichier <code>base.html</code> . Vous voulez aussi qu&apos;il inclue tout le code qui appartient &#xE0; vos blocs de contenu. Pour faire cela, entourez tout le code de <code>{% block content %}</code> et <code>{% endblock %}</code>. Comme ceci :</p>
+<p>Nous voulons utiliser ceci dans le cadre de notre modèle pour tous les blocs &apos;content&apos;. Il est temps d&apos;ajouter ajouter des balises block à ce fichier !</p>
+<p>Vous voulez que votre balise block corresponde à la balise dans votre fichier <code>base.html</code> . Vous voulez aussi qu&apos;il inclue tout le code qui appartient à vos blocs de contenu. Pour faire cela, entourez tout le code de <code>{% block content %}</code> et <code>{% endblock %}</code>. Comme ceci :</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% block content %}
     {% for post in posts %}
@@ -715,7 +715,7 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>Seule une chose reste &#xE0; faire. Nous devons connecter ces deux mod&#xE8;les ensemble. C&apos;est &#xE7;a, &#xE9;tendre des mod&#xE8;les ! Nous allons le faire en ajoutant une balise &apos;extends&apos; au d&#xE9;but du fichier. Comme cela :</p>
+<p>Seule une chose reste à faire. Nous devons connecter ces deux modèles ensemble. C&apos;est ça, étendre des modèles ! Nous allons le faire en ajoutant une balise &apos;extends&apos; au début du fichier. Comme cela :</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
 <pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
 
@@ -731,9 +731,9 @@
     {% endfor %}
 {% endblock %}
 </code></pre>
-<p>Et voil&#xE0; ! Enregistrez le fichier et v&#xE9;rifiez que votre site fonctionne toujours correctement. :)</p>
+<p>Et voilà ! Enregistrez le fichier et vérifiez que votre site fonctionne toujours correctement. :)</p>
 <blockquote>
-<p>Si vous obtenez l&apos;erreur <code>TemplateDoesNotExist</code>, cela signifie qu&apos;il n&apos;y a pas de fichier <code>blog/base.html</code> et que vous avez <code>runserver</code> en cours d&apos;ex&#xE9;cution dans la console. Arr&#xEA;tez-le (en appuyant simultan&#xE9;ment sur Ctrl+C, les touches Control et C de votre clavier) et relancez-le en tapant la commande <code>python manage.py runserver</code>.</p>
+<p>Si vous obtenez l&apos;erreur <code>TemplateDoesNotExist</code>, cela signifie qu&apos;il n&apos;y a pas de fichier <code>blog/base.html</code> et que vous avez <code>runserver</code> en cours d&apos;exécution dans la console. Arrêtez-le (en appuyant simultanément sur Ctrl+C, les touches Control et C de votre clavier) et relancez-le en tapant la commande <code>python manage.py runserver</code>.</p>
 </blockquote>
 
                                 
@@ -778,12 +778,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Héritage de template","level":"1.22","depth":1,"next":{"title":"Finaliser votre application","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - Rendez votre site joli","level":"1.21","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-09-22T11:43:42.858Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Héritage de template","level":"1.22","depth":1,"next":{"title":"Finaliser votre application","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"previous":{"title":"CSS - Rendez votre site joli","level":"1.21","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"template_extending/README.md","mtime":"2020-11-15T14:54:56.442Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     

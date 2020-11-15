@@ -7,7 +7,7 @@
         <title>Qu'est-ce que Django? · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.6">
+        <meta name="generator" content="HonKit 3.6.12">
         
         
         
@@ -90,7 +90,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
   
@@ -622,19 +622,19 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="quest-ce-que-django">Qu&apos;est-ce que Django?</h1>
-<p>Django (<em>/&#x2C8;d&#x292;&#xE6;&#x14B;&#x261;o&#x28A;/ jang-goh</em>) est un framework web gratuit et open-source &#xE9;crit en Python. Un framework web est un ensemble de composants qui vous aide &#xE0; d&#xE9;velopper des sites web plus rapidement et plus facilement.</p>
-<p>Lorsque vous cr&#xE9;ez un site web, vous avez souvent besoin de la m&#xEA;me chose : une mani&#xE8;re de g&#xE9;rer l&apos;authentification de vos utilisateurs (cr&#xE9;er un compte, se connecter, se d&#xE9;connecter), une partie d&#xE9;di&#xE9;e &#xE0; la gestion de votre site, des formulaires, une mani&#xE8;re de mettre en ligne des fichiers, etc.</p>
-<p>Heureusement pour vous, d&apos;autres personnes ont r&#xE9;alis&#xE9; depuis longtemps que les d&#xE9;veloppeurs web font face aux m&#xEA;mes probl&#xE8;mes lors de la construction d&apos;un nouveau site, donc ils travaillent ensemble et cr&#xE9;ent un framework (Django &#xE9;tant un) qui vous donne des composants pr&#xEA;ts &#xE0; l&apos;emploi.</p>
-<p>Les frameworks existent pour vous &#xE9;viter d&apos;avoir &#xE0; r&#xE9;inventer la roue et aider &#xE0; r&#xE9;duire les frais g&#xE9;n&#xE9;raux lorsque vous construisez de nouveaux sites.</p>
+<p>Django (<em>/ˈdʒæŋɡoʊ/ jang-goh</em>) est un framework web gratuit et open-source écrit en Python. Un framework web est un ensemble de composants qui vous aide à développer des sites web plus rapidement et plus facilement.</p>
+<p>Lorsque vous créez un site web, vous avez souvent besoin de la même chose : une manière de gérer l&apos;authentification de vos utilisateurs (créer un compte, se connecter, se déconnecter), une partie dédiée à la gestion de votre site, des formulaires, une manière de mettre en ligne des fichiers, etc.</p>
+<p>Heureusement pour vous, d&apos;autres personnes ont réalisé depuis longtemps que les développeurs web font face aux mêmes problèmes lors de la construction d&apos;un nouveau site, donc ils travaillent ensemble et créent un framework (Django étant un) qui vous donne des composants prêts à l&apos;emploi.</p>
+<p>Les frameworks existent pour vous éviter d&apos;avoir à réinventer la roue et aider à réduire les frais généraux lorsque vous construisez de nouveaux sites.</p>
 <h2 id="pourquoi-est-ce-que-vous-auriez-besoin-dun-framework-">Pourquoi est-ce que vous auriez besoin d&apos;un framework ?</h2>
-<p>Pour comprendre ce qu&apos;est exactement Django, nous devons regarder de plus pr&#xE8;s le serveur. La premi&#xE8;re chose est que le serveur doit savoir que vous voulez vous servir une page Web.</p>
-<p>Imaginez une bo&#xEE;te aux lettres (un port) dont l&apos;arriv&#xE9;e de lettres (une requ&#xEA;te) serait surveill&#xE9;e. C&apos;est le travail qu&apos;effectue le serveur. Le serveur Web lit la lettre et renvoie une page Web en r&#xE9;ponse. G&#xE9;n&#xE9;ralement, lorsque vous voulez envoyer quelque chose, vous avez besoin de contenu. Django est un outil qui va vous aider &#xE0; cr&#xE9;er ce contenu.</p>
-<h2 id="que-se-passe-t-il-quand-quelquun-demande-un-site-web-&#xE0;-votre-serveur-">Que se passe-t-il quand quelqu&apos;un demande un site web &#xE0; votre serveur ?</h2>
-<p>Lorsqu&apos;une requ&#xEA;te arrive sur un serveur web, elle est transmise &#xE0; Django dont le premier travail va &#xEA;tre de comprendre ce qui est demand&#xE9;. Il s&apos;occupe tout d&apos;abord de l&apos;adresse de page Web et essaie de savoir quoi faire. Ce travail est effectu&#xE9; par le routeur de Django, l&apos;<strong>urlresolver</strong> (&#xE0; savoir qu&apos;une adresse web est appel&#xE9; URL - Uniform Resource Locator - d&apos;o&#xF9; le nom d&apos;<em>urlresolver</em>). Ce n&apos;est pas tr&#xE8;s intelligent - il faut renseigner une liste de mod&#xE8;les pour faire correspondre une URL. Django v&#xE9;rifie dans l&apos;ordre les mod&#xE8;les, et si correspondance il y a, alors il transmet la requ&#xEA;te &#xE0; la fonction associ&#xE9;e (appel&#xE9; <em>vue</em>).</p>
-<p>Afin d&apos;y voir un peu plus clair, imaginez un facteur transportant une lettre. Il descend la rue et v&#xE9;rifie &#xE0; chaque maison si le num&#xE9;ro de celle-ci correspond &#xE0; celui de la lettre. Si les deux num&#xE9;ros correspondent, il met la lettre dans la bo&#xEE;te aux lettres de cette maison. C&apos;est &#xE0; peu pr&#xE8;s comme cela que fonctionne l&apos;urlresolver !</p>
-<p>C&apos;est dans la fonction de la <em>vue</em> que les choses se passent : nous allons pouvoir jeter un &#x153;il dans la base de donn&#xE9;es pour obtenir d&apos;avantage d&apos;informations. Par exemple, peut-&#xEA;tre que l&apos;utilisateur demande &#xE0; changer quelque chose dans ces donn&#xE9;es ? Ce serait comme une lettre dont le contenu serait : &quot;Merci de changer la description de mon emploi actuel&quot;. La <em>vue</em> va tout d&apos;abord v&#xE9;rifier que l&apos;utilisateur est bien autoris&#xE9; &#xE0; effectuer ce changement puis elle corrigera la description de l&apos;emploi. Enfin, la <em>vue</em> g&#xE9;n&#xE9;rera une r&#xE9;ponse de type &quot;Travail termin&#xE9; !&quot; que Django pourra retourner &#xE0; l&apos;utilisateur.</p>
-<p>Ceci n&apos;est qu&apos;une description tr&#xE8;s simplifi&#xE9;e du processus. Vous n&apos;avez pas besoin de conna&#xEE;tre tous les d&#xE9;tails techniques pour le moment : cette vue d&apos;ensemble suffira largement.</p>
-<p>Au lieu de vous assommer avec des d&#xE9;tails complexes, nous allons plut&#xF4;t commencer &#xE0; construire quelque chose avec Django et nous allons apprendre les choses importantes au fur et &#xE0; mesure !</p>
+<p>Pour comprendre ce qu&apos;est exactement Django, nous devons regarder de plus près le serveur. La première chose est que le serveur doit savoir que vous voulez vous servir une page Web.</p>
+<p>Imaginez une boîte aux lettres (un port) dont l&apos;arrivée de lettres (une requête) serait surveillée. C&apos;est le travail qu&apos;effectue le serveur. Le serveur Web lit la lettre et renvoie une page Web en réponse. Généralement, lorsque vous voulez envoyer quelque chose, vous avez besoin de contenu. Django est un outil qui va vous aider à créer ce contenu.</p>
+<h2 id="que-se-passe-t-il-quand-quelquun-demande-un-site-web-à-votre-serveur-">Que se passe-t-il quand quelqu&apos;un demande un site web à votre serveur ?</h2>
+<p>Lorsqu&apos;une requête arrive sur un serveur web, elle est transmise à Django dont le premier travail va être de comprendre ce qui est demandé. Il s&apos;occupe tout d&apos;abord de l&apos;adresse de page Web et essaie de savoir quoi faire. Ce travail est effectué par le routeur de Django, l&apos;<strong>urlresolver</strong> (à savoir qu&apos;une adresse web est appelé URL - Uniform Resource Locator - d&apos;où le nom d&apos;<em>urlresolver</em>). Ce n&apos;est pas très intelligent - il faut renseigner une liste de modèles pour faire correspondre une URL. Django vérifie dans l&apos;ordre les modèles, et si correspondance il y a, alors il transmet la requête à la fonction associée (appelé <em>vue</em>).</p>
+<p>Afin d&apos;y voir un peu plus clair, imaginez un facteur transportant une lettre. Il descend la rue et vérifie à chaque maison si le numéro de celle-ci correspond à celui de la lettre. Si les deux numéros correspondent, il met la lettre dans la boîte aux lettres de cette maison. C&apos;est à peu près comme cela que fonctionne l&apos;urlresolver !</p>
+<p>C&apos;est dans la fonction de la <em>vue</em> que les choses se passent : nous allons pouvoir jeter un œil dans la base de données pour obtenir d&apos;avantage d&apos;informations. Par exemple, peut-être que l&apos;utilisateur demande à changer quelque chose dans ces données ? Ce serait comme une lettre dont le contenu serait : &quot;Merci de changer la description de mon emploi actuel&quot;. La <em>vue</em> va tout d&apos;abord vérifier que l&apos;utilisateur est bien autorisé à effectuer ce changement puis elle corrigera la description de l&apos;emploi. Enfin, la <em>vue</em> générera une réponse de type &quot;Travail terminé !&quot; que Django pourra retourner à l&apos;utilisateur.</p>
+<p>Ceci n&apos;est qu&apos;une description très simplifiée du processus. Vous n&apos;avez pas besoin de connaître tous les détails techniques pour le moment : cette vue d&apos;ensemble suffira largement.</p>
+<p>Au lieu de vous assommer avec des détails complexes, nous allons plutôt commencer à construire quelque chose avec Django et nous allons apprendre les choses importantes au fur et à mesure !</p>
 
                                 
                                 </section>
@@ -678,12 +678,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Qu'est-ce que Django?","level":"1.9","depth":1,"next":{"title":"Installation de Django","level":"1.10","depth":1,"path":"django_installation/README.md","ref":"django_installation/README.md","articles":[]},"previous":{"title":"Introduction à Python","level":"1.8","depth":1,"path":"python_introduction/README.md","ref":"python_introduction/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django/README.md","mtime":"2020-09-22T11:43:42.830Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-22T11:43:53.384Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Qu'est-ce que Django?","level":"1.9","depth":1,"next":{"title":"Installation de Django","level":"1.10","depth":1,"path":"django_installation/README.md","ref":"django_installation/README.md","articles":[]},"previous":{"title":"Introduction à Python","level":"1.8","depth":1,"path":"python_introduction/README.md","ref":"python_introduction/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django/README.md","mtime":"2020-11-15T14:54:56.414Z","type":"markdown"},"gitbook":{"version":"3.6.12","time":"2020-11-15T14:55:07.643Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     
