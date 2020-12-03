@@ -7,7 +7,7 @@
         <title>Вступ до Python · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.13">
+        <meta name="generator" content="HonKit 3.6.14">
         
         
         
@@ -882,7 +882,7 @@ Perfect, I can hear all the details
 <h2 id="ваші-власні-функції">Ваші власні функції!</h2>
 <p>Пам&apos;ятаєте функції на зразок <code>len()</code>, що можна виконувати в Python? Що ж, гарні новини - зараз ви дізнаєтесь, як писати свої власні функції!</p>
 <p>Функція - це набір інструкцій, які Python повинен виконати. Кожна функція в Python починається із ключового слова <code>def</code>, отримує ім&apos;я і може містити певні параметри. Почнемо з простого. Перепишемо код в <strong>python_intro.py</strong> наступним чином:</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">()</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>():</span>
     print(<span class="hljs-string">&apos;Hi there!&apos;</span>)
     print(<span class="hljs-string">&apos;How are you?&apos;</span>)
 
@@ -895,10 +895,10 @@ hi()
 Hi there!
 How are you?
 </code></pre><p>Це було просто! Побудуємо нашу першу функцію з параметрами. Скористаємося попереднім прикладом - функцією, що говорить &apos;hi&apos; особі, що її запускає - з іменем:</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
 </code></pre>
 <p>Як бачимо, зараз ми задали для нашої функції параметр, який назвали <code>name</code>:</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
     <span class="hljs-keyword">if</span> name == <span class="hljs-string">&apos;Ola&apos;</span>:
         print(<span class="hljs-string">&apos;Hi Ola!&apos;</span>)
     <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&apos;Sonja&apos;</span>:
@@ -932,7 +932,7 @@ Hi Sonja!
 <pre><code>Hi anonymous!
 </code></pre><p>Чудово, чи не так? Таким чином вам не потрібно повторюватись кожного разу, коли ви захочете змінити ім&apos;я особи, з якою має вітатися наша функція. І саме тому нам потрібні функції - ви ж бо ніколи не хочете повторювати свій код!</p>
 <p>Виконаємо дещо складніші маніпуляції - існує безліч імен, набагато більше, ніж лише два, і написати умови для кожного з них буде досить складно, правда ж?</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
     print(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
 hi(<span class="hljs-string">&quot;Rachel&quot;</span>)
@@ -952,7 +952,7 @@ Hi Rachel!
 </code></pre>
 <p>Вираз <code>for</code> поводиться подібно до виразу <code>if</code>, а код, наведений нижче повинен мати відступи в чотири пробіли.</p>
 <p>Тут наведено повну версію коду у файлі:</p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
     print(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
 girls = [<span class="hljs-string">&apos;Rachel&apos;</span>, <span class="hljs-string">&apos;Monica&apos;</span>, <span class="hljs-string">&apos;Phoebe&apos;</span>, <span class="hljs-string">&apos;Ola&apos;</span>, <span class="hljs-string">&apos;You&apos;</span>]
@@ -1031,7 +1031,7 @@ Next girl
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Вступ до Python","level":"1.7","depth":1,"next":{"title":"Що таке Django?","level":"1.8","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Редактор коду","level":"1.6","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"uk","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2020-11-24T10:32:27.225Z","type":"markdown"},"gitbook":{"version":"3.6.13","time":"2020-11-24T10:32:37.342Z"},"basePath":"..","book":{"language":"uk"}});
+            gitbook.page.hasChanged({"page":{"title":"Вступ до Python","level":"1.7","depth":1,"next":{"title":"Що таке Django?","level":"1.8","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Редактор коду","level":"1.6","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"uk","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2020-12-03T10:23:55.096Z","type":"markdown"},"gitbook":{"version":"3.6.14","time":"2020-12-03T10:24:06.677Z"},"basePath":"..","book":{"language":"uk"}});
         });
     </script>
 </div>

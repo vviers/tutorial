@@ -7,7 +7,7 @@
         <title>Úvod do jazyka Python · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.13">
+        <meta name="generator" content="HonKit 3.6.14">
         
         
         
@@ -584,7 +584,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <p>Práve si použila <code>upper</code> <strong>metódu</strong> na reťazci! Metóda (ako <code>upper()</code>) je postupnosť inštrukcií, ktoré Python vykonáva na danom objekte (<code>&quot;Ola&quot;</code>), potom, čo ju zavoláš.</p>
 <p>Ak chcete poznať počet písmen, ktoré sú obsiahnuté vo vašom mene, tak na to má Python <strong>funkciu</strong> tiež!</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(<span class="hljs-string">&quot;Ola&quot;</span>)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(<span class="hljs-string">&quot;Ola&quot;</span>)
 <span class="hljs-number">3</span>
 </code></pre>
 <p>Ste zvedaví, prečo voláme niekedy funkciu s bodkou (<code>.</code>) na konci reťazca (ako <code>&quot;Ola&quot;.upper()</code>) a niekedy najprv voláme funkciu a reťazec vložíme do zátvoriek? V niektorých prípadoch funkcie patria k objektom, ako napr. <code>upper()</code>, čo môže byt vykonaná len na reťazcoch. V takomto prípade sa tieto funkcie volajú <strong>metódy</strong>. Inokedy funkcie nepatria k žiadnemu konkrétnemu objektu a môžu byť použité na rôzne typy objektov, rovnako ako <code>len()</code>. Preto zadáme <code>&quot;Ola&quot;</code> ako parameter pre funkciu <code>len</code>.</p>
@@ -600,14 +600,14 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <h2 id="chyby">Chyby</h2>
 <p>Teraz skúsme niečo nové. Je možné zistiť dĺžku nejakého čísla rovnako ako sme to robili s našim menom? Napíšte <code>len(304023)</code> a stlačte <code>enter</code>:</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(<span class="hljs-number">304023</span>)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(<span class="hljs-number">304023</span>)
 Traceback (most recent call last):
   File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;
-TypeError: object of type <span class="hljs-string">&apos;int&apos;</span> has no len()
+TypeError: <span class="hljs-built_in">object</span> of <span class="hljs-built_in">type</span> <span class="hljs-string">&apos;int&apos;</span> has no <span class="hljs-built_in">len</span>()
 </code></pre>
 <p>Dostali sme našu prvú chybovú hlášku! Hovorí nám, že objekty typu &quot;int&quot; (celé čísla, angl. integers) nemajú dĺžku. Tak čo môžeme teraz robiť? Možno by sme mohli napísať naše číslo ako reťazec? Reťazce majú dĺžku, pravda?</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(str(<span class="hljs-number">304023</span>))
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(<span class="hljs-built_in">str</span>(<span class="hljs-number">304023</span>))
 <span class="hljs-number">6</span>
 </code></pre>
 <p>Funguje to! Použili sme funkciu <code>str</code> vo vnútri funkcie <code>len</code>. Funkcia <code>str()</code> prevedie všetko na reťazce.</p>
@@ -638,7 +638,7 @@ TypeError: object of type <span class="hljs-string">&apos;int&apos;</span> has n
 </code></pre>
 <p>Môžete ju použiť aj vo funkciách:</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(meno)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(meno)
 <span class="hljs-number">5</span>
 </code></pre>
 <p>Úžasné, že? Samozrejme premenné môžu byť hocičo, takže aj čísla! Skúste toto:</p>
@@ -682,7 +682,7 @@ Maria
 </code></pre>
 <p>OK, máme zoznam! Čo s ním môžeme urobiť? Pozrime sa, koľko čísel lotérie máme v zozname. Máte predstavu, ktorú funkciu by sme mohli použiť? Toto už predsa viete!</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(loteria)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(loteria)
 <span class="hljs-number">6</span>
 </code></pre>
 <p>Áno! <code>len()</code> vám vráti počet objektov v zozname. Šikovné, nie? Možno by sme to teraz mohli usporiadať:</p>
@@ -774,7 +774,7 @@ KeyError: <span class="hljs-string">&apos;vek&apos;</span>
 </code></pre>
 <p>Tak ako pri zoznamoch, použitím metódy <code>len()</code> na slovníkoch dostaneš počet párov kľúč-hodnota v slovníku. Poďme na to, zadaj tento príkaz:</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(ucastnicka)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(ucastnicka)
 <span class="hljs-number">4</span>
 </code></pre>
 <p>Dúfam, že to dáva zmysel. :) Pripravená na trochu zábavy so slovníkmi? Tak šup na ďalší riadok za úžasnými vecami.</p>
@@ -809,24 +809,24 @@ KeyError: <span class="hljs-string">&apos;vek&apos;</span>
 <p>Veľkú časť programovania predstavuje porovnávanie veci. Čo je najjednoduchšia vec na porovnanie? Čísla, samozrejme. Pozrime sa, ako to funguje:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> &gt; <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &lt; <span class="hljs-number">1</span>
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> &gt; <span class="hljs-number">2</span> * <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">1</span> == <span class="hljs-number">1</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> != <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 </code></pre>
 <p>Dali sme Pythonu pár čísiel na porovnanie. Ako vidíš, Python vie porovnávať nielen čísla, ale vie porovnávať aj výsledky metód. Pekné, nie?</p>
 <p>Zaujíma ťa, prečo sme použili dve &quot;rovná sa&quot; <code>==</code> vedľa seba, aby sme porovnali, či sú čísla rovnaké? Jeden znak <code>=</code> používame na priraďovanie hodnôt premenným. Takže, ak chceš skontrolovať, či sú veci rovnaké, musíš vždy, úplne <strong>vždy</strong> použiť dve <code>==</code>. Taktiež môžeme zisťovať, či sa veci navzájom líšia. Na to použijeme symbol <code>!=</code>, ako bolo uvedené v príklade vyššie.</p>
 <p>Zadaj Pythonu ešte dve úlohy:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">6</span> &gt;= <span class="hljs-number">12</span> / <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &lt;= <span class="hljs-number">2</span>
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 </code></pre>
 <p><code>&gt;</code> a <code>&lt;</code> sme už videli, ale čo znamenajú <code>&gt;=</code> a <code>&lt;=</code>? Prečítať ich môžeš takto:</p>
 <ul>
@@ -838,11 +838,11 @@ KeyError: <span class="hljs-string">&apos;vek&apos;</span>
 <p>Skvelé! Chceš vyskúšať ešte jeden? Skús toto:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">6</span> &gt; <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> <span class="hljs-number">2</span> &lt; <span class="hljs-number">3</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> <span class="hljs-number">2</span> &lt; <span class="hljs-number">1</span>
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span> <span class="hljs-keyword">or</span> <span class="hljs-number">2</span> &lt; <span class="hljs-number">1</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 </code></pre>
 <p>Môžeš dať Pythonu toľko čísel, koľko chceš a on ti dá vždy odpoveď! Vcelku šikovné, nie?</p>
 <ul>
@@ -867,15 +867,15 @@ TypeError: <span class="hljs-string">&apos;&gt;&apos;</span> <span class="hljs-k
 <p>Aby ich Python spoznal, musíš vždy napísať &apos;True&apos; (s veľkým písmenom na začiatku a zvyšok malým písmom). <strong>true, TRUE, tRUE nebudú fungovať -- iba True je správne.</strong> (Samozrejme, to isté platí aj pre &apos;False&apos;.)</p>
 <p>Logické hodnoty môžu byť aj premenné. Aha:</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-keyword">True</span>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>a
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 </code></pre>
 <p>Môžeš to urobiť aj takto:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-number">2</span> &gt; <span class="hljs-number">5</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>a
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 </code></pre>
 <p>Precvič si to a zabav sa s logickými premennými - skús spustiť tieto príkazy:</p>
 <ul>
@@ -1041,7 +1041,7 @@ Super, pocujem vsetky detaily
 <p>Pamätáš si funkcie ako napríklad <code>len()</code>, ktoré môžeš v Pythone spúšťať? Máme pre teba dobrú správu - teraz sa naučíš ako napísať vlastnú funkciu!</p>
 <p>Funkcia je postupnosť inštrukcií, ktoré by mal Python spustiť. Každá funkcia v Pythone začína kľúčovým slovom <code>def</code>, má svoje meno a môže mať nejaké parametre. Skusme to. Nahraď kód v <strong>python_intro.py</strong> týmto:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">()</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>():</span>
     print(<span class="hljs-string">&apos;Ahoj!&apos;</span>)
     print(<span class="hljs-string">&apos;Ako sa mas?&apos;</span>)
 
@@ -1062,11 +1062,11 @@ Ako sa mas?
 </ul>
 <p>Poďme vytvoriť našu prvú funkciu s parametrami. Použijeme predchádzajúci príklad - funkcia, ktorá hovorí &quot;ahoj&quot; osobe, ktorá ju spustí - s menom:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
 </code></pre>
 <p>Ako vidíš, dali sme našej funkcii parameter, ktorý sme nazvali <code>meno</code>:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(meno)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">meno</span>):</span>
     <span class="hljs-keyword">if</span> meno == <span class="hljs-string">&apos;Ola&apos;</span>:
         print(<span class="hljs-string">&apos;Ahoj Ola!&apos;</span>)
     <span class="hljs-keyword">elif</span> meno == <span class="hljs-string">&apos;Sonja&apos;</span>:
@@ -1105,7 +1105,7 @@ Ahoj Sonja!
 </code></pre><p>Úžasné, nie? Vďaka tomu nemusíš prepisovať dokola to isté zakaždým, keď chceš zmeniť meno osoby, ktorú má funkcia pozdraviť. A to je presne dôvod, prečo potrebujeme funkcie - aby sme nemuseli opakovať svoj kód!</p>
 <p>Urobme to teda trochu rozumnejšie - existujú viac ako dve mená a písať podmienku pre každé by bolo trochu náročné, však?</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(meno)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">meno</span>):</span>
     print(<span class="hljs-string">&apos;Ahoj &apos;</span> + meno + <span class="hljs-string">&apos;!&apos;</span>)
 
 hi(<span class="hljs-string">&quot;Katka&quot;</span>)
@@ -1132,7 +1132,7 @@ Ahoj Katka!
 <p>Príkaz <code>for</code> sa správa podobne ako <code>if</code>; kód pod oboma z nich musí byť odsadený o štyri medzery.</p>
 <p>Tu je plný kód, ktorý napíšeme do súboru:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(meno)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">meno</span>):</span>
     print(<span class="hljs-string">&apos;Ahoj &apos;</span> + meno + <span class="hljs-string">&apos;!&apos;</span>)
 
 dievcata = [<span class="hljs-string">&apos;Katka&apos;</span>, <span class="hljs-string">&apos;Monika&apos;</span>, <span class="hljs-string">&apos;Zuzka&apos;</span>, <span class="hljs-string">&apos;Ola&apos;</span>, <span class="hljs-string">&apos;Ty&apos;</span>]
@@ -1156,7 +1156,7 @@ Dalsie dievca
 </code></pre><p>Ako vidíš, všetko, čo dáš do príkazu <code>for</code> s oddsadením sa bude opakovať pre každý prvok zoznamu <code>dievcata</code>.</p>
 <p><code>for</code> môžeš pomocou funkcie <code>range</code> použiť aj na čísla:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
     print(i)
 </code></pre>
 <p>Čo vypíše:</p>
@@ -1216,7 +1216,7 @@ Dalsie dievca
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Úvod do jazyka Python","level":"1.8","depth":1,"next":{"title":"Čo je Django?","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Editor kódu","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"sk","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2020-11-24T10:32:27.169Z","type":"markdown"},"gitbook":{"version":"3.6.13","time":"2020-11-24T10:32:37.342Z"},"basePath":"..","book":{"language":"sk"}});
+            gitbook.page.hasChanged({"page":{"title":"Úvod do jazyka Python","level":"1.8","depth":1,"next":{"title":"Čo je Django?","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Editor kódu","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"sk","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2020-12-03T10:23:55.044Z","type":"markdown"},"gitbook":{"version":"3.6.14","time":"2020-12-03T10:24:06.677Z"},"basePath":"..","book":{"language":"sk"}});
         });
     </script>
 </div>

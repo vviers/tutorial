@@ -7,7 +7,7 @@
         <title>Django Форми · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.13">
+        <meta name="generator" content="HonKit 3.6.14">
         
         
         
@@ -637,7 +637,7 @@
 
 <span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Post
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PostForm</span><span class="hljs-params">(forms.ModelForm)</span>:</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PostForm</span>(<span class="hljs-params">forms.ModelForm</span>):</span>
 
     <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
         model = Post
@@ -707,7 +707,7 @@ urlpatterns = [
 </code></pre>
 <p>И след това нашия изглед:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_new</span><span class="hljs-params">(request)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_new</span>(<span class="hljs-params">request</span>):</span>
     form = PostForm()
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_edit.html&apos;</span>, {<span class="hljs-string">&apos;form&apos;</span>: form})
 </code></pre>
@@ -741,7 +741,7 @@ urlpatterns = [
 <h2 id="запазване-на-формата">Запазване на формата</h2>
 <p>Отворете пак <code>blog/views.py</code> в редактора. В момента всичко, което имаме в изгледа на <code>post_new</code> е следното:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_new</span><span class="hljs-params">(request)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_new</span>(<span class="hljs-params">request</span>):</span>
     form = PostForm()
     <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_edit.html&apos;</span>, {<span class="hljs-string">&apos;form&apos;</span>: form})
 </code></pre>
@@ -761,7 +761,7 @@ urlpatterns = [
 <p>Проверяваме дали формата е валидна и ако да в запазваме!</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">if</span> form.is_valid():
-    post = form.save(commit=<span class="hljs-keyword">False</span>)
+    post = form.save(commit=<span class="hljs-literal">False</span>)
     post.author = request.user
     post.published_date = timezone.now()
     post.save()
@@ -778,11 +778,11 @@ urlpatterns = [
 <p><code>post_detail</code> е името на изгледа, на който искаме да отидем. Помните ли, че този изглед (<em>view</em>) изискваше стойност <code>pk</code>? За да го предадем на изгледа използваме <code>pk=post.pk</code>, където <code>post</code> е новосъздадена публикация!</p>
 <p>И така, говорихме много, но може би искаме да видим как изглежда всичко, нали?</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_new</span><span class="hljs-params">(request)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_new</span>(<span class="hljs-params">request</span>):</span>
     <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&quot;POST&quot;</span>:
         form = PostForm(request.POST)
         <span class="hljs-keyword">if</span> form.is_valid():
-            post = form.save(commit=<span class="hljs-keyword">False</span>)
+            post = form.save(commit=<span class="hljs-literal">False</span>)
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
@@ -833,12 +833,12 @@ urlpatterns = [
 <p>Ще използваме пак шаблона <code>blog/templates/blog/post_edit.html</code>, така че последното липсващо нещо е изгледа (<em>view</em>).</p>
 <p>Нека отворим <code>blog/views.py</code> в редактора и да добваим това накрая на файла:</p>
 <p></p><p class="code-label">blog/views.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_edit</span><span class="hljs-params">(request, pk)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_edit</span>(<span class="hljs-params">request, pk</span>):</span>
     post = get_object_or_404(Post, pk=pk)
     <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&quot;POST&quot;</span>:
         form = PostForm(request.POST, instance=post)
         <span class="hljs-keyword">if</span> form.is_valid():
-            post = form.save(commit=<span class="hljs-keyword">False</span>)
+            post = form.save(commit=<span class="hljs-literal">False</span>)
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
@@ -953,7 +953,7 @@ $ git pull
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Django Форми","level":"1.24","depth":1,"next":{"title":"Какво следва?","level":"1.25","depth":1,"path":"whats_next/README.md","ref":"whats_next/README.md","articles":[]},"previous":{"title":"Разшири своето приложение","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"bg","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_forms/README.md","mtime":"2020-11-24T10:32:26.645Z","type":"markdown"},"gitbook":{"version":"3.6.13","time":"2020-11-24T10:32:37.342Z"},"basePath":"..","book":{"language":"bg"}});
+            gitbook.page.hasChanged({"page":{"title":"Django Форми","level":"1.24","depth":1,"next":{"title":"Какво следва?","level":"1.25","depth":1,"path":"whats_next/README.md","ref":"whats_next/README.md","articles":[]},"previous":{"title":"Разшири своето приложение","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"bg","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_forms/README.md","mtime":"2020-12-03T10:23:54.584Z","type":"markdown"},"gitbook":{"version":"3.6.14","time":"2020-12-03T10:24:06.677Z"},"basePath":"..","book":{"language":"bg"}});
         });
     </script>
 </div>

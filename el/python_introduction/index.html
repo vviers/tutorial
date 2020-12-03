@@ -7,7 +7,7 @@
         <title>Εισαγωγή στην Python · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.13">
+        <meta name="generator" content="HonKit 3.6.14">
         
         
         
@@ -584,7 +584,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <p>Μόλις χρησιμοποιήσατε την <code>upper</code> <strong>method</strong> πάνω στο string σας! Η μέθοδος (όπως η <code>upper()</code>) είναι μια ακολουθία από οδηγίες/εντολές που η Python πρέπει να εκτελέσει πάνω σε ένα συγκεκριμένο object (<code>&quot;Ola&quot;</code>) μόλις την καλέσετε.</p>
 <p>Αν θέλετε να μάθετε τον αριθμό των γραμμάτων που περιέχονται στο όνομα σας, υπάρχει συνάρτηση <strong>function</strong> και γι&apos;αυτό!</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(<span class="hljs-string">&quot;Ola&quot;</span>)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(<span class="hljs-string">&quot;Ola&quot;</span>)
 <span class="hljs-number">3</span>
 </code></pre>
 <p>Αναρρωτιέστε γιατί μερικές φορές καλείτε συναρτήσεις με την τελεία <code>.</code> στο τέλος ενός string (όπως <code>&quot;Ola&quot;.upper()</code>) και άλλες καλείτε μια συνάρτηση και τοποθετείτε μέσα στις παρενθέσεις το string; Λοιπόν, σε κάποια σημεία οι συναρτήσεις ανήκουν σε objects, όπως η <code>upper()</code> η οποία επιδρά μόνο πάνω σε strings. Σε αυτή την περίπτωση, ονομάζουμε τις συναρτήσεις αυτές μεθόδους (<strong>method</strong>). Άλλες, πάλι, φορές οι συναρτήσεις δεν ανήκουν σε κάτι συγκεκριμένο και μπορούν να χρησιμοποιηθούν σε οποιουδήποτε τύπου object, όπως η <code>len()</code>. Γι&apos;αυτό δίνουμε το string <code>&quot;Ola&quot;</code> ως παράμετρο στη συνάρτηση <code>len</code>.</p>
@@ -600,15 +600,15 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <h2 id="σφάλματα">Σφάλματα</h2>
 <p>Ας δοκιμάσουμε κάτι καινούργιο. Μπορούμε να βρούμε το μήκος ενός αριθμού ακριβώς όπως κάναμε με το όνομα σας νωρίτερα; Πληκτρολογήστε <code>len(304023)</code> και πατήστε <code>enter</code>:</p>
 <p></p><p class="code-label"><span class="glyphicon glyphicon-exclamation-sign" style="color: red;" aria-hidden="true" data-toggle="tooltip" title="An error is expected when you run this command!"></span> command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(<span class="hljs-number">304023</span>)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(<span class="hljs-number">304023</span>)
 Traceback (most recent call last):
   File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;
-TypeError: object of type <span class="hljs-string">&apos;int&apos;</span> has no len()
+TypeError: <span class="hljs-built_in">object</span> of <span class="hljs-built_in">type</span> <span class="hljs-string">&apos;int&apos;</span> has no <span class="hljs-built_in">len</span>()
 </code></pre>
 <p>Μόλις λάβατε το πρώτο σας σφάλμα! Το εικονίδιο <span class="glyphicon glyphicon-exclamation-sign" style="color: red;" aria-hidden="true" data-toggle="tooltip" title="An error is expected when you run this command!"></span> είναι ο δικός μας τρόπος να σας πούμε ότι ο κώδικάς που πρόκειται να τρέξετε δεν θα έχει τα αναμενόμενα αποτελέσματα. Κάνοντας λάθη (ακόμα και εσκεμμένα) είναι σημαντικό κομμάτι κατά τη διάρκεια της εκμάθησης!</p>
 <p>Το συγκεκριμένο σφάλμα λέει ότι τα objects τύπου &quot;int&quot; (από τη λέξη integers, που σημαίνει ακέραιοι αριθμοί) δεν έχουν μήκος. Οπότε τι κάνουμε τώρα; Μήπως να γράψουμε τον αριθμό ως ένα string; Τα strings έχουν μήκος, έτσι;</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(str(<span class="hljs-number">304023</span>))
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(<span class="hljs-built_in">str</span>(<span class="hljs-number">304023</span>))
 <span class="hljs-number">6</span>
 </code></pre>
 <p>Δούλεψε! Χρησιμοποιήσαμε τη συνάρτηση <code>str</code> μέσα στην <code>len</code>. Η <code>str()</code> μετατρέπει τα πάντα σε strings.</p>
@@ -639,7 +639,7 @@ TypeError: object of type <span class="hljs-string">&apos;int&apos;</span> has n
 </code></pre>
 <p>Μπορείτε να χρησιμοποιήσετε μεταβλητές σε συναρτήσεις:</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(name)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(name)
 <span class="hljs-number">5</span>
 </code></pre>
 <p>Φοβερό, έτσι; Οι μεταβλητές μπορεί να είναι οτιδήποτε (ακόμα και αριθμοί). Δοκιμάστε το εξής:</p>
@@ -683,7 +683,7 @@ Maria
 </code></pre>
 <p>Τέλεια, έχουμε μια λίστα! Τι μπορούμε να κάνουμε με αυτή; Ας δούμε πόσοι αριθμοί υπάρχουν μέσα στη λίστα. Ξέρετε, μήπως, ποια συνάρτηση μπορούμε να χρησιμοποιήσουμε γι&apos;αυτό; Το ξέρετε ήδη!</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(lottery)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(lottery)
 <span class="hljs-number">6</span>
 </code></pre>
 <p>Ναι! Η συνάρτηση <code>len()</code> σας δίνει τον αριθμό των objects μέσα σε μια λίστα. Ωραίο, έτσι; Ίσως να μπορούμε να ταξινομήσουμε τους αριθμούς:</p>
@@ -775,7 +775,7 @@ KeyError: <span class="hljs-string">&apos;age&apos;</span>
 </code></pre>
 <p>Όπως στις λίστες, χρησιμοποιώντας τη μέθοδο <code>len()</code> σε λεξικά, θα πάρετε τον αριθμό των ζευγαριών κλειδί-τιμή μέσα σε ένα λεξικό. Γράφτε το παρακάτω:</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(participant)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(participant)
 <span class="hljs-number">4</span>
 </code></pre>
 <p>Ελπίζουμε να βγάζουν νόημα όλα αυτά μέχρι τώρα. :) Είστε έτοιμοι για περισσότερη διασκέδαση με τα λεξικά; Συνεχίστε να διαβάζετε για περισσότερα πράγματα που μπορείτε να κάνετε.</p>
@@ -810,24 +810,24 @@ KeyError: <span class="hljs-string">&apos;age&apos;</span>
 <p>Ένα μεγάλος μέρος του προγραμματισμού περιλαμβάνει τη σύγκριση πραγμάτων. Ποιο είναι το πιο εύκολο πράγμα να συγκρίνουμε; Οι αριθμοί! Ας δούμε πως:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> &gt; <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &lt; <span class="hljs-number">1</span>
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> &gt; <span class="hljs-number">2</span> * <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">1</span> == <span class="hljs-number">1</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> != <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 </code></pre>
 <p>Δώσαμε στην Python μερικούς αριθμούς προς σύγκριση. Όπως βλέπετε, όχι μόνο μπορεί να συγκρίνει αριθμούς αλλά και αποτελέσματα από μεθόδους. Καλό εε;</p>
 <p>Αναρρωτιέστε γιατί βάλαμε <code>==</code> (δύο ίσον σύμβολα) για να εξακριβώσουμε αν οι αριθμοί είναι ίσοι; Χρησιμοποιούμε το μονό ίσον <code>=</code> για να αναθέσουμε μια τιμή σε μια μεταβλητή. Πάντα, <strong>πάντα</strong> θα χρειάζεται να βάζετε διπλό ίσον – <code>==</code> – αν θέλετε να δείτε αν δύο πράγματα είναι ίσα μεταξύ τους. Αν οι τιμές τους, δηλαδή, είναι ίδιες. Μπορούμε επίσης να εξακριβώσουμε αν οι τιμές τους δεν είναι ίσες. Γι&apos;αυτό χρησιμοποιούμε το σύμβολο <code>!=</code>, όπως φαίνεται παραπάνω.</p>
 <p>Ας δώσουμε στην Python δύο ακόμα εντολές:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">6</span> &gt;= <span class="hljs-number">12</span> / <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &lt;= <span class="hljs-number">2</span>
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 </code></pre>
 <p>Είδαμε ότι τα σύμβολα <code>&gt;</code> και <code>&lt;</code>, αλλά τα ακόλουθα σύμβολα τι σημαίνουν: <code>&gt;=</code>, <code>&lt;=</code>; Διαβάστε τα κάπως έτσι:</p>
 <ul>
@@ -839,11 +839,11 @@ KeyError: <span class="hljs-string">&apos;age&apos;</span>
 <p>Τέλεια! Θέλετε να δοκιμάσετε άλλο ένα; Δοκιμάστε αυτό:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">6</span> &gt; <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> <span class="hljs-number">2</span> &lt; <span class="hljs-number">3</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> <span class="hljs-number">2</span> &lt; <span class="hljs-number">1</span>
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span> <span class="hljs-keyword">or</span> <span class="hljs-number">2</span> &lt; <span class="hljs-number">1</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 </code></pre>
 <p>Μπορείτε να δώσετε στην Python όσα νούμερα θέλετε προς σύγκριση και θα σας δώσει την απάντηση! Πολύ καλό, έτσι;</p>
 <ul>
@@ -868,15 +868,15 @@ TypeError: <span class="hljs-string">&apos;&gt;&apos;</span> <span class="hljs-k
 <p>Αλλά για να το καταλάβει η Python θα πρέπει πάντα να το γράφετε ως &apos;True&apos; (το πρώτο γράμμα κεφαλαίο με τα υπόλοιπα πεζά). Τα <strong>true, TRUE, και tRUE δεν θα δουλέψουν – μόνο το True είναι σωστό.</strong> (Το ίδιο ισχύει και για το &apos;False&apos;.)</p>
 <p>Τα booleans μπορούν να είναι και μεταβλητές! Δείτε εδώ:</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-keyword">True</span>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>a
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 </code></pre>
 <p>Μπορείτε να το κάνετε και έτσι:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-number">2</span> &gt; <span class="hljs-number">5</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>a
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 </code></pre>
 <p>Εξασκηθείτε και διασκεδάστε με τα Booleans δοκιμάζοντας τις ακόλουθες εντολές:</p>
 <ul>
@@ -1042,7 +1042,7 @@ Perfect, I can hear all the details
 <p>Θυμάστε τις συναρτήσεις όπως τη <code>len()</code> που εκτελούσατε; Λοιπόν, σας έχουμε καλά νέα! Θα μάθετε πως να δημιουργείτε τις δικές σας!</p>
 <p>Μια συνάρτηση είναι μια σειρά από οδηγίες που η Python πρέπει να εκτελέσει. Κάθε συνάρτηση ξεκινά με τη λέξη κλειδί της Python <code>def</code>, μετά ακολουθεί το όνομα αυτής και μετά δίνονται τυχόν παράμετροι. Ας το προσπαθήσουμε. Αντικαταστήστε τον κώδικα στο αρχείο <strong>python_intro.py</strong> με το ακόλουθο:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">()</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>():</span>
     print(<span class="hljs-string">&apos;Hi there!&apos;</span>)
     print(<span class="hljs-string">&apos;How are you?&apos;</span>)
 
@@ -1063,11 +1063,11 @@ How are you?
 </ul>
 <p>Ας φτιάξουμε την πρώτη μας συνάρτηση με παραμέτρους. Θα αλλάξουμε το προηγούμενο παράδειγμα συμπεριλαμβάνοντας ένα όνομα. Θα φτιάξουμε μια συνάρτηση που να λέει &apos;hi&apos; στο πρόσωπο που την καλεί:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
 </code></pre>
 <p>Όπως βλέπετε, δώσαμε μια παράμετρο στην συνάρτηση με το όνομα <code>name</code>:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
     <span class="hljs-keyword">if</span> name == <span class="hljs-string">&apos;Ola&apos;</span>:
         print(<span class="hljs-string">&apos;Hi Ola!&apos;</span>)
     <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&apos;Sonja&apos;</span>:
@@ -1106,7 +1106,7 @@ Hi Sonja!
 </code></pre><p>Αυτό είναι φοβερό, έτσι; Με αυτό τον τρόπο δεν χρειάζεται να επαναλαμβάνεστε κάθε φορά που θέλετε να αλλάξετε το όνομα του προσώπου που η συνάρτηση υποτίθεται ότι χαιρετά. Και γι&apos;αυτό το λόγο χρησιμοποιούμε τις συναρτήσεις. Δεν θέλετε ποτέ να επαναλάβετε τον κώδικα σας!</p>
 <p>Ας κάνουμε κάτι πιο έξυπνο. Υπάρχουν περισσότερα ονόματα από δύο και το να γράφουμε συνθήκες για καθένα χωριστά καταντά κουραστικό και ευάλωτο σε λάθη. Αντικαταστήστε το περιεχόμενο του αρχείου σας με τα κατώθι:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
     print(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
 hi(<span class="hljs-string">&quot;Rachel&quot;</span>)
@@ -1133,7 +1133,7 @@ Hi Rachel!
 <p>Η λέξη κλειδί της Python <code>for</code> συμπεριφέρεται περίπου όπως το <code>if</code>. Το κυρίως σώμα του κώδικα που ακολουθεί θα πρέπει να είναι στοιχισμένο με 4 κενά.</p>
 <p>Αυτός θα είναι ο κώδικας που θα υπάρχει στο αρχείο:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
     print(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
 girls = [<span class="hljs-string">&apos;Rachel&apos;</span>, <span class="hljs-string">&apos;Monica&apos;</span>, <span class="hljs-string">&apos;Phoebe&apos;</span>, <span class="hljs-string">&apos;Ola&apos;</span>, <span class="hljs-string">&apos;You&apos;</span>]
@@ -1157,7 +1157,7 @@ Next girl
 </code></pre><p>Όπως βλέπετε οτιδήποτε βάλτε μέσα σε ένα statement <code>for</code> με την ανάλογη στοίχιση θα επαναληφθεί για κάθε στοιχείο της λίστας <code>girls</code>.</p>
 <p>Μπορείτε να χρησιμοποιήσετε το <code>for</code> και για αριθμούς χρησιμοποιώντας της συνάρτηση <code>range</code>:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
     print(i)
 </code></pre>
 <p>Το οποίο θα εκτυπώσει:</p>
@@ -1217,7 +1217,7 @@ Next girl
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Εισαγωγή στην Python","level":"1.8","depth":1,"next":{"title":"Τι είναι το Django;","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Επεξεργαστής Κώδικα","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"el","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2020-11-24T10:32:26.777Z","type":"markdown"},"gitbook":{"version":"3.6.13","time":"2020-11-24T10:32:37.342Z"},"basePath":"..","book":{"language":"el"}});
+            gitbook.page.hasChanged({"page":{"title":"Εισαγωγή στην Python","level":"1.8","depth":1,"next":{"title":"Τι είναι το Django;","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Επεξεργαστής Κώδικα","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"el","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2020-12-03T10:23:54.696Z","type":"markdown"},"gitbook":{"version":"3.6.14","time":"2020-12-03T10:24:06.677Z"},"basePath":"..","book":{"language":"el"}});
         });
     </script>
 </div>

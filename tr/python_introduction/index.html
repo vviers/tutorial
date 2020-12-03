@@ -7,7 +7,7 @@
         <title>Python'a giriş · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.13">
+        <meta name="generator" content="HonKit 3.6.14">
         
         
         
@@ -584,7 +584,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <p>String&apos;in üzerinde <code>upper</code> <strong>fonksiyon</strong>unu kullandın! Bir fonksiyon (<code>upper()</code> gibi), çağırıldığında (calling) Python&apos;un girdi olarak verilen bir obje (<code>&quot;Zeynep&quot;</code>) üzerinde gerçekleştirmesi gereken bir dizi işleme denilir.</p>
 <p>Eğer ismindeki harflerin sayısını öğrenmek istiyorsan bunun için de bir <strong>fonksiyon</strong> var!</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(<span class="hljs-string">&quot;Zeynep&quot;</span>)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(<span class="hljs-string">&quot;Zeynep&quot;</span>)
 <span class="hljs-number">6</span>
 </code></pre>
 <p>Fonksiyonları neden bazen stringin sonunda bir <code>.</code> ile (<code>&quot;Zeynep&quot;.upper()</code> gibi) ve bazen de önce fonksiyonu çağırıp sonra parantez içerisine stringi yazarak kullandığımızı merak ediyor musun? Pekala, bazı durumlarda, fonksiyonlar bir takım nesnelere aittirler, mesela <code>upper()</code>, yalnızca stringler üzerinde kullanılabilir. Böyle durumlarda, bu tarz fonksiyonlara biz <strong>method</strong> ismini veriyoruz. Diğer durumlarda, bir fonksiyon özel olarak bir nesneye ait olmayıp, farklı çeşitlerde nesneler üzerinde de kullanılabilir, aynı <code>len()</code> gibi. İşte bu nedenle <code>&quot;Zeynep&quot;</code> stringini <code>len</code> fonksiyonuna bir parametre olarak veriyoruz.</p>
@@ -600,15 +600,15 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <h2 id="hatalar">Hatalar</h2>
 <p>Şimdi yeni bir şey deneyelim. Bir sayının uzunluğunu, bir string&apos;in uzunluğunu bulduğumuz gibi bulabilir miyiz? Bunu görmek için <code>len(304023)</code> yazıp <code>enter</code> a basalım:</p>
 <p></p><p class="code-label"><span class="glyphicon glyphicon-exclamation-sign" style="color: red;" aria-hidden="true" data-toggle="tooltip" title="An error is expected when you run this command!"></span> komut satırı</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(<span class="hljs-number">304023</span>)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(<span class="hljs-number">304023</span>)
 Traceback (most recent call last):
   File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;
-TypeError: object of type <span class="hljs-string">&apos;int&apos;</span> has no len()
+TypeError: <span class="hljs-built_in">object</span> of <span class="hljs-built_in">type</span> <span class="hljs-string">&apos;int&apos;</span> has no <span class="hljs-built_in">len</span>()
 </code></pre>
 <p>İlk hatamızı aldık! <span class="glyphicon glyphicon-exclamation-sign" style="color: red;" aria-hidden="true" data-toggle="tooltip" title="An error is expected when you run this command!"></span> ikonu çalıştırmak üzere olduğunuz programın beklediğiniz gibi çalışmayacağı konusunda sizi ikaz eder. Hatalar yapmak (kasıtlı olanlar bile) öğrenmenin önemli bir kısmı!</p>
 <p>Nesne türü &quot;int&quot; (tam sayılar, tüm sayılar) in uzunluğu olmadığını söylüyor. Şimdi ne yapabiliriz? Belki de rakamı bir string olarak yazabiliriz? Stringlerin bir uzunluğu var, değil mi?</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(str(<span class="hljs-number">304023</span>))
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(<span class="hljs-built_in">str</span>(<span class="hljs-number">304023</span>))
 <span class="hljs-number">6</span>
 </code></pre>
 <p>İşe yaradı! <code>str</code> fonksiyonunu <code>len</code> fonksiyonunun içinde kullandık. <code>str</code> her şeyi string&apos;e çeviriyor.</p>
@@ -639,7 +639,7 @@ TypeError: object of type <span class="hljs-string">&apos;int&apos;</span> has n
 </code></pre>
 <p>Bu değişkeni fonksiyonlar içinde de kullanabilirsin:</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(name)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(name)
 <span class="hljs-number">5</span>
 </code></pre>
 <p>Harika değil mi? Tabii ki değişkenler, sayılar da dahil herhangi bir şey olabilir. Şunu deneyin:</p>
@@ -683,7 +683,7 @@ Merve
 </code></pre>
 <p>Pekala, listeyi oluşturduk! Onunla ne yapabiliriz? Hadi listede kaç tane loto numarası olduğunu görelim. Hangi fonksiyonu kullanman gerektiği hakkında bir fikrin var mı? Zaten bildiğin bir fonksiyon!</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(lottery)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(lottery)
 <span class="hljs-number">6</span>
 </code></pre>
 <p>Evet! <code>len()</code> listedeki nesne sayısını verir. Kullanışlı, değil mi? Belki de şu an listeyi sıralarız:</p>
@@ -775,7 +775,7 @@ KeyError: <span class="hljs-string">&apos;age&apos;</span>
 </code></pre>
 <p>Listeler gibi, <code>len()</code> metodu sözlükteki anahtar-değer çiftlerinin sayısını bize verir. Devam edip şu komutu yazın:</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(participant)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(participant)
 <span class="hljs-number">4</span>
 </code></pre>
 <p>Umarım şu ana kadar mantıklı gelmiştir :) Sözlüklerle biraz daha eğlenceye hazır mısın? İlginç şeyler için sonraki satıra atla.</p>
@@ -809,24 +809,24 @@ KeyError: <span class="hljs-string">&apos;age&apos;</span>
 <p>Programlamanın büyük kısmı karşılaştırma içerir. Karşılaştırması en kolay olan şey nedir? Tabi ki sayılar. Bakalım nasıl çalışıyor:</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> &gt; <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &lt; <span class="hljs-number">1</span>
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> &gt; <span class="hljs-number">2</span> * <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">1</span> == <span class="hljs-number">1</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> != <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 </code></pre>
 <p>Python&apos;a birkaç sayı karşılaştırmasını söyledik. Gördüğünüz gibi, sadece sayıları karşılaştırmakla kalmadı, aynı zamanda metodların sonuçlarını da karşılaştırdı. Güzel değil mi?</p>
 <p>İki sayının eşit olup olmadığını öğrenmek için neden iki tane eşittir işraretini <code>==</code> yan yana koyduk? Değişkenlere içerik verirken, tek <code>=</code> işaretini kullanıyoruz. Her zaman ama <strong>her zaman</strong> ikisini birden koyman gerekir – <code>==</code> – eğer birbirlerine eşit olup olmadıklarını kontrol etmek isterseniz. Sayıların birbirine eşit olmaması durumunu da kontrol edebiliriz. Bunun için, yukarıdaki örnekteki gibi <code>!=</code> sembolünü kullanıyoruz. </p>
 <p>Python&apos; a iki görev daha verin:</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">6</span> &gt;= <span class="hljs-number">12</span> / <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &lt;= <span class="hljs-number">2</span>
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 </code></pre>
 <p><code>&gt;</code>‘ı ve <code>&lt;</code>‘ı gördük, ama <code>&gt;=</code> ve <code>&lt;=</code> ne anlama geliyor? Onları böyle okuyabilirsin:</p>
 <ul>
@@ -838,11 +838,11 @@ KeyError: <span class="hljs-string">&apos;age&apos;</span>
 <p>Harika! Birkaç denemeye daha ne dersiniz? Şunu deneyin:</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">6</span> &gt; <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> <span class="hljs-number">2</span> &lt; <span class="hljs-number">3</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> <span class="hljs-number">2</span> &lt; <span class="hljs-number">1</span>
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span> <span class="hljs-keyword">or</span> <span class="hljs-number">2</span> &lt; <span class="hljs-number">1</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 </code></pre>
 <p>Python&apos;a istediğiniz kadar sayıyı karşılaştırmak için verebilirsiniz, ve size hepsinin cevabını verecek. Çok akıllı değil mi?</p>
 <ul>
@@ -867,15 +867,15 @@ HataTürü: ‘&gt;’ <span class="hljs-string">&apos;int&apos;</span> ve <span
 <p>Python&apos;un bunu anlaması için her zaman &quot;True&quot; (ilk harf büyük, geri kalanları küçük) yazmanız gerekiyor. <strong>true, TRUE, tRUE işe yaramaz -- sadece True doğru.</strong> (Aynısı &quot;False&quot; için de geçerli.)</p>
 <p>Boolean&apos;lar değişken de olabiliyor! Bakınız:</p>
 <p></p><p class="code-label">komut-satırı</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-keyword">True</span>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>a
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 </code></pre>
 <p>Ayrıca bu şekilde de yapabilirsiniz:</p>
 <p></p><p class="code-label">komut-satırı</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-number">2</span> &gt; <span class="hljs-number">5</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>a
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 </code></pre>
 <p>Boolean&apos;lar ile aşağıdaki komutları deneyerek biraz oynayın:</p>
 <ul>
@@ -1042,7 +1042,7 @@ Harika, her notayı duyabiliyorum
 <p>Fonksiyon Python tarafından işlenmesi gereken yönergeler dizisidir. Python&apos;da her fonksiyon <code>def</code> anahtar kelimesi ile başlar, bir isim verilir ve bazı parameterleri olabilir. Hadi başlayalım. <strong>python_intro.py</strong> içindeki kodu aşağıdaki ile değiştirelim:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
 <pre><code class="lang-python">python
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">()</span>:</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>():</span>
     print(<span class="hljs-string">&apos;Merhaba!&apos;</span>)
     print(<span class="hljs-string">&apos;Nasılsın?&apos;</span>)
 
@@ -1063,7 +1063,7 @@ Nasılsın?
 </ul>
 <p>İlk fonksiyonumuzu parametrelerle birlikte oluşturalım. Önceki örneği - çalışmaktaki kişiye merhaba diyen bi fonksiyon - ismiyle kullanacağız:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
 </code></pre>
 <p>Gördüğünüz gibi, fonksiyonumuza <code>name</code> (isim) adında bir parametre ekledik:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
@@ -1106,7 +1106,7 @@ Selam Zeynep!
 </code></pre><p>Süper değil mi? Böylece fonksiyona göndereceğiniz isim değiştiğinde aynı kodu tekrar tekrar yazmanıza gerek kalmayacak. İşte fonksiyonlara tam da bu yüzden ihtiyacımız var - aynı kodu tekrar yazmaya gerek yok!</p>
 <p>Hadi daha zekice bir şey yapalım - İkiden fazla isim var ve her biri için bir şart yazmak zor olur değil mi?</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
     print(<span class="hljs-string">&apos;Merhaba &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
 hi(<span class="hljs-string">&quot;Seda&quot;</span>)
@@ -1133,7 +1133,7 @@ Merhaba Seda!
 <p><code>for</code> un davranışı <code>if</code> e benziyor; aşağıdaki kodda her iki satır girintili olmalı (dört boşluk ile).</p>
 <p>Dosyada yer alacak tam kod aşağıdadır:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
     print(<span class="hljs-string">&apos;Merhaba &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
 girls = [<span class="hljs-string">&apos;Seda&apos;</span>, <span class="hljs-string">&apos;Gül&apos;</span>, <span class="hljs-string">&apos;Pınar&apos;</span>, <span class="hljs-string">&apos;Ayşe&apos;</span>, <span class="hljs-string">&apos;Sen&apos;</span>]
@@ -1157,7 +1157,7 @@ Sıradaki kız
 </code></pre><p>Gördüğünüz gibi, <code>for</code> cümlesinin içine boşluk karakteri ile koyduğunuz her şey <code>girls</code> listesi için tekrarlanıyor.</p>
 <p>Ayrıca <code>for</code>&apos;u <code>range</code> fonksiyonuyla beraber sayılar üzerinde de kullanabilirsiniz:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
     print(i)
 </code></pre>
 <p>Çalıştırırsak:</p>
@@ -1217,7 +1217,7 @@ Sıradaki kız
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python'a giriş","level":"1.8","depth":1,"next":{"title":"Django nedir?","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Kod editörü","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"tr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2020-11-24T10:32:27.197Z","type":"markdown"},"gitbook":{"version":"3.6.13","time":"2020-11-24T10:32:37.342Z"},"basePath":"..","book":{"language":"tr"}});
+            gitbook.page.hasChanged({"page":{"title":"Python'a giriş","level":"1.8","depth":1,"next":{"title":"Django nedir?","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Kod editörü","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"tr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2020-12-03T10:23:55.068Z","type":"markdown"},"gitbook":{"version":"3.6.14","time":"2020-12-03T10:24:06.677Z"},"basePath":"..","book":{"language":"tr"}});
         });
     </script>
 </div>

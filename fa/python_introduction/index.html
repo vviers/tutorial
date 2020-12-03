@@ -7,7 +7,7 @@
         <title>آشنایی با پایتون · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.13">
+        <meta name="generator" content="HonKit 3.6.14">
         
         
         
@@ -696,7 +696,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <p>شما همین الان از <strong>متد</strong> <code>upper</code> روی رشته متنی استفاده کردید! یک متد (مانند <code>upper()</code>) دنباله‌ای از دستورات پایتونی است. زمانی که متد را صدا بزنید، آن دستورات روی یک شی ورودی (<code>&quot;Ola&quot;</code>) اعمال می‌شود.</p>
 <p>آیا می‌خواهید تعداد حروف نام خود را بدانید؟ یک <strong>تابع</strong> برای این کار هم هست!</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(<span class="hljs-string">&quot;Ola&quot;</span>)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(<span class="hljs-string">&quot;Ola&quot;</span>)
 <span class="hljs-number">3</span>
 </code></pre>
 <p>به این فکر می‌کنید که چرا گاهی تابع را با یک <code>.</code> در انتهای یک رشته صدا می‌کنیم (مانند <code>&quot;Ola&quot;.upper()</code>) و گاهی ابتدا یک تابع را صدا می‌زنیم و رشته را جلوی نام تابع داخل پرانتز می‌گذاریم؟ در بعضی موارد، توابع به اشیا تعلق دارند، مانند <code>upper()</code> ، که فقط میتواند روی رشته‌های متنی اعمال شود. در این موارد، تابع را یک <strong>method</strong> می‌نامیم. در موارد دیگر، توابع به چیزی تعلق ندارند و می‌توان آنها را روی انواع مختلفی از اشیا استفاده کرد، درست مانند <code>len()</code>. به همین دلیل است که <code>&quot;Ola&quot;</code> را به عنوان یک پارامتر ورودی به تابع <code>len</code> می‌دهیم.</p>
@@ -712,15 +712,15 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <h2 id="خطاها">خطاها</h2>
 <p>بیایید چیز جدیدی را امتحان کنیم. می‌توانیم طول یک عدد را همانطور که طول نام خودمان را پیدا می‌کنیم، به دست آوریم؟ تایپ کنید<code>len(304023)</code> و <code>enter</code> را بزنید:</p>
 <p></p><p class="code-label"><span class="glyphicon glyphicon-exclamation-sign" style="color: red;" aria-hidden="true" data-toggle="tooltip" title="An error is expected when you run this command!"></span> خط فرمان</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(<span class="hljs-number">304023</span>)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(<span class="hljs-number">304023</span>)
 Traceback (most recent call last):
   File <span class="hljs-string">&quot;&lt;stdin&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;
-TypeError: object of type <span class="hljs-string">&apos;int&apos;</span> has no len()
+TypeError: <span class="hljs-built_in">object</span> of <span class="hljs-built_in">type</span> <span class="hljs-string">&apos;int&apos;</span> has no <span class="hljs-built_in">len</span>()
 </code></pre>
 <p>اولین خطا را دریافت کردیم! به وسیله آیکن <span class="glyphicon glyphicon-exclamation-sign" style="color: red;" aria-hidden="true" data-toggle="tooltip" title="An error is expected when you run this command!"></span> به شما اعلام می‌کنیم کدی که قرار است اجرا کنید، مطابق انتظار شما اجرا نخواهد شد. اشتباه کردن (حتی اشتباهات عمدی) بخش مهمی از یادگیری است!</p>
 <p>خطای دریافتی می‌گوید اشیا نوع &quot;int&quot; (اعداد طبیعی)، صفت &quot;طول&quot; ندارند. خب پس حالا چه کاری می‌توانیم بکنیم؟ می‌توانیم عددمان را به عنوان یک رشته متنی بنویسیم؟ رشته‌های متنی دارای طول هستند، درست است؟</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(str(<span class="hljs-number">304023</span>))
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(<span class="hljs-built_in">str</span>(<span class="hljs-number">304023</span>))
 <span class="hljs-number">6</span>
 </code></pre>
 <p>کار کرد! ما از تابع <code>str</code> داخل تابع <code>len</code> استفاده کردیم. <code>str()</code> هرچیزی را به رشته متنی تبدیل می کند.</p>
@@ -751,7 +751,7 @@ TypeError: object of type <span class="hljs-string">&apos;int&apos;</span> has n
 </code></pre>
 <p>می‌توانید از آن در توابع نیز استفاده کنید:</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(name)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(name)
 <span class="hljs-number">5</span>
 </code></pre>
 <p>عالی است، نه؟ متغیرها می‌توانند هرچیزی باشند- مثل اعداد! این یکی را امتحان کنید:</p>
@@ -795,7 +795,7 @@ Mahsa
 </code></pre>
 <p>بسیار خب، ما یک لیست داریم! چه کاری می‌توانیم با آن انجام دهیم؟ بیایید ببینیم چه تعداد عدد بخت آزمایی درون لیست داریم. هیچ ایده‌ای درمورد این که از چه تابعی باید استفاده کنیم، دارید؟ از قبل این را می‌دانید!</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(lottery)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(lottery)
 <span class="hljs-number">6</span>
 </code></pre>
 <p>بله! تابع <code>len()</code> می‌تواند تعداد اشیای درون لیست را بدهد. بسیار مفید، درست است؟ حالا بیایید لیستمان را مرتب کنیم:</p>
@@ -887,7 +887,7 @@ KeyError: <span class="hljs-string">&apos;age&apos;</span>
 </code></pre>
 <p>استفاده از متد <code>len()</code> روی دیکشنری، مانند لیست‌ها، تعداد جفت‌های کلید-مقدار را برمی‌گرداند. دستور زیر را تایپ کنید:</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>len(participant)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(participant)
 <span class="hljs-number">4</span>
 </code></pre>
 <p>امیدواریم تا اینجا همه چیز برایتان روشن باشد. :) آماده تفریح بیشتر با دیکشنری‌ها هستید؟ ادامه آموزش را بخوانید تا با چیزهای شگفت انگیز روبرو شوید.</p>
@@ -922,24 +922,24 @@ KeyError: <span class="hljs-string">&apos;age&apos;</span>
 <p>بخش بزرگی از برنامه‌نویسی شامل مقایسه اشیا است. مقایسه چه چیزهایی از همه راحت‌تر است؟ اعداد! بیایید نحوه کارکرد آن را ببینیم:</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> &gt; <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &lt; <span class="hljs-number">1</span>
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> &gt; <span class="hljs-number">2</span> * <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">1</span> == <span class="hljs-number">1</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> != <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 </code></pre>
 <p>ما چند عدد را برای مقایسه به پایتون داده‌ایم. همانطور که می‌بینید، پایتون نه تنها می‌تواند اعداد را مقایسه کند، بلکه می‌تواند خروجی متدها را هم مقایسه کند، به نظر شما عالی نیست؟</p>
 <p>آیا به این فکر کرده‌اید که چرا دو علامت مساوی <code>==</code> کنار هم برای چک کردن تساوی اعداد گذاشته‌ایم؟ ما از یک علامت مساوی <code>=</code> برای انتساب مقادیر به متغیرها استفاده می‌کنیم. اگر می‌خواهید مساوی بودن دو شی با همدیگر را چک کنید، همیشه و <strong>همیشه</strong> باید از دو علامت مساوی <code>==</code> استفاده کنید. همچنین می‌توانیم مساوی نبودن اشیا را تعیین کنیم. برای این منظور، از علامت <code>=!</code>، همانطور که در مثال بالا نشان داده شده است، استفاده می‌کنیم.</p>
 <p>دو تمرین دیگر با پایتون انجام بدهید:</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">6</span> &gt;= <span class="hljs-number">12</span> / <span class="hljs-number">2</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &lt;= <span class="hljs-number">2</span>
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 </code></pre>
 <p>ما <code>&gt;</code> و <code>&lt;</code> را دیدیم، ولی <code>&gt;=</code> و <code>&lt;=</code> چه معنایی دارد؟ آنها را به این صورت بخوانید:</p>
 <ul>
@@ -951,11 +951,11 @@ KeyError: <span class="hljs-string">&apos;age&apos;</span>
 <p>بسیارعالی! می‌خواهید بیشتر با آن کار کنید؟ این را امتحان کنید:</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">6</span> &gt; <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> <span class="hljs-number">2</span> &lt; <span class="hljs-number">3</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> <span class="hljs-number">2</span> &lt; <span class="hljs-number">1</span>
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span> <span class="hljs-keyword">or</span> <span class="hljs-number">2</span> &lt; <span class="hljs-number">1</span>
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 </code></pre>
 <p>می‌توانید هر تعداد عدد که می‌خواهید برای مقایسه به پایتون بدهید، و او به شما جواب بدهد! بسیار زیرکانه است، نه؟</p>
 <ul>
@@ -980,15 +980,15 @@ TypeError: <span class="hljs-string">&apos;&gt;&apos;</span> <span class="hljs-k
 <p>برای اینکه پایتون این نوع را بشناسد، باید همیشه آن را به صورت &apos;True&apos; بنویسید (حرف اول بزرگ، و باقی حروف کوچک). <strong>true, TRUE, و tRUE را نخواهد شناخت - فقط Trueدرست است.</strong> ( برای False هم همینطور.)</p>
 <p>بولین ها می توانند به صورت متغیر باشند، اینجا را ببینید:</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-keyword">True</span>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>a
-<span class="hljs-keyword">True</span>
+<span class="hljs-literal">True</span>
 </code></pre>
 <p>می‌توانید به این صورت نیز انجامش دهید:</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = <span class="hljs-number">2</span> &gt; <span class="hljs-number">5</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>a
-<span class="hljs-keyword">False</span>
+<span class="hljs-literal">False</span>
 </code></pre>
 <p>با اجرای دستورات زیر، با بولین ها تفریح و تمرین کنید:</p>
 <ul>
@@ -1154,7 +1154,7 @@ Perfect, I can hear all the details
 <p>توابعی مانند <code>len()</code> را که می‌توانید در پایتون اجرا کنید، به خاطر دارید؟ بسیار خوب - شما الان یاد می‌گیرید که چطور تابع خود را بنویسید!</p>
 <p>یک تابع دنباله‌ای از دستورات است که پایتون باید اجرا کند. همه توابع در پایتون با کلمه کلیدی <code>def</code> شروع می شوند، نام می‌گیرند و می‌توانند پارامترهای ورودی داشته باشند. بیایید امتحانش کنیم. کد داخل فایل <strong>python_intro.py</strong> را با این جایگزین کنید:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">()</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>():</span>
     print(<span class="hljs-string">&apos;Hi there!&apos;</span>)
     print(<span class="hljs-string">&apos;How are you?&apos;</span>)
 
@@ -1175,11 +1175,11 @@ How are you?
 </ul>
 <p>بیایید اولین تابع خود را با پارامتر ورودی بسازیم. ما مثال قبلی را تغییر می‌دهیم - تابعی که به فرد اجرا کننده آن سلام می‌کند - با نام خود فرد:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
 </code></pre>
 <p>همانطور که می‌بینید، ما الان به تابع یک پارامتر به نام <code>name</code> دادیم:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
     <span class="hljs-keyword">if</span> name == <span class="hljs-string">&apos;Ola&apos;</span>:
         print(<span class="hljs-string">&apos;Hi Ola!&apos;</span>)
     <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&apos;Sonja&apos;</span>:
@@ -1218,7 +1218,7 @@ Hi Sonja!
 </code></pre><p>عالی است.نه؟ با این روش، نیاز نیست برای هر تغییر نامی که تابع به آن سلام میکند، کار تکراری انجام دهید. ما دقیقا توابع را برای همین نیاز داریم - شما نمی‌خواهید تا هر دفعه کد خود را تکرار کنید!</p>
 <p>بیایید کار هوشمندانه‌تری انجام دهیم - بیشتر از 2 اسم داریم، و نوشتن یک شرط برای هر کدام سخت است. درست است؟ محتوای فایل خود را با فایل زیر جایگذاری کنید:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
     print(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
 hi(<span class="hljs-string">&quot;Rachel&quot;</span>)
@@ -1245,7 +1245,7 @@ Hi Rachel!
 <p>عبارت <code>for</code> کمی شبیه به عبارت <code>if</code> رفتار می‌کند؛ کد زیر هر دو باید به اندازه 4 اسپیس تو رفتگی داشته باشد.</p>
 <p>اینجا کد کاملی را که باید در فایل باشد، داریم:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span><span class="hljs-params">(name)</span>:</span>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
     print(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
 girls = [<span class="hljs-string">&apos;Rachel&apos;</span>, <span class="hljs-string">&apos;Monica&apos;</span>, <span class="hljs-string">&apos;Phoebe&apos;</span>, <span class="hljs-string">&apos;Ola&apos;</span>, <span class="hljs-string">&apos;You&apos;</span>]
@@ -1269,7 +1269,7 @@ Next girl
 </code></pre><p>همانطور که می‌بینید، هر چیزی که درون یک عبارت <code>for</code> با تورفتگی قرار دهید، برای هر المان لیست <code>girls</code> تکرار می‌شود.</p>
 <p>همچنین می‌توانید از <code>for</code> با استفاده تابع <code>range</code> روی اعداد نیز استفاده کنید:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
-<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
     print(i)
 </code></pre>
 <p>که چاپ می کند:</p>
@@ -1329,7 +1329,7 @@ Next girl
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"آشنایی با پایتون","level":"1.8","depth":1,"next":{"title":"جنگو چیست?","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"ویرایشگر کد","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fa","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2020-11-24T10:32:26.873Z","type":"markdown"},"gitbook":{"version":"3.6.13","time":"2020-11-24T10:32:37.342Z"},"basePath":"..","book":{"language":"fa"}});
+            gitbook.page.hasChanged({"page":{"title":"آشنایی با پایتون","level":"1.8","depth":1,"next":{"title":"جنگو چیست?","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"ویرایشگر کد","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fa","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2020-12-03T10:23:54.784Z","type":"markdown"},"gitbook":{"version":"3.6.14","time":"2020-12-03T10:24:06.677Z"},"basePath":"..","book":{"language":"fa"}});
         });
     </script>
 </div>

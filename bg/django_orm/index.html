@@ -7,7 +7,7 @@
         <title>Django ORM (Querysets) · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.13">
+        <meta name="generator" content="HonKit 3.6.14">
         
         
         
@@ -641,7 +641,7 @@
 <h3 id="всички-обекти">Всички обекти</h3>
 <p>Нека се опитаме първо да покажем всички наши публикации. Можете да направите това със следната команда:</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.all()
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.<span class="hljs-built_in">all</span>()
 Traceback (most recent call last):
       File <span class="hljs-string">&quot;&lt;console&gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt;module&gt;
 NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> defined
@@ -652,7 +652,7 @@ NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="h
 </code></pre>
 <p>Импортираме модела <code>Post</code> от <code>blog.models</code>. Нека опитаме отново да покажем всички публикации:</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.all()
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.<span class="hljs-built_in">all</span>()
 &lt;QuerySet [&lt;Post: my post title&gt;, &lt;Post: another post title&gt;]&gt;
 </code></pre>
 <p>Това е списък на публикациите, които създадохме по-рано! Създадохме тези публикации чрез администраторския интерфейс на Django. Но сега искаме да създаваме нови публикации с помощта на Python, така че как да направим това?</p>
@@ -668,7 +668,7 @@ NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="h
 </code></pre>
 <p>Какви потребители имаме в нашата база данни? Опитайте това:</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>User.objects.all()
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>User.objects.<span class="hljs-built_in">all</span>()
 &lt;QuerySet [&lt;User: ola&gt;]&gt;
 </code></pre>
 <p>Това е суперпотребителят, който създадохме по-рано! Нека сега вземем потребителя (коригирайте този ред, за да използвате вашето потребителско име):</p>
@@ -683,7 +683,7 @@ NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="h
 </code></pre>
 <p>Ура! Искате ли да проверите дали работи?</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.all()
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.<span class="hljs-built_in">all</span>()
 &lt;QuerySet [&lt;Post: my post title&gt;, &lt;Post: another post title&gt;, &lt;Post: Sample title&gt;]&gt;
 </code></pre>
 <p>Ето, още една публикация в списъка!</p>
@@ -692,13 +692,13 @@ NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="h
 <h3 id="филтрирайте-обекти">Филтрирайте обекти</h3>
 <p>Голяма част от QuerySets е възможността да ги филтрирате. Да речем, че искаме да намерим всички публикации, на които потребителят ola е автор. Ще използваме <code>filter</code> вместо <code>all</code> в <code>Post.objects.all()</code>. В скобите посочваме на кое условие(я) трябва да отговаря блог публикацията, за да се озове в нашия набор от заявки. В нашия случай условието е <code>author/0&gt; да бъде равен на &lt;code&gt;me</code>. Начинът да го напишем в Django е <code>author=me</code>. Сега нашата част от кода изглежда така:</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.filter(author=me)
-&lt;QuerySet [&lt;Post: Sample title&gt;, &lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: My <span class="hljs-number">3</span>rd post!&gt;, &lt;Post: <span class="hljs-number">4</span>th title of post&gt;]&gt;
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.<span class="hljs-built_in">filter</span>(author=me)
+&lt;QuerySet [&lt;Post: Sample title&gt;, &lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: My 3rd post!&gt;, &lt;Post: 4th title of post&gt;]&gt;
 </code></pre>
 <p>Или може би искаме да видим всички публикации, които съдържат думата &apos;title&apos; в полето <code>title</code>?</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.filter(title__contains=<span class="hljs-string">&apos;title&apos;</span>)
-&lt;QuerySet [&lt;Post: Sample title&gt;, &lt;Post: <span class="hljs-number">4</span>th title of post&gt;]&gt;
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.<span class="hljs-built_in">filter</span>(title__contains=<span class="hljs-string">&apos;title&apos;</span>)
+&lt;QuerySet [&lt;Post: Sample title&gt;, &lt;Post: 4th title of post&gt;]&gt;
 </code></pre>
 <blockquote>
 <p><strong>Забележка</strong> Има два знака за подчертаване (<code>_</code>) между <code>title</code> и <code>contains</code>. ORM на Django използва това правило за разделяне на имена на полета (&quot;title&quot;) и операции или филтри (&quot;contains&quot;). Ако използвате само една долна черта, ще получите грешка като &quot;FieldError: Не може да разреши ключовата дума title_contains&quot;.</p>
@@ -706,7 +706,7 @@ NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="h
 <p>Можете също така да получите списък с всички публикувани публикации. Правим това, като филтрираме всички публикации, които имат <code>published_date</code> са зададени в миналото:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> django.utils <span class="hljs-keyword">import</span> timezone
-<span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.filter(published_date__lte=timezone.now())
+<span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.<span class="hljs-built_in">filter</span>(published_date__lte=timezone.now())
 &lt;QuerySet []&gt;
 </code></pre>
 <p>За съжаление, публикацията, която добавихме от конзолата Python, все още не е публикувана. Но можем да променим това! Първо получете екземпляр от публикация, която искаме да публикуваме:</p>
@@ -719,24 +719,24 @@ NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="h
 </code></pre>
 <p>Сега опитайте отново да получите списък с публикувани публикации (натиснете клавиша със стрелка нагоре три пъти и натиснете <code>enter</code>):</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.filter(published_date__lte=timezone.now())
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.<span class="hljs-built_in">filter</span>(published_date__lte=timezone.now())
 &lt;QuerySet [&lt;Post: Sample title&gt;]&gt;
 </code></pre>
 <h3 id="подреждане-на-обекти">Подреждане на обекти</h3>
 <p>QuerySets също ви позволяват да поръчате списъка с обекти. Нека се опитаме да ги поръчаме от полето <code>created_date</code>:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.order_by(<span class="hljs-string">&apos;created_date&apos;</span>)
-&lt;QuerySet [&lt;Post: Sample title&gt;, &lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: My <span class="hljs-number">3</span>rd post!&gt;, &lt;Post: <span class="hljs-number">4</span>th title of post&gt;]&gt;
+&lt;QuerySet [&lt;Post: Sample title&gt;, &lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: My 3rd post!&gt;, &lt;Post: 4th title of post&gt;]&gt;
 </code></pre>
 <p>Можем също да обърнем подреждането, като добавим <code>-</code> в началото:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.order_by(<span class="hljs-string">&apos;-created_date&apos;</span>)
-&lt;QuerySet [&lt;Post: <span class="hljs-number">4</span>th title of post&gt;,  &lt;Post: My <span class="hljs-number">3</span>rd post!&gt;, &lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: Sample title&gt;]&gt;
+&lt;QuerySet [&lt;Post: 4th title of post&gt;,  &lt;Post: My 3rd post!&gt;, &lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: Sample title&gt;]&gt;
 </code></pre>
 <h3 id="сложни-заявки-чрез-свързване-на-методи">Сложни заявки чрез свързване на методи</h3>
 <p>Както видяхте, някои методи на <code>Post.objects</code> връщат QuerySet. Същите методи от своя страна могат също да бъдат извикани на QuerySet и след това ще върнат нов QuerySet. По този начин можете да комбинирате ефекта им, като ги <strong>свържете</strong> заедно:</p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.filter(published_date__lte=timezone.now()).order_by(<span class="hljs-string">&apos;published_date&apos;</span>)
-&lt;QuerySet [&lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: My <span class="hljs-number">3</span>rd post!&gt;, &lt;Post: <span class="hljs-number">4</span>th title of post&gt;, &lt;Post: Sample title&gt;]&gt;
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.<span class="hljs-built_in">filter</span>(published_date__lte=timezone.now()).order_by(<span class="hljs-string">&apos;published_date&apos;</span>)
+&lt;QuerySet [&lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: My 3rd post!&gt;, &lt;Post: 4th title of post&gt;, &lt;Post: Sample title&gt;]&gt;
 </code></pre>
 <p>Това е наистина мощно и ви позволява да пишете доста сложни заявки.</p>
 <p>Готино! Вече сте готови за следващата част! За да затворите конзолата, въведете това:</p>
@@ -787,7 +787,7 @@ $
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Django ORM (Querysets)","level":"1.18","depth":1,"next":{"title":"Динамични данни в шаблони","level":"1.19","depth":1,"path":"dynamic_data_in_templates/README.md","ref":"dynamic_data_in_templates/README.md","articles":[]},"previous":{"title":"Въведение в HTML","level":"1.17","depth":1,"path":"html/README.md","ref":"html/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"bg","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_orm/README.md","mtime":"2020-11-24T10:32:26.645Z","type":"markdown"},"gitbook":{"version":"3.6.13","time":"2020-11-24T10:32:37.342Z"},"basePath":"..","book":{"language":"bg"}});
+            gitbook.page.hasChanged({"page":{"title":"Django ORM (Querysets)","level":"1.18","depth":1,"next":{"title":"Динамични данни в шаблони","level":"1.19","depth":1,"path":"dynamic_data_in_templates/README.md","ref":"dynamic_data_in_templates/README.md","articles":[]},"previous":{"title":"Въведение в HTML","level":"1.17","depth":1,"path":"html/README.md","ref":"html/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"bg","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_orm/README.md","mtime":"2020-12-03T10:23:54.584Z","type":"markdown"},"gitbook":{"version":"3.6.14","time":"2020-12-03T10:24:06.677Z"},"basePath":"..","book":{"language":"bg"}});
         });
     </script>
 </div>
