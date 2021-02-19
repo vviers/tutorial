@@ -6,7 +6,7 @@
         <title>部署！ · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.16">
+        <meta name="generator" content="HonKit 3.6.17">
         
         
         
@@ -568,12 +568,12 @@ create mode 100644 mysite/wsgi.py
 </code></pre><h2 id="推送我们的代码到-github-上">推送我们的代码到 GitHub 上</h2>
 <p>跳转到<a href="https://www.github.com" target="_blank">GitHub.com</a>网站，注册一个新的免费账号。（如果你在看线下活动之前就已经有账号的话，那就太好了！）</p>
 <p>现在，创建一个新的仓库，命名为“my-first-blog”。 保持 &quot;initialise with a README&quot; 复选框未选中状态，.gitignore 选项为无 (我们已经手动创建了) ，让License设置为无。</p>
-<p><img src="images/new_github_repo.png" alt=""></p>
+<p><img src="images/new_github_repo.png" alt></p>
 <blockquote>
 <p><strong>注意</strong> <code>my-first-blog</code>这个名字很重要 — 你可以用其它的，但是这个名字会在教程中出现多次，你需要确保每次都替换掉它。 保持用 <code>my-first-blog</code> 这个名字可能更为简单.</p>
 </blockquote>
 <p>在下一屏中，你将看到你的仓库克隆 URL。选择“HTTPS”版本，拷贝地址，我们马上要把它粘贴到终端：</p>
-<p><img src="images/github_get_repo_url_screenshot.png" alt=""></p>
+<p><img src="images/github_get_repo_url_screenshot.png" alt></p>
 <p>现在我们需要把你电脑上的Git仓库和GitHub上的挂接。</p>
 <p>在控制台输入以下内容（替换 <code>&lt;your-github-username&gt;</code> 为你的 github 用户名 ，不包含尖括号）：</p>
 <pre><code>$ git remote add origin https://github.com/&lt;your-github-username&gt;/my-first-blog.git
@@ -687,7 +687,7 @@ Context | Request Context
 </blockquote>
 <h3 id="设置-virtualenv">设置 virtualenv</h3>
 <p>你将会被带到 PythonAnywhere 上你的Web 应用程序的配置屏，那个页面是每次你想修改服务器上你的应用程序时候要去的页面。</p>
-<p><img src="images/pythonanywhere_web_tab_virtualenv.png" alt=""></p>
+<p><img src="images/pythonanywhere_web_tab_virtualenv.png" alt></p>
 <p>在 “Virtualenv” 一节，点击红色文字 “Enter the path to a virtualenv&quot;，然后键入： <code>/home/&lt;your-username&gt;/my-first-blog/myvenv/</code>。 前进之前，先点击有复选框的蓝色框以保存路径。</p>
 <blockquote>
 <p><strong>注意</strong> 替换你自己的用户名。如果你犯了错，PythonAnywhere 会显示一个小警告。</p>
@@ -775,7 +775,7 @@ application = DjangoWhiteNoise(get_wsgi_application())
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"部署！","level":"1.13","depth":1,"next":{"title":"Django urls","level":"1.14","depth":1,"path":"django_urls/README.md","ref":"django_urls/README.md","articles":[]},"previous":{"title":"Django管理","level":"1.12","depth":1,"path":"django_admin/README.md","ref":"django_admin/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"zh","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"deploy/README.md","mtime":"2021-01-26T15:45:18.277Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2021-01-26T15:45:29.937Z"},"basePath":"..","book":{"language":"zh"}});
+            gitbook.page.hasChanged({"page":{"title":"部署！","level":"1.13","depth":1,"next":{"title":"Django urls","level":"1.14","depth":1,"path":"django_urls/README.md","ref":"django_urls/README.md","articles":[]},"previous":{"title":"Django管理","level":"1.12","depth":1,"path":"django_admin/README.md","ref":"django_admin/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"zh","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"deploy/README.md","mtime":"2021-02-19T19:44:17.930Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-02-19T19:44:31.777Z"},"basePath":"..","book":{"language":"zh"}});
         });
     </script>
 </div>
