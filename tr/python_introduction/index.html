@@ -664,7 +664,7 @@ NameError: name <span class="hljs-string">&apos;ctiy&apos;</span> <span class="h
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>name = <span class="hljs-string">&apos;Merve&apos;</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>name
 <span class="hljs-string">&apos;Merve&apos;</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>print(name)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(name)
 Merve
 </code></pre>
 <p>Sadece <code>name</code> yazdığınız zaman, Python yorumlayıcısından &apos;name&apos; değişkeninin dize olarak <em>temsili</em> döner, yani tek tırnaklar içine alınmış M-e-r-v-e harfleri. Eğer <code>print(name)</code> derseniz Python ekrana değişkenin içeriğini yazdıracaktır, bu kez tırnaklar olmaksızın, daha temiz biçimde.</p>
@@ -691,39 +691,39 @@ Merve
 </code></pre>
 <p>Bu hiçbir cevap vermez, sadece listedeki numaraların sırasını değiştirir. Şimdi listeyi yazdıralım ve ne olduğunu görelim:</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>print(lottery)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(lottery)
 [<span class="hljs-number">3</span>, <span class="hljs-number">12</span>, <span class="hljs-number">19</span>, <span class="hljs-number">30</span>, <span class="hljs-number">42</span>, <span class="hljs-number">59</span>]
 </code></pre>
 <p>Gördüğünüz gibi, listedeki sayılar artık küçükten büyüğe sıralı. Tebrikler!</p>
 <p>Belki de sıralamayı ters çevirmek isteriz? Hadi yapalım!</p>
 <p></p><p class="code-label">komut-satırı</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>lottery.reverse()
-<span class="hljs-meta">&gt;&gt;&gt; </span>print(lottery)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(lottery)
 [<span class="hljs-number">59</span>, <span class="hljs-number">42</span>, <span class="hljs-number">30</span>, <span class="hljs-number">19</span>, <span class="hljs-number">12</span>, <span class="hljs-number">3</span>]
 </code></pre>
 <p>Kolay, değil mi? Listeye yeni bir eleman eklemek isterseniz, şu komutu yazarak yapabilirsiniz:</p>
 <p></p><p class="code-label">komut-satırı</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>lottery.append(<span class="hljs-number">199</span>)
-<span class="hljs-meta">&gt;&gt;&gt; </span>print(lottery)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(lottery)
 [<span class="hljs-number">59</span>, <span class="hljs-number">42</span>, <span class="hljs-number">30</span>, <span class="hljs-number">19</span>, <span class="hljs-number">12</span>, <span class="hljs-number">3</span>, <span class="hljs-number">199</span>]
 </code></pre>
 <p>Sadece listedeki ilk elemanı göstermek isterseniz, <strong>indexes</strong> (indeksler) ile yapabilirsiniz. İndeks elemanın listede nerede olduğunu belirten numaradır. Programcılar sıfırdan başlamayı tercih ederler, bu yüzden listedeki ilk eleman listenin 0. indeksindedir, sonraki 1. indeksindedir ve böyle devam eder. Şunu deneyin:</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>print(lottery[<span class="hljs-number">0</span>])
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(lottery[<span class="hljs-number">0</span>])
 <span class="hljs-number">59</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>print(lottery[<span class="hljs-number">1</span>])
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(lottery[<span class="hljs-number">1</span>])
 <span class="hljs-number">42</span>
 </code></pre>
 <p>Gördüğünüz gibi, listedeki nesnelere listenin ismi ve köşeli parantez içindeki nesnenin indeksini kullanarak ulaşabilirsin.</p>
 <p>Listenizden bir şeyler silmek için, yukarıda öğrendiğimiz gibi <strong>indeksleri</strong> ve <code>pop()</code> metodunu kullanmamız gerekecektir. Bir örnekle öğrendiklerimizi pekiştirelim; listeden ilk numarayı sileceğiz.</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>print(lottery)
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(lottery)
 [<span class="hljs-number">59</span>, <span class="hljs-number">42</span>, <span class="hljs-number">30</span>, <span class="hljs-number">19</span>, <span class="hljs-number">12</span>, <span class="hljs-number">3</span>, <span class="hljs-number">199</span>]
-<span class="hljs-meta">&gt;&gt;&gt; </span>print(lottery[<span class="hljs-number">0</span>])
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(lottery[<span class="hljs-number">0</span>])
 <span class="hljs-number">59</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span>lottery.pop(<span class="hljs-number">0</span>)
 <span class="hljs-number">59</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>print(lottery)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(lottery)
 [<span class="hljs-number">42</span>, <span class="hljs-number">30</span>, <span class="hljs-number">19</span>, <span class="hljs-number">12</span>, <span class="hljs-number">3</span>, <span class="hljs-number">199</span>]
 </code></pre>
 <p>Kusursuz çalıştı!</p>
@@ -751,7 +751,7 @@ Merve
 </ul>
 <p>Bu söz dizimi ile tek bir anahtarın içeriğini kontrol edebilirsin:</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>print(participant[<span class="hljs-string">&apos;name&apos;</span>])
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(participant[<span class="hljs-string">&apos;name&apos;</span>])
 Ayşe
 </code></pre>
 <p>Gördünüz mü, bu listeye benzer. Fakat indeksi hatırlamanıza gerek yok - sadece ismini hatırlayın.</p>
@@ -903,7 +903,7 @@ $
 <p>Bu sizi komut satırına geri yönlendirecektir.</p>
 <p>Biraz önce <a href="../code_editor/">kod editörü</a> bölümünden bir kod editörü seçmiştik. Şimdi o editörü açmalı ve yeni bir dosya içine kod yazmalıyız:</p>
 <p></p><p class="code-label">editör</p><p></p>
-<pre><code class="lang-python">print(<span class="hljs-string">&apos;Merhaba, Django girls!&apos;</span>)
+<pre><code class="lang-python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Merhaba, Django girls!&apos;</span>)
 </code></pre>
 <p>Açıkça, artık oldukça deneyimli Python programcısısın, bu yüzden bugün öğrendiğin kodları yazmaktan çekinme.</p>
 <p>Şimdi dosyayı tanımlayıcı bir isimle kaydetmemiz gerekir. Dosyanın ismine <strong>python_intro.py</strong> diyelim ve masaüstüne kaydedelim. Dosyaya istediğimiz ismi verebiliriz, burada önemli olan kısım dosyanın <strong>.py</strong> uzantısı ile bitmesidir. <strong>.py</strong> uzantısı işletim sistemimize bu dosyanın bir <strong>python çalıştırılabilir dosyası</strong> olduğunu ve Python&apos;un bu dosyayı çalıştırabileceğini belirtiyor.</p>
@@ -957,7 +957,7 @@ SyntaxError: unexpected EOF while parsing
 </code></pre><p>Python bizden kendisine <code>3 &gt; 2</code> durumu (veya <code>True</code>) sağlandığında neyi çalıştıracağını söylememizi bekliyor. Python&apos;a &quot;Çalışıyor!&quot; yazmasını söyleyelim. <strong>python_intro.py</strong> dosyanızdaki kodu şununla değiştirin:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">if</span> <span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span>:
-    print(<span class="hljs-string">&apos;Çalışıyor!&apos;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Çalışıyor!&apos;</span>)
 </code></pre>
 <p>4 tane boşluk karakteri bıraktığımıza dikkat ettiniz mi? Bunu yaparak if ifadesine yazılan durum doğru olduğunda neyi çalıştırması gerektiğini Python&apos;a söylemiş oluyoruz. Aslında tek bir boşlukla da yapabilirsiniz, ama hemen hemen bütün Python programcıları kodlarının temiz görünmesi için 4 boşluk bırakıyor. Metin düzenleyiciniz ayarlıysa bir tab karakteri de 4 boşluk karakteri olarak sayılacaktır. Seçiminizi yaptıktan sonra değiştirmeyin! Eğer girintilerde 4 boşluk kullandıysanız, gelecek girintilerde de 4 boşluk kullanmaya devam edin - aksi halde sorunlarla karşılaşabilirsiniz.</p>
 <p>Kaydedip çalıştırmayı deneyelim:</p>
@@ -970,9 +970,9 @@ SyntaxError: unexpected EOF while parsing
 <p>Önceki örneklerde kod sadece koşullar sadece True (doğru) olduğunda çalışıyordu. Ama Python ayrıca <code>elif</code> ve <code>else</code> ifadelerine de sahip:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">if</span> <span class="hljs-number">5</span> &gt; <span class="hljs-number">2</span>:    
-    print(<span class="hljs-string">&quot;5 gerçekten de 2&apos;den büyüktür&quot;</span>) 
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;5 gerçekten de 2&apos;den büyüktür&quot;</span>) 
 <span class="hljs-keyword">else</span>:     
-    print(<span class="hljs-string">&quot;5  2&apos;den büyük değildir&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;5  2&apos;den büyük değildir&quot;</span>)
 </code></pre>
 <p>Bu kod çalıştığında aşağıdaki çıktıyı verecektir:</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
@@ -982,11 +982,11 @@ SyntaxError: unexpected EOF while parsing
 <p></p><p class="code-label">python_intro.py</p><p></p>
 <pre><code class="lang-python">name = <span class="hljs-string">&apos;Zeynep&apos;</span>
 <span class="hljs-keyword">if</span> name == <span class="hljs-string">&apos;Ayşe&apos;</span>:
-    print(<span class="hljs-string">&apos;Selam Ayşe!&apos;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Selam Ayşe!&apos;</span>)
 <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&apos;Zeynep&apos;</span>:
-    print(<span class="hljs-string">&apos;Selam Zeynep!&apos;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Selam Zeynep!&apos;</span>)
 <span class="hljs-keyword">else</span>:
-    print(<span class="hljs-string">&apos;Selam yabancı!&apos;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Selam yabancı!&apos;</span>)
 </code></pre>
 <p>ve çalıştırılınca:</p>
 <p></p><p class="code-label">komut-satırı</p><p></p>
@@ -997,17 +997,17 @@ Selam Zeynep!
 <p></p><p class="code-label">python_intro.py</p><p></p>
 <pre><code class="lang-python">volume = <span class="hljs-number">57</span>
 <span class="hljs-keyword">if</span> volume &lt; <span class="hljs-number">20</span>:
-    print(<span class="hljs-string">&quot;Çok sessiz.&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Çok sessiz.&quot;</span>)
 <span class="hljs-keyword">elif</span> <span class="hljs-number">20</span> &lt;= volume &lt; <span class="hljs-number">40</span>:
-    print(<span class="hljs-string">&quot;Güzel bir fon müziği&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Güzel bir fon müziği&quot;</span>)
 <span class="hljs-keyword">elif</span> <span class="hljs-number">40</span> &lt;= volume &lt; <span class="hljs-number">60</span>:
-    print(<span class="hljs-string">&quot;Harika, her notayı duyabiliyorum&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Harika, her notayı duyabiliyorum&quot;</span>)
 <span class="hljs-keyword">elif</span> <span class="hljs-number">60</span> &lt;= volume &lt; <span class="hljs-number">80</span>:
-    print(<span class="hljs-string">&quot;Parti başlasın&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Parti başlasın&quot;</span>)
 <span class="hljs-keyword">elif</span> <span class="hljs-number">80</span> &lt;= volume &lt; <span class="hljs-number">100</span>:
-    print(<span class="hljs-string">&quot;Biraz gürültülü!&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Biraz gürültülü!&quot;</span>)
 <span class="hljs-keyword">else</span>:
-    print(<span class="hljs-string">&quot;Kulaklarım ağrıyor! :(&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Kulaklarım ağrıyor! :(&quot;</span>)
 </code></pre>
 <p>Python sırayla her sorguyu çalıştırır ve sonucu ona göre yazar:</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
@@ -1020,7 +1020,7 @@ Harika, her notayı duyabiliyorum
 <pre><code class="lang-python"><span class="hljs-comment"># Çok yüksek ya da çok düşük olduğunda ses seviyesini değiştirme</span>
 <span class="hljs-keyword">if</span> volume &lt; <span class="hljs-number">20</span> <span class="hljs-keyword">or</span> volume &gt; <span class="hljs-number">80</span>:
     volume = <span class="hljs-number">50</span>
-    print(<span class="hljs-string">&quot;That&apos;s better!&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;That&apos;s better!&quot;</span>)
 </code></pre>
 <p>Kodun her satırı için bir açıklama yazmaya ihtiyacınız yoktur, ama kodunuzun niçin birşey yaptığını açıklamak ya da kompleks bir şey yaptığında bir özet sunmak için faydalıdırlar.</p>
 <h3 id="özet">Özet</h3>
@@ -1042,8 +1042,8 @@ Harika, her notayı duyabiliyorum
 <p></p><p class="code-label">python_intro.py</p><p></p>
 <pre><code class="lang-python">python
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>():</span>
-    print(<span class="hljs-string">&apos;Merhaba!&apos;</span>)
-    print(<span class="hljs-string">&apos;Nasılsın?&apos;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Merhaba!&apos;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Nasılsın?&apos;</span>)
 
 hi()
 </code></pre>
@@ -1106,7 +1106,7 @@ Selam Zeynep!
 <p>Hadi daha zekice bir şey yapalım - İkiden fazla isim var ve her biri için bir şart yazmak zor olur değil mi?</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
-    print(<span class="hljs-string">&apos;Merhaba &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Merhaba &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
 hi(<span class="hljs-string">&quot;Seda&quot;</span>)
 </code></pre>
@@ -1133,12 +1133,12 @@ Merhaba Seda!
 <p>Dosyada yer alacak tam kod aşağıdadır:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
-    print(<span class="hljs-string">&apos;Merhaba &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Merhaba &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
 girls = [<span class="hljs-string">&apos;Seda&apos;</span>, <span class="hljs-string">&apos;Gül&apos;</span>, <span class="hljs-string">&apos;Pınar&apos;</span>, <span class="hljs-string">&apos;Ayşe&apos;</span>, <span class="hljs-string">&apos;Sen&apos;</span>]
 <span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> girls:
     hi(name)
-    print(<span class="hljs-string">&apos;Sıradaki kız&apos;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Sıradaki kız&apos;</span>)
 </code></pre>
 <p>Ve onu çalıştırdığımız zaman:</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
@@ -1157,7 +1157,7 @@ Sıradaki kız
 <p>Ayrıca <code>for</code>&apos;u <code>range</code> fonksiyonuyla beraber sayılar üzerinde de kullanabilirsiniz:</p>
 <p></p><p class="code-label">python_intro.py</p><p></p>
 <pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
-    print(i)
+    <span class="hljs-built_in">print</span>(i)
 </code></pre>
 <p>Çalıştırırsak:</p>
 <p></p><p class="code-label">komut satırı</p><p></p>
@@ -1216,7 +1216,7 @@ Sıradaki kız
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python'a giriş","level":"1.8","depth":1,"next":{"title":"Django nedir?","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Kod editörü","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"tr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2021-02-23T09:24:32.498Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-02-23T09:24:59.803Z"},"basePath":"..","book":{"language":"tr"}});
+            gitbook.page.hasChanged({"page":{"title":"Python'a giriş","level":"1.8","depth":1,"next":{"title":"Django nedir?","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Kod editörü","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"tr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2021-03-26T12:48:19.394Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-26T12:48:31.955Z"},"basePath":"..","book":{"language":"tr"}});
         });
     </script>
 </div>

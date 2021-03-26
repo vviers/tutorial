@@ -784,7 +784,7 @@ False
 $
 </code></pre><p>Ezzel visszatértünk a parancssorba.</p>
 <p>Egy előző részben már kiválasztottuk a kedvenc <a href="../code_editor/">kódszerkesztő</a>nket. Most nyissuk meg az editort és az új üres fájlba írjuk bele:</p>
-<pre><code class="lang-python">    print(<span class="hljs-string">&apos;Hello, Django girls!&apos;</span>)
+<pre><code class="lang-python">    <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hello, Django girls!&apos;</span>)
 </code></pre>
 <p>Mostanra már tapasztalt Python programozó lettél, úgyhogy írj valami kódot, amit ma tanultál.</p>
 <p>Most mentsük el a fájlt, és adjunk neki valami jellemző nevet. Nevezzünk <strong>python_intro.py</strong>-nak, és mentsük el a desktopra. Bárhogy nevezhetjük a fájlt, de a kiterjesztés fontos, hogy <strong>.py</strong> legyen. A <strong>.py</strong> kiterjesztés megmondja az operációs rendszerünknek, hogy <strong>python futtatható programfájl</strong>-lal van dolga.</p>
@@ -830,7 +830,7 @@ File &quot;python_intro.py&quot;, line 2
 SyntaxError: unexpected EOF while parsing
 </code></pre><p>A Python arra számít, hogy további utasításokat kap arra az esetre, ha a <code>3 &gt; 2</code> teljesül, vagyis <code>True</code> lesz. Vegyük rá a Pythont, hogy kiírja: &quot;It works!&quot; (&quot;Működik!&quot;). Változtasd meg erre a <strong>python_intro.py</strong> fájlban lévő kódot:</p>
 <pre><code class="lang-python">    <span class="hljs-keyword">if</span> <span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span>:
-        print(<span class="hljs-string">&apos;It works!&apos;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;It works!&apos;</span>)
 </code></pre>
 <p>Megfigyelted, hogy a következő sort 4 szóközzel indentáltuk? Erre azért van szükség, hogy a Python tudja, melyik kódrészletet kell lefuttatnia, ha a feltétel teljesül. Egy szóközt is használhatnál, de szinte az összes Python programozó 4 szóközt használ, hogy rendezetten nézzen ki a kód. Egy <code>tab</code> is 4 szóköznek számít.</p>
 <p>Mentsd el, és futtasd le még egyszer:</p>
@@ -840,9 +840,9 @@ It works!
 <h3 id="mi-történik-ha-egy-feltétel-nem-teljesül-vagyis-nem-true">Mi történik, ha egy feltétel nem teljesül (vagyis nem True)?</h3>
 <p>A korábbi példákban a kód csak akkor futott le, ha a feltétel teljesült. De a Pythonnak van <code>elif</code> és <code>else</code> statementje is:</p>
 <pre><code class="lang-python">    <span class="hljs-keyword">if</span> <span class="hljs-number">5</span> &gt; <span class="hljs-number">2</span>:
-        print(<span class="hljs-string">&apos;5 is indeed greater than 2&apos;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;5 is indeed greater than 2&apos;</span>)
     <span class="hljs-keyword">else</span>:
-        print(<span class="hljs-string">&apos;5 is not greater than 2&apos;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;5 is not greater than 2&apos;</span>)
 </code></pre>
 <p>Ha ezt lefuttatod, a következőt kapod:</p>
 <pre><code>$ python3 python_intro.py
@@ -850,11 +850,11 @@ It works!
 </code></pre><p>Ha a 2 nagyobb lenne, mint az 5, a második parancs futott volna le. Egyszerű, igaz? Nézzük, hogy működik az <code>elif</code>:</p>
 <pre><code class="lang-python">    name = <span class="hljs-string">&apos;Sonja&apos;</span>
     <span class="hljs-keyword">if</span> name == <span class="hljs-string">&apos;Ola&apos;</span>:
-        print(<span class="hljs-string">&apos;Hey Ola!&apos;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hey Ola!&apos;</span>)
     <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&apos;Sonja&apos;</span>:
-        print(<span class="hljs-string">&apos;Hey Sonja!&apos;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hey Sonja!&apos;</span>)
     <span class="hljs-keyword">else</span>:
-        print(<span class="hljs-string">&apos;Hey anonymous!&apos;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hey anonymous!&apos;</span>)
 </code></pre>
 <p>lefuttatva:</p>
 <pre><code>$ python3 python_intro.py
@@ -863,17 +863,17 @@ Hey Sonja!
 <p>Az első <code>if</code> statement után annyi <code>elif</code> állítást írhatsz, amennyit csak akarsz. Például:</p>
 <pre><code class="lang-python">    volume = <span class="hljs-number">57</span>
     <span class="hljs-keyword">if</span> volume &lt; <span class="hljs-number">20</span>:
-        print(<span class="hljs-string">&quot;It&apos;s kinda quiet.&quot;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;It&apos;s kinda quiet.&quot;</span>)
     <span class="hljs-keyword">elif</span> <span class="hljs-number">20</span> &lt;= volume &lt; <span class="hljs-number">40</span>:
-        print(<span class="hljs-string">&quot;It&apos;s nice for background music&quot;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;It&apos;s nice for background music&quot;</span>)
     <span class="hljs-keyword">elif</span> <span class="hljs-number">40</span> &lt;= volume &lt; <span class="hljs-number">60</span>:
-        print(<span class="hljs-string">&quot;Perfect, I can hear all the details&quot;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Perfect, I can hear all the details&quot;</span>)
     <span class="hljs-keyword">elif</span> <span class="hljs-number">60</span> &lt;= volume &lt; <span class="hljs-number">80</span>:
-        print(<span class="hljs-string">&quot;Nice for parties&quot;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Nice for parties&quot;</span>)
     <span class="hljs-keyword">elif</span> <span class="hljs-number">80</span> &lt;= volume &lt; <span class="hljs-number">100</span>:
-        print(<span class="hljs-string">&quot;A bit loud!&quot;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;A bit loud!&quot;</span>)
     <span class="hljs-keyword">else</span>:
-        print(<span class="hljs-string">&quot;My ears are hurting! :(&quot;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;My ears are hurting! :(&quot;</span>)
 </code></pre>
 <p>A Python sorban mindegyik feltételt megnézi, és kiírja:</p>
 <pre><code>$ python3 python_intro.py
@@ -885,7 +885,7 @@ Perfect, I can hear all the details
 <pre><code class="lang-python"><span class="hljs-comment"># Hangerő beállítása, ha túl hangos vagy túl halk</span>
 <span class="hljs-keyword">if</span> volume &lt; <span class="hljs-number">20</span> <span class="hljs-keyword">or</span> volume &gt; <span class="hljs-number">80</span>:
     volume = <span class="hljs-number">50</span>
-    print(<span class="hljs-string">&quot;That&apos;s better!&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;That&apos;s better!&quot;</span>)
 </code></pre>
 <p>Nem kell minden sorhoz megjegyzést írnod, de nagyon hasznosak annak elmagyarázásához hogy miért csinál valamit a kódod, vagy hogy összefoglalót nyújtson amikor valami bonyolult feladatot végez.</p>
 <h3 id="összefoglaló">Összefoglaló</h3>
@@ -902,8 +902,8 @@ Perfect, I can hear all the details
 <p>Emlékszel például a <code>len()</code> fügvényre, amit lefuttathatsz Pythonban? Jó hírünk van - most megtanulod, hogyan írhatsz saját függvényeket!</p>
 <p>A függvény utasítások sorozata, amit a Python lefuttat. Minden Python függvény a <code>def</code> kulcsszóval kezdődik, van neve, és lehetnek paraméterei. Kezdjük egy könnyűvel. Cseréld ki a <strong>python_intro.py</strong> kódját erre:</p>
 <pre><code class="lang-python">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>():</span>
-        print(<span class="hljs-string">&apos;Hi there!&apos;</span>)
-        print(<span class="hljs-string">&apos;How are you?&apos;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hi there!&apos;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;How are you?&apos;</span>)
 
     hi()
 </code></pre>
@@ -925,11 +925,11 @@ How are you?
 <p>Ahogy láthattad, a függvény most kapott egy paramétert, amit <code>name</code>-nek hívunk:</p>
 <pre><code class="lang-python">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
         <span class="hljs-keyword">if</span> name == <span class="hljs-string">&apos;Ola&apos;</span>:
-            print(<span class="hljs-string">&apos;Hi Ola!&apos;</span>)
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hi Ola!&apos;</span>)
         <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&apos;Sonja&apos;</span>:
-            print(<span class="hljs-string">&apos;Hi Sonja!&apos;</span>)
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hi Sonja!&apos;</span>)
         <span class="hljs-keyword">else</span>:
-            print(<span class="hljs-string">&apos;Hi anonymous!&apos;</span>)
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hi anonymous!&apos;</span>)
 
     hi()
 </code></pre>
@@ -956,7 +956,7 @@ Hi Sonja!
 </code></pre><p>Ez fantasztikus, nem? Így nem kell állandóan ismételned magad, ha meg szeretnéd változtatni az ember nevét, akinek a függvény köszön. Pont emiatt van szükségünk függvényekre - soha ne ismételd meg a kódodat!</p>
 <p>Most csináljunk valami okosabbat - több mint két név van a világon, és nehéz lenne mindegyikhez egy külön feltételt írni, nem?</p>
 <pre><code class="lang-python">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
-        print(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
     hi(<span class="hljs-string">&quot;Rachel&quot;</span>)
 </code></pre>
@@ -976,12 +976,12 @@ Hi Rachel!
 <p>A <code>for</code> statement hasonlóan működik, mint az <code>if</code> statement; mindkettő alatt 4 szóközzel kell indentálni a következő sort.</p>
 <p>Itt a teljes kód, ami a fájlban lesz:</p>
 <pre><code class="lang-python">    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
-        print(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
     girls = [<span class="hljs-string">&apos;Rachel&apos;</span>, <span class="hljs-string">&apos;Monica&apos;</span>, <span class="hljs-string">&apos;Phoebe&apos;</span>, <span class="hljs-string">&apos;Ola&apos;</span>, <span class="hljs-string">&apos;You&apos;</span>]
     <span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> girls:
         hi(name)
-        print(<span class="hljs-string">&apos;Next girl&apos;</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Next girl&apos;</span>)
 </code></pre>
 <p>És amikor futtatjuk:</p>
 <pre><code>$ python3 python_intro.py
@@ -1054,7 +1054,7 @@ Next girl
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bevezetés a Pythonba","level":"1.7","depth":1,"next":{"title":"Mi a Django?","level":"1.8","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Kódszerkesztő (editor)","level":"1.6","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"hu","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2021-02-23T09:24:32.218Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-02-23T09:24:59.803Z"},"basePath":"..","book":{"language":"hu"}});
+            gitbook.page.hasChanged({"page":{"title":"Bevezetés a Pythonba","level":"1.7","depth":1,"next":{"title":"Mi a Django?","level":"1.8","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Kódszerkesztő (editor)","level":"1.6","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"hu","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2021-03-26T12:48:19.186Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-26T12:48:31.955Z"},"basePath":"..","book":{"language":"hu"}});
         });
     </script>
 </div>

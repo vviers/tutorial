@@ -778,7 +778,7 @@ False
 $
 </code></pre><p>Tak se dostaneš zpět do příkazové řádky.</p>
 <p>Dříve sis vybrala editor kódu v části <a href="../code_editor/">editor kódu</a>. Nyní potřebujeme editor otevřít a napsat vlastní kód do nového souboru:</p>
-<pre><code class="lang-python">print(<span class="hljs-string">&apos;Hello, Django girls!&apos;</span>)
+<pre><code class="lang-python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hello, Django girls!&apos;</span>)
 </code></pre>
 <blockquote>
 <p><strong>Poznámka:</strong> Měla bys objevit jednu z nejúžasnější věcí na editorech kódu: barvy! V interaktivním režimu Pythonu mělo vše stejnou barvu, ale nyní bys měla vidět, že funkce <code>print</code> je jinou barvou než řetězec uvnitř. To se nazývá &quot;zvýrazňování syntaxe&quot; a je to opravdu užitečná funkce při kódování. Barvy ti napoví, že máš neuzavřený řetězce nebo překlep v názvu slova (jako <code>def</code> ve funkci, kterou uvidíš níže). To je jeden z důvodů, proč používáme editory kódu :)</p>
@@ -810,7 +810,7 @@ File &quot;python_intro.py&quot;, line 2
 SyntaxError: unexpected EOF while parsing
 </code></pre><p>Python očekává, že mu dáš další pokyny, které mají být provedeny, pokud bude podmínka <code>3 &gt; 2</code> splněna (<code>True</code>). Řekněme tedy Pythonu, ať vypíše &quot;Funguje to!&quot;. Změň svůj kód v souboru <strong>python_intro.py</strong> na tento:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">if</span> <span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span>:
-     print(<span class="hljs-string">&apos;It works!&apos;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;It works!&apos;</span>)
 </code></pre>
 <p>Všimla sis, jak jsme odsadily poslední řádek kódu o 4 mezery? Musíme to udělat, podle toho Python pozná, jakou část kódu má spustit, pokud vyhodnotí předchozí výraz jako pravdivý. Můžete udělat jen jednu mezeru, ale téměř všichni programátoři v Pythonu dělají 4, aby kód vypadal upraveně a čitelně. Jeden <code>Tab</code> bude také počítán jako 4 mezery.</p>
 <p>Ulož a spusť:</p>
@@ -819,9 +819,9 @@ It works!
 </code></pre><h3 id="co-když-podmínka-není-pravdivá">Co když podmínka není pravdivá?</h3>
 <p>V předchozích příkladech byl kód proveden pouze v případě, že podmínky byly splněny. Python má také příkazy <code>elif</code> a <code>else</code>:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">if</span> <span class="hljs-number">5</span> &gt; <span class="hljs-number">2</span>:
-     print(<span class="hljs-string">&apos;5 is indeed greater than 2&apos;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;5 is indeed greater than 2&apos;</span>)
 <span class="hljs-keyword">else</span>:
-     print(<span class="hljs-string">&apos;5 is not greater than 2&apos;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;5 is not greater than 2&apos;</span>)
 </code></pre>
 <p>Pokud je výraz pravdivý, po spuštění se vytiskne:</p>
 <pre><code>$ python3 python_intro.py
@@ -829,11 +829,11 @@ It works!
 </code></pre><p>Kdyby 2 bylo větší než 5, spustil by se první příkaz. Jak snadné! Podívejme se, jak funguje <code>elif</code>:</p>
 <pre><code class="lang-python">name = <span class="hljs-string">&apos;Sonja&apos;</span>
 <span class="hljs-keyword">if</span> name == <span class="hljs-string">&apos;Ola&apos;</span>:
-     print(<span class="hljs-string">&apos;Hey Ola!&apos;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hey Ola!&apos;</span>)
 <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&apos;Sonja&apos;</span>:
-     print(<span class="hljs-string">&apos;Hey Sonja!&apos;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hey Sonja!&apos;</span>)
 <span class="hljs-keyword">else</span>:
-     print(<span class="hljs-string">&apos;Hey anonymous!&apos;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hey anonymous!&apos;</span>)
 </code></pre>
 <p>a spusť:</p>
 <pre><code>$ python3 python_intro.py
@@ -842,17 +842,17 @@ Hey Sonja!
 <p>Můžeš po počátečním <code>if</code> přidat tolik <code>elif</code> příkazů, kolik se ti zlíbí. Například:</p>
 <pre><code class="lang-python">volume = <span class="hljs-number">57</span>
 <span class="hljs-keyword">if</span> volume &lt; <span class="hljs-number">20</span>:
-     print(<span class="hljs-string">&quot;Je to dost potichu.&quot;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Je to dost potichu.&quot;</span>)
 <span class="hljs-keyword">elif</span> <span class="hljs-number">20</span> &lt;= volume &lt; <span class="hljs-number">40</span>:
-     print(<span class="hljs-string">&quot;Jako hudba v pozadí dobré.&quot;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Jako hudba v pozadí dobré.&quot;</span>)
 <span class="hljs-keyword">elif</span> <span class="hljs-number">40</span> &lt;= volume &lt; <span class="hljs-number">60</span>:
-     print(<span class="hljs-string">&quot;Skvělé, slyším všechny detaily.&quot;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Skvělé, slyším všechny detaily.&quot;</span>)
 <span class="hljs-keyword">elif</span> <span class="hljs-number">60</span> &lt;= volume &lt; <span class="hljs-number">80</span>:
-     print(<span class="hljs-string">&quot;Dobré na party.&quot;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Dobré na party.&quot;</span>)
 <span class="hljs-keyword">elif</span> <span class="hljs-number">80</span> &lt;= volume &lt; <span class="hljs-number">100</span>:
-     print(<span class="hljs-string">&quot;Trochu moc nahlas!&quot;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Trochu moc nahlas!&quot;</span>)
 <span class="hljs-keyword">else</span>:
-    print(<span class="hljs-string">&quot;Krvácí mi uši!&quot;</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Krvácí mi uši!&quot;</span>)
 </code></pre>
 <p>Python prochází a testuje každou položku v posloupnosti a vypíše:</p>
 <pre><code>$ python3 python_intro.py
@@ -870,8 +870,8 @@ Hey Sonja!
 <p>Pamatuješ na funkci <code>len()</code>, kterou jsi spouštěla v Pythonu? Máme pro tebe dobrou zprávu. Nyní se dozvíš, jak napsat své vlastní funkce!</p>
 <p>Funkce je sled instrukcí, které by měl Python provést. Každá funkce v Pythonu začíná klíčovým slovem <code>def</code>, dále je uveden název a funkce může mít také nějaké parametry. Začněme u té nejlehčí. Nahraď kód v <strong>python_intro.py</strong> následujícím:</p>
 <pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>():</span>
-     print(<span class="hljs-string">&apos;Hi there!&apos;</span>)
-     print(<span class="hljs-string">&apos;How are you?&apos;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hi there!&apos;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;How are you?&apos;</span>)
 
 hi()
 </code></pre>
@@ -887,11 +887,11 @@ How are you?
 <p>Jak vidíš, nyní jsme přidaly naší funkci parametr, <code>name</code>:</p>
 <pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
      <span class="hljs-keyword">if</span> name == <span class="hljs-string">&apos;Ola&apos;</span>:
-         print(<span class="hljs-string">&apos;Hi Ola!&apos;</span>)
+         <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hi Ola!&apos;</span>)
      <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&apos;Sonja&apos;</span>:
-         print(<span class="hljs-string">&apos;Hi Sonja!&apos;</span>)
+         <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hi Sonja!&apos;</span>)
      <span class="hljs-keyword">else</span>:
-         print(<span class="hljs-string">&apos;Hi anonymous!&apos;</span>)
+         <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hi anonymous!&apos;</span>)
 
 hi()
 </code></pre>
@@ -918,7 +918,7 @@ Hi Sonja!
 </code></pre><p>To je paráda, co? Nemusíš se opakovat a měnit takto jméno pokaždé, když chceš, aby funkce pozdravila jinou osobu. To je přesně důvod, proč potřebujeme funkce: abychom nikdy neopakovaly náš kód!</p>
 <p>Udělejme to ještě chytřeji – existuje více jmen než dvě a psaní podmínky pro každé jméno by bylo těžké, že?</p>
 <pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
-     print(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
 hi(<span class="hljs-string">&quot;Rachel&quot;</span>)
 </code></pre>
@@ -938,12 +938,12 @@ Hi Rachel!
 <p>Příkaz ~ ~ ~ for ~ ~ ~ se chová podobně jako příkaz ~ ~ ~ if ~ ~ ~, v následujícím kódu musíme oba řádky odsadit o čtyři mezery.</p>
 <p>Zde je celý kód, který umístíme do souboru:</p>
 <pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hi</span>(<span class="hljs-params">name</span>):</span>
-     print(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Hi &apos;</span> + name + <span class="hljs-string">&apos;!&apos;</span>)
 
 girls = [<span class="hljs-string">&apos;Rachel&apos;</span>, <span class="hljs-string">&apos;Monica&apos;</span>, <span class="hljs-string">&apos;Phoebe&apos;</span>, <span class="hljs-string">&apos;Ola&apos;</span>, <span class="hljs-string">&apos;You&apos;</span>]
 <span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> girls:
      hi(name)
-     print(<span class="hljs-string">&apos;Next girl&apos;</span>)
+     <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Next girl&apos;</span>)
 </code></pre>
 <p>A když ho spustíme:</p>
 <pre><code>$ python3 python_intro.py
@@ -960,7 +960,7 @@ Next girl
 </code></pre><p>Jak vidíš, vše, co jsi vložila dovnitř příkazu <code>for</code> s odsazením, se zopakuje pro každý prvek seznamu <code>girls</code>.</p>
 <p>Ve funkci <code>for</code> můžeš také použít čísla pomocí funkce <code>range</code>:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>):
-     print(i)
+     <span class="hljs-built_in">print</span>(i)
 </code></pre>
 <p>Což ti vypíše:</p>
 <pre><code>1
@@ -1017,7 +1017,7 @@ Next girl
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Úvod do Pythonu","level":"1.7","depth":1,"next":{"title":"Co je Django?","level":"1.8","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Editor zdrojového kódu","level":"1.6","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"cs","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2021-02-23T09:24:31.982Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-02-23T09:24:59.803Z"},"basePath":"..","book":{"language":"cs"}});
+            gitbook.page.hasChanged({"page":{"title":"Úvod do Pythonu","level":"1.7","depth":1,"next":{"title":"Co je Django?","level":"1.8","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"Editor zdrojového kódu","level":"1.6","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"cs","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2021-03-26T12:48:18.986Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-26T12:48:31.955Z"},"basePath":"..","book":{"language":"cs"}});
         });
     </script>
 </div>
