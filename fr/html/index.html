@@ -341,7 +341,7 @@
                 <a href="../django/">
             
                     
-                    Qu'est-ce que Django?
+                    Qu'est-ce que Django ?
             
                 </a>
             
@@ -406,7 +406,7 @@
                 <a href="../deploy/">
             
                     
-                    Déployer!
+                    Déployer !
             
                 </a>
             
@@ -432,7 +432,7 @@
                 <a href="../django_views/">
             
                     
-                    Vues Django - C'est l'heure de créer !
+                    Vues Django – c'est l'heure de créer !
             
                 </a>
             
@@ -497,7 +497,7 @@
                 <a href="../css/">
             
                     
-                    CSS - Rendez votre site joli
+                    CSS – donnez du style
             
                 </a>
             
@@ -549,7 +549,7 @@
                 <a href="../whats_next/">
             
                     
-                    La suite?
+                    Et maintenant ?
             
                 </a>
             
@@ -643,21 +643,23 @@
 <p>Et voilà, il n&apos;y a plus d&apos;erreurs ! Bravo :) Cependant, notre site ne peut rien faire d&apos;autre pour le moment qu&apos;afficher une page blanche. La faute à notre template que nous avons laissé vide. Allons corriger ça.</p>
 <p>Ouvrez le nouveau fichier dans l’éditeur de code et ajoutez le morceau suivant :</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hi there!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>It works!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Bonjour !<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Ça marche !<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
 <p>Alors, à quoi ressemble notre site web maintenant ? Allons le découvrir : <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a></p>
 <p><img src="images/step3.png" alt="Figure 11.2"></p>
-<p>Ça marche ! Bon boulot :)</p>
+<p>Ça marche ! Bon boulot! :)</p>
 <ul>
-<li>La balise la plus élémentaire, <code>&lt;html&gt;</code>, figure toujours au début de n&apos;importe quelle page web tandis que <code>&lt;/html&gt;</code> est toujours située à la fin. Comme vous pouvez le constater, l&apos;intégralité du contenu de notre page web est située entre la balise de départ, <code>&lt;html&gt;</code>, et la balise fermante, <code>&lt;/html&gt;</code></li>
+<li>La ligne <code>&lt;!DOCTYPE html&gt;</code> n&apos;est pas une balise HTML. Elle ne déclare que le type de document. Ici, elle informe le navigateur web que le type de document est <a href="https://html.spec.whatwg.org/#the-doctype" target="_blank">HTML5</a>. C&apos;est toujours ainsi que débute un fichier HTML5.</li>
+<li>La balise la plus élémentaire, <code>&lt;html&gt;</code>, figure toujours au début de n&apos;importe quelle page web tandis que <code>&lt;/html&gt;</code> est toujours située à la fin. Comme vous pouvez le constater, l&apos;intégralité du contenu de notre page web est située entre la balise de départ, <code>&lt;html&gt;</code>, et la balise de fin, <code>&lt;/html&gt;</code></li>
 <li><code>&lt;p&gt;</code> est la balise pour les éléments de type paragraphe. <code>&lt;/p&gt;</code> permet de fermer chaque paragraphe.</li>
 </ul>
-<h2 id="head-et-body">Head et body</h2>
+<h2 id="head-et-body">Head et Body</h2>
 <p>Chaque page HTML est divisée en deux éléments : <strong>head</strong> (entête) et <strong>body</strong> (corps.</p>
 <ul>
 <li><p><strong>head</strong> est un élément qui contient des informations sur le document : son contenu ne s&apos;affichera pas à l&apos;écran.</p>
@@ -668,13 +670,14 @@
 <p>Nous utilisons <code>&lt;head&gt;</code> pour transmettre la configuration de la page au navigateur tandis que <code>&lt;body&gt;</code> l&apos;informe sur le contenu de la page.</p>
 <p>Par exemple, vous pouvez donner un titre à votre page web en utilisant l&apos;élément titre dans le <code>&lt;head&gt;</code> :</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Ola&apos;s blog<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hi there!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>It works!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Bonjour !<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Ça marche !<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
@@ -697,36 +700,45 @@
 <li><code>&lt;a href=&quot;https://djangogirls.org&quot;&gt;link&lt;/a&gt;</code> permet de créer un lien</li>
 <li><code>&lt;ul&gt;&lt;li&gt;premier item&lt;/li&gt;&lt;li&gt;second item&lt;/li&gt;&lt;/ul&gt;</code> permet de créer des listes, comme celle que nous sommes en train de faire !</li>
 <li><code>&lt;div&gt;&lt;/div&gt;</code> permet de créer une section au sein de la page</li>
+<li><code>&lt;nav&gt;&lt;/nav&gt;</code> définit un ensemble de liens de navigation</li>
+<li><code>&lt;article&gt;&lt;/article&gt;</code> spécifie du contenu indépendant et autonome</li>
+<li><code>&lt;section&gt;&lt;/section&gt;</code> définit une section dans un document</li>
+<li><code>&lt;header&gt;&lt;/header&gt;</code> spécifie un en-tête pour un document ou une section</li>
+<li><code>&lt;main&gt;&lt;/main&gt;</code> spécifie le contenu principal d&apos;un document</li>
+<li><code>&lt;aside&gt;&lt;/aside&gt;</code> définit du contenu en dehors du contenu dans lequel il est placé (comme une barre latérale)</li>
+<li><code>&lt;footer&gt;&lt;/footer&gt;</code> définit un pied de page pour un document ou une section</li>
+<li><code>&lt;time&gt;&lt;/time&gt;</code> définit un instant spécifique (ou un horodatage)</li>
 </ul>
 <p>Voici un exemple d’un modèle complet, copiez et collez-le dans <code>blog/templates/blog/post_list.html</code> :</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Django Girls blog<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Blog Django Girls<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span>Django Girls Blog<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span>Blog Django Girls<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>published: 14.06.2014, 12:14<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>My first post<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">time</span>&gt;</span>publication: 14.06.2014, 12:14<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>Mon premier article<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>published: 14.06.2014, 12:14<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>Mon second post<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">time</span>&gt;</span>publication: 14.06.2014, 12:14<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>Mon second article<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>Nous avons créé trois sections à l&apos;aide de <code>div</code>.</p>
+<p>Nous avons créé ici une section <code>en-tête</code> et deux sections <code>article</code>.</p>
 <ul>
-<li>Le premier <code>div</code> contient le titre de notre blogpost - c&apos;est à la fois un titre et un lien</li>
-<li>Les deux autres <code>div</code> contiennent nos posts avec leur date de publication, un titre de post <code>h2</code> qui est cliquable ainsi que deux <code>p</code>s (paragraphe) de texte : un pour la date et l&apos;autre pour notre post.</li>
+<li>Le premier élément <code>header</code> contient le titre de notre blog - c&apos;est à la fois un titre et un lien</li>
+<li>Les deux éléments <code>article</code> contiennent nos articles de blog avec une date de publication dans un élément <code>time</code> un élément <code>h2</code> avec un titre de publication qui est cliquable et un élément <code>p</code> (paragraphe) pour le texte de notre blog.</li>
 </ul>
 <p>Ce qui nous donne :</p>
 <p><img src="images/step6.png" alt="Figure 11.4"></p>
@@ -740,18 +752,15 @@
 <pre><code>$ git status
 </code></pre><p>Assurez-vous d&apos;être dans le dossier <code>djangogirls</code>. Voici la commande qui permet de dire à <code>git</code> d&apos;inclure tout les changements qui ont eu lieu dans ce dossier :</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code>$ git add --all .
-</code></pre><blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> <code>--all</code> signifie que <code>git</code> va aussi voir si vous avez supprimé des fichiers (par défaut, il ne s&apos;intéresse qu&apos;aux nouveaux fichiers ou à ceux modifiés). Essayez de vous rappeler du chapitre 3 : <code>.</code> permet de désigner le dossier courant.</p>
-</blockquote>
-<p>Avant que nous puissions uploader nos fichiers, regardons ce que <code>git</code> à l&apos;intention de faire (tous les fichiers que <code>git</code> va uploader vont apparaître en vert) :</p>
+<pre><code>$ git add .
+</code></pre><p>Avant que nous puissions uploader nos fichiers, regardons ce que <code>git</code> à l&apos;intention de faire (tous les fichiers que <code>git</code> va uploader vont apparaître en vert) :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ git status
 </code></pre><p>On y est presque : nous devons maintenant lui dire de sauvegarder ces changements dans son historique. Nous allons y ajouter un &quot;message de commit&quot; qui nous permettra de décrire ce qui a été changé. Vous pouvez mettre ce que vous voulez dans un message de commit. Généralement, il est préférable de mettre quelque chose d&apos;utile qui vous permettra de vous souvenir plus tard de ce que vous avez fait.</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ git commit -m &quot;Modification du HTML du site&quot;
 </code></pre><blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> N&apos;oubliez pas d&apos;utiliser de doubles guillemets autour de votre message de commit.</p>
+<p> Assurez-vous d&apos;utiliser des guillemets doubles autour du message de commit.</p>
 </blockquote>
 <p>Une fois que nous avons fait cela, nous pouvons mettre en ligne (pusher) nos modifications sur GitHub :</p>
 <p></p><p class="code-label">command-line</p><p></p>
@@ -797,7 +806,7 @@ $ git pull
 
             
                 
-                <a href="../django_views/" class="navigation navigation-prev " aria-label="Previous page: Vues Django - C'est l'heure de créer !">
+                <a href="../django_views/" class="navigation navigation-prev " aria-label="Previous page: Vues Django – c'est l'heure de créer !">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -813,7 +822,7 @@ $ git pull
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction au HTML","level":"1.17","depth":1,"next":{"title":"Django ORM (Querysets)","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"previous":{"title":"Vues Django - C'est l'heure de créer !","level":"1.16","depth":1,"path":"django_views/README.md","ref":"django_views/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"html/README.md","mtime":"2021-04-17T12:55:39.580Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-04-17T12:55:52.096Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction au HTML","level":"1.17","depth":1,"next":{"title":"Django ORM (Querysets)","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"previous":{"title":"Vues Django – c'est l'heure de créer !","level":"1.16","depth":1,"path":"django_views/README.md","ref":"django_views/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"html/README.md","mtime":"2021-04-17T16:15:27.880Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-04-17T16:15:47.922Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>

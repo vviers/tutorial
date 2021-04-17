@@ -341,7 +341,7 @@
                 <a href="../django/">
             
                     
-                    Qu'est-ce que Django?
+                    Qu'est-ce que Django ?
             
                 </a>
             
@@ -406,7 +406,7 @@
                 <a href="../deploy/">
             
                     
-                    Déployer!
+                    Déployer !
             
                 </a>
             
@@ -432,7 +432,7 @@
                 <a href="../django_views/">
             
                     
-                    Vues Django - C'est l'heure de créer !
+                    Vues Django – c'est l'heure de créer !
             
                 </a>
             
@@ -497,7 +497,7 @@
                 <a href="../css/">
             
                     
-                    CSS - Rendez votre site joli
+                    CSS – donnez du style
             
                 </a>
             
@@ -549,7 +549,7 @@
                 <a href="../whats_next/">
             
                     
-                    La suite?
+                    Et maintenant ?
             
                 </a>
             
@@ -634,7 +634,7 @@
 <p>Afin d&apos;ouvrir une console Python, tapez <code>python</code> sous Windows ou <code>python3</code> sous Mac OS/Linux et appuyez sur <code>entrée</code>.</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ python3
-Python 3.6.1 (...)
+Python {{ book.py_release }} (...)
 Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
 &gt;&gt;&gt;
 </code></pre><h2 id="votre-première-commande-python-">Votre première commande Python !</h2>
@@ -680,7 +680,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&quot;J&apos;aime la mousse au chocolat&quot;</span>
 <span class="hljs-string">&quot;J&apos;aime la mousse au chocolat&quot;</span>
 </code></pre>
-<p>ou échapper l’apostrophe avec une barre oblique inversée (un backslash, ``) :</p>
+<p>ou échapper l’apostrophe avec une barre oblique inversée (un backslash, <code>\</code>) :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&apos;J\&apos;aime la mousse au chocolat&apos;</span>
 <span class="hljs-string">&quot;J&apos;aime la mousse au chocolat&quot;</span>
@@ -882,7 +882,7 @@ KeyError: <span class="hljs-string">&apos;age&apos;</span>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>participant[<span class="hljs-string">&apos;favorite_language&apos;</span>] = <span class="hljs-string">&apos;Python&apos;</span>
 </code></pre>
-<p>Comme pour les listes, la fonction <code>len()</code> permet d&apos;obtenir le nombre de paires clef–valeur du dictionnaire. Essayez et tapez la commande suivante :</p>
+<p>Comme pour les listes, la fonction <code>len()</code> permet d&apos;obtenir le nombre de paires clef–valeur du dictionnaire. Essayez de taper la commande suivante :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(participant)
 <span class="hljs-number">4</span>
@@ -928,8 +928,10 @@ KeyError: <span class="hljs-string">&apos;age&apos;</span>
 <span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> != <span class="hljs-number">2</span>
 <span class="hljs-literal">True</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) &gt; <span class="hljs-built_in">len</span>([<span class="hljs-number">4</span>, <span class="hljs-number">5</span>])
+<span class="hljs-literal">True</span>
 </code></pre>
-<p>Nous avons donné à Python des chiffres à comparer. Comme vous pouvez le voir, Python peut comparer des chiffres, mais aussi les résultats de méthodes. Pas mal, non ?</p>
+<p>Nous avons donné à Python quelques nombres à comparer. Comme vous pouvez le voir, Python n&apos;est pas seulement capable de comparer des nombres, mais il peut aussi comparer les valeurs des expressions mathématiques comme <code>2 * 2</code> avec le résultat d&apos;une fonction comme le <code>2</code> renvoyé par <code>len([4, 5])</code>. Pas mal, non ?</p>
 <p>Vous vous demandez probablement pourquoi nous avons mis deux signes <code>==</code> côte à côte pour savoir si deux nombres étaient égaux ? On utilise déjà <code>=</code> pour assigner des valeurs aux variables. Du coup, il faut toujours, oui <strong>toujours</strong>, mettre deux <code>==</code> si vous voulez savoir si deux choses sont égales. Nous pouvons aussi dire que certaines choses ne sont pas égales à d&apos;autres. Pour cela, nous utilisons le symbole <code>! =</code>, comme illustré dans l&apos;exemple ci-dessus.</p>
 <p>Donnons encore un peu de boulot à Python :</p>
 <p></p><p class="code-label">command-line</p><p></p>
@@ -1281,7 +1283,7 @@ Next girl
 <p>Vous pouvez remarquer que le second de ces nombres n&apos;est pas inclus dans la liste que Python nous donne (ce qui signifie que <code>range(1, 6)</code> compte de 1 à 5, mais n&apos;inclue pas 6). Cela est du au fait que &quot;range&quot; est semi-ouvert, c&apos;est-à-dire qu&apos;il prend en compte la première valeur mais pas la dernière.</p>
 <h2 id="résumé">Résumé</h2>
 <p>Et voilà ! <strong>Vos assurez un max !</strong> C&apos;était un chapitre difficile, donc vous pouvez être fières de vous. De notre côté, nous sommes fières de vous, pour être parvenu-e si loin dans le cours. Bravo !</p>
-<p>Pour accéder au tutoriel officiel et complet de Python, visitez <a href="https://docs.python.org/3/tutorial/" target="_blank">https://docs.python.org/3/tutorial/</a>. Cela vous donnera un accès plus exhaustif à l&apos;étude du langage. A bientôt :)</p>
+<p>Pour accéder au tutoriel officiel et complet de Python, visitez <a href="https://docs.python.org/3/tutorial/" target="_blank">https://docs.python.org/3/tutorial/</a>. Cela vous donnera un accès plus exhaustif à l&apos;étude du langage. A bientôt! :)</p>
 <p>N&apos;hésitez pas à prendre une pause : étirez-vous, marchez un peu ou reposez-vous les yeux. Une fois que vous avez un peu rechargé vos batteries, vous pouvez attaquer le chapitre suivant :)</p>
 <p><img src="images/cupcake.png" alt="Cupcake"></p>
 
@@ -1316,7 +1318,7 @@ Next girl
                 </a>
                 
                 
-                <a href="../django/" class="navigation navigation-next " aria-label="Next page: Qu'est-ce que Django?">
+                <a href="../django/" class="navigation navigation-next " aria-label="Next page: Qu'est-ce que Django ?">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1327,7 +1329,7 @@ Next girl
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction à Python","level":"1.8","depth":1,"next":{"title":"Qu'est-ce que Django?","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"L'éditeur de texte","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2021-04-17T12:55:39.584Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-04-17T12:55:52.096Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction à Python","level":"1.8","depth":1,"next":{"title":"Qu'est-ce que Django ?","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"L'éditeur de texte","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2021-04-17T16:15:27.884Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-04-17T16:15:47.922Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>
