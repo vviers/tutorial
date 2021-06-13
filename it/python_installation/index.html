@@ -3,7 +3,7 @@
 <html lang="it" >
     <head>
         <meta charset="UTF-8">
-        <title>Installazione di Python · HonKit</title>
+        <title>Istallazione di Python · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 3.6.20">
@@ -302,7 +302,7 @@
                 <a href="./">
             
                     
-                    Installazione di Python
+                    Istallazione di Python
             
                 </a>
             
@@ -605,7 +605,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Installazione di Python</a>
+        <a href=".." >Istallazione di Python</a>
     </h1>
 </div>
 
@@ -627,11 +627,11 @@
 <h1 id="installazione-di-python">Installazione di Python</h1>
 <blockquote>
 <p><strong>Nota</strong> Se utilizzi un Chromebook, salta questo capitolo e segui le istruzioni in <a href="../chromebook_setup/">Configurazione di Chromebook</a>.</p>
-<p><strong>Nota</strong> Se hai già eseguito i passaggi per l&apos;Installazione, non è necessario rifare tutto da capo - puoi andare direttamente al prossimo capitolo!</p>
+<p>Se hai terminato il processo di installazione, questo passaggio lo hai già completato e puoi passare direttamente al capitolo successivo!</p>
 <p>Per le lettrici a casa: questo capitolo è trattato nel video <a href="https://www.youtube.com/watch?v=pVTaqzKZCdA" target="_blank">Installazione di Python &amp; Editor di codice</a>.</p>
 <p>Questa sezione è basata sul tutorial delle Geek Girls Carrots (<a href="https://github.com/ggcarrots/django-carrots" target="_blank">https://github.com/ggcarrots/django-carrots</a>)</p>
 </blockquote>
-<p>Django è scritto in Python. Python ci serve per fare qualunque cosa in Django. Iniziamo con l&apos;installazione! Dovresti installare la versione più recente di Python 3, quindi se hai una versione precendente dovrai aggiornarla. Se hai già la versione 3.4 o una versione successiva non servono aggiornamenti.</p>
+<p>Django è scritto in Python. Python ci serve per fare qualunque cosa in Django. Iniziamo con l&apos;installazione! Dovresti installare la versione più recente di Python 3, quindi se hai una versione precendente dovrai aggiornarla. Se possiedi già la versione 3.6 o una versione successiva non servono aggiornamenti.</p>
 <p>Installa Python normale come segue, anche quando hai Anaconda installato sul tuo computer.</p>
 <sec data-title="Install Python: Windows" data-id="python_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Install Python: Windows<a class="pull-right section atTitle btn btn-default" target="python_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_windows"><div class="panel-body">
 <p>Prima verifica se il computer sta eseguendo una versione a 32 bit o una versione a 64 bit di Windows, sulla linea &quot;Tipo di sistema&quot; della pagina Info di sistema. Per raggiungere questa pagina, prova uno di questi metodi:</p>
@@ -639,35 +639,33 @@
 <li>Premi il tasto Windows e Pausa/Break contemporaneamente</li>
 <li>Apri il tuo Pannello di Controllo dal menu Windows, quindi naviga nel sistema &amp; Sicurezza, quindi sistema</li>
 <li>Premi il pulsante Windows, quindi vai su Impostazioni &gt; Sistema &gt; Informazioni</li>
+<li>Cerca &quot;System Information&quot; nel menu Start di Windows. Per fare ciò, clicca sul pulsante Start o premi il tasto Windows, poi inizia a digitare <code>System Information</code>. Inizierà a dare suggerimenti non appena digiterai. Puoi selezionare la voce una volta che compare.</li>
 </ul>
 <p>Puoi scaricare Python per Windows dal sito web <a href="https://www.python.org/downloads/windows/" target="_blank">https://www.python.org/downloads/windows/</a>. Clicca sul link &quot;Ultimo Python 3 - Python x.x.x&quot;. Se il tuo computer sta eseguendo una versione <strong>64-bit</strong> di Windows, scarica il file <strong>Windows x86-64 di installer eseguibile</strong>. Altrimenti, scarica il file <strong>Windows x86 eseguibile installer</strong>. Dopo aver scaricato il file *.msi, lo dovresti eseguire (cliccaci sopra due volte) e segui le istruzioni.</p>
-<p>Una cosa per cui guardare: durante l&apos;installazione, si noti una finestra contrassegnata &quot;Setup&quot;. Assicurati di spuntare la casella di controllo &quot;Aggiungi Python 3.6 a PATH&quot; o &apos;Aggiungi Python alle variabili ambientali&quot; e clicca su &quot;Installa Ora&quot;, come mostrato qui (potrebbe sembrare un po&apos; diverso se stai installando una versione diversa):</p>
+<p>Una cosa per cui guardare: durante l&apos;installazione, si noti una finestra contrassegnata &quot;Setup&quot;. Assicurati di selezionare la casellina &quot;Add Python 3.8 to PATH&quot; o &apos;Aggiungi Python alle tue variabili ambientali&quot; e clicca su &quot;installa ora&quot;, come mostrato qui (potrebbe risultare leggermente diverso se stai installando una versione differente):</p>
 <p><img src="images/python-installation-options.png" alt="Non dimenticare di aggiungere Python al Path"></p>
 <p>Quando l&apos;installazione è completata, potresti vedere una finestra di dialogo con un link che puoi seguire per saperne di più su Python o sulla versione installata. Chiudi o annulla questa finestra -- imparerai molto di più in questo tutorial!</p>
-<p>Nota: se stai usando una versione precedente di Windows (7, Vista o qualsiasi versione precedente) e l&apos;installazione Python 3.6.x fallisce e restituisce un errore, puoi provare a:</p>
-<ol>
-<li>installare tutti gli aggiornamenti di Windows e provare a installare di nuovo Python; oppure</li>
-<li>installare una <a href="https://www.python.org/downloads/windows/" target="_blank">versione precedente di Python</a>, ad esempio la <a href="https://www.python.org/downloads/release/python-346/" target="_blank">3.4.6</a>.</li>
-</ol>
-<p>Se installi una versione precedente di Python, la schermata di installazione potrebbe apparire un po&apos; diversa da quella mostrata sopra. Assicurati di scorrere verso il basso per vedere &quot;Aggiungi python.exe al Path&quot;, quindi clicca sul pulsante a sinistra e scegli &quot;Verrà installato sul disco rigido locale&quot;:</p>
-<p><img src="images/add_python_to_windows_path.png" alt="Aggiungi Python al percorso, versioni precedenti"></p>
+<p>Nota: Se si utilizza una versione precedente di Windows (7, Vista, o qualsiasi versione precedente) e l&apos;installatore di Python 3.8 non funziona per un errore, installare tutti gli aggiornamenti di Windows e provare a installare nuovamente Python. Se l&apos;errore si ripresenta, prova ad installare la versione di Python 3.6.8 da <a href="https://www.python.org/downloads/windows/" target="_blank">Python.org</a>.</p>
+<blockquote>
+<p>Django 2.2.4 ha bisogno di Python 3.6 o maggiore, che non supporta Windows XP o versioni precedenti.</p>
+</blockquote>
 </div></div></div></sec>
 <sec data-title="Install Python: OS X" data-id="python_OSX" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Install Python: OS X<a class="pull-right section atTitle btn btn-default" target="python_OSX"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_OSX"><div class="panel-body">
 <blockquote>
-<p><strong>Nota</strong> Prima di installare Python su OS X, devi garantire che le impostazioni Mac consentano l&apos;installazione di pacchetti che non sono presenti nell&apos;App Store. Vai alle Preferenze di sistema (è nella cartella Applicazioni), clicca &quot;Sicurezza &amp; Privacy,&quot; e poi la scheda &quot;Generale&quot;. Se le tue &quot;Consenti app scaricate da:&quot; sono impostate su &quot;Mac App Store,&quot; cambiale in &quot;Mac App Store e sviluppatori identificati.&quot;</p>
+<p><strong>Nota</strong> Prima di installare Python su OS X, devi fare in modo/ verificare che le impostazioni Mac consentano l&apos;installazione di pacchetti che non sono presenti nell&apos;App Store. Vai alle Preferenze di sistema (è nella cartella Applicazioni), clicca &quot;Sicurezza &amp; Privacy,&quot; e poi la scheda &quot;Generale&quot;. Se il tuo &quot;Consenti le app scaricate da:&quot; è impostato su &quot;Mac App Store&quot;, cambialo in &quot;Mac App Store e sviluppatori identificati&quot;.</p>
 </blockquote>
-<p>Devi andare sul sito <a href="https://www.python.org/downloads/release/python-361/" target="_blank">https://www.python.org/downloads/release/python-361/</a> e scaricare il programma di installazione di Python:</p>
+<p>Devi andare sul sito <a href="https://www.python.org/downloads/mac-osx/" target="_blank">https://www.python.org/downloads/mac-osx/</a> e scaricare il programma di installazione di Python più recente:</p>
 <ul>
 <li>Scarica il file <em>Mac OS X 64-bit/32-bit installer</em></li>
-<li>Fai doppio click su <em>python-3.4.3-macosx10.6.pkg</em> per eseguire il programma d&apos;installazione.</li>
+<li>Fare doppio clic su <em>python-3.8.6-macosx10.9.pkg</em> per eseguire l&apos;installer.</li>
 </ul>
 </div></div></div></sec>
 <sec data-title="Install Python: Linux" data-id="python_linux" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Install Python: Linux<a class="pull-right section atTitle btn btn-default" target="python_linux"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_linux"><div class="panel-body">
-<p>È molto probabile che tu abbia Python già installato di default. Per controllare se ce l&apos;hai già installato (e quale versione è), apri una console e digita il seguente comando:</p>
+<p>È molto probabile che tu abbia già installato Python fuori dalla scatola. Per verificare se è installata (e quale versione è), aprire una console e digitare il seguente comando:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ python3 --version
-Python 3.6.1
-</code></pre><p>Se hai una differente &apos;micro versione&apos; di Python installata, ad esempio la 3.4.0, non hai bisogno di aggiornarla. Se non hai Python installato, o se vuoi una versione diversa, controlla prima quale distribuzione Linux stai usando con il seguente comando:</p>
+Python 3.8.6
+</code></pre><p>Se hai una versione diversa di Python installata, almeno 3.6 (es. 3.6.8), allora non devi aggiornare. Se non hai Python installato, o se vuoi una versione diversa, controlla prima quale distribuzione Linux stai usando con il seguente comando:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ grep &apos;^NAME=&apos; /etc/os-release
 </code></pre><p>In seguito, a seconda del risultato, segui una delle seguenti guide di installazione sotto questa sezione.</p>
@@ -678,22 +676,22 @@ Python 3.6.1
 <pre><code>$ sudo apt install python3
 </code></pre></div></div></div></sec>
 <sec data-title="Install Python: Fedora" data-id="python_fedora" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Install Python: Fedora<a class="pull-right section atTitle btn btn-default" target="python_fedora"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_fedora"><div class="panel-body">
-<p>Digita questo comando nella tua console:</p>
+<p>Usa questo comando nella tua console:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ sudo dnf install python3
 </code></pre><p>Se sei nelle vecchie versioni Fedora potresti ottenere un errore che il comando <code>dnf</code> non è stato trovato. In questo caso, devi utilizzare <code>yum</code> invece.</p>
 </div></div></div></sec>
 <sec data-title="Install Python: openSUSE" data-id="python_openSUSE" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Install Python: openSUSE<a class="pull-right section atTitle btn btn-default" target="python_openSUSE"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_openSUSE"><div class="panel-body">
-<p>Digita questo comando nella tua console:</p>
+<p>Usa questo comando nella tua console:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ sudo zypper install python3
 </code></pre></div></div></div></sec>
 <p>Verifica che l&apos;installazione si sia conclusa correttamente aprendo l&apos;applicazione <em>Terminal</em> ed eseguendo il comando <code>python3</code>:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ python3 --version
-Python 3.6.1
-</code></pre><p>La versione mostrata può essere diversa da 3.6.1 -- dovrebbe corrispondere alla versione installata.</p>
-<p><strong>NOTA:</strong> Se sei su Windows e ricevi un messaggio di errore che dice che <code>python3</code> non è stato trovato, prova ad utilizzare <code>python</code> (senza <code>3</code>), controlla sia la versione di Python 3.4.0 o superiore. Se anche questo non funziona, puoi aprire un nuovo prompt dei comandi e riprovare; questo accade se usi un prompt dei comandi aperto da prima dell&apos;installazione di Python.</p>
+Python 3.8.6
+</code></pre><p>La versione mostrata può essere diversa da 3.8.6 -- dovrebbe corrispondere alla versione installata.</p>
+<p><strong>NOTA:</strong> Se sei su Windows e ricevi un messaggio di errore che dice che <code>python3</code> non è stato trovato, prova ad utilizzare <code>python</code> (senza <code>3</code>), controlla sia la versione di Python che è 3.6 o superiore. Se anche questo non funziona, puoi aprire un nuovo prompt dei comandi e riprovare; questo accade se usi un prompt dei comandi aperto da prima dell&apos;installazione di Python.</p>
 <hr>
 <p>Se hai dubbi o se qualcosa è andato storto e non hai idea di cosa fare dopo - chiedi al tuo coach! A volte le cose non vanno come dovrebbero ed è meglio chiedere aiuto a qualcuno con più esperienza.</p>
 
@@ -739,7 +737,7 @@ Python 3.6.1
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Installazione di Python","level":"1.6","depth":1,"next":{"title":"L'editor di codice","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"previous":{"title":"Introduzione alla command line","level":"1.5","depth":1,"path":"intro_to_command_line/README.md","ref":"intro_to_command_line/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"it","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_installation/README.md","mtime":"2021-04-17T16:15:27.940Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-04-17T16:15:47.922Z"},"basePath":"..","book":{"language":"it"}});
+            gitbook.page.hasChanged({"page":{"title":"Istallazione di Python","level":"1.6","depth":1,"next":{"title":"L'editor di codice","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"previous":{"title":"Introduzione alla command line","level":"1.5","depth":1,"path":"intro_to_command_line/README.md","ref":"intro_to_command_line/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"it","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_installation/README.md","mtime":"2021-06-13T08:35:40.846Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-06-13T08:35:50.332Z"},"basePath":"..","book":{"language":"it"}});
         });
     </script>
 </div>
