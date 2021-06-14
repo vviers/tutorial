@@ -1,0 +1,1091 @@
+
+<!DOCTYPE HTML>
+<html lang="hy" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Django Forms · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.20">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-richquotes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sidebar-ad/sidebar-ad.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx-ex/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../whats_next/" />
+    
+    
+    <link rel="prev" href="../extend_your_application/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+  
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://gitter.im/DjangoGirls/tutorial" target="_blank" class="custom-link">Need help? Talk to us!</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Ներածություն
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../installation/">
+            
+                <a href="../installation/">
+            
+                    
+                    Installation (Տեղադրում)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../installation/">
+            
+                <a href="../installation/#command-line">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../installation/">
+            
+                <a href="../installation/#python">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../installation/">
+            
+                <a href="../installation/#code-editor">
+            
+                    
+                    Code Editor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../installation/">
+            
+                <a href="../installation/#virtualenv">
+            
+                    
+                    Virtual Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../installation/">
+            
+                <a href="../installation/#django">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../installation/">
+            
+                <a href="../installation/#git">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../installation/">
+            
+                <a href="../installation/#github">
+            
+                    
+                    GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../installation/">
+            
+                <a href="../installation/#pythonanywhere">
+            
+                    
+                    PythonAnywhere
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chromebook_setup/">
+            
+                <a href="../chromebook_setup/">
+            
+                    
+                    Installation (chromebook) (Տեղադրում)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../how_the_internet_works/">
+            
+                <a href="../how_the_internet_works/">
+            
+                    
+                    Ինչպես է աշխատում ինտերնետը
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../intro_to_command_line/">
+            
+                <a href="../intro_to_command_line/">
+            
+                    
+                     Command line-ի (Հրամանի տողի) ներածություն
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../python_installation/">
+            
+                <a href="../python_installation/">
+            
+                    
+                    Python- ի տեղադրում
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../code_editor/">
+            
+                <a href="../code_editor/">
+            
+                    
+                    Կոդի խմբագիր
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../python_introduction/">
+            
+                <a href="../python_introduction/">
+            
+                    
+                    Ներածություն Python- ին
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../django/">
+            
+                <a href="../django/">
+            
+                    
+                     Ի՞նչ է Django- ն:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../django_installation/">
+            
+                <a href="../django_installation/">
+            
+                    
+                     Django- ի տեղադրում
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../django_start_project/">
+            
+                <a href="../django_start_project/">
+            
+                    
+                    Ձեր առաջին Django նախագիծը:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../django_models/">
+            
+                <a href="../django_models/">
+            
+                    
+                    Django մոդելներ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../django_admin/">
+            
+                <a href="../django_admin/">
+            
+                    
+                     Django ադմին
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../deploy/">
+            
+                <a href="../deploy/">
+            
+                    
+                    Deploy!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../django_urls/">
+            
+                <a href="../django_urls/">
+            
+                    
+                    Django URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../django_views/">
+            
+                <a href="../django_views/">
+            
+                    
+                     Django views- Ստեղծագործելու ժամանակն է:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                     HTML- ի ներածություն
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../django_orm/">
+            
+                <a href="../django_orm/">
+            
+                    
+                     Django ORM (Querysets)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../dynamic_data_in_templates/">
+            
+                <a href="../dynamic_data_in_templates/">
+            
+                    
+                    Դինամիկ տվյալներ կաղապարներում
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../django_templates/">
+            
+                <a href="../django_templates/">
+            
+                    
+                     Django templates (կաղապարներ)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../css/">
+            
+                <a href="../css/">
+            
+                    
+                     CSS - դարձրեք այն գեղեցիկ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../template_extending/">
+            
+                <a href="../template_extending/">
+            
+                    
+                    Template extending
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../extend_your_application/">
+            
+                <a href="../extend_your_application/">
+            
+                    
+                     Ընդլայնել ձեր դիմումը
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.24" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Django Forms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../whats_next/">
+            
+                <a href="../whats_next/">
+            
+                    
+                     Ի՞նչ է հաջորդը
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+  <div class="sidebar-addition">
+      
+        <a href="https://www.patreon.com/djangogirls" target="_blank">
+      
+        <img src="https://djangogirls.org/static/img/global/donate/lagos.jpg" />
+      
+        </a>
+      
+      
+        <p>💖 Support our work and donate to our project! ✨</p>
+      
+      
+      <a href="https://www.patreon.com/djangogirls" class="btn" target="_blank">
+        Donate now!
+      </a>
+      
+  </div>
+
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Django Forms</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="django-ֆորմաներ">Django ֆորմաներ</h1>
+<p>Վերջին բանը, որ մենք ուզում ենք անել մեր կայքում, բլոգի գրառումներն ավելացնելու և խմբագրելու հարմարավետ միջոց ստեղծելն է: Django- ի <code>admin</code> -ը (ադմինիստրատորը) հիանալի է, բայց դրա դիզայնը դժվար է փոխել: <code>forms</code> -ի հետ մենք բացարձակ վերահսկողություն կունենանք մեր ինտերֆեյսի վրա: Մենք կարող ենք իրագործել գրեթե այն ամենը, ինչ կարող ենք պատկերացնել:</p>
+<p>Django ձևերի (Django forms-ի) մեջ հաճելին այն է, որ մենք կարող ենք զրոյից ստեղծել նոր ձև, կամ օգտագործել <code>ModelForm</code>-ը ՝ ձևերի պարունակությունը մոդելում պահելու համար: </p>
+<p>Սա հենց այն է, ինչ մենք ուզում ենք անել. Մենք ձև կստեղծենք <code>Post</code> մոդելի համար:</p>
+<p>Ինչպես Django-ի յուրաքանչյուր կարեւոր մաս, ձևերը (forms) նույնպես ունեն իրենց սեփական ֆայլը . <code>form.py</code>:</p>
+<p>Մենք պետք է այս անունով ֆայլ ստեղծենք <code>blog</code> գրացուցակում:</p>
+<pre><code>blog
+   └── forms.py
+</code></pre><p>Շատ լավ, եկեք բացենք այն կոդերի խմբագրում և մուտքագրենք հետևյալ կոդը.</p>
+<p></p><p class="code-label">blog/forms.py</p><p></p>
+<pre><code class="lang-python">django ներմուծման ձևերից
+
+.models- ից ներմուծում են Post
+
+դասի PostForm (forms. ModelForm):
+
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        model = Post
+        fields = (<span class="hljs-string">&apos;title&apos;</span>, <span class="hljs-string">&apos;text&apos;</span>,)
+</code></pre>
+<p>Նախ մենք պետք է ներմուծենք Django ձևերը/Django forms (<code>from django import forms</code> /django ներմուծման ձևերից) և մեր <code>Post</code> մոդելը/model (<code>.models- ից ներմուծում ենք Post</code>):</p>
+<p><code>PostForm</code> - ը, ինչպես, հավանաբար, ենթադրում եք, մեր ձևի անունն է: Մենք պետք է Django- ին ասենք, որ այս ձևը <code>ModelForm</code> է (այնպես որ Django- ն ինչ-որ կախարդանք անի մեզ համար). դրա համար պատասխանատու է <code>forms.ModelForm</code> - ը:</p>
+<p>Հաջորդը, մենք ունենք <code>class Meta</code>, որտեղ մենք սահմանում ենք (Django- ին), թե որ մոդելը կօգտագործվի այս ձևը ստեղծելու համար (<code>model = Post</code>): </p>
+<p>Վերջապես, մենք կարող ենք հստակեցնել, թե որ դաշտը (կամ դաշտերը) պետք է առկա լինեն մեր ֆորմայում: Այս սցենարում մենք ուզում ենք միայն <code>title (վերնագիրը)</code> և <code>text(տեքստը)</code> ցուցադրվեն. Հեղինակը պետք է լինի այն օգտվողը, ով մուտք է գործել իր օգտվողի անունով (այսինքն դու!) և <code>created_date(ստեղծված_ ամսաթիվը)</code>պետք է ավտոմատ կերպով տեղադրվի գրառման ստեղծման ժամանակ (այսինքն ՝ կոդով), այնպես չէ՞: </p>
+<p>Եվ վերջ այսքանը! Մեզ մնում է միայն օգտագործել ձևը <em>view</em> և ցուցադրել այն template-ում(ձևանմուշում):</p>
+<p>Այսպիսով, մեկ անգամ ևս մենք կստեղծենք link(հղում) դեպի էջ, URL, դիտում և template (ձևանմուշ):</p>
+<h2 id="link-հղում-դեպի-էջի-ձևը">Link (Հղում) դեպի էջի ձևը</h2>
+<p>Հղումը չավելացնելուց առաջ մեզ պետք են մի քանի պատկերակներ, որոնք կօգտագործվեն որպես հղման կոճակներ: Այս ձեռնարկի համար ներբեռնեք <a href="https://raw.githubusercontent.com/twbs/icons/main/icons/file-earmark-plus.svg" target="_blank"> file-earmark-plus.svg </a> և պահեք այն <code>blog/templates/blog/icons/</code> թղթապանակում:</p>
+<blockquote>
+<p>Նշում. SVG պատկերը ներբեռնելու համար բացեք համատեքստային ընտրացանկը հղման վրա (սովորաբար դրա վրա աջ կտտացնելով) և ընտրեք &lt;<save link as>&gt; («Պահել հղումը որպես»): Պատուհանում հարցնելով, թե որտեղ պետք է ֆայլը պահպանել, անցեք ձեր Django նախագծի <code>djangogirls</code> գրացուցակը, իսկ դրա ներքո ՝ <code>blog/templates/blog/icons/</code> ենթագրացուցակ, և ֆայլը այնտեղ պահեք:</save></p>
+</blockquote>
+<p>Codeամանակն է ծածկագրի խմբագրում բացել <code>blog/templates/blog/base.html</code>: Այժմ մենք կարող ենք օգտագործել այս պատկերակային ֆայլը բազային ձևանմուշի մեջ ՝ հետևյալ կերպ. <code>div</code> տարրում <code>headrer</code> բաժնում, մենք կավելացնենք հղում <code>h1</code> տարրից առաջ.</p>
+<p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;post_new&apos; %}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;top-menu&quot;</span>&gt;</span>
+    {% include &apos;./icons/file-earmark-plus.svg&apos; %}
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<p>Նկատի ունեցեք, որ մենք ուզում ենք մեր նոր տեսակետը կոչել <code>post_new</code>: <a href="https://icons.getbootstrap.com/icons/file-earmark-plus/" target="_blank">SVG icon</a> տրամադրվում է <a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap Icons </a> կողմից, և դրանում կցուցադրվի էջի պատկերակ <code>գումարած նշանով: Մենք օգտագործում ենք Django ձևանմուշի դիրեկտիվը, որը կոչվում է</code>include <code>: Սա ֆայլի պարունակությունը կներարկի Django ձևանմուշում: Վեբ զննարկիչը գիտի, թե ինչպես վարվել այս տեսակի բովանդակության հետ</code>առանց հետագա մշակման:</p>
+<blockquote>
+<p>Bootstrap- ի բոլոր պատկերակները կարող եք ներբեռնել <a href="https://github.com/twbs/icons/releases/download/v1.1.0/bootstrap-icons-1.1.0.zip" target="_blank"> here</a>: Անջատեք ֆայլը և պատճենեք բոլոր SVG պատկերային ֆայլերը <code>blog/templates/blog/</code> ներսում գտնվող նոր պանակի մեջ, որը կոչվում է <code>icons</code>: Այդ կերպ Դուք կարող եք մուտք գործել <code>pencil-fill.svg</code> պես պատկերակ ՝ օգտագործելով ֆայլի ուղի <code>blog/templates/blog/icons/pencil-fill.svg</code></p>
+</blockquote>
+<p>Տողը խմբագրելուց հետո ձեր HTML ֆայլը այժմ պետք է ունենա այսպիսի տեսք.</p>
+<p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
+<pre><code class="lang-html">{% load static %}
+<span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Django Girls blog<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css&quot;</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">&quot;sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2&quot;</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">&quot;anonymous&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&apos;//fonts.googleapis.com/css?family=Lobster&amp;subset=latin,latin-ext&apos;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&apos;stylesheet&apos;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&apos;text/css&apos;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% static &apos;css/blog.css&apos; %}&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-header&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;post_new&apos; %}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;top-menu&quot;</span>&gt;</span>
+                    {% include &apos;./icons/file-earmark-plus.svg&apos; %}
+                <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span>Django Girls Blog<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content container&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col&quot;</span>&gt;</span>
+                    {% block content %}
+                    {% endblock %}
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p><a href="http://127.0.0.1:8000" target="_blank">http://127.0.0.1:8000</a> էջը փրկելուց և թարմացնելուց հետո կտեսնեք ծանոթ <code>NoReverseMatch</code> error(սխալ) : Այդպե՞ս է: Լավ</p>
+<h2 id="url">URL</h2>
+<p>Կոդի խմբագրում բացում ենք <code>blog/urls.py</code> և ավելացնում տող.</p>
+<p></p><p class="code-label">blog/urls.py</p><p></p>
+<pre><code class="lang-python">path(<span class="hljs-string">&apos;post/new/&apos;</span>, views.post_new, name=<span class="hljs-string">&apos;post_new&apos;</span>),
+</code></pre>
+<p>Եվ վերջնական ծածկագիրը կտեսնի այսպես.</p>
+<p></p><p class="code-label">blog/urls.py</p><p></p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path
+<span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> views
+
+urlpatterns = [
+    path(<span class="hljs-string">&apos;&apos;</span>, views.post_list, name=<span class="hljs-string">&apos;post_list&apos;</span>),
+    path(<span class="hljs-string">&apos;post/&lt;int:pk&gt;/&apos;</span>, views.post_detail, name=<span class="hljs-string">&apos;post_detail&apos;</span>),
+    path(<span class="hljs-string">&apos;post/new/&apos;</span>, views.post_new, name=<span class="hljs-string">&apos;post_new&apos;</span>),
+]
+</code></pre>
+<p>Կայքը թարմացնելուց հետո մենք տեսնում ենք <code>AttributeError</code>, քանի որ իրականացված չենք <code>post_new</code> դիտումը: Եկեք ավելացնենք հենց հիմա:</p>
+<h2 id="postnew-view">post_new view</h2>
+<p>բացեք <code>բլոգը / views.py</code> ֆայլը ծածկագրի խմբագրում և ավելացնել տողերի մնացած տողերի հետևյալ տողերը. </p>
+<p></p><p class="code-label">blog/views.py</p><p></p>
+<pre><code class="lang-python">.forms- ից ներմուծում է PostForm
+</code></pre>
+<p>Եվ հետո մեր <em> տեսակետը </em>:</p>
+<p></p><p class="code-label"> blog/views.py </p><p></p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_new</span>(<span class="hljs-params">request</span>):</span>
+    form = PostForm()
+    <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_edit.html&apos;</span>, {<span class="hljs-string">&apos;form&apos;</span>: form})
+</code></pre>
+<p>Նոր <code>Post</code> ձև ստեղծելու համար հարկավոր է զանգահարել <code>PostForm ()</code> և փոխանցել այն ձևանմուշին: Մենք կվերադառնանք այս <em>view</em>, բայց առայժմ արագ եկեք ձևանմուշ ստեղծենք ձևի համար:</p>
+<h2 id="կաղապար">Կաղապար</h2>
+<p>Մենք պետք է <code>post_edit.html</code> գրացուցակում <code>blog/templates/blog</code> ֆայլ ստեղծենք և բացենք այն կոդերի խմբագրում: Ձևը գործ դնելու համար մեզ մի քանի բան է պետք.</p>
+<ul>
+<li>Մենք պետք է ցուցադրենք ձևը: Մենք կարող ենք դա անել (օրինակ) <code>{{ form.as_p }}</code> - ով:</li>
+<li>Վերևի տողը պետք է փաթաթված լինի HTML ձևի տարրով. <code>&lt;form method=&quot;POST&quot;&gt; ... &lt;/form&gt;</code>:</li>
+<li>Մեզ պետք է <code>Save</code> կոճակը: Մենք դա անում ենք HTML կոճակի միջոցով. <code>&lt;button type=&quot;submit&quot;&gt; Save &lt;/button&gt;</code>:</li>
+<li>Եվ, վերջապես, <code>&lt;form ...&gt;</code> թեգը բացելուց անմիջապես հետո մենք պետք է ավելացնենք  <code>{% csrf_token %}</code> : Սա շատ կարևոր է, քանի որ դրանով ապահովվում են ձեր ձևերի անվտանգությունը: Եթե ​​մոռանաք այս բիթի մասին, Django- ն կբողոքարկի, երբ փորձեք պահպանել ձևը.</li>
+</ul>
+<p><img src="images/csrf2.png" alt="CSFR Forbidden page"></p>
+<p>Լավ, այնպես որ եկեք տեսնենք, թե ինչպես պետք է HTML- ը <code>post_edit.html</code> - ում:</p>
+<p></p><p class="code-label">blog/templates/blog/post_edit.html</p><p></p>
+<pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
+
+{% block content %}
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>New post<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;POST&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post-form&quot;</span>&gt;</span>{% csrf_token %}
+        {{ form.as_p }}
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;save btn btn-default&quot;</span>&gt;</span>Save<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+{% endblock %}
+</code></pre>
+<p>Թարմացնելու ժամանակն է: Այո Ձեր ձևը ցուցադրվում է:</p>
+<p><img src="images/new_form2.png" alt="New form"></p>
+<p>Բայց սպասեք մի րոպե: Երբ ինչ-որ բան եք մուտքագրում <code>title</code> և <code>title</code> դաշտերում և փորձում եք այն պահպանել, ի՞նչ կլինի:</p>
+<p>Ոչինչ Մենք նորից նույն էջում ենք, և մեր տեքստը այլևս չկա ... և ոչ մի նոր գրառում չի ավելացվում: Այսպիսով, ի՞նչն է սխալ եղել: </p>
+<p>Պատասխանն է. Ոչինչ: Մենք պետք է մի փոքր ավելի շատ աշխատանք կատարենք մեր <em> view</em>:</p>
+<h2 id="ձևը-պահելը">Ձևը պահելը</h2>
+<p>Մեկ անգամ եւս բացեք <code>blog/views.py</code> կոդը խմբագրիչի մեջ: Ներկայումս <code>post_new</code> տեսքում մենք ունենք միայն հետևյալը.</p>
+<p></p><p class="code-label">blog/views.py</p><p></p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_new</span>(<span class="hljs-params">request</span>):</span>
+    form = PostForm()
+    <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_edit.html&apos;</span>, {<span class="hljs-string">&apos;form&apos;</span>: form})
+</code></pre>
+<p>Ձևը ներկայացնելիս մեզ հետ են բերում նույն տեսակետը, բայց այս անգամ մենք ունենք ևս մի քանի տվյալներ <code>request</code> - ում, ավելի կոնկրետ <code>request. POST</code> (անվանումն ունի ոչ մի կապ չունի բլոգի &quot;post&quot;(«գրառման») հետ. դա կապ ունի այն փաստի հետ, որ մենք &quot;psoting&quot; («տեղադրում ենք») տվյալներ): Հիշո՞ւմ եք, թե ինչպես HTML ֆայլում մեր <code>&lt;form&gt;</code> սահմանումն ուներ փոփոխական <code>method=&quot;POST&quot;</code>: Ձևի բոլոր դաշտերն այժմ գտնվում են <code>request.POST</code>: Դուք չպետք է վերանվանեք <code>POST</code> ը որևէ այլ բանի (<code>method</code> միակ այլ վավեր արժեքը <code>GET</code> է, բայց մենք ժամանակ չունենք բացատրելու, թե ինչ տարբերություն է):</p>
+<p>Այսպիսով, մեր <em> view</em> մենք ունենք կարգավորման երկու առանձին իրավիճակ. Առաջին ՝ երբ մենք առաջին անգամ մուտք ենք գործում էջ և ուզում ենք դատարկ ձև, և երկրորդ, երբ վերադառնում ենք <em> view</em> բոլոր մուտքագրված ձևի տվյալներով: Այսպիսով, մենք պետք է պայման դնենք (դրա համար կօգտագործենք <code>if</code>):</p>
+<p></p><p class="code-label">blog/views.py</p><p></p>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&quot;POST&quot;</span>:
+    [...]
+<span class="hljs-keyword">else</span>:
+    form = PostForm()
+</code></pre>
+<p>Լրացրեք կետերը <code>[...]</code>: Եթե ​​<code>method</code> <code>POST</code> է, ապա մենք ուզում ենք կառուցել <code>PostForm- ը</code> ձևից ստացված տվյալներով, այնպես չէ՞: Մենք դա կանենք հետևյալ կերպ.</p>
+<p></p><p class="code-label"> blog/views.py</p><p></p>
+<pre><code class="lang-python">form = PostForm(request.POST)
+</code></pre>
+<p>Հաջորդ բանը <code>ստուգել, ​​թե արդյոք ձևը ճիշտ է (բոլոր պահանջվող դաշտերը դրված են և սխալ արժեքներ չեն ներկայացվել): Մենք դա անում ենք</code> form.is_valid () ` - ի միջոցով:</p>
+<p>Մենք ստուգում ենք, արդյոք ձևը վավեր է, և եթե այո, ապա այն կարող ենք պահպանել:</p>
+<p></p><p class="code-label">blog/views.py</p><p></p>
+<pre><code class="lang-python"><span class="hljs-keyword">if</span> form.is_valid():
+    post = form.save(commit=<span class="hljs-literal">False</span>)
+    post.author = request.user
+    post.published_date = timezone.now()
+    post.save()
+</code></pre>
+<p>Ըստ էության, մենք այստեղ ունենք երկու բան. Մենք ձևը պահում ենք <code>form.save</code> և ավելացնում ենք հեղինակ. <code>commit = False</code> նշանակում է, որ մենք դեռ չենք ուզում պահպանել <code>Post</code> մոդելը. Մենք նախ ուզում ենք ավելացնել հեղինակին: Շատ ժամանակ դուք կօգտագործեք <code>form.save ()</code> առանց <code>commit = False</code>, բայց այս դեպքում մենք պետք է այն մատակարարենք: <code>post.save ()</code> կպահպանի փոփոխությունները (ավելացնելով հեղինակին) և կստեղծվի բլոգում նոր գրառում:</p>
+<p>Վերջապես, զարմանալի կլիներ, եթե մենք կարողանայինք անմիջապես անցնել <code>post_detail</code> էջը մեր նորաստեղծ բլոգում տեղադրելու համար, այնպես չէ՞: Դա անելու համար մեզ անհրաժեշտ է ևս մեկ ներմուծում.</p>
+<p></p><p class="code-label">blog/views.py</p><p></p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> redirect
+</code></pre>
+<p>Ավելացրեք այն ձեր ֆայլի հենց սկզբում: Եվ հիմա մենք կարող ենք ասել. «Անցեք <code>post_detail</code> էջը նորաստեղծ գրառման համար».</p>
+<p></p><p class="code-label">blog/views.py</p><p></p>
+<pre><code class="lang-python"><span class="hljs-keyword">return</span> redirect(<span class="hljs-string">&apos;post_detail&apos;</span>, pk=post.pk)
+</code></pre>
+<p><code>post_detail</code> այն տեսքի անունն է, որին մենք ցանկանում ենք այցելել: Հիշո՞ւմ եք, որ այս <em> view</em> պահանջում է <code>pk</code> փոփոխական: Այն դիտումներին փոխանցելու համար մենք օգտագործում ենք <code>pk = post.pk</code>, որտեղ <code>post</code> նոր ստեղծվող բլոգային գրառում է:</p>
+<p>Լավ, մենք շատ ենք խոսել, բայց հավանաբար ուզում ենք տեսնել, թե ինչպիսին է այժմ <em> view </em> ճիշտ է:</p>
+<p></p><p class="code-label"> բլոգ /views.py </p><p></p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_new</span>(<span class="hljs-params">request</span>):</span>
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&quot;POST&quot;</span>:
+        form = PostForm(request.POST)
+        <span class="hljs-keyword">if</span> form.is_valid():
+            post = form.save(commit=<span class="hljs-literal">False</span>)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            <span class="hljs-keyword">return</span> redirect(<span class="hljs-string">&apos;post_detail&apos;</span>, pk=post.pk)
+    <span class="hljs-keyword">else</span>:
+        form = PostForm()
+    <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_edit.html&apos;</span>, {<span class="hljs-string">&apos;form&apos;</span>: form})
+</code></pre>
+<p>Տեսնենք ՝ կաշխատի՞: Անցեք <a href="http://127.0.0.1:8000/post/new/" target="_blank">http://127.0.0.1:8000/post/new/</a> էջին, ավելացրեք <code>վերնագիր</code> և <code>տեքստ</code>, պահեք այն… և voilà: Ավելացվեց բլոգի նոր գրառումը, և մենք վերահասցեագրվում ենք <code>հաղորդագրության_մանրամասնություն</code> էջ:</p>
+<p>Գուցե նկատած լինեիք, որ մենք տեղադրում ենք հրապարակման ամսաթիվը նախքան հաղորդագրությունը պահելը: Ավելի ուշ, մենք կներկայացնենք <em> հրապարակման կոճակ </em> <strong> Django Girls Tutorial- ում ՝ Extensions </strong>:</p>
+<p>Դա հիանալի է!</p>
+<blockquote>
+<p>Քանի որ մենք վերջերս օգտագործել ենք Django ադմինիստրատորի միջերեսը, համակարգը ներկայումս կարծում է, որ մենք դեռ մուտք ենք գործել: Կան մի քանի իրավիճակներ, որոնք կարող են հանգեցնել մեզ դուրս գալուն (զննարկիչը փակելը, DB- ն վերագործարկելը և այլն): Եթե ​​հաղորդագրություն ստեղծելիս հայտնաբերում եք, որ սխալներ եք գրանցում մուտք գործած օգտվողի բացակայության վերաբերյալ, ապա անցեք ադմինիստրատորի էջ <a href="http://127.0.0.1:8000/admin" target="_blank">http://127.0.0.1:8000/admin</a> և կրկին մուտք գործեք: Դրանով խնդիրը ժամանակավորապես կկարգավորվի: <strong> Տնային առաջադրանք. Ձեզ սպասում է մշտական ​​շտկում ՝ հիմնական ձեռնարկից հետո անվտանգություն ավելացրեք ձեր կայքում: </strong></p>
+</blockquote>
+<p><img src="images/post_create_error.png" alt="Logged in error"></p>
+<h2 id="ձևի-վավերացում">Ձևի վավերացում</h2>
+<p>Այժմ մենք ձեզ ցույց կտանք, թե որքան զով են Django- ի ձևերը: Բլոգի գրառումը պետք է ունենա <code>title</code> և <code>text</code> դաշտեր: Մեր <code>Post</code> մոդելում մենք չասացինք, որ այս դաշտերը (ի տարբերություն <code>published_date</code>) չեն պահանջվում, ուստի Django- ն, ըստ նախնականի, ակնկալում է, որ դրանք կսահմանվեն:</p>
+<p>Փորձեք պահպանել ձևը առանց <code>title</code> և <code>text</code>: Գուշակիր, թե ինչ կլինի:</p>
+<p><img src="images/form_validation2.png" alt="Form validation"></p>
+<p>Django- ն հոգ է տանում հաստատելու, որ մեր ձևի բոլոր դաշտերը ճիշտ են: Հիանալի չէ՞:</p>
+<h2 id="խմբագրել-ձևը">Խմբագրել ձևը</h2>
+<p>Այժմ մենք գիտենք, թե ինչպես ավելացնել նոր գրառում: Բայց ի՞նչ կլինի, եթե մենք ուզում ենք խմբագրել գոյություն ունեցողը: Սա շատ նման է մեր արածին: Եկեք արագ ստեղծենք մի քանի կարևոր բաներ: (Եթե ինչ-որ բան չեք հասկանում, պետք է հարցնեք ձեր մարզչին կամ նայեք նախորդ գլուխներին, քանի որ մենք արդեն ծածկել ենք այս բոլոր քայլերը):</p>
+<p>Նախ, եկեք պահենք պատկերակը, որը ներկայացնում է խմբագրման կոճակը: Ներբեռնեք <a href="https://raw.githubusercontent.com/twbs/icons/main/icons/pencil-fill.svg" target="_blank"> pencil-fill.svg </a> - ը և այն պահեք <code>blog/templates/blog/icons/</code>:</p>
+<p>Կոդի խմբագրում բացեք <code>blog/templates/blog/post_detail.html</code> և <code>article</code> էլեմենտի մեջ ավելացրեք հետևյալ ծածկագիրը.</p>
+<p></p><p class="code-label">blog/templates/blog/post_detail.html</p><p></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;actions&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-default&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;post_edit&apos; pk=post.pk %}&quot;</span>&gt;</span>
+      {% include &apos;./icons/pencil-fill.svg&apos; %}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
+</code></pre>
+<p>այնպես, որ ձևանմուշն այսպիսին լինի.</p>
+<p></p><p class="code-label"> բլոգ / ձևանմուշներ / բլոգ / post_detail.html </p><p></p>
+<pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
+
+{% block content %}
+    <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;actions&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-default&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;post_edit&apos; pk=post.pk %}&quot;</span>&gt;</span>
+                {% include &apos;./icons/pencil-fill.svg&apos; %}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
+        {% if post.published_date %}
+            <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;date&quot;</span>&gt;</span>
+                {{ post.published_date }}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
+        {% endif %}
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>{{ post.title }}<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{ post.text|linebreaksbr }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+{% endblock %}
+</code></pre>
+<p>Բացեք <code>blog/urls.py</code> ծածկագրի խմբագրում և ավելացրեք այս տողը.</p>
+<p></p><p class="code-label">blog/urls.py</p><p></p>
+<pre><code class="lang-python">    path(<span class="hljs-string">&apos;post/&lt;int:pk&gt;/edit/&apos;</span>, views.post_edit, name=<span class="hljs-string">&apos;post_edit&apos;</span>),
+</code></pre>
+<p>Մենք կրկին կօգտագործենք <code>blog/templates/blog/post_edit.html</code> ձևանմուշը, այնպես որ վերջին բացակայողը <em> view -է</em>:</p>
+<p>Եկեք բացենք <code>blog/views.py</code> ծածկագրի խմբագրում և ավելացնենք սա ֆայլի հենց վերջում.</p>
+<p></p><p class="code-label">blog/views.py</p><p></p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_edit</span>(<span class="hljs-params">request, pk</span>):</span>
+    post = get_object_or_404(Post, pk=pk)
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&quot;POST&quot;</span>:
+        form = PostForm(request.POST, instance=post)
+        <span class="hljs-keyword">if</span> form.is_valid():
+            post = form.save(commit=<span class="hljs-literal">False</span>)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            <span class="hljs-keyword">return</span> redirect(<span class="hljs-string">&apos;post_detail&apos;</span>, pk=post.pk)
+    <span class="hljs-keyword">else</span>:
+        form = PostForm(instance=post)
+    <span class="hljs-keyword">return</span> render(request, <span class="hljs-string">&apos;blog/post_edit.html&apos;</span>, {<span class="hljs-string">&apos;form&apos;</span>: form})
+</code></pre>
+<p>Սա կարծես գրեթե նույնն է, ինչ մեր <code>post_new</code> տեսակետը: Բայց ոչ ամբողջությամբ: Մեկի համար մենք <code>url- ից</code> փոխանցում ենք լրացուցիչ <code>pk</code> պարամետր: Հաջորդը, մենք ստանում ենք <code>Post</code> մոդելը, որը ցանկանում ենք խմբագրել <code>get_object_or_404(Post, pk=pk)</code>, իսկ հետո, երբ ձև ենք ստեղծում, այս գրառումն անցնում ենք որպես <code>instance</code>, այնպես էլ, երբ ձևը պահում ենք</p>
+<p></p><p class="code-label">blog/views.py</p><p></p>
+<pre><code class="lang-python">form = PostForm(request.POST, instance=post)
+</code></pre>
+<p>… Եվ երբ մենք այս գրառմամբ նոր բացեցինք ձևաթուղթ ՝ խմբագրելու համար.</p>
+<p></p><p class="code-label">blog/views.py</p><p></p>
+<pre><code class="lang-python">form = PostForm(instance=post)
+</code></pre>
+<p>Լավ, եկեք փորձենք, արդյոք այն աշխատում է: Եկեք գնանք <code>post_detail</code> էջին: Վերին աջ անկյունում պետք է լինի խմբագրման կոճակ.</p>
+<p><img src="images/edit_button2.png" alt="Edit button"></p>
+<p>Երբ կտտացրեք այն, կտեսնեք ձևը մեր բլոգի գրառման հետ.</p>
+<p><img src="images/edit_form2.png" alt="Edit form"></p>
+<p>Ազատորեն փոխեք վերնագիրը կամ տեքստը և պահպանեք փոփոխությունները:</p>
+<p>Շնորհավորում եմ Ձեր դիմումը ավելի ու ավելի ամբողջական է դառնում:</p>
+<p>Եթե ​​Django ձևերի վերաբերյալ ավելի շատ տեղեկատվության կարիք ունեք, պետք է կարդաք փաստաթղթերը. <a href="https://docs.djangoproject.com/hy/2.2/topics/forms/" target="_blank">https://docs.djangoproject.com/hy/2.2/topics/forms/</a></p>
+<h2 id="անվտանգություն">Անվտանգություն</h2>
+<p>Հղումը կտտացնելով նոր հաղորդագրություններ ստեղծելու կարողությունը զարմանալի է: Բայց հենց հիմա, յուրաքանչյուր ոք, ով այցելում է ձեր կայք, կկարողանա նոր բլոգային գրառում կատարել, և դա, հավանաբար, ձեր ուզածը չէ: Եկեք այնպես անենք, որ կոճակը ցուցադրվի ձեզ համար, բայց ոչ ուրիշ մեկի:</p>
+<p>Բացեք <code>blog/templates/blog/base.html</code> կոդերի խմբագրում, գտեք մեր <code>div</code> <code>վերնագրի ներսում</code> և խարիսխի տարրը, որը դուք ավելի վաղ այնտեղ եք տեղադրել , Այն պետք է ունենա այսպիսի տեսք.</p>
+<p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;post_new&apos; %}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;top-menu&quot;</span>&gt;</span>
+    {% include &apos;./icons/file-earmark-plus.svg&apos; %}
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<p>Մենք դրան կավելացնենք ևս <code>{% if%}</code> պիտակը, որը կստիպի հղումը ցույց տալ միայն այն ադմինիստրատոր մուտք գործած օգտվողների համար: Հենց հիմա, դու հենց դու ես: Փոխեք <code>&lt;a&gt;</code> տարրը ՝ այսպիսի տեսք ունենալու համար.</p>
+<p></p><p class="code-label">blog/templates/blog/base.html</p><p></p>
+<pre><code class="lang-html">{% if user.is_authenticated %}
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;post_new&apos; %}&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;top-menu&quot;</span>&gt;</span>
+        {% include &apos;./icons/file-earmark-plus.svg&apos; %}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+{% endif %}
+</code></pre>
+<p>Սա <code>{% if %}</code> կհանգեցնի այն, որ հղումը կուղարկվի զննարկիչ, միայն եթե էջը հայցող օգտվողը մուտք է գործում: Սա ամբողջությամբ չի պաշտպանում նոր հաղորդագրությունների ստեղծումը, բայց դա լավ առաջին քայլ է: Մենք ավելի շատ անվտանգություն ենք ծածկելու ընդլայնման դասերին:</p>
+<p>Հիշո՞ւմ եք խմբագրման պատկերակը, որը մենք պարզապես ավելացրել ենք մեր մանրամասն էջին: Մենք ուզում ենք նաև նույն փոփոխությունն ավելացնել այնտեղ, այնպես որ այլ մարդիկ չեն կարողանա խմբագրել առկա հաղորդագրությունները:</p>
+<p>Բացեք <code>blog/templates/blog/post_detail.html</code> կոդերի խմբագրում և գտեք այս տողը.</p>
+<p></p><p class="code-label">blog/templates/blog/post_detail.html</p><p></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-default&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;post_edit&apos; pk=post.pk %}&quot;</span>&gt;</span>
+    {% include &apos;./icons/pencil-fill.svg&apos; %}
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<p>Փոխեք այն այստեղ ՝</p>
+<p></p><p class="code-label">blog/templates/blog/post_detail.html</p><p></p>
+<pre><code class="lang-html">{% if user.is_authenticated %}
+     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-default&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% url &apos;post_edit&apos; pk=post.pk %}&quot;</span>&gt;</span>
+        {% include &apos;./icons/pencil-fill.svg&apos; %}
+     <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+{% endif %}
+</code></pre>
+<p>Քանի որ, ամենայն հավանականությամբ, մուտք եք գործել կայք, եթե թարմացնեք էջը, այլ բան չեք տեսնի: Էջը բեռնեք այլ զննարկչում կամ ինկոգնիտո պատուհանում (Windows Edge- ում կոչվում է «InPrivate»), և կտեսնեք, որ հղումը չի ցուցադրվում, և պատկերակը նույնպես չի ցուցադրվում:</p>
+<h2 id="եվս-մեկ-բան-տեղաբաշխեք-ժամանակ">Եվս մեկ բան. Տեղաբաշխեք ժամանակ:</h2>
+<p>Տեսնենք, արդյոք այս ամենը աշխատում է PythonAnywhere- ում: Anotherամանակն է նոր տեղակայման:</p>
+<ul>
+<li>Նախ, կատարեք ձեր նոր ծածկագիրը և սեղմեք այն դեպի GitHub:</li>
+</ul>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>$ git status
+$ git add .
+$ git status
+$ git commit -m &quot;Added views to create/edit blog post inside the site.&quot;
+$ git push
+</code></pre><ul>
+<li>Հետո, <a href="https://www.pythonanywhere.com/consoles/" target="_blank"> PythonAnywhere Bash կոնսոլում </a></li>
+</ul>
+<p></p><p class="code-label">PythonAnywhere command-line</p><p></p>
+<pre><code>$ cd ~/&lt;your-pythonanywhere-domain&gt;.pythonanywhere.com
+$ git pull
+[...]
+</code></pre><p>(Մի մոռացեք փոխարինել <code>&lt;your-pythonanywhere-domain&gt;</code> ձեր իրական PythonAnywhere ենթադոմեյնով ՝ առանց անկյունային փակագծերի:)</p>
+<ul>
+<li>Ի վերջո, անցեք <a href="https://www.pythonanywhere.com/web_app_setup/" target="_blank"> &quot;Web&quot; page</a> (օգտագործեք մենյուի վերևի աջ մասում ընտրացանկի կոճակը) և սեղմեք <strong> Reload</strong>: Թարմացրեք ձեր <a href="https://subdomain.pythonanywhere.com" target="_blank">https://subdomain.pythonanywhere.com</a> բլոգը ՝ փոփոխությունները տեսնելու համար:</li>
+</ul>
+<p>Եվ դա պետք է լինի դա: Շնորհավորանքներ :)</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../extend_your_application/" class="navigation navigation-prev " aria-label="Previous page:  Ընդլայնել ձեր դիմումը">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../whats_next/" class="navigation navigation-next " aria-label="Next page:  Ի՞նչ է հաջորդը">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Django Forms","level":"1.24","depth":1,"next":{"title":" Ի՞նչ է հաջորդը","level":"1.25","depth":1,"path":"whats_next/README.md","ref":"whats_next/README.md","articles":[]},"previous":{"title":" Ընդլայնել ձեր դիմումը","level":"1.23","depth":1,"path":"extend_your_application/README.md","ref":"extend_your_application/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"hy","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_forms/README.md","mtime":"2021-06-14T07:25:11.913Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-06-14T07:25:27.726Z"},"basePath":"..","book":{"language":"hy"}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx-ex/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

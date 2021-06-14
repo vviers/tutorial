@@ -1,0 +1,904 @@
+
+<!DOCTYPE HTML>
+<html lang="hy" >
+    <head>
+        <meta charset="UTF-8">
+        <title> Django- ի տեղադրում · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.20">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-richquotes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sidebar-ad/sidebar-ad.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx-ex/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../django_start_project/" />
+    
+    
+    <link rel="prev" href="../django/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+  
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://gitter.im/DjangoGirls/tutorial" target="_blank" class="custom-link">Need help? Talk to us!</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Ներածություն
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../installation/">
+            
+                <a href="../installation/">
+            
+                    
+                    Installation (Տեղադրում)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../installation/">
+            
+                <a href="../installation/#command-line">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../installation/">
+            
+                <a href="../installation/#python">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../installation/">
+            
+                <a href="../installation/#code-editor">
+            
+                    
+                    Code Editor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../installation/">
+            
+                <a href="../installation/#virtualenv">
+            
+                    
+                    Virtual Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../installation/">
+            
+                <a href="../installation/#django">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../installation/">
+            
+                <a href="../installation/#git">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../installation/">
+            
+                <a href="../installation/#github">
+            
+                    
+                    GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../installation/">
+            
+                <a href="../installation/#pythonanywhere">
+            
+                    
+                    PythonAnywhere
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chromebook_setup/">
+            
+                <a href="../chromebook_setup/">
+            
+                    
+                    Installation (chromebook) (Տեղադրում)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../how_the_internet_works/">
+            
+                <a href="../how_the_internet_works/">
+            
+                    
+                    Ինչպես է աշխատում ինտերնետը
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../intro_to_command_line/">
+            
+                <a href="../intro_to_command_line/">
+            
+                    
+                     Command line-ի (Հրամանի տողի) ներածություն
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../python_installation/">
+            
+                <a href="../python_installation/">
+            
+                    
+                    Python- ի տեղադրում
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../code_editor/">
+            
+                <a href="../code_editor/">
+            
+                    
+                    Կոդի խմբագիր
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../python_introduction/">
+            
+                <a href="../python_introduction/">
+            
+                    
+                    Ներածություն Python- ին
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../django/">
+            
+                <a href="../django/">
+            
+                    
+                     Ի՞նչ է Django- ն:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                     Django- ի տեղադրում
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../django_start_project/">
+            
+                <a href="../django_start_project/">
+            
+                    
+                    Ձեր առաջին Django նախագիծը:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../django_models/">
+            
+                <a href="../django_models/">
+            
+                    
+                    Django մոդելներ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../django_admin/">
+            
+                <a href="../django_admin/">
+            
+                    
+                     Django ադմին
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../deploy/">
+            
+                <a href="../deploy/">
+            
+                    
+                    Deploy!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../django_urls/">
+            
+                <a href="../django_urls/">
+            
+                    
+                    Django URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../django_views/">
+            
+                <a href="../django_views/">
+            
+                    
+                     Django views- Ստեղծագործելու ժամանակն է:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                     HTML- ի ներածություն
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../django_orm/">
+            
+                <a href="../django_orm/">
+            
+                    
+                     Django ORM (Querysets)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../dynamic_data_in_templates/">
+            
+                <a href="../dynamic_data_in_templates/">
+            
+                    
+                    Դինամիկ տվյալներ կաղապարներում
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../django_templates/">
+            
+                <a href="../django_templates/">
+            
+                    
+                     Django templates (կաղապարներ)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../css/">
+            
+                <a href="../css/">
+            
+                    
+                     CSS - դարձրեք այն գեղեցիկ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../template_extending/">
+            
+                <a href="../template_extending/">
+            
+                    
+                    Template extending
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../extend_your_application/">
+            
+                <a href="../extend_your_application/">
+            
+                    
+                     Ընդլայնել ձեր դիմումը
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../django_forms/">
+            
+                <a href="../django_forms/">
+            
+                    
+                    Django Forms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../whats_next/">
+            
+                <a href="../whats_next/">
+            
+                    
+                     Ի՞նչ է հաջորդը
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+  <div class="sidebar-addition">
+      
+        <a href="https://www.patreon.com/djangogirls" target="_blank">
+      
+        <img src="https://djangogirls.org/static/img/global/donate/lagos.jpg" />
+      
+        </a>
+      
+      
+        <p>💖 Support our work and donate to our project! ✨</p>
+      
+      
+      <a href="https://www.patreon.com/djangogirls" class="btn" target="_blank">
+        Donate now!
+      </a>
+      
+  </div>
+
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." > Django- ի տեղադրում</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="django--ի-տեղադրում">Django- ի տեղադրում</h1>
+<blockquote>
+<p><strong>Նշում</strong> Եթե Chromebook եք օգտագործում, բաց թողեք այս գլուխը և համոզվեք, որ հետևում եք <a href="../chromebook_setup/">Chromebook Setup/Chromebook- ի կարգավորման</a> ցուցումներին:</p>
+<p><strong>Նշում</strong> Եթե դուք արդեն ավարտել եք տեղադրումը <a href="../installation/">installation steps</a> , կարող եք ուղղակիորեն անցնել հաջորդ գլխին:</p>
+<p>Այս բաժնի մի մասը հիմնված է Geek Girls Carrots- ի (<a href="https://github.com/ggcarrots/django-carrots" target="_blank">https://github.com/ggcarrots/django-carrots</a>) ձեռնարկների վրա:</p>
+<p>Այս բաժնի մի մասը հիմնված է <a href="http://django-marcador.keimlink.de/" target="_blank">django-marcador- ի վրա ձեռնարկ</a> լիցենզավորված Creative Commons- ի ներքո Attribution-ShareAlike 4.0 միջազգային լիցենզիա: Django-marcador ձեռնարկի հեղինակային իրավունքի պաշտպանն են Markus Zapke-Gründemann et al.</p>
+</blockquote>
+<h2 id="վիրտուալ-միջավայր">Վիրտուալ միջավայր</h2>
+<p>Նախքան Django- ն տեղադրելը, մենք ձեզ կառաջարկենք տեղադրել չափազանց օգտակար գործիք, որը կօգնի ձեր կոդավորման միջավայրը կոկիկ պահել ձեր համակարգչում: Հնարավոր է բաց թողնել այս քայլը, բայց խորհուրդ է տրվում իրականացնել: Հնարավոր լավագույն կարգավորումից սկսելը ապագայում ձեզ շատ դժվարություններ կփրկի:</p>
+<p>Այսպիսով, եկեք ստեղծենք <strong> վիրտուալ միջավայր/virtual environment</strong> (կոչվում է նաև <em>virtualenv</em> ): Virtualenv- ը մեկուսացնելու է ձեր Python / Django- ի տեղադրումը ՝ ըստ նախագծի: Սա նշանակում է, որ որևէ փոփոխություն, որ կատարեք մեկ կայքում, չի ազդի որևէ այլ կայքի վրա, որը դուք նույնպես զարգացնում եք: Կոկիկ է, այնպես չէ՞:</p>
+<p>Դուք պետք է ընդամենը գտնեք գրացուցակ, որում ցանկանում եք ստեղծել <code>virtualenv</code>; ձեր տան գրացուցակը, օրինակ. Windows- ում այն ​​կարող է նման լինել <code>C:\Users\Name</code> (որտեղ <code>Name</code> - ը ձեր մուտքի անունն է):</p>
+<blockquote>
+<p><strong> ՆՇՈՒՄ. </strong> Windows- ում համոզվեք, որ այս գրացուցակը չի պարունակում շեշտադրված կամ հատուկ նիշեր. եթե ձեր օգտանունը պարունակում է ընդգծված նիշեր, օգտագործեք այլ գրացուցակ, օրինակ ՝ <code>C:\djangogirls</code>:</p>
+</blockquote>
+<p>Այս ձեռնարկի համար մենք կօգտագործենք նոր գրացուցակ <code>djangogirls</code> ձեր տան գրացուցակից.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>$ mkdir djangogirls
+$ cd djangogirls
+</code></pre><p>Մենք պատրաստելու ենք մի վիրտուալ անուն, որը կոչվում է <code>myvenv</code>: Ընդհանուր հրամանը կլինի ձևաչափով/format.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>$ python3 -m venv myvenv
+</code></pre><sec data-title="Virtual environment: Windows" data-id="virtualenv_installation_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Virtual environment: Windows<a class="pull-right section atTitle btn btn-default" target="virtualenv_installation_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_installation_windows"><div class="panel-body">
+<p>Նոր <code>virtualenv</code> ստեղծելու համար հարկավոր է բացել հրամանի տողը և գործարկել <code>python -m venv myvenv</code>: Դա կունենա այսպիսի տեսք.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>C:\Users\Name\djangogirls&gt; python -m venv myvenv
+</code></pre><p>Որտեղ <code>myvenv</code> - ը ձեր <code>virtualenv</code> անունն է: Կարող եք օգտագործել ցանկացած այլ անուն, բայց հավատարիմ մնացեք փոքրատառերին և մի օգտագործեք բացատներ, շեշտադրումներ կամ հատուկ նիշեր: Լավ է նաև, որ անունը կարճ մնա. Դուք դեռ շատ կանդրադառնաք դրան:</p>
+</div></div></div></sec>
+<sec data-title="Virtual environment: Linux and OS X" data-id="virtualenv_installation_linuxosx" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Virtual environment: Linux and OS X<a class="pull-right section atTitle btn btn-default" target="virtualenv_installation_linuxosx"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_installation_linuxosx"><div class="panel-body">
+<p>Մենք կարող ենք ստեղծել <code>virtualenv</code> ինչպես Linux- ի, այնպես էլ OS X- ի վրա ՝ գործարկելով <code>python3 -m venv myvenv</code>: Դա կունենա այսպիսի տեսք.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>$ python3 -m venv myvenv
+</code></pre><p><code>myvenv</code> - ը ձեր <code>virtualenv</code> անունն է: Կարող եք օգտագործել ցանկացած այլ անուն, բայց հավատարիմ մնացեք փոքրատառերին և բացատներ մի օգտագործեք: Լավ է նաև, որ անունը կարճ մնա. Դուք դեռ շատ կանդրադառնաք դրան:</p>
+<blockquote>
+<p><strong> ՆՇՈՒՄ. </strong> Debian / Ubuntu- ի որոշ տարբերակների վրա կարող եք ստանալ հետևյալ սխալը.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>Վիրտուալ միջավայրը հաջողությամբ չի ստեղծվել, քանի որ ensurepip- ը հասանելի չէ:  Debian / Ubuntu համակարգերում անհրաժեշտ է տեղադրել python3-venv փաթեթը ՝ օգտագործելով հետևյալ հրամանը:
+   apt install python3-venv
+Հնարավոր է, որ ձեզ հարկավոր է օգտագործել sudo(սուդո) այդ հրահանգով:
+  Python3-venv փաթեթը տեղադրելուց հետո վերստեղծեք ձեր virtual environment (վիրտուալ միջավայր)-ը:
+</code></pre><p>Այս դեպքում հետևեք վերը նշված հրահանգներին և տեղադրեք <code>python3-venv</code> փաթեթը. </p><p class="code-label">command-line</p><p></p>
+<pre><code>$ sudo apt install python3-venv
+</code></pre><p><strong> ՆՇՈՒՄ. </strong> Debian / Ubuntu- ի որոշ տարբերակներում վիրտուալ միջավայր նախաձեռնելիս այն տալիս է հետևյալ սխալը.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>Error: Command &apos;[&apos;/home/eddie/Slask/tmp/venv/bin/python3&apos;, &apos;-Im&apos;, &apos;ensurepip&apos;, &apos;--upgrade&apos;, &apos;--default-pip&apos;]&apos; returned non-zero exit status 1
+</code></pre><p>Այս խնդրը շրջանցելու համար օգտագործեք <code>virtualenv</code> հրամանը:</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>$ sudo apt install python-virtualenv
+$ virtualenv --python=python3.8 myvenv
+</code></pre><p><strong>Նշում</strong> Եթե նման սխալ եք ստանում</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>E: Unable to locate package python3-venv
+</code></pre><p>փոխարենը բաց թող</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>sudo apt install python3.8-venv
+</code></pre></blockquote>
+</div></div></div></sec>
+<h2 id="վիրտուալենվիvirtualenv-ի-հետ-աշխատանք">Վիրտուալենվի/virtualenv-ի հետ աշխատանք</h2>
+<p>Վերոնշյալ հրամանը կստեղծի <code>myvenv</code> գրացուցակ (կամ մեկ այլ ՝ ձեր ընտրած ցանկացած անուն), որը կպարունակի վիրտուալ միջավայր/ virtual environment (հիմնականում ֆայլերի և պանակների շարք):</p>
+<sec data-title="Working with virtualenv: Windows" data-id="virtualenv_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Working with virtualenv: Windows<a class="pull-right section atTitle btn btn-default" target="virtualenv_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_windows"><div class="panel-body">
+<p>Սկսեք ձեր վիրտուալ միջավայրը/virtual environment-ը `գործարկելով.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>C:\Users\Name\djangogirls&gt; myvenv\Scripts\activate
+</code></pre><blockquote>
+<p><strong> Նշում. </strong> Windows 10-ի դեպքում Windows PowerShell- ում կարող է ստացվել սխալի հաղորդագրություն, որում ասվում է, որ <code>execution of scripts is disabled on this system/սցենարը անջատված է այս համակարգում</code> Այս դեպքում բացեք մեկ այլ Windows PowerShell «Գործարկեք որպես ադմինիստրատոր»/&quot;Run as Administrator&quot; տարբերակով: Դրանից հետո փորձեք մուտքագրել հետևյալ հրամանը ՝ նախքան ձեր վիրտուալ միջավայրի/virtual environment-ի սկսելը.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>C:\WINDOWS\system32&gt; Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+    Execution Policy Change
+    The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies help topic at http://go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy? [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is &quot;N&quot;): A
+</code></pre></blockquote>
+<!-- (This comment separates the two blockquote blocks, so that GitBook and Crowdin don't merge them into a single block.) -->
+<blockquote>
+<p><strong>Նշում</strong> Հանրաճանաչ խմբագիր VS Code- ի օգտագործողների համար, որոնք գալիս են Windows PowerShell- ի վրա հիմնված ինտեգրված տերմինալ, եթե ցանկանում եք հավատարիմ մնալ ինտեգրված տերմինալին, կարող եք գործարկել հետևյալ հրահանգը ՝ ձեր վիրտուալ միջավայրն ակտիվացնելու համար.</p>
+<pre><code>$ . myvenv\Scripts\activate.ps1
+</code></pre><p>Առավելությունն այն է, որ անհրաժեշտ չէ փոխություն անել խմբագրի պատուհանի և հրամանի տողի միջև:</p>
+</blockquote>
+</div></div></div></sec>
+<sec data-title="Working with virtualenv: Linux and OS X" data-id="virtualenv_linuxosx" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Working with virtualenv: Linux and OS X<a class="pull-right section atTitle btn btn-default" target="virtualenv_linuxosx"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="virtualenv_linuxosx"><div class="panel-body">
+<p>Սկսեք ձեր վիրտուալ միջավայրը/virtual environment-ը `գործարկելով.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>$ source myvenv/bin/activate
+</code></pre><p>Մի մոռացեք <code>myvenv</code> -ը փոխարինել ձեր ընտրած <code>virtualenv</code> անունով:</p>
+<blockquote>
+<p><strong>Նշում</strong>երբեմն <code>source/աղբյուրը</code> կարող է անհասանելի լինել: Այդ դեպքում օգտագործեք հետևյալ մեթոդը.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>$ . myvenv/bin/activate
+</code></pre></blockquote>
+</div></div></div></sec>
+<p>Դուք կհասկանաք, որ virtualenv- ն աշխատում է, երբ հրամանի տողում տեսնեք <code>(myvenv)</code> նախածանցը:</p>
+<p>Վիրտուալ միջավայրի հետ աշխատելիս <code>python</code> հրամանն ինքնաբերաբար կվերաբերվի լեզվի ճիշտ տարբերակին, այնպես որ ձեզ հարկավոր չէ օգտագործել <code>python3</code>: </p>
+<p>Հիանալի է, հիմա մենք բոլոր կարեւոր կախվածությունները կպահենք մեկ տեղում: Վերջապես, դուք կարող եք տեղադրել Django- ն:</p>
+<h2 id="django">Django- ի տեղադրում </h2>
+<p>Այժմ, երբ ձեր <code>virtualenv</code>-ն աշխատում է, կարող եք տեղադրել Django- ն:</p>
+<p>Բայց մինչ այդ մենք պետք է համոզվենք, որ մենք ունենք <code>pip</code>- ի վերջին տարբերակը տեղադրված, դա այն ծրագիրն է, որը մենք կօգտագործենք Django- ն տեղադրելու համար.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>(myvenv) ~$ python -m pip install --upgrade pip
+</code></pre><h3 id="փաթեթների-տեղադրում-պահանջներով">Փաթեթների տեղադրում պահանջներով</h3>
+<p>Պահանջների ֆայլը/A requirements file պահում է կախվածության ցուցակը որը տեղադրվելու է օգտագործելով <code>pip install</code>:</p>
+<p>Սկզբից <code>djangogirls/</code> թղթապանակի մեջ ստեղծեք <code>requirements.txt</code> ֆայլ ՝ օգտագործելով ավելի վաղ տեղադրած կոդերի խմբագրիչը: Դուք դա անում եք կոդի խմբագրում/code editor-ում նոր ֆայլ բացելով, այնուհետև պահպանելով այն որպես <code>requirements.txt/ պահանջներ</code> <code>djangogirls/</code> թղթապանակում: Ձեր թղթապանակն այսպիսի տեսք կունենա.</p>
+<pre><code>djangogirls
+├── myvenv
+│   └── ...
+└───requirements.txt
+</code></pre><p>Հետևյալ կոդը ավելացրեք ձեր <code>djangogirls/requirements.txt</code> ֆայլում.</p>
+<p></p><p class="code-label">djangogirls/requirements.txt</p><p></p>
+<pre><code>Django~=2.2.4
+</code></pre><p>Django- ն տեղադրելու համար այժմ մուտքագրեք <code>pip install -r requirements.txt</code>:</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>(myvenv) ~$ pip install -r requirements.txt
+Collecting Django~=2.2.4 (from -r requirements.txt (line 1))
+  Downloading Django-2.2.4-py3-none-any.whl (7.1MB)
+Installing collected packages: Django
+Successfully installed Django-2.2.4
+</code></pre><sec data-title="Installing Django: Windows" data-id="django_err_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Installing Django: Windows<a class="pull-right section atTitle btn btn-default" target="django_err_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_err_windows"><div class="panel-body">
+<blockquote>
+<p>Եթե ​​Windows- ում pip գործարկելիս սխալ եք ստացել, ստուգեք, որ նախագծի գրացուցակը չի պարունակում հեռավորություններ կամ հատուկ նիշեր (օրինակ, <code>C:\Users\User Name\djangogirls</code>): Եթե ​​սա է խնդիրը, ապա խնդրում ենք ձեր նախագիծը տեղափոխել մեկ այլ վայր, որի հասցեն չի պարունակի բացատներ և հատուկ նիշեր (խորհուրդ ենք տալիս ՝ <code>C:\djangogirls</code>): Նոր գրացուցակում ստեղծեք նոր virtualenv, այնուհետև ջնջեք հինը և կրկնեք վերը նշված հրահանգները: (Virtualenv գրացուցակի տեղափոխումը չի գործի, քանի որ virtualenv- ն օգտագործում է բացարձակ ուղիներ):</p>
+</blockquote>
+</div></div></div></sec>
+<sec data-title="Installing Django: Windows 8 and Windows 10" data-id="django_err_windows8and10" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Installing Django: Windows 8 and Windows 10<a class="pull-right section atTitle btn btn-default" target="django_err_windows8and10"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_err_windows8and10"><div class="panel-body">
+<blockquote>
+<p>Հրամանի տողը կարող է սառեցնել Django- ն տեղադրելու փորձից հետո: Եթե ​​դա տեղի ունենա, ապա վերը նշված հրամանի փոխարեն օգտագործեք այս մեկը.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>C:\Users\Name\djangogirls&gt; python -m pip install -r requirements.txt
+</code></pre></blockquote>
+</div></div></div></sec>
+<sec data-title="Installing Django: Linux" data-id="django_err_linux" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Installing Django: Linux<a class="pull-right section atTitle btn btn-default" target="django_err_linux"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="django_err_linux"><div class="panel-body">
+<blockquote>
+<p>Եթե ​​Ubuntu 12.04-ին pip զանգահարելիս սխալի եք հանդիպում, գործարկեք <code>python -m pip install -U --force-reinstall pip</code> ՝ վիրտուալում pip- ի տեղադրումն ամրագրելու համար: </p>
+</blockquote>
+</div></div></div></sec>
+<p>Վերջ Դուք այժմ (վերջապես) պատրաստ եք ստեղծել Django հավելված:</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../django/" class="navigation navigation-prev " aria-label="Previous page:  Ի՞նչ է Django- ն:">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../django_start_project/" class="navigation navigation-next " aria-label="Next page: Ձեր առաջին Django նախագիծը:">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":" Django- ի տեղադրում","level":"1.10","depth":1,"next":{"title":"Ձեր առաջին Django նախագիծը:","level":"1.11","depth":1,"path":"django_start_project/README.md","ref":"django_start_project/README.md","articles":[]},"previous":{"title":" Ի՞նչ է Django- ն:","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"hy","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_installation/README.md","mtime":"2021-06-14T07:25:11.917Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-06-14T07:25:27.726Z"},"basePath":"..","book":{"language":"hy"}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx-ex/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

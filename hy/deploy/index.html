@@ -1,0 +1,973 @@
+
+<!DOCTYPE HTML>
+<html lang="hy" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Deploy! · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.20">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-richquotes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sidebar-ad/sidebar-ad.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sectionx-ex/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../django_urls/" />
+    
+    
+    <link rel="prev" href="../django_admin/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+  
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://gitter.im/DjangoGirls/tutorial" target="_blank" class="custom-link">Need help? Talk to us!</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Ներածություն
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../installation/">
+            
+                <a href="../installation/">
+            
+                    
+                    Installation (Տեղադրում)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../installation/">
+            
+                <a href="../installation/#command-line">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../installation/">
+            
+                <a href="../installation/#python">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../installation/">
+            
+                <a href="../installation/#code-editor">
+            
+                    
+                    Code Editor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../installation/">
+            
+                <a href="../installation/#virtualenv">
+            
+                    
+                    Virtual Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../installation/">
+            
+                <a href="../installation/#django">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../installation/">
+            
+                <a href="../installation/#git">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../installation/">
+            
+                <a href="../installation/#github">
+            
+                    
+                    GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../installation/">
+            
+                <a href="../installation/#pythonanywhere">
+            
+                    
+                    PythonAnywhere
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chromebook_setup/">
+            
+                <a href="../chromebook_setup/">
+            
+                    
+                    Installation (chromebook) (Տեղադրում)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../how_the_internet_works/">
+            
+                <a href="../how_the_internet_works/">
+            
+                    
+                    Ինչպես է աշխատում ինտերնետը
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../intro_to_command_line/">
+            
+                <a href="../intro_to_command_line/">
+            
+                    
+                     Command line-ի (Հրամանի տողի) ներածություն
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../python_installation/">
+            
+                <a href="../python_installation/">
+            
+                    
+                    Python- ի տեղադրում
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../code_editor/">
+            
+                <a href="../code_editor/">
+            
+                    
+                    Կոդի խմբագիր
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../python_introduction/">
+            
+                <a href="../python_introduction/">
+            
+                    
+                    Ներածություն Python- ին
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../django/">
+            
+                <a href="../django/">
+            
+                    
+                     Ի՞նչ է Django- ն:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../django_installation/">
+            
+                <a href="../django_installation/">
+            
+                    
+                     Django- ի տեղադրում
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../django_start_project/">
+            
+                <a href="../django_start_project/">
+            
+                    
+                    Ձեր առաջին Django նախագիծը:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../django_models/">
+            
+                <a href="../django_models/">
+            
+                    
+                    Django մոդելներ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../django_admin/">
+            
+                <a href="../django_admin/">
+            
+                    
+                     Django ադմին
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Deploy!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../django_urls/">
+            
+                <a href="../django_urls/">
+            
+                    
+                    Django URLs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../django_views/">
+            
+                <a href="../django_views/">
+            
+                    
+                     Django views- Ստեղծագործելու ժամանակն է:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                     HTML- ի ներածություն
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../django_orm/">
+            
+                <a href="../django_orm/">
+            
+                    
+                     Django ORM (Querysets)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../dynamic_data_in_templates/">
+            
+                <a href="../dynamic_data_in_templates/">
+            
+                    
+                    Դինամիկ տվյալներ կաղապարներում
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../django_templates/">
+            
+                <a href="../django_templates/">
+            
+                    
+                     Django templates (կաղապարներ)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../css/">
+            
+                <a href="../css/">
+            
+                    
+                     CSS - դարձրեք այն գեղեցիկ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../template_extending/">
+            
+                <a href="../template_extending/">
+            
+                    
+                    Template extending
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../extend_your_application/">
+            
+                <a href="../extend_your_application/">
+            
+                    
+                     Ընդլայնել ձեր դիմումը
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../django_forms/">
+            
+                <a href="../django_forms/">
+            
+                    
+                    Django Forms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../whats_next/">
+            
+                <a href="../whats_next/">
+            
+                    
+                     Ի՞նչ է հաջորդը
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+  <div class="sidebar-addition">
+      
+        <a href="https://www.patreon.com/djangogirls" target="_blank">
+      
+        <img src="https://djangogirls.org/static/img/global/donate/lagos.jpg" />
+      
+        </a>
+      
+      
+        <p>💖 Support our work and donate to our project! ✨</p>
+      
+      
+      <a href="https://www.patreon.com/djangogirls" class="btn" target="_blank">
+        Donate now!
+      </a>
+      
+  </div>
+
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Deploy!</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="հրապարակում">Հրապարակում</h1>
+<blockquote>
+<p><strong>Նշում</strong> Հաջորդ գլուխը, որոշ դեպքերում կարող է մի փոքր դժվար թվալ: Եղեք համառ և ավարտին հասցրեք այն, սերվերային կայքի տեղադրումը վեբ մշակման կարևոր մասն է: Այս գլուխը միտումնավոր տեղադրված է ձեռնարկի մեջտեղում, որպեսզի ձեր ուսուցիչը կարողանա օգնել ձեզ կայք թողարկելու բարդ գործընթացում: Այս կերպ Դուք կարող եք ինքնուրույն լրացնել բոլոր գլուխները, նույնիսկ եթե ժամանակը սուղ է:</p>
+</blockquote>
+<p>Մինչ այժմ ձեր կայքը հասանելի էր միայն ձեր համակարգչում: Այժմ դուք կսովորեք, թե ինչպես «տեղակայել/շահագործման հանձնել» ձեր կայքը: Տեղակայումը ձեր ծրագիրը ինտերնետում հրապարակելու գործընթացն է, որպեսզի մարդիկ վերջապես տեսնեն ձեր ստեղծած աշխատանքը: :) :)</p>
+<p>Ինչպես արդեն գիտեք, կայքը պետք է տեղակայված լինի սերվերի վրա: Ինտերնետում կան շատ սերվերների մատակարարներ, մենք կօգտագործենք <a href="https://www.pythonanywhere.com/" target="_blank">PythonAnywhere</a> - ը: PythonAnywhere- ն անվճար է փոքր ծրագրերի համար, որոնք ունեն փոքր թվով այցելուներ, ինչը մեզ համար ավելի քան բավարար է:</p>
+<p>Մյուս արտաքին ծառայությունը, որը մենք կօգտագործենք, <a href="https://www.github.com" target="_blank"> GitHub </a> է, որը ծածկագրերի հոսթինգի (hosting-սպասարկման) ծառայություն է: Կան նաև այլ նմանատիպ ծառայություններ, բայց այսօր գրեթե յուրաքանչյուր ծրագրավորող ունի GitHub հաշիվ, և հիմա դուք նույնպես::</p>
+<p>Այս երեք տեղերը ձեզ համար կարևոր կլինեն: Ձեր տեղական համակարգիչը կլինի այն վայրը, որտեղ դուք կկատարեք մշակում և փորձարկում: Երբ գոհ լինեք փոփոխություններից, ձեր ծրագրի պատճենը կտեղադրեք GitHub- ում: Ձեր կայքը կլինի PythonAnywhere- ում, և դուք այն կթարմացնեք ՝ GitHub-ից ձեր կոդի նոր օրինակը ստանալու միջոցով:</p>
+<h1 id="git">Git</h1>
+<blockquote>
+<p><strong> Նշում </strong> Եթե դուք արդեն կատարել եք <a href="../installation/">installation steps</a>, (տեղադրման քայլերը), ապա դա նորից անելու անհրաժեշտություն չկա. Կարող եք անցնել հաջորդ բաժին և սկսել ստեղծել ձեր Git պահոցը:</p>
+</blockquote>
+<p>Git- ը «տարբերակների կառավարման համակարգ է» (&quot;version control system&quot;), որն օգտագործվում է շատ ծրագրավորողների կողմից: Այս ծրագիրը վերահսկում է փոփոխությունները, որոնք տեղի են ունենում ֆայլերում, որպեսզի հետագայում կարողանաք վերականգնել ծածկագրի վիճակը ցանկալի ժամանակահատվածում: Մի փոքր նման է բառ մշակող (&quot;track changes&quot; )ծրագրերի գործառույթին (օրինակ ՝ Microsoft Word կամ LibreOffice Writer) բայց շատ ավելի հզոր:</p>
+<h2 id="git-ի-ներբեռնում">Git-ի ներբեռնում</h2>
+<sec data-title="Installing Git: Windows" data-id="git_install_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Installing Git: Windows<a class="pull-right section atTitle btn btn-default" target="git_install_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="git_install_windows"><div class="panel-body">
+<p>Կարող ես ներբեռնել Git-ը այս հղումով <a href="https://git-scm.com/" target="_blank">git-scm.com</a>. &quot;next&quot; (հաջորդ) կարող եք ընտրել բոլոր քայլերին, բացառությամբ երկուսի. Քայլ որտեղ այն խնդրում է ընտրել ձեր խմբագրին (choose your editor), պետք է ընտրեք Nano- ն, իսկ «Ձեր PATH միջավայրի կարգավորումը»-(&quot;Adjusting your PATH environment&quot;) խորագրի ներքո ընտրեք &quot;Use Git and optional Unix tools from the Windows Command Prompt&quot;(«Օգտագործեք Git և ընտրովի Unix գործիքներ Windows հրամանի տողը»)(ներքևի տարբերակը): Մնացած բոլոր պարամետրերը կարող եք թողնել: &quot;Checkout Windows-style, commit Unix-style line endings&quot; տարբերակը լավ ընտրություն կլինի:</p>
+<p>Տեղադրումը հաջող ավարտելուց հետո մի մոռացեք վերսկսել հրամանի տողը կամ PowerShell- ը:</p></div></div></div></sec><p></p>
+<sec data-title="Installing Git: OS X" data-id="git_install_OSX" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Installing Git: OS X<a class="pull-right section atTitle btn btn-default" target="git_install_OSX"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="git_install_OSX"><div class="panel-body">
+<p>Ներբեռնեք Git- ը <a href="https://git-scm.com/" target="_blank">git-scm.com</a> կայքից և հետևեք հրահանգներին:</p>
+<blockquote>
+<p><strong> Նշում </strong> Եթե դուք օգտագործում եք OS X 10.6, 10.7 կամ 10.8, ապա պետք է ներբեռնեք git- ի այս տարբերակը ՝ <a href="https://sourceforge.net/projects/git-osx-installer/files/git-2.3.5-intel-universal-snow-leopard.dmg/download" target="_blank">Git installer for OS X Snow Leopard</a></p>
+</blockquote>
+</div></div></div></sec>
+<sec data-title="Installing Git: Debian or Ubuntu" data-id="git_install_debian_ubuntu" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Installing Git: Debian or Ubuntu<a class="pull-right section atTitle btn btn-default" target="git_install_debian_ubuntu"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="git_install_debian_ubuntu"><div class="panel-body">
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code class="lang-bash">$ sudo apt install git
+</code></pre>
+</div></div></div></sec>
+<sec data-title="Installing Git: Fedora" data-id="git_install_fedora" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Installing Git: Fedora<a class="pull-right section atTitle btn btn-default" target="git_install_fedora"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="git_install_fedora"><div class="panel-body">
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code class="lang-bash">$ sudo dnf install git
+</code></pre>
+</div></div></div></sec>
+<sec data-title="Installing Git: openSUSE" data-id="git_install_openSUSE" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Installing Git: openSUSE<a class="pull-right section atTitle btn btn-default" target="git_install_openSUSE"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="git_install_openSUSE"><div class="panel-body">
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code class="lang-bash">$ sudo zypper install git
+</code></pre>
+</div></div></div></sec>
+<h2 id="ստեղծեք-մեր-git-պահոցը">Ստեղծեք մեր Git պահոցը:</h2>
+<p>Git- ը հետևում է ֆայլերի որոշակի հավաքածուի փոփոխությանը, որը կոչվում է պահոց (կրճատ ՝ «repo»): Եկեք ստեղծենք մեկը մեր նախագծի համար: Բացեք վահանակ և գործարկեք այս հրամանները <code>djangogirls</code> գրացուցակում.</p>
+<blockquote>
+<p><strong>Նշում</strong> Նախքան պահեստի նախնականացումը սկսեք, ստուգեք ձեր ընթացիկ աշխատանքային գրացուցակը <code>օգտագործելով</code>pwd<code>(Mac OS X/Linux) կամ</code>cd<code>(Windows) հրամաններ: Դուք պետք է լինեք</code> djangogirls ` պանակում (folder):</p>
+</blockquote>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>$ git init
+Initialized empty Git repository in ~/djangogirls/.git/
+$ git config --global user.name &quot;Your Name&quot;
+$ git config --global user.email you@example.com
+</code></pre><p>Յուրաքանչյուր նախագծի համար անհրաժեշտ է նախաձևակերպել git պահոցը (git repository)միայն մեկ անգամ (և այլևս ստիպված չեք լինի կրկին մուտքագրել ձեր` օգտվողի անունն ու էլ. Փոստի հասցեն):</p>
+<p>Git- ը հետևելու է տվյալ գրացուցակի բոլոր ֆայլերի և գրացուցակների փոփոխություններին, սակայն մենք գերադասում ենք անտեսել դրանցից մի քանիսը: Դա անելու համար մենք պետք է պահեստի բազային գրացուցակում ստեղծենք <code>.gitignore</code> կոչվող ֆայլ: Բացեք ձեր խմբագիրը և ստեղծեք նոր ֆայլ հետևյալ բովանդակությամբ.</p>
+<p></p><p class="code-label">.gitignore</p><p></p>
+<pre><code># Python
+*.pyc
+*~
+__pycache__
+
+# Env
+.env
+myvenv/
+venv/
+
+# Database
+db.sqlite3
+
+# Static folder at project root
+/static/
+
+# macOS
+._*
+</code></pre><p>Եվ այն պահպանեք որպես <code>.gitignore</code> &quot;djangogirls&quot; արմատային գրացուցակում:</p>
+<blockquote>
+<p><strong> Նշում </strong> Ֆայլի անվան սկզբում գտնվող կետը կարևոր է: Եթե ​​նման ֆայլեր ստեղծելու խնդիրներ ունեք (Mac- ը թույլ չի տա ձեզ, կետով սկսվող անունով ֆայլ ստեղծել օրինակ, Finder- ի միջոցով), ապա օգտագործեք &quot;Save As&quot; (-պահել որպես) կոճակը ձեր կոդի խմբագրի ընտրացանկում, դա հաստատ անվտանգ է: Եվ համոզվեք, որ ֆայլի անվանման մեջ չեք ավելացնում <code>.txt</code>, <code>.py</code> կամ որևէ այլ ընդլայնում - Git- ը դա կճանաչի միայն այն դեպքում, եթե անունը պարունակում է միայն <code>.gitignore</code>.: Այն ֆայլեր, որոնց անունները սկսվում են (օրինակ <code>.gitignore</code> ով) Linux- ը և MacOS-ը դրանք ընդունում են որպես թաքնված, և սովորական <code>ls</code> հրամանը ցույց չի տալիս այս ֆայլերը: Փոխարենը օգտագործեք <code>ls -a</code> հրամանը <code>.gitignore</code> ֆայլը տեսնելու համար:</p>
+<p><strong>Նշում</strong> Ձեր <code>.gitignore</code> ֆայլում նշված ֆայլերից մեկը <code>db.sqlite3</code> է: Այս ֆայլը ձեր (local database) տեղական տվյալների շտեմարանն է, որտեղ պահվում են ձեր օգտվողների բոլոր գրառումները: Մենք հետևելու ենք վեբ ծրագրավորման ստանդարտ պրակտիկային, ինչը նշանակում է, որ մենք կօգտագործենք առանձին տվյալների բազաներ ձեր տեղական թեստային կայքի և PythonAnywhere- ում ձեր կենդանի կայքի համար: PythonAnywhere տվյալների բազան կարող է լինել SQLite, ճիշտ այնպես, ինչպես ձեր զարգացման սարքում, բայց սովորաբար դուք կօգտագործեք MySQL անունով շտեմարան, որը կարող է սպասարկել այցելուների շատ ավելի մեծ քանակության, քան SQLite- ը: Ամեն դեպքում, անտեսելով ձեր SQLite տվյալների շտեմարանը GitHub- ի համար, նշանակում է, որ մինչ այժմ ձեր ստեղծած բոլոր հաղորդագրություններն ու գերշահագործողները հասանելի կլինեն միայն տեղական մակարդակում, և արտադրության համար անհրաժեշտ է ստեղծել նորերը: Դուք պետք է ձեր տեղական տվյալների բազայի (local database-ի) մասին մտածեք որպես լավ խաղահրապարակ, որտեղ կարող եք փորձարկել տարբեր բաներ և չվախենալ, որ ձեր իրական գրառումները կջնջեք ձեր բլոգից:</p>
+</blockquote>
+<p>Լավ է օգտագործել <code>git status</code> (git կարգավիճակի) հրամանը նախքան<code>git add</code> (git ավելացնելը) կամ ցանկացած այլ պահ, երբ վստահ չեք, թե ինչն է փոխվել: Դա կօգնի Ձեզ զերծ մնալ տհաճ անակնկալներից, ինչպիսիք են սխալ ֆայլերի ավելացումը կամ կատարումը: <code>git status</code> (git կարգավիճակ) հրամանը վերադարձնում է տեղեկատվություն git- ում նախկինում չնկատված / փոփոխված / ներկայացված բոլոր ֆայլերի, ինչպես նաև մասնաճյուղի կարգավիճակի և այլնի մասին: Արդյունքը պետք է նման լինի հետևյալին.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        .gitignore
+        blog/
+        manage.py
+        mysite/
+        requirements.txt
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</code></pre><p>Եվ վերջապես մենք կպահպանենք մեր փոփոխությունները: Անցեք վահանակին և մուտքագրեք այս հրամանները.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>$ git add .
+$ git commit -m &quot;My Django Girls app, first commit&quot;
+ [...]
+ 13 files changed, 200 insertions(+)
+ create mode 100644 .gitignore
+ [...]
+ create mode 100644 mysite/wsgi.py
+</code></pre><h2 id="հրապարակեք-ձեր-կոդը-github--ում">Հրապարակեք ձեր կոդը GitHub- ում</h2>
+<p>Անցեք <a href="https://www.github.com" target="_blank">GitHub.com</a> կայք և գրանցվեք նոր անվճար օգտվողի հաշվի համար: (Եթե դա արդեն արել եք սեմինարի նախապատրաստական ​​փուլում, հիանալի է): Համոզվեք, որ հիշում եք ձեր գաղտնաբառը (ավելացրեք այն գաղտնաբառերի կառավարչին (password manager), եթե այն օգտագործում եք):</p>
+<p>Հաջորդը, ստեղծեք նոր պահեստ ` &quot;my-first-blog&quot; (իմ առաջին բլոգը) անունով: &quot;initialize with a README&quot; վանդակը պետք չէ ընտրել, բաց թողեք .gitignore- ը (այս ֆայլը ձեռքով կստեղծենք) և թողեք License որպես None:</p>
+<p><img src="images/new_github_repo.png" alt></p>
+<blockquote>
+<p><strong>Նշում</strong> . <code>my-first-blog</code> (իմ առաջին բլոգ) պահեստի անվանումը շատ կարևոր է: Իհարկե կարող եք այլ անվանումով հանդես գալ, բայց այն բազմիցս հանդիպում է հրահանգներում, և ամեն անգամ ստիպված կլինեք փոխել այն ձեր սեփականով: Միգուցե ավելի հեշտ է պահպանել <code>my-first-blog</code> անվանումը:</p>
+</blockquote>
+<p>Հաջորդ էկրանին կտեսնեք ձեր ռեպոյի կլոնային URL- ը, որը դուք կօգտագործեք հետևյալ հրահանգների միջոցով:</p>
+<p><img src="images/github_get_repo_url_screenshot.png" alt></p>
+<p>Այժմ մենք պետք է ձեր համակարգչում կապենք տեղական Git պահոցը GitHub- ի հետ:</p>
+<p>Մուտքագրեք հետևյալը ձեր վահանակի (console-ի) մեջ (փոխարինեք <code>&lt;your-github-username&gt;</code> - ը ձեր GitHub հաշիվը ստեղծելիս մուտքագրած օգտանունով, բայց առանց անկյունային գծերի. իսկ URL-ը պետք է համապատասխանի ձեր տեսած կլոնային URL- ին):</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>$ git remote add origin https://github.com/&lt;your-github-username&gt;/my-first-blog.git
+$ git push -u origin master
+</code></pre><p>GitHub մուտք գործելուց հետո ձեզանից կպահանջվի ձեր GitHub օգտվողի անունն ու գաղտնաբառը (կա՛մ հենց այնտեղ ՝ հրամանի տողի պատուհանում, կա՛մ ելնող պատուհանում), և հավատարմագրերը մուտքագրելուց հետո պետք է հայտնվի նման մի բան.</p>
+<p></p><p class="code-label">command-line</p><p></p>
+<pre><code>Counting objects: 6, done.
+Writing objects: 100% (6/6), 200 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/ola/my-first-blog.git
+
+ * [new branch]      master -&gt; master
+Branch master set up to track remote branch master from origin.
+</code></pre><!--TODO: maybe do ssh keys installs in install party, and point ppl who dont have it to an extension -->
+<p>Ձեր ծածկագիրն այժմ GitHub- ում է: Գնացեք կայք և ստուգեք այն: Այն կարող եք գտնել հիանալի ընկերություններում ինչպիսիք են՝ <a href="https://github.com/django/django" target="_blank">Django</a>, the <a href="https://github.com/DjangoGirls/tutorial" target="_blank">Django Girls Tutorial</a>, և շատ այլ բաց կոդով ծրագրեր GitHub- ում: :)</p>
+<h1 id="pythonanywhere--ում-մեր-բլոգի-տեղադրումը">PythonAnywhere- ում մեր բլոգի տեղադրումը</h1>
+<h2 id="գրանցվեք-pythonanywhere-հաշվում">Գրանցվեք PythonAnywhere հաշվում</h2>
+<blockquote>
+<p><strong>Նշում</strong> Եթե ավելի վաղ դուք արդեն գրանցվել եք PythonAnywhere հաշվում, ապա կարիգ չկա այն կրկնել:</p>
+</blockquote>
+<p>PythonAnyway- ը ծառայություն է Python կոդի «ամպի մեջ» (&quot;in the cloud&quot;) սերվերների վրա աշխատելու համար: Մենք այն օգտագործում ենք ինտերնետում մեր կայքը տեղակայելու համար:</p>
+<p>Գրանցվեք PythonAnywhere հաշիվը որպես &quot;Beginner&quot; («Սկսնակ», անվճար տարբերակը բավարար է, կրեդիտ քարտ չի պահանջվում):</p>
+<ul>
+<li><a href="https://www.pythonanywhere.com/" target="_blank">www.pythonanywhere.com</a></li>
+</ul>
+<p><img src="images/pythonanywhere_beginner_account_button.png" alt="PythonAnywhere գրանցման էջում կա &apos;Beginner&apos; (Սկսնակ) անվճար հաշիվ ստեղծելու կոճակ"></p>
+<blockquote>
+<p><strong>Նշում</strong> . Օգտանուն ընտրելիս հիշեք, որ բլոգի URL-ը կունենա այսպիսի տեսք <code>yourusername.pythonanywhere.com</code>, այնպես որ ընտրեք կամ ձեր սեփական մականունը կամ բլոգի թեմային վերաբերող անուն: Նաև համոզվեք, որ կհիշեք ձեր գաղտնաբառը (ավելացրեք այն ձեր գաղտնաբառերի կառավարչին,եթե նման բան օգտագործում եք):</p>
+</blockquote>
+<h2 id="pythonanywhere--ում-api-token-ի-նշանի-ստեղծում">PythonAnywhere- ում API token-ի (նշանի) ստեղծում</h2>
+<p>Սա մի բան է, որը դուք պետք է անեք միայն մեկ անգամ: Երբ գրանցվեք PythonAnywhere- ում, ձեզ կտեղափոխեն կառավարման վահանակ (dashboard): Գտեք ձեր &quot;Account&quot; (հաշիվ) էջի վերևի աջ մասի հղումը ՝</p>
+<p><img src="images/pythonanywhere_account.png" alt="Հաշվի հղումը գտնվում է էջի վերևի աջ հատվածում"></p>
+<p>ապա ընտրեք &quot;API token&quot; անունով ներդիրը և սեղմեք &quot;Create new API token&quot;. (ստեղծել նոր API նշան) կոճակը:</p>
+<p><img src="images/pythonanywhere_create_api_token.png" alt="API token (API նշանի) ներդիրը Account page-ում (հաշվի էջում)"></p>
+<h2 id="մեր-կայքի-տեղադրումը-pythonanywhere--ում">Մեր կայքի տեղադրումը PythonAnywhere- ում</h2>
+<p>Վերադարձեք <a href="https://www.pythonanywhere.com/" target="_blank">PythonAnywhere Dashboard</a> հիմնական ընտրացանկ ՝ կտտացրեք պատկերանշանին և ընտրեք &quot;Bash&quot; վահանակը (console) գործարկելու տարբերակը. Սա PythonAnywhere-ի command line-ի (հրամանի տողի) տարբերակն է, ինչպես ձեր համակարգչում:</p>
+<p><img src="images/pythonanywhere_bash_console.png" alt="PythonAnywhere վեբ տարբերակի &apos;New Console&apos; (Նոր վահանակ) բաժնում ՝ օգտագործելով «Bash» կոճակը"></p>
+<blockquote>
+<p><strong>Հղում</strong> PythonAnywhere- ը հիմնված է Linux- ի վրա, այնպես որ, եթե դուք օգտագործում եք Windows, ապա console-ը (վահանակը) մի փոքր այլ տեսք կունենա ձեր համակարգչի վրա:</p>
+</blockquote>
+<p>PythonAnywhere- ում վեբ հավելվածի տեղադրումը ենթադրում է GitHub- ից ձեր կոդի բեռնումը և PythonAnywhere-ի կարգավորումը `որպեսզի այն ճանաչի և գործարկի որպես վեբ ծրագիր: Դա ձեռքով անելու եղանակներ կան, բայց PythonAnywhere- ը տրամադրում է օգնող գործիք, որն ամեն ինչ կանի ձեր փոխարեն: Եկեք նախ տեղադրենք այն.</p>
+<p></p><p class="code-label">PythonAnywhere command-line</p><p></p>
+<pre><code>$ pip3.8 install --user pythonanywhere
+</code></pre><p>Վահանակը պետք է տպի նման մի բան, ինչպիսին է <code>Collecting pythonanywhere</code> և վերջում <code>Successfully installed (...) pythonanywhere- (...)</code>.</p>
+<p>Այժմ մենք գործարկում ենք օգնականին ՝ GitHub-ից մեր հավելվածը ավտոմատ կերպով կարգավորելու համար: PythonAnyplace- ի վահանակի մեջ մուտքագրեք հետևյալ հրահանգը (մի մոռացեք օգտագործել ձեր GitHub օգտվողի անունը <code>&lt;your-github-username&gt;</code> -ի փոխարեն, որպեսզի URL- ը համապատասխանի GitHub-ի կլոնավորված URL- ին):</p>
+<p></p><p class="code-label">PythonAnywhere command-line</p><p></p>
+<pre><code>$ pa_autoconfigure_django.py --python=3.8 https://github.com/&lt;your-github-username&gt;/my-first-blog.git
+</code></pre><p>Երբ տեսնեք, թե ինչպես է այն աշխատում, կարող եք հասկանալ, թե կոնկրետ ինչ է այն անում.</p>
+<ul>
+<li>Ներբեռնեք ձեր կոդը GitHub- ից</li>
+<li>Virtualenv-ի ստեղծումը PythonAnyplace- ում `ճիշտ այնպես, ինչպես ձեր համակարգչում է</li>
+<li>Թարմացրեք ձեր settings file-ը (կարգավորումների ֆայլը) տեղակայման որոշ կարգավորումներում (deployment settings)</li>
+<li>Ստեղծեք տվյալների բազա PythonAnywhere-ում ՝ օգտագործելով այս <code>manage.py migrate</code> հրամանը</li>
+<li>Ձեր ստատիկ ֆայլերի (static files) կարգավորում (դրանց մասին մենք կիմանանք ավելի ուշ)</li>
+<li>Եվ կարգավորեք PythonAnywhere- ը `ձեր վեբ հավելվածը API- ի միջոցով սպասարկելու համար</li>
+</ul>
+<p>Այս բոլոր քայլերը ավտոմատացված են PythonAnywhere- ում, բայց դրանք այն նույն քայլերն են, որոնք պետք է կատարվեն սերվերի ցանկացած այլ մատակարարի հետ:</p>
+<p>Հիմնական բանը, որն այժմ պետք է նկատել, այն է, որ PythonAnywhere տվյալների բազան իրականում ամբողջովին տարանջատված է ձեր համակարգչի տվյալների բազայից: Սա նշանակում է, որ նրանք կարող են ունենալ տարբեր հաղորդագրություններ և ադմինիստրատորի հաշիվներ: Արդյունքում, ինչպես արդեն արեցինք մեր համակարգչում, մենք պետք է ադմինիստրատորի հաշիվը նախապատրաստենք <code>createsuperuser</code> - ով: PythonAnywhere- ը ավտոմատ կերպով կակտիվացնի ձեր virtualenv-ին, այնպես որ ձեզ հարկավոր է միայն գործարկել՝</p>
+<p></p><p class="code-label">PythonAnywhere command-line</p><p></p>
+<pre><code>(ola.pythonanywhere.com) $ python manage.py createsuperuser
+</code></pre><p>Մուտքագրեք ադմինիստրատորի հաշվի (admin user) տեղեկատվությունը: Քանի դեռ չեք ցանկանում ձեր PythonAnywhere գաղտնաբառն ավելի ապահով դարձնել, ցանկալի է օգտագործել ձեր համակարգչում օգտագործածները, որպեսզի խառնաշփոթ չլինի, </p>
+<p>Այժմ, եթե ցանկանում եք, կարող եք նաև հայացք նետել ձեր կոդին PythonAnywhere- ում ՝ օգտագործելով <code>ls</code>:</p>
+<p></p><p class="code-label">PythonAnywhere command-line</p><p></p>
+<pre><code>(ola.pythonanywhere.com) $ ls
+blog  db.sqlite3  manage.py  mysite requirements.txt static
+(ola.pythonanywhere.com) $ ls blog/
+__init__.py  __pycache__  admin.py  apps.py  migrations  models.py
+tests.py  views.py
+</code></pre><p>Կարող եք նաև մտնել &quot;Files&quot; («Ֆայլեր») ներդիր էջ և շրջել ՝ օգտագործելով PythonAnywhere- ի ներկառուցված ֆայլերի զննիչը (built-in file browser): (Վահանակի էջից վերևի աջ անկյունում գտնվող ցանկի կոճակից կարող եք անցնել PythonAnywhere- ի այլ էջեր: Էջերից մեկում հայտնվելուց հետո, վերին մասում այլ էջերի հղումներ կան:)</p>
+<h2 id="դու-օնլայն-եք">Դու օնլայն եք:</h2>
+<p>Ձեր կայքը այժմ հանրային ինտերնետում է: Անցեք PythonAnywhere- ի &quot;Web&quot; ներդիրին `ձեր կայքի հղումը ( link-ը) ստանալու համար: Կարող եք այն կիսել յուրաքանչյուրի հետ, ում ցանկանում եք: :)</p>
+<blockquote>
+<p><strong>Նշում</strong> Սա սկսնակների ձեռնարկ է, և մենք կայքը տեղակայելիս օգտագործել ենք մի քանի հնարքներ, որոնք անվտանգության տեսանկյունից իդեալական չեն: Եթե ​​որոշեք դրանով նախագիծ կառուցել կամ նորը սկսել, ապա պետք է ստուգեք <a href="https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/" target="_blank">Django deployment checklist</a> -ը՝ (Django- ի տեղակայման ստուգաթերթը) ձեր կայքի անվտանգության վերաբերյալ որոշ խորհուրդների համար:</p>
+</blockquote>
+<h2 id="վրիպազերծման-խորհուրդներ">Վրիպազերծման խորհուրդներ</h2>
+<p>Ահա մի քանի ընդհանուր պատճառներ, եթե ​​ <code>pa_autoconfigure_django.py</code> սկրիպտը գործարկելիս սխալ եք տեսնում</p>
+<ul>
+<li>PythonAnywhere API նշան բանալի չի ստեղծվել ՝ մուտքն ապահովելու համար:</li>
+<li>GitHub պահոցի URL- ում սխալ է տեղի ունեցել</li>
+<li>Եթե ​​տեսնում եք սխալ <em>&quot;Could not find your settings.py&quot;</em> (Չկարողացա գտնել ձեր settings.py) հետևյալ բովանդակությամբ, դա հավանաբար այն պատճառով է, որ դուք ի վիճակի չէիք ձեր բոլոր ֆայլերը ավելացնել Git- ին և / կամ դրանք հաջողությամբ չկարողացաք բեռնել GitHub- ում: Եվս մեկ անգամ նայեք վերևում գտնվող Git հատվածին և ստուգեք հրահանգները:</li>
+<li>Եթե ​​նախկինում գրանցվել եք PythonAnywhere հաշվում և ունեցել եք ստատիկ սխալ, ապա, հավանաբար, ձեր հաշվի համար ունեք SQLite- ի հին տարբերակ (օրինակ ՝ 3.8.2): Այս դեպքում մուտք գործեք նոր հաշիվ և փորձեք վերևում գտնվող PythonAnywhere բաժնի հրահանգները:</li>
+</ul>
+<p>Եթե ​​ձեր կայք այցելելիս սխալ եք տեսնում, ապա տեղեկատվության կարգավորման համար, նախ նայիր <strong>error log</strong> (սխալների մատյանը): Դրա հղումը կարող եք գտնել PythonAnywhere <a href="https://www.pythonanywhere.com/web_app_setup/" target="_blank">&quot;Web&quot; page</a> էջում: Տեսեք, արդյոք կան սխալի հաղորդագրություններ. վերջինները ներքևում են:</p>
+<p>Այնտեղ կարող եք տեսնել նաև <a href="http://help.pythonanywhere.com/pages/DebuggingImportError" target="_blank">general debugging tips on the PythonAnywhere help site</a>. (PythonAnywhere- ի օգնության կայքի ընդհանուր սխալների վերացման խորհուրդներ)</p>
+<p>Եվ հիշեք. Ձեր մարզիչը այստեղ է ՝ օգնելու:</p>
+<h1 id="ստուգեք-ձեր-կայքը">Ստուգեք ձեր կայքը:</h1>
+<p>Ձեր կայքի դեֆոլտ էջում պետք է գրվի &quot;It worked!&quot;-(Այն աշխատեց), ճիշտ այնպես, ինչպես դա անում է ձեր տեղական համակարգչում: Փորձեք URL- ի վերջում ավելացնել <code>/admin/</code> և դուք կտեղափոխվեք ադմինիստրատորի կայք: Մուտք գործեք ձեր օգտվողի անունով և գաղտնաբառով և կտեսնեք, որ կարող եք նոր գրառումներ ավելացնել սերվերում. Հիշեք, որ ձեր փորձարկման տվյալների բազայից գրառումները չեն ուղարկվի ձեր կենդանի բլոգ:</p>
+<p>Մի քանի գրառում ստեղծելուց հետո կարող եք վերադառնալ ձեր տեղական կարգավորմանը (ոչ PythonAnywhere): Այստեղ է, որ պետք է աշխատել փոփոխություններ ստեղծելու վրա: Սա վեբ մշակման ընդհանուր աշխատանքային գործընթաց է. Տեղական փոփոխություններ կատարեք, այդ փոփոխությունները վերբեռնեք GitHub- ում և մղեք իրական վեբ սերվերի վրա: Սա թույլ է տալիս աշխատել և փորձարկել `առանց ձեր կայքը խափանելու: Բավականին լավ է, այնպես չէ՞</p>
+<p>Դուք արժանի եք գովասանքի: Սերվերների տեղակայումը վեբ մշակման ամենաբարդ փուլերից մեկն է, և դա իրականացնելը հաճախ տևում է մի քանի օր, մինչ դրանք կաշխատեն: Բայց դուք ստացաք կենդանի կայք ՝ իրական ինտերնետում:</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../django_admin/" class="navigation navigation-prev " aria-label="Previous page:  Django ադմին">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../django_urls/" class="navigation navigation-next " aria-label="Next page: Django URLs">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Deploy!","level":"1.14","depth":1,"next":{"title":"Django URLs","level":"1.15","depth":1,"path":"django_urls/README.md","ref":"django_urls/README.md","articles":[]},"previous":{"title":" Django ադմին","level":"1.13","depth":1,"path":"django_admin/README.md","ref":"django_admin/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"hy","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"deploy/README.md","mtime":"2021-06-14T07:25:11.913Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-06-14T07:25:27.726Z"},"basePath":"..","book":{"language":"hy"}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sectionx-ex/sectionx.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
