@@ -652,13 +652,13 @@ NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="h
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.<span class="hljs-built_in">all</span>()
 &lt;QuerySet [&lt;Post: my post title&gt;, &lt;Post: another post title&gt;]&gt;
 </code></pre>
-<p>Cela nous permet d&apos;obtenir une liste des posts que nous avons créé tout à l&apos;heure ! Rappelez-vous : nous avions créé ces posts à l&apos;aide de l&apos;interface d&apos;administration de Django. Cependant, nous aimerions maintenant créer de nouveaux posts à l&apos;aide de python : comment allons-nous nous y prendre ?</p>
+<p>Cela nous permet d&apos;obtenir une liste des posts que nous avons créés tout à l&apos;heure ! Rappelez-vous : nous avions créé ces posts à l&apos;aide de l&apos;interface d&apos;administration de Django. Cependant, nous aimerions maintenant créer de nouveaux posts à l&apos;aide de python : comment allons-nous nous y prendre ?</p>
 <h3 id="créer-des-objets">Créer des objets</h3>
 <p>Voici comment créer un nouveau objet Post dans la base de données :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.create(author=me, title=<span class="hljs-string">&apos;Sample title&apos;</span>, text=<span class="hljs-string">&apos;Test&apos;</span>)
 </code></pre>
-<p>Cependant, il nous manque un petit quelque chose : <code>moi</code>. Nous avons besoin de lui passer une instance du modèle <code>User</code> en guise d&apos;auteur (author). Comment faire ?</p>
+<p>Cependant, il nous manque un petit quelque chose : <code>me</code>. Nous avons besoin de lui passer une instance du modèle <code>User</code> en guise d&apos;auteur (author). Comment faire ?</p>
 <p>Tout d&apos;abord, il nous faut importer le modèle User :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> django.contrib.auth.models <span class="hljs-keyword">import</span> User
@@ -668,7 +668,7 @@ NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="h
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>User.objects.<span class="hljs-built_in">all</span>()
 &lt;QuerySet [&lt;User: ola&gt;]&gt;
 </code></pre>
-<p>Il s&apos;agit du superutilisateur que nous avons crée tout à l&apos;heure ! Sauvegardons une instance de cet utilisateur (modifie la ligne suivante avec ton nom d&apos;utilisateur) :</p>
+<p>Il s&apos;agit du superutilisateur que nous avons créé tout à l&apos;heure ! Sauvegardons une instance de cet utilisateur (modifie la ligne suivante avec ton nom d&apos;utilisateur) :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>me = User.objects.get(username=<span class="hljs-string">&apos;ola&apos;</span>)
 </code></pre>
@@ -678,7 +678,7 @@ NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="h
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.create(author=me, title=<span class="hljs-string">&apos;Sample title&apos;</span>, text=<span class="hljs-string">&apos;Test&apos;</span>)
 &lt;Post: Sample title&gt;
 </code></pre>
-<p>Et voilà ! Vous aimeriez voir ci ça a vraiment marché ?</p>
+<p>Et voilà ! Vous aimeriez voir si ça a vraiment marché ?</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.<span class="hljs-built_in">all</span>()
 &lt;QuerySet [&lt;Post: my post title&gt;, &lt;Post: another post title&gt;, &lt;Post: Sample title&gt;]&gt;
@@ -687,7 +687,7 @@ NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="h
 <h3 id="ajouter-plus-de-posts">Ajouter plus de posts</h3>
 <p>Amusez-vous à ajouter d&apos;autres posts pour vous entrainer un peu. Essayez d&apos;ajouter deux ou trois posts en plus puis passez à la partie suivante.</p>
 <h3 id="filtrer-les-objets">Filtrer les objets</h3>
-<p>L&apos;intérêt des QuerySets, c&apos;est que l&apos;on peut les filtrer. Disons que nous aimerions retrouver tous les posts écrits par l&apos;utilisateur Ola. Pour cela, nous allons utiliser <code>filter</code> à la place de <code>all</code> dans <code>Post.objects.all()</code>. Les parenthèses vont nous servir à préciser quelles sont les conditions auxquelles un post de blog doit se conformer pour être retenu par notre queryset. Dans notre exemple, la condition est que <code>author</code> soit égal à <code>me</code>. La manière de le dire en Django c&apos;est : <code>author=me</code>. Maintenant, votre bout de code doit ressembler à ceci:</p>
+<p>L&apos;intérêt des QuerySets, c&apos;est que l&apos;on peut les filtrer. Disons que nous aimerions retrouver tous les posts écrits par l&apos;utilisateur Ola. Pour cela, nous allons utiliser <code>filter</code> à la place de <code>all</code> dans <code>Post.objects.all()</code>. Les parenthèses vont nous servir à préciser quelles sont les conditions auxquelles un post de blog doit se conformer pour être retenu par notre queryset. Dans notre exemple, la condition est que <code>author</code> soit égal à <code>me</code>. La manière de le dire en Django c&apos;est : <code>author=me</code>. Maintenant, votre bout de code doit ressembler à ceci :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.<span class="hljs-built_in">filter</span>(author=me)
 &lt;QuerySet [&lt;Post: Sample title&gt;, &lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: My 3rd post!&gt;, &lt;Post: 4th title of post&gt;]&gt;
@@ -725,7 +725,7 @@ NameError: name <span class="hljs-string">&apos;Post&apos;</span> <span class="h
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.order_by(<span class="hljs-string">&apos;created_date&apos;</span>)
 &lt;QuerySet [&lt;Post: Sample title&gt;, &lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: My 3rd post!&gt;, &lt;Post: 4th title of post&gt;]&gt;
 </code></pre>
-<p>On peut aussi inverser l&apos;ordre de tri en ajouter <code>-</code> au début:</p>
+<p>On peut aussi inverser l&apos;ordre de tri en ajouter <code>-</code> au début :</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>Post.objects.order_by(<span class="hljs-string">&apos;-created_date&apos;</span>)
 &lt;QuerySet [&lt;Post: 4th title of post&gt;,  &lt;Post: My 3rd post!&gt;, &lt;Post: Post number <span class="hljs-number">2</span>&gt;, &lt;Post: Sample title&gt;]&gt;
@@ -784,7 +784,7 @@ $
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Django ORM (Querysets)","level":"1.18","depth":1,"next":{"title":"Données dynamiques dans les templates","level":"1.19","depth":1,"path":"dynamic_data_in_templates/README.md","ref":"dynamic_data_in_templates/README.md","articles":[]},"previous":{"title":"Introduction au HTML","level":"1.17","depth":1,"path":"html/README.md","ref":"html/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_orm/README.md","mtime":"2021-06-14T07:25:11.857Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-06-14T07:25:27.726Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Django ORM (Querysets)","level":"1.18","depth":1,"next":{"title":"Données dynamiques dans les templates","level":"1.19","depth":1,"path":"dynamic_data_in_templates/README.md","ref":"dynamic_data_in_templates/README.md","articles":[]},"previous":{"title":"Introduction au HTML","level":"1.17","depth":1,"path":"html/README.md","ref":"html/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fr","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_orm/README.md","mtime":"2021-06-17T08:40:11.097Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-06-17T08:40:21.886Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>
