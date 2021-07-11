@@ -229,7 +229,7 @@
     
         <li class="chapter " data-level="1.2.7" data-path="../installation/">
             
-                <a href="../installation/#github">
+                <a href="../installation/#github-account">
             
                     
                     GitHub
@@ -242,7 +242,7 @@
     
         <li class="chapter " data-level="1.2.8" data-path="../installation/">
             
-                <a href="../installation/#pythonanywhere">
+                <a href="../installation/#pythonanywhere-account">
             
                     
                     PythonAnywhere
@@ -631,13 +631,13 @@
 
 {% block content %}
     {% for post in posts %}
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;date&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;date&quot;</span>&gt;</span>
                 {{ post.published_date }}
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>{{ post.title }}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{ post.text|linebreaksbr }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
     {% endfor %}
 {% endblock %}
 </code></pre>
@@ -708,15 +708,15 @@ urlpatterns = [
 <pre><code class="lang-html">{% extends &apos;blog/base.html&apos; %}
 
 {% block content %}
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
         {% if post.published_date %}
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;date&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;date&quot;</span>&gt;</span>
                 {{ post.published_date }}
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
         {% endif %}
         <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>{{ post.title }}<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{ post.text|linebreaksbr }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
 {% endblock %}
 </code></pre>
 <p>Wir erweitern wieder <code>base.html</code>. Im <code>content</code>-Block wollen wir das Publikationsdatum eines Posts (published_date), falls es existiert, anzeigen und auch den Titel und den Text. Aber wir müssen noch ein paar wichtige Dinge klären, oder?</p>
@@ -728,7 +728,7 @@ urlpatterns = [
 <p>Es wäre schön zu sehen, ob deine Website noch auf PythonAnywhere funktioniert, richtig? Lass sie uns erneut veröffentlichen.</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ git status
-$ git add --all .
+$ git add .
 $ git status
 $ git commit -m &quot;View und Template für Blogpost-Details sowie CSS für die Website hinzugefügt&quot;
 $ git push
@@ -747,7 +747,7 @@ $ git pull
 [...]
 </code></pre><p>Der <code>manage.py collectstatic</code> Befehl ist ein bisschen wie <code>manage.py migrate</code>. Wir machen ein paar Änderungen in unserem Code und dann sagen wir Django, dass es diese übernehmen (<em>apply</em>) soll, entweder zu der servereigenen Sammlung von statischen Dateien oder in die Datenbank.</p>
 <p>Auf jeden Fall sind wir nun soweit, dass wir <a href="https://www.pythonanywhere.com/web_app_setup/" target="_blank">auf die Seite &quot;Web&quot;</a> wechseln können (mittels dem Menü-Knopf in der Ecke oben rechts) und <strong>Reload</strong> klicken können. Schau dir dann die Seite <a href="https://subdomain.pythonanywhere.com" target="_blank">https://subdomain.pythonanywhere.com</a> an, um das Ergebnis zu sehen.</p>
-<p>Und das sollte es sein! Herzlichen Glückwunsch :)</p>
+<p>Und das war&apos;s. Glückwunsch! :)</p>
 
                                 
                                 </section>
@@ -791,7 +791,7 @@ $ git pull
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Erweitere deine Anwendung","level":"1.23","depth":1,"next":{"title":"Django-Formulare","level":"1.24","depth":1,"path":"django_forms/README.md","ref":"django_forms/README.md","articles":[]},"previous":{"title":"Erweiterung der Templates","level":"1.22","depth":1,"path":"template_extending/README.md","ref":"template_extending/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"extend_your_application/README.md","mtime":"2021-06-28T22:27:20.675Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-06-28T22:27:37.495Z"},"basePath":"..","book":{"language":"de"}});
+            gitbook.page.hasChanged({"page":{"title":"Erweitere deine Anwendung","level":"1.23","depth":1,"next":{"title":"Django-Formulare","level":"1.24","depth":1,"path":"django_forms/README.md","ref":"django_forms/README.md","articles":[]},"previous":{"title":"Erweiterung der Templates","level":"1.22","depth":1,"path":"template_extending/README.md","ref":"template_extending/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"extend_your_application/README.md","mtime":"2021-07-11T17:41:04.550Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-07-11T17:41:16.933Z"},"basePath":"..","book":{"language":"de"}});
         });
     </script>
 </div>

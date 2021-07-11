@@ -229,7 +229,7 @@
     
         <li class="chapter " data-level="1.2.7" data-path="../installation/">
             
-                <a href="../installation/#github">
+                <a href="../installation/#github-account">
             
                     
                     GitHub
@@ -242,7 +242,7 @@
     
         <li class="chapter " data-level="1.2.8" data-path="../installation/">
             
-                <a href="../installation/#pythonanywhere">
+                <a href="../installation/#pythonanywhere-account">
             
                     
                     PythonAnywhere
@@ -630,13 +630,13 @@
 <p>Diese drei Orte werden für dich wichtig sein. Die Entwicklung und das Testen wirst du auf deinem lokalen Rechner durchführen. Wenn du mit deinen Änderungen zufrieden bist, wirst du eine Kopie deines Programms auf GitHub veröffentlichen. Deine Website wird auf PythonAnywhere gehostet werden. Ändern kannst du sie, indem du eine neue Version deines Codes von GitHub herunter lädst.</p>
 <h1 id="git">Git</h1>
 <blockquote>
-<p><strong>Hinweis:</strong> Falls du die Installationsschritte bereits durchgeführt hast, kannst du mit dem nächsten Abschnitt fortfahren und anfangen, dein Git-Repository zu erstellen.</p>
+<p><strong>Hinweis:</strong> Falls du die <a href="../installation/">Installationsschritte</a> bereits durchgeführt hast, kannst du mit dem nächsten Abschnitt fortfahren und anfangen, dein Git-Repository zu erstellen.</p>
 </blockquote>
 <p>Git ist ein &quot;Versionsverwaltungssystem&quot; für Dateien und Code, das von vielen Programmierern benutzt wird. Diese Software kann Änderungen an Dateien über die Zeit verfolgen, so dass du bestimmte Versionen im Nachhinein wieder aufrufen kannst. Sie hat Ähnlichkeit mit der Funktion &quot;Änderungen nachverfolgen&quot; in Textverarbeitungsprogrammen (z. B. Microsoft Word oder LibreOffice Writer), ist jedoch weitaus leistungsfähiger.</p>
 <h2 id="git-installieren">Git installieren</h2>
 <sec data-title="Installing Git: Windows" data-id="git_install_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Installing Git: Windows<a class="pull-right section atTitle btn btn-default" target="git_install_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="git_install_windows"><div class="panel-body">
 <p>Du kannst Git von <a href="https://git-scm.com/" target="_blank">git-scm.com</a> herunterladen. Du kannst bei allen Schritten außer zweien &quot;next&quot; klicken: Wähle im Schritt, in dem du einen Editor aussuchen sollst, &quot;Nano&quot;; und bei der Anweisung &quot;Adjusting your PATH environment&quot;, wähle die Einstellung &quot;Run Git and associated Unix tools from the Windows command-line&quot; (die letzte Option). Die anderen Voreinstellungen sind ok. &quot;Checkout&quot;-Stil &quot;Windows&quot; und &quot;Commit&quot; mit &quot;Unix line endings&quot; (Zeilenende im Unix-Format) sind die richtigen Einstellungen.</p>
-<p>Nach Abschluss der Installation musst du deine Command-Shell oder Powershell neu starten, damit die Einstellungen aktiv sind.</p></div></div></div></sec><p></p>
+<p>Vergiss nicht, die Eingabeaufforderung oder PowerShell nach erfolgreicher Installation neu zu starten.</p></div></div></div></sec><p></p>
 <sec data-title="Installing Git: OS X" data-id="git_install_OSX" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Installing Git: OS X<a class="pull-right section atTitle btn btn-default" target="git_install_OSX"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="git_install_OSX"><div class="panel-body">
 <p>Lade Git von <a href="https://git-scm.com/" target="_blank">git-scm.com</a> herunter und folge dann den Anweisungen.</p>
 <blockquote>
@@ -671,17 +671,41 @@ $ git config --global user.email du@example.com
 </code></pre><p>Die Initialisierung des Git-Repositorys müssen wir für jedes Projekt nur einmal machen (danach musst Du Benutzernamen und Mail-Adresse nie wieder eingeben).</p>
 <p>Git wird die Änderungen an all den Dateien und Ordnern in diesem Verzeichnis aufzeichnen. Wir wollen aber, dass einige Dateien ignoriert werden. Dazu legen wir eine Datei <code>.gitignore</code> im Hauptordner (<code>djangogirls</code>) des Repos an. Öffne deinen Editor und erstelle eine neue Datei mit dem folgenden Inhalt:</p>
 <p></p><p class="code-label">.gitignore</p><p></p>
-<pre><code>*.pyc
+<pre><code># Python
+*.pyc
 *~
-/.vscode
 __pycache__
-myvenv
+
+# Env
+.env
+myvenv/
+venv/
+
+# Datenbank
 db.sqlite3
-/static
+
+# Static Ordner im Projektverzeichnis
+/static/
+
+# macOS
+._*
 .DS_Store
+.fseventsd
+.Spotlight-V100
+
+# Windows
+Thumbs.db*
+ehthumbs*.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Visual Studio
+.vscode/
+.history/
+*.code-workspace
 </code></pre><p>Speichere die Datei mit dem Namen <code>.gitignore</code> im &quot;djangogirls&quot;-Root-Verzeichnis.</p>
 <blockquote>
-<p><strong>Hinweis:</strong> Der Punkt vor dem Dateinamen ist wichtig! Wenn du Schwierigkeiten beim Erstellen hast (z.B. lassen Macs im Finder keine Dateien mit Punkt am Anfang erzeugen, Punkt-Dateien sind auf Linux und OS X &quot;versteckte Dateien&quot;), dann verwende die &quot;Speichern unter&quot;-Funktion im Editor, das sollte immer funktionieren. Wichtig ist, dass du den Dateinamen nicht mit <code>.txt</code>, <code>.py</code> oder einer anderen Dateinamen-Erweiterung ergänzt -- die Datei wird von Git nur erkannt, wenn ihr Name exakt nur <code>.gitignore</code> ist.</p>
+<p><strong>Hinweis:</strong> Der Punkt vor dem Dateinamen ist wichtig! Wenn du Schwierigkeiten beim Erstellen hast (z.B. lassen Macs im Finder keine Dateien mit Punkt am Anfang erzeugen, Punkt-Dateien sind auf Linux und OS X &quot;versteckte Dateien&quot;), dann verwende die &quot;Speichern unter&quot;-Funktion im Editor, das sollte immer funktionieren. Wichtig ist, dass du den Dateinamen nicht mit <code>.txt</code>, <code>.py</code> oder einer anderen Dateinamen-Erweiterung ergänzt -- die Datei wird von Git nur erkannt, wenn ihr Name exakt nur <code>.gitignore</code> ist. Linux und MacOS behandeln Dateien mit Namen, die mit <code>.</code> beginnen (wie <code>.gitignore</code>), als versteckt und der normale <code>ls</code>-Befehl zeigt diese Dateien nicht an. Verwende stattdessen <code>ls -a</code> um die Datei <code>.gitignore</code> anzuzeigen.</p>
 <p><strong>Hinweis:</strong> Eine der Dateien, die du in deiner <code>.gitignore</code>-Datei defniniert hast, ist <code>db.sqlite3</code>. Diese Datei ist deine lokale Datenbank, in welcher alle deine Benutzer und Posts gespeichert werden. Wir werden die gängige Web-Entwicklungs-Praxis befolgen, was heißt, dass wir separate Datenbanken für unsere lokale Test-Website und unsere öffentliche Website auf PythonAnywhere verwenden werden. Die Datenbank für letztere könnte SQLite sein, wie auf deiner Entwicklungsmaschine, aber normalerweise wirst du eine sogenannte MySQL-Datenbank nutzen, welche mit viel mehr Besuchern umgehen kann als SQLite. So oder so, dadurch, dass du deine SQLite-Datenbank für die GitHub-Kopie nicht verwendest, werden alle deine bisherigen Posts der Superuser nur lokal zur Verfügung stehen und du musst in der produktiven Umgebung neue hinzufügen. Betrachte deine lokale Datenbank als tollen Spielplatz, auf welchem du verschiedene Dinge ausprobieren kannst, ohne Angst zu haben, dass du deine wirklichen Post auf deinem Blog löschst.</p>
 </blockquote>
 <p>Es ist hilfreich den Befehl <code>git status</code> vor <code>git add</code> auszuführen oder immer dann, wenn du dir unsicher bist, was geändert wurde. Das schützt vor manchen Überraschungen, wie z. B. das falsche Hinzufügen oder Übertragen von Dateien. Das <code>git status</code>-Kommando gibt Informationen über unbeobachtete/veränderte/hinzugefügte Dateien, den Status der Verzweigung und einiges mehr wieder. Deine Ausgabe sollte dem hier ähneln:</p>
@@ -703,8 +727,8 @@ Untracked files:
 nothing added to commit but untracked files present (use &quot;git add&quot; to track)
 </code></pre><p>Nun speichern wir unsere Änderungen durch folgende Eingabe in der Konsole:</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code>$ git add --all .
-$ git commit -m &quot;My Django Girls app, first commit&quot;
+<pre><code>$ git add .
+$ git commit -m &quot;Meine Django-Girls-App, erster Commit&quot;
  [...]
  13 files changed, 200 insertions(+)
  create mode 100644 .gitignore
@@ -762,11 +786,11 @@ Branch master set up to track remote branch master from origin.
 </blockquote>
 <p>Um eine Web App auf PythonAnywhere publizieren zu können, muss dein Code von GitHub heruntergeladen und PythonAnyhwere dazu gebracht werden, diesen zu erkennen und als Web Applikation anzubieten. Du kannst das auch manuell machen. Aber PythonAnywhere stellt ein Hilfstool zur Verfügung, das das alles für dich erledigt. Lass es uns installieren:</p>
 <p></p><p class="code-label">PythonAnywhere command-line</p><p></p>
-<pre><code>$ pip3.6 install --user pythonanywhere
+<pre><code>$ pip3.8 install --user pythonanywhere
 </code></pre><p>Nach diesem Befehl solltest du in etwa Folgendes sehen: <code>Collecting pythonanywhere</code>, und irgendwann den Schluss <code>Successfully installed (...) pythonanywhere- (...)</code>.</p>
 <p>Nun können wir mit dem Hilfstool unsere App von GitHub automatisch konfigurieren. Gib das Folgende in der Konsole auf PythonAnywhere ein (vergiss nicht, deinen GitHub-Benutzernamen an Stelle von <code>&lt;your-github-username&gt;</code> zu benutzen, so dass die URL der clone-URL von GitHub entspricht):</p>
 <p></p><p class="code-label">PythonAnywhere command-line</p><p></p>
-<pre><code>$ pa_autoconfigure_django.py --python=3.6 https://github.com/&lt;your-github-username&gt;/my-first-blog.git
+<pre><code>$ pa_autoconfigure_django.py --python=3.8 https://github.com/&lt;your-github-username&gt;/my-first-blog.git
 </code></pre><p>Während du die Ausführung verfolgst, wirst du sehen, was passiert:</p>
 <ul>
 <li>Den Code von GitHub herunterladen</li>
@@ -790,7 +814,7 @@ __init__.py  __pycache__  admin.py  apps.py  migrations  models.py
 tests.py  views.py
 </code></pre><p>Du kannst auch auf die &quot;Files&quot;-Seite gehen und mit PythonAnywheres eingebautem Datei-Manager navigieren. (Von der &quot;Console&quot;-Seite gelangst du über das Menü in der rechten oberen Ecke zu anderen PythonAnywhere-Seiten. Sobald du auf einer dieser Seiten bist, findest du die Links zu den anderen Seiten oben über dem Seiteninhalt.)</p>
 <h2 id="du-bist-jetzt-live">Du bist jetzt live!</h2>
-<p>Nun ist deine Site also live im öffentlichen Internet! Klick dich zur PythonAnywhere &quot;Web&quot;-Seite durch und hole dir den Link. Teile ihn, so oft du willst :)</p>
+<p>Nun ist deine Site also live im öffentlichen Internet! Klick dich zur PythonAnywhere &quot;Web&quot;-Seite durch und hole dir den Link. Teile ihn, mit wem du willst. :)</p>
 <blockquote>
 <p><strong>Hinweis:</strong> Da es sich hier um ein Anfänger-Tutorial handelt, haben wir ein paar Abkürzungen genommen, um die Site zu veröffentlichen, welche sicherheitstechnisch nicht ideal sind. Falls du dich entscheidest, dieses Projekt weiterzubauen oder ein neues Projekt anzufangen, dann solltest du die <a href="https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/" target="_blank">Django deployment checklist</a> durchgehen, um einige Tipps zur Absicherung deiner Seite zu erhalten.</p>
 </blockquote>
@@ -852,7 +876,7 @@ tests.py  views.py
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Veröffentlichen!","level":"1.14","depth":1,"next":{"title":"Django-URLs","level":"1.15","depth":1,"path":"django_urls/README.md","ref":"django_urls/README.md","articles":[]},"previous":{"title":"Django-Administration","level":"1.13","depth":1,"path":"django_admin/README.md","ref":"django_admin/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"deploy/README.md","mtime":"2021-06-28T22:27:20.663Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-06-28T22:27:37.495Z"},"basePath":"..","book":{"language":"de"}});
+            gitbook.page.hasChanged({"page":{"title":"Veröffentlichen!","level":"1.14","depth":1,"next":{"title":"Django-URLs","level":"1.15","depth":1,"path":"django_urls/README.md","ref":"django_urls/README.md","articles":[]},"previous":{"title":"Django-Administration","level":"1.13","depth":1,"path":"django_admin/README.md","ref":"django_admin/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"deploy/README.md","mtime":"2021-07-11T17:41:04.542Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-07-11T17:41:16.933Z"},"basePath":"..","book":{"language":"de"}});
         });
     </script>
 </div>

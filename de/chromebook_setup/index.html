@@ -229,7 +229,7 @@
     
         <li class="chapter " data-level="1.2.7" data-path="../installation/">
             
-                <a href="../installation/#github">
+                <a href="../installation/#github-account">
             
                     
                     GitHub
@@ -242,7 +242,7 @@
     
         <li class="chapter " data-level="1.2.8" data-path="../installation/">
             
-                <a href="../installation/#pythonanywhere">
+                <a href="../installation/#pythonanywhere-account">
             
                     
                     PythonAnywhere
@@ -622,11 +622,11 @@
                                 
                                 <h1 id="chromebook-installation">Chromebook-Installation</h1>
 <blockquote>
-<p><strong>Hinweis</strong> Wenn du die Installation bereits gemacht hast, kannst du direkt zur <a href="../python_introduction/">Einführung in Python</a> gehen.</p>
+<p><strong>Hinweis</strong> Wenn du die <a href="../installation/">Installation bereits gemacht</a> hast, kannst du direkt zur <a href="../python_introduction/">Einführung in Python</a> gehen.</p>
 </blockquote>
 <p>Du kannst <a href="http://tutorial.djangogirls.org/en/installation/#install-python" target="_blank">diesen Abschnitt einfach</a> überspringen, falls du kein Chromebook benutzt. Wenn du eins benutzt, wird deine Installation ein wenig anders sein. Du kannst den Rest der Installationsanweisungen ignorieren.</p>
-<h3 id="cloud-ide-paizacloud-cloud-ide-aws-cloud9">Cloud IDE (PaizaCloud Cloud IDE, AWS Cloud9)</h3>
-<p>Mit dem Tool Cloud IDE erhältst du Zugang zu einem Code-Editor und einem Rechner, der im Internet läuft und auf dem du die Software installieren, schreiben und ausführen kannst. Für die Dauer des Tutorials wird Cloud IDE zu deinem <em>lokalen Rechner</em>. Auch du wirst Befehle in einer Kommandozeilen-Oberfläche ausführen können, genau wie die anderen Teilnehmerinnen, die mit OS X, Ubuntu oder Windows arbeiten. Dein Terminal wird jedoch mit einem Rechner verbunden sein, den Cloud IDE dir bereitstellt. Hier ist die Anleitung für die Cloud IDEs (PaizaCloud, Cloud IDE, AWS Cloud9). Wähle eine der Cloud IDEs aus und folge den Anweisungen der gewählten Cloud IDE.</p>
+<h3 id="cloud-ide-paizacloud-cloud-ide-aws-cloud9-glitchcom">Cloud-IDE (PaizaCloud Cloud IDE, AWS Cloud9, Glitch.com)</h3>
+<p>Eine Cloud-IDE ist ein Werkzeug, dass dir einen Code-Editor und Zugang zu einem Rechner im Internet bereitstellt, auf dem du die Software installieren, anpassen und ausführen kannst. Für die Dauer des Tutorials wird Cloud IDE zu deinem <em>lokalen Rechner</em>. Auch du wirst Befehle in einer Kommandozeilen-Oberfläche ausführen können, genau wie die anderen Teilnehmerinnen, die mit OS X, Ubuntu oder Windows arbeiten. Dein Terminal wird jedoch mit einem Rechner verbunden sein, den Cloud IDE dir bereitstellt. Hier sind die Anleitungen für die Cloud-IDEs (PaizaCloud Cloud IDE, AWS Cloud9, Glitch.com). Wähle eine der Cloud-IDEs aus und folge den Anweisungen der gewählten Cloud IDE.</p>
 <h4 id="paizacloud-cloud-ide">PaizaCloud Cloud IDE</h4>
 <ol>
 <li>Gehe zu <a href="https://paiza.cloud/" target="_blank">PaizaCloud Cloud IDE</a></li>
@@ -655,13 +655,72 @@
 <p></p><p class="code-label">bash</p><p></p>
 <pre><code>deinbenutzername:~/workspace $
 </code></pre><p>Dieser untere Bereich ist dein Terminal. Dort kannst du Kommandos für den Computer eingeben, den dir Cloud 9 zur Verfügung stellt. Du kannst dieses Fenster vergrößern oder verkleinern.</p>
+<h4 id="glitchcom-cloud-ide">Glitch.com Cloud-IDE</h4>
+<ol>
+<li>Gehe auf <a href="https://glitch.com/" target="_blank">Glitch.com</a></li>
+<li>Melde dich für einen Account an (<a href="https://glitch.com/signup" target="_blank">https://glitch.com/signup</a>) oder nutze deinen GitHub-Account, falls du einen hast. (Siehe GitHub-Anweisungen unten.)</li>
+<li>Klicke auf <em>Neues Projekt</em> und wähle <em>hello-webpage</em></li>
+<li>Klicke auf die Dropdown-Liste Tools (unten links im Fenster) und dann auf den Knopf Terminal, um einen Kommandozeilen-Tab mit einem Prompt wie dem folgenden zu öffnen:</li>
+</ol>
+<p></p><p class="code-label">Terminal</p><p></p>
+<pre><code>app@name-deines-glitch-projects:~
+</code></pre><p>Wenn du Glitch.com als Cloud-IDE verwendest, musst du keine virtuelle Umgebung erstellen. Erstelle stattdessen die folgenden Dateien manuell:</p>
+<p></p><p class="code-label">glitch.json</p><p></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;install&quot;</span>: <span class="hljs-string">&quot;pip3 install -r requirements.txt --user&quot;</span>,
+  <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;bash start.sh&quot;</span>,
+  <span class="hljs-string">&quot;watch&quot;</span>: {
+    <span class="hljs-string">&quot;throttle&quot;</span>: <span class="hljs-number">1000</span>
+  }
+}
+</code></pre>
+<p></p><p class="code-label">requirements.txt</p><p></p>
+<pre><code>Django~=2.2.4
+</code></pre><p></p><p class="code-label">.bash_profile</p><p></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">alias</span> python=python3
+<span class="hljs-built_in">alias</span> pip=pip3
+</code></pre>
+<p></p><p class="code-label">start.sh</p><p></p>
+<pre><code class="lang-bash">chmod 600 .bash_profile
+pip3 install -r requirements.txt --user
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver <span class="hljs-variable">$PORT</span>
+</code></pre>
+<p>Gehe nach dem Erstellen der Dateien zum Terminal und führe die folgenden Befehle aus, um dein erstes Django-Projekt zu erstellen:</p>
+<p></p><p class="code-label">Terminal</p><p></p>
+<pre><code>django-admin.py startproject mysite .
+refresh
+</code></pre><p>Um detaillierte Fehlermeldungen zu sehen, kannst du Django Debug-Logs für deine Glitch-Anwendung aktivieren. Füge einfach folgendes am Ende der Datei <code>mysite/settings.py</code> hinzu.</p>
+<p></p><p class="code-label">mysite/settings.py</p><p></p>
+<pre><code class="lang-python">LOGGING = {
+    <span class="hljs-string">&apos;version&apos;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&apos;disable_existing_loggers&apos;</span>: <span class="hljs-literal">False</span>,
+    <span class="hljs-string">&apos;handlers&apos;</span>: {
+        <span class="hljs-string">&apos;file&apos;</span>: {
+            <span class="hljs-string">&apos;level&apos;</span>: <span class="hljs-string">&apos;DEBUG&apos;</span>,
+            <span class="hljs-string">&apos;class&apos;</span>: <span class="hljs-string">&apos;logging.FileHandler&apos;</span>,
+            <span class="hljs-string">&apos;filename&apos;</span>: <span class="hljs-string">&apos;debug.log&apos;</span>,
+        },
+    },
+    <span class="hljs-string">&apos;loggers&apos;</span>: {
+        <span class="hljs-string">&apos;django&apos;</span>: {
+            <span class="hljs-string">&apos;handlers&apos;</span>: [<span class="hljs-string">&apos;file&apos;</span>],
+            <span class="hljs-string">&apos;level&apos;</span>: <span class="hljs-string">&apos;DEBUG&apos;</span>,
+            <span class="hljs-string">&apos;propagate&apos;</span>: <span class="hljs-literal">True</span>,
+        },
+    },
+}
+</code></pre>
+<p>Dadurch wird eine Datei namens <code>debug.log</code> erzeugt, die aufgetretene Django-Operationen und Fehlermeldungen detailliert aufgeführen wird, was die Fehlersuche und -behebung sehr erleichtern kann, wenn deine Website nicht funktioniert.</p>
+<p>Der erste Neustart des Glitch-Projekts sollte fehlschlagen. (Wenn du auf die oberste Dropdown-Schaltfläche <code>Show</code> klickst und dann auf <code>In a New Window</code>, erhältst du die Fehlermeldung <code>DisallowedHost</code>.) Mach dir jetzt keine Sorgen darüber. Das Tutorial wird dies beheben, sobald du die Django-Einstellungen deines Projekts in der Datei <code>mysite/settings.py</code> aktualisierst</p>
 <h3 id="virtuelle-umgebung">Virtuelle Umgebung</h3>
 <p>Eine virtuelle Umgebung (auch virtualenv genannt) ist wie ein privater Behälter, in den wir nützlichen Code für ein Projekt packen können, an dem wir arbeiten. Wir benutzen sie, um Code für verschiedene Projekte getrennt aufzubewahren, damit dieser nicht vermischt wird.</p>
 <p>Führe Folgendes aus:</p>
 <p></p><p class="code-label">Cloud 9</p><p></p>
 <pre><code>mkdir djangogirls
 cd djangogirls
-python3.6 -mvenv myvenv
+python3 -m venv myvenv
 source myvenv/bin/activate
 pip install django~=2.2.4
 </code></pre><p>(Beachte, dass wir im letzten Befehl eine Tilde gefolgt von einem Gleichheitssymbol benutzen: <code>~=</code>).</p>
@@ -714,7 +773,7 @@ pip install django~=2.2.4
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Installation (Chromebook)","level":"1.3","depth":1,"next":{"title":"Wie das Internet funktioniert","level":"1.4","depth":1,"path":"how_the_internet_works/README.md","ref":"how_the_internet_works/README.md","articles":[]},"previous":{"title":"Installation","level":"1.2","depth":1,"path":"installation/README.md","ref":"installation/README.md","articles":[{"title":"Kommandozeile","level":"1.2.1","depth":2,"anchor":"#command-line","path":"installation/README.md","ref":"installation/README.md#command-line","articles":[]},{"title":"Python","level":"1.2.2","depth":2,"anchor":"#python","path":"installation/README.md","ref":"installation/README.md#python","articles":[]},{"title":"Code-Editor","level":"1.2.3","depth":2,"anchor":"#code-editor","path":"installation/README.md","ref":"installation/README.md#code-editor","articles":[]},{"title":"Virtuelle Umgebung","level":"1.2.4","depth":2,"anchor":"#virtualenv","path":"installation/README.md","ref":"installation/README.md#virtualenv","articles":[]},{"title":"Django","level":"1.2.5","depth":2,"anchor":"#django","path":"installation/README.md","ref":"installation/README.md#django","articles":[]},{"title":"Git","level":"1.2.6","depth":2,"anchor":"#git","path":"installation/README.md","ref":"installation/README.md#git","articles":[]},{"title":"GitHub","level":"1.2.7","depth":2,"anchor":"#github","path":"installation/README.md","ref":"installation/README.md#github","articles":[]},{"title":"PythonAnywhere","level":"1.2.8","depth":2,"anchor":"#pythonanywhere","path":"installation/README.md","ref":"installation/README.md#pythonanywhere","articles":[]}]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"chromebook_setup/README.md","mtime":"2021-06-28T22:27:20.663Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-06-28T22:27:37.495Z"},"basePath":"..","book":{"language":"de"}});
+            gitbook.page.hasChanged({"page":{"title":"Installation (Chromebook)","level":"1.3","depth":1,"next":{"title":"Wie das Internet funktioniert","level":"1.4","depth":1,"path":"how_the_internet_works/README.md","ref":"how_the_internet_works/README.md","articles":[]},"previous":{"title":"Installation","level":"1.2","depth":1,"path":"installation/README.md","ref":"installation/README.md","articles":[{"title":"Kommandozeile","level":"1.2.1","depth":2,"anchor":"#command-line","path":"installation/README.md","ref":"installation/README.md#command-line","articles":[]},{"title":"Python","level":"1.2.2","depth":2,"anchor":"#python","path":"installation/README.md","ref":"installation/README.md#python","articles":[]},{"title":"Code-Editor","level":"1.2.3","depth":2,"anchor":"#code-editor","path":"installation/README.md","ref":"installation/README.md#code-editor","articles":[]},{"title":"Virtuelle Umgebung","level":"1.2.4","depth":2,"anchor":"#virtualenv","path":"installation/README.md","ref":"installation/README.md#virtualenv","articles":[]},{"title":"Django","level":"1.2.5","depth":2,"anchor":"#django","path":"installation/README.md","ref":"installation/README.md#django","articles":[]},{"title":"Git","level":"1.2.6","depth":2,"anchor":"#git","path":"installation/README.md","ref":"installation/README.md#git","articles":[]},{"title":"GitHub","level":"1.2.7","depth":2,"anchor":"#github-account","path":"installation/README.md","ref":"installation/README.md#github-account","articles":[]},{"title":"PythonAnywhere","level":"1.2.8","depth":2,"anchor":"#pythonanywhere-account","path":"installation/README.md","ref":"installation/README.md#pythonanywhere-account","articles":[]}]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"chromebook_setup/README.md","mtime":"2021-07-11T17:41:04.542Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-07-11T17:41:16.933Z"},"basePath":"..","book":{"language":"de"}});
         });
     </script>
 </div>

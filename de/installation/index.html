@@ -229,7 +229,7 @@
     
         <li class="chapter " data-level="1.2.7" data-path="./">
             
-                <a href="./#github">
+                <a href="./#github-account">
             
                     
                     GitHub
@@ -242,7 +242,7 @@
     
         <li class="chapter " data-level="1.2.8" data-path="./">
             
-                <a href="./#pythonanywhere">
+                <a href="./#pythonanywhere-account">
             
                     
                     PythonAnywhere
@@ -633,55 +633,166 @@
 </ul>
 <h1 id="installation">Installation</h1>
 <p>In diesem Tutorial wirst du einen Blog bauen. Dafür wirst du während des Tutorials aufgefordert, verschiedene Software auf deinem Computer zu installieren und auch einige Online-Konten anzulegen, wenn sie gebraucht werden. Diese Seite fasst alle Installations- und Kontoeinrichtungs-Anweisungen an einer Stelle zusammen (das ist für einige Workshopformate sinnvoll).</p>
-<sec data-title="Chromebook setup (if you&apos;re using one)" data-id="chromebook_setup" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Chromebook setup (if you&apos;re using one)<a class="pull-right section atTitle btn btn-default" target="chromebook_setup"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="chromebook_setup"><div class="panel-body">
-<p>Du kannst <a href="http://tutorial.djangogirls.org/en/installation/#install-python" target="_blank">diesen Abschnitt einfach</a> überspringen, falls du kein Chromebook benutzt. Wenn du eins benutzt, wird deine Installation ein wenig anders sein. Du kannst den Rest der Installationsanweisungen ignorieren.</p>
-<h3 id="cloud-ide-paizacloud-cloud-ide-aws-cloud9">Cloud IDE (PaizaCloud Cloud IDE, AWS Cloud9)</h3>
-<p>Mit dem Tool Cloud IDE erhältst du Zugang zu einem Code-Editor und einem Rechner, der im Internet läuft und auf dem du die Software installieren, schreiben und ausführen kannst. Für die Dauer des Tutorials wird Cloud IDE zu deinem <em>lokalen Rechner</em>. Auch du wirst Befehle in einer Kommandozeilen-Oberfläche ausführen können, genau wie die anderen Teilnehmerinnen, die mit OS X, Ubuntu oder Windows arbeiten. Dein Terminal wird jedoch mit einem Rechner verbunden sein, den Cloud IDE dir bereitstellt. Hier ist die Anleitung für die Cloud IDEs (PaizaCloud, Cloud IDE, AWS Cloud9). Wähle eine der Cloud IDEs aus und folge den Anweisungen der gewählten Cloud IDE.</p>
-<h4 id="paizacloud-cloud-ide">PaizaCloud Cloud IDE</h4>
-<ol>
-<li>Gehe zu <a href="https://paiza.cloud/" target="_blank">PaizaCloud Cloud IDE</a></li>
-<li>Lege dir dort ein Benutzerkonto an</li>
-<li>Klicke auf <em>New Server</em> und wähle die Django-App</li>
-<li>Klicke auf die Schaltfläche &quot;Terminal&quot; (links im Browserfenster)</li>
-</ol>
-<p>Jetzt solltest du links eine Schnittstelle mit einer Seitenleiste und Schaltflächen sehen. Klicke auf den &quot;Terminal&quot;-Button und öffne das Terminal-Fenster mit einer Eingabeaufforderung wie folgt:</p>
-<p></p><p class="code-label">browser</p><p></p>
-<pre><code>$
-</code></pre><p>Das Terminal auf der PaizaCloud Cloud IDE steht für deine Anweisungen bereit. Du kannst die Größe des Fensters frei einstellen.</p>
-<h4 id="aws-cloud9">AWS Cloud9</h4>
-<p>Zur Zeit verlangt Cloud 9, dass du dich mit AWS anmeldest und Kreditkarten-Informationen angibst.</p>
-<ol>
-<li>Installiere Cloud 9 aus dem <a href="https://chrome.google.com/webstore/detail/cloud9/nbdmccoknlfggadpfkmcpnamfnbkmkcp" target="_blank">Chrome web store</a></li>
-<li>Gehe zu <a href="https://c9.io" target="_blank">c9.io</a> und klicke auf <em>Get started with AWS Cloud9</em></li>
-<li>Erstelle ein AWS-Benutzerkonto (benötigt Angabe der Kreditkarte, kann aber kostenlos verwendet werden)</li>
-<li>Gib im AWS-Dashboard <em>Cloud9</em> in die Suchzeile ein und klicke es an</li>
-<li>Klicke im Cloud-9-Dashboard <em>Create environment</em> an</li>
-<li>Gib ihm den Namen <em>django-girls</em></li>
-<li>Wähle beim Konfigurieren der Einstellungen <em>Create a new instance for environment (EC2)</em> als &quot;Environment Type&quot; und den &quot;Instance type&quot; <em>t2.micro</em> (&quot;Free-tier eligible.&quot; sollte angezeigt werden). Die Voreinstellung bzgl. &quot;cost-saving&quot; ist in Ordnung und auch die anderen Voreinstellungen kannst du belassen.</li>
-<li>Klicke auf <em>Next step</em></li>
-<li>Klicke auf <em>Create environment</em></li>
-</ol>
-<p>Jetzt solltest du eine Benutzeroberfläche mit Seitenleiste, ein grosses Fenster mit Text und am unteren Rand ein Feld sehen, das wie folgt aussieht:</p>
-<p></p><p class="code-label">bash</p><p></p>
-<pre><code>deinbenutzername:~/workspace $
-</code></pre><p>Dieser untere Bereich ist dein Terminal. Dort kannst du Kommandos für den Computer eingeben, den dir Cloud 9 zur Verfügung stellt. Du kannst dieses Fenster vergrößern oder verkleinern.</p>
-<h3 id="virtuelle-umgebung">Virtuelle Umgebung</h3>
-<p>Eine virtuelle Umgebung (auch virtualenv genannt) ist wie ein privater Behälter, in den wir nützlichen Code für ein Projekt packen können, an dem wir arbeiten. Wir benutzen sie, um Code für verschiedene Projekte getrennt aufzubewahren, damit dieser nicht vermischt wird.</p>
-<p>Führe Folgendes aus:</p>
-<p></p><p class="code-label">Cloud 9</p><p></p>
-<pre><code>mkdir djangogirls
-cd djangogirls
-python3.6 -mvenv myvenv
-source myvenv/bin/activate
-pip install django~=2.2.4
-</code></pre><p>(Beachte, dass wir im letzten Befehl eine Tilde gefolgt von einem Gleichheitssymbol benutzen: <code>~=</code>).</p>
-<h3 id="github">GitHub</h3>
-<p>Erstelle einen <a href="https://github.com" target="_blank">GitHub</a>-Account.</p>
-<h3 id="pythonanywhere">PythonAnywhere</h3>
-<p>Das Django Girls-Tutorial enthält ein Kapitel zum Thema Deployment. Beim Deployment nimmst du den Code, der deiner Web-Anwendung zu Grunde liegt, und packst ihn auf einen öffentlich zugänglichen Computer (Server), damit auch andere Leute deine Arbeit sehen können.</p>
-<p>Es mag seltsam scheinen, das auf einem Chromebook zu tun. Denn wir sind mit Cloud 9 ja bereits auf einem anderen Computer im Internet (anstatt z.B. auf einem lokalen Laptop). Es ist aber trotzdem sinnvoll, denn wir können uns unseren Cloud-9-Arbeitsplatz als Ort für &quot;Dinge in Arbeit&quot; vorstellen und PythonAnywhere als Ort, wo wir unser &quot;fertiges&quot; Projekt der Öffentlichkeit zeigen.</p>
-<p>Melde dich deshalb auf <a href="https://www.pythonanywhere.com" target="_blank">www.pythonanywhere.com</a> für ein PythonAnywhere-Benutzerkonto an.
-</p></div></div></div></sec><p></p>
+<sec data-title="Chromebook setup (if you&apos;re using one)" data-id="chromebook_setup" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Chromebook setup (if you&apos;re using one)<a class="pull-right section atTitle btn btn-default" target="chromebook_setup"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="chromebook_setup"><div class="panel-body"> Du kannst [diesen Abschnitt einfach](http://tutorial.djangogirls.org/en/installation/#install-python) überspringen, falls du kein Chromebook benutzt. Wenn du eins benutzt, wird deine Installation ein wenig anders sein. Du kannst den Rest der Installationsanweisungen ignorieren.
+
+### Cloud-IDE (PaizaCloud Cloud IDE, AWS Cloud9, Glitch.com)
+
+Eine Cloud-IDE ist ein Werkzeug, dass dir einen Code-Editor und Zugang zu einem Rechner im Internet bereitstellt, auf dem du die Software installieren, anpassen und ausführen kannst. Für die Dauer des Tutorials wird Cloud IDE zu deinem *lokalen Rechner*. Auch du wirst Befehle in einer Kommandozeilen-Oberfläche ausführen können, genau wie die anderen Teilnehmerinnen, die mit OS X, Ubuntu oder Windows arbeiten. Dein Terminal wird jedoch mit einem Rechner verbunden sein, den Cloud IDE dir bereitstellt. Hier sind die Anleitungen für die Cloud-IDEs (PaizaCloud Cloud IDE, AWS Cloud9, Glitch.com). Wähle eine der Cloud-IDEs aus und folge den Anweisungen der gewählten Cloud IDE.
+
+#### PaizaCloud Cloud IDE
+
+1. Gehe zu [PaizaCloud Cloud IDE](https://paiza.cloud/)
+2. Lege dir dort ein Benutzerkonto an
+3. Klicke auf *New Server* und wähle die Django-App
+4. Klicke auf die Schaltfläche &quot;Terminal&quot; (links im Browserfenster)
+
+Jetzt solltest du links eine Schnittstelle mit einer Seitenleiste und Schaltflächen sehen. Klicke auf den &quot;Terminal&quot;-Button und öffne das Terminal-Fenster mit einer Eingabeaufforderung wie folgt:
+
+<p class="code-label">browser</p>
+
+    $
+
+
+Das Terminal auf der PaizaCloud Cloud IDE steht für deine Anweisungen bereit. Du kannst die Größe des Fensters frei einstellen.
+
+#### AWS Cloud9
+
+Zur Zeit verlangt Cloud 9, dass du dich mit AWS anmeldest und Kreditkarten-Informationen angibst.
+
+1. Installiere Cloud 9 aus dem [Chrome web store](https://chrome.google.com/webstore/detail/cloud9/nbdmccoknlfggadpfkmcpnamfnbkmkcp)
+2. Gehe zu [c9.io](https://c9.io) und klicke auf *Get started with AWS Cloud9*
+3. Erstelle ein AWS-Benutzerkonto (benötigt Angabe der Kreditkarte, kann aber kostenlos verwendet werden)
+4. Gib im AWS-Dashboard *Cloud9* in die Suchzeile ein und klicke es an
+5. Klicke im Cloud-9-Dashboard *Create environment* an
+6. Gib ihm den Namen *django-girls*
+7. Wähle beim Konfigurieren der Einstellungen *Create a new instance for environment (EC2)* als &quot;Environment Type&quot; und den &quot;Instance type&quot; *t2.micro* (&quot;Free-tier eligible.&quot; sollte angezeigt werden). Die Voreinstellung bzgl. &quot;cost-saving&quot; ist in Ordnung und auch die anderen Voreinstellungen kannst du belassen.
+8. Klicke auf *Next step*
+9. Klicke auf *Create environment*
+
+Jetzt solltest du eine Benutzeroberfläche mit Seitenleiste, ein grosses Fenster mit Text und am unteren Rand ein Feld sehen, das wie folgt aussieht:
+
+<p class="code-label">bash</p>
+
+    deinbenutzername:~/workspace $
+
+
+Dieser untere Bereich ist dein Terminal. Dort kannst du Kommandos für den Computer eingeben, den dir Cloud 9 zur Verfügung stellt. Du kannst dieses Fenster vergrößern oder verkleinern.
+
+#### Glitch.com Cloud-IDE
+
+1. Gehe auf [Glitch.com](https://glitch.com/)
+2. Melde dich für einen Account an (https://glitch.com/signup) oder nutze deinen GitHub-Account, falls du einen hast. (Siehe GitHub-Anweisungen unten.)
+3. Klicke auf *Neues Projekt* und wähle *hello-webpage*
+4. Klicke auf die Dropdown-Liste Tools (unten links im Fenster) und dann auf den Knopf Terminal, um einen Kommandozeilen-Tab mit einem Prompt wie dem folgenden zu öffnen:
+
+<p class="code-label">Terminal</p>
+
+    app@name-deines-glitch-projects:~
+
+
+Wenn du Glitch.com als Cloud-IDE verwendest, musst du keine virtuelle Umgebung erstellen. Erstelle stattdessen die folgenden Dateien manuell:
+
+<p class="code-label">glitch.json</p>
+
+```json
+{
+  &quot;install&quot;: &quot;pip3 install -r requirements.txt --user&quot;,
+  &quot;start&quot;: &quot;bash start.sh&quot;,
+  &quot;watch&quot;: {
+    &quot;throttle&quot;: 1000
+  }
+}
+```
+
+<p class="code-label">requirements.txt</p>
+
+    Django~=2.2.4
+
+
+<p class="code-label">.bash_profile</p>
+
+```bash
+alias python=python3
+alias pip=pip3
+```
+
+<p class="code-label">start.sh</p>
+
+```bash
+chmod 600 .bash_profile
+pip3 install -r requirements.txt --user
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver $PORT
+```
+
+Gehe nach dem Erstellen der Dateien zum Terminal und führe die folgenden Befehle aus, um dein erstes Django-Projekt zu erstellen:
+
+<p class="code-label">Terminal</p>
+
+    django-admin.py startproject mysite .
+    refresh
+
+
+Um detaillierte Fehlermeldungen zu sehen, kannst du Django Debug-Logs für deine Glitch-Anwendung aktivieren. Füge einfach folgendes am Ende der Datei `mysite/settings.py` hinzu.
+
+<p class="code-label">mysite/settings.py</p>
+
+```python
+LOGGING = {
+    &apos;version&apos;: 1,
+    &apos;disable_existing_loggers&apos;: False,
+    &apos;handlers&apos;: {
+        &apos;file&apos;: {
+            &apos;level&apos;: &apos;DEBUG&apos;,
+            &apos;class&apos;: &apos;logging.FileHandler&apos;,
+            &apos;filename&apos;: &apos;debug.log&apos;,
+        },
+    },
+    &apos;loggers&apos;: {
+        &apos;django&apos;: {
+            &apos;handlers&apos;: [&apos;file&apos;],
+            &apos;level&apos;: &apos;DEBUG&apos;,
+            &apos;propagate&apos;: True,
+        },
+    },
+}
+```
+
+Dadurch wird eine Datei namens `debug.log` erzeugt, die aufgetretene Django-Operationen und Fehlermeldungen detailliert aufgeführen wird, was die Fehlersuche und -behebung sehr erleichtern kann, wenn deine Website nicht funktioniert.
+
+Der erste Neustart des Glitch-Projekts sollte fehlschlagen. (Wenn du auf die oberste Dropdown-Schaltfläche `Show` klickst und dann auf `In a New Window`, erhältst du die Fehlermeldung `DisallowedHost`.) Mach dir jetzt keine Sorgen darüber. Das Tutorial wird dies beheben, sobald du die Django-Einstellungen deines Projekts in der Datei `mysite/settings.py` aktualisierst
+
+### Virtuelle Umgebung
+
+Eine virtuelle Umgebung (auch virtualenv genannt) ist wie ein privater Behälter, in den wir nützlichen Code für ein Projekt packen können, an dem wir arbeiten. Wir benutzen sie, um Code für verschiedene Projekte getrennt aufzubewahren, damit dieser nicht vermischt wird.
+
+Führe Folgendes aus:
+
+<p class="code-label">Cloud 9</p>
+
+    mkdir djangogirls
+    cd djangogirls
+    python3 -m venv myvenv
+    source myvenv/bin/activate
+    pip install django~=2.2.4
+
+
+(Beachte, dass wir im letzten Befehl eine Tilde gefolgt von einem Gleichheitssymbol benutzen: `~=`).
+
+### GitHub
+
+Erstelle einen [GitHub](https://github.com)-Account.
+
+### PythonAnywhere
+
+Das Django Girls-Tutorial enthält ein Kapitel zum Thema Deployment. Beim Deployment nimmst du den Code, der deiner Web-Anwendung zu Grunde liegt, und packst ihn auf einen öffentlich zugänglichen Computer (Server), damit auch andere Leute deine Arbeit sehen können.
+
+Es mag seltsam scheinen, das auf einem Chromebook zu tun. Denn wir sind mit Cloud 9 ja bereits auf einem anderen Computer im Internet (anstatt z.B. auf einem lokalen Laptop). Es ist aber trotzdem sinnvoll, denn wir können uns unseren Cloud-9-Arbeitsplatz als Ort für &quot;Dinge in Arbeit&quot; vorstellen und PythonAnywhere als Ort, wo wir unser &quot;fertiges&quot; Projekt der Öffentlichkeit zeigen.
+
+Melde dich deshalb auf [www.pythonanywhere.com](https://www.pythonanywhere.com) für ein PythonAnywhere-Benutzerkonto an. 
+
+</div></div></div></sec>
 <h1 id="command-line">Kurze Einführung in die Kommandozeile </h1>
 <p>Viele der folgenden Schritte beziehen sich auf die &quot;Konsole&quot;, das &quot;Terminal&quot;, das &quot;Kommandozeilen-Fenster&quot; oder die &quot;Kommandozeile&quot; -- all diese Begriffe bezeichnen dasselbe: Ein Fenster auf deinem Computer, in das du Kommandos eingeben kannst. Im Hauptteil des Tutorials wirst du mehr über die Kommandozeile lernen. Vorerst musst du nur wissen, wie du ein Kommandozeilenfester öffnen kannst und wie eines aussieht: <sec data-title="Opening: Windows" data-id="windows_prompt" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Opening: Windows<a class="pull-right section atTitle btn btn-default" target="windows_prompt"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="windows_prompt"><div class="panel-body"></div></div></div></sec></p>
 <p>Abhängig von deiner Windows-Version und deiner Tastatur sollte eine der folgenden Methoden ein Kommandozeilen-Fenster öffnen (du musst vielleicht etwas herumexperimentieren, aber du musst nicht jeden dieser Vorschläge ausprobieren):</p>
@@ -707,7 +818,7 @@ pip install django~=2.2.4
 <p>Für Leserinnen zuhause: Dieses Kapitel wird auch im Video <a href="https://www.youtube.com/watch?v=pVTaqzKZCdA" target="_blank">Installing Python &amp; Code Editor</a> behandelt.</p>
 <p>Dieses Kapital basiert auf einem Tutorial der Geek Girls Carrots (<a href="https://github.com/ggcarrots/django-carrots" target="_blank">https://github.com/ggcarrots/django-carrots</a>).</p>
 </blockquote>
-<p>Django ist in Python geschrieben. Wir brauchen Python für alles in Django. Fangen wir mit der Installation an! Wir möchten, dass du Python 3 installierst. Solltest du also bereits eine ältere Version installiert haben, musst du diese aktualisieren. Wenn du schon Version 3.4 oder höher besitzt, ist das in Ordnung.</p>
+<p>Django ist in Python geschrieben. Wir brauchen Python für alles in Django. Fangen wir mit der Installation an! Wir möchten, dass du Python 3 installierst. Solltest du also bereits eine ältere Version installiert haben, musst du diese aktualisieren. Wenn du schon Version 3.6 oder höher hast, ist das in Ordnung.</p>
 <p>Bitte installiere ein gewöhnliches Python wie folgt, selbst falls auf deinem Computer bereits Anaconda installiert ist.</p>
 <sec data-title="Install Python: Windows" data-id="python_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Install Python: Windows<a class="pull-right section atTitle btn btn-default" target="python_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_windows"><div class="panel-body">
 <p>Bitte schau zuerst auf der &quot;Systemtyp&quot;-Zeile der Systeminformationsseite nach, ob auf deinem Computer eine 32-Bit-Version oder eine 64-Bit-Version von Windows läuft. Um diese Seite zu finden, versuche eine der folgenden Methoden:</p>
@@ -715,35 +826,33 @@ pip install django~=2.2.4
 <li>Drücke die Windows-Taste und die Pause/Break-Taste zur selben Zeit</li>
 <li>Öffne dein Control Panel über das Windows Menü und navigiere dann zu System &amp; Sicherheit, dann System</li>
 <li>Drücke die Windows-Taste und navigiere dann zu Einstellungen &gt; System &gt; Über</li>
+<li>Suche im Windows-Startmenü nach &quot;Systeminformationen&quot;. Klicke dazu auf Start oder drücke die Windows-Taste, dann beginne <code>Systeminformationen</code> zu tippen. Sobald du etwas eingegeben hast, bekommst du passende Vorschläge. Wähle den Eintrag &quot;Systeminformationen&quot; an, sobald er erscheint.</li>
 </ul>
 <p>Du kannst Python für Windows von der Webseite <a href="https://www.python.org/downloads/windows/" target="_blank">https://www.python.org/downloads/windows/</a> herunterladen. Klicke auf den &quot;Latest Python 3 Release - Python x.x.x&quot; Link. Wenn du eine <strong>64-bit</strong>-Version von Windows benutzt, lade die Datei <strong>Windows x86-64 executable installer</strong> herunter. Andernfalls lade den <strong>Windows x86 executable installer</strong> herunter. Führe den Installer nach dem Download (per Doppelklick) aus und folge den Anweisungen des Installationsprogramms.</p>
-<p>Auf eine Sache solltest du achten: Während der Installation wird ein Setup-Fenster auftauchen. Stell sicher, dass du die Checkbox mit &quot;Add Python 3.6 to PATH&quot; oder &quot;Add Python to your environment variables&quot; aktiviert hast und klicke dann auf &quot;Install Now&quot; wie hier gezeigt (es kann bei dir etwas anders aussehen, wenn du eine andere Version installierst):</p>
+<p>Auf eine Sache solltest du achten: Während der Installation wird ein Setup-Fenster auftauchen. Stell sicher, dass du die Checkbox mit &quot;Add Python 3.8 to PATH&quot; oder &quot;Add Python to your environment variables&quot; aktiviert hast und klicke dann auf &quot;Install Now&quot; wie hier gezeigt (es kann bei dir etwas anders aussehen, wenn du eine andere Version installierst):</p>
 <p><img src="../python_installation/images/python-installation-options.png" alt="Vergiss nicht, Python zum Pfad hinzuzufügen"></p>
 <p>Wenn die Installation abgeschlossen ist, siehst du vielleicht ein Dialogfeld mit einem Link, wo du mehr über Python oder über die Version lernen kannst. Schließe es oder brich den Dialog ab -- du wirst darüber mehr in diesem Tutorial lernen!</p>
-<p>Hinweis: Falls du eine ältere Version von Windows verwendest (7, Vista oder älter) und die Installation von Python 3.6.x mit einer Fehlermeldung fehlschlägt, kannst du Folgendes versuchen:</p>
-<ol>
-<li>Installiere alle Windows-Updates und versuche erneut, Python zu installieren; oder</li>
-<li>Installiere eine <a href="https://www.python.org/downloads/windows/" target="_blank">ältere Version von Python</a>, z. B. <a href="https://www.python.org/downloads/release/python-346/" target="_blank">3.4.6</a>.</li>
-</ol>
-<p>Wenn du eine ältere Version von Python installierst, kann es sein, dass die Installationsanzeige etwas anders aussieht als oben gezeigt. Stell sicher, dass du nach unten scrollst bis du &quot;Add python.exe to Path&quot; siehst, klicke den Button und wähle &quot;Will be installed on local hard drive&quot;:</p>
-<p><img src="../python_installation/images/add_python_to_windows_path.png" alt="Python zum Pfad hinzufügen (Installer von älterer Python-Version)"></p>
+<p>Hinweis: Falls du eine ältere Version von Windows verwendest (7, Vista oder älter) und die Installation von Python 3.8 mit einer Fehlermeldung fehlschlägt, dann installiere alle Windows-Updates und versuche erneut, Python zu installieren. Falls der Fehler dann immer noch auftritt, installiere Python-Version 3.6.8 von <a href="https://www.python.org/downloads/windows/" target="_blank">Python.org</a>.</p>
+<blockquote>
+<p>Django 2.2.4 benötigt Python 3.6 oder höher, das weder Windows XP noch frühere Windows-Versionen unterstützt.</p>
+</blockquote>
 </div></div></div></sec>
 <sec data-title="Install Python: OS X" data-id="python_OSX" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Install Python: OS X<a class="pull-right section atTitle btn btn-default" target="python_OSX"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_OSX"><div class="panel-body">
 <blockquote>
 <p><strong>Hinweis</strong> Bevor du Python auf Mac OS X installierst, musst du sicherstellen, dass deine Mac-Einstellungen es erlauben, Pakete zu installieren, die nicht aus dem App Store stammen. Geh auf Systemeinstellungen (im Ordner &quot;Programme&quot;), klicke auf &quot;Sicherheit&quot;, und dann auf die Registerkarte &quot;Allgemein&quot;. Wenn &quot;Apps-Download erlauben von:&quot; auf &quot;Mac App Store&quot; gestellt ist, ändere die Einstellung auf &quot;Mac App Store und verifizierte Entwickler&quot;.</p>
 </blockquote>
-<p>Auf der Website <a href="https://www.python.org/downloads/release/python-361/" target="_blank">https://www.python.org/downloads/release/python-361/</a> findest du den passenden Python-Installer:</p>
+<p>Auf der Website <a href="https://www.python.org/downloads/mac-osx/" target="_blank">https://www.python.org/downloads/mac-osx/</a> findest du aktuellen Python-Installer:</p>
 <ul>
 <li>Lade die Datei <em>Mac OS X 64-bit/32-bit installer</em> herunter,</li>
-<li>Doppelklicke auf <em>python-3.6.1-macosx10.6.pkg</em>, um die Installation zu starten.</li>
+<li>Doppelklicke auf <em>python-3.8.6-macosx10.9.pkg</em>, um die Installation zu starten.</li>
 </ul>
 </div></div></div></sec>
 <sec data-title="Install Python: Linux" data-id="python_linux" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Install Python: Linux<a class="pull-right section atTitle btn btn-default" target="python_linux"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="python_linux"><div class="panel-body">
 <p>Es ist ziemlich wahrscheinlich, dass du Python schon automatisch installiert hast. Um herauszufinden, ob das so ist (und wenn ja, welche Version du hast), öffne eine Konsole und gib das folgende Kommando ein:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ python3 --version
-Python 3.6.1
-</code></pre><p>Wenn du eine andere &apos;Mikroversion&apos; von Python installiert hast, z.B. 3.6.0, dann musst du die Version nicht aktualisieren. Wenn du Python noch nicht installiert hast oder wenn du eine andere Python-Version willst, prüfe zuerst mit folgendem Befehl, welche Linux-Distribution du benutzt:</p>
+Python 3.8.6
+</code></pre><p>Wenn du eine andere Version von Python installiert hast, die 3.6 oder höher ist, z.B. 3.6.8, dann musst du die Version nicht aktualisieren. Wenn du Python noch nicht installiert hast oder wenn du eine andere Python-Version willst, prüfe zuerst mit folgendem Befehl, welche Linux-Distribution du benutzt:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ grep &apos;^NAME=&apos; /etc/os-release
 </code></pre><p>Folge danach je nach Ergebnis einer der unterhalb dieses Abschnitts folgenden Installationsanweisungen.</p>
@@ -767,9 +876,9 @@ Python 3.6.1
 <p>Prüfe, ob die Installation erfolgreich war, indem du ein Kommandozeilenfenster öffnest und den <code>python3</code>-Befehl ausführst:</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ python3 --version
-Python 3.6.1
-</code></pre><p>Die angezeigte Version kann bei dir eine andere sein als 3.6.1 -- sie sollte aber der entsprechen, die du installiert hast.</p>
-<p><strong>Hinweis:</strong> Wenn du unter Windows eine Fehlermeldung bekommst, dass <code>python3</code> nicht gefunden wurde, versuche es mit <code>python</code> (ohne die <code>3</code>) und prüfe, ob es dennoch eine Version von Python 3.4.0 oder höher ist. Wenn auch das nicht funktioniert, kannst du ein neues Kommandozeilenfenster öffnen und es dort erneut versuchen; dies geschieht, wenn du ein Kommandozeilenfenster verwendet, das schon vor der Python-Installation geöffnet war.</p>
+Python 3.8.6
+</code></pre><p>Die angezeigte Version kann bei dir eine andere sein als 3.8.6 -- sie sollte aber der entsprechen, die du installiert hast.</p>
+<p><strong>Hinweis:</strong> Wenn du unter Windows eine Fehlermeldung bekommst, dass <code>python3</code> nicht gefunden wurde, versuche es mit <code>python</code> (ohne die <code>3</code>) und prüfe, ob es dennoch eine Version von Python 3.6 oder höher ist. Wenn auch das nicht funktioniert, kannst du ein neues Kommandozeilenfenster öffnen und es dort erneut versuchen; dies geschieht, wenn du ein Kommandozeilenfenster verwendet, das schon vor der Python-Installation geöffnet war.</p>
 <hr>
 <p>Wenn es Unklarheiten gibt oder wenn etwas schief ging und du nicht weiter weißt, frage bitte deinen Coach! Manchmal laufen die Dinge einfach nicht so glatt und dann ist es besser, jemanden mit mehr Erfahrung um Hilfe zu bitten.</p>
 <h1 id="code-editor">Einen Code-Editor installieren </h1>
@@ -836,13 +945,13 @@ You may need to use sudo with that command.  After installing the python3-venv p
 </code></pre><p>Falls das eintritt, verwende stattdessen den <code>virtualenv</code>-Befehl.</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>$ sudo apt install python-virtualenv
-$ virtualenv --python=python3.6 myvenv
+$ virtualenv --python=python3.8 myvenv
 </code></pre><p><strong>HINWEIS:</strong> Wenn du einen Fehler wie</p>
 <p></p><p class="code-label">command-line</p><p></p>
 <pre><code>E: Unable to locate package python3-venv
 </code></pre><p>erhältst, führe stattdessen Folgendes aus:</p>
 <p></p><p class="code-label">command-line</p><p></p>
-<pre><code>sudo apt install python3.6-venv
+<pre><code>sudo apt install python3.8-venv
 </code></pre></blockquote>
 </div></div></div></sec>
 <h2 id="mit-der-virtuellen-umgebung-arbeiten">Mit der virtuellen Umgebung arbeiten</h2>
@@ -860,7 +969,7 @@ $ virtualenv --python=python3.6 myvenv
 </code></pre></blockquote>
 <!-- (This comment separates the two blockquote blocks, so that GitBook and Crowdin don't merge them into a single block.) -->
 <blockquote>
-<p><strong>Hinweis:</strong> Für Benutzerinnen des populären Editors VS Code, der einen Powershell-basiertes Terminal eingebaut hat: Wenn du beim eingebauten Terminal bleiben willst, kannst du deine virtuelle Umgebung mit folgendem Befehl aktivieren:</p>
+<p><strong>Hinweis:</strong> Für Benutzerinnen des populären Editors VS Code, der einen PowerShell-basiertes Terminal eingebaut hat: Wenn du beim eingebauten Terminal bleiben willst, kannst du deine virtuelle Umgebung mit folgendem Befehl aktivieren:</p>
 <pre><code>$ . myvenv\Scripts\activate.ps1
 </code></pre><p>Der Vorteil davon ist, dass du nicht zwischen den Editor-Fenstern und den Kommandozeilen-Fenstern wechseln musst</p>
 </blockquote>
@@ -924,7 +1033,7 @@ Successfully installed Django-2.2.4
 <h2 id="git-installieren">Git installieren</h2>
 <sec data-title="Installing Git: Windows" data-id="git_install_windows" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Installing Git: Windows<a class="pull-right section atTitle btn btn-default" target="git_install_windows"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="git_install_windows"><div class="panel-body">
 <p>Du kannst Git von <a href="https://git-scm.com/" target="_blank">git-scm.com</a> herunterladen. Du kannst bei allen Schritten außer zweien &quot;next&quot; klicken: Wähle im Schritt, in dem du einen Editor aussuchen sollst, &quot;Nano&quot;; und bei der Anweisung &quot;Adjusting your PATH environment&quot;, wähle die Einstellung &quot;Run Git and associated Unix tools from the Windows command-line&quot; (die letzte Option). Die anderen Voreinstellungen sind ok. &quot;Checkout&quot;-Stil &quot;Windows&quot; und &quot;Commit&quot; mit &quot;Unix line endings&quot; (Zeilenende im Unix-Format) sind die richtigen Einstellungen.</p>
-<p>Nach Abschluss der Installation musst du deine Command-Shell oder Powershell neu starten, damit die Einstellungen aktiv sind.</p></div></div></div></sec><p></p>
+<p>Vergiss nicht, die Eingabeaufforderung oder PowerShell nach erfolgreicher Installation neu zu starten.</p></div></div></div></sec><p></p>
 <sec data-title="Installing Git: OS X" data-id="git_install_OSX" data-collapse="true"><div class="panel panel-default"><div class="panel-heading"><b>Installing Git: OS X<a class="pull-right section atTitle btn btn-default" target="git_install_OSX"><span class="fa fa-angle-up"></span></a></b></div><div class="panel-collapse in" id="git_install_OSX"><div class="panel-body">
 <p>Lade Git von <a href="https://git-scm.com/" target="_blank">git-scm.com</a> herunter und folge dann den Anweisungen.</p>
 <blockquote>
@@ -946,9 +1055,9 @@ Successfully installed Django-2.2.4
 <pre><code class="lang-bash">$ sudo zypper install git
 </code></pre>
 </div></div></div></sec>
-<h1 id="github">Einen GitHub-Account erstellen </h1>
+<h1 id="github-account">Einen GitHub-Account erstellen </h1>
 <p>Gehe zu <a href="https://www.github.com" target="_blank">GitHub.com</a> und registriere dich für ein neues, kostenfreies Benutzerkonto. Achte darauf, dass du dein Passwort nicht vergisst (füge es deinem Passwortmanager hinzu, wenn du einen benutzt).</p>
-<h1 id="pythonanywhere">Einen PythonAnywhere-Account erstellen </h1>
+<h1 id="pythonanywhere-account">Einen PythonAnywhere-Account erstellen </h1>
 <p>PythonAnywhere ist ein Dienst, mittels dem Python auf Servern &quot;in der Cloud&quot; ausgeführt werden kann. Wir werden ihn verwenden, um unsere Seite zu hosten, live und im Internet.</p>
 <p>Wir werden den Blog, den wir bauen, auf PythonAnywhere hosten. Registriere dich auf PythonAnywhere für ein &quot;Beginner&quot;-Konto (die kostenfreie Stufe ist ausreichend, du brauchst keine Kreditkarte).</p>
 <ul>
@@ -1020,7 +1129,7 @@ Successfully installed Django-2.2.4
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Installation","level":"1.2","depth":1,"next":{"title":"Installation (Chromebook)","level":"1.3","depth":1,"path":"chromebook_setup/README.md","ref":"chromebook_setup/README.md","articles":[]},"previous":{"title":"Einleitung","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"installation/README.md","mtime":"2021-06-28T22:27:20.695Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-06-28T22:27:37.495Z"},"basePath":"..","book":{"language":"de"}});
+            gitbook.page.hasChanged({"page":{"title":"Installation","level":"1.2","depth":1,"next":{"title":"Installation (Chromebook)","level":"1.3","depth":1,"path":"chromebook_setup/README.md","ref":"chromebook_setup/README.md","articles":[]},"previous":{"title":"Einleitung","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"de","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"installation/README.md","mtime":"2021-07-11T17:41:04.566Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-07-11T17:41:16.933Z"},"basePath":"..","book":{"language":"de"}});
         });
     </script>
 </div>
