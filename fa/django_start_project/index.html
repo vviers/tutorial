@@ -229,7 +229,7 @@
     
         <li class="chapter " data-level="1.2.7" data-path="../installation/">
             
-                <a href="../installation/#github">
+                <a href="../installation/#github-account">
             
                     
                     GitHub
@@ -242,7 +242,7 @@
     
         <li class="chapter " data-level="1.2.8" data-path="../installation/">
             
-                <a href="../installation/#pythonanywhere">
+                <a href="../installation/#pythonanywhere-account">
             
                     
                     PythonAnywhere
@@ -692,6 +692,33 @@ STATIC_ROOT = os.path.join(BASE_DIR, <span class="hljs-string">&apos;static&apos
 <blockquote>
 <p><strong>نکته</strong>: اگر از کروم بوک استفاده می‌کنید، این خط را هم به انتهای فایل settings.py اضافه کنید: <code>MESSAGE_STORAGE = &apos;django.contrib.messages.storage.session.SessionStorage&apos;</code></p>
 <p>اگر از cloud9 استفاده می‌کنید <code>.amazonaws.com</code> را به <code>ALLOWED_HOSTS</code> اضافه کنید</p>
+<p>اگر شما پروژه خود را بر روی <code>Glitch.com</code> میزبانی می‌کنید، اجازه دهید که از کلید مخفی جنگو یا Djanog secret key پروژه شما که باید محرمانه بماند محافظت کنیم (در غیر اینصورت هر کس که پروژه شما را بررسی کند آن را خواهد دید):</p>
+<ul>
+<li><p>در ابتدا، یک کلید مخفی شانسی می‌سازیم. ترمینال Glitch را دوباره باز کنید و دستورات زیر را تایپ کنید:</p>
+<p>  </p><p class="code-label">خط فرمان</p><p></p>
+<pre><code class="lang-bash">  python -c <span class="hljs-string">&apos;from django.core.management.utils import get_random_secret_key; \
+        print(get_random_secret_key())&apos;</span>
+</code></pre>
+<p>  این کار باعث خواهد شد که یک رشته اتفاقی از کاراکترها و حروف ساخته شود، چیزی که به عنوان یک کلید مخفی برای پروژه جنگو شما کاملاً مناسب است. ما این کلید را در فایل <code>.env</code> در Glitch اضافه می‌کنیم، این فایل درصورتی توسط Glitch به ما نشان داده می‌شود که ما صاحب پروژه باشیم.</p>
+</li>
+<li><p>فایلی به نام <code>.env</code> در پوشه اصلی پروژه بسازید و کدهای زیر را در آن قرار دهید:</p>
+<p>  </p><p class="code-label">.env</p><p></p>
+<pre><code class="lang-bash">  <span class="hljs-comment"># Here, inside the single quotes, you can cut and paste the random key generated above</span>
+  SECRET=<span class="hljs-string">&apos;3!0k#7ds5mp^-x$lqs2%le6v97h#@xopab&amp;oj5y7d=hxe511jl&apos;</span>
+</code></pre>
+</li>
+<li><p>سپس فایل settings پروژه جنگو را با تغییرات زیر به روز رسانی کنید تا کلید مخفی به آن اضافه شود:</p>
+<p>  </p><p class="code-label">mysite/settings.py</p><p></p>
+<pre><code class="lang-python">  SECRET_KEY = os.getenv(<span class="hljs-string">&apos;SECRET&apos;</span>)
+</code></pre>
+</li>
+<li><p>کمی پایین‌تر در همان فایل، نام وبسایت جدید Glitch شما را اضافه می‌کنیم:</p>
+<p>  </p><p class="code-label">mysite/settings.py</p><p></p>
+<pre><code class="lang-python">  ALLOWED_HOSTS = [os.getenv(<span class="hljs-string">&apos;PROJECT_DOMAIN&apos;</span>) + <span class="hljs-string">&quot;.glitch.me&quot;</span>]
+</code></pre>
+<p>  مقدار <code>PROJECT_DOMAIN</code> به صورت اتوماتیک توسط Glitch ایجاد می‌شود. این مقدار وابسته به نام پروژه شماست.</p>
+</li>
+</ul>
 </blockquote>
 <h2 id="راه-اندازی-یک-پایگاه-داده">راه اندازی یک پایگاه داده</h2>
 <p>تعداد بسیار زیادی پایگاه داده وجود دارد که می‌تواند داده های وبسایت شما را ذخیره کند. ما از پایگاه داده پیشفرض <code>sqlite3</code> استفاده می‌کنیم.</p>
@@ -733,7 +760,10 @@ Running migrations:
 </code></pre><p>اگر در Chromebook کار می‌کنید از این دستور استفاده کنید:</p>
 <p></p><p class="code-label">Cloud 9</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py runserver 0.0.0.0:8080
-</code></pre><p>اگر در ویندوز کار می‌کنید و پیغام خطا <code>UnicodeDecodeError</code> را دریافت کردید، به جای دستور بالا از این دستور استفاده کنید:</p>
+</code></pre><p>یا اگر از Glitch استفاده می‌کنید به کمک دستور زیر:</p>
+<p></p><p class="code-label">Glitch.com terminal</p><p></p>
+<pre><code>$ refresh
+</code></pre><p>اگر در ویندوز کار می‌کنید و با خطای <code>UnicodeDecodeError</code> مواجه شدید، از دستور زیر استفاده کنید:</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
 <pre><code>(myvenv) ~/djangogirls$ python manage.py runserver 0:8000
 </code></pre><p>حالا زمان آن است که چک کنید وبسایت کار می‌کند یا نه. مرورگر خود را باز کنید (فایرفاکس، کروم، سافاری، اینترنت اکسپلورر یا هر چیز دیگر) و آدرس زیر را وارد کنید:</p>
@@ -742,9 +772,11 @@ Running migrations:
 </code></pre><p>اگر از Chromebook و Cloud9 استفاده می‌کنید، در پنجره pop-up که در گوشه ی بالا، سمت راست پنجره ی خط فرمان، که در حال اجرای وب سرور است، باز شده است، بر روی آدرس URL ظاهر شده کلیک کنید. این آدرس چیزی شبیه به این است:</p>
 <p></p><p class="code-label">browser</p><p></p>
 <pre><code>https://&lt;a bunch of letters and numbers&gt;.vfs.cloud9.us-west-2.amazonaws.com
+</code></pre><p>یا در Glitch:</p>
+<pre><code>https://name-of-your-glitch-project.glitch.me
 </code></pre><p>تبریک! شما اولین وبسایت خود را ساخته اید و با یک وب سرور آن را فعال کرده اید! فوق العاده نیست؟</p>
 <p><img src="images/install_worked.png" alt="Install worked!"></p>
-<p>توجه داشته باشید که یک کنسول خط فرمان در هر لحظه فقط یک کار را می‌تواند انجام دهد و کنسول خط فرمان که شما قبل تر باز کرده اید در حال اجرای وب سرور است. تا زمانی که وب سرور در حال اجراست و منتظر است تا درخواستی به آن برسد می‌توان چیزی تایپ کرد ولی هیچ دستور جدیدی را نمی‌توان اجرا کرد.</p>
+<p>توجه داشته باشید که یک کنسول خط فرمان در هر لحظه فقط یک کار را می‌تواند انجام دهد و کنسول خط فرمان که شما قبل‌تر باز کرده‌اید در حال اجرای وب سرور است. تا زمانی که وب سرور در حال اجراست و منتظر است تا درخواستی به آن برسد می‌توان چیزی تایپ کرد ولی هیچ دستور جدیدی را نمی‌توان اجرا کرد.</p>
 <blockquote>
 <p>نحوه عملکرد وب سرور را در بخش <strong>اینترنت چگونه کار می‌کند</strong> دوره کرده ایم.</p>
 </blockquote>
@@ -793,7 +825,7 @@ Running migrations:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"اولین پروژه جنگو شما!","level":"1.11","depth":1,"next":{"title":"مدل در جنگو","level":"1.12","depth":1,"path":"django_models/README.md","ref":"django_models/README.md","articles":[]},"previous":{"title":"نصب و راه اندازی جنگو","level":"1.10","depth":1,"path":"django_installation/README.md","ref":"django_installation/README.md","articles":[]},"dir":"rtl"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fa","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_start_project/README.md","mtime":"2021-07-27T14:04:00.785Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-07-27T14:04:16.637Z"},"basePath":"..","book":{"language":"fa"}});
+            gitbook.page.hasChanged({"page":{"title":"اولین پروژه جنگو شما!","level":"1.11","depth":1,"next":{"title":"مدل در جنگو","level":"1.12","depth":1,"path":"django_models/README.md","ref":"django_models/README.md","articles":[]},"previous":{"title":"نصب و راه اندازی جنگو","level":"1.10","depth":1,"path":"django_installation/README.md","ref":"django_installation/README.md","articles":[]},"dir":"rtl"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fa","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"django_start_project/README.md","mtime":"2021-08-05T18:03:37.435Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-08-05T18:03:50.672Z"},"basePath":"..","book":{"language":"fa"}});
         });
     </script>
 </div>

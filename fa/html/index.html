@@ -229,7 +229,7 @@
     
         <li class="chapter " data-level="1.2.7" data-path="../installation/">
             
-                <a href="../installation/#github">
+                <a href="../installation/#github-account">
             
                     
                     GitHub
@@ -242,7 +242,7 @@
     
         <li class="chapter " data-level="1.2.8" data-path="../installation/">
             
-                <a href="../installation/#pythonanywhere">
+                <a href="../installation/#pythonanywhere-account">
             
                     
                     PythonAnywhere
@@ -643,7 +643,8 @@
 <p>پیغام خطایی نیست! تبریک :) با اینحال وبسایت شما هنوز چیزی به غیر از یک صفحه خالی نشان نمی‌دهد برای اینکه تمپلیت شما خالی است. لازم است که آن را اصلاح کنیم.</p>
 <p>فایل جدید را در ویرایشگر کد باز کنید و موارد زیر را به آن اضافه کنید:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hi there!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>It works!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -652,9 +653,10 @@
 </code></pre>
 <p>الان وبسایت شما چطور به نظر می‌رسد؟ به آن سری بزنید تا بفهمید: <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a></p>
 <p><img src="images/step3.png" alt="تصویر 11.2"></p>
-<p>کار می‌کند! خوب شد :)</p>
+<p>کار می‌کند! خوب شد! :)</p>
 <ul>
-<li><code>&lt;html&gt;</code> پایه‌ای ترین تگ و معمولاً اولین تگ در ابتدای صفحه است و تگ <code>&lt;/html&gt;</code> معمولاً در انتهای صفحه می‌آید. همانطور که می‌بینید، تمام محتوای وبسایت بین تگ <code>&lt;html&gt;</code> در ابتدا و تگ <code>&lt;/html&gt;</code> در انتها قرار می‌گیرند</li>
+<li>خط <code>&lt;!DOCTYPE html&gt;</code> یک تگ HTML نیست. این عبارت فقط نوع فایل را مشخص می‌کند. در اینجا این عبارت به مرورگر اعلام می‌کند که نوع فایل <a href="https://html.spec.whatwg.org/#the-doctype" target="_blank">HTML5</a> است. همیشه شروع هر نوع فایل HTML5 با همین عبارت شروع می‌شود.</li>
+<li><code>&lt;html&gt;</code> پایه‌ای‌ترین تگ و معمولاً اولین تگ در ابتدای صفحه است و تگ <code>&lt;/html&gt;</code> معمولاً در انتهای صفحه می‌آید. همانطور که می‌بینید، تمام محتوای وبسایت بین تگ <code>&lt;html&gt;</code> در ابتدا و تگ <code>&lt;/html&gt;</code> در انتها قرار می‌گیرند</li>
 <li>تگ <code>&lt;p&gt;</code> برای پاراگراف‌ها به کار می‌رود و تگ <code>&lt;/p&gt;</code> پایان هر پاراگراف را مشخص می‌کند</li>
 </ul>
 <h2 id="head-and-body">Head and body</h2>
@@ -668,7 +670,8 @@
 <p>ما از <code>&lt;head&gt;</code> استفاده می‌کنیم تا در مورد تنظیمات فایل به مرورگر اطلاعاتی بدهیم و <code>&lt;body&gt;</code> نشان می‌دهد که چه چیزی واقعاً در صفحه وجود دارد.</p>
 <p>برای مثال شما می‌توانید تگ عنوان یا title را به شکل زیر در <code>&lt;head&gt;</code>، قرار دهید:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Ola&apos;s blog<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
@@ -697,36 +700,45 @@
 <li><code>&lt;a href=&quot;https://djangogirls.org&quot;&gt;لینک&lt;/a&gt;</code> یک لینک می‌سازد</li>
 <li><code>&lt;ul&gt;&lt;li&gt;آیتم اول&lt;/li&gt;&lt;li&gt;آیتم دوم&lt;/li&gt;&lt;/ul&gt;</code> یک لیست، دقیقاً مانند همین لیست درست می‌کند!</li>
 <li><code>&lt;div&gt;&lt;/div&gt;</code> یک بخش جدید در صفحه تعریف می‌کند</li>
+<li><code>&lt;nav&gt;&lt;/nav&gt;</code> مجموعه‌ای از لینک‌های دسترسی را تعریف می‌کند</li>
+<li><code>&lt;article&gt;&lt;/article&gt;</code>محتوای مستقل و فارق از محیط را مشخص می‌کند</li>
+<li><code>&lt;section&gt;&lt;/section&gt;</code> یک بخش را در فایل مشخص می‌کند</li>
+<li><code>&lt;header&gt;&lt;/header&gt;</code> بخش سربرگ یک صفحه را مشخص می‌کند</li>
+<li><code>&lt;main&gt;&lt;/main&gt;</code> بخش محتوای اصلی صفحه را مشخص می‌کند</li>
+<li><code>&lt;aside&gt;&lt;/aside&gt;</code> محتوای جانبی نسبت به جایی که در آن قرار گرفته را مشخص می‌کند (مانند منوی کناری)</li>
+<li><code>&lt;footer&gt;&lt;/footer&gt;</code> بخش پاورقی یک سند را مشخص می‌کند</li>
+<li><code>&lt;time&gt;&lt;/time&gt;</code> بک زمان (یا تاریخ و زمان) را مشخص می‌کند</li>
 </ul>
 <p>اینجا نمونه‌ای از یک تمپلیت کامل داریم. آن را در فایل <code>blog/templates/blog/post_list.html</code> کپی کنید:</p>
 <p></p><p class="code-label">blog/templates/blog/post_list.html</p><p></p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Django Girls blog<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span>Django Girls Blog<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>published: 14.06.2014, 12:14<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">time</span>&gt;</span>published: 14.06.2014, 12:14<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>My first post<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>published: 14.06.2014, 12:14<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">time</span>&gt;</span>published: 14.06.2014, 12:14<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>My second post<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>ما سه بخش با تگ <code>div</code> ساخته‌ایم.</p>
+<p>ما اینجا یک بخش <code>header</code> و دو بخش 0&gt;article&lt;/code&gt; ایجاد کردیم.</p>
 <ul>
-<li>اولین عنصر <code>div</code>، شامل عنوان وبلاگ یعنی یک تیتر و یک لینک، است</li>
-<li>دو عنصر <code>div</code> بعدی شامل یک پست وبلاگی و تاریخ انتشار آن است. تگ <code>h2</code> با عنوان پست و قابل کلیک کردن و دوتا تگ متنی <code>p</code> که یکی برای تاریخ است و دیگری برای متن پست وبلاگ ما.</li>
+<li>بخش <code>header</code> شامل عنوان مقاله وبلاگ ماست - یک عنوان و یک لینک</li>
+<li>دو عنصر <code>article</code> شامل پست‌های وبلاگ ما به همراه تاریخ انتشار در یک عنصر <code>time</code>، یک عنصر<code>h2</code> با عنوان مقاله که قابل کلیک کردن است و عنصر <code>p</code> (paragraph) که برای متن مقاله استفاده شده است.</li>
 </ul>
 <p>چنین نتیجه ای به ما می‌دهد:</p>
 <p><img src="images/step6.png" alt="تصویر 11.4"></p>
@@ -740,18 +752,15 @@
 <pre><code>$ git status
 </code></pre><p>مطمئن باشید که در دایرکتوری <code>djangogirls</code> هستید و به <code>گیت</code> اجازه دهید تمام تغییرات ایجاد شده در این دایرکتوری را در نظر بگیرد:</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
-<pre><code>$ git add --all .
-</code></pre><blockquote>
-<p><strong>نکته</strong>: <code>--all</code> به معنی آن است که <code>git</code> حتی اگر فایلی را هم پاک کرده باشید متوجه آن می‌شود (در حالت عادی فقط فایل‌های جدید و فایل‌های تغییر کرده را دنبال می‌‎کند). همچنین به یاد داشته باشید (از بخش 3) که <code>.</code> (نقطه) به معنی دایرکتوری جاری است.</p>
-</blockquote>
-<p>قبل از آنکه همه فایل‌ها را آپلود کنیم بگذارید ببینیم که <code>گیت</code> چه فایل‌هایی را آپلود خواهد کرد (تمام فایل‌هایی که <code>گیت</code> آپلود خواهد کرد الان سبز رنگ دیده می‌شوند):</p>
+<pre><code>$ git add .
+</code></pre><p>قبل از آنکه همه فایل‌ها را آپلود کنیم بگذارید ببینیم که <code>گیت</code> چه فایل‌هایی را آپلود خواهد کرد (تمام فایل‌هایی که <code>گیت</code> آپلود خواهد کرد الان سبز رنگ دیده می‌شوند):</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
 <pre><code>$ git status
 </code></pre><p>حالا وقت آن است که بگوییم تمام این تغییرات را در سابقه خودش ذخیره کند. الان می‌خواهیم یک &quot;commit message&quot; یا پیغام کامیت تعریف کنیم که تغییرات ما را توضیح می‌دهد. هرچیزی که دلتان بخواهد می‌توانید تایپ کنید، اما بهتر است توضیحاتی را بنویسید که بعداً متوجه شوید در این مرحله چه تغییراتی داده‌اید.</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
 <pre><code>$ git commit -m &quot;Changed the HTML for the site.&quot;
 </code></pre><blockquote>
-<p><strong>نکته</strong> مطمئن بشوید که از دابل کوت (&quot; &quot;) در دو طرف پیغام استفاده کنید.</p>
+<p><strong>نکته</strong> مطمئن باشید که از علامت نقل قول دوتایی در اطراف پیغام مربوط به کامیت استفاده کنید.</p>
 </blockquote>
 <p>وقتی این کار را انجام دادیم تغییرات را در گیتهاب آپلود (push) می‌کنیم:</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
@@ -813,7 +822,7 @@ $ git pull
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"آشنایی با HTML","level":"1.17","depth":1,"next":{"title":"ORM در جنگو","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"previous":{"title":"ساخت view در جنگو!","level":"1.16","depth":1,"path":"django_views/README.md","ref":"django_views/README.md","articles":[]},"dir":"rtl"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fa","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"html/README.md","mtime":"2021-07-27T14:04:00.805Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-07-27T14:04:16.637Z"},"basePath":"..","book":{"language":"fa"}});
+            gitbook.page.hasChanged({"page":{"title":"آشنایی با HTML","level":"1.17","depth":1,"next":{"title":"ORM در جنگو","level":"1.18","depth":1,"path":"django_orm/README.md","ref":"django_orm/README.md","articles":[]},"previous":{"title":"ساخت view در جنگو!","level":"1.16","depth":1,"path":"django_views/README.md","ref":"django_views/README.md","articles":[]},"dir":"rtl"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fa","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"html/README.md","mtime":"2021-08-05T18:03:37.459Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-08-05T18:03:50.672Z"},"basePath":"..","book":{"language":"fa"}});
         });
     </script>
 </div>

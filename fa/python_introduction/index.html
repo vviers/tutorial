@@ -229,7 +229,7 @@
     
         <li class="chapter " data-level="1.2.7" data-path="../installation/">
             
-                <a href="../installation/#github">
+                <a href="../installation/#github-account">
             
                     
                     GitHub
@@ -242,7 +242,7 @@
     
         <li class="chapter " data-level="1.2.8" data-path="../installation/">
             
-                <a href="../installation/#pythonanywhere">
+                <a href="../installation/#pythonanywhere-account">
             
                     
                     PythonAnywhere
@@ -636,7 +636,7 @@
 <p>ما می‌خواهیم یک کنسول پایتون باز کنیم، پس در کنسول خط فرمان ویندوز <code>python</code> و در ترمینال لینوکس/ مک <code>python3</code> را تایپ کنید و <code>enter</code> بزنید.</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
 <pre><code>$ python3
-Python 3.6.1 (...)
+Python {{ book.py_release }} (...)
 Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
 &gt;&gt;&gt;
 </code></pre><h2 id="اولین-دستور-پایتونی-شما">اولین دستور پایتونی شما!</h2>
@@ -682,7 +682,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&quot;Runnin&apos; down the hill&quot;</span>
 <span class="hljs-string">&quot;Runnin&apos; down the hill&quot;</span>
 </code></pre>
-<p>یا استفاده از یک بک اسلش (``) پیش از علامت آپاستروف:</p>
+<p>یا استفاده از یک بک اسلش (<code>\</code>) پیش از علامت آپاستروف:</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
 <pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&apos;Runnin\&apos; down the hill&apos;</span>
 <span class="hljs-string">&quot;Runnin&apos; down the hill&quot;</span>
@@ -930,8 +930,10 @@ KeyError: <span class="hljs-string">&apos;age&apos;</span>
 <span class="hljs-literal">True</span>
 <span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">5</span> != <span class="hljs-number">2</span>
 <span class="hljs-literal">True</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]) &gt; <span class="hljs-built_in">len</span>([<span class="hljs-number">4</span>, <span class="hljs-number">5</span>])
+<span class="hljs-literal">True</span>
 </code></pre>
-<p>ما چند عدد را برای مقایسه به پایتون داده‌ایم. همانطور که می‌بینید، پایتون نه تنها می‌تواند اعداد را مقایسه کند، بلکه می‌تواند خروجی متدها را هم مقایسه کند، به نظر شما عالی نیست؟</p>
+<p>ما به پایتون تعدادی عدد برای مقایسه کردن داده‌ایم. همانطور که می‌بینید، پایتون نه تنها می‌تواند اعداد را مقایسه کند بلکه می‌تواند عبارت‌های ریاضی مانند <code>2 * 2</code> و متدهایی همچون <code>len([4, 5])</code> که نتیجه <code>2</code> را می‌دهد نیز با هم مقایسه کند. جالب است، نه؟</p>
 <p>آیا به این فکر کرده‌اید که چرا دو علامت مساوی <code>==</code> کنار هم برای چک کردن تساوی اعداد گذاشته‌ایم؟ ما از یک علامت مساوی <code>=</code> برای انتساب مقادیر به متغیرها استفاده می‌کنیم. اگر می‌خواهید مساوی بودن دو شی با همدیگر را چک کنید، همیشه و <strong>همیشه</strong> باید از دو علامت مساوی <code>==</code> استفاده کنید. همچنین می‌توانیم مساوی نبودن اشیا را تعیین کنیم. برای این منظور، از علامت <code>=!</code>، همانطور که در مثال بالا نشان داده شده است، استفاده می‌کنیم.</p>
 <p>دو تمرین دیگر با پایتون انجام بدهید:</p>
 <p></p><p class="code-label">خط فرمان</p><p></p>
@@ -1282,7 +1284,7 @@ Next girl
 <p>توجه کنید که کران بالای بازه -دومین پارامتر- در لیست ساخته‌شده توسط پایتون نمی‌آید (به این معناست که <code>range(1, 6)</code> از 1 تا 5 می‌شمارد، اما شامل 6 نمی‌شود). به دلیل این که &quot;range&quot; نیمه‌باز است، و منظور این است که شامل عدد ابتدای بازه می‌شود ولی عدد انتهایی را شامل نمی‌شود.</p>
 <h2 id="چکیده">چکیده</h2>
 <p>همین بود. <strong>شما فوق‌العاده هستید!</strong> این بخش دارای ریزه کاری هایی بود و شما باید به خودتان افتخار کنید. ما هم قطعاً به شما افتخار می‌کنیم که تا اینجا پیش آمده اید!</p>
-<p>برای دوره‌های آموزشی رسمی و کامل پایتون، سایت <a href="https://docs.python.org/3/tutorial/" target="_blank">https://docs.python.org/3/tutorial/</a> را ببینید. دیدگاه کامل و دقیقی در مورد این زبان به شما می‌دهد. موفق باشید :)</p>
+<p>برای دیدن آموزش رسمی و کامل پایتون آدرس <a href="https://docs.python.org/3/tutorial/" target="_blank">https://docs.python.org/3/tutorial/</a> را ببینید. این آموزش به شما دید کامل‌تر و درست‌تری نسبت به این زبان می‌دهد. موفق باشید! :)</p>
 <p>شاید بخواهید قبل از رفتن به مرحله بعد، کارهای دیگری بکنید، کمی کش قوس بیایید، قدم بزنید و به چشم های خود استراحتی بدهید. :)</p>
 <p><img src="images/cupcake.png" alt="Cupcake"></p>
 
@@ -1328,7 +1330,7 @@ Next girl
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"آشنایی با پایتون","level":"1.8","depth":1,"next":{"title":"جنگو چیست?","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"ویرایشگر کد","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fa","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2021-07-27T14:04:00.809Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-07-27T14:04:16.637Z"},"basePath":"..","book":{"language":"fa"}});
+            gitbook.page.hasChanged({"page":{"title":"آشنایی با پایتون","level":"1.8","depth":1,"next":{"title":"جنگو چیست?","level":"1.9","depth":1,"path":"django/README.md","ref":"django/README.md","articles":[]},"previous":{"title":"ویرایشگر کد","level":"1.7","depth":1,"path":"code_editor/README.md","ref":"code_editor/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["heading-anchors@1.0.3","ga@1.0.1","richquotes@0.0.9","github@2.0.0","language-picker","sidebar-ad","codeblock-label","sectionx-ex","collapsible-menu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"language-picker":{"grid-columns":3},"github":{"url":"https://github.com/DjangoGirls/tutorial"},"codeblock-label":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sectionx-ex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"default":false},"sectionx":{"tag":"b"},"heading-anchors":{},"sidebar-ad":{"imageUrl":"https://djangogirls.org/static/img/global/donate/lagos.jpg","url":"https://www.patreon.com/djangogirls","description":"💖 Support our work and donate to our project! ✨","btnText":"Donate now!"},"highlight":{},"ga":{"configuration":"auto","token":"UA-51680040-3"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"py_version":"3.8","py_release":"3.8.6","py_min_version":"3.6","py_min_release":"3.6.8","pa_py_version":"3.8","django_version":"2.2.4"},"language":"fa","links":{"sidebar":{"Need help? Talk to us!":"https://gitter.im/DjangoGirls/tutorial"}},"gitbook":"*"},"file":{"path":"python_introduction/README.md","mtime":"2021-08-05T18:03:37.463Z","type":"markdown"},"gitbook":{"version":"3.6.20","time":"2021-08-05T18:03:50.672Z"},"basePath":"..","book":{"language":"fa"}});
         });
     </script>
 </div>
