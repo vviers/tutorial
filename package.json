@@ -1,7 +1,7 @@
 {
-  "name": "tutorial",
+  "name": "dev_pour_non_devs",
   "version": "1.0.0",
-  "description": "The Django Girls tutorial",
+  "description": "Tutoriel d'initiation au code pour la communauté beta.gouv.fr",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
